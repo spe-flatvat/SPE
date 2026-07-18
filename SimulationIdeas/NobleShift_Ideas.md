@@ -1,3 +1,16 @@
+# NobleShift Policies – Simulation Ideas
+
+This document contains only simulation parameters,
+calculation conditions,
+and reusable assumptions
+that may later be incorporated into
+SimulationSpecification.
+
+Policy discussions,
+conceptual ideas,
+and brainstorming notes
+belong in Inbox.
+
 1. 基本構造と算出方法期間：2026年～2055年（29年間）
 計算方式：複利成長モデル + パラメータ調整（Excel相当のスプレッドシート的累積計算）
 主な式：名目GDP_{t} = 名目GDP_{t-1} × (1 + 名目成長率)

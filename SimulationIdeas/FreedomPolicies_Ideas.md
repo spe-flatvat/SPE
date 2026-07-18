@@ -1,3 +1,16 @@
+# Freedom Policies – Simulation Ideas
+
+This document contains only simulation parameters,
+calculation conditions,
+and reusable assumptions
+that may later be incorporated into
+SimulationSpecification.
+
+Policy discussions,
+conceptual ideas,
+and brainstorming notes
+belong in Inbox.
+
 ###シミュレーション条件
 スタート値（2026年7月現在）
 現行消費税ベース（穴あき）：約230兆円（10%で税収23兆円）

@@ -62,6 +62,8 @@ The following are **intentional limitations**, not documentation errors.
 | **KL-002** | α and φ sensitivity analysis deferred until Phase 2. | Phase 2 |
 | **KL-003** | State Machine remains conceptual and is not yet implemented in the simulation engine. | Future |
 | **KL-004** | Extended State Score remains under design. | Future |
+| **KL-005** | Snapshot Confirmation criteria | Formal criteria for snapshot confirmation have not yet been defined. The operational definition of an Owner-confirmed snapshot will be specified in a future Workflow document. Until then, an Owner-confirmed snapshot is defined solely by explicit confirmation provided by the Project Owner during the review process. | 2026-07-18 |
+
 
 ---
 

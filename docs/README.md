@@ -205,6 +205,18 @@ documentation
 
 SPE itself is therefore an experiment not only in policy design, but also in collaborative human–AI engineering.
 
+Repository Governance
+
+AI Collaborator Responsibilities
+- Fact-Checking: Verify factual accuracy against Owner-confirmed snapshots.
+- Technical Consistency: Ensure technical coherence across all documentation.
+- Contradiction Identification: Proactively identify and flag internal contradictions.
+- Improvement Proposals: Propose improvements to specifications and documentation.
+- Rationale Disclosure: Provide clear, logical reasoning for all proposed changes.
+
+Review Workflow
+* Conflict Resolution: Should AI reviews conflict, the Project Owner holds the final authority to resolve the disagreement. No AI opinion takes precedence over another.
+
 Finally
 
 This repository does not exist because someone wanted to build another framework.

@@ -36,6 +36,13 @@ Documentation mistakes and factual corrections are **not** recorded here; they b
 | **DL-006** | Accepted | Treat the R4 Tax Leakage Resolution effect as a **reference scenario**, not the main comparison case. | Prevents self-favouring bias while preserving the hypothesis for future evaluation. | 0.5 |
 | **DL-007** | Accepted | Introduce explicit Source Tags with documented classification rules. | Each tag shall include a one-line criterion defining when it applies. Current tag set: **[Document]**, **[User Design]**, **[Model Assumption]**, **[Co-design]**, **[Future Concept]**. | 0.5 |
 | **DL-008** | Planned | Separate documentation into **Part A (Implemented Model)** and **Part B (Future SPE Architecture)**. | Prevent confusion between implemented simulation behaviour and future architectural concepts. | 0.5 |
+| **DL-009** | Approved | Formal Freeze of Original SimulationSpecification_v5. | Original v5 is adopted as Frozen Baseline and Canonical Source. Reconstructed v5 is excluded/discarded due to Reconstruction Regression risks. | 1.0 |
+| **DL-010** | Approved | Repository Governance & AI Review Policy. | Establish Authority, AI role, and Owner-confirmed snapshot requirements. | 1.0 |
+
+### Governance Principles (DL-010)
+- AI reviews are valid only against an Owner-confirmed snapshot.
+- Technical means do not imply authority to determine the canonical repository state.
+- The Project Owner remains the sole authority for confirming the canonical repository state.
 
 ---
 

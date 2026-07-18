@@ -18,6 +18,8 @@ Unlike **DecisionLog.md**, this document does **not** record design decisions. I
 
 **ER-003 through ER-009 refer to the unpublished _Glossary v0.1_ draft.**
 
+ER-010 documents the **Reconstruction Regression** that led to the formal adoption of the **Original SimulationSpecification_v5.md** as the canonical Frozen Baseline.
+
 These items should be interpreted as **pre-release draft revision items**, not defects in released documentation.
 
 Their inclusion is intended to preserve review history and improve traceability before public release.
@@ -46,6 +48,7 @@ Their inclusion is intended to preserve review history and improve traceability 
 | **ER-007** | Glossary v0.1 (Draft) | Noble Shift status and reference model description require clarification. | Open |
 | **ER-008** | Glossary v0.1 (Draft) | Implemented TSUBAME/SUZUME model concepts and future SPE architecture should be separated into independent sections. | Open |
 | **ER-009** | Glossary v0.1 (Draft) | Source tag definitions require explicit inclusion criteria for each category. | Open |
+| **ER-010** | Discarding SimulationSpecification_v5_Reconstructed | Reconstruction regression risks identified. Original SimulationSpecification_v5.md adopted as the formal Frozen Baseline. | 2026-07-18 |
 
 ---
 

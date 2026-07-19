@@ -2,11 +2,11 @@
 
 **Document:** Glossary.md
 
-**Version:** v0.2-final
+**Version:** v0.3
 
 **Status:** Fixed
 
-**Last Updated:** 2026-07-17
+**Last Updated:** 2026-07-19
 
 ---
 
@@ -14,7 +14,7 @@
 
 Glossary は SPE プロジェクトにおける **Single Source of Truth** として機能する。
 
-すべての仕様書・README・Decision Log・Errata は、本 Glossary の定義を優先して参照する。
+すべての仕様書・ガバナンス文書（Documentation Index、Decision Log、Errata を含む）は、本 Glossary の定義を優先して参照する。
 
 ---
 
@@ -239,13 +239,11 @@ State間遷移。
 
 ---
 
-# Related Documents
+## Related Documents
 
-- README.md
-- DecisionLog.md
-- Errata.md
-- SimulationSpecification_v5.md
-  （次期 v6 へ移行予定）
+- Decision Log: See DecisionLog.md
+- Specification Errata: See Errata.md
+- Documentation Index: See DocumentationIndex.md
 
 ---
 

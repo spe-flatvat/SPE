@@ -1,7 +1,7 @@
 # Documentation Index
 SPE Project Documentation Index
 
-This index serves as the central directory for the Simulation Specification and Economic (SPE) project documentation. It provides structured access to all governance, specification, and implementation-related documents within the repository.
+This index serves as the central directory for the SUZUME PolicyCraft Engine (SPE) project documentation. It provides structured access to all governance, specification, and implementation-related documents within the repository.
 
 Project Governance
 - Repository Governance: See the repository root README.md.

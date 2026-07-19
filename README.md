@@ -118,6 +118,15 @@ SPEが一貫して重視している考え方があります。
 
 > **さあ、国家というシステムをクラフトしよう。**
 
+## Project Status
+
+SPE is currently an experimental public policy simulation project.
+
+Its purpose is to provide a common simulation framework for comparing multiple policy proposals under consistent assumptions.
+
+The repository is maintained under an Owner-confirmed governance model.
+Major specification changes are reviewed collaboratively and finalized only after explicit Owner approval.
+
 ## Documentation
 
 Project documentation is organized under the `docs/` directory.

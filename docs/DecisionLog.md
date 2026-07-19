@@ -27,7 +27,7 @@ Documentation mistakes and factual corrections are **not** recorded here; they b
 
 | ID | Status | Decision | Rationale | Phase |
 |----|--------|----------|-----------|-------|
-| **DL-001** | Approved | Adopt **SUZUME Model** as the internal model name. | The naming change itself is accepted to avoid confusion with external model names while preserving the project's lineage. **The scope of retrospective document updates remains undecided.** | 0.5 |
+| **DL-001** | Approved | Adopt **SUZUME Model** as the canonical internal model name and apply the transition retrospectively to Canonical Documents only. | The GitHub repository remains the sole Canonical Source. Retrospective updates are limited to Canonical Documents, while Non-Canonical materials are preserved as historical artifacts. See detailed resolution below. | 0.5 |
 | **DL-002** | Accepted | Remove the population target (85 million) as a hard evaluation constraint. | Since Specification v5, population is treated as a comparative indicator rather than a pass/fail criterion. | 0.5 |
 | **DL-003** | Accepted | Fix **α = 0.35**. | Prevent unnecessary model instability. Reconsider only if Phase 2 demonstrates a concrete analytical need. | 0.5 |
 | **DL-004** | Accepted | Fix **φ = 0.15**. | Same rationale as DL-003. Sensitivity analysis is intentionally deferred to Phase 2. | 0.5 |

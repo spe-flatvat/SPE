@@ -118,14 +118,14 @@ SPEが一貫して重視している考え方があります。
 
 > **さあ、国家というシステムをクラフトしよう。**
 
-## Project Status
+## Documentation
 
-SPE is currently an experimental public policy simulation project.
+Project documentation is organized under the `docs/` directory.
 
-Its purpose is to provide a common simulation framework for comparing multiple policy proposals under consistent assumptions.
+- **Workflow**: [docs/Workflow.md](docs/Workflow.md)
+- **Project Roadmap**: [docs/ProjectRoadmap.md](docs/ProjectRoadmap.md)
 
-The repository is maintained under an Owner-confirmed governance model.
-Major specification changes are reviewed collaboratively and finalized only after explicit Owner approval.
+Additional documentation (Decision Log, Development Story, etc.) will be added as the repository evolves.
 
 ## Repository Structure
 

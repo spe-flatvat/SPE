@@ -1,8 +1,7 @@
-##Errata.md
 # Errata
 
-**Version:** 0.2 (Editorial Note Added)  
-**Last Updated:** 2026-07-16
+**Version:** 0.3   
+**Last Updated:** 2026-07-19
 
 ---
 
@@ -63,7 +62,7 @@ The following are **intentional limitations**, not documentation errors.
 | **KL-003** | State Machine remains conceptual and is not yet implemented in the simulation engine. | Future |
 | **KL-004** | Extended State Score remains under design. | Future |
 | **KL-005** | Snapshot Confirmation criteria | Formal criteria for snapshot confirmation have not yet been defined. The operational definition of an Owner-confirmed snapshot will be specified in a future Workflow document. Until then, an Owner-confirmed snapshot is defined solely by explicit confirmation provided by the Project Owner during the review process. | 2026-07-18 |
-
+| **KL-006** | URL Snapshot Caching | Snapshots retrieved via URL (including AI reviewer fetch tools) may be affected by caching at various points in the retrieval chain (e.g., browser cache, AI retrieval tools, or repository-side caching). Retrieved content may therefore differ from the Owner-confirmed review snapshot, even though the GitHub repository remains the Canonical Source. For review purposes, always use the Owner-confirmed snapshot rather than independently retrieved repository content. | 2026-07-19 |
 
 ---
 

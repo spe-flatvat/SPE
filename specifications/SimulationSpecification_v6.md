@@ -72,14 +72,20 @@ Repository governance documents shall remain frozen unless an explicit exception
 - Population  
 - Deaths  
 - Births  
-  
+   
 **Common Risk Events (All Scenarios)** [Document]  
-- Oil Shock (onset year, Real GDP impact)  
-- Cross-Strait Conflict (onset year, Real GDP impact)  
+- Oil Shock (onset year, Real GDP impact, Inflation impact)  
+- Cross-Strait Conflict (onset year, Real GDP impact, Inflation impact)  
 - Nankai Trough Earthquake (onset year, Real GDP impact, tax revenue impact)  
 - Mid-Scale Disaster (recurrence interval, Real GDP impact)  
 - Climate Change Drag (recurrence interval, Real GDP impact)  
-  
+
+**Base Inflation Rate** [Document]  
+- Fixed baseline inflation rate applied in all years absent risk events  
+
+**Consumption Tax Transitional Factor** [Document]  
+- One-time inflation impact attributable to consumption tax rate changes (scenario-specific applicability; value determination out of scope for this RP)  
+
 **Policy Effect Schedule (F-Scenario Specific)** [Document]  
 - Consumption Stimulus Effect (applicable period segments)  
 - Investment Promotion Effect (applicable period segments)  
@@ -154,7 +160,8 @@ Repository governance documents shall remain frozen unless an explicit exception
 - Real Wage Growth Rate: Real Wage Growth Rate(t) = Compound Growth Rate of the anchor interval containing year t  
 - Birth Count Transition: Births(t) = Births(t-1) × Birth Decline Coefficient × (1 + φ × Real Wage Growth Rate(t))  
 - Population Transition: Population(t) = Population(t-1) + (Births(t) − Deaths(t)) + Net Migration(t)  
-- Labor Force Growth Rate: Total Population Growth Rate(t) + Aging Drag(t)  
+- Labor Force Growth Rate: Total Population Growth Rate(t) + Aging Drag(t)
+- Inflation Rate: Inflation Rate(t) = Base Inflation Rate + Risk Event Inflation Impact(t) + Consumption Tax Transitional Factor(t)  
 - Nominal GDP Growth Rate: Real GDP Growth Rate(t) + Inflation Rate(t)  
 - Tax Revenue Transition: Tax Revenue(t) = Tax Revenue(t-1) × (1 + Nominal GDP Growth Rate(t) × Tax Elasticity(t))  
 - Tax Revenue Cap: Tax Revenue(t) ≤ Nominal GDP(t) × Tax/GDP Ceiling  

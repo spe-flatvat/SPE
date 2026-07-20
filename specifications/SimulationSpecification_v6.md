@@ -103,6 +103,10 @@ Repository governance documents shall remain frozen unless an explicit exception
 - Real Median Wage Anchor Years  
 - Gini Coefficient Anchor Years  
 
+**Anchor Interpolation Method** [Document]  
+- Anchor Years: fixed set of years with defined Real Median Wage values (e.g., 2026, 2030, 2035, 2040, 2050, 2055)  
+- Interpolation Method: compound (geometric) interpolation between consecutive anchor years  
+
 ##### Outputs
 
 **Annual Time-Series Outputs** [Document]
@@ -144,6 +148,10 @@ Repository governance documents shall remain frozen unless an explicit exception
 ##### Transition Rules
 **Common Simulation Rules (All Scenarios)** [Document]  
 - Death Count Transition: Deaths(t) = Deaths(t-1) × Death Rate Coefficient  
+- Real Median Wage Transition (Anchor-Interpolated): for year t within anchor interval [Year_i, Year_(i+1)],   
+  Real Median Wage(t) = Real Median Wage(t-1) × (1 + Compound Growth Rate of interval)  
+  where Compound Growth Rate of interval = (Real Median Wage(Year_(i+1)) / Real Median Wage(Year_i)) ^ (1 / (Year_(i+1) - Year_i)) − 1  
+- Real Wage Growth Rate: Real Wage Growth Rate(t) = Compound Growth Rate of the anchor interval containing year t  
 - Birth Count Transition: Births(t) = Births(t-1) × Birth Decline Coefficient × (1 + φ × Real Wage Growth Rate(t))  
 - Population Transition: Population(t) = Population(t-1) + (Births(t) − Deaths(t)) + Net Migration(t)  
 - Labor Force Growth Rate: Total Population Growth Rate(t) + Aging Drag(t)  

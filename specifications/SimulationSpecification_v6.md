@@ -32,13 +32,39 @@ All variables are defined in [Glossary.md](Glossary.md).
 
 ## Chapter 4: Comparative Framework
 *Scenario-specific parameterizations.*
+### Authoring Baseline
+
+As of RP-019, this document enters the Scenario Parameter Authoring phase.
+
+The repository governance baseline established by RP-018 is considered frozen for the duration of Authoring.
+
+Scenario specifications shall be authored incrementally, one scenario at a time, following the RP-019 Authoring Rules.
+
+No untagged speculative parameter values shall be introduced. Any model assumption must be explicitly identified using an approved source classification (Document, User Design, or Model Assumption).
+
+Repository governance documents shall remain frozen unless an explicit exception is approved by the Project Owner.
+
 ### 4.1 Policy Scenarios
-(Scenario details migrated from v5. Formal specification deferred to RP-018.)
+(Scenario details migrated from v5. Formal specification begins under RP-019.)
 - **F-Scenario**: Progressive fiscal stimuli.
 - **N3-Scenario**: Phased tax increases.
 - **R4-Scenario**: GDP/Wage triggers.
 - **Noble Shift**: Fixed growth anchor.
 - **Status Quo**: Baseline growth.
+
+#### 4.1.1 F-Scenario
+
+##### Inputs
+
+##### Outputs
+
+##### State Variables
+
+##### Transition Rules
+
+##### Evaluation Metrics
+
+##### Open Assumptions
 
 ## Appendix: Administrative Records
 (References and Constraints moved to Annex and Errata.)

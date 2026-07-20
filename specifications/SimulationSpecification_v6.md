@@ -129,6 +129,18 @@ Repository governance documents shall remain frozen unless an explicit exception
 
 ##### State Variables
 
+**Carried-Forward State (Prior-Year Values)** [Document]
+- Real GDP (t-1)
+- Nominal GDP (t-1)
+- Tax Revenue (t-1)
+- Expenditure (t-1)
+- Population (t-1)
+- Deaths (t-1)
+- Births (t-1)
+
+**Common Model State References** [Document]
+- Labor Force Growth Rate (derived from common population model)
+
 ##### Transition Rules
 
 ##### Evaluation Metrics

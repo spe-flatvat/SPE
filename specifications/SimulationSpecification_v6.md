@@ -80,6 +80,9 @@ Repository governance documents shall remain frozen unless an explicit exception
 - Mid-Scale Disaster (recurrence interval, Real GDP impact)  
 - Climate Change Drag (recurrence interval, Real GDP impact)  
 
+**Risk Event Composition Rule** [Document]  
+- When multiple Common Risk Events occur in the same year, their Real GDP impacts are additive.  
+
 **Base Inflation Rate** [Document]  
 - Fixed baseline inflation rate applied in all years absent risk events  
 
@@ -162,6 +165,7 @@ Repository governance documents shall remain frozen unless an explicit exception
 - Population Transition: Population(t) = Population(t-1) + (Births(t) − Deaths(t)) + Net Migration(t)  
 - Labor Force Growth Rate: Total Population Growth Rate(t) + Aging Drag(t)
 - Inflation Rate: Inflation Rate(t) = Base Inflation Rate + Risk Event Inflation Impact(t) + Consumption Tax Transitional Factor(t)  
+- Risk Shock: Risk Shock(t) = sum of Real GDP impacts of all Common Risk Events occurring in year t  
 - Nominal GDP Growth Rate: Real GDP Growth Rate(t) + Inflation Rate(t)  
 - Tax Revenue Transition: Tax Revenue(t) = Tax Revenue(t-1) × (1 + Nominal GDP Growth Rate(t) × Tax Elasticity(t))  
 - Tax Revenue Cap: Tax Revenue(t) ≤ Nominal GDP(t) × Tax/GDP Ceiling  

@@ -158,6 +158,20 @@ Repository governance documents shall remain frozen unless an explicit exception
 
 ##### Evaluation Metrics
 
+**Mandatory Constraints (Compliance Judgment)** [Document]  
+- Gini Coefficient ≤ 0.35 by 2055  
+- Tax Revenue / Nominal GDP Ratio ≤ 30%  
+- Avoidance of rapid Primary Balance deterioration (Bond Issuance divergence)  
+  
+**Reference Indicator (Non-Constraint)** [Document]  
+- Population level at 2055 (relative comparison across scenarios only; not subject to pass/fail judgment)  
+  
+**Cross-Scenario Comparison Basis** [Document]  
+- Real GDP CAGR ranking across scenarios  
+- Real Median Wage ranking across scenarios  
+- Gini Coefficient ranking across scenarios  
+- Bond Issuance trajectory (convergence to zero vs. divergence)  
+
 ##### Open Assumptions
 
 - Inclusion of the F-Scenario Sequencing Variant (political adjustment case) in Inputs remains undecided; not included in this listing.  

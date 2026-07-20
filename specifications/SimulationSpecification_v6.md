@@ -56,6 +56,53 @@ Repository governance documents shall remain frozen unless an explicit exception
 
 ##### Inputs
 
+**Initial State Values (2026)** [Document]  
+- Nominal GDP  
+- Real GDP  
+- Policy Interest Rate  
+- Bond Issuance  
+- Tax Revenue  
+- Shareholder Dividends  
+- Retained Earnings  
+- Nominal Median Wage  
+- Real Median Wage  
+- Median Income  
+- Gini Coefficient  
+- Engel Coefficient  
+- Population  
+- Deaths  
+- Births  
+  
+**Common Risk Events (All Scenarios)** [Document]  
+- Oil Shock (onset year, Real GDP impact)  
+- Cross-Strait Conflict (onset year, Real GDP impact)  
+- Nankai Trough Earthquake (onset year, Real GDP impact, tax revenue impact)  
+- Mid-Scale Disaster (recurrence interval, Real GDP impact)  
+- Climate Change Drag (recurrence interval, Real GDP impact)  
+  
+**Policy Effect Schedule (F-Scenario Specific)** [Document]  
+- Consumption Stimulus Effect (applicable period segments)  
+- Investment Promotion Effect (applicable period segments)  
+- Education Effect (applicable period segments)  
+  
+**Fiscal Parameters (F-Scenario Specific)** [Document]  
+- Tax Elasticity (period segments)  
+- Expenditure Growth Rate (period segments)  
+  
+**Demographic Parameters** [Document / Model Assumption]  
+- Death Rate Coefficient [Document]  
+- Birth Rate Coefficient [Document]  
+- Birth–Real Wage Feedback Elasticity φ [Model Assumption] (see Glossary.md)  
+- Immigration Schedule (F-Scenario steady-state value) [Document]  
+  
+**Labor Parameters** [Model Assumption]  
+- Capital Share α (see Glossary.md)  
+- Aging Drag (period-specific values; source is IPSS data, integration method is [Model Assumption])  
+  
+**Anchor References (F-Scenario Specific)** [Document]  
+- Real Median Wage Anchor Years  
+- Gini Coefficient Anchor Years  
+
 ##### Outputs
 
 ##### State Variables
@@ -65,6 +112,8 @@ Repository governance documents shall remain frozen unless an explicit exception
 ##### Evaluation Metrics
 
 ##### Open Assumptions
+
+- Inclusion of the F-Scenario Sequencing Variant (political adjustment case) in Inputs remains undecided; not included in this listing.  
 
 ## Appendix: Administrative Records
 (References and Constraints moved to Annex and Errata.)

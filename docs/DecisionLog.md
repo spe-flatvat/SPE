@@ -1,6 +1,10 @@
 # Decision Log
 
-**Version:** v0.3
+**Version:** v0.4
+
+**Last Updated:** 2026-07-20
+
+**Updated By:** RP-017
 
 ## Purpose
 
@@ -37,6 +41,7 @@ Documentation mistakes and factual corrections are **not** recorded here; they b
 | **DL-008** | Planned | Separate documentation into **Part A (Implemented Model)** and **Part B (Future SPE Architecture)**. | Prevent confusion between implemented simulation behaviour and future architectural concepts. | 0.5 |
 | **DL-009** | Approved | Formal Freeze of Original SimulationSpecification_v5. | Original v5 is adopted as Frozen Baseline and Canonical Source. Reconstructed v5 is excluded/discarded due to Reconstruction Regression risks. | 1.0 |
 | **DL-010** | Approved | Repository Governance & AI Review Policy. | Establish Authority, AI role, and Owner-confirmed snapshot requirements. | 1.0 |
+| **DL-011** | Approved | Simulation Specification v5 → v6 Migration completed. | Records completion of RP-017 migration and separation of Migration (RP-017) from Authoring (RP-018). | 1.0 |
 
 ### DL-001: Model Name Transition (TSUBAME to SUZUME)
 

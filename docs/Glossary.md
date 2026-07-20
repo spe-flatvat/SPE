@@ -2,11 +2,11 @@
 
 **Document:** Glossary.md
 
-**Version:** v0.3
+**Version:** v0.4
 
-**Status:** Fixed
+**Last Updated:** 2026-07-20
 
-**Last Updated:** 2026-07-19
+**Updated By:** RP-017
 
 ---
 
@@ -239,11 +239,19 @@ State間遷移。
 
 ---
 
-## Related Documents
+## Constants
 
-- Decision Log: See DecisionLog.md
-- Specification Errata: See Errata.md
-- Documentation Index: See DocumentationIndex.md
+| Symbol | Name | Description | Source |
+| :--- | :--- | :--- | :--- |
+| α | Capital Share | Cobb-Douglas production function capital elasticity | SPE Canonical |
+| φ | Birth Elasticity | Responsiveness of births to real wage growth | SPE Canonical |
+| ε | Tax Elasticity | Scenario-specific parameter representing the responsiveness of tax revenue to nominal GDP growth. Canonical numerical values are intentionally deferred to RP-018. | SPE Canonical (parameter values defined in RP-018) |
+
+## Related Documents
+- [SimulationSpecification_v6.md](SimulationSpecification_v6.md)
+- [DecisionLog.md](DecisionLog.md)
+- [Errata.md](Errata.md)
+- [DocumentationIndex.md](DocumentationIndex.md)
 
 ---
 

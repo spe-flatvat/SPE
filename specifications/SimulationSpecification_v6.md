@@ -142,6 +142,19 @@ Repository governance documents shall remain frozen unless an explicit exception
 - Labor Force Growth Rate (derived from common population model)
 
 ##### Transition Rules
+**Common Simulation Rules (All Scenarios)** [Document]  
+- Death Count Transition: Deaths(t) = Deaths(t-1) × Death Rate Coefficient  
+- Birth Count Transition: Births(t) = Births(t-1) × Birth Decline Coefficient × (1 + φ × Real Wage Growth Rate(t))  
+- Population Transition: Population(t) = Population(t-1) + (Births(t) − Deaths(t)) + Net Migration(t)  
+- Labor Force Growth Rate: Total Population Growth Rate(t) + Aging Drag(t)  
+- Nominal GDP Growth Rate: Real GDP Growth Rate(t) + Inflation Rate(t)  
+- Tax Revenue Transition: Tax Revenue(t) = Tax Revenue(t-1) × (1 + Nominal GDP Growth Rate(t) × Tax Elasticity(t))  
+- Tax Revenue Cap: Tax Revenue(t) ≤ Nominal GDP(t) × Tax/GDP Ceiling  
+- Expenditure Transition: Expenditure(t) = Expenditure(t-1) × (1 + Expenditure Growth Rate(t))  
+- Bond Issuance: Bond Issuance(t) = max(Expenditure(t) − Tax Revenue(t), 0)  
+  
+**F-Scenario Specific Rules** [Document]  
+- Real GDP Growth Rate Composition: Base Growth Rate + Consumption Stimulus Effect(t) + Investment Promotion Effect(t) + Education Effect(t) − Risk Shock(t) + (1 − α) × Labor Force Growth Rate(t)  
 
 ##### Evaluation Metrics
 

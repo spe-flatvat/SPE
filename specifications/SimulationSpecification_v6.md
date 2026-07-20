@@ -105,6 +105,28 @@ Repository governance documents shall remain frozen unless an explicit exception
 
 ##### Outputs
 
+**Annual Time-Series Outputs** [Document]
+- Real GDP
+- Nominal GDP
+- Tax Revenue
+- Bond Issuance
+
+**Anchor-Interpolated Outputs** [Document]
+- Real Median Wage
+- Gini Coefficient
+
+**Common Model Outputs** [Document]
+- Population
+
+**2055 Endpoint Evaluation Outputs** [Document]
+- Real GDP (2055)
+- Real GDP CAGR
+- Real Median Wage (2055)
+- Gini Coefficient (2055)
+- Population (2055, reference indicator)
+- Tax Revenue / Nominal GDP Ratio (maximum)
+- Bond Issuance (2055)
+
 ##### State Variables
 
 ##### Transition Rules

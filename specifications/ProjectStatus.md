@@ -16,7 +16,8 @@ This document summarizes the current official state of the SPE project.
 - M1 — Migration Review Complete: Completed
 - M2 — Migration Recovery Complete: Completed
 - M3 — Specification Baseline Freeze: Completed
-- Next Milestone: M4 — Engine Prototype
+- M4 — Engine Prototype: Completed
+- Next Milestone: M5 — Numeric Dry Run
 
 ## 2. Current Canonical Specification
 
@@ -32,6 +33,6 @@ A Specification Gap does not prevent completion of a Milestone unless explicitly
 
 ## 4. Development Direction
 
-The immediate project objective is to freeze the current specification as the implementation baseline and proceed to M4 — Engine Prototype.
+The immediate project objective is to proceed to M5 — Numeric Dry Run using the M4 engine prototype.
 
 Review Proposals remain change records; project progress is measured by Milestones.

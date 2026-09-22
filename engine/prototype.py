@@ -46,6 +46,31 @@ def transition_population(
     """Apply the SPE v6 Population Transition."""
     return previous_population + (births - deaths) + net_migration
 
+def calculate_labor_force_growth_rate(
+    total_population_growth_rate: float,
+    aging_drag: float,
+) -> float:
+    """Apply the SPE v6 Labor Force Growth Rate composition rule."""
+    return total_population_growth_rate + aging_drag
+
+def calculate_real_gdp_growth_rate(
+    base_growth_rate: float,
+    consumption_stimulus_effect: float,
+    investment_promotion_effect: float,
+    education_effect: float,
+    risk_shock: float,
+    alpha: float,
+    labor_force_growth_rate: float,
+) -> float:
+    """Apply the SPE v6 F-Scenario Real GDP Growth Rate composition rule."""
+    return (
+        base_growth_rate
+        + consumption_stimulus_effect
+        + investment_promotion_effect
+        + education_effect
+        - risk_shock
+        + (1 - alpha) * labor_force_growth_rate
+    )
 
 def transition_year_demographics(
     previous_state: SimulationState,
@@ -111,3 +136,21 @@ if __name__ == "__main__":
 
     print(f"State 2026: {state_2026}")
     print(f"State 2027: {state_2027}")
+
+    labor_force_growth_rate_2027 = calculate_labor_force_growth_rate(
+        total_population_growth_rate=0.0,
+        aging_drag=0.0,
+    )
+
+    real_gdp_growth_rate_2027 = calculate_real_gdp_growth_rate(
+        base_growth_rate=0.0,
+        consumption_stimulus_effect=0.0,
+        investment_promotion_effect=0.0,
+        education_effect=0.0,
+        risk_shock=0.0,
+        alpha=0.35,
+        labor_force_growth_rate=labor_force_growth_rate_2027,
+    )
+
+    print(f"Labor Force Growth Rate 2027: {labor_force_growth_rate_2027}")
+    print(f"Real GDP Growth Rate 2027: {real_gdp_growth_rate_2027}")

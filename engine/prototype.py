@@ -72,6 +72,25 @@ def calculate_real_gdp_growth_rate(
         + (1 - alpha) * labor_force_growth_rate
     )
 
+def calculate_inflation_rate(
+    base_inflation_rate: float,
+    risk_event_inflation_impact: float,
+    consumption_tax_transitional_factor: float,
+) -> float:
+    """Apply the SPE v6 Inflation Rate composition rule."""
+    return (
+        base_inflation_rate
+        + risk_event_inflation_impact
+        + consumption_tax_transitional_factor
+    )
+
+def calculate_nominal_gdp_growth_rate(
+    real_gdp_growth_rate: float,
+    inflation_rate: float,
+) -> float:
+    """Apply the SPE v6 Nominal GDP Growth Rate composition rule."""
+    return real_gdp_growth_rate + inflation_rate
+
 def transition_year_demographics(
     previous_state: SimulationState,
     death_rate_coefficient: float,
@@ -154,3 +173,17 @@ if __name__ == "__main__":
 
     print(f"Labor Force Growth Rate 2027: {labor_force_growth_rate_2027}")
     print(f"Real GDP Growth Rate 2027: {real_gdp_growth_rate_2027}")
+
+    inflation_rate_2027 = calculate_inflation_rate(
+        base_inflation_rate=0.0,
+        risk_event_inflation_impact=0.0,
+        consumption_tax_transitional_factor=0.0,
+    )
+
+    nominal_gdp_growth_rate_2027 = calculate_nominal_gdp_growth_rate(
+        real_gdp_growth_rate=real_gdp_growth_rate_2027,
+        inflation_rate=inflation_rate_2027,
+    )
+
+    print(f"Inflation Rate 2027: {inflation_rate_2027}")
+    print(f"Nominal GDP Growth Rate 2027: {nominal_gdp_growth_rate_2027}")

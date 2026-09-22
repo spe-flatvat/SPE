@@ -14,6 +14,16 @@ class SimulationState:
     deaths: float
     births: float
 
+@dataclass
+class TransitionResult:
+    """Annual results computable from the current SPE v6 baseline."""
+
+    demographic_state: SimulationState
+    labor_force_growth_rate: float
+    real_gdp_growth_rate: float
+    inflation_rate: float
+    nominal_gdp_growth_rate: float
+    tax_revenue_before_cap: float
 
 def transition_deaths(
     previous_deaths: float,
@@ -21,7 +31,6 @@ def transition_deaths(
 ) -> float:
     """Apply the SPE v6 Death Count Transition."""
     return previous_deaths * death_rate_coefficient
-
 
 def transition_births(
     previous_births: float,
@@ -35,7 +44,6 @@ def transition_births(
         * birth_decline_coefficient
         * (1 + phi * real_wage_growth_rate)
     )
-
 
 def transition_population(
     previous_population: float,
@@ -141,6 +149,78 @@ def transition_year_demographics(
         births=births,
     )
 
+def transition_year(
+    previous_state: SimulationState,
+    *,
+    death_rate_coefficient: float,
+    birth_decline_coefficient: float,
+    phi: float,
+    real_wage_growth_rate: float,
+    net_migration: float,
+    total_population_growth_rate: float,
+    aging_drag: float,
+    base_growth_rate: float,
+    consumption_stimulus_effect: float,
+    investment_promotion_effect: float,
+    education_effect: float,
+    risk_shock: float,
+    alpha: float,
+    base_inflation_rate: float,
+    risk_event_inflation_impact: float,
+    consumption_tax_transitional_factor: float,
+    tax_elasticity: float,
+) -> TransitionResult:
+    """Advance one year through all currently implementable SPE v6 transitions."""
+
+    demographic_state = transition_year_demographics(
+        previous_state=previous_state,
+        death_rate_coefficient=death_rate_coefficient,
+        birth_decline_coefficient=birth_decline_coefficient,
+        phi=phi,
+        real_wage_growth_rate=real_wage_growth_rate,
+        net_migration=net_migration,
+    )
+
+    labor_force_growth_rate = calculate_labor_force_growth_rate(
+        total_population_growth_rate=total_population_growth_rate,
+        aging_drag=aging_drag,
+    )
+
+    real_gdp_growth_rate = calculate_real_gdp_growth_rate(
+        base_growth_rate=base_growth_rate,
+        consumption_stimulus_effect=consumption_stimulus_effect,
+        investment_promotion_effect=investment_promotion_effect,
+        education_effect=education_effect,
+        risk_shock=risk_shock,
+        alpha=alpha,
+        labor_force_growth_rate=labor_force_growth_rate,
+    )
+
+    inflation_rate = calculate_inflation_rate(
+        base_inflation_rate=base_inflation_rate,
+        risk_event_inflation_impact=risk_event_inflation_impact,
+        consumption_tax_transitional_factor=consumption_tax_transitional_factor,
+    )
+
+    nominal_gdp_growth_rate = calculate_nominal_gdp_growth_rate(
+        real_gdp_growth_rate=real_gdp_growth_rate,
+        inflation_rate=inflation_rate,
+    )
+
+    tax_revenue_before_cap = calculate_tax_revenue_before_cap(
+        previous_tax_revenue=previous_state.tax_revenue,
+        nominal_gdp_growth_rate=nominal_gdp_growth_rate,
+        tax_elasticity=tax_elasticity,
+    )
+
+    return TransitionResult(
+        demographic_state=demographic_state,
+        labor_force_growth_rate=labor_force_growth_rate,
+        real_gdp_growth_rate=real_gdp_growth_rate,
+        inflation_rate=inflation_rate,
+        nominal_gdp_growth_rate=nominal_gdp_growth_rate,
+        tax_revenue_before_cap=tax_revenue_before_cap,
+    )
 
 if __name__ == "__main__":
     state_2026 = SimulationState(
@@ -154,54 +234,26 @@ if __name__ == "__main__":
         births=0.0,
     )
 
-    state_2027 = transition_year_demographics(
+    result_2027 = transition_year(
         previous_state=state_2026,
         death_rate_coefficient=1.0,
         birth_decline_coefficient=1.0,
         phi=0.15,
         real_wage_growth_rate=0.0,
         net_migration=0.0,
-    )
-
-    print(f"State 2026: {state_2026}")
-    print(f"State 2027: {state_2027}")
-
-    labor_force_growth_rate_2027 = calculate_labor_force_growth_rate(
         total_population_growth_rate=0.0,
         aging_drag=0.0,
-    )
-
-    real_gdp_growth_rate_2027 = calculate_real_gdp_growth_rate(
         base_growth_rate=0.0,
         consumption_stimulus_effect=0.0,
         investment_promotion_effect=0.0,
         education_effect=0.0,
         risk_shock=0.0,
         alpha=0.35,
-        labor_force_growth_rate=labor_force_growth_rate_2027,
-    )
-
-    print(f"Labor Force Growth Rate 2027: {labor_force_growth_rate_2027}")
-    print(f"Real GDP Growth Rate 2027: {real_gdp_growth_rate_2027}")
-
-    inflation_rate_2027 = calculate_inflation_rate(
         base_inflation_rate=0.0,
         risk_event_inflation_impact=0.0,
         consumption_tax_transitional_factor=0.0,
-    )
-
-    nominal_gdp_growth_rate_2027 = calculate_nominal_gdp_growth_rate(
-        real_gdp_growth_rate=real_gdp_growth_rate_2027,
-        inflation_rate=inflation_rate_2027,
-    )
-
-    print(f"Inflation Rate 2027: {inflation_rate_2027}")
-    print(f"Nominal GDP Growth Rate 2027: {nominal_gdp_growth_rate_2027}")
-
-    tax_revenue_before_cap_2027 = calculate_tax_revenue_before_cap(
-        previous_tax_revenue=0.0,
-        nominal_gdp_growth_rate=nominal_gdp_growth_rate_2027,
         tax_elasticity=1.5,
     )
 
-    print(f"Tax Revenue Before Cap 2027: {tax_revenue_before_cap_2027}")
+    print(f"State 2026: {state_2026}")
+    print(f"Transition Result 2027: {result_2027}")

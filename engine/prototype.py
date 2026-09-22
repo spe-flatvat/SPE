@@ -91,6 +91,16 @@ def calculate_nominal_gdp_growth_rate(
     """Apply the SPE v6 Nominal GDP Growth Rate composition rule."""
     return real_gdp_growth_rate + inflation_rate
 
+def calculate_tax_revenue_before_cap(
+    previous_tax_revenue: float,
+    nominal_gdp_growth_rate: float,
+    tax_elasticity: float,
+) -> float:
+    """Apply the SPE v6 Tax Revenue Transition before the unresolved cap."""
+    return previous_tax_revenue * (
+        1 + nominal_gdp_growth_rate * tax_elasticity
+    )
+
 def transition_year_demographics(
     previous_state: SimulationState,
     death_rate_coefficient: float,
@@ -187,3 +197,11 @@ if __name__ == "__main__":
 
     print(f"Inflation Rate 2027: {inflation_rate_2027}")
     print(f"Nominal GDP Growth Rate 2027: {nominal_gdp_growth_rate_2027}")
+
+    tax_revenue_before_cap_2027 = calculate_tax_revenue_before_cap(
+        previous_tax_revenue=0.0,
+        nominal_gdp_growth_rate=nominal_gdp_growth_rate_2027,
+        tax_elasticity=1.5,
+    )
+
+    print(f"Tax Revenue Before Cap 2027: {tax_revenue_before_cap_2027}")

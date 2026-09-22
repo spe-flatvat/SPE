@@ -102,8 +102,10 @@ Repository governance documents shall remain frozen unless an explicit exception
 - Death Rate Coefficient [Document]  
 - Birth Rate Coefficient [Document]  
 - Birth–Real Wage Feedback Elasticity φ [Model Assumption] (see Glossary.md)  
-- Immigration Schedule (F-Scenario steady-state value) [Document]  
-  
+- Immigration Schedule (F-Scenario) [Document]
+  - Before 2030: 0
+  - 2030–2034: phased ramp-up period
+  - 2035 onward: steady-state Net Migration = 400,000/year
 **Labor Parameters** [Model Assumption]  
 - Capital Share α (see Glossary.md)  
 - Aging Drag (period-specific values; source is IPSS data, integration method is [Model Assumption])  

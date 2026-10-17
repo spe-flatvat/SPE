@@ -1,0 +1,23 @@
+{
+  "profile": "provisional_m7_reproduction",
+  "annual_inputs": {
+    "2027": {
+      "risk_shock": 0.05,
+      "aging_drag": -0.005,
+      "tax_elasticity": 1.5,
+      "expenditure_growth": 0.025
+    },
+    "2028": {
+      "risk_shock": 0.0,
+      "aging_drag": -0.005,
+      "tax_elasticity": 1.5,
+      "expenditure_growth": 0.025
+    },
+    "2029": {
+      "risk_shock": 0.0,
+      "aging_drag": -0.005,
+      "tax_elasticity": 1.5,
+      "expenditure_growth": 0.01
+    }
+  }
+}

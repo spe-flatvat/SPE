@@ -1,0 +1,10 @@
+{
+  "schema_version": "m11.1",
+  "profile": "provisional_batch_comparison",
+  "baseline": "baseline",
+  "scenarios": {
+    "baseline": "scenarios/m8_baseline.json",
+    "test": "scenarios/m8_test.json",
+    "test_copy": "scenarios/m11_test_copy.json"
+  }
+}

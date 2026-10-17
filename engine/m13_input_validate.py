@@ -13,7 +13,7 @@ def validate_scenario(data):
         raise ValueError("Scenario must be an object")
 
     required_fields = {"profile", "annual_inputs"}
-    allowed_fields = required_fields | {"wage_anchors"}
+    allowed_fields = required_fields | {"wage_anchors", "gini_anchors"}
 
     if not required_fields <= set(data):
         raise ValueError("Missing scenario fields")
@@ -96,5 +96,34 @@ def validate_scenario(data):
 
         if anchor_years[-1] != years[-1]:
             raise ValueError("Wage anchors must end at scenario end")
+
+    if "gini_anchors" in data:
+        from m17_gini_anchor import validate_gini_anchors
+
+        raw = data["gini_anchors"]
+
+        if not isinstance(raw, dict):
+            raise ValueError("Invalid gini_anchors")
+
+        anchors = {}
+
+        for year, gini in raw.items():
+            if (
+                not isinstance(year, str)
+                or len(year) != 4
+                or not year.isascii()
+                or not year.isdecimal()
+            ):
+                raise ValueError("Invalid Gini anchor year")
+
+            anchors[int(year)] = gini
+
+        anchor_years = validate_gini_anchors(anchors)
+
+        if anchor_years[0] != 2026:
+            raise ValueError("Gini anchors must start in 2026")
+
+        if anchor_years[-1] != years[-1]:
+            raise ValueError("Gini anchors must end at scenario end")
 
     return annual

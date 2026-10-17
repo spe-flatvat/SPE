@@ -96,6 +96,7 @@ from pathlib import Path
 
 from m13_input_validate import validate_scenario
 from m14_wage_anchor import wage_growth_rate, interpolate_wage
+from m17_gini_anchor import interpolate_gini
 
 import sys
 
@@ -166,8 +167,19 @@ if anchors is None:
 import json
 from dataclasses import asdict
 
+raw_gini_anchors = scenario.get("gini_anchors")
+gini_anchors = (
+    {int(year): value for year, value in raw_gini_anchors.items()}
+    if raw_gini_anchors is not None
+    else None
+)
+
 output = {
-    "schema_version": "m16.1" if anchors is not None else "m10.1",
+    "schema_version": (
+        "m17.1" if gini_anchors is not None
+        else "m16.1" if anchors is not None
+        else "m10.1"
+    ),
     "scenario": scenario_path.name,
     "profile": scenario["profile"],
     "years": {
@@ -180,6 +192,15 @@ output = {
                     )
                 }
                 if anchors is not None
+                else {}
+            ),
+            **(
+                {
+                    "gini_coefficient": interpolate_gini(
+                        gini_anchors, year
+                    )
+                }
+                if gini_anchors is not None
                 else {}
             ),
             "bonds": max(

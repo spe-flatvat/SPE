@@ -1,10 +1,10 @@
 import json
+from m12_validate import load_registry_strict, validate_result
 from pathlib import Path
 
 REGISTRY = Path("scenarios/m11_registry.json")
 
-with REGISTRY.open(encoding="utf-8") as f:
-    registry = json.load(f)
+registry = load_registry_strict(REGISTRY)
 
 assert registry["schema_version"] == "m11.1"
 
@@ -41,6 +41,7 @@ for name, path in scenarios.items():
         text=True
     )
     data = json.loads(raw)
+    validate_result(data)
 
     assert data["schema_version"] == "m10.1"
     assert isinstance(data["years"], dict)

@@ -13,7 +13,7 @@ from prototype import (
 )
 
 
-def advance(previous, *, risk_shock, aging_drag, tax_elasticity, expenditure_growth):
+def advance(previous, *, risk_shock, aging_drag, tax_elasticity, expenditure_growth, real_wage_growth_rate=0.0):
     """Return a fully carried-forward SimulationState."""
 
     demographics = transition_year_demographics(
@@ -21,7 +21,7 @@ def advance(previous, *, risk_shock, aging_drag, tax_elasticity, expenditure_gro
         death_rate_coefficient=1.015,
         birth_decline_coefficient=0.975,
         phi=0.15,
-        real_wage_growth_rate=0.0,
+        real_wage_growth_rate=real_wage_growth_rate,
         net_migration=0.0,
     )
 
@@ -34,7 +34,7 @@ def advance(previous, *, risk_shock, aging_drag, tax_elasticity, expenditure_gro
         death_rate_coefficient=1.015,
         birth_decline_coefficient=0.975,
         phi=0.15,
-        real_wage_growth_rate=0.0,
+        real_wage_growth_rate=real_wage_growth_rate,
         net_migration=0.0,
         total_population_growth_rate=population_growth,
         aging_drag=aging_drag,
@@ -95,6 +95,7 @@ import json
 from pathlib import Path
 
 from m13_input_validate import validate_scenario
+from m14_wage_anchor import wage_growth_rate
 
 import sys
 
@@ -127,20 +128,40 @@ for year, params in annual_inputs.items():
     ), f"Invalid values in {year}"
 
 states = {2026: state_2026}
+
+raw_anchors = scenario.get("wage_anchors")
+anchors = (
+    {int(year): wage for year, wage in raw_anchors.items()}
+    if raw_anchors is not None
+    else None
+)
+
 for year, inputs in sorted(annual_inputs.items()):
     assert year == max(states) + 1
-    states[year] = advance(states[year - 1], **inputs)
+
+    growth = (
+        wage_growth_rate(anchors, year)
+        if anchors is not None
+        else 0.0
+    )
+
+    states[year] = advance(
+        states[year - 1],
+        **inputs,
+        real_wage_growth_rate=growth,
+    )
 
 state_2027 = states[2027]
 state_2028 = states[2028]
 
-assert state_2027.year == 2027
-assert state_2028.year == 2028
-assert isclose(state_2027.population, 120_510_150)
-assert isclose(state_2027.real_gdp, 551.8436, abs_tol=0.0001)
-assert isclose(state_2027.nominal_gdp, 582.8727, abs_tol=0.0001)
-assert isclose(state_2027.tax_revenue, 76.5745, abs_tol=0.0001)
-assert isclose(state_2027.expenditure, 110.7, abs_tol=0.0001)
+if anchors is None:
+    assert state_2027.year == 2027
+    assert state_2028.year == 2028
+    assert isclose(state_2027.population, 120_510_150)
+    assert isclose(state_2027.real_gdp, 551.8436, abs_tol=0.0001)
+    assert isclose(state_2027.nominal_gdp, 582.8727, abs_tol=0.0001)
+    assert isclose(state_2027.tax_revenue, 76.5745, abs_tol=0.0001)
+    assert isclose(state_2027.expenditure, 110.7, abs_tol=0.0001)
 
 import json
 from dataclasses import asdict

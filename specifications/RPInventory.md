@@ -1,12 +1,12 @@
 # RPInventory
 
-Version: v0.5
+Version: v0.6
 
 Status: Fixed
 
-Last Updated: 2026-07-20
+Last Updated: 2026-10-17
 
-Updated By: RP-018
+Updated By: RP-022
 
 ## Purpose
 
@@ -27,6 +27,10 @@ and associated governance documents verified. |
 | **RP-016** | Closed | **Verified** | Structure Design & Mapping (Official artifact confirmed) |
 | **RP-017** | Closed | **Verified** | Content Migration (Tagged rp-017-final) |
 | **RP-018** | Completed | **Verified (Census Completed)** | Repository Census & Audit Baseline Established |
+| **RP-019** | Historical Record | **Git Evidence Confirmed** | F-Scenario specification authoring commits; closure status not established by this inventory update |
+| **RP-020** | Historical Record | **Git Evidence Confirmed** | Risk event and inflation specification commits; closure status not established by this inventory update |
+| **RP-021** | Historical Record | **Git Evidence Confirmed** | F-Scenario immigration ramp-up restoration commit; closure status not established by this inventory update |
+| **RP-022** | Open | **Document Created** | Japan Government Bond Issuance and SPE Fiscal Model Consistency Audit; M18 suspended |
 
 ## Notes
 

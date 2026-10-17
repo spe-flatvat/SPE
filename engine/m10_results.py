@@ -95,7 +95,7 @@ import json
 from pathlib import Path
 
 from m13_input_validate import validate_scenario
-from m14_wage_anchor import wage_growth_rate
+from m14_wage_anchor import wage_growth_rate, interpolate_wage
 
 import sys
 
@@ -167,12 +167,21 @@ import json
 from dataclasses import asdict
 
 output = {
-    "schema_version": "m10.1",
+    "schema_version": "m16.1" if anchors is not None else "m10.1",
     "scenario": scenario_path.name,
     "profile": scenario["profile"],
     "years": {
         str(year): {
             **asdict(state),
+            **(
+                {
+                    "real_median_wage": interpolate_wage(
+                        anchors, year
+                    )
+                }
+                if anchors is not None
+                else {}
+            ),
             "bonds": max(
                 state.expenditure - state.tax_revenue, 0
             ),

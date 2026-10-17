@@ -94,11 +94,14 @@ state_2026 = SimulationState(
 import json
 from pathlib import Path
 
+from m13_input_validate import validate_scenario
+
 import sys
 
 default_path = Path(__file__).resolve().parent.parent / "scenarios/m8_baseline.json"
 scenario_path = Path(sys.argv[1]) if len(sys.argv) > 1 else default_path
 scenario = json.loads(scenario_path.read_text())
+validate_scenario(scenario)
 annual_inputs = {
     int(year): params
     for year, params in scenario["annual_inputs"].items()

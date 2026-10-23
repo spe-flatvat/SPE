@@ -30,7 +30,7 @@ and associated governance documents verified. |
 | **RP-019** | Historical Record | **Git Evidence Confirmed** | F-Scenario specification authoring commits; closure status not established by this inventory update |
 | **RP-020** | Historical Record | **Git Evidence Confirmed** | Risk event and inflation specification commits; closure status not established by this inventory update |
 | **RP-021** | Historical Record | **Git Evidence Confirmed** | F-Scenario immigration ramp-up restoration commit; closure status not established by this inventory update |
-| **RP-022** | Open | **Document Created** | Japan Government Bond Issuance and SPE Fiscal Model Consistency Audit; M18 suspended |
+| **RP-022** | Closed | **Audit Complete with Documented Limitations** | Japan Government Bond Issuance and SPE Fiscal Model Consistency Audit; Section 51 closure recorded in commit `af4e42af1a66b22891301e70758e422b93cb2bb6`; residual verification handed over; M18 remains suspended pending separate compatibility review and authorization. |
 
 ## Notes
 

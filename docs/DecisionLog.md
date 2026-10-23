@@ -42,6 +42,24 @@ Documentation mistakes and factual corrections are **not** recorded here; they b
 | **DL-009** | Approved | Formal Freeze of Original SimulationSpecification_v5. | Original v5 is adopted as Frozen Baseline and Canonical Source. Reconstructed v5 is excluded/discarded due to Reconstruction Regression risks. | 1.0 |
 | **DL-010** | Approved | Repository Governance & AI Review Policy. | Establish Authority, AI role, and Owner-confirmed snapshot requirements. | 1.0 |
 | **DL-011** | Approved | Simulation Specification v5 → v6 Migration completed. | Records completion of RP-017 migration and separation of Migration (RP-017) from Authoring (RP-018). | 1.0 |
+| **DL-012** | Approved | Apply the RP-022 retained fiscal-model decision to the M18 endpoint evaluation contract. | Preserve approved fiscal semantics and prevent unapproved PB or fiscal-divergence compliance judgments. | M18 Resumption Preparation |
+
+### DL-012: RP-022 Retained Fiscal Model Application to M18
+
+- **Status:** Approved
+- **Decision:** Apply the RP-022 retained fiscal-model decision to the M18 endpoint evaluation contract.
+- **Phase:** M18 Resumption Preparation
+- **Rationale:**
+  - RP-022 Sections 49 and 51 establish the approved fiscal-model semantics and audit closure boundaries.
+  - `bonds = max(expenditure - tax_revenue, 0)` remains unchanged.
+  - `bonds` represents a model-defined nonnegative fiscal funding gap, not verified total government bond issuance or Primary Balance.
+  - Annual and 2055 `bonds` values remain valid outputs and descriptive cross-scenario comparison inputs.
+  - Independent PB calculation and PB compliance judgment are not adopted.
+  - No automatic fiscal divergence pass/fail threshold is authorized.
+  - Population remains a reference indicator. Existing Gini and Tax Revenue / Nominal GDP constraints remain applicable.
+  - The historical PB-related mandatory-constraint wording in `SimulationSpecification_v6.md` is not an operative M18 compliance requirement under the approved RP-022 decision.
+- **Boundary:** This decision does not modify historical specifications, authorize fiscal-schema migration, certify regression execution, or authorize M18 implementation resumption.
+- **Evidence:** RP-022 Sections 45, 49, 50, and 51; commit `af4e42af1a66b22891301e70758e422b93cb2bb6`.
 
 ### DL-001: Model Name Transition (TSUBAME to SUZUME)
 

@@ -51,6 +51,17 @@ Their inclusion is intended to preserve review history and improve traceability 
 | **ER-008** | Glossary v0.1 (Draft) | Implemented TSUBAME/SUZUME model concepts and future SPE architecture should be separated into independent sections. | Open |
 | **ER-009** | Glossary v0.1 (Draft) | Source tag definitions require explicit inclusion criteria for each category. | Open |
 | **ER-010** | Discarding SimulationSpecification_v5_Reconstructed | Reconstruction regression risks identified. Original SimulationSpecification_v5.md adopted as the formal Frozen Baseline. | 2026-07-18 |
+| **ER-011** | SimulationSpecification_v6.md, Evaluation Metrics / Mandatory Constraints | PB deterioration avoidance is still listed as a mandatory constraint, contrary to the approved RP-022 retained-model decision. See ER-011 detail. | Open |
+
+## ER-011: Historical PB Mandatory-Constraint Inconsistency
+
+- **Document:** `specifications/SimulationSpecification_v6.md`
+- **Location:** Evaluation Metrics / Mandatory Constraints
+- **Status:** Open
+- **Issue:** The statement “Avoidance of rapid Primary Balance deterioration (Bond Issuance divergence)” remains listed as a mandatory compliance constraint.
+- **Current authoritative treatment:** RP-022 Section 49 does not adopt independent PB calculation or PB compliance judgment. The model-defined `bonds` indicator remains available for descriptive trajectory and endpoint comparison without an unapproved divergence pass/fail threshold.
+- **Correction handling:** Preserve historical v6 text. Apply DL-012 and RP-022 Sections 49 and 51 when interpreting the current M18 evaluation contract. Any direct canonical specification amendment requires separate approval.
+- **Resolution condition:** Close ER-011 only after the inconsistency is reconciled through an approved documentation update or equivalent governed resolution.
 
 ---
 

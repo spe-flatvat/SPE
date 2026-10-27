@@ -1,0 +1,29 @@
+--- Rev4_FROZEN
++++ Rev4_OWNER_DECISIONS_CANDIDATE_NONCANONICAL
+@@ -53,7 +53,7 @@
+ 
+ It MUST NOT invent political approvals, economic coefficients, policy effects, observations, initial-state values, numerical anchors, or Trigger evaluation rules.
+ 
+-It MUST NOT modify M10/M14/M17 calculation semantics or M18 evaluation semantics without separate approval.
++It MUST NOT modify M10/M14/M17 calculation semantics or M18 evaluation semantics.
+ 
+ Controller metadata MUST remain outside existing strict annual-result schemas unless separately authorized.
+ 
+@@ -99,7 +99,7 @@
+ |`not_evaluated`|`not_required`|No transition. Required but unperformed evaluation blocks the dependent operation with `STOP_TRIGGER_NOT_EVALUATED`.|
+ |`unknown`|`not_required`|No transition. Required indeterminate determination blocks the dependent branch with `STOP_TRIGGER_UNKNOWN`.|
+ |`not_met`|`not_required`|Continue independently valid incumbent policy; no discretionary switch.|
+-|`met`|`not_required`|Transient only while requesting Decision; MUST settle to `pending`, `approved`, or `rejected` before dependent Gate B completion.|
++|`met`|`not_required`|Transient only while requesting Decision; MUST settle to `pending`, `approved`, or `rejected` before dependent Gate B completion. Persistent occurrence fails closed for the dependent switch.|
+ |`met`|`pending`|No switch; dependent branch stops or remains held pending an attributable Decision.|
+ |`met`|`approved`|Reservation candidate permitted after target, year, authority, evidence, and conflict validation.|
+ |`met`|`rejected`|Continue independently valid incumbent policy; record normal branch resolution such as `BRANCH_DECISION_REJECTED`.|
+@@ -279,6 +279,8 @@
+ Pairwise or multipath comparability is a separate comparison-operation-level determination, not a seventh domain or additional Comparison enum value.
+ 
+ The approved comparison contract MUST identify an immutable contract ID and version, evaluation period, metrics, units, baseline and initial-state compatibility, methodology, and required dependencies.
++
++The comparison operation MUST validate the approved comparison contract's evaluation period, metric definitions, units, baseline and initial-state compatibility, and evaluation methodology, plus all expressly required contract conditions.
+ 
+ Each comparison result MUST have a distinct immutable result ID and attributable references to relevant annual calculations, M18 evaluations, and input contracts.
+ 

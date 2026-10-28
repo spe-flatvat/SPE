@@ -1,0 +1,32 @@
+--- a/FG06_CAND_Rev4_3DEC.md
++++ b/M19_Control_Contract_Integrated_Candidate_DRAFT.md
+@@ -1,14 +1,17 @@
+-# SPE M19 Control Contract v0.4 — Owner-Adjudicated Revision DRAFT Rev.4 Candidate
++# SPE M19 Control Contract — FG-06 R-01–R-07 Integrated Candidate DRAFT
+ 
+ - Document ID: `M19-CC-v0.4-DRAFT`
+-- Status: **DRAFT / NON-CANONICAL / NOT FROZEN / NOT REVIEW-ACCEPTED**
++- Status: **INTEGRATED DRAFT / NON-CANONICAL / NOT FROZEN / NOT REVIEW-ACCEPTED**
++- Integration basis: FG-06 R-01 Owner option A (C01–C09, conditional prospective drafting authority); R-02 option B2; R-03–R-07 option A (Owner instructions dated 2026-10-28). This is not historical approval verification.
++- Fixed immediate integration source SHA-256: `fce55ac833abb06085340e6bb903939c2121bc6387d07c4d04ddd23cfde6b848` at commit `0a7e3af9e73f37821c3de05f06ebb043965b274e`.
++- Evidence limits: original historical adjudication evidence and E-03/E-04 remain NOT VERIFIED. FG-06 Findings are not closed; this integrated draft has not been independently re-reviewed.
+ - Project: SPE (SUZUME PolicyCraft Engine)
+ - Repository: `spe-flatvat/SPE`
+ - Owner-confirmed repository review baseline (D22-01): `e2238922193107f204805d9f25d6ddd6f764eced`
+ - Source review candidate: `M19_Control_Contract_v0.3_FRC-1.md`, recovered from GitHub history at `0b27c2fe952ab05ea744c265e34f83f0e1ae01f5`; not currently on `main`.
+ - Historical review-candidate digest (reported, not independently reverified): `f61f7df247b4aa3cca884379bd9fb0593df2f8d7fbc8fea9db452e7098951e2d`
+ - Immediate source: `M19_Control_Contract_v0.4_DRAFT_Rev3.md`
+-- Authority basis: Owner adjudications D25-01–12, O-01–05, GATE-01, COMP-01, R-01–07, 6D27-01–02, and 6D38-01.
++- Historical authority references (NOT independently verified): D25-01–12, O-01–05, GATE-01, COMP-01, R-01–07, 6D27-01–02, and 6D38-01. Current drafting authority: FG-06 R-01–R-07 Owner decisions of 2026-10-28, within their expressly limited scope.
+ - Canonical DecisionLog correspondence: pending.
+ - Scope: annual simulation and conditional policy-transition control semantics, 2026–2055.
+ - Version note: `v0.4` and `Rev.4` are working labels, not approved version designations.
+@@ -144,7 +147,7 @@
+ 
+ **Year-entry sequence:** For each year `t` in 2026–2055, the controller MUST evaluate Gate A, then Gate C, then Gate B where applicable.
+ 
+-Where a valid transition candidate targets `t`, Gate C MUST validate the candidate destination policy's target-year numerical contract against the actual authorized preceding-year state and applicable segment references.
++Where a valid transition candidate targets `t`, Gate C MUST validate the candidate destination policy's target-year numerical contract against the Owner-approved 2026 Baseline Initial-State Contract when `t=2026`, or against the actual authorized finalized preceding-year state when `t>=2027`, together with applicable segment references. This 2026 boundary rule does not approve initial numerical values or a policy transition.
+ 
+ Gate C validation MUST NOT itself authorize or effectuate the transition or finalize the candidate policy's calculation.
+ 

@@ -1,0 +1,31 @@
+--- a/SPE_M19_Control_Contract_Convergence_Candidate_DRAFT_20261030.md
++++ b/SPE_M19_FR_CV_06_Rev2_Convergence_Candidate_DRAFT_20261031.md
+@@ -118,6 +118,8 @@
+ 
+ The controller MUST NOT invent priority among competing switches. Non-discretionary switch types require separately approved contracts.
+ 
++**Prospective Decision-omission boundary (CV05-N01):** No presently authorized policy-switch reservation or effectuation may omit attributable Decision evidence otherwise required by CC-03, CC-05, and CC-12 solely because a switch is labeled non-discretionary or an external contract is cited. A Decision-free pathway is not authorized by this clause or by CV05-N01. Any future such pathway requires separate express Owner approval of the applicable normative change, including reconciliation of CC-03, CC-05, and CC-12 before use. A dependent switch lacking required authorization MUST fail closed within its dependency scope; independently authorized incumbent calculations remain executable.
++
+ **Multiyear pending Decision:** An attributable `Decision=pending` MAY persist across annual boundaries only within its expressly approved decision process, authority, scope, and validity conditions.
+ 
+ A subsequent Trigger result of `not_met` or `unknown`, or a subsequent Trigger status of `not_evaluated`, MUST NOT, by itself, automatically approve, reject, cancel, expire, or renew the existing pending Decision.
+@@ -149,7 +151,9 @@
+ 
+ Where a valid transition candidate targets `t`, Gate C MUST validate the candidate destination policy's target-year numerical contract against the Owner-approved 2026 Baseline Initial-State Contract when `t=2026`, or against the actual authorized finalized preceding-year state when `t>=2027`, together with applicable segment references. This 2026 boundary rule does not approve initial numerical values or a policy transition.
+ 
+-The 2026 reference branch in this clause does not establish a transition-candidate creation, approval, scheduling, or effectuation pathway. A candidate targeting 2026 may be used only if its creation and use are separately authorized under applicable approved contracts and, where required by those contracts or other applicable approved requirements, attributable Decisions, with all required reservation, numerical-contract, and Gate validations. No such separate authorization is established by this clause.
++The 2026 reference branch in this clause does not establish a transition-candidate creation, approval, scheduling, or effectuation pathway. A candidate targeting 2026 may be used only if its creation and use are separately authorized under applicable approved contracts and, where required by those contracts or other applicable approved requirements, attributable Decisions, with all required reservation, numerical-contract, and Gate validations. For each relied-upon authorization or requirement, the dependent operation MUST verify an immutable authoritative source reference (contract ID/version or artifact/digest), attributable approval evidence, and applicability to the candidate, target year, and operation. Any claimed contract precedence MUST be supported by an expressly approved rule applicable to the conflict; the controller MUST NOT infer precedence, approval, or Decision waiver from unspecified references. If necessary authorization or conflict resolution cannot be established, the dependent transition MUST fail closed within its dependency scope. These verification obligations do not create a contract hierarchy or approve a new exception. No such separate authorization is established by this clause.
++
++**2026 transition authorization boundary (CV05-N03):** Validation of the 2026 Baseline Initial-State Contract does not itself authorize creation, use, scheduling, reservation, or effectuation of a transition candidate targeting 2026. Each dependent transition operation MUST have an attributable separately approved authorization basis covering its applicable creation/use and destination/effective-year requirements, together with the Decision, reservation, numerical-contract, and Gate validations required by the approved contracts. Missing, conflicting, or unverified required authorization MUST fail closed for the dependent transition, without blocking independently authorized 2026 initialization or incumbent-policy calculation. A fictitious 2025 finalized state MUST NOT be used to supply missing authorization or numerical history. This clause creates no new mandatory creator-identity approval schema.
+ 
+ Gate C validation MUST NOT itself authorize or effectuate the transition or finalize the candidate policy's calculation.
+ 
+@@ -401,6 +405,8 @@
+ `Trigger=met` and `Decision=approved` do not automatically imply `Transition=effective`.
+ 
+ Before scheduling, the controller MUST validate the approved destination, effective year, attributable Trigger and Decision evidence, and competing reservations.
++
++**Reservation evidence preservation (CV05-N01–N03):** The current Trigger and Decision evidence requirements in this clause remain mandatory for dependent scheduling; a non-discretionary label, an unspecified external requirement, or validation of the 2026 baseline does not waive them. No Decision-free reservation pathway is currently approved. Any future exception requires separate express Owner approval and an explicit normative amendment or reconciliation of CC-12 with CC-03, CC-05, and the applicable Gate requirements before it can be used. Scheduling MUST retain attributable evidence references and the result of applicable authorization checks; no new audit schema is approved by this paragraph.
+ 
+ A valid candidate MUST receive a unique immutable reservation ID and append-only `scheduled` event.
+ 

@@ -1,0 +1,11 @@
+--- SPE_M19-25_FG07-07_Integrated_Control_Contract_Candidate_DRAFT_20261030.md
++++ SPE_M19_Control_Contract_Convergence_Candidate_DRAFT_20261030.md
+@@ -149,7 +149,7 @@
+ 
+ Where a valid transition candidate targets `t`, Gate C MUST validate the candidate destination policy's target-year numerical contract against the Owner-approved 2026 Baseline Initial-State Contract when `t=2026`, or against the actual authorized finalized preceding-year state when `t>=2027`, together with applicable segment references. This 2026 boundary rule does not approve initial numerical values or a policy transition.
+ 
+-The 2026 reference branch in this clause does not establish a transition-candidate creation, approval, scheduling, or effectuation pathway. A candidate targeting 2026 may be used only if its creation and use are separately authorized under applicable approved contracts and attributable Decisions, with all required reservation, numerical-contract, and Gate validations. No such separate authorization is established by this clause.
++The 2026 reference branch in this clause does not establish a transition-candidate creation, approval, scheduling, or effectuation pathway. A candidate targeting 2026 may be used only if its creation and use are separately authorized under applicable approved contracts and, where required by those contracts or other applicable approved requirements, attributable Decisions, with all required reservation, numerical-contract, and Gate validations. No such separate authorization is established by this clause.
+ 
+ Gate C validation MUST NOT itself authorize or effectuate the transition or finalize the candidate policy's calculation.
+ 

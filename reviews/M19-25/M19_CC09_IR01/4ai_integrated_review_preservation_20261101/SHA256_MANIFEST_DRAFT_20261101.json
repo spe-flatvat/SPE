@@ -1,0 +1,42 @@
+{
+  "status": "LOCAL_ONLY_NOT_COMMITTED",
+  "target_commit": "edc47652f986b75341404154bfd3057da89e9329",
+  "files": [
+    {
+      "path": "analysis/SPE_M19_CC09_IR01_4AI_Cross_Review_DRAFT_20261101.md",
+      "bytes": 7489,
+      "sha256": "d4e39b8a16eab56033887b670b71113f6d5eff473aba44e6285b68be4fc032fa",
+      "provenance": "new analytical DRAFT"
+    },
+    {
+      "path": "analysis/SPE_M19_CC09_IR01_Termux_Handoff_DRAFT_20261101.md",
+      "bytes": 1839,
+      "sha256": "7a56825be7fcfce63683e216e51b9cc2f238f7c80d8fa81b3ebc6b8fb92cf30f",
+      "provenance": "new analytical DRAFT"
+    },
+    {
+      "path": "originals/M19_CC09_IR01_Integrated_DRAFT_Claude_Independent_Review_DRAFT_20261101.md",
+      "bytes": 20014,
+      "sha256": "807bbbf24944ca3d2562b33ad7d1e81ea3d5caf7a2aaaf6b88f8fbaea5ec756f",
+      "provenance": "uploaded file copy"
+    },
+    {
+      "path": "originals/SPE_M19-CC09-IR-01_Integrated_Independent_Review_Report_Grok_20261101.md",
+      "bytes": 6506,
+      "sha256": "758bfd622c26e3a5897c1d28e46aa85b5f6a046b4d670ac3a0c5e16937c2be0b",
+      "provenance": "uploaded file copy"
+    },
+    {
+      "path": "originals/SPE_M19_CC09_IR01_ChatGPT_Final_Independent_Review_20261101.md",
+      "bytes": 10018,
+      "sha256": "180ed9855aba2dbd745e5a052ed5cd8a8511c39a175003962aa6707afa0013f2",
+      "provenance": "uploaded file copy"
+    },
+    {
+      "path": "originals/SPE_M19_CC09_IR01_Gemini_Integrated_Review_Conversation_Extract_20261101.md",
+      "bytes": 3502,
+      "sha256": "9bd3874b1939779bc8fe9f9ca71bc4a7428ea1f8ededc354b42393f10c56ae91",
+      "provenance": "Gemini chat-derived extract, not verbatim original"
+    }
+  ]
+}

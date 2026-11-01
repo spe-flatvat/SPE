@@ -1,0 +1,229 @@
+--- Rev2_FIXED
++++ SPE_M19_CC09_IR01_Rev2_Integrated_Amendment_DRAFT_20261101.md
+@@ -1,7 +1,7 @@
+ # SPE M19 Control Contract — FG-06 R-01–R-07 Integrated Candidate DRAFT
+ 
+ - Document ID: `M19-CC-v0.4-DRAFT`
+-- Status: **INTEGRATED DRAFT / NON-CANONICAL / NOT FROZEN / NOT REVIEW-ACCEPTED**
++- Status: **CC09-IR01 OWNER-DIRECTION INTEGRATED DRAFT / NON-CANONICAL / NOT FROZEN / NOT REVIEW-ACCEPTED**
+ - Integration basis: FG-06 R-01 Owner option A (C01–C09, conditional prospective drafting authority); R-02 option B2; R-03–R-07 option A (Owner instructions dated 2026-10-28). This is not historical approval verification.
+ - Fixed immediate integration source SHA-256: `fce55ac833abb06085340e6bb903939c2121bc6387d07c4d04ddd23cfde6b848` at commit `0a7e3af9e73f37821c3de05f06ebb043965b274e`.
+ - Evidence limits: original historical adjudication evidence and E-03/E-04 remain NOT VERIFIED. FG-06 Findings are not closed; this integrated draft has not been independently re-reviewed.
+@@ -13,6 +13,9 @@
+ - Immediate source: `M19_Control_Contract_v0.4_DRAFT_Rev3.md`
+ - Historical authority references (NOT independently verified): D25-01–12, O-01–05, GATE-01, COMP-01, R-01–07, 6D27-01–02, and 6D38-01. Current drafting authority: FG-06 R-01–R-07 Owner decisions of 2026-10-28, within their expressly limited scope.
+ - Canonical DecisionLog correspondence: pending.
++- CC09-IR01 drafting directions: B-OD-01=A, B-OD-02=A, B-OD-03=A' (closed execution traceability set), B-OD-04=A, B-OD-05=A; Owner-confirmed in conversation, not a canonical DecisionLog entry.
++- CC09-IR01 source: Rev.2 fixed commit `754c1e2907bce67f7d58d10bf36813ac76fd1ed0`; source SHA-256 `94286b1e8b86d19c0684c3463e77a454b49be661574be3cbbdb5b952a333e3bd`.
++- CC09-IR01 limitation: wording integrated for review only; no Owner approval of this full integrated text, implementation, Finding closure, or Freeze.
+ - Scope: annual simulation and conditional policy-transition control semantics, 2026–2055.
+ - Version note: `v0.4` and `Rev.4` are working labels, not approved version designations.
+ 
+@@ -52,7 +55,7 @@
+ 
+ ## CC-01 — Responsibilities and authority
+ 
+-The controller MUST select explicitly defined policy paths, validate boundary conditions, determine execution and comparison dispositions, and emit attributable audit evidence.
++The controller MUST select explicitly defined policy paths, validate boundary conditions, determine execution and comparison dispositions, and record the resulting operational dispositions together with the input, output, and execution-record references required by the applicable operation.
+ 
+ It MUST NOT invent political approvals, economic coefficients, policy effects, observations, initial-state values, numerical anchors, or Trigger evaluation rules.
+ 
+@@ -135,6 +138,8 @@
+ This clarification does not authorize automatic Trigger re-review, Decision renewal, reservation renewal, or transition effectuation. Such actions require separate express authorization.
+ 
+ For the 2040 R4 review, explicit rejection means N3 continuation in 2041. Pending or indeterminate review stops the dependent branch. Automatic re-review requires separate authorization. Shock exceptions are governed by CC-10.
++**Applicable authorization evidence boundary (CC09-IR01):** Verification of an applicable immutable authorization reference, attributable approval evidence, and current applicability for a dependent operation is distinct from exhaustive reauthentication of the historical conversation or every predecessor source. This distinction MUST NOT waive any expressly required current authorization, Decision, reservation, or Gate validation. A receipt or record MUST NOT be used as a substitute for an authorization that is absent, contradictory, or inapplicable.
++
+ ## CC-04 — Annual sequencing and the 2026 boundary
+ 
+ **Initialization:** Year 2026 MUST be validated under an Owner-approved Baseline Initial-State Contract, not a fictitious 2025 final-state record.
+@@ -167,7 +172,7 @@
+ 
+ Calculation attempts MUST remain distinguishable from finalized annual results.
+ 
+-A repairable failed or incomplete attempt MAY be retried before successful formal year-end only within the approved input contract and with attributable audit evidence.
++A repairable failed or incomplete attempt MAY be retried before successful formal year-end only within the approved input contract. Each such attempt MUST retain its identity, disposition, applicable input-contract reference, and attributable authorization or failure reason.
+ 
+ For a given execution/path/year context, there MUST be at most one finalized annual result and at most one successful formal year-end event.
+ 
+@@ -201,7 +206,7 @@
+ 
+ This control contract does not itself authorize or define a recovery or reinitialization mechanism.
+ 
+-No Decision or transition may rewrite an earlier finalized annual result. Implementation optimizations MAY be used only while preserving observable sequencing, audit, and historical immutability.
++No Decision or transition may rewrite an earlier finalized annual result. Implementation optimizations MAY be used only while preserving observable sequencing, the operational records required by the applicable contracts, and historical immutability.
+ 
+ The mechanisms for atomicity, idempotence, and recovery require separate implementation-contract approval.
+ ## CC-05 — Independent boundary gates and failure scope
+@@ -214,7 +219,7 @@
+ 
+ **Gate B — authorization where applicable:** Validate the dependent Trigger, mandatory observation contract, attributable Decision authority and evidence, live reservation, destination, effective year, and competing-transition conflicts.
+ 
+-Gate B audit MUST separately identify applicability, whether the formal evaluation checkpoint was reached, and the evaluated result.
++The Gate B operational record MUST separately identify applicability, whether the formal evaluation checkpoint was reached, the evaluated result where reached, the attributable reason, and the affected dependency scope.
+ 
+ Where Gate A and Gate C pass, the formal Gate B checkpoint is reached, and Gate B is established as nonapplicable, the controller MUST record `NOT_APPLICABLE` with an attributable reason.
+ 
+@@ -224,7 +229,7 @@
+ 
+ Where Gate B applies and is formally evaluated, the result MUST be PASS or FAIL with attributable evidence and dependency scope.
+ 
+-These classifications are audit attributes, not additional domain enum values.
++These classifications are operational result attributes, not additional domain enum values.
+ 
+ All applicable gates MUST pass before the dependent calculation or transition becomes effective.
+ 
+@@ -238,7 +243,7 @@
+ 
+ A failed mandatory observation contract also prohibits issuance of a new dependent formal Decision request based on that defective context.
+ 
+-Gate applicability, results, reasons, and dependency scope MUST be independently auditable. Ambiguous dependent authorization MUST fail closed without automatically stopping unrelated operations.
++Gate applicability, results, reasons, and dependency scope MUST be recorded for the affected operation. Ambiguous dependent authorization MUST fail closed without automatically stopping unrelated operations.
+ 
+ ## CC-06 — No anticipation and segment isolation
+ 
+@@ -301,50 +306,25 @@
+ 
+ Historical results MUST NOT be silently overwritten. Replacement determinations require new attributable records.
+ 
+-Comparison validation outcomes, publication dispositions, and withholding reasons MUST be audited whether or not `HOLD_COMPARISON` is issued.
+-
+-Issuance of `HOLD_COMPARISON` is MAY. If issued, it MUST be audited under CC-09.
++Comparison validation outcomes, publication dispositions, and withholding reasons MUST be recorded by the comparison operation whether or not `HOLD_COMPARISON` is issued.
++
++Issuance of `HOLD_COMPARISON` is MAY. If issued, the operation MUST record the comparison target, reason, related Comparison state, comparison-contract ID, and applicable result reference.
+ 
+ Issuance MUST NOT rewrite individual eligibility or invalidate otherwise valid calculations.
+ 
+ Independent calculations MAY continue where their own requirements remain satisfied.
+-## CC-09 — Three audit record classes, action audit, and immutability
+-
+-1. **Annual Calculation Record:** Execution/path/record ID, year, policy-set namespace and segment, approved initial/prior-state reference, immutable input and numerical-contract references, calculation-attempt identity and disposition, output reference, finalized-result identity where applicable, formal year-end status, authorized actor and authority, prerequisites, retry linkage, and attributable failure or resolution evidence.
+-
+-2. **Transition Decision Record:** Execution/path/record ID, year, Trigger observations and evaluation-contract version, mandatory observation-contract validity, attributable Decision authority and evidence, historical Decision identity and current applicability, destination/effective year, immutable reservation ID, creation/checkpoint validation evidence, linked lifecycle-resolution events, and applicable R4 source section or exception.
+-
+-3. **Execution / Comparison Record:** Execution/path/record ID, year, dependency scope, Gate A/C/B sequence, Gate B applicability, formal evaluation status and result, Execution disposition, immutable comparison-contract ID/version, comparison-result ID where applicable, calculation and M18 references, individual Comparison state, mutual comparability outcome, dependency-impact analysis, revalidation disposition, publication disposition, withholding reason, issued Control Action if any, and applicable reason codes.
+-
+-All references MUST resolve to immutable versions or digests.
+-
+-Audit records MUST be append-only. Corrections require new linked records.
+-
+-Reservation IDs MUST NOT be reused. Formal year-end recording MUST be atomic and idempotent for the same context.
+-
+-Partial failed attempts MUST NOT count as successful year-end events.
+-
+-Comparison validation outcomes and withholding reasons MUST be audited even when no `HOLD_COMPARISON` action is issued.
+-
+-If issued, the action MUST identify its reason, target, related Comparison state, comparison-contract ID, and applicable result reference.
+-
+-**Governance traceability:** Original Owner decisions, preserved reviewer responses, independently verified artifact hashes, secondary evidence, derived summaries, and unverified historical assertions MUST remain distinguishable.
+-
+-A governance traceability entry MUST identify the decision reference, issue, selected option, normative effect, evidence type, source, established receipt or retrieval date, original timestamp verification status, and review status.
+-
+-Before formal Freeze, adopted Owner decisions MUST be reconciled with applicable D22/D23/D24 predecessor decisions, the four independent review originals, individual finding dispositions, the final contract version and digest, and canonical DecisionLog correspondence.
+-
+-Secondary evidence MAY support provisional reconstruction where original evidence is unavailable.
+-
+-Missing or unverified originals MUST be identified by evidence status rather than treated as verified.
+-
+-Acceptance of irretrievable secondary evidence for formal Freeze requires separate Owner adjudication.
+-
+-Original reviewer responses MUST be preserved without silent normalization. Derived summaries MUST remain source-traceable.
+-
+-DecisionLog updates, repository writes, finding closure, and formal Freeze require separate authorization.
+-
+-These are normative reproducibility requirements, not claims of completed replay or V&V.
++## CC-09 — Reserved / Deleted
++
++CC-09's former three-class audit-record and historical governance reauthentication requirements are deleted. This reserved number does not create a new audit obligation. Independently applicable operational safety and governance requirements remain in their respective clauses and `docs/Workflow.md`.
++
++### M19-only provisional Owner decision receipt boundary (CC09-IR01; non-RP-023)
++
++For M19 governance recording only, a provisional Owner decision receipt MUST identify `decision_id`, `subject`, `decision_result`, `authority`, `decided_at`, `receipt_issued_at`, and `receipt_status` (`DRAFT` or `ISSUED`). `target_ref` MUST also be included when the approved object or its applicable version cannot otherwise be uniquely identified. A decision receipt is not an execution-time political Decision and MUST NOT automatically replace an authorization required by CC-03, CC-04, CC-05, CC-10, or CC-12.
++
++Known timestamps MUST be recorded with their actual known precision and timezone information where established. Unknown or unverified dates, times, or seconds MUST NOT be invented; the relevant field MUST explicitly indicate its unknown/unverified status rather than falsely supplying an ISO 8601 timestamp. Issuance of a receipt does not independently authenticate the original chat, establish missing authorization, or authorize a canonical DecisionLog update.
++
++A receipt whose content, authority, subject, or necessary target version is missing or contradictory MUST be referred to the Owner within the affected scope. Missing original historical chat evidence alone does not universally invalidate an otherwise identifiable, non-contradictory receipt or require indefinite historical reauthentication. This M19 provisional boundary does not approve or amend the RP-023 formal receipt specification or retroactively adjudicate past decisions.
++
+ ## CC-10 — R4 source precedence and shock exception
+ 
+ For `policies/Reboot4linesPolicies.md`, Chapter 4 is the canonical source for the 2040 activation-review Trigger.
+@@ -446,9 +426,9 @@
+ 
+ Formal comparison finalization and publication MUST NOT proceed without successful required validation.
+ 
+-Validation outcomes and withholding reasons MUST be audited even when no dedicated Control Action is issued.
+-
+-`HOLD_COMPARISON` MAY be issued as a separately audited Control Action.
++Validation outcomes and withholding reasons MUST be recorded by the comparison operation even when no dedicated Control Action is issued.
++
++`HOLD_COMPARISON` MAY be issued as a separately recorded Control Action.
+ 
+ If issued, it MUST identify the comparison target, reason, related Comparison state, comparison-contract ID, and applicable result reference.
+ 
+@@ -460,7 +440,7 @@
+ - "STOP_*": dependency-scoped execution halt, including `STOP_TRIGGER_NOT_EVALUATED`, `STOP_TRIGGER_UNKNOWN`, "STOP_DECISION_PENDING", "STOP_TRANSITION_CONFLICT", and "STOP_NUMERIC_MISSING".
+ - "HOLD_*": formal comparison withholding reasons, including "HOLD_COMPARISON_NOT_ASSESSED" and "HOLD_COMPARISON_INELIGIBLE".
+ 
+-Reason codes are audit attributes, not Trigger states or Control Actions.
++Reason codes are operational result attributes, not Trigger states or Control Actions.
+ 
+ `not_evaluated` MUST NOT be silently recast as `unknown`.
+ 
+@@ -483,10 +463,10 @@
+ 11. No resurrection or reuse of resolved reservation IDs.
+ 12. Independently valid operations continue outside failed dependency scope.
+ 13. Individual eligibility does not imply mutual comparability.
+-14. `HOLD_COMPARISON` is a separately audited Control Action, not a state rewrite.
++14. `HOLD_COMPARISON` is a separately recorded Control Action, not a state rewrite.
+ 15. R4 Chapter 4/5 precedence and shock exception do not create automatic activation.
+ 16. `STOP_TRIGGER_NOT_EVALUATED` and `STOP_TRIGGER_UNKNOWN` remain distinguishable.
+-17. Immutable end-to-end provenance and governance traceability.
++17. Traceability under this invariant is limited to three closed categories: (i) execution inputs, (ii) execution outputs, and (iii) operational execution records, including only the identifiers and immutable version references needed to identify and interpret those items. Historical governance evidence chains, original review conversations, and independent reauthentication of past adjudications are outside this invariant's scope. Expansion of these categories requires a separate express normative approval. This limitation does not waive authorization, Decision, reservation, or Gate checks expressly required by other clauses.
+ 18. Gate A → Gate C → Gate B ordering.
+ 19. Candidate destination numerical contract is prevalidated without premature effectuation.
+ 20. Gate B applicability, checkpoint reachability, and evaluated result remain distinct.
+@@ -496,7 +476,7 @@
+ 24. Formal year-end requires authorized actor, prerequisites, atomicity, and idempotence.
+ 25. Reservation expiry does not automatically expire the underlying Decision.
+ 26. Comparison contract/result IDs remain immutable and affected dependencies require revalidation.
+-27. Comparison withholding and its audit are mandatory; dedicated Control Action issuance is optional.
++27. Comparison withholding and its required operational record are mandatory; dedicated Control Action issuance is optional.
+ 28. Abnormal formal year-end does not imply a finalized numerical result or satisfy the next year's Gate A.
+ 29. Subsequent numerical recovery or reinitialization requires separately approved contract and validated provenance.
+ 
+@@ -504,7 +484,7 @@
+ 
+ ## Freeze boundary, exclusions, and governance HOLDs
+ 
+-Proposed control-semantics scope only: CC-01–CC-13, six domains, Control Action, initialization, gates, nonanticipativity, dependency-scoped stops, reservation lifecycle, R4 source precedence, comparison distinctions, audit requirements, and reason-code namespaces.
++Proposed control-semantics scope only: CC-01–CC-08 and CC-10–CC-13 (CC-09 reserved/deleted), six domains, Control Action, initialization, gates, nonanticipativity, dependency-scoped stops, reservation lifecycle, R4 source precedence, comparison distinctions, finite operational record requirements, and reason-code namespaces.
+ 
+ Not frozen / not authorized: Numerical coefficients and policy effects; approved 2026 baseline numerical contract itself; R4 metric implementation or shock-recognition thresholds; N3 2035 numerical freeze Trigger (KL-007); Noble nonregular-employment linkage (KL-008); R4→F3 special switch/VAT schedule; post-transition wage/Gini anchors; M10 adapter; M18 integration; machine-readable schemas and exhaustive reason-code list; five-policy 2026–2055 integrated run; actual V&V; formal comparison; architectural `F3 Boundary` implementation; and numerical recovery/reinitialization mechanism.
+ 
+@@ -518,13 +498,9 @@
+ 
+ Review MUST follow `docs/Workflow.md`, including the applicable four-AI review or documented Owner waiver.
+ 
+-Review findings and dispositions MUST be individually traceable.
+-
+-Original decisions and reviewer responses MUST remain distinguishable from secondary evidence and summaries.
+-
+-Acceptance of irretrievable secondary evidence for Freeze requires separate Owner adjudication.
+-
+-Applicable review consensus or documented waiver, explicit Owner final resolution, and DecisionLog correspondence are prerequisites to formal Freeze.
++Applicable review findings and their dispositions MUST remain identifiable for the current review and resolution process under `docs/Workflow.md`. Original decisions and reviewer responses MUST NOT be falsely represented by secondary evidence or summaries. Where historical original evidence is unavailable, an identifiable existing decision record or receipt MAY be relied upon without a universal requirement for renewed Owner adjudication solely due to the absence of the original chat, provided its decision content, authority, applicable subject, and relevant version can be established without a specific contradiction. An actual unresolved contradiction or missing authorization MUST be referred to the Owner within the affected scope; this clause does not automatically accept an unidentifiable or unauthorized decision.
++
++Applicable review consensus or documented waiver, explicit Owner final resolution, and DecisionLog correspondence remain prerequisites to formal Freeze under `docs/Workflow.md`. This contract does not impose exhaustive recovery or independent reauthentication of every historical chat original, predecessor adjudication, or reviewer response as a universal Freeze prerequisite.
+ 
+ Editorial repairs and static validation do not substitute for substantive re-review.
+ 
+@@ -536,7 +512,7 @@
+ 
+ - The historical FRC filename contains "v0.3_FRC-1"; aliases remain reference-only until approved.
+ - One canonical review-packet artifact should be identified; duplicates remain labeled rather than silently removed.
+-- The date "2026-10-24" associated with the Claude review is recorded from the D25-12 adjudication context. It MUST NOT be represented as an independently verified original receipt date. The review's self-reported document date and actual receipt date remain distinct and require reconciliation against original evidence before canonical logging.
++- The date "2026-10-24" associated with the Claude review is recorded from the D25-12 adjudication context. It MUST NOT be represented as an independently verified original receipt date. The review's self-reported document date and actual receipt date remain distinct. An unresolved discrepancy MUST be disclosed and handled within its affected governance scope; this note does not impose unlimited original-chat recovery.
+ - Grok's asserted review SHA and repository baseline MUST NOT be represented as independently verified without supporting evidence.
+ - This draft consolidates Owner-adjudicated directions but does not certify that every historical review original and source line has been independently reverified.
+ - The 18 Rev.2 re-review findings remain open until individually verified and formally resolved.

@@ -1,0 +1,25 @@
+--- SPE_M19_CC09_IR01_Stage18_Integrated_Amendment_Candidate_DRAFT_20261102.md
++++ SPE_M19_CC09_IR01_Stage20_Consolidated_Approval_Candidate_DRAFT_20261102.md
+@@ -1,4 +1,4 @@
+-> **Stage18 integration notice — DRAFT / NON-CANONICAL / NOT APPROVED.** This file is a complete derivative of the fixed integrated amendment DRAFT (commit `edc47652f986b75341404154bfd3057da89e9329`). P17-01–P17-05 paragraphs are explicitly marked PROPOSED and are **not** operative requirements. OD17-01 approved their consideration, not normative adoption. Stage19 audit and Stage20 consolidated Owner decision remain pending. No GitHub change or Freeze.
++> **Stage18 integration notice — DRAFT / NON-CANONICAL / NOT APPROVED.** This file is a complete derivative of the fixed integrated amendment DRAFT (commit `edc47652f986b75341404154bfd3057da89e9329`). P17-01–P17-05 paragraphs are explicitly marked PROPOSED and are **not** operative requirements. OD17-01 approved their consideration, not normative adoption. Stage19 audit identified unresolved conditions; Stage20 Owner consolidated decision is pending. This candidate is not executable or approved. No GitHub change or Freeze.
+ 
+ # SPE M19 Control Contract — FG-06 R-01–R-07 Integrated Candidate DRAFT
+ 
+@@ -143,6 +143,16 @@
+ **Applicable authorization evidence boundary (CC09-IR01):** Verification of an applicable immutable authorization reference, attributable approval evidence, and current applicability for a dependent operation is distinct from exhaustive reauthentication of the historical conversation or every predecessor source. This distinction MUST NOT waive any expressly required current authorization, Decision, reservation, or Gate validation. A receipt or record MUST NOT be used as a substitute for an authorization that is absent, contradictory, or inapplicable.
+ 
+ ## CC-04 — Annual sequencing, configurable initialization, and the legacy 2026 boundary
++
++### Stage20 profile applicability boundary — proposed consolidated amendment, not yet approved
++
++The **legacy fixed-baseline profile** retains the existing 2026–2055 requirements, including the Owner-approved 2026 Baseline Initial-State Contract and its associated historical invariants. **The configurable profile is a distinct future profile**, not an alternative interpretation of legacy requirements. P17-01–P17-05 become operative for a configurable run **only after** the applicable normative amendment, initial-state template, Player delegation/validation contract, numerical contracts, implementation mechanism, and required V&V have each been expressly approved within their respective scopes. No approval of this text alone activates that profile. In the absence of those prerequisites, the controller MUST NOT represent a configurable run as formally authorized. This paragraph does not require an Owner decision for each Player configuration that complies with an approved delegation.
++
++For a future configurable profile, `s` means the validated run's initial year and `e` means the end year under an independently authorized evaluation/run-period contract. This text **does not** authorize Player selection of `e`, any extension of the 2055 endpoint, or changes to M18 semantics. Initial-year Gate A references the approved template and the Player's validated configured initial state; subsequent-year Gate A references the actual finalized numerical state of `t−1`. For any candidate transition targeting `t=s`, Gate C must validate the destination-policy numerical contract against that validated configured initial state; for `t>s`, against the actual authorized finalized state of `t−1`, together with required segment references. This generalization does **not** authorize a transition, waive any Decision/reservation/Gate, or create a fictitious `s−1` result. It is proposed wording and **non-operative** until the separate approvals above.
++
++**Approval boundary:** Owner adoption of this consolidated *drafting direction* is distinct from approval of an executable implementation contract, actual template values, numerical calibration, or production use. The specific mechanisms for atomic/idempotent year-end and recovery remain separately approval-dependent under CC-04. All pre-existing unresolved Findings and evidence limitations remain OPEN unless individually and expressly resolved.
++
++
+ 
+ **Initialization — legacy fixed-baseline profile:** Year 2026 MUST be validated under an Owner-approved Baseline Initial-State Contract, not a fictitious 2025 final-state record.
+ 

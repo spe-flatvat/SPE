@@ -78,3 +78,71 @@
 - **補助・証拠状態に応じて扱う:** 統合裁定台帳、Owner承認レシート、CUSTODYレシート、横断監査資料、旧配布3文書。追加の必須指定は出典と根拠を明記してから確定。
 
 この分類は配布設計DRAFTであり、既存のScope Contractを変更するものではない。
+
+
+---
+
+## 8. 配布時点の固定参照補足（2026-11-07追補／従前の状態記載に優先）
+
+**Status:** UPDATED PRE-DISPATCH DRAFT / NON-CANONICAL / NOT ISSUED.
+
+本節は過去の時点における「GitHub未格納」「未検証」等の記載を削除・改竄せず、後続の保全・4AI内容同等性検証の実績を追記する。本文1〜7節の旧状態表記は作成時点の履歴として読む。今回の更新はOwnerによるManifest更新とGemini統合Markdown管理情報更新の限定承認に基づく。正式発出・新Snapshot承認・HOLD解除を意味しない。
+
+### 8.1 追加7原本の保全固定参照
+
+**Repository:** `spe-flatvat/SPE` / `main`
+**追加7原本の事後取得固定Commit:** `2eb077ad229d1f38e7b6802a417822b07f511765`
+**共通パスprefix:** `reviews/RP-023/v0.3_distribution_draft_20261106/nr01_03_limited_revision_20261107/`
+
+| 区分 | 原本名 | bytes | 実バイトSHA-256 |
+|---|---|---:|---|
+| COMMON-REQUEST | `SPE_RP023_E01_E04_4AI_Common_Review_Request_PRE_DISPATCH_DRAFT_20261107.md` | 4971 | `c49c05a4f645def90a1474da56535bbfedf20a7201b633b063c627e01de3628f` |
+| MANIFEST-OLD | `SPE_RP023_E01_E04_Distribution_Manifest_PRE_DISPATCH_DRAFT_20261107.md` | 7821 | `81c1ec546dbbb4f44478fdc9007b48068d969a58ee3415d891a3fc3843062ec1` |
+| CHECKLIST | `SPE_RP023_E01_E04_Distribution_Checklist_PRE_DISPATCH_DRAFT_20261107.md` | 3402 | `08467662b432ec3de988bea5083133564fa4f12076c03f8224d6173f2891bf3c` |
+| E01-E04-DIFF | `RP023_E01_E04_full_diff_READONLY.diff` | 6804 | `35811cb56c2c9c31a5ad41d1c3d3b88e5a9b933f2e11687cc4fb60478b76430f` |
+| OWNER-APPROVAL-RECEIPT | `SPE_RP023_NR01_03_Cross_Audit_Owner_Approval_Receipt_20261107.md` | 2179 | `965df96c4c2a3fcd81384bbdd9db833f7652702f2bd16be22ad9a9363b3d49c2` |
+| CONCRETE-EDITS | `SPE_RP023_NR01_03_Post_Cross_Audit_Concrete_Edits_DRAFT_20261107.md` | 5588 | `91b999b1a4fa2a6bf924c8af02ba05599a9075be47a36087b13bfa26a0227456` |
+| CUSTODY-RECEIPT | `SPE_RP023_E01_E04_GitHub_Custody_PASS_Receipt_20261107.md` | 3078 | `fcc47cf907632c5fe7f91cd423863dc433a4afe40c05be09e61e6690ca4cc967` |
+
+7件とも固定Commitから再取得し、原本実バイトSHA-256とサイズ一致を確認済み（7/7 CUSTODY PASS）。ただし本Manifest自身は今回の更新で内容が変わるため、上表のMANIFEST-OLD行は**更新前の歴史的原本**を示す。更新後Manifestの固定CommitとSHA-256は、本Manifestを含む同一Gitコミット内で自己参照できないため、更新後の独立保全レシートに記録する。
+
+### 8.2 Gemini統合版と22 SOURCEの固定参照
+
+更新前Gemini統合原本：`SPE_RP023_E01_E04_Gemini_Integrated_Markdown_DRAFT_20261107.md`、210,165 bytes、SHA-256 `930f6ae77569e995ca4c9237f34c15b2e5fde39ed6d97efb07b90cb58a0bc6b5`。SOURCE 22/22実バイト・境界照合PASS。更新後のGemini版は22 SOURCEをそのまま維持し、本Manifestの固定参照をSOURCE領域外の追補に記載する。
+
+22 SOURCEの固定参照先（歴史的比較原本は当時の固定Commitを維持）：
+
+| SOURCE | 固定Commit | パス |
+|---|---|---|
+| COMMON-REQUEST | `2eb077ad229d1f38e7b6802a417822b07f511765` | `reviews/RP-023/v0.3_distribution_draft_20261106/nr01_03_limited_revision_20261107/SPE_RP023_E01_E04_4AI_Common_Review_Request_PRE_DISPATCH_DRAFT_20261107.md` |
+| DISTRIBUTION-MANIFEST | `2eb077ad229d1f38e7b6802a417822b07f511765` | `reviews/RP-023/v0.3_distribution_draft_20261106/nr01_03_limited_revision_20261107/SPE_RP023_E01_E04_Distribution_Manifest_PRE_DISPATCH_DRAFT_20261107.md` |
+| MAIN-TARGET | `6b8406a966a464de5b29199b4c12e0535e6ac827` | `reviews/RP-023/v0.3_distribution_draft_20261106/nr01_03_limited_revision_20261107/SPE_RP023_v03_NR01_NR03_Post_Cross_Audit_Revision_Candidate_DRAFT_20261107.md` |
+| PREVIOUS-TARGET | `2d747d2b4162d11b915575ffc791607a37ef95df` | `reviews/RP-023/v0.3_distribution_draft_20261106/nr01_03_limited_revision_20261107/SPE_RP023_v03_NR01_NR03_Full_Integrated_Revision_DRAFT_20261107.md` |
+| E01-E04-DIFF | `2eb077ad229d1f38e7b6802a417822b07f511765` | `reviews/RP-023/v0.3_distribution_draft_20261106/nr01_03_limited_revision_20261107/RP023_E01_E04_full_diff_READONLY.diff` |
+| OWNER-APPROVAL-RECEIPT | `2eb077ad229d1f38e7b6802a417822b07f511765` | `reviews/RP-023/v0.3_distribution_draft_20261106/nr01_03_limited_revision_20261107/SPE_RP023_NR01_03_Cross_Audit_Owner_Approval_Receipt_20261107.md` |
+| CONCRETE-EDITS | `2eb077ad229d1f38e7b6802a417822b07f511765` | `reviews/RP-023/v0.3_distribution_draft_20261106/nr01_03_limited_revision_20261107/SPE_RP023_NR01_03_Post_Cross_Audit_Concrete_Edits_DRAFT_20261107.md` |
+| CUSTODY-RECEIPT | `2eb077ad229d1f38e7b6802a417822b07f511765` | `reviews/RP-023/v0.3_distribution_draft_20261106/nr01_03_limited_revision_20261107/SPE_RP023_E01_E04_GitHub_Custody_PASS_Receipt_20261107.md` |
+| ORIGINAL-CHATGPT | `6b8406a966a464de5b29199b4c12e0535e6ac827` | `reviews/RP-023/step29h/responses/SPE_RP023_Step29H_ChatGPT_Independent_Review_20261103.md` |
+| ORIGINAL-CLAUDE | `6b8406a966a464de5b29199b4c12e0535e6ac827` | `reviews/RP-023/step29h/responses/RP-023_Step29H_Claude_Independent_Review_DRAFT_20261103.md` |
+| ORIGINAL-GEMINI | `6b8406a966a464de5b29199b4c12e0535e6ac827` | `reviews/RP-023/step29h/responses/SPE_RP023_Step29H_Gemini_Independent_Review_Response_20261103.md` |
+| ORIGINAL-GROK | `6b8406a966a464de5b29199b4c12e0535e6ac827` | `reviews/RP-023/step29h/responses/SPE_RP-023_Step29H_Independent_Review_Report_Grok_20261103.md` |
+| WORKFLOW | `6b8406a966a464de5b29199b4c12e0535e6ac827` | `docs/Workflow.md` |
+| DOCUMENTATION-STANDARD | `6b8406a966a464de5b29199b4c12e0535e6ac827` | `docs/SPE_Documentation_Standard.md` |
+| OLD-FULL-DIFF | `2d747d2b4162d11b915575ffc791607a37ef95df` | `reviews/RP-023/v0.3_distribution_draft_20261106/nr01_03_limited_revision_20261107/SPE_RP023_v03_NR01_NR03_Full_Integrated_Revision_20261107.diff` |
+| OLD-SIDE-EFFECT-AUDIT | `2d747d2b4162d11b915575ffc791607a37ef95df` | `reviews/RP-023/v0.3_distribution_draft_20261106/nr01_03_limited_revision_20261107/SPE_RP023_v03_NR01_NR03_Normative_Delta_and_Side_Effect_Audit_DRAFT_20261107.md` |
+| NR01 | `2d747d2b4162d11b915575ffc791607a37ef95df` | `reviews/RP-023/v0.3_distribution_draft_20261106/nr01_03_limited_revision_20261107/owner_decisions/SPE_RP023_v03_NR01_Owner_Decision_Receipt_20261107.md` |
+| NR02 | `2d747d2b4162d11b915575ffc791607a37ef95df` | `reviews/RP-023/v0.3_distribution_draft_20261106/nr01_03_limited_revision_20261107/owner_decisions/SPE_RP023_v03_NR02_Owner_Decision_Receipt_20261107.md` |
+| NR03 | `2d747d2b4162d11b915575ffc791607a37ef95df` | `reviews/RP-023/v0.3_distribution_draft_20261106/nr01_03_limited_revision_20261107/owner_decisions/SPE_RP023_v03_NR03_Owner_Decision_Receipt_20261107.md` |
+| OWNER-REGISTER | `2d747d2b4162d11b915575ffc791607a37ef95df` | `reviews/RP-023/v0.3_distribution_draft_20261106/nr01_03_limited_revision_20261107/owner_decisions/SPE_RP023_v03_NR01_NR03_Integrated_Owner_Decision_Register_DRAFT_20261107.md` |
+| BASELINE-V03 | `f4939211f1ab5b5848d3aa5293078bb651e2028b` | `reviews/RP-023/v0.3_distribution_draft_20261106/SPE_RP023_v03_Section8_Limited_Revision_DRAFT_20261106.md` |
+| BASELINE-V02 | `5f27d4e2fba90cda2cd69ee534e865174c31ba1f` | `specifications/RP-023_v0.2_DRAFT_07C-02.md` |
+
+ChecklistはGemini統合版の22 SOURCEに含まれない配布前PL管理資料であり、新規のレビュワー必須原本にはしない。22 SOURCEの期待SHA-256・bytesはGemini統合原本の収録一覧を保持する。
+
+### 8.3 配布・権限境界
+
+4AIのレビュー目的・質問・回答要件は共通依頼書の原文に従う。3AIはGitHub固定参照を使用し、Geminiは22 SOURCEを含む統合Markdownを使用する。更新後Gemini統合Markdownはローカル成果物であり、GitHub格納や4AIへの送達が完了したとは扱わない。
+
+**未完了:** 更新後ManifestのGitHub固定Commit・事後照合、更新後GeminiのSHA固定・送達経路確認、新SnapshotのOwner確認、正式発出承認。
+
+**禁止・留保:** ZIP禁止。正式発出、レビュー開始、DecisionLog更新、Finding Close、Acceptance、Freeze、HOLD解除、Canonical化は本限定承認の対象外。

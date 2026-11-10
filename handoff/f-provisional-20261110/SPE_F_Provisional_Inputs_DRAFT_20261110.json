@@ -1,0 +1,224 @@
+{
+  "_meta": {
+    "status": "DRAFT / PROVISIONAL INPUT / NON-CANONICAL",
+    "case": "F施策",
+    "date": "2026-11-10",
+    "note": "各値のタグ: v5=シミュレーション条件仕様書v5記載, v6=v6仕様書記載, 推定=推定値, 近似=区切り年などの近似, 仮定=仕様に値がなく作成者が置いた値。Ownerが確定した値ではない。",
+    "engine_commit": "4389951293b5ff91bbfec58a613b30458e1fb544",
+    "source_input_sha256": "e07756d34b83bd24a18b56f931b641a6c86b381c45e5505bc56646cbdef56ac0",
+    "boundary_cases": [
+      {
+        "id": "F_2026_INITIAL_29",
+        "meaning": "2026 is initial state, 2027-2055 transitions, 29 periods",
+        "primary": true
+      },
+      {
+        "id": "F_2026_TRANSITION_30",
+        "meaning": "legacy comparison only: initial stocks relabelled 2025-end and 2026 shock applied; 30 periods",
+        "primary": false
+      }
+    ],
+    "legacy_include_2026": true,
+    "source_rules": {
+      "documented_fixed_v5": "F effects schedule, ageing drag, risks, expenditure, alpha/phi (the latter remain model assumptions, not empirical estimates)",
+      "provisional_reused": "2033/2041 elasticity boundaries; linear migration ramp 2030-34; wage geometric interpolation; zero VAT transitional inflation",
+      "unresolved_initial_wage": "v5 section 1 real median wage 380 vs section 4-2 anchor 400; use section 4-2 anchor 400 for legacy comparability, no adjudication",
+      "not_implemented": "tax rate to tax base, actual bond debt/interest/PB, household distribution, political sequencing additional issuance, automatic F 2035 triggers",
+      "legacy_initial_state_field": "initial_state_2025_end name retained for data compatibility only; primary case labels these stocks as 2026 initial state"
+    }
+  },
+  "end_year": 2055,
+  "initial_state_2025_end": {
+    "real_gdp": 580.0,
+    "nominal_gdp": 600.0,
+    "tax_revenue": 80.0,
+    "expenditure": 108.0,
+    "population": 121500000,
+    "deaths": 1590000,
+    "births": 640000,
+    "tag": "v5"
+  },
+  "alpha": {
+    "value": 0.35,
+    "tag": "推定"
+  },
+  "phi": {
+    "value": 0.15,
+    "tag": "推定"
+  },
+  "death_rate_coefficient": {
+    "value": 1.015,
+    "tag": "v5"
+  },
+  "birth_decline_coefficient": {
+    "value": 0.975,
+    "tag": "v5"
+  },
+  "base_growth_rate_pct": {
+    "value": 1.0,
+    "tag": "v5"
+  },
+  "base_inflation_rate_pct": {
+    "value": 2.0,
+    "tag": "v5"
+  },
+  "tax_cap_ratio_of_nominal_gdp": {
+    "value": 0.3,
+    "tag": "v5"
+  },
+  "tax_factor_by_year": {
+    "2031": 0.9,
+    "tag": "v5"
+  },
+  "policy_effects_pct": {
+    "tag": "v5 §4",
+    "consumption_stimulus": [
+      {
+        "from": 2026,
+        "value": 0.3
+      },
+      {
+        "from": 2028,
+        "value": 0.5
+      },
+      {
+        "from": 2032,
+        "value": 0.7
+      }
+    ],
+    "investment_promotion": [
+      {
+        "from": 2026,
+        "value": 0.3
+      },
+      {
+        "from": 2030,
+        "value": 0.5
+      }
+    ],
+    "education": [
+      {
+        "from": 2026,
+        "value": 0.0
+      },
+      {
+        "from": 2028,
+        "value": 0.3
+      }
+    ]
+  },
+  "aging_drag_pp": {
+    "tag": "v5 §7",
+    "table": [
+      {
+        "from": 2026,
+        "value": -0.0525
+      },
+      {
+        "from": 2033,
+        "value": -0.8123
+      },
+      {
+        "from": 2044,
+        "value": -0.3737
+      },
+      {
+        "from": 2046,
+        "value": -0.1683
+      }
+    ]
+  },
+  "risk_shock_pct": {
+    "tag": "v5 §3",
+    "rules": [
+      {
+        "type": "once",
+        "year": 2026,
+        "pct": 3.0
+      },
+      {
+        "type": "once",
+        "year": 2027,
+        "pct": 5.0
+      },
+      {
+        "type": "once",
+        "year": 2031,
+        "pct": 3.0
+      },
+      {
+        "type": "every",
+        "start": 2029,
+        "step": 3,
+        "pct": 1.0
+      },
+      {
+        "type": "every",
+        "start": 2027,
+        "step": 2,
+        "pct": 0.5
+      }
+    ]
+  },
+  "inflation_extra_pp": {
+    "tag": "v5 §3",
+    "by_year": {
+      "2026": 2.0,
+      "2027": 5.0
+    }
+  },
+  "tax_elasticity": {
+    "tag": "近似(区切り年)",
+    "table": [
+      {
+        "from": 2026,
+        "value": 1.5
+      },
+      {
+        "from": 2033,
+        "value": 1.7
+      },
+      {
+        "from": 2041,
+        "value": 2.0
+      }
+    ]
+  },
+  "expenditure_growth_pct": {
+    "tag": "v5",
+    "table": [
+      {
+        "from": 2026,
+        "value": 2.5
+      },
+      {
+        "from": 2035,
+        "value": 1.5
+      },
+      {
+        "from": 2045,
+        "value": 1.0
+      }
+    ]
+  },
+  "migration": {
+    "tag": "定常値=v6仕様書4.1.1。増加の刻みは仮定",
+    "steady_per_year": 400000,
+    "ramp_start": 2030,
+    "ramp_years": 5
+  },
+  "wage_anchor_man_yen": {
+    "tag": "2055年値=v5。途中年は2点の幾何補間(仮定)",
+    "anchors": {
+      "2026": 400.0,
+      "2055": 860.0
+    }
+  },
+  "reference_v5_section8": {
+    "real_gdp": 661.9,
+    "cagr_pct": 0.44,
+    "population_man": 8458,
+    "tax_to_gdp_max_pct": 22.3,
+    "bonds_2055": 0
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "_meta": {
+    "status": "DRAFT / PROVISIONAL / NON-CANONICAL / DIAGNOSTIC ONLY",
+    "basis": "handoff/SPE_F_Provisional_Implementation_Basis_20261114.md (Owner-limited approved) on work/chatgpt-handoff @ cc4a6054",
+    "warning": "ALL numeric values below marked [PLACEHOLDER] are unsourced provisional inputs chosen by Claude to make the prototype run. They are NOT Owner decisions, NOT official statistics, and NOT calibrated to the F annex 2 estimate (1.7-2.55 trillion yen/yr). Replace with sourced data before any use beyond mechanics testing.",
+    "units": "trillion yen (nominal), year = calendar year"
+  },
+  "years": {"start": 2026, "end": 2055},
+  "nominal_growth_pct": {"value": 1.5, "tag": "[PLACEHOLDER] common nominal growth of R_s and P_s; later link to engine nominal GDP path"},
+  "tau_statusquo_pct": {"value": 10.0, "tag": "current standard rate; effective rate incl. reduced rate not modelled"},
+  "tau_F_path_pct": {
+    "tag": "[PLACEHOLDER] rate path (cut-first). Basis doc fixes only: 5% target, cut precedes base expansion. Intermediate years/implementation year are NOT decided.",
+    "points": {"2026": 10.0, "2027": 7.5, "2028": 5.0, "2055": 5.0}
+  },
+  "sectors": {
+    "medical": {
+      "label": "医療(保険診療)",
+      "R_2025": {"value": 45.0, "tag": "[PLACEHOLDER] non-taxable sales, order of national medical expenditure; needs source"},
+      "p_ratio": {"value": 0.20, "tag": "[PLACEHOLDER] taxable purchases + capex incl. as share of R; needs source"},
+      "start_year": {"value": 2038, "tag": "[PLACEHOLDER] year taxation + input credit begins"},
+      "phi_public": {"value": 0.9, "tag": "[PLACEHOLDER] share of output tax borne by public funds (fee schedule compensation)"},
+      "theta_passthrough": {"value": 0.3, "tag": "[PLACEHOLDER] share of 損税 reduction passed to prices/fees"}
+    },
+    "education": {
+      "label": "教育",
+      "R_2025": {"value": 6.0, "tag": "[PLACEHOLDER] needs source"},
+      "p_ratio": {"value": 0.25, "tag": "[PLACEHOLDER]"},
+      "start_year": {"value": 2036, "tag": "[PLACEHOLDER]"},
+      "phi_public": {"value": 0.2, "tag": "[PLACEHOLDER]"},
+      "theta_passthrough": {"value": 0.3, "tag": "[PLACEHOLDER]"}
+    },
+    "rental": {
+      "label": "不動産賃貸(居住用)",
+      "R_2025": {"value": 20.0, "tag": "[PLACEHOLDER] needs source"},
+      "p_ratio": {"value": 0.20, "tag": "[PLACEHOLDER]"},
+      "start_year": {"value": 2037, "tag": "[PLACEHOLDER]"},
+      "phi_public": {"value": 0.0, "tag": "[PLACEHOLDER]"},
+      "theta_passthrough": {"value": 0.3, "tag": "[PLACEHOLDER]"}
+    }
+  },
+  "kappa_realization": {"value": 1.0, "tag": "[PLACEHOLDER] realization rate of input credit (F docx monitors <50%)"},
+  "sensitivity": {
+    "p_multiplier": [0.75, 1.0, 1.25],
+    "timing": {
+      "staggered": "start years as given per sector",
+      "all_2038": {"medical": 2038, "education": 2038, "rental": 2038},
+      "all_2034": {"medical": 2034, "education": 2034, "rental": 2034}
+    },
+    "kappa": [1.0, 0.5],
+    "phi_medical": [0.5, 0.9, 1.0]
+  }
+}

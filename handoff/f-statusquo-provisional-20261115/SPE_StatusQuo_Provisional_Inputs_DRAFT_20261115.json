@@ -1,0 +1,1394 @@
+{
+  "status": "DRAFT / PROVISIONAL / NON-CANONICAL / DIAGNOSTIC ONLY",
+  "created_at": "2026-11-15T10:11:05+00:00",
+  "repository": "spe-flatvat/SPE",
+  "sources": {
+    "prototype_code": {
+      "filename": "SPE_sonzei_min_run_DRAFT.py",
+      "bytes": 8422,
+      "sha256": "b220c105469b0b393d85d40486032ffe704b0e833f590760e7c73d211d09f8e3",
+      "utf8": "#!/usr/bin/env python3\n\"\"\"SPE 損税モジュール 最小試作 (DRAFT / PROVISIONAL / NON-CANONICAL / DIAGNOSTIC ONLY)\n\nengine には接続しない(案3: 既存マクロ効果とは別表示)。入力は SPE_sonzei_min_inputs_DRAFT.json。\n定義(部門 s, 年 t, 単位=兆円):\n  R=非課税売上, P=課税仕入・設備投資(税抜)=p_ratio*R, tau=税率, kappa=仕入税額控除の実現率\n  現行制度(StatusQuo): 損税 L_SQ = tau0*P\n  F・開始前          : 損税 L_F  = tau_F*P            (税率低下のみの効果)\n  F・開始後          : 損税 L_F  = (1-kappa)*tau_F*P  (残存)\n  部門に帰属する国庫収入(上流で徴収された埋込税を含む):\n    開始前 tau*P / 開始後 tau*R + (1-kappa)*tau*P\n  課税ベース拡大効果 dT_base = (開始後) tau_F*R - kappa*tau_F*P   (同一税率で未開始とした場合との差)\n  税率効果 dT_rate = (tau_F - tau0)*P (開始前のみ。マクロ側の減税と重複しうるため別掲)\n  帰着: 公費補填 phi*tau_F*R, 消費者負担 (1-phi)*tau_F*R, 事業者残存利益 (1-theta)*kappa*tau_F*P\n使い方: python3 SPE_sonzei_min_run_DRAFT.py inputs.json outdir\n\"\"\"\nimport json, sys, os, csv, copy\n\ndef interp(points, year):\n    ks = sorted(int(k) for k in points)\n    if year <= ks[0]:\n        return points[str(ks[0])]\n    for a, b in zip(ks, ks[1:]):\n        if a <= year <= b:\n            fa, fb = points[str(a)], points[str(b)]\n            return fa + (fb - fa) * (year - a) / (b - a)\n    return points[str(ks[-1])]\n\ndef v(x):\n    return x[\"value\"] if isinstance(x, dict) and \"value\" in x else x\n\ndef run(cfg, p_mult=1.0, kappa=None, starts=None, phi_med=None):\n    y0, y1 = cfg[\"years\"][\"start\"], cfg[\"years\"][\"end\"]\n    g = v(cfg[\"nominal_growth_pct\"]) / 100.0\n    t0 = v(cfg[\"tau_statusquo_pct\"]) / 100.0\n    kap = v(cfg[\"kappa_realization\"]) if kappa is None else kappa\n    rows = []\n    for t in range(y0, y1 + 1):\n        tauF = interp(cfg[\"tau_F_path_pct\"][\"points\"], t) / 100.0\n        for key, s in cfg[\"sectors\"].items():\n            R = v(s[\"R_2025\"]) * (1 + g) ** (t - 2025)\n            P = v(s[\"p_ratio\"]) * p_mult * R\n            st = (starts or {}).get(key, v(s[\"start_year\"]))\n            phi = v(s[\"phi_public\"])\n            if key == \"medical\" and phi_med is not None:\n                phi = phi_med\n            th = v(s[\"theta_passthrough\"])\n            started = t >= st\n            L_sq = t0 * P\n            if started:\n                L_f = (1 - kap) * tauF * P\n                dT_base = tauF * R - kap * tauF * P\n                dT_rate = 0.0\n                gross_out = tauF * R\n                credit = kap * tauF * P\n                public = phi * gross_out\n                consumer = (1 - phi) * gross_out\n                biz_keep = (1 - th) * kap * tauF * P\n            else:\n                L_f = tauF * P\n                dT_base = 0.0\n                dT_rate = (tauF - t0) * P\n                gross_out = credit = public = consumer = biz_keep = 0.0\n            rows.append(dict(year=t, sector=key, started=int(started), tau_F=tauF, R=R, P=P,\n                             L_statusquo=L_sq, L_F=L_f, L_reduction=L_sq - L_f,\n                             L_reduction_rate_part=(L_sq - tauF * P),\n                             L_reduction_base_part=(tauF * P - L_f),\n                             dT_base=dT_base, dT_rate=dT_rate, output_tax_gross=gross_out,\n                             input_credit=credit, public_compensation=public,\n                             dT_base_net_of_public=dT_base - public,\n                             consumer_burden=consumer, business_retained=biz_keep))\n    return rows\n\ndef totals(rows, upto=None):\n    keys = [\"L_statusquo\", \"L_F\", \"L_reduction\", \"L_reduction_rate_part\", \"L_reduction_base_part\",\n            \"dT_base\", \"dT_rate\", \"output_tax_gross\", \"input_credit\", \"public_compensation\",\n            \"dT_base_net_of_public\", \"consumer_burden\", \"business_retained\"]\n    out = {}\n    for r in rows:\n        if upto and r[\"year\"] > upto:\n            continue\n        for k in keys:\n            out[(r[\"sector\"], k)] = out.get((r[\"sector\"], k), 0.0) + r[k]\n            out[(\"ALL\", k)] = out.get((\"ALL\", k), 0.0) + r[k]\n    return out\n\ndef selfcheck(cfg):\n    # 恒等式・境界条件の検算\n    rows = run(cfg)\n    for r in rows:\n        assert abs(r[\"L_reduction\"] - (r[\"L_reduction_rate_part\"] + r[\"L_reduction_base_part\"])) < 1e-9\n        if not r[\"started\"]:\n            assert r[\"dT_base\"] == 0 and r[\"output_tax_gross\"] == 0\n        else:\n            assert abs(r[\"dT_base\"] - (r[\"output_tax_gross\"] - r[\"input_credit\"])) < 1e-9\n            assert abs(r[\"public_compensation\"] + r[\"consumer_burden\"] - r[\"output_tax_gross\"]) < 1e-9\n    # kappa=0: 損税は解消されず、base_part=0、ΔT_base=課税売上税額\n    for r in run(cfg, kappa=0.0):\n        if r[\"started\"]:\n            assert abs(r[\"L_reduction_base_part\"]) < 1e-9 and abs(r[\"dT_base\"] - r[\"output_tax_gross\"]) < 1e-9\n    # 税率を現行と同一(tauF=tau0)にすれば rate_part=0\n    c2 = copy.deepcopy(cfg)\n    c2[\"tau_F_path_pct\"][\"points\"] = {\"2026\": 10.0, \"2055\": 10.0}\n    assert all(abs(r[\"L_reduction_rate_part\"]) < 1e-9 for r in run(c2))\n    # 開始年を2100にすれば base 効果ゼロ\n    assert all(r[\"dT_base\"] == 0 for r in run(cfg, starts={\"medical\": 2100, \"education\": 2100, \"rental\": 2100}))\n    return True\n\ndef main(inp, outdir):\n    cfg = json.load(open(inp, encoding=\"utf-8\"))\n    selfcheck(cfg)\n    os.makedirs(outdir, exist_ok=True)\n    base = run(cfg)\n    with open(os.path.join(outdir, \"base_yearly.csv\"), \"w\", newline=\"\", encoding=\"utf-8\") as f:\n        w = csv.DictWriter(f, fieldnames=list(base[0].keys()))\n        w.writeheader()\n        w.writerows(base)\n    sens = cfg[\"sensitivity\"]\n    cases = []\n    for pm in sens[\"p_multiplier\"]:\n        for tn, tv in [(\"staggered\", None), (\"all_2038\", sens[\"timing\"][\"all_2038\"]), (\"all_2034\", sens[\"timing\"][\"all_2034\"])]:\n            for kp in sens[\"kappa\"]:\n                cases.append(dict(p_mult=pm, timing=tn, kappa=kp, phi_med=None, starts=tv))\n    for ph in sens[\"phi_medical\"]:\n        cases.append(dict(p_mult=1.0, timing=\"staggered\", kappa=v(cfg[\"kappa_realization\"]), phi_med=ph, starts=None))\n    summary = []\n    for c in cases:\n        rows = run(cfg, p_mult=c[\"p_mult\"], kappa=c[\"kappa\"], starts=c[\"starts\"], phi_med=c[\"phi_med\"])\n        t38 = totals(rows, 2038)\n        t55 = totals(rows)\n        r2040 = [r for r in rows if r[\"year\"] == 2040]\n        s40 = {k: sum(r[k] for r in r2040) for k in [\"L_statusquo\", \"L_F\", \"L_reduction\", \"dT_base\", \"dT_base_net_of_public\", \"business_retained\"]}\n        summary.append(dict(case={k: c[k] for k in [\"p_mult\", \"timing\", \"kappa\", \"phi_med\"]},\n                            y2040=s40,\n                            cum_to_2038={k: t38[(\"ALL\", k)] for k in [\"L_reduction\", \"dT_base\", \"dT_rate\", \"dT_base_net_of_public\"]},\n                            cum_to_2055={k: t55[(\"ALL\", k)] for k in [\"L_reduction\", \"dT_base\", \"dT_rate\", \"dT_base_net_of_public\", \"public_compensation\", \"consumer_burden\", \"business_retained\"]}))\n    with open(os.path.join(outdir, \"sensitivity_summary.json\"), \"w\", encoding=\"utf-8\") as fh:\n        json.dump(summary, fh, ensure_ascii=False, indent=1)\n    # 基準ケースの年次抜粋(全部門合算)\n    pick = [2026, 2027, 2028, 2030, 2034, 2036, 2037, 2038, 2040, 2045, 2050, 2055]\n    lines = []\n    for y in pick:\n        rs = [r for r in base if r[\"year\"] == y]\n        f = lambda k: sum(r[k] for r in rs)\n        lines.append((y, rs[0][\"tau_F\"] * 100, f(\"L_statusquo\"), f(\"L_F\"), f(\"L_reduction\"), f(\"dT_base\"), f(\"dT_rate\"), f(\"dT_base_net_of_public\"), f(\"business_retained\")))\n    with open(os.path.join(outdir, \"base_excerpt.json\"), \"w\") as fh:\n        json.dump(lines, fh)\n    print(\"selfcheck OK; cases:\", len(cases))\n    print(\"year tauF% L_SQ L_F Lred dT_base dT_rate dT_net_pub biz_keep\")\n    for l in lines:\n        print(l[0], \"%.1f\" % l[1], \" \".join(\"%.2f\" % x for x in l[2:]))\n    print(\"-- sensitivity (cum to 2055 of L_reduction / dT_base_net_of_public; 2040 L_reduction)\")\n    for s in summary:\n        print(s[\"case\"], \"L_red55=%.1f\" % s[\"cum_to_2055\"][\"L_reduction\"], \"dTbase55=%.1f\" % s[\"cum_to_2055\"][\"dT_base\"], \"dTnetpub55=%.1f\" % s[\"cum_to_2055\"][\"dT_base_net_of_public\"], \"L_red2040=%.2f\" % s[\"y2040\"][\"L_reduction\"])\n\nif __name__ == \"__main__\":\n    main(sys.argv[1], sys.argv[2])\n",
+      "fixed_commit": "e87e43787ecac73297065ba026b6de41d4f072ee"
+    },
+    "prototype_inputs": {
+      "filename": "SPE_sonzei_min_inputs_DRAFT.json",
+      "bytes": 3067,
+      "sha256": "9fdecef8404e3e4cd6320f21892c54c4443b21d7d4937a2e63ace292ca4c29ac",
+      "utf8": "{\n  \"_meta\": {\n    \"status\": \"DRAFT / PROVISIONAL / NON-CANONICAL / DIAGNOSTIC ONLY\",\n    \"basis\": \"handoff/SPE_F_Provisional_Implementation_Basis_20261114.md (Owner-limited approved) on work/chatgpt-handoff @ cc4a6054\",\n    \"warning\": \"ALL numeric values below marked [PLACEHOLDER] are unsourced provisional inputs chosen by Claude to make the prototype run. They are NOT Owner decisions, NOT official statistics, and NOT calibrated to the F annex 2 estimate (1.7-2.55 trillion yen/yr). Replace with sourced data before any use beyond mechanics testing.\",\n    \"units\": \"trillion yen (nominal), year = calendar year\"\n  },\n  \"years\": {\"start\": 2026, \"end\": 2055},\n  \"nominal_growth_pct\": {\"value\": 1.5, \"tag\": \"[PLACEHOLDER] common nominal growth of R_s and P_s; later link to engine nominal GDP path\"},\n  \"tau_statusquo_pct\": {\"value\": 10.0, \"tag\": \"current standard rate; effective rate incl. reduced rate not modelled\"},\n  \"tau_F_path_pct\": {\n    \"tag\": \"[PLACEHOLDER] rate path (cut-first). Basis doc fixes only: 5% target, cut precedes base expansion. Intermediate years/implementation year are NOT decided.\",\n    \"points\": {\"2026\": 10.0, \"2027\": 7.5, \"2028\": 5.0, \"2055\": 5.0}\n  },\n  \"sectors\": {\n    \"medical\": {\n      \"label\": \"医療(保険診療)\",\n      \"R_2025\": {\"value\": 45.0, \"tag\": \"[PLACEHOLDER] non-taxable sales, order of national medical expenditure; needs source\"},\n      \"p_ratio\": {\"value\": 0.20, \"tag\": \"[PLACEHOLDER] taxable purchases + capex incl. as share of R; needs source\"},\n      \"start_year\": {\"value\": 2038, \"tag\": \"[PLACEHOLDER] year taxation + input credit begins\"},\n      \"phi_public\": {\"value\": 0.9, \"tag\": \"[PLACEHOLDER] share of output tax borne by public funds (fee schedule compensation)\"},\n      \"theta_passthrough\": {\"value\": 0.3, \"tag\": \"[PLACEHOLDER] share of 損税 reduction passed to prices/fees\"}\n    },\n    \"education\": {\n      \"label\": \"教育\",\n      \"R_2025\": {\"value\": 6.0, \"tag\": \"[PLACEHOLDER] needs source\"},\n      \"p_ratio\": {\"value\": 0.25, \"tag\": \"[PLACEHOLDER]\"},\n      \"start_year\": {\"value\": 2036, \"tag\": \"[PLACEHOLDER]\"},\n      \"phi_public\": {\"value\": 0.2, \"tag\": \"[PLACEHOLDER]\"},\n      \"theta_passthrough\": {\"value\": 0.3, \"tag\": \"[PLACEHOLDER]\"}\n    },\n    \"rental\": {\n      \"label\": \"不動産賃貸(居住用)\",\n      \"R_2025\": {\"value\": 20.0, \"tag\": \"[PLACEHOLDER] needs source\"},\n      \"p_ratio\": {\"value\": 0.20, \"tag\": \"[PLACEHOLDER]\"},\n      \"start_year\": {\"value\": 2037, \"tag\": \"[PLACEHOLDER]\"},\n      \"phi_public\": {\"value\": 0.0, \"tag\": \"[PLACEHOLDER]\"},\n      \"theta_passthrough\": {\"value\": 0.3, \"tag\": \"[PLACEHOLDER]\"}\n    }\n  },\n  \"kappa_realization\": {\"value\": 1.0, \"tag\": \"[PLACEHOLDER] realization rate of input credit (F docx monitors <50%)\"},\n  \"sensitivity\": {\n    \"p_multiplier\": [0.75, 1.0, 1.25],\n    \"timing\": {\n      \"staggered\": \"start years as given per sector\",\n      \"all_2038\": {\"medical\": 2038, \"education\": 2038, \"rental\": 2038},\n      \"all_2034\": {\"medical\": 2034, \"education\": 2034, \"rental\": 2034}\n    },\n    \"kappa\": [1.0, 0.5],\n    \"phi_medical\": [0.5, 0.9, 1.0]\n  }\n}\n",
+      "fixed_commit": "e87e43787ecac73297065ba026b6de41d4f072ee"
+    },
+    "prototype_report": {
+      "filename": "SPE_損税モジュール_最小実装_結果_DRAFT_20261114.md",
+      "bytes": 7733,
+      "sha256": "d784ad6f8e21e8f090dd435b1328b36c363389a2dc074e0f8d01196719215c65",
+      "utf8": "# SPE 損税モジュール 最小実装(3部門)試作結果 DRAFT v0.1\n\n**Status:** DRAFT / PROVISIONAL / NON-CANONICAL / DIAGNOSTIC ONLY(Claude 作成、2026-11-14)\n**根拠:** `handoff/SPE_F_Provisional_Implementation_Basis_20261114.md`(Owner 限定承認済、`work/chatgpt-handoff` @ `cc4a6054`)。`Inbox/between_growth_and_discipline_compact_updated.md`(main @ `43899512`、SHA-256 `9c0f3e55…91c5`)も確認済み。\n**成果物:** `SPE_sonzei_min_inputs_DRAFT.json`(暫定入力)/ `SPE_sonzei_min_run_DRAFT.py`(計算)/ `out/`(base_yearly.csv、sensitivity_summary.json)\n\n## 0. 最初に(読み方の注意)\n\n- **本書の数値は予測でも推計でもありません。** 部門規模 R、課税仕入率 p、税率経路、部門別開始年、公費負担率 φ、転嫁率 θ はすべて**私が置いた無出典の仮置き**です(JSON に `[PLACEHOLDER]` と明記)。目的は計算の仕組みの動作確認と、感度の構造を見ることです。\n- **別紙2の 1.7〜2.55 兆円に合わせていません。** 基準値の 2040 年の損税削減が約 1.8 兆円となり同レンジに入りますが、仮置きの結果としての偶然で、**検証にはなりません。** 部門データを出典付きで入れると変わります。\n- 既存のマクロ効果・engine とは**接続していません**(基準書 §4、構想メモ案3)。F の既存試算(弾性値 1.5→1.7→2.0)とは足し合わせないでください。\n- 基準書が確定していないとしている値(施行年・中間税率・部門別開始年・移行支援)は、すべて変更可能な入力です。\n\n## 1. モデルの式(部門 s、年 t、兆円)\n\nR=非課税売上、P=p・R(課税仕入・設備投資、税抜)、τ0=10%(StatusQuo)、τF(t)=F の税率、κ=仕入税額控除の実現率、開始年 S 以降が「課税+控除あり」。\n\n| 項目 | 式 |\n|---|---|\n| StatusQuo の損税 | L_SQ = τ0·P |\n| F・開始前 | L_F = τF·P(税率低下のみ) |\n| F・開始後 | L_F = (1−κ)·τF·P |\n| 損税削減 | L_SQ − L_F(=税率効果 (τ0−τF)·P + 課税化効果 κ·τF·P) |\n| 課税ベース拡大の税収効果 | ΔT_base = τF·R − κ·τF·P(開始後のみ。同一税率で未開始とした場合との差) |\n| 税率効果の税収 | ΔT_rate = (τF−τ0)·P(開始前のみ。マクロの減税と重複しうるため別掲) |\n| 帰着 | 公費補填 φ·τF·R / 消費者 (1−φ)·τF·R / 事業者残存 (1−θ)·κ·τF·P |\n\n損税削減と税収増は**別の量**です(税収増は τ×付加価値に近く、損税削減の 2 倍規模)。同一視しません(基準書 §4)。\n\n## 2. 基準ケースの結果(仮置き入力、全3部門合算、兆円/年)\n\n入力: 税率 10%→7.5%(2027)→5%(2028〜)。開始年: 教育2036、不動産賃貸2037、医療2038。κ=1。R(2025)=医療45・教育6・賃貸20、p=0.20/0.25/0.20、名目成長 1.5%。\n\n| 年 | τF | 損税 StatusQuo | 損税 F | 損税削減 | ΔT_base | ΔT_rate | ΔT_base − 公費補填 | 事業者残存 |\n|---|---|---|---|---|---|---|---|---|\n| 2026 | 10.0% | 1.47 | 1.47 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |\n| 2028 | 5.0% | 1.52 | 0.76 | 0.76 | 0.00 | −0.76 | 0.00 | 0.00 |\n| 2034 | 5.0% | 1.66 | 0.83 | 0.83 | 0.00 | −0.83 | 0.00 | 0.00 |\n| 2036 | 5.0% | 1.71 | 0.77 | 0.94 | 0.27 | −0.77 | 0.19 | 0.06 |\n| 2037 | 5.0% | 1.73 | 0.54 | 1.20 | 1.23 | −0.54 | 1.15 | 0.23 |\n| 2038 | 5.0% | 1.76 | 0.00 | 1.76 | 3.43 | 0.00 | 0.90 | 0.62 |\n| 2040 | 5.0% | 1.81 | 0.00 | 1.81 | 3.53 | 0.00 | 0.93 | 0.63 |\n| 2050 | 5.0% | 2.10 | 0.00 | 2.10 | 4.10 | 0.00 | 1.07 | 0.74 |\n| 2055 | 5.0% | 2.27 | 0.00 | 2.27 | 4.42 | 0.00 | 1.16 | 0.79 |\n\n累計(基準ケース): 〜2038 年 損税削減 10.7、ΔT_base 4.9、ΔT_rate −8.1。〜2055 年 損税削減 45.0、ΔT_base 71.7、公費補填 52.0、消費者負担 38.2、事業者残存 12.9、ΔT_base−公費補填 19.7。\n\n## 3. 構造から読み取れること(仮置きに依存しない部分を中心に)\n\n1. **2038 年より前の「損税削減」は、課税化の効果ではなく単なる税率低下の効果です。** 5% への減税先行により、課税化が始まる前の 2028〜2035 年にも損税は約半分になります。この部分を「損税解消の成果」と呼ぶと、F の成否を誤って評価します。モジュールは `rate_part` と `base_part` を分けて出します。\n2. **課税ベース拡大の税収増(ΔT_base)は、損税削減より大きいです。** ΔT_base は課税売上の税額から控除分を引いたもので、付加価値に税率を掛けた規模です。損税削減の約 2 倍です(基準ケースでは各年 1.95 倍前後)。「損税解消が税収を生む」という既存の物語と、「課税ベース拡大が税収を生む」は別の機構です。\n3. **医療は公費補填の仮定で結果が反転します。** 診療報酬で出力税を全額補填(φ=1)する場合、医療部門の純財政効果(ΔT_base − 公費補填)は負になり得ます(基準ケース φ=0.9 で 累計 −5.6 兆円)。φ の置き方が全体の符号を決めます(φ_medical=0.5/0.9/1.0 で 全体の累計は 42.1/19.7/14.2)。F の診療報酬の設計は、Owner の裁定が要る最大の点です。\n4. **κ(控除の実現率)を下げると、損税削減は減りますが、税収は増えます。** 控除を受けられない分が国庫に残るためです。κ は「執行の質」の指標で、国庫の観点では逆に作用します(F docx が κ<50% を監視指標にしている意味と整合)。\n5. **開始年の前倒し・後ろ倒しは、損税削減の累計には効きにくく、税収側の累計に大きく効きます。** 損税削減の累計は 47.9(全部門2034)/45.0(基準)/44.5(全部門2038)ですが、ΔT_base の累計は 83.5/71.7/70.2 です。\n\n## 4. 感度(21ケース、`sensitivity_summary.json`)\n\n仮置きの p を ×0.75/×1.25 にすると、2040 年の損税削減は 1.36/2.27 兆円。〜2055 年の累計は 33.7/56.2(κ=1、開始年は基準)。κ=0.5 では 26.8〜44.7。不確実性の主因は p(部門データ)と φ(公費補填)です。開始年の違いは累計の差に限られます。\n\n## 5. 検算\n\n- 自己検査(スクリプト内): 損税削減=税率部分+課税化部分、ΔT_base=課税売上税額−控除額、公費+消費者=出力税、κ=0 で課税化部分=0、τF=τ0 で税率部分=0、開始年を遠方にすると ΔT_base=0。すべて通過。\n- 手計算: 2040 年の損税削減 = 0.10×(14.5×1.015¹⁵=18.13)=1.813、ΔT_base=0.05×(88.77−18.13)=3.53(出力と一致)。医療 2038 年: R=54.61、P=10.92、L_SQ=1.092、ΔT_base=2.184(別計算と一致)。\n\n## 6. 次に要るもの(Owner / 他チャットの入力)\n\n- **部門データ**: 医療・教育・不動産賃貸の非課税売上 R と課税仕入・設備投資率 p(出典付き)。無ければ以降の数値は仕組みの確認に留まります。\n- 医療の公費負担(診療報酬での補填)の扱い(φ)。\n- 税率経路と部門別開始年(暫定入力の置換)。\n- 既存マクロ(engine)との接続は、本書の範囲外です。接続の方針(案3: 別表示のまま比較/案1・2: 係数へ写像)は、Owner 判断後に検討します。\n- 賃金初期値 380/400 は、本書の直接計算に不要のため未使用(F/StatusQuo の年次比較時に要裁定)。\n\n---\n*本書は仮定にもとづく計算の試作であり、政策の推奨や数値の保証ではありません。Finding Close、Acceptance、HOLD 解除、Canonical 化、engine の変更はいずれも行っていません。*\n",
+      "fixed_commit": "e87e43787ecac73297065ba026b6de41d4f072ee"
+    },
+    "candidate_csv": {
+      "filename": "SPE_F_Sonzei_Calculation_Input_Candidates_DRAFT_20261115.csv",
+      "bytes": 58122,
+      "sha256": "e3f45a64754f04c12abe6cbd26ead9aedc9fcab0a7f3e4423537396ec03462ac",
+      "utf8": "candidate_id,sector,subgroup,parameter,case_id,value,unit,value_type,reference_period,statistical_scope,sample_n,reported_amount_yen,net_taxable_base_yen,input_vat_yen,assumed_input_vat_rate,module_target,module_use,aggregation_rule,exclusive_group,formula,source_url,source_location,source_commit,source_row,missing_conditions\nMED-M01-GROSS,medical,一般病院・集計1全体,設備関係費のうち消費税課税対象費用,GROSS_10PCT,86140909.0909090909090909090909,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=184,184,94755000,86140909.0909090909090909090909,8614090.90909090909090909090909,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M01-ACCOUNTING,94755000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.394（PDF p.398）,9a2a24e66795338665de0165845d5a3697fb49d2,M01,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。賃借料除外の定義はR02参照。\nMED-M01-NET,medical,一般病院・集計1全体,設備関係費のうち消費税課税対象費用,NET_10PCT,94755000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=184,184,94755000,94755000,9475500.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M01-ACCOUNTING,94755000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.394（PDF p.398）,9a2a24e66795338665de0165845d5a3697fb49d2,M01,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。賃借料除外の定義はR02参照。\nMED-M02-GROSS,medical,一般病院・集計1全体,経費のうち消費税課税対象費用,GROSS_10PCT,106354545.454545454545454545455,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=184,184,116990000,106354545.454545454545454545455,10635454.5454545454545454545455,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M02-ACCOUNTING,116990000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.394（PDF p.398）,9a2a24e66795338665de0165845d5a3697fb49d2,M02,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M02-NET,medical,一般病院・集計1全体,経費のうち消費税課税対象費用,NET_10PCT,116990000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=184,184,116990000,116990000,11699000.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M02-ACCOUNTING,116990000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.394（PDF p.398）,9a2a24e66795338665de0165845d5a3697fb49d2,M02,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M03-GROSS,medical,一般病院・集計1全体,その他医業介護費用のうち消費税課税対象費用,GROSS_10PCT,16552727.2727272727272727272727,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=209,209,18208000,16552727.2727272727272727272727,1655272.72727272727272727272727,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M03-ACCOUNTING,18208000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.394（PDF p.398）,9a2a24e66795338665de0165845d5a3697fb49d2,M03,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M03-NET,medical,一般病院・集計1全体,その他医業介護費用のうち消費税課税対象費用,NET_10PCT,18208000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=209,209,18208000,18208000,1820800.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M03-ACCOUNTING,18208000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.394（PDF p.398）,9a2a24e66795338665de0165845d5a3697fb49d2,M03,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M04-GROSS,medical,精神科病院・集計1全体,設備関係費のうち消費税課税対象費用,GROSS_10PCT,19950000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=51,51,21945000,19950000,1995000,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M04-ACCOUNTING,21945000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.395（PDF p.399）,9a2a24e66795338665de0165845d5a3697fb49d2,M04,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。賃借料除外の定義はR02参照。\nMED-M04-NET,medical,精神科病院・集計1全体,設備関係費のうち消費税課税対象費用,NET_10PCT,21945000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=51,51,21945000,21945000,2194500.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M04-ACCOUNTING,21945000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.395（PDF p.399）,9a2a24e66795338665de0165845d5a3697fb49d2,M04,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。賃借料除外の定義はR02参照。\nMED-M05-GROSS,medical,精神科病院・集計1全体,経費のうち消費税課税対象費用,GROSS_10PCT,56570000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=42,42,62227000,56570000,5657000,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M05-ACCOUNTING,62227000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.395（PDF p.399）,9a2a24e66795338665de0165845d5a3697fb49d2,M05,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M05-NET,medical,精神科病院・集計1全体,経費のうち消費税課税対象費用,NET_10PCT,62227000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=42,42,62227000,62227000,6222700.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M05-ACCOUNTING,62227000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.395（PDF p.399）,9a2a24e66795338665de0165845d5a3697fb49d2,M05,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M06-GROSS,medical,精神科病院・集計1全体,その他医業介護費用のうち消費税課税対象費用,GROSS_10PCT,7762727.27272727272727272727273,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=50,50,8539000,7762727.27272727272727272727273,776272.727272727272727272727273,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M06-ACCOUNTING,8539000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.395（PDF p.399）,9a2a24e66795338665de0165845d5a3697fb49d2,M06,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M06-NET,medical,精神科病院・集計1全体,その他医業介護費用のうち消費税課税対象費用,NET_10PCT,8539000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=50,50,8539000,8539000,853900.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M06-ACCOUNTING,8539000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.395（PDF p.399）,9a2a24e66795338665de0165845d5a3697fb49d2,M06,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M07-GROSS,medical,一般診療所・集計2全体,その他医業介護費用のうち消費税課税対象費用,GROSS_10PCT,19292727.2727272727272727272727,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=337,337,21222000,19292727.2727272727272727272727,1929272.72727272727272727272727,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M07-ACCOUNTING,21222000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.396（PDF p.400）,9a2a24e66795338665de0165845d5a3697fb49d2,M07,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。賃借料除外の定義はR02参照。\nMED-M07-NET,medical,一般診療所・集計2全体,その他医業介護費用のうち消費税課税対象費用,NET_10PCT,21222000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=337,337,21222000,21222000,2122200.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M07-ACCOUNTING,21222000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.396（PDF p.400）,9a2a24e66795338665de0165845d5a3697fb49d2,M07,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。賃借料除外の定義はR02参照。\nMED-M08-GROSS,medical,歯科診療所・集計2全体,その他医業介護費用のうち消費税課税対象費用,GROSS_10PCT,12931818.1818181818181818181818,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=83,83,14225000,12931818.1818181818181818181818,1293181.81818181818181818181818,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M08-ACCOUNTING,14225000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.397（PDF p.401）,9a2a24e66795338665de0165845d5a3697fb49d2,M08,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。賃借料除外の定義はR02参照。\nMED-M08-NET,medical,歯科診療所・集計2全体,その他医業介護費用のうち消費税課税対象費用,NET_10PCT,14225000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=83,83,14225000,14225000,1422500.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M08-ACCOUNTING,14225000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.397（PDF p.401）,9a2a24e66795338665de0165845d5a3697fb49d2,M08,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。賃借料除外の定義はR02参照。\nMED-M09-GROSS,medical,保険薬局・集計2全体,その他経費のうち消費税課税対象費用,GROSS_10PCT,10761818.1818181818181818181818,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=310,310,11838000,10761818.1818181818181818181818,1076181.81818181818181818181818,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M09-ACCOUNTING,11838000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.398（PDF p.402）,9a2a24e66795338665de0165845d5a3697fb49d2,M09,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。賃借料除外の定義はR02参照。\nMED-M09-NET,medical,保険薬局・集計2全体,その他経費のうち消費税課税対象費用,NET_10PCT,11838000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=310,310,11838000,11838000,1183800.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M09-ACCOUNTING,11838000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.398（PDF p.402）,9a2a24e66795338665de0165845d5a3697fb49d2,M09,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。賃借料除外の定義はR02参照。\nMED-M10-GROSS,medical,一般病院・集計1全体,医薬品費,GROSS_10PCT,455148181.818181818181818181818,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,通常損益集計n=732,732,500663000,455148181.818181818181818181818,45514818.1818181818181818181818,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M10-ACCOUNTING,500663000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.12（PDF p.16）,9a2a24e66795338665de0165845d5a3697fb49d2,M10,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。材料は費消額→購入フローの在庫調整が必要。\nMED-M10-NET,medical,一般病院・集計1全体,医薬品費,NET_10PCT,500663000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,通常損益集計n=732,732,500663000,500663000,50066300.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M10-ACCOUNTING,500663000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.12（PDF p.16）,9a2a24e66795338665de0165845d5a3697fb49d2,M10,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。材料は費消額→購入フローの在庫調整が必要。\nMED-M11-GROSS,medical,一般病院・集計1全体,給食用材料費,GROSS_8PCT,26316666.6666666666666666666667,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,通常損益集計n=732,732,28422000,26316666.6666666666666666666667,2105333.33333333333333333333334,0.08,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M11-ACCOUNTING,28422000/(1+0.08),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.12（PDF p.16）,9a2a24e66795338665de0165845d5a3697fb49d2,M11,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。材料は費消額→購入フローの在庫調整が必要。\nMED-M11-NET,medical,一般病院・集計1全体,給食用材料費,NET_8PCT,28422000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,通常損益集計n=732,732,28422000,28422000,2273760.00,0.08,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M11-ACCOUNTING,28422000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.12（PDF p.16）,9a2a24e66795338665de0165845d5a3697fb49d2,M11,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。材料は費消額→購入フローの在庫調整が必要。\nMED-M12-GROSS,medical,一般病院・集計1全体,診療材料費・医療消耗器具備品費,GROSS_10PCT,334116363.636363636363636363636,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,通常損益集計n=732,732,367528000,334116363.636363636363636363636,33411636.3636363636363636363636,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M12-ACCOUNTING,367528000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.12（PDF p.16）,9a2a24e66795338665de0165845d5a3697fb49d2,M12,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。材料は費消額→購入フローの在庫調整が必要。\nMED-M12-NET,medical,一般病院・集計1全体,診療材料費・医療消耗器具備品費,NET_10PCT,367528000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,通常損益集計n=732,732,367528000,367528000,36752800.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M12-ACCOUNTING,367528000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.12（PDF p.16）,9a2a24e66795338665de0165845d5a3697fb49d2,M12,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。材料は費消額→購入フローの在庫調整が必要。\nMED-M13-GROSS,medical,一般病院・集計1全体,委託費,GROSS_10PCT,251450000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,通常損益集計n=732,732,276595000,251450000,25145000,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M13-ACCOUNTING,276595000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.12（PDF p.16）,9a2a24e66795338665de0165845d5a3697fb49d2,M13,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M13-NET,medical,一般病院・集計1全体,委託費,NET_10PCT,276595000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,通常損益集計n=732,732,276595000,276595000,27659500.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M13-ACCOUNTING,276595000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.12（PDF p.16）,9a2a24e66795338665de0165845d5a3697fb49d2,M13,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M14-GROSS,medical,一般病院・集計1,設備投資額のうち消費税課税対象投資額,GROSS_10PCT,286016363.636363636363636363636,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,設備投資回答n=622；総投資額=336375千円/施設,622,314618000,286016363.636363636363636363636,28601636.3636363636363636363636,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NO_DEPRECIATION_ADD,M14-ACCOUNTING,314618000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.361（PDF p.365）,9a2a24e66795338665de0165845d5a3697fb49d2,M14,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M14-NET,medical,一般病院・集計1,設備投資額のうち消費税課税対象投資額,NET_10PCT,314618000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,設備投資回答n=622；総投資額=336375千円/施設,622,314618000,314618000,31461800.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NO_DEPRECIATION_ADD,M14-ACCOUNTING,314618000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.361（PDF p.365）,9a2a24e66795338665de0165845d5a3697fb49d2,M14,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M15-GROSS,medical,精神科病院・集計1,設備投資額のうち消費税課税対象投資額,GROSS_10PCT,57492727.2727272727272727272727,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,設備投資回答n=155；総投資額=67547千円/施設,155,63242000,57492727.2727272727272727272727,5749272.72727272727272727272727,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NO_DEPRECIATION_ADD,M15-ACCOUNTING,63242000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.361（PDF p.365）,9a2a24e66795338665de0165845d5a3697fb49d2,M15,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M15-NET,medical,精神科病院・集計1,設備投資額のうち消費税課税対象投資額,NET_10PCT,63242000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,設備投資回答n=155；総投資額=67547千円/施設,155,63242000,63242000,6324200.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NO_DEPRECIATION_ADD,M15-ACCOUNTING,63242000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.361（PDF p.365）,9a2a24e66795338665de0165845d5a3697fb49d2,M15,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M16-GROSS,medical,一般診療所・集計2全体,設備投資額のうち消費税課税対象投資額,GROSS_10PCT,5198181.81818181818181818181818,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,設備投資回答n=1498；総投資額=6629千円/施設,1498,5718000,5198181.81818181818181818181818,519818.181818181818181818181818,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NO_DEPRECIATION_ADD,M16-ACCOUNTING,5718000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.362（PDF p.366）,9a2a24e66795338665de0165845d5a3697fb49d2,M16,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M16-NET,medical,一般診療所・集計2全体,設備投資額のうち消費税課税対象投資額,NET_10PCT,5718000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,設備投資回答n=1498；総投資額=6629千円/施設,1498,5718000,5718000,571800.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NO_DEPRECIATION_ADD,M16-ACCOUNTING,5718000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.362（PDF p.366）,9a2a24e66795338665de0165845d5a3697fb49d2,M16,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M17-GROSS,medical,歯科診療所・集計2全体,設備投資額のうち消費税課税対象投資額,GROSS_10PCT,4233636.36363636363636363636364,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,設備投資回答n=284；総投資額=6203千円/施設,284,4657000,4233636.36363636363636363636364,423363.636363636363636363636364,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NO_DEPRECIATION_ADD,M17-ACCOUNTING,4657000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.362（PDF p.366）,9a2a24e66795338665de0165845d5a3697fb49d2,M17,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M17-NET,medical,歯科診療所・集計2全体,設備投資額のうち消費税課税対象投資額,NET_10PCT,4657000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,設備投資回答n=284；総投資額=6203千円/施設,284,4657000,4657000,465700.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NO_DEPRECIATION_ADD,M17-ACCOUNTING,4657000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.362（PDF p.366）,9a2a24e66795338665de0165845d5a3697fb49d2,M17,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M18-GROSS,medical,保険薬局・集計2（同一敷地内除く）,設備投資額のうち消費税課税対象投資額,GROSS_10PCT,1157272.72727272727272727272727,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,設備投資回答n=867；総投資額=1385千円/施設,867,1273000,1157272.72727272727272727272727,115727.272727272727272727272727,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NO_DEPRECIATION_ADD,M18-ACCOUNTING,1273000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.362（PDF p.366）,9a2a24e66795338665de0165845d5a3697fb49d2,M18,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M18-NET,medical,保険薬局・集計2（同一敷地内除く）,設備投資額のうち消費税課税対象投資額,NET_10PCT,1273000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,設備投資回答n=867；総投資額=1385千円/施設,867,1273000,1273000,127300.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NO_DEPRECIATION_ADD,M18-ACCOUNTING,1273000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.362（PDF p.366）,9a2a24e66795338665de0165845d5a3697fb49d2,M18,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-BUNDLE-GROSS,medical,一般病院・通常損益n=732,医薬品・給食用材料・診療材料等・委託費の部分束,GROSS_FOOD8_OTHER10,1067031212.12121212121212121212,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,同一公表区分n=732。全課税経常費用ではない,732,1173208000,1067031212.12121212121212121212,106176787.878787878787878787879,MIXED_0.08_0.10,P_opex_partial_net,PARTIAL_COMPONENT,EXCLUSIVE_WITH_M10_M11_M12_M13;NO_CAPEX_SUM,GENERAL732-BUNDLE,Σ_component reported/(1+r) for GROSS;Σreported for NET,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子12頁／PDF16頁,9a2a24e66795338665de0165845d5a3697fb49d2,M10+M11+M12+M13,給食材料8%・他10%の感度仮定。通勤・賃借・その他費用・在庫増減・非課税診療配賦が不足。減価償却は不算入\nMED-BUNDLE-NET,medical,一般病院・通常損益n=732,医薬品・給食用材料・診療材料等・委託費の部分束,NET_FOOD8_OTHER10,1173208000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,同一公表区分n=732。全課税経常費用ではない,732,1173208000,1173208000,116752360.00,MIXED_0.08_0.10,P_opex_partial_net,PARTIAL_COMPONENT,EXCLUSIVE_WITH_M10_M11_M12_M13;NO_CAPEX_SUM,GENERAL732-BUNDLE,Σ_component reported/(1+r) for GROSS;Σreported for NET,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子12頁／PDF16頁,9a2a24e66795338665de0165845d5a3697fb49d2,M10+M11+M12+M13,給食材料8%・他10%の感度仮定。通勤・賃借・その他費用・在庫増減・非課税診療配賦が不足。減価償却は不算入\nMED-COMP-病院-compensation_A,medical,病院,compensation_A,REFERENCE,46397000,JPY/facility/year,OFFICIAL_SURVEY_ESTIMATE,FY2024,5→10%増分。薬価・特定保険医療材料除外。加重平均n=804,804,,,,,historical_compensation_separate,COMPENSATION_ONLY,NO_OFFSET_AGAINST_TOTAL_INPUT_VAT,,,https://www.mhlw.go.jp/content/10808000/001600994.pdf,資料p.6／PDF7頁,9a2a24e66795338665de0165845d5a3697fb49d2,M19–M22 A/B,全税負担・全国総額・将来補填撤回率・output VAT分担率phiとは別\nMED-COMP-病院-tax_increase_B,medical,病院,tax_increase_B,REFERENCE,44233000,JPY/facility/year,OFFICIAL_SURVEY_ESTIMATE,FY2024,5→10%増分。薬価・特定保険医療材料除外。加重平均n=804,804,,,,,historical_compensation_separate,COMPENSATION_ONLY,NO_OFFSET_AGAINST_TOTAL_INPUT_VAT,,,https://www.mhlw.go.jp/content/10808000/001600994.pdf,資料p.6／PDF7頁,9a2a24e66795338665de0165845d5a3697fb49d2,M19–M22 A/B,全税負担・全国総額・将来補填撤回率・output VAT分担率phiとは別\nMED-COMP-病院-A_minus_B,medical,病院,A_minus_B,REFERENCE,2164000,JPY/facility/year,DERIVED,FY2024,5→10%増分。薬価・特定保険医療材料除外。加重平均n=804,804,,,,,historical_compensation_separate,COMPENSATION_ONLY,NO_OFFSET_AGAINST_TOTAL_INPUT_VAT,,A−B,https://www.mhlw.go.jp/content/10808000/001600994.pdf,資料p.6／PDF7頁,9a2a24e66795338665de0165845d5a3697fb49d2,M19–M22 A/B,全税負担・全国総額・将来補填撤回率・output VAT分担率phiとは別\nMED-COMP-一般診療所-compensation_A,medical,一般診療所,compensation_A,REFERENCE,1359000,JPY/facility/year,OFFICIAL_SURVEY_ESTIMATE,FY2024,5→10%増分。薬価・特定保険医療材料除外。加重平均n=2032,2032,,,,,historical_compensation_separate,COMPENSATION_ONLY,NO_OFFSET_AGAINST_TOTAL_INPUT_VAT,,,https://www.mhlw.go.jp/content/10808000/001600994.pdf,資料p.6／PDF7頁,9a2a24e66795338665de0165845d5a3697fb49d2,M19–M22 A/B,全税負担・全国総額・将来補填撤回率・output VAT分担率phiとは別\nMED-COMP-一般診療所-tax_increase_B,medical,一般診療所,tax_increase_B,REFERENCE,1453000,JPY/facility/year,OFFICIAL_SURVEY_ESTIMATE,FY2024,5→10%増分。薬価・特定保険医療材料除外。加重平均n=2032,2032,,,,,historical_compensation_separate,COMPENSATION_ONLY,NO_OFFSET_AGAINST_TOTAL_INPUT_VAT,,,https://www.mhlw.go.jp/content/10808000/001600994.pdf,資料p.6／PDF7頁,9a2a24e66795338665de0165845d5a3697fb49d2,M19–M22 A/B,全税負担・全国総額・将来補填撤回率・output VAT分担率phiとは別\nMED-COMP-一般診療所-A_minus_B,medical,一般診療所,A_minus_B,REFERENCE,-94000,JPY/facility/year,DERIVED,FY2024,5→10%増分。薬価・特定保険医療材料除外。加重平均n=2032,2032,,,,,historical_compensation_separate,COMPENSATION_ONLY,NO_OFFSET_AGAINST_TOTAL_INPUT_VAT,,A−B,https://www.mhlw.go.jp/content/10808000/001600994.pdf,資料p.6／PDF7頁,9a2a24e66795338665de0165845d5a3697fb49d2,M19–M22 A/B,全税負担・全国総額・将来補填撤回率・output VAT分担率phiとは別\nMED-COMP-歯科診療所-compensation_A,medical,歯科診療所,compensation_A,REFERENCE,758000,JPY/facility/year,OFFICIAL_SURVEY_ESTIMATE,FY2024,5→10%増分。薬価・特定保険医療材料除外。加重平均n=465,465,,,,,historical_compensation_separate,COMPENSATION_ONLY,NO_OFFSET_AGAINST_TOTAL_INPUT_VAT,,,https://www.mhlw.go.jp/content/10808000/001600994.pdf,資料p.6／PDF7頁,9a2a24e66795338665de0165845d5a3697fb49d2,M19–M22 A/B,全税負担・全国総額・将来補填撤回率・output VAT分担率phiとは別\nMED-COMP-歯科診療所-tax_increase_B,medical,歯科診療所,tax_increase_B,REFERENCE,841000,JPY/facility/year,OFFICIAL_SURVEY_ESTIMATE,FY2024,5→10%増分。薬価・特定保険医療材料除外。加重平均n=465,465,,,,,historical_compensation_separate,COMPENSATION_ONLY,NO_OFFSET_AGAINST_TOTAL_INPUT_VAT,,,https://www.mhlw.go.jp/content/10808000/001600994.pdf,資料p.6／PDF7頁,9a2a24e66795338665de0165845d5a3697fb49d2,M19–M22 A/B,全税負担・全国総額・将来補填撤回率・output VAT分担率phiとは別\nMED-COMP-歯科診療所-A_minus_B,medical,歯科診療所,A_minus_B,REFERENCE,-83000,JPY/facility/year,DERIVED,FY2024,5→10%増分。薬価・特定保険医療材料除外。加重平均n=465,465,,,,,historical_compensation_separate,COMPENSATION_ONLY,NO_OFFSET_AGAINST_TOTAL_INPUT_VAT,,A−B,https://www.mhlw.go.jp/content/10808000/001600994.pdf,資料p.6／PDF7頁,9a2a24e66795338665de0165845d5a3697fb49d2,M19–M22 A/B,全税負担・全国総額・将来補填撤回率・output VAT分担率phiとは別\nMED-COMP-保険薬局-compensation_A,medical,保険薬局,compensation_A,REFERENCE,617000,JPY/facility/year,OFFICIAL_SURVEY_ESTIMATE,FY2024,5→10%増分。薬価・特定保険医療材料除外。加重平均n=1064,1064,,,,,historical_compensation_separate,COMPENSATION_ONLY,NO_OFFSET_AGAINST_TOTAL_INPUT_VAT,,,https://www.mhlw.go.jp/content/10808000/001600994.pdf,資料p.6／PDF7頁,9a2a24e66795338665de0165845d5a3697fb49d2,M19–M22 A/B,全税負担・全国総額・将来補填撤回率・output VAT分担率phiとは別\nMED-COMP-保険薬局-tax_increase_B,medical,保険薬局,tax_increase_B,REFERENCE,595000,JPY/facility/year,OFFICIAL_SURVEY_ESTIMATE,FY2024,5→10%増分。薬価・特定保険医療材料除外。加重平均n=1064,1064,,,,,historical_compensation_separate,COMPENSATION_ONLY,NO_OFFSET_AGAINST_TOTAL_INPUT_VAT,,,https://www.mhlw.go.jp/content/10808000/001600994.pdf,資料p.6／PDF7頁,9a2a24e66795338665de0165845d5a3697fb49d2,M19–M22 A/B,全税負担・全国総額・将来補填撤回率・output VAT分担率phiとは別\nMED-COMP-保険薬局-A_minus_B,medical,保険薬局,A_minus_B,REFERENCE,22000,JPY/facility/year,DERIVED,FY2024,5→10%増分。薬価・特定保険医療材料除外。加重平均n=1064,1064,,,,,historical_compensation_separate,COMPENSATION_ONLY,NO_OFFSET_AGAINST_TOTAL_INPUT_VAT,,A−B,https://www.mhlw.go.jp/content/10808000/001600994.pdf,資料p.6／PDF7頁,9a2a24e66795338665de0165845d5a3697fb49d2,M19–M22 A/B,全税負担・全国総額・将来補填撤回率・output VAT分担率phiとは別\nMED-N-一般病院,medical,一般病院,全国活動中施設数,REFERENCE,7003.000000,facilities,OFFICIAL_COUNT,2024-10-01,医療施設（動態）調査・活動中,,,,,,population_count_reference,WEIGHT_REFERENCE_ONLY,NOT_AN_EXPANSION_WEIGHT,,,https://www.mhlw.go.jp/toukei/saikin/hw/iryosd/24/dl/02sisetu06.pdf,概要冊子5頁／PDF1頁 表1,,,経済実態調査の集計1（介護割合2%未満等）・開設者・病床規模・標本無回答補正との一致が未了\nMED-N-精神科病院,medical,精神科病院,全国活動中施設数,REFERENCE,1057.000000,facilities,OFFICIAL_COUNT,2024-10-01,医療施設（動態）調査・活動中,,,,,,population_count_reference,WEIGHT_REFERENCE_ONLY,NOT_AN_EXPANSION_WEIGHT,,,https://www.mhlw.go.jp/toukei/saikin/hw/iryosd/24/dl/02sisetu06.pdf,概要冊子5頁／PDF1頁 表1,,,経済実態調査の集計1（介護割合2%未満等）・開設者・病床規模・標本無回答補正との一致が未了\nMED-N-一般診療所,medical,一般診療所,全国活動中施設数,REFERENCE,105207.000000,facilities,OFFICIAL_COUNT,2024-10-01,医療施設（動態）調査・活動中,,,,,,population_count_reference,WEIGHT_REFERENCE_ONLY,NOT_AN_EXPANSION_WEIGHT,,,https://www.mhlw.go.jp/toukei/saikin/hw/iryosd/24/dl/02sisetu06.pdf,概要冊子5頁／PDF1頁 表1,,,経済実態調査の集計1（介護割合2%未満等）・開設者・病床規模・標本無回答補正との一致が未了\nMED-N-歯科診療所,medical,歯科診療所,全国活動中施設数,REFERENCE,66378.000000,facilities,OFFICIAL_COUNT,2024-10-01,医療施設（動態）調査・活動中,,,,,,population_count_reference,WEIGHT_REFERENCE_ONLY,NOT_AN_EXPANSION_WEIGHT,,,https://www.mhlw.go.jp/toukei/saikin/hw/iryosd/24/dl/02sisetu06.pdf,概要冊子5頁／PDF1頁 表1,,,経済実態調査の集計1（介護割合2%未満等）・開設者・病床規模・標本無回答補正との一致が未了\nMED-N-PHARMACY,medical,薬局,全国薬局数,REFERENCE,63203.000000,facilities,OFFICIAL_COUNT,FY2024末,衛生行政報告例。保険薬局限定・同一敷地内除外ではない,,,,,,population_count_reference,WEIGHT_REFERENCE_ONLY,NOT_AN_EXPANSION_WEIGHT,,,https://www.mhlw.go.jp/toukei/saikin/hw/eisei_houkoku/24/dl/houdou.pdf,薬事関係。2025-10-21公表,,,保険指定・同一敷地内・開設法人等の対応施設数が不足\nEDU-R-PUB,education,公立学校等（大学・短大除く）,授業料＋入学金＋検定料,REFERENCE,232215552000,JPY/year,DERIVED,FY2023,cash_collection,,,,,,R_subset,SUBSET_R_ONLY,ALTERNATIVES_NOT_NATIONAL_TOTAL,PUB-WITH-OR-WITHOUT-KINDER,,https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040409203&fileKind=0,第11表D10:F10／こども園はD12:F12,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,R02-E04/E05,全国全学校ではない。暦年2025変換・対象学納金の税務範囲・附属/併設校対応が未了\nEDU-R-PUB-EX-KINDER,education,公立学校等（こども園除外ケース）,授業料＋入学金＋検定料,REFERENCE,228347735000,JPY/year,ASSUMPTION_DERIVED,FY2023,cash_collection,,,,,,R_subset,SUBSET_R_ONLY,ALTERNATIVES_NOT_NATIONAL_TOTAL,PUB-WITH-OR-WITHOUT-KINDER,,https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040409203&fileKind=0,第11表D10:F10／こども園はD12:F12,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,R02-E04/E05,全国全学校ではない。暦年2025変換・対象学納金の税務範囲・附属/併設校対応が未了\nEDU-R-NAT-CASH,education,82国立大学法人,授業料＋入学金＋検定料のCF収入,REFERENCE,321900000000,JPY/year,DERIVED,FY2023,cash_flow,,,,,,R_subset,SUBSET_R_ONLY,ALTERNATIVES_NOT_NATIONAL_TOTAL,NAT-CASH-OR-ACCRUAL,(2722+404+93)×10^8,https://www.mext.go.jp/content/20250331-mxt_hojinka-000041313_2.pdf,CF冊子4頁／PL冊子3頁；私立は既存初回調査,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,NAT-CASH,全国全学校ではない。暦年2025変換・対象学納金の税務範囲・附属/併設校対応が未了\nEDU-R-NAT-ACCRUAL,education,82国立大学法人,学生納付金収益,REFERENCE,359300000000,JPY/year,OFFICIAL_AGGREGATE,FY2023,accrual,,,,,,R_subset,SUBSET_R_ONLY,ALTERNATIVES_NOT_NATIONAL_TOTAL,NAT-CASH-OR-ACCRUAL,,https://www.mext.go.jp/content/20250331-mxt_hojinka-000041313_01.pdf,CF冊子4頁／PL冊子3頁；私立は既存初回調査,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,NAT-ACCRUAL,全国全学校ではない。暦年2025変換・対象学納金の税務範囲・附属/併設校対応が未了\nEDU-R-PRIVATE,education,私立613法人（医歯学部法人等を除く）,学生生徒等納付金proxy,REFERENCE,2939007400000,JPY/year,DERIVED,FY2023,accrual_approx,,,,,,R_subset,SUBSET_R_ONLY,ALTERNATIVES_NOT_NATIONAL_TOTAL,,4.1629e12×.706,https://www.mext.go.jp/content/20250310-mxt_sigakugy-000040820_6.pdf,CF冊子4頁／PL冊子3頁；私立は既存初回調査,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,PRIVATE,全国全学校ではない。暦年2025変換・対象学納金の税務範囲・附属/併設校対応が未了\nEDU-R-CASH-SUBSET,education,国立CF＋公立3費目,FY2023学納金部分合計,REFERENCE,554115552000,JPY/year,DERIVED_WITH_SCOPE_LIMIT,FY2023,設置主体が分かれた部分集合。現金系列と収益系列を別々に集計,,,,,,R_subset,SUBSET_R_ONLY,NO_ADD_TO_COMPONENTS;NO_CASH_PLUS_ACCRUAL,EDUCATION-PARTIAL-AGGREGATION,321900000000+232215552000,https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040409203&fileKind=0 ; https://www.mext.go.jp/content/20250331-mxt_hojinka-000041313_01.pdf ; https://www.mext.go.jp/content/20250310-mxt_sigakugy-000040820_6.pdf,R02教育節＋既存補完報告E01–04,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,本CSV EDU-R-*,除外学校・費目の一致・法人併設校重複確認。全国値ではない。全ケースを互いに加算しない\nEDU-R-CASH-SUBSET-EX-KINDER,education,国立CF＋公立3費目（こども園除外）,FY2023学納金部分合計,REFERENCE,550247735000,JPY/year,DERIVED_WITH_SCOPE_LIMIT,FY2023,設置主体が分かれた部分集合。現金系列と収益系列を別々に集計,,,,,,R_subset,SUBSET_R_ONLY,NO_ADD_TO_COMPONENTS;NO_CASH_PLUS_ACCRUAL,EDUCATION-PARTIAL-AGGREGATION,321900000000+228347735000,https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040409203&fileKind=0 ; https://www.mext.go.jp/content/20250331-mxt_hojinka-000041313_01.pdf ; https://www.mext.go.jp/content/20250310-mxt_sigakugy-000040820_6.pdf,R02教育節＋既存補完報告E01–04,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,本CSV EDU-R-*,除外学校・費目の一致・法人併設校重複確認。全国値ではない。全ケースを互いに加算しない\nEDU-R-ACCRUAL-SUBSET,education,国立PL＋私立613法人proxy,FY2023学納金部分合計,REFERENCE,3298307400000,JPY/year,DERIVED_WITH_SCOPE_LIMIT,FY2023,設置主体が分かれた部分集合。現金系列と収益系列を別々に集計,,,,,,R_subset,SUBSET_R_ONLY,NO_ADD_TO_COMPONENTS;NO_CASH_PLUS_ACCRUAL,EDUCATION-PARTIAL-AGGREGATION,359300000000+2939007400000,https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040409203&fileKind=0 ; https://www.mext.go.jp/content/20250331-mxt_hojinka-000041313_01.pdf ; https://www.mext.go.jp/content/20250310-mxt_sigakugy-000040820_6.pdf,R02教育節＋既存補完報告E01–04,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,本CSV EDU-R-*,除外学校・費目の一致・法人併設校重複確認。全国値ではない。全ケースを互いに加算しない\nEDU-COST-PURCHASE-CF,education,82国立大学法人（4共同利用機関を除く）,原材料・商品・サービス購入支出,REFERENCE,1392000000000,JPY/year,OFFICIAL_AGGREGATE,FY2023,附属病院・研究等を含む法人集計。原表支出は負号、ここでは支出絶対額,,,,,,education_cost_classification_reference,COST_ENVELOPE_ONLY,CF_AND_PL_NOT_ADDITIVE,,13920×10^8,https://www.mext.go.jp/content/20250331-mxt_hojinka-000041313_2.pdf,CF冊子4頁,,既存取得PDFの未整理列を今回抽出,教育/附属病院/研究按分・給与内通勤・課税率別・税込税抜・土地・償却/在庫。購入CFでも全額課税としない\nEDU-COST-PAYROLL-CF,education,82国立大学法人（4共同利用機関を除く）,人件費支出,REFERENCE,1604800000000,JPY/year,OFFICIAL_AGGREGATE,FY2023,附属病院・研究等を含む法人集計。原表支出は負号、ここでは支出絶対額,,,,,,education_cost_classification_reference,COST_ENVELOPE_ONLY,CF_AND_PL_NOT_ADDITIVE,,16048×10^8,https://www.mext.go.jp/content/20250331-mxt_hojinka-000041313_2.pdf,CF冊子4頁,,既存取得PDFの未整理列を今回抽出,教育/附属病院/研究按分・給与内通勤・課税率別・税込税抜・土地・償却/在庫。購入CFでも全額課税としない\nEDU-COST-CAPEX-CF,education,82国立大学法人（4共同利用機関を除く）,有形・無形固定資産取得支出,REFERENCE,364300000000,JPY/year,OFFICIAL_AGGREGATE,FY2023,附属病院・研究等を含む法人集計。原表支出は負号、ここでは支出絶対額,,,,,,education_cost_classification_reference,COST_ENVELOPE_ONLY,CF_AND_PL_NOT_ADDITIVE,,3643×10^8,https://www.mext.go.jp/content/20250331-mxt_hojinka-000041313_2.pdf,CF冊子4頁,,既存取得PDFの未整理列を今回抽出,教育/附属病院/研究按分・給与内通勤・課税率別・税込税抜・土地・償却/在庫。購入CFでも全額課税としない\nEDU-COST-EDU-PL,education,82国立大学法人（4共同利用機関を除く）,教育経費,REFERENCE,178100000000,JPY/year,OFFICIAL_AGGREGATE,FY2023,附属病院・研究等を含む法人集計。原表支出は負号、ここでは支出絶対額,,,,,,education_cost_classification_reference,COST_ENVELOPE_ONLY,CF_AND_PL_NOT_ADDITIVE,,1781×10^8,https://www.mext.go.jp/content/20250331-mxt_hojinka-000041313_2.pdf,PL冊子3頁,,既存取得PDFの未整理列を今回抽出,教育/附属病院/研究按分・給与内通勤・課税率別・税込税抜・土地・償却/在庫。購入CFでも全額課税としない\nEDU-COST-RESEARCH-PL,education,82国立大学法人（4共同利用機関を除く）,研究経費,REFERENCE,267400000000,JPY/year,OFFICIAL_AGGREGATE,FY2023,附属病院・研究等を含む法人集計。原表支出は負号、ここでは支出絶対額,,,,,,education_cost_classification_reference,COST_ENVELOPE_ONLY,CF_AND_PL_NOT_ADDITIVE,,2674×10^8,https://www.mext.go.jp/content/20250331-mxt_hojinka-000041313_2.pdf,PL冊子3頁,,既存取得PDFの未整理列を今回抽出,教育/附属病院/研究按分・給与内通勤・課税率別・税込税抜・土地・償却/在庫。購入CFでも全額課税としない\nEDU-COST-ADMIN-PL,education,82国立大学法人（4共同利用機関を除く）,一般管理費,REFERENCE,94100000000,JPY/year,OFFICIAL_AGGREGATE,FY2023,附属病院・研究等を含む法人集計。原表支出は負号、ここでは支出絶対額,,,,,,education_cost_classification_reference,COST_ENVELOPE_ONLY,CF_AND_PL_NOT_ADDITIVE,,941×10^8,https://www.mext.go.jp/content/20250331-mxt_hojinka-000041313_2.pdf,PL冊子3頁,,既存取得PDFの未整理列を今回抽出,教育/附属病院/研究按分・給与内通勤・課税率別・税込税抜・土地・償却/在庫。購入CFでも全額課税としない\nEDU-DEPRECIATION,education,82国立大学法人,当期減価償却費,REFERENCE,,JPY/year,MISSING,FY2023,減価償却累計額は当期費用と異なる,,,,,,exclude_from_current_taxable_purchases,MISSING_NOT_ZERO,DO_NOT_ADD_ACCUMULATED_DEPRECIATION,,,https://www.mext.go.jp/content/20250331-mxt_hojinka-000041313_2.pdf,貸借対照表とPL分類,,,当期費用額と活動別配賦未取得。教育経費から未確認額を任意控除しない\nRENT-R-KNOWN,rental,専用住宅の借家,年間家賃proxy,REFERENCE,13741592563200,JPY/year,DERIVED_STOCK_ANNUALIZATION,2023-10時点の年間化,不詳204000戸。ゼロ308500戸は平均に含む。共益費等除外,,,,,,R_subset,SUBSET_R_ONLY,DO_NOT_SUM,RENT-R-KNOWN-OR-IMPUTED,12×(19399600−204000)×59656,https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040210070&fileKind=0,住宅土地統計表126／R02住宅節,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,R02-H40–45,暦年2025・年中変動・不詳・共益費等税務家賃の差。下限上限という統計区間ではない\nRENT-R-IMPUTED,rental,専用住宅の借家,年間家賃proxy,REFERENCE,13887630451200,JPY/year,ASSUMPTION_DERIVED,2023-10時点の年間化,不詳204000戸。ゼロ308500戸は平均に含む。共益費等除外,,,,,,R_subset,SUBSET_R_ONLY,DO_NOT_SUM,RENT-R-KNOWN-OR-IMPUTED,12×19399600×59656,https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040210070&fileKind=0,住宅土地統計表126／R02住宅節,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,R02-H40–45,暦年2025・年中変動・不詳・共益費等税務家賃の差。下限上限という統計区間ではない\nRENT-RAW-N,rental,専用住宅の借家,家賃proxy基礎N,REFERENCE,19399600.000000,dwellings,OFFICIAL_SURVEY_ESTIMATE,2023-10-01,住宅土地統計表126,,,,,,,RENT_FORMULA_INPUT,DO_NOT_SUM,,,https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040210070&fileKind=0,表126／R02-H40–42,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,R02-H40–42,\nRENT-RAW-UNKNOWN,rental,専用住宅の借家,家賃proxy基礎UNKNOWN,REFERENCE,204000.000000,dwellings,OFFICIAL_SURVEY_ESTIMATE,2023-10-01,住宅土地統計表126,,,,,,,RENT_FORMULA_INPUT,DO_NOT_SUM,,,https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040210070&fileKind=0,表126／R02-H40–42,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,R02-H40–42,\nRENT-RAW-MONTHLY,rental,専用住宅の借家,家賃proxy基礎MONTHLY,REFERENCE,59656.000000,JPY/month,OFFICIAL_SURVEY_ESTIMATE,2023-10-01,住宅土地統計表126,,,,,,,RENT_FORMULA_INPUT,DO_NOT_SUM,,,https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040210070&fileKind=0,表126／R02-H40–42,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,R02-H40–42,\nRENT-PLAN,rental,新築居住専用・利用関係単一の貸家,工事費予定額,REFERENCE,4287214150000,JPY,DERIVED_OFFICIAL_PLANS,FY2024,着工2期間合計329929戸。実際の当期取得ではない,,,,,,planned_capex_reference,NOT_P_OR_CREDIT_INPUT,DO_NOT_SUM,,(310928237+117793178)×10000,https://www.e-stat.go.jp/stat-search/files?cycle=8&layout=datalist&month=0&page=1&tclass1val=0&toukei=00600120&tstat=000001016966&year=20241,住宅着工第32表 B032!I12・2期間,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,R02-H30,税含否・契約単位・取得期・完成率・用途・政策上の控除可否\nRENT-PLAN-TAX-GROSS,rental,予定工事費の会計感度,税込10%仮定,GROSS_10PCT,3897467409090.90909090909090909,JPY,ASSUMPTION_DERIVED,FY2024,計画額の税区分感度のみ。実投資・控除可能額ではない,,4287214150000,3897467409090.90909090909090909,389746740909.090909090909090909,0.1,planned_tax_base_reference,NOT_P_OR_CREDIT_INPUT,DO_NOT_SUM,RENT-PLAN-ACCOUNTING,plan/1.1,https://www.e-stat.go.jp/stat-search/files?cycle=8&layout=datalist&month=0&page=1&tclass1val=0&toukei=00600120&tstat=000001016966&year=20241,R02-H31–32,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,,工期配分・費用包含・税率・法的控除条件が不足\nRENT-PLAN-TAX-NET,rental,予定工事費の会計感度,税抜10%仮定,NET_10PCT,4287214150000,JPY,ASSUMPTION_DERIVED,FY2024,計画額の税区分感度のみ。実投資・控除可能額ではない,,4287214150000,4287214150000,428721415000.0,0.1,planned_tax_base_reference,NOT_P_OR_CREDIT_INPUT,DO_NOT_SUM,RENT-PLAN-ACCOUNTING,plan,https://www.e-stat.go.jp/stat-search/files?cycle=8&layout=datalist&month=0&page=1&tclass1val=0&toukei=00600120&tstat=000001016966&year=20241,R02-H31–32,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,,工期配分・費用包含・税率・法的控除条件が不足\nRENT-REPAIR,rental,賃貸住宅改修等,改修等受注高proxy,REFERENCE,924300000000,JPY,OFFICIAL_ESTIMATE_ROUNDED,FY2024,受注高。修繕・改良等を含むため修繕費だけではない,,,,,,repair_order_reference,NOT_ACTUAL_REPAIR_P,DO_NOT_SUM,,,https://www.mlit.go.jp/report/press/content/001894228.xlsx,R02-H46／前回補完報告,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,,完成・計上時期・修繕と資本的支出分離・税率・税込税抜・重複調整\nRENT-MGMT-3,rental,既知家賃×全戸委託の条件付き感度,税込管理委託費候補,FEE_GROSS10_COVERAGE100,374770706269.090909090909090909,JPY/year,ASSUMPTION_DERIVED,2023家賃水準の静態感度,委託率100%を仮置き。料率3/5/10%は業者調査に基づく感度点,,412247776896.00,374770706269.090909090909090909,37477070626.909090909090909091,0.1,P_management_partial_net,CONDITIONAL_PARTIAL_P,EXCLUSIVE_WITH_OTHER_MANAGEMENT_CASES,RENT-MANAGEMENT-RATE,13741592563200×0.03×coverage/1.1；coverage=1例,https://www.mlit.go.jp/tochi_fudousan_kensetsugyo/const/content/001971280.pdf,R02-H47／管理受託調査,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,,\"全国実測率でない。任意のcoverage∈[0,1]で本値を比例縮小。費率の税含否も仮定。2025年変換・現行控除は別\"\nRENT-MGMT-5,rental,既知家賃×全戸委託の条件付き感度,税込管理委託費候補,FEE_GROSS10_COVERAGE100,624617843781.818181818181818182,JPY/year,ASSUMPTION_DERIVED,2023家賃水準の静態感度,委託率100%を仮置き。料率3/5/10%は業者調査に基づく感度点,,687079628160.00,624617843781.818181818181818182,62461784378.181818181818181818,0.1,P_management_partial_net,CONDITIONAL_PARTIAL_P,EXCLUSIVE_WITH_OTHER_MANAGEMENT_CASES,RENT-MANAGEMENT-RATE,13741592563200×0.05×coverage/1.1；coverage=1例,https://www.mlit.go.jp/tochi_fudousan_kensetsugyo/const/content/001971280.pdf,R02-H47／管理受託調査,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,,\"全国実測率でない。任意のcoverage∈[0,1]で本値を比例縮小。費率の税含否も仮定。2025年変換・現行控除は別\"\nRENT-MGMT-10,rental,既知家賃×全戸委託の条件付き感度,税込管理委託費候補,FEE_GROSS10_COVERAGE100,1249235687563.63636363636363636,JPY/year,ASSUMPTION_DERIVED,2023家賃水準の静態感度,委託率100%を仮置き。料率3/5/10%は業者調査に基づく感度点,,1374159256320.00,1249235687563.63636363636363636,124923568756.36363636363636364,0.1,P_management_partial_net,CONDITIONAL_PARTIAL_P,EXCLUSIVE_WITH_OTHER_MANAGEMENT_CASES,RENT-MANAGEMENT-RATE,13741592563200×0.10×coverage/1.1；coverage=1例,https://www.mlit.go.jp/tochi_fudousan_kensetsugyo/const/content/001971280.pdf,R02-H47／管理受託調査,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,,\"全国実測率でない。任意のcoverage∈[0,1]で本値を比例縮小。費率の税含否も仮定。2025年変換・現行控除は別\"\nRENT-RULE-CREDIT-SQ,rental,制度条件,制限対象の居住用賃貸建物に係る仕入税額控除率,REFERENCE,0.000000,ratio,LEGAL_CONDITIONAL_VALUE,2026-11-15確認,全国金額ではない。条件別の制度入力,,,,,,credit_eligibility_separate,RULE_CONDITION,DO_NOT_SUM,,,https://www.nta.go.jp/law/tsutatsu/kihon/shohi/20230930/11/08.htm,消費税法30条10項・消基通11-7-1〜5,,,条件に該当する建物だけ。課税用部分・後年調整・契約経過措置等は個別判定\nRENT-RULE-THRESHOLD,rental,制度条件,高額特定資産の税抜一取引単位閾値,REFERENCE,10000000.000000,JPY,LEGAL_CONDITIONAL_VALUE,2026-11-15確認,全国金額ではない。条件別の制度入力,,,,,,credit_eligibility_separate,RULE_CONDITION,DO_NOT_SUM,,,https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6502.htm,No.6502,,,工事費の一戸平均で判定しない。建物/取引単位・自己建設の累計判定\nRENT-RULE-F-CAPEX-CREDIT,rental,制度条件,Fでの居住用賃貸建物の取得税額控除率,REFERENCE,,ratio,MISSING,2026-11-15確認,全国金額ではない。条件別の制度入力,,,,,,credit_eligibility_separate,MISSING_NOT_ZERO,DO_NOT_SUM,,,https://www.nta.go.jp/law/tsutatsu/kihon/shohi/20230930/11/08.htm,現行制限とFの控除実現率を分離,,,課税化だけで自動控除としない。制限の制度変更・適用関係・時期が必要\nGAP-medical-R_2025,medical,全国同一定義・暦年2025,R_2025,REFERENCE,,trillion_JPY,MISSING,CY2025,prototype sectors.medical.R_2025,,,,,,sectors.medical.R_2025,NO_DIRECT_REPLACEMENT,DO_NOT_SUM,,,https://github.com/spe-flatvat/SPE/blob/e87e43787ecac73297065ba026b6de41d4f072ee/handoff/claude-sonzei-min-20261114/SPE_sonzei_min_inputs_DRAFT.json,入力定義,e87e43787ecac73297065ba026b6de41d4f072ee,,本CSVの部分集合・会計感度から全国2025値を自動生成しない。既存無出典値を出典確定へ昇格しない\nGAP-medical-p_ratio,medical,全国同一定義・暦年2025,p_ratio,REFERENCE,,ratio,MISSING,CY2025,prototype sectors.medical.p_ratio,,,,,,sectors.medical.p_ratio,NO_DIRECT_REPLACEMENT,DO_NOT_SUM,,,https://github.com/spe-flatvat/SPE/blob/e87e43787ecac73297065ba026b6de41d4f072ee/handoff/claude-sonzei-min-20261114/SPE_sonzei_min_inputs_DRAFT.json,入力定義,e87e43787ecac73297065ba026b6de41d4f072ee,,本CSVの部分集合・会計感度から全国2025値を自動生成しない。既存無出典値を出典確定へ昇格しない\nGAP-education-R_2025,education,全国同一定義・暦年2025,R_2025,REFERENCE,,trillion_JPY,MISSING,CY2025,prototype sectors.education.R_2025,,,,,,sectors.education.R_2025,NO_DIRECT_REPLACEMENT,DO_NOT_SUM,,,https://github.com/spe-flatvat/SPE/blob/e87e43787ecac73297065ba026b6de41d4f072ee/handoff/claude-sonzei-min-20261114/SPE_sonzei_min_inputs_DRAFT.json,入力定義,e87e43787ecac73297065ba026b6de41d4f072ee,,本CSVの部分集合・会計感度から全国2025値を自動生成しない。既存無出典値を出典確定へ昇格しない\nGAP-education-p_ratio,education,全国同一定義・暦年2025,p_ratio,REFERENCE,,ratio,MISSING,CY2025,prototype sectors.education.p_ratio,,,,,,sectors.education.p_ratio,NO_DIRECT_REPLACEMENT,DO_NOT_SUM,,,https://github.com/spe-flatvat/SPE/blob/e87e43787ecac73297065ba026b6de41d4f072ee/handoff/claude-sonzei-min-20261114/SPE_sonzei_min_inputs_DRAFT.json,入力定義,e87e43787ecac73297065ba026b6de41d4f072ee,,本CSVの部分集合・会計感度から全国2025値を自動生成しない。既存無出典値を出典確定へ昇格しない\nGAP-rental-R_2025,rental,全国同一定義・暦年2025,R_2025,REFERENCE,,trillion_JPY,MISSING,CY2025,prototype sectors.rental.R_2025,,,,,,sectors.rental.R_2025,NO_DIRECT_REPLACEMENT,DO_NOT_SUM,,,https://github.com/spe-flatvat/SPE/blob/e87e43787ecac73297065ba026b6de41d4f072ee/handoff/claude-sonzei-min-20261114/SPE_sonzei_min_inputs_DRAFT.json,入力定義,e87e43787ecac73297065ba026b6de41d4f072ee,,本CSVの部分集合・会計感度から全国2025値を自動生成しない。既存無出典値を出典確定へ昇格しない\nGAP-rental-p_ratio,rental,全国同一定義・暦年2025,p_ratio,REFERENCE,,ratio,MISSING,CY2025,prototype sectors.rental.p_ratio,,,,,,sectors.rental.p_ratio,NO_DIRECT_REPLACEMENT,DO_NOT_SUM,,,https://github.com/spe-flatvat/SPE/blob/e87e43787ecac73297065ba026b6de41d4f072ee/handoff/claude-sonzei-min-20261114/SPE_sonzei_min_inputs_DRAFT.json,入力定義,e87e43787ecac73297065ba026b6de41d4f072ee,,本CSVの部分集合・会計感度から全国2025値を自動生成しない。既存無出典値を出典確定へ昇格しない\n",
+      "fixed_commit": "05d2ea052ffbfb206193166d43d4656a6b7fdc36"
+    },
+    "candidate_notes": {
+      "filename": "SPE_F_Sonzei_Input_Bridge_Notes_DRAFT_20261115.md",
+      "bytes": 14051,
+      "sha256": "15d6e65a28a2f903b4dbc5fa1856670aa6b99a735cce032098504adf95a4801e",
+      "utf8": "# SPE｜損税モデル 計算用入力候補の接続メモ\n\nStatus: DRAFT / NON-CANONICAL / PARTIAL INPUT BRIDGE  \n作成日時: 2026-11-15T09:54:24+00:00  \n対象: Claudeの医療・教育・住宅賃貸3部門試作。全国完全値への置換・正式エンジン改修ではない。\n\n## 使用ファイルと読み方\n\n計算用CSVは **`SPE_F_Sonzei_Calculation_Input_Candidates_DRAFT_20261115.csv`**、91データ行。金額は原則円、施設別なら円/施設/年。入力定義の兆円への変換は円÷10^12。UTF-8・LF、空欄は未取得でゼロではない。\n\n各行の `module_target` は接続先の意味であり、既存モジュールがその新しいキーを既に受け付けると保証しない。`module_use` が使用範囲、`exclusive_group` が同時採用禁止の選択肢、`aggregation_rule` が合算上の制限。`value_type` で公的集計・派生値・仮定・未取得を区別する。`source_url/location/commit/row` で元値へ戻れる。\n\n**使い方は、1ケース・1範囲を選び、対象期間・会計方式・費目重複を揃えてから計算する。CSV全行の単純合計は禁止。** 税込/税抜の2ケース、国立のCF/PL、公立のこども園有無、家賃既知/不詳補完、管理料率はそれぞれ排他的な選択肢。\n\n## 既存成果の再利用\n\nR02固定Commitは `b865861d9e7605c39c9c7c2d2d632cdda60b55ce`。`handoff/f-sonzei-source-followup-20261115/` のR02報告とCSVをGitHub連携Base64で取得し、実バイトSHAを確認した。24,357 bytes / `0342161f120e4a050af17737565d54d12609c1aa3e41b57d5b4b6cb209588381`、29,504 bytes / `a91a032663a1638c430fa24afc00dcebdf44d3456ceb61e7f958e229ec0ce659`。今回照合PASS。既存調査済み統計の再調査ではなく、計算入力にする原本の取得確認である。\n\n施設別経常費・投資・補填の元行は前回104行CSV、固定Commit `9a2a24e66795338665de0165845d5a3697fb49d2` に由来する。既存取得PDF・実測PASSを再利用した。今回追加したのは施設数・現行控除条件と、既存国立大学PDFの未整理列。Project/過去チャットの手動探索・Owner再提出は不要だった。\n\n## 医療：施設別に直ちに計算できる範囲\n\n公表値は千円単位の施設平均なので、まず×1,000で円へ換算した。M01〜M09の課税対象費用、M10〜M13の通常損益の部分費目、M14〜M18の当期課税設備投資を維持し、各々を税込10%/税抜10%の2ケースへ変換。給食用材料費だけは食材8%の感度条件とした。これは会計方式・税率が未取得であるための条件付き計算で、実際の税率別仕入税額ではない。\n\n```text\n税込仮定: P_net=公表額円/(1+r)、input_VAT=公表額円*r/(1+r)\n税抜仮定: P_net=公表額円、input_VAT=公表額円*r\n```\n\n|当期課税投資・施設別|公表額 円|税込10%のP_net 円|同・税額 円|税抜10%の税額 円|\n|---|---:|---:|---:|---:|\n|一般病院|314,618,000|286,016,363.636|28,601,636.364|31,461,800|\n|精神科病院|63,242,000|57,492,727.273|5,749,272.727|6,324,200|\n|一般診療所|5,718,000|5,198,181.818|519,818.182|571,800|\n|歯科診療所|4,657,000|4,233,636.364|423,363.636|465,700|\n|薬局・同一敷地内除く|1,273,000|1,157,272.727|115,727.273|127,300|\n\n上記は施設区分ごとの**投資部分だけ**。全国額ではない。減価償却を再加算しない。一般病院では医薬品・給食材料・診療材料等・委託費の4費目が同じn=732集計にあり、その部分束も計算した（CSV `MED-BUNDLE-*`）。食材8%、その他10%とし、費消額→購入額の在庫調整、通勤、賃借、その他費用、診療への用途配賦は未了。部分束と構成4費目を重複加算しない。\n\nM01等の課税対象費用は回答標本が異なる。n=184など件数が一致しても同じ施設集合であると推定しない。異なる標本の経常費・設備投資を足して、完成Pやp_ratioを作っていない。医療の48.81兆円FY2024規模proxyを維持し、これら標本の分母へ流用しない。\n\n### 全国加重のために今回補った施設数\n\n2024-10-01活動中施設は一般病院7,003、精神科1,057、一般診療所105,207、歯科66,378（合計179,645）。出典は厚生労働省医療施設調査・概要表1。薬局はFY2024末63,203（衛生行政報告例）。\n\n出典: https://www.mhlw.go.jp/toukei/saikin/hw/iryosd/24/dl/02sisetu06.pdf  \nhttps://www.mhlw.go.jp/toukei/saikin/hw/eisei_houkoku/24/dl/houdou.pdf\n\nこれらは全国母集団の入口であり、経済実態調査の介護割合・開設者・病床規模・保険指定・同一敷地内除外と一致する拡大係数ではない。全国推計には、同じ条件の階層hごとに `Σ_h N_h×mean(P_h)` とし、無回答補正・通年稼働・税率・会計方式・用途を揃える。今回は当該N_hと平均を接続できないため、単純乗算の全国値を提示しない。\n\n### 既存補填は別建て\n\n病院A/B=46,397/44,233、診療所1,359/1,453、歯科758/841、薬局617/595（千円/施設/年）。CSVは各A・B・A−Bを円へ換算した。A−Bはそれぞれ+2,164,000、−94,000、−83,000、+22,000円。ただし薬価等を除いた5→10%増分調査だけの比較であり、全損税ではない。\n\n```text\n現行input VAT控除と課税化後の控除を別計算\nΔcredit = credit_F − credit_StatusQuo\n既存補填の変更額 = A_F − A_StatusQuo（撤回/維持を別の仮定にする）\n医療機関の直接差額候補 = Δcredit + (A_F−A_StatusQuo)\n                     − 当該機関が実際に負担するoutput VAT等\n```\n\nこれは会計接続式で、国庫純収入や患者負担の算出結果ではない。従来補填Aを既にinput VATから差し引いて、さらに撤回分を二重に差し引かない。phiは将来output VATの公費分担仮定で、既存A/Bや公費比率と同じではない。新たなinput VAT控除率・報酬調整・患者転嫁・φは未確定のまま維持。\n\n## 教育：同年度・同じ系列の部分集計\n\n|FY2023の系列|円／年|使える範囲|\n|---|---:|---|\n|公立・授業料/入学金/検定料|232,215,552,000|大学短大等を除く。こども園帰属要確認|\n|同・こども園除外ケース|228,347,735,000|対象範囲の仮定|\n|国立大学CF3費目|321,900,000,000|授業料2,722＋入学404＋検定93億円|\n|国立CF＋公立部分合計|554,115,552,000|現金系列の部分合計。全国額ではない|\n|国立CF＋公立こども園除外|550,247,735,000|上記の範囲感度|\n|国立学生納付金PL|359,300,000,000|CFと別の発生主義収益|\n|私立613法人proxy|2,939,007,400,000|医歯学部法人除外等。全国値ではない|\n|国立PL＋私立proxy|3,298,307,400,000|収益系列の部分合計。私立は丸め比率推計|\n\n設置主体別に国立・公立・私立は分かれるが、対象学納金の完全な一致・法人併設校の学校別対応は未了。CFとPLを混合した全国合計は作らない。上記複数の部分合計同士も足さない。私立小中高・幼稚園、公立大学、医歯学部法人の教育部分等が不足。授業料単価×全在籍数や初年度施設費の毎年適用で穴埋めしない。\n\n### 給与・投資を分離した費目候補\n\n既存PDF `https://www.mext.go.jp/content/20250331-mxt_hojinka-000041313_2.pdf` の冊子3〜4頁の**82国立大学法人列**を抽出した（4大学共同利用機関法人は除外）。前回の合計86法人列と分ける。\n\n|費目|FY2023・億円|接続条件|\n|---|---:|---|\n|原材料・商品・サービス購入のCF支出|13,920|現金購入の入口。教育・病院・研究用途、税率を配賦|\n|人件費CF支出|16,048|別建て。給与全部を課税仕入へ加算しない|\n|有形・無形固定資産取得CF支出|3,643|当期支払。土地・病院・未払変動・税額を分離|\n|教育経費PL|1,781|当期購入と同じではない。償却等を確認|\n|研究経費PL|2,674|学納金対応以外の研究を含む|\n|一般管理費PL|941|共通費配賦・非課税支出・償却の精査が必要|\n\n丸めにより合計は必ずしも一致しない。前回の86法人全体の購入CF14,398億、投資CF3,785億との違いは今回82法人列を選んだためで、元の公表値の誤り訂正ではない。CFとPLの費用を足さない。当期減価償却額は未取得で、貸借対照表の減価償却累計額を当期費用に置換しない。\n\n教育Pの接続は `P_edu = 購入CFから税額・非課税・非教育用途等を調整した経常額 + 同様に調整した当期課税取得額`。現金/発生の時点差も調整する。購入CF1.392兆円と投資CF0.3643兆円をそのまま教育Pへ加算していない。全国p=.25を置換できる状態にはないが、用途按分用の出典付き原額は渡せる。\n\n## 住宅：家賃と支出の時間軸・控除可否を分離\n\n家賃既知分13.7415925632兆円/年、不詳を同平均で補う場合13.8876304512兆円/年を維持。これは2023年10月のストック年間化で統計的上下限ではない。FY2024予定工事費4.28721415兆円（新築居住専用・利用関係単一の貸家）は `NOT_P_OR_CREDIT_INPUT` と明示。実際の当期投資へは、工事着工期uから取得期tへの配分w、完成/中止、対象用途、税含否等が必要。\n\n```text\nK_t候補 = Σ_u planned_cost_u × 実額/計画額比_u × 取得配分w_(u,t)\n          × 対象事業・用途割合（税抜換算は別）\n```\n\nw等は未取得。1年で全額取得、毎年同じ投資を繰返す等の仮定を今回設定していない。\n\n改修等受注高約0.9243兆円は実際の修繕費・完成投資ではない。通常修繕と資本的支出を区別し、予定工事費と足さない。管理料3/5/10%は業者調査に基づく感度点で全国平均ではない。CSVでは委託率100%・料率は税込という明示仮定の例を計算し、委託率c∈[0,1]で比例縮小できる。既知家賃×3%なら税込管理費412,247,776,896円、税抜候補374,770,706,269.091円、税相当37,477,070,626.909円。これは全国実支出の認定ではない。\n\n### 現行の仕入税額控除制限\n\n国税庁の現行公表資料で、次の入力条件を確認した。制度説明は2026-11-15読取時点、将来のF制度変更を先取りしない。\n\n- 住宅家賃は原則非課税。統計家賃は共益費等を除く一方、税務上の家賃には一定の共益費・返還しない金銭も含まれ、Rの範囲が一致しない（No.6226）。\n- 高額特定資産等に当たる居住用賃貸建物の取得税額には特別な控除制限がある。2020-10-01以後を対象とし、一定の旧契約等を区別する。高額特定資産は原則一取引単位・税抜1,000万円以上。戸当たり平均で判定しない。\n- 店舗等の非住宅部分は合理的に区分。資本的支出にも条件付きで制限が及ぶ。すべての修繕・管理料が建物特例に該当するわけではない。非課税売上対応の通常費用は一般の控除計算も考慮する。\n- CSVの現行控除率0は、特別制限対象と確認された部分に限る条件付き値。混合用途・後年調整等を含む全事業者の一律κではない。\n\n出典: https://www.nta.go.jp/law/tsutatsu/kihon/shohi/20230930/11/08.htm （11-7-1〜5）  \nhttps://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6502.htm （閾値）  \nhttps://www.nta.go.jp/publication/pamph/shohi/kaisei/yoshiki/pdf/202008_01.pdf （2022年4月版・PDF6頁。検索結果の見出しではなく本文で開始日確認）  \nhttps://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6226.htm  \nhttps://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6401.htm\n\n将来住宅家賃を課税化しても、建物制限の適用関係を確認せず既存取得税額の全額控除・遡及還付を自動計上しない。Fの当該控除率は未取得として空欄。これは政策を禁止する判断ではなく、現行条件と将来制度シナリオを分ける入力整理である。\n\n## Claudeへの置換案内\n\n試作固定Commit `e87e43787ecac73297065ba026b6de41d4f072ee` の入力は暦年2025・兆円単位。`sectors.medical/education/rental.R_2025` の全国値と `p_ratio` は、今回も同一定義の公的全国値へ直接置換できないため `NO_DIRECT_REPLACEMENT` 行を残した。\n\nただし、部分集合のR、施設別P成分、医療の既存補填、住宅管理費の感度はその範囲を明示して診断計算へ使える。施設平均Pと全国Rを組み合わせたり、2023家賃とFY2024工事予定の比を全国pとすることは避ける。部分Pでpを作る場合にも同じ対象・期間のRが必要。\n\n既存phi、κ、成長率、課税化開始年は出典確定へ昇格しない。F/StatusQuo年次モデルの改修・再計算は今回行っていない。次の実務は、CSVの `PARTIAL_COMPONENT` / `CONDITIONAL_PARTIAL_P` を用途限定の診断入力として取り込み、制度条件を分離して計算すること。\n\n## 検証・引渡し\n\n円換算、税込/税抜分解、A−B、同年度学納金部分合計、施設数合計、CSV再読取・ID一意性を計算確認した。金額の小数桁は仮定に基づく演算結果で、公表値精度の上昇を意味しない。\n\n新規成果は本メモとCSVの2件。指定 `work/chatgpt-handoff` の `handoff/f-sonzei-input-bridge-20261115/` に新規追加する。保全確定Commit・事後SHAは回答で提示し、このメモを事後追記で変更しない。既存原本・main・正式エンジンを変更しない。RP新設・追加レビューなし。RP-023／M19–25 HOLD、RP-024 PENDING維持。引渡し後停止。\n",
+      "fixed_commit": "05d2ea052ffbfb206193166d43d4656a6b7fdc36"
+    },
+    "basis": {
+      "filename": "SPE_F_Provisional_Implementation_Basis_20261114.md",
+      "bytes": 5560,
+      "sha256": "8b88636a5581b28939e340c4beaaac81b3c193caef201a2d7cf1e2770034594b",
+      "utf8": "# SPE｜F施策 標準実施経路・損税モデル暫定実装根拠\n\n**Status:** OWNER-LIMITED APPROVED / PROVISIONAL IMPLEMENTATION BASIS / NON-CANONICAL  \n**承認区分:** OWNER-LIMITED APPROVED / PROVISIONAL IMPLEMENTATION BASIS  \n**日付:** 2026-11-14  \n**格納先:** `handoff/SPE_F_Provisional_Implementation_Basis_20261114.md`  \n**対象:** F施策の損税解消モデル試作およびF／StatusQuo年次比較（2026〜2055年）\n\n## 1. 目的と位置付け\n\n本書は、第二次Milestone宣言に基づくF施策の損税解消モデル開発に必要な、Fの標準実施経路を暫定的に特定する。政策原本の改訂やRPの新設を目的としない。\n\nOwnerが本書を限定承認した場合、本書は対象の試作・検証における実装根拠となる。`policies/FreedomPolicies.md` および `policies/FreedomPolicies_Annex.md` は変更せず、既存原案は参考・比較用に維持する。本書は正式な政策原本・Canonical文書を置き換えない。\n\n## 2. F標準実施経路（Owner方針）\n\n1. **政治調整版の実施経路をFの標準として採用する。** 従来原案は参考・比較対象として残す。\n2. 消費税改革は**5%への減税を先行**し、医療・教育・土地・不動産等への**課税ベース拡大を後続段階**で実施する。\n3. **課税ベース拡大の完了目標年は2038年**とする。従来原案の「2035年頃の完全フラット化」は標準実施経路の完了年としては用いない。\n4. 到達目標は**消費税5%の広い課税ベースによるフラット化**であり、**金融取引は対象外**とする。金融サービスの個別取扱いなど未確定の制度細目は本書で新規裁定しない。\n5. 社会保障経由の低・中所得層への還元、移行支援など、既存F施策の政策目的・制度要素は、本書で明示的に変更しない。\n\n## 3. 年次実装上の取扱い\n\n- 2026〜2055年の年次計算を対象とし、まずF／StatusQuoを同じ初期条件・イベント条件で比較する。N3は優先拡張、N・F3・R4は将来拡張とする。\n- **減税の具体的な施行年、2038年までの中間税率、部門別課税開始年・対象範囲、移行支援額は本書だけでは確定しない。** 既存資料で確認できない数値をOwner決定値として補完しない。\n- 未確定値は、試作時に明示した暫定入力パラメータとして変更可能にする。暫定値の採用は政策原本の確定を意味しない。\n- 損税解消の発生時期は、各部門の課税・仕入税額控除の適用開始時期に応じて計算する。2038年に効果を一括計上することも、減税開始年に全額を先取りすることも、制度条件なしには行わない。\n\n## 4. 損税解消の計算原則\n\n- **損税循環の数理モデルは未実装であり、計算はこれからである。** 既存F試算の成長・税収効果を損税解消から導出済みとは扱わない。\n- 最小試作は医療・教育・不動産賃貸の3部門を対象とし、制度変更前後の控除不能消費税相当額を年次で区別して算出する。\n- 損税額の減少を、そのままGDP増加、税収純増、事業者純利益または家計便益と同一視しない。価格・税収・事業者・家計・公的支出への帰着は区分して扱う。\n- F別紙2の**年間約1.7〜2.55兆円**は従来の概算規模であり、モデルの正解値・保証値・自動入力値にはしない。\n- 既存の税収弾性値（1.5→1.7→2.0等の試算上の経路）は損税解消から導かれたものではない。初期段階では既存マクロ効果と新規損税診断を別表示し、二重計上を避ける。\n- 先行減税と課税ベース拡大の時間差による財政収支・国債発行の変化は計算対象とするが、**税収回収の早期化自体を政策の成功条件とはしない。** 物価、実体経済、分配、供給力、財政制約等を併せて比較する。\n- F別紙6-Gにある追加国債発行累積約120兆円等は従来の暫定試算として参照できるが、新モデルの計算結果として固定しない。\n\n## 5. 実装範囲と既存状態\n\n試作・検証は `handoff/` 等の独立領域で開始できる。検証済み部品を正式エンジンに組み込む際の変更・採用は、既存のOwner承認条件に従う。本書はGitHub書込み、正式Acceptance、Canonical化、既存HOLD解除を自動承認しない。\n\nM19〜25およびRP-023のHOLD、RP-024のPENDINGは維持する。第二次Milestone宣言と既存の試験PASSも変更しない。\n\n## 6. 本書の限定承認対象\n\nOwnerによる承認対象は、**第2節の標準実施経路を、F損税モデルの暫定実装根拠として用いること**、および第3〜5節の未確定事項・計算上の区別を維持することに限る。\n\n本書の承認によって、未確定パラメータの政策的確定、従来概算の妥当性承認、正式エンジン変更、政策原本差替え、RP新設、レビュー義務の追加は発生しない。\n\n---\n\n**承認状態:** Owner限定承認済（2026-11-14）。正式な政策原本・Canonical文書への採用ではない。\n\n**参照原本:** `policies/FreedomPolicies.md`、`policies/FreedomPolicies_Annex.md`、`Inbox/between_growth_and_discipline_compact_updated.md`（いずれもGitHub `spe-flatvat/SPE`）。\n",
+      "fixed_commit": "cc4a6054e716a3d63d2e30f76d0c102f2397e55c"
+    }
+  },
+  "prototype_config": {
+    "_meta": {
+      "status": "DRAFT / PROVISIONAL / NON-CANONICAL / DIAGNOSTIC ONLY",
+      "basis": "handoff/SPE_F_Provisional_Implementation_Basis_20261114.md (Owner-limited approved) on work/chatgpt-handoff @ cc4a6054",
+      "warning": "ALL numeric values below marked [PLACEHOLDER] are unsourced provisional inputs chosen by Claude to make the prototype run. They are NOT Owner decisions, NOT official statistics, and NOT calibrated to the F annex 2 estimate (1.7-2.55 trillion yen/yr). Replace with sourced data before any use beyond mechanics testing.",
+      "units": "trillion yen (nominal), year = calendar year"
+    },
+    "years": {
+      "start": 2026,
+      "end": 2055
+    },
+    "nominal_growth_pct": {
+      "value": 1.5,
+      "tag": "[PLACEHOLDER] common nominal growth of R_s and P_s; later link to engine nominal GDP path"
+    },
+    "tau_statusquo_pct": {
+      "value": 10.0,
+      "tag": "current standard rate; effective rate incl. reduced rate not modelled"
+    },
+    "tau_F_path_pct": {
+      "tag": "[PLACEHOLDER] rate path (cut-first). Basis doc fixes only: 5% target, cut precedes base expansion. Intermediate years/implementation year are NOT decided.",
+      "points": {
+        "2026": 10.0,
+        "2027": 7.5,
+        "2028": 5.0,
+        "2055": 5.0
+      }
+    },
+    "sectors": {
+      "medical": {
+        "label": "医療(保険診療)",
+        "R_2025": {
+          "value": 45.0,
+          "tag": "[PLACEHOLDER] non-taxable sales, order of national medical expenditure; needs source"
+        },
+        "p_ratio": {
+          "value": 0.2,
+          "tag": "[PLACEHOLDER] taxable purchases + capex incl. as share of R; needs source"
+        },
+        "start_year": {
+          "value": 2038,
+          "tag": "[PLACEHOLDER] year taxation + input credit begins"
+        },
+        "phi_public": {
+          "value": 0.9,
+          "tag": "[PLACEHOLDER] share of output tax borne by public funds (fee schedule compensation)"
+        },
+        "theta_passthrough": {
+          "value": 0.3,
+          "tag": "[PLACEHOLDER] share of 損税 reduction passed to prices/fees"
+        }
+      },
+      "education": {
+        "label": "教育",
+        "R_2025": {
+          "value": 6.0,
+          "tag": "[PLACEHOLDER] needs source"
+        },
+        "p_ratio": {
+          "value": 0.25,
+          "tag": "[PLACEHOLDER]"
+        },
+        "start_year": {
+          "value": 2036,
+          "tag": "[PLACEHOLDER]"
+        },
+        "phi_public": {
+          "value": 0.2,
+          "tag": "[PLACEHOLDER]"
+        },
+        "theta_passthrough": {
+          "value": 0.3,
+          "tag": "[PLACEHOLDER]"
+        }
+      },
+      "rental": {
+        "label": "不動産賃貸(居住用)",
+        "R_2025": {
+          "value": 20.0,
+          "tag": "[PLACEHOLDER] needs source"
+        },
+        "p_ratio": {
+          "value": 0.2,
+          "tag": "[PLACEHOLDER]"
+        },
+        "start_year": {
+          "value": 2037,
+          "tag": "[PLACEHOLDER]"
+        },
+        "phi_public": {
+          "value": 0.0,
+          "tag": "[PLACEHOLDER]"
+        },
+        "theta_passthrough": {
+          "value": 0.3,
+          "tag": "[PLACEHOLDER]"
+        }
+      }
+    },
+    "kappa_realization": {
+      "value": 1.0,
+      "tag": "[PLACEHOLDER] realization rate of input credit (F docx monitors <50%)"
+    },
+    "sensitivity": {
+      "p_multiplier": [
+        0.75,
+        1.0,
+        1.25
+      ],
+      "timing": {
+        "staggered": "start years as given per sector",
+        "all_2038": {
+          "medical": 2038,
+          "education": 2038,
+          "rental": 2038
+        },
+        "all_2034": {
+          "medical": 2034,
+          "education": 2034,
+          "rental": 2034
+        }
+      },
+      "kappa": [
+        1.0,
+        0.5
+      ],
+      "phi_medical": [
+        0.5,
+        0.9,
+        1.0
+      ]
+    }
+  },
+  "policy": {
+    "years": [
+      2026,
+      2055
+    ],
+    "tax_standard_statusquo": 0.1,
+    "tax_F_points": {
+      "2026": 0.1,
+      "2027": 0.075,
+      "2028": 0.05,
+      "2055": 0.05
+    },
+    "start_years": {
+      "medical": 2038,
+      "education": 2036,
+      "rental": 2037
+    },
+    "phi": {
+      "medical": 0.9,
+      "education": 0.2,
+      "rental": 0
+    },
+    "kappa": 1,
+    "theta": 0.3,
+    "reduced_input_rate_rule": "MIN_CURRENT_COMPONENT_RATE_AND_STANDARD_F;TERMINAL_FLAT5",
+    "residential_building_credit_F": "UNRESOLVED",
+    "ordinary_credit_after_taxation": "FULL_ELIGIBILITY_ASSUMPTION_TIMES_KAPPA",
+    "current_exempt_activity_input_credit": 0,
+    "national_compensation_amount": null,
+    "national_compensation_retention": null,
+    "macro_GDP_addition": false
+  },
+  "policy_labels": {
+    "tax_F_points": "2038完了・減税先行・5%目標以外の具体年次税率はClaude暫定値",
+    "start_years": "部門別開始年は暫定値、Ownerの政策確定年ではない",
+    "growth": "1.5%名目成長は既存試作仮定。公的観測から将来を確定しない",
+    "kappa": "eligible部分での控除実現率であり住宅建物特例の自動解除ではない"
+  },
+  "profiles": [
+    {
+      "id": "MED-M01-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M01-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M01-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M01-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M02-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M02-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M02-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M02-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M03-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M03-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M03-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M03-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M04-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M04-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M04-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M04-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M05-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M05-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M05-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M05-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M06-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M06-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M06-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M06-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M07-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M07-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M07-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M07-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M08-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M08-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M08-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M08-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M09-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M09-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M09-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M09-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M10-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M10-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M10-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M10-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M11-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M11-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M11-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M11-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M12-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M12-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M12-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M12-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M13-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M13-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M13-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M13-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M14-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M14-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M14-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M14-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M15-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M15-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M15-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M15-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M16-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M16-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M16-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M16-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M17-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M17-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M17-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M17-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M18-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M18-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M18-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M18-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-BUNDLE-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-BUNDLE-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-BUNDLE-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-BUNDLE-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "EDU-SALES-PUB",
+      "sector": "education",
+      "kind": "sales_partial",
+      "scope": "EDUCATION_REVENUE_SUBSET_NOT_COMPLETE_SECTOR",
+      "selected": [
+        "EDU-R-PUB"
+      ],
+      "base_year": 2023,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "FY2023→暦年近似の年次成長投影。CF/PLは排他。P未取得のため損税等は空欄"
+    },
+    {
+      "id": "EDU-SALES-PUB-EX-KINDER",
+      "sector": "education",
+      "kind": "sales_partial",
+      "scope": "EDUCATION_REVENUE_SUBSET_NOT_COMPLETE_SECTOR",
+      "selected": [
+        "EDU-R-PUB-EX-KINDER"
+      ],
+      "base_year": 2023,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "FY2023→暦年近似の年次成長投影。CF/PLは排他。P未取得のため損税等は空欄"
+    },
+    {
+      "id": "EDU-SALES-NAT-CASH",
+      "sector": "education",
+      "kind": "sales_partial",
+      "scope": "EDUCATION_REVENUE_SUBSET_NOT_COMPLETE_SECTOR",
+      "selected": [
+        "EDU-R-NAT-CASH"
+      ],
+      "base_year": 2023,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "FY2023→暦年近似の年次成長投影。CF/PLは排他。P未取得のため損税等は空欄"
+    },
+    {
+      "id": "EDU-SALES-NAT-ACCRUAL",
+      "sector": "education",
+      "kind": "sales_partial",
+      "scope": "EDUCATION_REVENUE_SUBSET_NOT_COMPLETE_SECTOR",
+      "selected": [
+        "EDU-R-NAT-ACCRUAL"
+      ],
+      "base_year": 2023,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "FY2023→暦年近似の年次成長投影。CF/PLは排他。P未取得のため損税等は空欄"
+    },
+    {
+      "id": "EDU-SALES-PRIVATE",
+      "sector": "education",
+      "kind": "sales_partial",
+      "scope": "EDUCATION_REVENUE_SUBSET_NOT_COMPLETE_SECTOR",
+      "selected": [
+        "EDU-R-PRIVATE"
+      ],
+      "base_year": 2023,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "FY2023→暦年近似の年次成長投影。CF/PLは排他。P未取得のため損税等は空欄"
+    },
+    {
+      "id": "EDU-SALES-CASH-SUBSET",
+      "sector": "education",
+      "kind": "sales_partial",
+      "scope": "EDUCATION_REVENUE_SUBSET_NOT_COMPLETE_SECTOR",
+      "selected": [
+        "EDU-R-CASH-SUBSET"
+      ],
+      "base_year": 2023,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "FY2023→暦年近似の年次成長投影。CF/PLは排他。P未取得のため損税等は空欄"
+    },
+    {
+      "id": "EDU-SALES-CASH-SUBSET-EX-KINDER",
+      "sector": "education",
+      "kind": "sales_partial",
+      "scope": "EDUCATION_REVENUE_SUBSET_NOT_COMPLETE_SECTOR",
+      "selected": [
+        "EDU-R-CASH-SUBSET-EX-KINDER"
+      ],
+      "base_year": 2023,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "FY2023→暦年近似の年次成長投影。CF/PLは排他。P未取得のため損税等は空欄"
+    },
+    {
+      "id": "EDU-SALES-ACCRUAL-SUBSET",
+      "sector": "education",
+      "kind": "sales_partial",
+      "scope": "EDUCATION_REVENUE_SUBSET_NOT_COMPLETE_SECTOR",
+      "selected": [
+        "EDU-R-ACCRUAL-SUBSET"
+      ],
+      "base_year": 2023,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "FY2023→暦年近似の年次成長投影。CF/PLは排他。P未取得のため損税等は空欄"
+    },
+    {
+      "id": "EDU-PURCHASE-SHARE-25",
+      "sector": "education",
+      "kind": "education_cost_sensitivity",
+      "scope": "NATIONAL_UNIVERSITY_COST_ENVELOPE_ASSUMPTION_NOT_EDUCATION_TOTAL",
+      "selected": [
+        "EDU-COST-PURCHASE-CF"
+      ],
+      "base_year": 2023,
+      "growth_pct": 1.5,
+      "taxable_education_composite_share": 0.25,
+      "accounting_assumption": "GROSS10",
+      "credit_category": "ordinary",
+      "assumptions": "82国立大学法人の購入CFのうち教育用途かつ課税対象である合成割合を25/50/75%仮定。税抜は÷1.1。病院等除外の観測値ではない。給与・投資・PLは足さない"
+    },
+    {
+      "id": "EDU-PURCHASE-SHARE-50",
+      "sector": "education",
+      "kind": "education_cost_sensitivity",
+      "scope": "NATIONAL_UNIVERSITY_COST_ENVELOPE_ASSUMPTION_NOT_EDUCATION_TOTAL",
+      "selected": [
+        "EDU-COST-PURCHASE-CF"
+      ],
+      "base_year": 2023,
+      "growth_pct": 1.5,
+      "taxable_education_composite_share": 0.5,
+      "accounting_assumption": "GROSS10",
+      "credit_category": "ordinary",
+      "assumptions": "82国立大学法人の購入CFのうち教育用途かつ課税対象である合成割合を25/50/75%仮定。税抜は÷1.1。病院等除外の観測値ではない。給与・投資・PLは足さない"
+    },
+    {
+      "id": "EDU-PURCHASE-SHARE-75",
+      "sector": "education",
+      "kind": "education_cost_sensitivity",
+      "scope": "NATIONAL_UNIVERSITY_COST_ENVELOPE_ASSUMPTION_NOT_EDUCATION_TOTAL",
+      "selected": [
+        "EDU-COST-PURCHASE-CF"
+      ],
+      "base_year": 2023,
+      "growth_pct": 1.5,
+      "taxable_education_composite_share": 0.75,
+      "accounting_assumption": "GROSS10",
+      "credit_category": "ordinary",
+      "assumptions": "82国立大学法人の購入CFのうち教育用途かつ課税対象である合成割合を25/50/75%仮定。税抜は÷1.1。病院等除外の観測値ではない。給与・投資・PLは足さない"
+    },
+    {
+      "id": "RENT-MANAGEMENT-3",
+      "sector": "rental",
+      "kind": "rental_management_partial",
+      "scope": "RESIDENTIAL_RENT_PROXY_WITH_MANAGEMENT_ONLY_NOT_FULL_P",
+      "selected": [
+        "RENT-R-KNOWN",
+        "RENT-MGMT-3"
+      ],
+      "base_year": 2023,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "既知家賃の静態年間化。全戸委託・税込料率3/5/10%仮定。管理費だけの控除。建物取得費は含まない"
+    },
+    {
+      "id": "RENT-MANAGEMENT-5",
+      "sector": "rental",
+      "kind": "rental_management_partial",
+      "scope": "RESIDENTIAL_RENT_PROXY_WITH_MANAGEMENT_ONLY_NOT_FULL_P",
+      "selected": [
+        "RENT-R-KNOWN",
+        "RENT-MGMT-5"
+      ],
+      "base_year": 2023,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "既知家賃の静態年間化。全戸委託・税込料率3/5/10%仮定。管理費だけの控除。建物取得費は含まない"
+    },
+    {
+      "id": "RENT-MANAGEMENT-10",
+      "sector": "rental",
+      "kind": "rental_management_partial",
+      "scope": "RESIDENTIAL_RENT_PROXY_WITH_MANAGEMENT_ONLY_NOT_FULL_P",
+      "selected": [
+        "RENT-R-KNOWN",
+        "RENT-MGMT-10"
+      ],
+      "base_year": 2023,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "既知家賃の静態年間化。全戸委託・税込料率3/5/10%仮定。管理費だけの控除。建物取得費は含まない"
+    },
+    {
+      "id": "MED-COMP-病院-RETAIN",
+      "sector": "medical",
+      "kind": "compensation_only",
+      "scope": "PER_FACILITY_HISTORICAL_COMPENSATION_NOT_INPUT_VAT",
+      "selected": [
+        "MED-COMP-病院-compensation_A",
+        "MED-COMP-病院-tax_increase_B"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "compensation_retention_after_start": 1,
+      "credit_category": "ordinary",
+      "assumptions": "5→10%増分補填A/Bを1.5%で投影。開始後A維持/全撤回は排他的な制度感度。P/Rは別標本のため接続しない"
+    },
+    {
+      "id": "MED-COMP-病院-WITHDRAW",
+      "sector": "medical",
+      "kind": "compensation_only",
+      "scope": "PER_FACILITY_HISTORICAL_COMPENSATION_NOT_INPUT_VAT",
+      "selected": [
+        "MED-COMP-病院-compensation_A",
+        "MED-COMP-病院-tax_increase_B"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "compensation_retention_after_start": 0,
+      "credit_category": "ordinary",
+      "assumptions": "5→10%増分補填A/Bを1.5%で投影。開始後A維持/全撤回は排他的な制度感度。P/Rは別標本のため接続しない"
+    },
+    {
+      "id": "MED-COMP-一般診療所-RETAIN",
+      "sector": "medical",
+      "kind": "compensation_only",
+      "scope": "PER_FACILITY_HISTORICAL_COMPENSATION_NOT_INPUT_VAT",
+      "selected": [
+        "MED-COMP-一般診療所-compensation_A",
+        "MED-COMP-一般診療所-tax_increase_B"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "compensation_retention_after_start": 1,
+      "credit_category": "ordinary",
+      "assumptions": "5→10%増分補填A/Bを1.5%で投影。開始後A維持/全撤回は排他的な制度感度。P/Rは別標本のため接続しない"
+    },
+    {
+      "id": "MED-COMP-一般診療所-WITHDRAW",
+      "sector": "medical",
+      "kind": "compensation_only",
+      "scope": "PER_FACILITY_HISTORICAL_COMPENSATION_NOT_INPUT_VAT",
+      "selected": [
+        "MED-COMP-一般診療所-compensation_A",
+        "MED-COMP-一般診療所-tax_increase_B"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "compensation_retention_after_start": 0,
+      "credit_category": "ordinary",
+      "assumptions": "5→10%増分補填A/Bを1.5%で投影。開始後A維持/全撤回は排他的な制度感度。P/Rは別標本のため接続しない"
+    },
+    {
+      "id": "MED-COMP-歯科診療所-RETAIN",
+      "sector": "medical",
+      "kind": "compensation_only",
+      "scope": "PER_FACILITY_HISTORICAL_COMPENSATION_NOT_INPUT_VAT",
+      "selected": [
+        "MED-COMP-歯科診療所-compensation_A",
+        "MED-COMP-歯科診療所-tax_increase_B"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "compensation_retention_after_start": 1,
+      "credit_category": "ordinary",
+      "assumptions": "5→10%増分補填A/Bを1.5%で投影。開始後A維持/全撤回は排他的な制度感度。P/Rは別標本のため接続しない"
+    },
+    {
+      "id": "MED-COMP-歯科診療所-WITHDRAW",
+      "sector": "medical",
+      "kind": "compensation_only",
+      "scope": "PER_FACILITY_HISTORICAL_COMPENSATION_NOT_INPUT_VAT",
+      "selected": [
+        "MED-COMP-歯科診療所-compensation_A",
+        "MED-COMP-歯科診療所-tax_increase_B"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "compensation_retention_after_start": 0,
+      "credit_category": "ordinary",
+      "assumptions": "5→10%増分補填A/Bを1.5%で投影。開始後A維持/全撤回は排他的な制度感度。P/Rは別標本のため接続しない"
+    },
+    {
+      "id": "MED-COMP-保険薬局-RETAIN",
+      "sector": "medical",
+      "kind": "compensation_only",
+      "scope": "PER_FACILITY_HISTORICAL_COMPENSATION_NOT_INPUT_VAT",
+      "selected": [
+        "MED-COMP-保険薬局-compensation_A",
+        "MED-COMP-保険薬局-tax_increase_B"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "compensation_retention_after_start": 1,
+      "credit_category": "ordinary",
+      "assumptions": "5→10%増分補填A/Bを1.5%で投影。開始後A維持/全撤回は排他的な制度感度。P/Rは別標本のため接続しない"
+    },
+    {
+      "id": "MED-COMP-保険薬局-WITHDRAW",
+      "sector": "medical",
+      "kind": "compensation_only",
+      "scope": "PER_FACILITY_HISTORICAL_COMPENSATION_NOT_INPUT_VAT",
+      "selected": [
+        "MED-COMP-保険薬局-compensation_A",
+        "MED-COMP-保険薬局-tax_increase_B"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "compensation_retention_after_start": 0,
+      "credit_category": "ordinary",
+      "assumptions": "5→10%増分補填A/Bを1.5%で投影。開始後A維持/全撤回は排他的な制度感度。P/Rは別標本のため接続しない"
+    }
+  ],
+  "artifacts": {
+    "code": "SPE_F_Sonzei_Three_Sector_Prototype_DRAFT_20261115.py",
+    "inputs": "SPE_F_Sonzei_Three_Sector_Inputs_DRAFT_20261115.json",
+    "annual": "SPE_F_StatusQuo_Sonzei_Annual_Diagnostics_DRAFT_20261115.csv",
+    "report": "SPE_F_Sonzei_Three_Sector_Run_Report_DRAFT_20261115.md"
+  },
+  "sq_bundle": {
+    "status": "DRAFT / PROVISIONAL / NON-CANONICAL",
+    "date": "2026-11-15",
+    "sources": {
+      "StatusQuo.md": {
+        "commit": "0986799393e651caa4a106dbbf0a66fe12a3d870",
+        "bytes": 8686,
+        "sha256": "eb5a95df122292465fc79c68a12b9e7c6f8c0e0f97f367eb28ed0b27f6264e30",
+        "utf8": "●現状維持（Status Quo）シナリオ\n〜既存制度の漸進的調整による国家運営の継続〜\n\n1. 基本理念\n現状維持 = 継続と安定 既存制度が持つ予見可能性と、各制度に依存する関係者の生活基盤を尊重し、急激な変更に伴う社会的コスト・政治的リスクを回避する。\n改革の便益は不確実だが、既存制度の破壊に伴うコストは確実である。したがって、制度変更は個別の課題が顕在化し、かつ政治的合意が形成された範囲内でのみ、単年度予算の枠組みの中で漸進的に行うことを基本とする。\n本シナリオは、単なる「何もしない」ではない。むしろ、個々の利害調整・予算折衝の積み重ねという、日本の統治機構が最も得意とする手法を継続すること自体が、最も合理的でリスクの低い選択であるという立場に立つ。抜本改革がもたらす便益は将来世代のものであり不確実だが、既存制度の変更が現在の有権者・関係団体にもたらす負担は確実かつ即時である。この非対称性のもとでは、漸進主義こそが政治的に持続可能な唯一の経路である。\n\n2. 主要政策目標（2055年まで）\n本シナリオには、単一の最優先目標は存在しない。各年度の予算編成・税制改正プロセスにおいて、個別の政策課題（社会保障費の自然増、災害対応、景気対策等）に順次対応することが目標であり、2055年時点の到達点はあらかじめ設計されたものではなく、個々の意思決定の結果として事後的に定まる。\n強いて数値目標を置くならば、以下の通りである。\n単年度の税収・歳出のバランス（プライマリーバランス）を「中長期的に」改善する方針を維持する（具体的な達成年限は設定しない）\n急激な増税・急激な給付削減を避け、有権者の急激な負担変化を防ぐ\n個別制度（年金・医療・consumption税制）は、審議会・与党税制調査会等の既存プロセスを通じて、必要に応じて見直す\n\n3. 基本設計方針（重要）\n税制・社会保障制度の抜本再設計は行わない。 消費税率、年金支給開始年齢、医療自己負担割合など、国民生活に直結する制度の基本構造は、強い政治的合意が形成されない限り変更しない。\n低所得層・中間層への配慮は、既存の枠組み内での加算・特例措置で対応する。 新たな給付体系の創設は、財源確保の目処が立たない限り見送る。\nコミュニケーション方針：個別制度の見直しについては、その都度、審議会答申・税制改正大綱等の形で説明する。複数の制度変更を一つの「物語」として統合的に説明することは意図しない。\n\n4. 主要施策\n現状維持シナリオにおける「施策」は、統合パッケージではなく、既存の制度・予算プロセスの継続そのものである。\n税制\n消費税率は現行水準を維持（軽減税率を含む複数税率構造も維持）\n法人税率・所得税の累進構造は、既存の税制改正プロセスの中で微修正を継続\nインボイス制度は現行のまま運用\n労働・社会保障\n高齢者就業は、既存の高年齢者雇用安定法の枠内での努力義務にとどめる（準義務化・補助金投入のような追加インセンティブ策は導入しない）\n外国人材受け入れは、特定技能制度等の既存枠組みの範囲内で運用し、総量管理・統合支援を伴う新設パッケージは導入しない\n年金制度は、財政検証（5年に一度）の結果を踏まえ、必要に応じて既存制度内で微調整する\n医療制度は、高額療養費・自己負担割合について、既存の見直しサイクル（数年に一度の段階的調整）を継続する\n教育・成長投資\n教育国債の新設、給付型奨学金の抜本拡充のような大型施策は、財源確保の見通しが立たない限り実施しない\n既存の税額控除・補助金制度は、予算の許す範囲で継続する\n\n5. 移行スケジュール\n該当なし。本シナリオには「2026〜2028年」「2028〜2032年」のような複数年にまたがる制度改革ロードマップは存在しない。すべての意思決定は単年度の予算編成・税制改正プロセスに従うため、中長期の到達点はあらかじめ設計されない。\n\n6. リスク認識と対策\n最大リスク：個々の合理的な現状維持判断の積み重ねが、集計すると持続不可能な帰結（人口減少の加速、実質賃金の継続的下落、財政の緩やかな悪化）を生むという「合成の誤謬」。\nこのリスクの本質は、単年度・個別制度ごとの意思決定においては、いずれの判断も「今、変更しない」ことが最も合理的でリスクが低く見えるという点にある。しかし、これが30年間積み重なった結果は、本シミュレーションで示した通り、実質GDPのピークアウトと縮小、実質賃金の一貫した下落、人口の急速な減少、国債発行額の発散的拡大である。\n対策：明文化された対策は存在しない。 個々の危機（財政悪化の顕在化、社会保障制度の機能不全等）が誰の目にも明らかになった時点で、その時々の政治状況に応じた対症療法的な対応がなされることが想定されるが、その内容・時期・十分性はあらかじめ保証されない。\n\n本シナリオにおいては、抵抗勢力という主体は存在しない。個々の制度に依存するすべての関係者（本シナリオの受益者でもあり、将来の負担者でもある国民自身）による、日々の合理的な現状維持選択の集積が、結果としてこの経路を形成する。\n\n7. 中間評価トリガー\n存在しない。\n「実質GDP成長率1.2%未満で教育投資拡大」「ジニ係数0.36超で社会保険料軽減率+5〜10%」「人口1億人割れで外国人材上限+20%」といった自動修正条項（サーキットブレーカー）は、本シナリオには制度として組み込まれていない。\n個別の指標が悪化した場合、審議会での議論・与党内調整・世論の動向等を経て、対応の要否・内容が都度検討されるが、あらかじめ定めた閾値に基づいて自動的に発動する仕組みは存在しない。このため、対応が後手に回るリスク、あるいは対応そのものが政治的に実現しないリスクは、F施策と比較して構造的に高い。\n\n付記：本シナリオの位置づけ\n本シナリオは、「何もしない」という意思決定ではなく、各主体がその時点で最も合理的と判断した選択を積み重ねた結果として形成される基準経路（ベースライン）である。\nこの点で「意図的な資本集中戦略」とも「明示的な制度改革パッケージ」とも異なる。主体的な設計者が存在しないこと自体が、本シナリオの最大の特徴であり、同時に最大のリスクでもある。\n\n9. シミュレーションの条件概要\nTSUBAMEモデルを基にシミュレーション\nスタート年2026年、評価期間2055年まで。初期値:\n 名目GDP600兆円、実質GDP580兆円、政策金利0.75%、国債発行28兆円、税収80兆円、配当20兆円、内部留保650兆円、名目賃金中央値400万円、実質賃金中央値380万円、所得中央値450万円、ジニ係数0.38、エンゲル係数25%、人口1億2150万人、死亡159万人、出生64万人。\nベース成長:\n 実質GDP年1%、インフレ年2%、名目GDP年3%。\n税収関連:\n 弾性値1.5～2（名目成長率gに対し税収成長率≈1.5g）、上限名目GDPの30%。\n施策影響調整:\n 投資促進+0.3-0.5%/年\n\nリスクイベント:\n 2026年オイルショック（実質GDP-3%、インフレ+2%、エンゲル+5%、光熱費・物流費+15%）、2027年中台紛争（GDP-5%、インフレ+5%）、2031年南海トラフ（GDP-3%、税収-10%）、3年毎災害（GDP-1%）、隔年気候変動（GDP-0.5%）。\n人口関連:\n 死亡増加率年1.5%、出生減少率年2.5%、移民施策別調整。\n\n評価重視:\n 実質GDP・賃金・所得中央値・税収・ジニ係数・人口持続性。\n"
+      },
+      "SimulationSpecification_v5.md": {
+        "commit": "0986799393e651caa4a106dbbf0a66fe12a3d870",
+        "bytes": 17708,
+        "sha256": "fd10290c97daa3a77bd1348ac4c2a1536da634a7b9408737dcd7713adc671b65",
+        "utf8": "TSUBAME相当モデル：シミュレーション条件仕様書 v5\n（F・N3・Noble Shift・現状維持・R4 5案比較シミュレーション、2026-2055年）\n本書はv4に対し、人口目標の扱いを変更した改訂版です。v4からの変更箇所には★マークを付しています。\n0. v5での変更点（サマリー）\n人口目標（8,500万人）の扱いについて再度フィードバックがあり、以下の3択のうち「必須制約から外して相対評価 のみにする」を採用した。\n現行のまま必須制約として厳しめに残す（ストレステストのハードル）\n8,000万人程度に下方修正する\n★必須制約から外して相対評価のみにする（採用）\nこれに伴い、★人口はもはや「達成／未達」の合否判定を行わず、2055年時点の水準を5案間で相対比較する参考指標 として扱う。モデルの計算式・数値そのものに変更はなく、結果の見せ方・解釈のみを変更している。\n0-2. v4での変更点（参考：既に反映済み）\n本版はv3に対し、以下の4点を反映済みである（v4での変更、再掲）。\nR4施策の消費税スケジュールを確定本文どおりに正式反映\n仮定の出所表記（[文書記載]／[ユーザー指示]／[推定]）を導入\n各施策の強み・弱み1行サマリーを追加\nR4の損税解消効果等を「仮説ケース」として別枠提示（本線5案比較には含めない）\n※R4の損税解消効果（税収弾性値の上乗せ・成長率押し上げ等）は文書に数値根拠がなく、反映するとR4を有利に 見せるリスクがあるため、本線には含めず、条件付きの仮説ケース（9節）として分離した。\n項目\n対応\nR4の消費税スケジュール（2041:14%→2043:12%→2045以降:10%+広域基盤化）\n正式反映（文書記載のため）\n仮定の出所表記\n導入（0-1節）\n各施策の強み・弱み1行サマリー\n追加（11節）\n損税解消効果等4項目（税収弾性値・成長率・賃金成長・出生フィードバックへの上乗せ）\n「R4損税解消仮説ケース」として本線とは別枠で提示（9節）。5案比較には混ぜない\n★人口目標の扱い\n必須制約から除外し、相対評価のみに変更\n感度分析の追加\n見送り。「固定値を維持したい」というユーザー方針と矛盾するため\n0-1. 仮定の出所表記の凡例\n本書内の主要パラメータには、以下3種類のタグを付す。\n[文書記載]：F・N3・Noble Shift・現状維持・R4いずれかの確定本文に明記されている値・スケジュール\n[ユーザー指示]：本文に記載がなく、会話内でユーザーが明示的に決定した値・方針\n[推定]：文書・ユーザー指示のいずれにもなく、モデルを動かすために私が置いた仮定値（要検証）\n1. 初期値（2026年、全案共通）［文書記載］\n項目\n値\n名目GDP\n600兆円\n実質GDP\n580兆円\n政策金利\n0.75%\n国債発行額\n28兆円\n税収総額\n80兆円\n株主配当総額\n20兆円\n内部留保総額\n650兆円\n名目賃金中央値\n400万円\n実質賃金中央値\n380万円（Noble Shiftのみ実データ初期値373万円［文書記載］）\n所得中央値\n450万円\nジニ係数\n0.380\nエンゲル係数\n25%\n人口\n1億2,150万人\n死亡者数\n159万人\n出生数\n64万人\n2. 必須制約条件\n制約\n内容\n出所\nジニ係数\n2055年までに0.35以下\n[文書記載]\n税収/GDP比\n名目GDPの30%以内\n[文書記載]\n財政赤字\nプライマリーバランス悪化の急拡大を回避\n[文書記載]\n★人口（当初制約：2055年に8,500万人以上維持）は、v5より必須制約から除外し、「5. 参考指標」の相対比較のみで 扱う（0節参照）。理由：全5案が僅差で未達となる結果が続き、「目標自体の妥当性」と「モデルの人口動態が厳しめに 出ている可能性」を切り分けられないまま合否判定を続けることを避けるため。\n3. リスクイベント（全5案共通適用）［文書記載］\nイベント\n発生年\n実質GDPへの影響\nその他の影響\nオイルショック\n2026年\n−3%\nインフレ+2%、エンゲル係数+5%、光熱費・物流費+15%\n中台紛争\n2027年\n−5%\nインフレ+5%\n南海トラフ地震\n2031年\n−3%\n税収−10%（一時ショック）\n中規模災害\n3年毎（2029年起点）\n−1%\n―\n気候変動ドラッグ\n隔年（2027年起点）\n−0.5%\n―\n4. 施策別モデル\n4-1. 人口動態（全案共通の基盤モデル）\n死亡者数(t) = 死亡者数(t-1) × 1.015                                          [文書記載]\n出生数(t)   = 出生数(t-1)   × 0.975 × (1 + φ × 実質賃金成長率(t))            [基本式は文書記載、φの値は推定]\n人口(t) = 人口(t-1) + （出生数(t) − 死亡者数(t)） + 純移民(t)                [文書記載]\n\nφ（出生の賃金フィードバック弾性） = 0.15                                     [推定・固定]\n移民スケジュール［文書記載］：F施策のみ既存設計（定常40万人/年）を維持。N3・Noble Shift・現状維持・R4は人口目標8,500万人に逆算した移民規模（定常35.7万人/年、R4は[推定]でN3を踏襲）を適用。\n労働力人口成長率(t) = 総人口成長率(t) + エイジングドラッグ(t)　［エイジングドラッグはIPSS実データからの算出値、モデルへの組込み方法は推定］\n4-2. F施策［文書記載］\n実質GDP成長率(t) = 1.0% + 消費刺激効果(t) + 投資促進効果(t) + 教育効果(t) − リスクショック(t) + (1−α)×労働力人口成長率(t)\n消費刺激効果：2026-27年+0.3% / 2028-31年+0.5% / 2032年以降+0.7%\n投資促進効果：2026-29年+0.3% / 2030年以降+0.5%\n教育効果：2028年以降+0.3%\n税収弾性値：〜2032年1.5 / 2032-2040年1.7 / 2040年以降2.0\n歳出成長率：〜2034年2.5% / 2035-2044年1.5% / 2045年以降1.0%\n実質賃金中央値アンカー：2026:400→2055:860万円、ジニ係数アンカー：2026:0.380→2055:0.348\nF施策：政治調整版（6章G項「シーケンシング変更」）［文書の要点＋推定補間］\n累積追加国債発行120兆円（2026-2038年、2032年頃ピーク）→2055年時点で94%返済\n※累積額・ピーク年・返済率は文書記載の要点。年次配分曲線（山形分布・線形返済）は推定\n4-3. N3施策\n実質GDP成長率(t) = 1.0% − 0.2%（消費刺激・恒常）［推定・ユーザー指示で維持］+ 投資促進効果(t)［文書記載］+ 教育効果(t)［推定・ユーザー指示で維持］− 消費税増税ショック(t) − リスクショック(t) + (1−α)×労働力人口成長率(t)\n投資促進効果：2026-29年+0.3% / 2030年以降+0.5%［文書記載］\n教育効果：2028年以降+0.3%［推定：確定本文に記載なし。旧仕様書の仮定をユーザー指示で維持］\n消費税増税ショック：−0.6%［推定］、発動年= 2030年(10%)、2032年(12%)、2034年(15%)、2038年(18%)、2040年(20%目標)［文書記載のスケジュール］\n税収弾性値：〜2032年0.98 / 2032-2040年1.1 / 2040年以降1.2［推定］\n歳出成長率：〜2034年1.0% / 2035-2044年0.5% / 2045年以降0.0%［推定］\n実質賃金中央値アンカー：2026:400→2055:720万円、ジニ係数アンカー：2026:0.380→2055:0.359［推定］\n4-4. Noble Shift（N施策）\n実質GDP成長率(t) = 0.95%（固定）− リスクショック(t) + (1−α)×労働力人口成長率(t)     [文書記載の平均値]\n名目GDP成長率(t) = 2.85%（固定） + リスクショックのインフレ影響(t)                  [文書記載の平均値]\n税収弾性値：通常1.1、リスクイベント発生年または消費税増税年は0.9［文書記載］\n消費税：2028年12%施行→2030年以降2年毎+2%（上限30%）［文書記載］\n歳出成長率：0.5%（〜2033年）→−0.5%（2034-2039年）→−1.0%（2040年以降）［推定：2034年以降の圧縮幅］\n実質賃金・ジニ係数アンカー：既存プロジェクトファイル「N施策_TSUBAMEシミュレーション報告.md」の実データを採用［文書記載］\n◆機械式検証（参考値、正式値には非採用）：上記アンカー版とは別に、F・N3・現状維持と同一の「基調＋施策効果−リスク」式（基調1.0%＋消費刺激▲0.4%＋投資促進+0.7%［いずれも推定］）で独立再計算したところ、2055年実質GDPは469.1兆円（アンカー版421.9兆円より+47.2兆円）、CAGRは−0.71%（アンカー版−1.06%より+0.35pp）となった。マイナス成長という結論自体は変わらないが、アンカー版はやや厳しめの結果になっている可能性がある。\n4-5. 現状維持（オプションB採用）\n確定本文9章がN3施策と一字一句同一だったため流用ミスと判断し、1〜8章の設計思想に基づく従来の差別化パラメータを維持［ユーザー指示］。\n実質GDP成長率(t) = 基調成長率(t) − リスクショック(t) + (1−α)×労働力人口成長率(t)\n基調成長率：2026-34年1.0% / 2035-44年0.6% / 2045年以降0.3%［推定］（施策効果の上乗せなし）\n税収弾性値：〜2034年0.85 / 2035年以降0.75［推定］\n歳出成長率：3.0%（全期間一律）［推定］\n実質賃金中央値アンカー：2026:400→2055:472万円、ジニ係数アンカー：2026:0.380→2055:0.415［推定］\n4-6. R4施策（統一モデル、消費税スケジュール正式反映）\n実質GDP成長率(t) = 1.0% + 0.3%（投資促進効果） [+0.4%（緊急是正条項発動時、2041年以降）] − リスクショック(t) + (1−α)×労働力人口成長率(t)\n税収弾性値：フラット1.6［文書記載］\n歳出成長率・移民スケジュール：文書に明記なし。N3施策の設計を踏襲［推定］\n◆消費税スケジュール（正式反映）：2026-2039年はN3要素継続運用、2041年14%へ前倒し、2043年12%、2045年以降10%+広域基盤化［文書記載］。ただし本モデルは税率→税収を直接結ぶ式を持たず、税収は弾性値1.6で近似しているため、この税率自体は数値計算には反映されない（記録目的のみ）\n発動判定（2036-2040年平均）：実質GDP成長率−0.30%、実質賃金5年累積伸び率+3.28% → 2条件該当により2041年発動\n5. 名目GDP成長率の定義（Noble Shiftを除く）［推定］\n名目GDP成長率(t) = 実質GDP成長率(t) + インフレ率(t)\nインフレ率(t) = 基調インフレ(2.0%) + リスクショックのインフレ影響(t) + 消費税一時要因(t)\n6. 税収・国債発行の共通式［推定］\n税収(t) = 税収(t-1) × (1 + 名目GDP成長率(t) × 弾性値(t))\n上限キャップ：税収(t) ≤ 名目GDP(t) × 30%\n南海トラフ年（2031年）：税収 × 0.90（一時ショック）［文書記載］\n\n歳出(t) = 歳出(t-1) × (1 + 歳出成長率(t))\n国債発行額(t) = max(歳出(t) − 税収(t), 0)\n7. コブ・ダグラス型労働項（全案共通）［推定］\n実質GDP成長率(t) の末尾に (1−α) × 労働力人口成長率(t) を加算\nα（資本分配率） = 0.35（固定）\n労働力人口成長率(t) = 総人口成長率(t) + エイジングドラッグ(t)\n期間\nエイジングドラッグ（pp）\n2026-2032年\n−0.0525\n2033-2043年\n−0.8123\n2044-2045年\n−0.3737\n2046-2055年\n−0.1683\n出典：IPSS「日本の将来推計人口（令和5年推計・出生中位死亡中位）」実データ［文書記載相当（外部統計）、モデルへの組込み方は推定］。\n8. 2055年シミュレーション結果（v5・本線5案）\n指標\nF施策\nR4施策(発動後)\nN3施策\nNoble Shift\n現状維持\n実質GDP\n661.9兆円\n498.5兆円\n493.7兆円\n421.9兆円\n381.4兆円\n実質GDP CAGR\n+0.44%\n−0.50%\n−0.54%\n−1.06%\n−1.39%\n実質賃金中央値\n860万円\n464万円\n720万円\n335万円（最低）\n472万円\nジニ係数\n0.348✅\n0.300✅\n0.359\n0.414\n0.415\n★人口（参考指標）\n8,458万人（5案中最高）\n8,275万人\n8,334万人\n8,268万人（5案中最低）\n8,298万人\n税収/GDP比（最大）\n22.3%\n16.3%\n13.3%\n13.4%\n13.3%\n国債発行額（2055年）\n0兆円\n0兆円\n0兆円\n0兆円\n174兆円（唯一発散）\n制約充足（必須制約のみ）：ジニ係数0.35以下はF施策・R4施策のみ達成。税収/GDP比30%以内は5案とも達成。財政赤字急拡大の回避は現状維持のみ未達成。\n★人口（参考指標・相対比較）：5案とも8,268万〜8,458万人のレンジに収まり、差は190万人程度。F施策が最も 高水準、Noble Shiftが最も低水準。いずれも当初目標としていた8,500万人にはわずかに届かないが、v5では これを「未達」と評価しない。\n9. ◆R4施策：損税解消仮説ケース（本線とは別枠・条件付きシナリオ）\n「R4を作成したチャット」からの提案4項目を、「R4の損税解消・事務コスト削減効果の主張が正しければ」という条件付きの仮説ケースとして反映。すべて［推定］であり、本線の5案比較（8節）には含めない。\n追加効果\n内容\n適用期間\n事務コスト削減効果\n実質GDP成長率+0.15pp\n2041年以降・恒常\n損税解消効果\n税収弾性値+0.25 → +0.35\n2041-2045年 → 2046年以降\n包摂策効果\n実質賃金成長率+0.2pp\n2041-2050年\n出生フィードバック強化\nφ+0.05\n未実装（影響軽微のため見送り）\n結果比較（2055年時点）\n指標\nR4（本線・発動後）\nR4（損税解消仮説ケース）\n差分\n実質GDP\n498.5兆円\n509.9兆円\n+11.4兆円\n実質GDP CAGR\n−0.50%\n−0.43%\n+0.08pp\n実質賃金中央値\n464万円\n473万円\n+9万円\n税収\n163.5兆円\n185.6兆円\n+22.1兆円\n税収/GDP比（最大）\n16.3%\n18.1%\n+1.8pp\n所見：4項目を積み増した場合、2055年時点で実質GDPは+11.4兆円（+2.3%）、CAGRは+0.08pp程度の改善が見込まれる。F施策のGDP水準（661.9兆円）には及ばないものの、R4本線比では一定の改善効果が確認できる。損税解消仮説を採用しても5案比較の相対順位（F>R4>N3>Noble Shift>現状維持）は変わらないと見られる。\n10. 未反映・既知の課題一覧\nN3施策の2035年自動凍結条項は、成長率への数値的トリガーが確定本文に示されていないため未実装\nNoble Shiftの非正規率+0.8pt/年・60%目標は成長率・税収への数値的連動が未実装\nR4施策は歳出成長率・移民スケジュールがN3施策からの踏襲という仮定に依存\nF施策の政治調整版は累積額・ピーク年・返済率の要点からの簡易補間\nエイジングドラッグは単一のIPSS出生中位シナリオに基づく固定値\n移民の年齢構成（生産年齢人口への算入率）は未考慮\n労働者人口（人数そのもの）・日経平均・配当総額・内部留保・所得中央値・エンゲル係数は、F施策以外は詳細な再計算を行っていない\nα=0.35、φ=0.15は根拠のない仮定値であり、感度分析は意図的に未実施（ユーザー指示：固定値を維持）\nNoble Shiftの賃金・ジニ係数は、アンカー版（既存報告書のテーブル）と機械式（今回検証）で結果に幅があり、どちらが実態に近いか未確定\n11. ◆各施策の強み・弱み（1行サマリー）\n施策\n強み\n弱み\nF施策\n5案中唯一プラス成長を維持し、賃金・GDPともに最高水準\n税収/GDP比が22.3%まで上昇し、成長と税負担のトレードオフが最も顕著\nR4施策\n緊急是正条項による格差改善効果が5案中最良（ジニ係数0.300）\nGDP水準はN3とほぼ同水準にとどまり、危機対応に特化した設計の代償として成長力に乏しい\nN3施策\nGDP・賃金ともにF施策に次ぐ水準を維持しつつ、緊縮的な税制で財政を黒字化\nジニ係数がF・R4に劣り、格差是正効果は限定的\nNoble Shift\n財政指標（国債発行ゼロ）は数値上達成\n実質賃金・ジニ係数ともに5案中最悪。「縮小均衡」の代表例\n現状維持\n制度変更に伴う政治的コスト・社会的摩擦が最小\nGDP成長率・国債発行額ともに5案中最悪。「何もしないことの複利的コスト」を体現\n12. 変更履歴（サマリー）\n初版：ベース成長仮定のみで簡易推計\nリスクイベント追加、F・N3の精緻な条件を明示\n人口目標を段階的に8,500万人へ下方修正\nv2：コブ・ダグラス型労働項・出生の賃金フィードバックを追加、R4施策を統一モデルに追加\nv3：F・N3・Noble Shift・現状維持の確定本文を反映、Noble Shiftを実データベースに全面差し替え、F施策に政治調整版を追加\nv4：R4の消費税スケジュールを正式反映、仮定の出所表記を導入、各施策の強み・弱み1行サマリーを追加、R4損税解消仮説ケースを本線とは別枠で追加（「R4を作成したチャット」との協議の上、公平性を優先する最小限更新路線を採用）\n★v5：人口目標（8,500万人）を必須制約から除外し、相対評価のみの参考指標へ変更。モデルの計算式・数値そのものへの変更はなく、結果の解釈・見せ方のみを変更\n"
+      },
+      "SPE_F_Provisional_Run_20261110.py": {
+        "commit": "30530ad2b012ce33715db662fa0c5ca06a2f10ed",
+        "bytes": 5311,
+        "sha256": "b48c461662e6c365ad9e8943fd9c554e129b8348df836ec96f105bb06faa96e8",
+        "utf8": "\"\"\"Local DRAFT adapter: uses unchanged fixed SPE v6 functions; no GitHub writes.\nUsage: python3 SPE_F_Provisional_Run_20261110.py ENGINE_DIR INPUT_JSON OUTPUT_DIR\n\"\"\"\nimport csv,dataclasses,hashlib,json,math,sys\nfrom pathlib import Path\ndef main():\n engine,inp,out=map(Path,sys.argv[1:4]);engine=engine.resolve();out.mkdir(exist_ok=True)\n sys.dont_write_bytecode=True;sys.path.insert(0,str(engine))\n from prototype import SimulationState,transition_year,transition_year_demographics\n from m14_wage_anchor import wage_growth_rate,interpolate_wage\n c=json.loads(inp.read_text()); anchors={int(y):float(v) for y,v in c['wage_anchor_man_yen']['anchors'].items()}\n def pw(table,t):\n  return [r['value'] for r in table if r['from']<=t][-1]\n def params(t):\n  risk=sum(r['pct'] for r in c['risk_shock_pct']['rules'] if (r['type']=='once' and t==r['year']) or (r['type']=='every' and t>=r['start'] and (t-r['start'])%r['step']==0)) /100\n  m=c['migration']; migration=0 if t<m['ramp_start'] else m['steady_per_year']*min((t-m['ramp_start']+1)/m['ramp_years'],1)\n  d=dict(death_rate_coefficient=c['death_rate_coefficient']['value'],birth_decline_coefficient=c['birth_decline_coefficient']['value'],phi=c['phi']['value'],real_wage_growth_rate=0 if t==2026 else wage_growth_rate(anchors,t),net_migration=migration)\n  return {**d,'aging_drag':pw(c['aging_drag_pp']['table'],t)/100,'base_growth_rate':c['base_growth_rate_pct']['value']/100,'consumption_stimulus_effect':pw(c['policy_effects_pct']['consumption_stimulus'],t)/100,'investment_promotion_effect':pw(c['policy_effects_pct']['investment_promotion'],t)/100,'education_effect':pw(c['policy_effects_pct']['education'],t)/100,'risk_shock':risk,'alpha':c['alpha']['value'],'base_inflation_rate':c['base_inflation_rate_pct']['value']/100,'risk_event_inflation_impact':c['inflation_extra_pp']['by_year'].get(str(t),0)/100,'consumption_tax_transitional_factor':0.0,'tax_elasticity':pw(c['tax_elasticity']['table'],t),'expenditure_growth':pw(c['expenditure_growth_pct']['table'],t)/100,'tax_event_factor':c['tax_factor_by_year'].get(str(t),1.0),'tax_cap_ratio':c['tax_cap_ratio_of_nominal_gdp']['value']}\n allparams={t:params(t) for t in range(2026,2056)};rows=[];tests=[]\n for case,first,initial_year in [('F_2026_INITIAL_29',2027,2026),('F_2026_TRANSITION_30',2026,2025)]:\n  s0=c['initial_state_2025_end'];st=SimulationState(year=initial_year,**{k:v for k,v in s0.items() if k!='tag'})\n  def row(kind,g=None):\n   return {'case':case,'row_kind':kind,**dataclasses.asdict(st),'funding_gap_proxy':max(st.expenditure-st.tax_revenue,0),'real_wage_anchor_man_yen':interpolate_wage(anchors,st.year),'tax_to_gdp_pct':st.tax_revenue/st.nominal_gdp*100,'real_growth_pct':'' if g is None else g*100}\n  if first==2027:rows.append(row('INITIAL_STATE'))\n  for t in range(first,2056):\n   p=allparams[t]; prev=st\n   d=transition_year_demographics(previous_state=prev,**{k:p[k] for k in ['death_rate_coefficient','birth_decline_coefficient','phi','real_wage_growth_rate','net_migration']})\n   args={k:v for k,v in p.items() if k not in ['expenditure_growth','tax_event_factor','tax_cap_ratio']}\n   args['total_population_growth_rate']=d.population/prev.population-1\n   r=transition_year(prev,**args)\n   assert r.demographic_state==d\n   nom=prev.nominal_gdp*(1+r.nominal_gdp_growth_rate)\n   tax=min(r.tax_revenue_before_cap*p['tax_event_factor'],nom*p['tax_cap_ratio'])\n   st=SimulationState(year=t,real_gdp=prev.real_gdp*(1+r.real_gdp_growth_rate),nominal_gdp=nom,tax_revenue=tax,expenditure=prev.expenditure*(1+p['expenditure_growth']),population=d.population,deaths=d.deaths,births=d.births)\n   assert all(math.isfinite(v) and v>=0 for v in dataclasses.asdict(st).values())\n   assert st.tax_revenue<=st.nominal_gdp*.30+1e-9\n   assert abs(st.population-(prev.population+st.births-st.deaths+p['net_migration']))<1e-6\n   rows.append(row('ENGINE_TRANSITION',r.real_gdp_growth_rate))\n  case_rows=[r for r in rows if r['case']==case]\n  assert [r['year'] for r in case_rows]==list(range(2026,2056))\n  tests.append({'case':case,'rows':len(case_rows),'transitions':2056-first,'real_gdp_2055':st.real_gdp,'population_2055':st.population,'tax_revenue_2055':st.tax_revenue,'expenditure_2055':st.expenditure,'funding_gap_2055':max(st.expenditure-st.tax_revenue,0),'max_tax_to_gdp_pct':max(r['tax_to_gdp_pct'] for r in case_rows),'cagr_pct':((st.real_gdp/s0['real_gdp'])**(1/(2056-first))-1)*100,'first_zero_gap_year':next((r['year'] for r in case_rows if r['funding_gap_proxy']==0),None)})\n def write(name,rs):\n  with (out/name).open('w',newline='',encoding='utf-8') as f:\n   w=csv.DictWriter(f,fieldnames=list(rs[0]));w.writeheader();w.writerows(rs)\n write('SPE_F_Annual_Results_DRAFT_20261110.csv',rows)\n write('SPE_F_Annual_Inputs_Expanded_DRAFT_20261110.csv',[{'year':y,**p} for y,p in allparams.items()])\n summary={'input_sha256':hashlib.sha256(inp.read_bytes()).hexdigest(),'engine_files':{n:hashlib.sha256((engine/n).read_bytes()).hexdigest() for n in ['prototype.py','m14_wage_anchor.py']},'cases':tests,'numerical_checks':'PASS: finite/nonnegative stocks, population conservation, tax cap, demographic consistency, complete years','python':sys.version}\n (out/'run_summary.json').write_text(json.dumps(summary,indent=2)+'\\n');print(json.dumps(summary,indent=2))\nif __name__=='__main__':main()\n"
+      },
+      "SPE_F_Provisional_Inputs_DRAFT_20261110.json": {
+        "commit": "30530ad2b012ce33715db662fa0c5ca06a2f10ed",
+        "bytes": 5102,
+        "sha256": "eac26d99bbfb71b41087021b2166d7bdac9879962decb258fbe43c4eaa1da810",
+        "utf8": "{\n  \"_meta\": {\n    \"status\": \"DRAFT / PROVISIONAL INPUT / NON-CANONICAL\",\n    \"case\": \"F施策\",\n    \"date\": \"2026-11-10\",\n    \"note\": \"各値のタグ: v5=シミュレーション条件仕様書v5記載, v6=v6仕様書記載, 推定=推定値, 近似=区切り年などの近似, 仮定=仕様に値がなく作成者が置いた値。Ownerが確定した値ではない。\",\n    \"engine_commit\": \"4389951293b5ff91bbfec58a613b30458e1fb544\",\n    \"source_input_sha256\": \"e07756d34b83bd24a18b56f931b641a6c86b381c45e5505bc56646cbdef56ac0\",\n    \"boundary_cases\": [\n      {\n        \"id\": \"F_2026_INITIAL_29\",\n        \"meaning\": \"2026 is initial state, 2027-2055 transitions, 29 periods\",\n        \"primary\": true\n      },\n      {\n        \"id\": \"F_2026_TRANSITION_30\",\n        \"meaning\": \"legacy comparison only: initial stocks relabelled 2025-end and 2026 shock applied; 30 periods\",\n        \"primary\": false\n      }\n    ],\n    \"legacy_include_2026\": true,\n    \"source_rules\": {\n      \"documented_fixed_v5\": \"F effects schedule, ageing drag, risks, expenditure, alpha/phi (the latter remain model assumptions, not empirical estimates)\",\n      \"provisional_reused\": \"2033/2041 elasticity boundaries; linear migration ramp 2030-34; wage geometric interpolation; zero VAT transitional inflation\",\n      \"unresolved_initial_wage\": \"v5 section 1 real median wage 380 vs section 4-2 anchor 400; use section 4-2 anchor 400 for legacy comparability, no adjudication\",\n      \"not_implemented\": \"tax rate to tax base, actual bond debt/interest/PB, household distribution, political sequencing additional issuance, automatic F 2035 triggers\",\n      \"legacy_initial_state_field\": \"initial_state_2025_end name retained for data compatibility only; primary case labels these stocks as 2026 initial state\"\n    }\n  },\n  \"end_year\": 2055,\n  \"initial_state_2025_end\": {\n    \"real_gdp\": 580.0,\n    \"nominal_gdp\": 600.0,\n    \"tax_revenue\": 80.0,\n    \"expenditure\": 108.0,\n    \"population\": 121500000,\n    \"deaths\": 1590000,\n    \"births\": 640000,\n    \"tag\": \"v5\"\n  },\n  \"alpha\": {\n    \"value\": 0.35,\n    \"tag\": \"推定\"\n  },\n  \"phi\": {\n    \"value\": 0.15,\n    \"tag\": \"推定\"\n  },\n  \"death_rate_coefficient\": {\n    \"value\": 1.015,\n    \"tag\": \"v5\"\n  },\n  \"birth_decline_coefficient\": {\n    \"value\": 0.975,\n    \"tag\": \"v5\"\n  },\n  \"base_growth_rate_pct\": {\n    \"value\": 1.0,\n    \"tag\": \"v5\"\n  },\n  \"base_inflation_rate_pct\": {\n    \"value\": 2.0,\n    \"tag\": \"v5\"\n  },\n  \"tax_cap_ratio_of_nominal_gdp\": {\n    \"value\": 0.3,\n    \"tag\": \"v5\"\n  },\n  \"tax_factor_by_year\": {\n    \"2031\": 0.9,\n    \"tag\": \"v5\"\n  },\n  \"policy_effects_pct\": {\n    \"tag\": \"v5 §4\",\n    \"consumption_stimulus\": [\n      {\n        \"from\": 2026,\n        \"value\": 0.3\n      },\n      {\n        \"from\": 2028,\n        \"value\": 0.5\n      },\n      {\n        \"from\": 2032,\n        \"value\": 0.7\n      }\n    ],\n    \"investment_promotion\": [\n      {\n        \"from\": 2026,\n        \"value\": 0.3\n      },\n      {\n        \"from\": 2030,\n        \"value\": 0.5\n      }\n    ],\n    \"education\": [\n      {\n        \"from\": 2026,\n        \"value\": 0.0\n      },\n      {\n        \"from\": 2028,\n        \"value\": 0.3\n      }\n    ]\n  },\n  \"aging_drag_pp\": {\n    \"tag\": \"v5 §7\",\n    \"table\": [\n      {\n        \"from\": 2026,\n        \"value\": -0.0525\n      },\n      {\n        \"from\": 2033,\n        \"value\": -0.8123\n      },\n      {\n        \"from\": 2044,\n        \"value\": -0.3737\n      },\n      {\n        \"from\": 2046,\n        \"value\": -0.1683\n      }\n    ]\n  },\n  \"risk_shock_pct\": {\n    \"tag\": \"v5 §3\",\n    \"rules\": [\n      {\n        \"type\": \"once\",\n        \"year\": 2026,\n        \"pct\": 3.0\n      },\n      {\n        \"type\": \"once\",\n        \"year\": 2027,\n        \"pct\": 5.0\n      },\n      {\n        \"type\": \"once\",\n        \"year\": 2031,\n        \"pct\": 3.0\n      },\n      {\n        \"type\": \"every\",\n        \"start\": 2029,\n        \"step\": 3,\n        \"pct\": 1.0\n      },\n      {\n        \"type\": \"every\",\n        \"start\": 2027,\n        \"step\": 2,\n        \"pct\": 0.5\n      }\n    ]\n  },\n  \"inflation_extra_pp\": {\n    \"tag\": \"v5 §3\",\n    \"by_year\": {\n      \"2026\": 2.0,\n      \"2027\": 5.0\n    }\n  },\n  \"tax_elasticity\": {\n    \"tag\": \"近似(区切り年)\",\n    \"table\": [\n      {\n        \"from\": 2026,\n        \"value\": 1.5\n      },\n      {\n        \"from\": 2033,\n        \"value\": 1.7\n      },\n      {\n        \"from\": 2041,\n        \"value\": 2.0\n      }\n    ]\n  },\n  \"expenditure_growth_pct\": {\n    \"tag\": \"v5\",\n    \"table\": [\n      {\n        \"from\": 2026,\n        \"value\": 2.5\n      },\n      {\n        \"from\": 2035,\n        \"value\": 1.5\n      },\n      {\n        \"from\": 2045,\n        \"value\": 1.0\n      }\n    ]\n  },\n  \"migration\": {\n    \"tag\": \"定常値=v6仕様書4.1.1。増加の刻みは仮定\",\n    \"steady_per_year\": 400000,\n    \"ramp_start\": 2030,\n    \"ramp_years\": 5\n  },\n  \"wage_anchor_man_yen\": {\n    \"tag\": \"2055年値=v5。途中年は2点の幾何補間(仮定)\",\n    \"anchors\": {\n      \"2026\": 400.0,\n      \"2055\": 860.0\n    }\n  },\n  \"reference_v5_section8\": {\n    \"real_gdp\": 661.9,\n    \"cagr_pct\": 0.44,\n    \"population_man\": 8458,\n    \"tax_to_gdp_max_pct\": 22.3,\n    \"bonds_2055\": 0\n  }\n}\n"
+      },
+      "SPE_F_Annual_Results_DRAFT_20261110.csv": {
+        "commit": "30530ad2b012ce33715db662fa0c5ca06a2f10ed",
+        "bytes": 14355,
+        "sha256": "199b18f662abb07aaa73097b0d0d923c0b84a9507b2e7a3165cbe413b350dd68",
+        "utf8": "case,row_kind,year,real_gdp,nominal_gdp,tax_revenue,expenditure,population,deaths,births,funding_gap_proxy,real_wage_anchor_man_yen,tax_to_gdp_pct,real_growth_pct\r\nF_2026_INITIAL_29,INITIAL_STATE,2026,580.0,600.0,80.0,108.0,121500000,1590000,640000,28.0,400.0,13.333333333333334,\r\nF_2026_INITIAL_29,ENGINE_TRANSITION,2027,554.1184566689942,615.2259896575803,83.04519793151606,110.69999999999999,120512653.5087077,1613849.9999999998,626503.5087076967,27.65480206848393,410.69875516109704,13.498324083762617,-4.462335057069951\r\nF_2026_INITIAL_29,ENGINE_TRANSITION,2028,562.5031257961069,636.83983004743,87.4214572656697,113.46749999999997,119487887.39374372,1638057.7499999995,613291.6350360233,26.04604273433027,421.68366872718684,13.727385308038725,1.5131546380021181\r\nF_2026_INITIAL_29,ENGINE_TRANSITION,2029,562.4356959114181,649.5002856747269,90.0283815542382,116.30418749999995,118425617.15438615,1662628.6162499993,600358.37689242,26.27580594576176,432.9623945450502,13.86117659066356,-0.011987468441785644\r\nF_2026_INITIAL_29,ENGINE_TRANSITION,2030,572.0314178593397,673.5714233144781,95.03319589767959,119.21179218749994,117405746.96765046,1687568.0454937492,587697.8587580608,24.178596289820348,444.5427911780496,14.108852099164892,1.706101162795513\r\nF_2026_INITIAL_29,ENGINE_TRANSITION,2031,561.8758778144127,675.0846247515824,85.81809503408836,122.19208699218743,116428169.73049293,1712881.5661761553,575304.3290186336,36.37399195809907,456.4329273816612,12.712198128592798,-1.77534655053234\r\nF_2026_INITIAL_29,ENGINE_TRANSITION,2032,567.1780451050416,694.956784029576,89.6073774238605,125.2468891669921,115492767.09817554,1738574.7896687975,563172.157351408,35.63951174313161,468.6410877254592,12.89394959270546,0.9436545507618747\r\nF_2026_INITIAL_29,ENGINE_TRANSITION,2033,572.6752377547922,715.5915671105427,94.13046292320122,128.37806139616688,114599409.51882912,1764653.4115138294,551295.8321674066,34.24759847296566,481.1757783654714,13.154216350436702,0.9692181665340037\r\nF_2026_INITIAL_29,ENGINE_TRANSITION,2034,581.2027531431565,740.559033091756,99.71372956026502,131.58751293107105,113747956.2642501,1791123.2126865366,539669.9581075151,31.873783370806024,494.04573297092753,13.464656442575645,1.4890665470008735\r\nF_2026_INITIAL_29,ENGINE_TRANSITION,2035,580.991168629781,755.1006162305318,103.0422857188761,133.56132562503709,112858255.45696466,1817990.0608768344,528289.2535913968,30.519039906160984,507.25991880952927,13.646166286191633,-0.03640459585424315\r\nF_2026_INITIAL_29,ENGINE_TRANSITION,2036,589.3427140141752,781.0569365149453,109.06375818611491,135.56474550941263,111930144.09359276,1845259.9117899868,517148.54841809423,26.50098732329772,520.8275429954821,13.96361175316545,1.4374651174286552\r\nF_2026_INITIAL_29,ENGINE_TRANSITION,2037,594.7094214954657,803.790582119144,114.46030280228342,137.5982166920538,110963448.06454316,1872938.8104668364,506242.7814172316,23.137913889770374,534.7580589046431,14.240065179728273,0.9106259148834561\r\nF_2026_INITIAL_29,ENGINE_TRANSITION,2038,596.9873055689166,822.9451103569272,119.09725222236408,139.6621899424346,109957982.17006907,1901032.8926238387,495566.99814974866,20.564937720070517,549.0611727612537,14.472077265360905,0.38302471612488564\r\nF_2026_INITIAL_29,ENGINE_TRANSITION,2039,602.0891876158266,846.4369408105404,124.87683717466469,141.7571227915711,108913550.13271299,1929548.386013196,485116.3486571222,16.88028561690642,563.7468504008474,14.753235728946773,0.8546047795854\r\nF_2026_INITIAL_29,ENGINE_TRANSITION,2040,610.0687075837217,874.583553339958,131.9361485381677,143.88347963344467,107829944.60616764,1958491.6118033938,474886.0852580521,11.947331095276951,578.8253242140431,15.08559680025026,1.3253053089182016\r\nF_2026_INITIAL_29,ENGINE_TRANSITION,2041,608.8184389519296,890.2828617285385,136.67281726602596,146.0417318279463,106706947.18057881,1987868.9859804446,464871.5603916126,9.368914561920349,594.3071002760647,15.351617237769505,-0.20493898740421082\r\nF_2026_INITIAL_29,ENGINE_TRANSITION,2042,616.5126961838209,919.3399281009075,145.59427648604742,148.2323578053655,105544328.38431455,2017687.0207701512,455068.22450588626,2.6380813193180757,610.2029656669527,15.836827275282541,1.26380160974378\r\nF_2026_INITIAL_29,ENGINE_TRANSITION,2043,621.0221861548547,944.451250280045,153.54794992614686,150.45584317244595,104341847.68222398,2047952.3260817032,445471.6239911244,0,626.5239959875677,16.257901070131194,0.7314512740690181\r\nF_2026_INITIAL_29,ENGINE_TRANSITION,2044,624.0218351372727,967.9021448854857,161.17319641617343,152.71268082003263,103099253.47040755,2078671.6109729286,436077.3991564925,0,643.2815630766256,16.651806927780093,0.48301800632771263\r\nF_2026_INITIAL_29,ENGINE_TRANSITION,2045,629.9390156315018,996.4381545938904,170.6767188992457,154.23980762823297,101816283.0675195,2109851.6851375224,426881.28224948334,0,660.4873429341371,17.128681605814958,0.9482329240814871\r\nF_2026_INITIAL_29,ENGINE_TRANSITION,2046,639.6753496267191,1031.7678603769882,182.7797445309617,155.7822057045153,100492662.70262201,2141499.460414585,417879.09551709675,0,678.1533238567768,17.715200438999666,1.5455994554420398\r\nF_2026_INITIAL_29,ENGINE_TRANSITION,2047,639.7264751738664,1052.4856808159493,190.12015136566967,157.34002776156044,99128107.49960911,2173621.952320804,409066.749307906,0,696.2918147908463,18.06391809704026,0.007992421026868646\r\nF_2026_INITIAL_29,ENGINE_TRANSITION,2048,649.1228223282701,1088.994377631764,203.30995354788072,158.91342803917604,97722321.45821765,2206226.2816056157,400440.24021414825,0,714.9154539086543,18.66951361034745,1.46880698533695\r\nF_2026_INITIAL_29,ENGINE_TRANSITION,2049,655.1461463016291,1120.8792340993969,215.2154487836096,160.5025623195678,96274997.43164095,2239319.6758296997,391995.649252995,0,734.0372174142874,19.200592020649818,0.9279174550903277\r\nF_2026_INITIAL_29,ENGINE_TRANSITION,2050,657.6696768654459,1147.6142875195665,225.48202585102865,162.10758794276347,94785817.10075998,2272909.470967145,383729.1400861765,0,753.6704285849084,19.64789287682899,0.385185897537885\r\nF_2026_INITIAL_29,ENGINE_TRANSITION,2051,663.1971310240446,1180.211818579504,238.2914818173238,163.72866382219112,93254450.94500548,2307003.1130316523,375636.95727715135,0,773.8287670538809,20.190569020409406,0.8404605462339851\r\nF_2026_INITIAL_29,ENGINE_TRANSITION,2052,671.7760763803446,1219.0829676484082,253.98809418089039,165.36595046041305,91680558.20986338,2341608.159727127,367715.42458502884,0,794.5262783421886,20.834356719036887,1.2935739548591418\r\nF_2026_INITIAL_29,ENGINE_TRANSITION,2053,670.058619381195,1240.3479298623336,262.84893034852564,167.01960996501717,90063786.87103482,2376732.2821230334,359960.9432944704,0,815.7773836447903,21.19154827611147,-0.2556591488645612\r\nF_2026_INITIAL_29,ENGINE_TRANSITION,2054,678.0494411854588,1279.9467275556442,279.63212700840097,168.68980606466735,88403773.59526074,2412383.266354879,352369.9905808093,0,837.5968898787303,21.847169181988026,1.1925556321689368\r\nF_2026_INITIAL_29,ENGINE_TRANSITION,2055,682.3753249441484,1313.7115869263994,294.3854589099794,170.37670412531403,86700143.69782019,2448569.0153502016,344939.1179096485,0,860.0,22.40868253272644,0.6379894290785785\r\nF_2026_TRANSITION_30,ENGINE_TRANSITION,2026,568.6106885802469,612.2179537037038,82.44359074074075,110.69999999999999,120510150.0,1613849.9999999998,624000.0,28.256409259259243,400.0,13.466379128868397,-1.9636743827160474\r\nF_2026_TRANSITION_30,ENGINE_TRANSITION,2027,543.0904247982189,627.5957746982166,85.54984425606048,113.46749999999997,119482933.17099,1638057.7499999995,610840.9209900043,27.91765574393949,410.69875516109704,13.631360774727597,-4.488178694943123\r\nF_2026_TRANSITION_30,ENGINE_TRANSITION,2028,551.1644603793171,649.4780528428261,90.0241226754921,116.30418749999995,118418263.89890012,1662628.6162499993,597959.3441601228,26.28006482450786,421.68366872718684,13.860995345639179,1.4866834715596444\r\nF_2026_TRANSITION_30,ENGINE_TRANSITION,2029,550.9487632391847,662.2134419262565,92.67200020764707,119.21179218749994,117316045.27087648,1687568.0454937492,585349.4174701095,26.539791979852865,432.9623945450502,13.994279538947648,-0.03913480560484599\r\nF_2026_TRANSITION_30,ENGINE_TRANSITION,2030,560.1972160318658,686.5738982670939,97.7856057435972,122.19208699218743,116256169.11698943,1712881.5661761553,573005.4122891093,24.406481248590225,444.5427911780496,14.242546358142533,1.6786411749627683\r\nF_2026_TRANSITION_30,ENGINE_TRANSITION,2031,550.0962713271635,687.9257270952767,88.26696721341199,125.2468891669921,115238516.04811381,1738574.7896687975,560921.7207931677,36.97992195358012,456.4329273816612,12.830886204258377,-1.8031051236298354\r\nF_2026_TRANSITION_30,ENGINE_TRANSITION,2032,555.1330214378,707.9829754455343,92.12725128070257,128.37806139616688,114262955.49001761,1764653.4115138294,549092.8534176227,36.25081011546432,468.6410877254592,13.012636528827096,0.9156124797001199\r\nF_2026_TRANSITION_30,ENGINE_TRANSITION,2033,560.3563162080652,728.8041082054931,96.73319443700714,131.58751293107105,113329345.71369429,1791123.2126865366,537513.4363632213,34.854318494063904,481.1757783654714,13.272866240448295,0.9409086774799952\r\nF_2026_TRANSITION_30,ENGINE_TRANSITION,2034,568.5403576171867,754.024423026877,102.42387414483294,134.8772007543478,112437533.86197229,1817990.0608768344,526178.2091548272,32.45332660951486,494.04573297092753,13.58362819783386,1.4605066762703702\r\nF_2026_TRANSITION_30,ENGINE_TRANSITION,2035,568.1666577821535,768.6092935445175,105.79183693806094,136.90035876566301,111507355.97243391,1845259.9117899868,515082.0222516118,31.108521827602075,507.25991880952927,13.764059038395365,-0.06572969359633085\r\nF_2026_TRANSITION_30,ENGINE_TRANSITION,2036,576.1625704919246,794.7982577935878,111.91976658939764,138.95386414714795,110538636.99667472,1872938.8104668364,504219.83470764174,27.034097557750314,520.8275429954821,14.08153144423017,1.4073181874105791\r\nF_2026_TRANSITION_30,ENGINE_TRANSITION,2037,581.2304776716568,817.6852425043597,117.39859110215961,141.03817210935517,109531190.81593268,1901032.8926238387,493586.7118818007,23.63958100719556,534.7580589046431,14.357430585710206,0.8795967387130182\r\nF_2026_TRANSITION_30,ENGINE_TRANSITION,2038,583.2708795165205,836.9094204996389,122.09075772144715,143.1537446909955,108484820.25311549,1929548.386013196,483177.82319600484,21.062986969548348,549.0611727612537,14.588288138584742,0.35104866713756616\r\nF_2026_TRANSITION_30,ENGINE_TRANSITION,2039,588.063106363189,860.5237618841685,127.94713559889438,145.3010508613604,107399317.08125278,1958491.6118033938,472988.439940694,17.353915262466032,563.7468504008474,14.868518600665533,0.8216125671559266\r\nF_2026_TRANSITION_30,ENGINE_TRANSITION,2040,595.6563093504446,888.8455133244229,135.10587789647278,147.4805666242808,106274462.02839895,1987868.9859804446,463013.93312660075,12.374688727808035,578.8253242140431,15.200152992971233,1.2912224734203939\r\nF_2026_TRANSITION_30,ENGINE_TRANSITION,2041,594.225586726646,904.4874820734415,139.8610842583999,149.69277512364502,105110024.77901062,2017687.0207701512,453249.77138182224,9.831690865245122,594.3071002760647,15.463020443111407,-0.24019264151819777\r\nF_2026_TRANSITION_30,ENGINE_TRANSITION,2042,601.5184613014285,933.6779212654207,148.88853141777943,151.93816675049968,103905763.97182216,2047952.3260817032,443691.51889323915,3.049635332720243,610.2029656669527,15.94645519902513,1.227290567367865\r\nF_2026_TRANSITION_30,ENGINE_TRANSITION,2043,605.690528260205,958.8273687216705,156.9094221606059,154.21723925175715,102661427.19424057,2078671.6109729286,434334.8333913463,0,626.5239959875677,16.364720832885794,0.693589179249795\r\nF_2026_TRANSITION_30,ENGINE_TRANSITION,2044,608.3779970291105,982.2582646255632,164.57822356723815,156.53049784053349,101376750.97328062,2109851.6851375224,425175.46417758026,0,643.2815630766256,16.755086670609522,0.4437032846831782\r\nF_2026_TRANSITION_30,ENGINE_TRANSITION,2045,613.8981462067065,1010.816001013903,174.14797053329923,158.0958028189388,100051460.76305929,2141499.460414585,416209.2501932463,0,660.4873429341371,17.22845407656976,0.9073551648075009\r\nF_2026_TRANSITION_30,ENGINE_TRANSITION,2046,623.1252708130716,1046.2252732414718,186.34891094244773,159.6767608471282,98685270.92886765,2173621.952320804,407432.11812916934,0,678.1533238567768,17.811547446669056,1.5030383563429255\r\nF_2026_TRANSITION_30,ENGINE_TRANSITION,2047,622.8985565481543,1066.769126203713,193.66726717793486,161.2735284555995,97277884.72783725,2206226.2816056157,398840.0805752084,0,696.2918147908463,18.154562446621807,-0.03638341687241288\r\nF_2026_TRANSITION_30,ENGINE_TRANSITION,2048,631.759117412027,1103.2790065189017,206.92368521995044,162.8862637401555,95828994.28621635,2239319.6758296997,390429.2342087946,0,714.9154539086543,18.755336048026702,1.4224725311572772\r\nF_2026_TRANSITION_30,ENGINE_TRANSITION,2049,637.3152268278353,1135.047555245118,218.84028136231646,164.51512637755707,94338280.57327087,2272909.470967145,382195.75802167016,0,734.0372174142874,19.28027423618009,0.8794664394506572\r\nF_2026_TRANSITION_30,ENGINE_TRANSITION,2050,639.4466923817401,1161.5446101683626,229.0576910697422,166.16027764133264,92805413.37182324,2307003.1130316523,374135.91158402216,0,753.6704285849084,19.72009418015731,0.3344444733439058\r\nF_2026_TRANSITION_30,ENGINE_TRANSITION,2051,644.4806523146278,1193.9196094529161,241.82645176922065,167.82188041774597,91230051.24544133,2341608.159727127,366246.03334522265,0,773.8287670538809,20.25483540554557,0.7872368397336852\r\nF_2026_TRANSITION_30,ENGINE_TRANSITION,2052,652.4571031664542,1232.5746144877294,257.4854670608343,169.50009922192342,89611841.5022887,2376732.2821230334,358522.53897040326,0,794.5262783421886,20.89005112017887,1.2376555949630585\r\nF_2026_TRANSITION_30,ENGINE_TRANSITION,2053,650.405073934984,1253.3495620565789,266.16526139548034,171.19510021414266,87950420.15564592,2412383.266354879,350961.9197121087,0,815.7773836447903,21.236315027608,-0.3145079150049015\r\nF_2026_TRANSITION_30,ENGINE_TRANSITION,2054,657.7579939857043,1292.5858448588162,282.82994263749305,172.9070512162841,86245411.88111201,2448569.0153502016,343560.7408162891,0,837.5968898787303,21.880940733060974,1.1305139436005385\r\nF_2026_TRANSITION_30,ENGINE_TRANSITION,2055,661.5234056370573,1325.8371188044944,297.3813257275762,174.63612172844694,84496429.97049347,2485297.5505804545,336315.63996190735,0,860.0,22.42970282772929,0.5724615566488737\r\n"
+      },
+      "prototype.py": {
+        "commit": "4389951293b5ff91bbfec58a613b30458e1fb544",
+        "bytes": 7826,
+        "sha256": "3c1f7485fa96e649f06a96f0f844a9b270ffe43b5e0b6f696b75bb904612cff6",
+        "utf8": "from dataclasses import dataclass\n\n\n@dataclass\nclass SimulationState:\n    \"\"\"Carried-forward simulation state defined by SPE v6.\"\"\"\n\n    year: int\n    real_gdp: float\n    nominal_gdp: float\n    tax_revenue: float\n    expenditure: float\n    population: float\n    deaths: float\n    births: float\n\n@dataclass\nclass TransitionResult:\n    \"\"\"Annual results computable from the current SPE v6 baseline.\"\"\"\n\n    demographic_state: SimulationState\n    labor_force_growth_rate: float\n    real_gdp_growth_rate: float\n    inflation_rate: float\n    nominal_gdp_growth_rate: float\n    tax_revenue_before_cap: float\n\ndef transition_deaths(\n    previous_deaths: float,\n    death_rate_coefficient: float,\n) -> float:\n    \"\"\"Apply the SPE v6 Death Count Transition.\"\"\"\n    return previous_deaths * death_rate_coefficient\n\ndef transition_births(\n    previous_births: float,\n    birth_decline_coefficient: float,\n    phi: float,\n    real_wage_growth_rate: float,\n) -> float:\n    \"\"\"Apply the SPE v6 Birth Count Transition.\"\"\"\n    return (\n        previous_births\n        * birth_decline_coefficient\n        * (1 + phi * real_wage_growth_rate)\n    )\n\ndef transition_population(\n    previous_population: float,\n    births: float,\n    deaths: float,\n    net_migration: float,\n) -> float:\n    \"\"\"Apply the SPE v6 Population Transition.\"\"\"\n    return previous_population + (births - deaths) + net_migration\n\ndef calculate_labor_force_growth_rate(\n    total_population_growth_rate: float,\n    aging_drag: float,\n) -> float:\n    \"\"\"Apply the SPE v6 Labor Force Growth Rate composition rule.\"\"\"\n    return total_population_growth_rate + aging_drag\n\ndef calculate_real_gdp_growth_rate(\n    base_growth_rate: float,\n    consumption_stimulus_effect: float,\n    investment_promotion_effect: float,\n    education_effect: float,\n    risk_shock: float,\n    alpha: float,\n    labor_force_growth_rate: float,\n) -> float:\n    \"\"\"Apply the SPE v6 F-Scenario Real GDP Growth Rate composition rule.\"\"\"\n    return (\n        base_growth_rate\n        + consumption_stimulus_effect\n        + investment_promotion_effect\n        + education_effect\n        - risk_shock\n        + (1 - alpha) * labor_force_growth_rate\n    )\n\ndef calculate_inflation_rate(\n    base_inflation_rate: float,\n    risk_event_inflation_impact: float,\n    consumption_tax_transitional_factor: float,\n) -> float:\n    \"\"\"Apply the SPE v6 Inflation Rate composition rule.\"\"\"\n    return (\n        base_inflation_rate\n        + risk_event_inflation_impact\n        + consumption_tax_transitional_factor\n    )\n\ndef calculate_nominal_gdp_growth_rate(\n    real_gdp_growth_rate: float,\n    inflation_rate: float,\n) -> float:\n    \"\"\"Apply the SPE v6 Nominal GDP Growth Rate composition rule.\"\"\"\n    return real_gdp_growth_rate + inflation_rate\n\ndef calculate_tax_revenue_before_cap(\n    previous_tax_revenue: float,\n    nominal_gdp_growth_rate: float,\n    tax_elasticity: float,\n) -> float:\n    \"\"\"Apply the SPE v6 Tax Revenue Transition before the unresolved cap.\"\"\"\n    return previous_tax_revenue * (\n        1 + nominal_gdp_growth_rate * tax_elasticity\n    )\n\ndef transition_year_demographics(\n    previous_state: SimulationState,\n    death_rate_coefficient: float,\n    birth_decline_coefficient: float,\n    phi: float,\n    real_wage_growth_rate: float,\n    net_migration: float,\n) -> SimulationState:\n    \"\"\"Advance one year using the implemented demographic transitions only.\"\"\"\n\n    deaths = transition_deaths(\n        previous_deaths=previous_state.deaths,\n        death_rate_coefficient=death_rate_coefficient,\n    )\n\n    births = transition_births(\n        previous_births=previous_state.births,\n        birth_decline_coefficient=birth_decline_coefficient,\n        phi=phi,\n        real_wage_growth_rate=real_wage_growth_rate,\n    )\n\n    population = transition_population(\n        previous_population=previous_state.population,\n        births=births,\n        deaths=deaths,\n        net_migration=net_migration,\n    )\n\n    return SimulationState(\n        year=previous_state.year + 1,\n        real_gdp=previous_state.real_gdp,\n        nominal_gdp=previous_state.nominal_gdp,\n        tax_revenue=previous_state.tax_revenue,\n        expenditure=previous_state.expenditure,\n        population=population,\n        deaths=deaths,\n        births=births,\n    )\n\ndef transition_year(\n    previous_state: SimulationState,\n    *,\n    death_rate_coefficient: float,\n    birth_decline_coefficient: float,\n    phi: float,\n    real_wage_growth_rate: float,\n    net_migration: float,\n    total_population_growth_rate: float,\n    aging_drag: float,\n    base_growth_rate: float,\n    consumption_stimulus_effect: float,\n    investment_promotion_effect: float,\n    education_effect: float,\n    risk_shock: float,\n    alpha: float,\n    base_inflation_rate: float,\n    risk_event_inflation_impact: float,\n    consumption_tax_transitional_factor: float,\n    tax_elasticity: float,\n) -> TransitionResult:\n    \"\"\"Advance one year through all currently implementable SPE v6 transitions.\"\"\"\n\n    demographic_state = transition_year_demographics(\n        previous_state=previous_state,\n        death_rate_coefficient=death_rate_coefficient,\n        birth_decline_coefficient=birth_decline_coefficient,\n        phi=phi,\n        real_wage_growth_rate=real_wage_growth_rate,\n        net_migration=net_migration,\n    )\n\n    labor_force_growth_rate = calculate_labor_force_growth_rate(\n        total_population_growth_rate=total_population_growth_rate,\n        aging_drag=aging_drag,\n    )\n\n    real_gdp_growth_rate = calculate_real_gdp_growth_rate(\n        base_growth_rate=base_growth_rate,\n        consumption_stimulus_effect=consumption_stimulus_effect,\n        investment_promotion_effect=investment_promotion_effect,\n        education_effect=education_effect,\n        risk_shock=risk_shock,\n        alpha=alpha,\n        labor_force_growth_rate=labor_force_growth_rate,\n    )\n\n    inflation_rate = calculate_inflation_rate(\n        base_inflation_rate=base_inflation_rate,\n        risk_event_inflation_impact=risk_event_inflation_impact,\n        consumption_tax_transitional_factor=consumption_tax_transitional_factor,\n    )\n\n    nominal_gdp_growth_rate = calculate_nominal_gdp_growth_rate(\n        real_gdp_growth_rate=real_gdp_growth_rate,\n        inflation_rate=inflation_rate,\n    )\n\n    tax_revenue_before_cap = calculate_tax_revenue_before_cap(\n        previous_tax_revenue=previous_state.tax_revenue,\n        nominal_gdp_growth_rate=nominal_gdp_growth_rate,\n        tax_elasticity=tax_elasticity,\n    )\n\n    return TransitionResult(\n        demographic_state=demographic_state,\n        labor_force_growth_rate=labor_force_growth_rate,\n        real_gdp_growth_rate=real_gdp_growth_rate,\n        inflation_rate=inflation_rate,\n        nominal_gdp_growth_rate=nominal_gdp_growth_rate,\n        tax_revenue_before_cap=tax_revenue_before_cap,\n    )\n\nif __name__ == \"__main__\":\n    state_2026 = SimulationState(\n        year=2026,\n        real_gdp=0.0,\n        nominal_gdp=0.0,\n        tax_revenue=0.0,\n        expenditure=0.0,\n        population=0.0,\n        deaths=0.0,\n        births=0.0,\n    )\n\n    result_2027 = transition_year(\n        previous_state=state_2026,\n        death_rate_coefficient=1.0,\n        birth_decline_coefficient=1.0,\n        phi=0.15,\n        real_wage_growth_rate=0.0,\n        net_migration=0.0,\n        total_population_growth_rate=0.0,\n        aging_drag=0.0,\n        base_growth_rate=0.0,\n        consumption_stimulus_effect=0.0,\n        investment_promotion_effect=0.0,\n        education_effect=0.0,\n        risk_shock=0.0,\n        alpha=0.35,\n        base_inflation_rate=0.0,\n        risk_event_inflation_impact=0.0,\n        consumption_tax_transitional_factor=0.0,\n        tax_elasticity=1.5,\n    )\n\n    print(f\"State 2026: {state_2026}\")\n    print(f\"Transition Result 2027: {result_2027}\")\n"
+      },
+      "m14_wage_anchor.py": {
+        "commit": "4389951293b5ff91bbfec58a613b30458e1fb544",
+        "bytes": 1650,
+        "sha256": "363c330a74a9834e68c18c225da37209def3724d8834745179e1f129b2317c26",
+        "utf8": "from math import isfinite\n\n\ndef validate_anchors(anchors):\n    if not isinstance(anchors, dict) or len(anchors) < 2:\n        raise ValueError(\"At least two anchors required\")\n\n    for year, wage in anchors.items():\n        if type(year) is not int:\n            raise ValueError(\"Anchor year must be integer\")\n        if type(wage) not in (int, float):\n            raise ValueError(\"Anchor wage must be numeric\")\n        if not isfinite(wage) or wage <= 0:\n            raise ValueError(\"Anchor wage must be positive and finite\")\n\n    return sorted(anchors)\n\n\ndef wage_growth_rate(anchors, year):\n    years = validate_anchors(anchors)\n\n    if type(year) is not int:\n        raise ValueError(\"Year must be integer\")\n\n    if not years[0] < year <= years[-1]:\n        raise ValueError(\"Year outside growth interval\")\n\n    for start, end in zip(years, years[1:]):\n        if start < year <= end:\n            return (\n                (anchors[end] / anchors[start])\n                ** (1 / (end - start))\n                - 1\n            )\n\n    raise ValueError(\"No matching anchor interval\")\n\n\ndef interpolate_wage(anchors, year):\n    years = validate_anchors(anchors)\n\n    if type(year) is not int:\n        raise ValueError(\"Year must be integer\")\n\n    if not years[0] <= year <= years[-1]:\n        raise ValueError(\"Year outside anchor range\")\n\n    if year in anchors:\n        return float(anchors[year])\n\n    for start, end in zip(years, years[1:]):\n        if start < year < end:\n            growth = wage_growth_rate(anchors, year)\n            return anchors[start] * (1 + growth) ** (year - start)\n\n    raise ValueError(\"No matching anchor interval\")\n"
+      },
+      "sonzei_original.py": {
+        "commit": "5f7899dd4d3e1fdd5f7e8c8202d23795bbc8e914",
+        "bytes": 31746,
+        "sha256": "95ea3c5ca87dfebd42eb4551ddf97a2396734b89d47926d4b8c0e21ada5538a4",
+        "utf8": "#!/usr/bin/env python3\n\"\"\"SPE three-sector sonzei diagnostic, isolated from the formal engine.\n\nUsage: python3 THIS.py INPUTS.json --outdir DIRECTORY\nStandard library only. The input bundles pinned original sources for offline replay.\nAll monetary output columns are JPY, except columns explicitly ending _trn.\nBlank CSV fields mean unknown, not zero. Distinct case_id values are alternatives.\n\"\"\"\nimport argparse\nimport contextlib\nimport copy\nimport csv\nimport hashlib\nimport io\nimport json\nimport math\nimport platform\nimport sys\nimport types\nfrom pathlib import Path\n\n\ndef digest(b):\n    return hashlib.sha256(b).hexdigest()\n\n\ndef number(x):\n    return None if x is None or x == '' else float(x)\n\n\ndef difference(a, b):\n    return None if a is None or b is None else a - b\n\n\ndef total_known(xs):\n    xs = list(xs)\n    return None if any(x is None for x in xs) else sum(xs)\n\n\ndef close(a, b, atol=1e-8, rtol=1e-12):\n    return a is not None and b is not None and math.isclose(a, b, abs_tol=atol, rel_tol=rtol)\n\n\ndef interpolate(points, year):\n    ks = sorted(int(k) for k in points)\n    if year <= ks[0]:\n        return points[str(ks[0])]\n    for a, b in zip(ks, ks[1:]):\n        if year <= b:\n            return points[str(a)] + (points[str(b)] - points[str(a)]) * (year - a) / (b - a)\n    return points[str(ks[-1])]\n\n\ndef originals(cfg):\n    for role, source in cfg['sources'].items():\n        b = source['utf8'].encode('utf-8')\n        if len(b) != source['bytes'] or digest(b) != source['sha256']:\n            raise ValueError('Embedded pinned source mismatch: ' + role)\n    mod = types.ModuleType('pinned_claude_sonzei')\n    # This is the exact user-authorized pinned prototype, verified above, not web instructions.\n    exec(compile(cfg['sources']['prototype_code']['utf8'], '<pinned Claude prototype>', 'exec'), mod.__dict__)\n    if cfg['prototype_config'] != json.loads(cfg['sources']['prototype_inputs']['utf8']):\n        raise ValueError('Baseline config must remain identical to pinned prototype')\n    source_rows = list(csv.DictReader(io.StringIO(cfg['sources']['candidate_csv']['utf8'])))\n    if len(source_rows) != 91 or len({r['candidate_id'] for r in source_rows}) != 91:\n        raise ValueError('Expected 91 uniquely identified source rows')\n    return mod, {r['candidate_id']: r for r in source_rows}\n\n\ndef validate_selection(profile, candidates):\n    ids = profile['selected']\n    if len(ids) != len(set(ids)):\n        raise ValueError('Duplicate candidate ID')\n    selected = [candidates[x] for x in ids]\n    groups = [r['exclusive_group'] for r in selected if r['exclusive_group']]\n    if len(groups) != len(set(groups)):\n        raise ValueError('Mutually exclusive accounting or scope alternatives')\n    bad = {'NO_DIRECT_REPLACEMENT', 'NOT_P_OR_CREDIT_INPUT', 'NOT_ACTUAL_REPAIR_P', 'MISSING_NOT_ZERO'}\n    if any(r['module_use'] in bad or r['value'] == '' for r in selected):\n        raise ValueError('Missing value or non-input reference cannot become P/R')\n    p = [r for r in selected if r['module_use'] in {'PARTIAL_COMPONENT', 'CONDITIONAL_PARTIAL_P'}]\n    revenue = [r for r in selected if r['module_use'] == 'SUBSET_R_ONLY']\n    if len(p) > 1:\n        raise ValueError('No summation of cross-sample components or parent/detail bundles')\n    if len(revenue) > 1:\n        raise ValueError('Use one pre-defined non-overlapping R subset, not combined totals and components')\n    if any(r['module_use'] == 'COST_ENVELOPE_ONLY' for r in selected):\n        if profile['kind'] != 'education_cost_sensitivity' or len(selected) != 1:\n            raise ValueError('Cost envelope requires an explicit taxable-education share assumption')\n    if any('NO_CROSS_SAMPLE_SUM' in r['aggregation_rule'] for r in selected) and len(selected) > 1:\n        raise ValueError('Cross-sample combination rejected')\n    return selected\n\n\ndef anchor(profile, candidates):\n    selected = validate_selection(profile, candidates)\n    out = dict(R=None, P=None, VAT=None, A=None, B=None)\n    kind = profile['kind']\n    if kind in {'purchase_partial', 'rental_management_partial'}:\n        p = next(r for r in selected if r['module_use'] in {'PARTIAL_COMPONENT', 'CONDITIONAL_PARTIAL_P'})\n        out['P'], out['VAT'] = number(p['net_taxable_base_yen']), number(p['input_vat_yen'])\n        if kind == 'rental_management_partial':\n            out['R'] = number(next(r['value'] for r in selected if r['module_use'] == 'SUBSET_R_ONLY'))\n    elif kind == 'sales_partial':\n        out['R'] = number(selected[0]['value'])\n    elif kind == 'education_cost_sensitivity':\n        share = profile['taxable_education_composite_share']\n        if not 0 <= share <= 1:\n            raise ValueError('Composite share outside [0,1]')\n        out['P'] = number(selected[0]['value']) * share / 1.1\n        out['VAT'] = out['P'] * .1\n    elif kind == 'compensation_only':\n        out['A'] = number(next(r['value'] for r in selected if r['parameter'] == 'compensation_A'))\n        out['B'] = number(next(r['value'] for r in selected if r['parameter'] == 'tax_increase_B'))\n    else:\n        raise ValueError('Unknown profile kind: ' + kind)\n    return out\n\n\ndef diagnose(policy, profile, base, year):\n    scale = (1 + profile['growth_pct'] / 100) ** (year - profile['base_year'])\n    scaled = {k: None if v is None else v * scale for k, v in base.items()}\n    R, P, vat_sq = scaled['R'], scaled['P'], scaled['VAT']\n    tau = interpolate(policy['tax_F_points'], year)\n    tau0 = policy['tax_standard_statusquo']\n    start = policy['start_years'][profile['sector']]\n    started = year >= start\n    # Preserve the 8/10 component mix in SQ; F converges to flat 5%, not 4%.\n    # The interim min(current component rate, standard F rate) is provisional.\n    if P is None:\n        vat_f = None\n    else:\n        reduced_base = max(0.0, min(P, (.1 * P - vat_sq) / .02))\n        standard_base = P - reduced_base\n        vat_f = reduced_base * min(.08, tau) + standard_base * min(.1, tau)\n    credit_sq = None if P is None else policy['current_exempt_activity_input_credit'] * vat_sq\n    if not started:\n        credit_f, eligible = (0.0 if P is not None else None), 'NOT_STARTED'\n    elif P is None:\n        credit_f, eligible = None, 'NO_INPUT_BASE'\n    elif profile['credit_category'] == 'mixed_unknown':\n        credit_f, eligible = None, 'BUILDING_SHARE_AND_F_RULE_UNRESOLVED'\n    elif profile['credit_category'] == 'restricted_building':\n        rule = policy['residential_building_credit_F']\n        credit_f = 0.0 if rule == 'KEEP_RESTRICTION' else None\n        eligible = 'RESTRICTION_RETAINED' if rule == 'KEEP_RESTRICTION' else 'F_BUILDING_RULE_UNRESOLVED'\n    else:\n        credit_f, eligible = policy['kappa'] * vat_f, 'ORDINARY_ELIGIBILITY_ASSUMED'\n    L_sq, L_f = difference(vat_sq, credit_sq), difference(vat_f, credit_f)\n    red = difference(L_sq, L_f)\n    rate_red = difference(vat_sq, vat_f)\n    base_red = difference(credit_f, credit_sq)\n    output = 0.0 if not started else (None if R is None else tau * R)\n    public = None if output is None else policy['phi'][profile['sector']] * output\n    consumer = None if output is None else output - public\n    dT_base = difference(output, base_red) if started else 0.0\n    dT_rate = difference(vat_f, vat_sq)\n    dT_total = total_known([dT_base, dT_rate])\n    A_sq, B = scaled['A'], scaled['B']\n    if A_sq is None:\n        A_f, delta_A = None, (0.0 if not started else None)\n    else:\n        retention = profile.get('compensation_retention_after_start', 1)\n        A_f = A_sq * (retention if started else 1)\n        delta_A = A_f - A_sq\n    # A is gross remuneration compensation, not a measured central-government cost.\n    # Do not subtract delta_A from government balance without a public-financing share.\n    delta_public_A = 0.0 if delta_A == 0 else None\n    dT_after_future_public = difference(dT_total, public)\n    net_public = difference(dT_after_future_public, delta_public_A)\n    return {\n        'case_id': profile['id'], 'sector': profile['sector'], 'year': year,\n        'scope': profile['scope'], 'calculation_kind': profile['kind'],\n        'source_candidate_ids': ';'.join(profile.get('selected', [])),\n        'source_reference_year': profile['base_year'], 'year_value_class':'PROJECTED_ASSUMPTION_NOT_OBSERVED',\n        'unit':'JPY', 'started_F':int(started), 'start_year_assumption':start,\n        'tax_standard_SQ':tau0, 'tax_standard_F':tau,\n        'R':R, 'P_net':P, 'input_VAT_SQ':vat_sq, 'input_VAT_F':vat_f,\n        'input_credit_SQ':credit_sq, 'input_credit_F':credit_f,\n        'credit_eligibility_F':eligible, 'L_SQ':L_sq, 'L_F':L_f,\n        'L_reduction':red, 'L_reduction_rate_part':rate_red, 'L_reduction_credit_part':base_red,\n        'output_VAT_SQ':0.0, 'output_VAT_F':output,\n        'delta_tax_base':dT_base, 'delta_tax_rate_all_years':dT_rate,\n        'delta_tax_attribution_total':dT_total,\n        'legacy_delta_tax_rate_prestart':(dT_rate if not started else 0.0),\n        'future_output_VAT_public_cost':public, 'future_output_VAT_consumer_cost':consumer,\n        'delta_tax_after_future_public':dT_after_future_public,\n        'historical_compensation_A_SQ':A_sq, 'historical_compensation_A_F':A_f,\n        'historical_incremental_tax_B_reference':B,\n        'historical_compensation_change':delta_A,\n        'historical_compensation_public_cost_change':delta_public_A,\n        'delta_public_budget_with_known_compensation':net_public,\n        'business_retained_credit_only':None if credit_f is None else (1-policy['theta'])*credit_f,\n        'macro_GDP_addition':0.0, 'aggregate_permission':'NEVER_SUM_DIFFERENT_CASES',\n        'assumptions_ref':'INPUT_JSON:profiles/'+profile['id'] if profile.get('selected') else 'INPUT_JSON:prototype_config+policy',\n    }\n\n\ndef national_profiles(cfg, guarded):\n    c = cfg['prototype_config']\n    answer=[]\n    for sector, s in c['sectors'].items():\n        R=s['R_2025']['value']*1e12\n        p={'id':('NATIONAL_GUARDED_' if guarded else 'CLAUDE_BASELINE_')+sector,\n           'sector':sector,'kind':'national_assumption_guarded' if guarded else 'legacy_baseline_reference',\n           'scope':'NATIONAL_PLACEHOLDER_NOT_SOURCED_ESTIMATE','base_year':2025,\n           'growth_pct':c['nominal_growth_pct']['value'],\n           'credit_category':'mixed_unknown' if guarded and sector=='rental' else 'ordinary',\n           'assumptions':'R/p/phi/kappa/開始年等は固定Claude試作の無出典仮定。住宅の旧基準κ適用は再現専用で法的控除認定ではない'}\n        base={'R':R,'P':R*s['p_ratio']['value'],'VAT':.1*R*s['p_ratio']['value'],'A':None,'B':None}\n        answer.append((p,base))\n    return answer\n\n\ndef all_rows(cfg, candidates):\n    profiles=national_profiles(cfg,False)+national_profiles(cfg,True)\n    profiles += [(p,anchor(p,candidates)) for p in cfg['profiles']]\n    a,b=cfg['policy']['years']\n    return [diagnose(cfg['policy'],p,base,y) for p,base in profiles for y in range(a,b+1)]\n\n\ndef reject(call):\n    try:\n        call()\n    except ValueError:\n        return\n    raise AssertionError('Invalid input was accepted')\n\n\ndef run_checks(cfg,candidates,mod,rows):\n    log=[]\n    def check(name,fn):\n        fn(); log.append('PASS '+name)\n    def baseline_check():\n        assert mod.selfcheck(cfg['prototype_config']) is True\n        reference=mod.run(cfg['prototype_config'])\n        own={(r['year'],r['sector']):r for r in rows if r['case_id'].startswith('CLAUDE_BASELINE_')}\n        mapping={'R':'R','P':'P_net','L_statusquo':'L_SQ','L_F':'L_F','L_reduction':'L_reduction',\n                 'L_reduction_rate_part':'L_reduction_rate_part','L_reduction_base_part':'L_reduction_credit_part',\n                 'dT_base':'delta_tax_base','dT_rate':'legacy_delta_tax_rate_prestart',\n                 'output_tax_gross':'output_VAT_F','input_credit':'input_credit_F',\n                 'public_compensation':'future_output_VAT_public_cost',\n                 'consumer_burden':'future_output_VAT_consumer_cost','business_retained':'business_retained_credit_only'}\n        for ref in reference:\n            r=own[(ref['year'],ref['sector'])]\n            assert r['started_F']==ref['started']\n            for old,new in mapping.items():\n                assert close(r[new]/1e12,ref[old],atol=1e-9),(old,new,r,ref)\n            assert close((r['delta_tax_base']-r['future_output_VAT_public_cost'])/1e12,ref['dT_base_net_of_public'],atol=1e-9)\n    check('fixed Claude selfcheck + 90 rows x 15 monetary fields reproduced (trillion JPY abs tolerance 1e-9)',baseline_check)\n    def report_rounding():\n        mapping=[('L_SQ',2),('L_F',3),('L_reduction',4),('delta_tax_base',5),('legacy_delta_tax_rate_prestart',6)]\n        n=0\n        for line in cfg['sources']['prototype_report']['utf8'].splitlines():\n            cells=[x.strip() for x in line.split('|')[1:-1]]\n            if len(cells)!=9 or not cells[0].isdigit(): continue\n            y=int(cells[0]);rs=[r for r in rows if r['year']==y and r['case_id'].startswith('CLAUDE_BASELINE_')]\n            for col,pos in mapping:\n                expect=float(cells[pos].replace('−','-'))\n                assert abs(sum(r[col] for r in rs)/1e12-expect)<=.00501,(y,col)\n            assert abs(sum(r['delta_tax_base']-r['future_output_VAT_public_cost'] for r in rs)/1e12-float(cells[7]))<=.00501\n            assert abs(sum(r['business_retained_credit_only'] for r in rs)/1e12-float(cells[8]))<=.00501\n            n+=1\n        assert n==9\n    check('9 original published excerpt years x 7 metrics match rounding',report_rounding)\n    def unit():\n        r=candidates['MED-M14-GROSS']; assert close(number(r['reported_amount_yen']),314618*1000)\n        assert close(number(r['net_taxable_base_yen']),314618000/1.1)\n        assert close(number(candidates['EDU-R-CASH-SUBSET']['value'])/1e12,.554115552)\n        assert close(number(candidates['RENT-R-KNOWN']['value'])/1e12,13.7415925632)\n    check('thousand-yen / yen / trillion-yen conversion',unit)\n    def exclusive():\n        p=copy.deepcopy(cfg['profiles'][0]);p['selected']=['MED-M14-GROSS','MED-M14-NET']\n        reject(lambda:validate_selection(p,candidates))\n    check('exclusive gross/net selection rejected',exclusive)\n    def cross_sample():\n        p=copy.deepcopy(cfg['profiles'][0]);p['selected']=['MED-M01-NET','MED-M14-NET']\n        reject(lambda:validate_selection(p,candidates))\n    check('cross-sample P summation rejected',cross_sample)\n    def bundle():\n        p=copy.deepcopy(cfg['profiles'][0]);p['selected']=['MED-BUNDLE-NET','MED-M10-NET']\n        reject(lambda:validate_selection(p,candidates))\n    check('parent bundle + detail double count rejected',bundle)\n    def overlapping_R():\n        p=copy.deepcopy(cfg['profiles'][0]);p['selected']=['EDU-R-CASH-SUBSET','EDU-R-NAT-CASH']\n        reject(lambda:validate_selection(p,candidates))\n    check('combined R subset + constituent rejected',overlapping_R)\n    def duplicate():\n        p=copy.deepcopy(cfg['profiles'][0]);p['selected']=['MED-M14-NET']*2\n        reject(lambda:validate_selection(p,candidates))\n    check('duplicate candidate rejected',duplicate)\n    def missing():\n        assert number('') is None and number('0')==0\n        assert total_known([1,None]) is None\n        p=copy.deepcopy(cfg['profiles'][0]);p['selected']=['GAP-medical-p_ratio']\n        reject(lambda:validate_selection(p,candidates))\n    check('missing remains unknown, real zero preserved, missing input rejected',missing)\n    def planned():\n        p=copy.deepcopy(cfg['profiles'][0]);p['selected']=['RENT-PLAN']\n        reject(lambda:validate_selection(p,candidates))\n    check('planned construction cost cannot become current investment P',planned)\n    def restricted():\n        p={'id':'test','sector':'rental','kind':'test','scope':'SYNTHETIC_TEST_ONLY','base_year':2025,'growth_pct':0,'credit_category':'restricted_building','assumptions':'test'}\n        b={'R':200,'P':100,'VAT':10,'A':None,'B':None}\n        r=diagnose(cfg['policy'],p,b,2040);assert r['input_credit_F'] is None and r['L_F'] is None\n        pol=copy.deepcopy(cfg['policy']);pol['residential_building_credit_F']='KEEP_RESTRICTION'\n        r=diagnose(pol,p,b,2040);assert r['input_credit_F']==0 and close(r['L_F'],5)\n        r=next(r for r in rows if r['case_id']=='NATIONAL_GUARDED_rental' and r['year']==2040)\n        assert r['input_credit_F'] is None and r['delta_tax_base'] is None\n    check('residential building restriction and unresolved eligibility guard',restricted)\n    def identities():\n        for r in rows:\n            if r['L_reduction'] is not None:\n                assert close(r['L_reduction'],r['L_reduction_rate_part']+r['L_reduction_credit_part'],atol=.01)\n            if r['delta_tax_attribution_total'] is not None:\n                assert close(r['delta_tax_attribution_total'],r['delta_tax_base']+r['delta_tax_rate_all_years'],atol=.01)\n            assert r['macro_GDP_addition']==0\n            if r['output_VAT_F'] is not None:\n                assert close(r['future_output_VAT_public_cost']+r['future_output_VAT_consumer_cost'],r['output_VAT_F'],atol=.01)\n    check('loss/tax/public incidence identities; no macro GDP addition',identities)\n    def start():\n        p=copy.deepcopy(cfg['policy']);p['start_years']={s:2100 for s in p['start_years']}\n        profile,base=national_profiles(cfg,False)[0]\n        assert diagnose(p,profile,base,2055)['delta_tax_base']==0\n        p=copy.deepcopy(cfg['policy']);p['kappa']=0\n        r=diagnose(p,profile,base,2040);assert close(r['L_reduction_credit_part'],0)\n    check('start-year and kappa=0 boundaries',start)\n    def flat_target():\n        p=copy.deepcopy(cfg['profiles'][0]);p['id']='REDUCED_RATE_TEST';p['base_year']=2025;p['growth_pct']=0\n        b={'R':None,'P':100,'VAT':8,'A':None,'B':None}\n        assert close(diagnose(cfg['policy'],p,b,2026)['input_VAT_F'],8)\n        assert close(diagnose(cfg['policy'],p,b,2027)['input_VAT_F'],7.5)\n        assert close(diagnose(cfg['policy'],p,b,2028)['input_VAT_F'],5)\n    check('reduced-rate component converges to flat 5%, not proportional 4%',flat_target)\n    def separate():\n        rs=[r for r in rows if r['case_id'].startswith('MED-COMP-') and r['year']==2040]\n        assert all(r['input_VAT_SQ'] is None and r['L_SQ'] is None for r in rs)\n        assert any(r['historical_compensation_change']<0 for r in rs)\n    check('historical compensation not misread as input VAT',separate)\n    def scopes():\n        for r in rows:\n            if r['case_id'].startswith(('CLAUDE_BASELINE_','NATIONAL_GUARDED_')):\n                assert r['scope']=='NATIONAL_PLACEHOLDER_NOT_SOURCED_ESTIMATE'\n            else: assert r['scope']!='NATIONAL_PLACEHOLDER_NOT_SOURCED_ESTIMATE'\n    check('sourced partial profiles and national placeholders remain separate',scopes)\n    def coverage():\n        keys={(r['case_id'],r['year']) for r in rows}\n        ids={r['case_id'] for r in rows}\n        assert len(keys)==len(rows)==len(ids)*30\n        assert all((i,y) in keys for i in ids for y in range(2026,2056))\n        assert len(ids)==len(cfg['profiles'])+6\n    check('2026–2055 complete coverage, no duplicate case-year',coverage)\n    return log\n\n\ndef fnum(x, scale=1):\n    return '未算出' if x is None else f'{x/scale:,.9f}'\n\n\ndef report_text(cfg,rows,checks,outdir):\n    baseline=[r for r in rows if r['case_id'].startswith('CLAUDE_BASELINE_')]\n    highlights=[]\n    for y in [2026,2028,2036,2037,2038,2040,2055]:\n        r=[x for x in baseline if x['year']==y]\n        highlights.append('|'+str(y)+'|'+'|'.join(fnum(sum(x[k] for x in r),1e12) for k in ['L_SQ','L_F','L_reduction','delta_tax_base','delta_tax_rate_all_years','future_output_VAT_public_cost'])+'|')\n    ids=['MED-M14-GROSS','MED-BUNDLE-GROSS','EDU-SALES-CASH-SUBSET','EDU-PURCHASE-SHARE-50','RENT-MANAGEMENT-3','MED-COMP-病院-WITHDRAW','NATIONAL_GUARDED_rental']\n    examples=[]\n    for id in ids:\n        r=next(r for r in rows if r['case_id']==id and r['year']==2040)\n        examples.append('|'+id+'|'+'|'.join(fnum(r[k]) for k in ['R','P_net','L_reduction','output_VAT_F','historical_compensation_change'])+'|')\n    sources='\\n'.join('|'+role+'|`'+s['fixed_commit']+'`|`'+s['filename']+'`|'+str(s['bytes'])+'|`'+s['sha256']+'`|' for role,s in cfg['sources'].items())\n    artifacts=[]\n    for role in ['code','inputs','annual']:\n        p=Path(__file__) if role=='code' else outdir/cfg['artifacts'][role]\n        if p.exists():\n            b=p.read_bytes();artifacts.append('|`'+p.name+'`|'+str(len(b))+'|`'+digest(b)+'`|')\n    return f'''# SPE｜F損税モデル・3部門試作 実行報告\n\nStatus: DRAFT / PROVISIONAL / NON-CANONICAL / DIAGNOSTIC ONLY  \n入力固定日時: {cfg['created_at']}  \n実行環境: Python {platform.python_version()} / {platform.system()}。追加依存なし。\n\n## 結果\n\n**実装・ローカル実行PASS。** 固定Claude原コードを実行し、基準90行・金額15項目の再現、原報告の9年次抜粋×7指標の丸め一致を確認した。既存91行CSVを入力として読込み、{len(cfg['profiles'])}個の部分計算・感度ケースと、全国仮定3部門×2方式を、2026〜2055年の{len(rows):,}行へ出力した。全国の出典付き完全推計が完成したという判定ではない。\n\n1. `{cfg['artifacts']['code']}`：計算・受領ハッシュ検査・入力選択防止・自己確認・レポート生成。\n2. `{cfg['artifacts']['inputs']}`：固定原本6件のUTF-8本文とSHA、元Claude入力、91行CSV、暫定政策条件、部分ケース定義を内包。オフライン再実行可能。\n3. `{cfg['artifacts']['annual']}`：全金額は円。空欄は未取得・条件未確定。ケース間単純合計禁止。\n4. `{cfg['artifacts']['report']}`：本報告。実行ログと制限を含む。\n\n## 固定入力・実バイト検証\n\n固定CommitからGitHub連携のBase64で取得、デコードした実バイトのサイズ・SHA-256・Git blob SHA-1を確認した。91行CSVとNotesは前回の実測SHAとも一致。既存統計の再調査は行っていない。\n\n|役割|固定Commit|ファイル|bytes|SHA-256|\n|---|---|---|---:|---|\n{sources}\n\nClaude資料は `handoff/claude-sonzei-min-20261114/`、入力候補は `handoff/f-sonzei-input-bridge-20261115/`、F基準は `handoff/SPE_F_Provisional_Implementation_Basis_20261114.md`。固定原本は変更していない。\n\n## 再実行コマンド・実行ログ\n\n```bash\npython3 {cfg['artifacts']['code']} {cfg['artifacts']['inputs']} --outdir replay\n```\n\n原コードCLIも作業ディレクトリ内で実行：\n\n```text\npython3 sources/SPE_sonzei_min_run_DRAFT.py sources/SPE_sonzei_min_inputs_DRAFT.json claude-baseline\nexit=0\nselfcheck OK; cases: 21\n2026 10.0 1.47 1.47 0.00 0.00 0.00 0.00 0.00\n2040  5.0 1.81 0.00 1.81 3.53 0.00 0.93 0.63\n2055  5.0 2.27 0.00 2.27 4.42 0.00 1.16 0.79\n```\n\n今回コードの実行確認（{len(checks)}項目）：\n\n```text\n{chr(10).join(checks)}\nrows={len(rows)}; profiles={len(cfg['profiles'])}+6; period=2026..2055\nexit=0（全確認・CSV再読取完了後）\n```\n\n新たな多AIレビュー工程は設けていない。ここでの自己確認は実行コードの境界・計算検査であり、後続Claudeの独立検証PASSではない。\n\n## 基準ケース再現（全て従来の全国仮定、兆円／年）\n\n|年|L_SQ|L_F|損税削減|税ベース拡大ΔT|税率効果・全年度|新output VAT公費負担|\n|---|---:|---:|---:|---:|---:|---:|\n{chr(10).join(highlights)}\n\nR2025=医療45・教育6・住宅20兆円、p=.20/.25/.20、年成長1.5%、税率10→7.5→5%、開始2038/2036/2037、φ=.9/.2/0、κ=1は固定Claude試作の暫定値を維持した。**出典付き全国値への置換ではない。** 減税先行・5%目標・2038完了というF基準と、未決の具体年次・係数を区別する。\n\n旧コードの `dT_rate` は開始前だけを表示する。再現欄 `legacy_delta_tax_rate_prestart` はこの仕様を維持。一方、今回の `delta_tax_rate_all_years` は開始後も上流input VATの税率差を表示する。全年度差額を求めるときに、旧 `dT_base+dT_rate` だけを使わない。これは原コードの改変ではなく、新規コードで比較系列を明示したもの。\n\n## 出典付き部分計算の2040年例（金額は円）\n\n|case_id|R|P_net|損税削減|output VAT F|既存補填変更額|\n|---|---:|---:|---:|---:|---:|\n{chr(10).join(examples)}\n\n施設別の金額は**1施設当たり**、教育・住宅部分集合は各対象集合。異なる単位範囲の行を合算しない。2023/2024の元値を1.5%名目成長で投影した2026〜2055値は実測ではない。人口・GDPエンジンとは接続していない。源泉の会計・税率の未確定条件も残す。\n\n### 医療\n\n施設別公表費用・当期投資について税込/税抜の排他的ケースを作成。材料8%/その他10%等はCSVの条件を継承。SQの8%/10%構成を保存し、Fの各成分税率は暫定的にmin(当該現行税率, F標準税率)とする。したがって到達時は両成分5%であり、8%成分を比例縮小した4%にはしない。中間経路・具体年次は政策確定値としない。費消額・在庫調整、介護/診療・附属事業の用途配賦は未了。\n\n回答標本が違う経常費と投資を足していない。n=732の既存4費目束と構成費目も別ケース。施設数を掛けて全国化しない。投資の将来系列は同規模の**毎年新規取得**を仮定するため、2024取得ストックを年々再控除したものではないが、実際の更新投資計画は未取得。\n\n既存補填A/Bは別標本の独立系列。維持と課税化後全撤回の2感度を計算し、Aをinput VATへ読み替えない。補填Aは診療報酬の増分で全額国庫支出とは限らず、公費・保険料・患者負担の分解が未取得。したがって撤回Aを丸ごと国庫節減として差し引かず `historical_compensation_public_cost_change` を未算出とする。\n\n### 教育\n\n公立・国立CF・国立PL・私立のRは範囲・会計系列ごとに分離。P未取得の売上ケースはoutput VATとφの帰着のみ計算でき、損税額・税収純増は空欄。国立の購入CF1.392兆円に対して教育用途かつ課税対象である合成割合25/50/75%を明示仮定し、税込10%除去後の**部分P感度**を計算した。これは教育用途を実測したものではなく、全国p=.25の置換ではない。\n\n給与CF・投資CF・教育PLを購入CFへ足さず、減価償却・附属病院等の未分離も維持。売上と購入額の対象範囲が違うため、RケースとP感度を勝手に結合した「教育全国結果」を作っていない。\n\n### 住宅\n\n管理費3/5/10%・委託率100%というCSV既存感度を計算。Rは専用住宅の既知家賃proxy、Pは管理だけで、修繕・建物取得は含まれない。予定工事費は数値があってもPへの採用をコードが拒否する。\n\n`CLAUDE_BASELINE_rental` は旧κ=1の数式再現だけで、現在の建物控除制限解除を認定しない。`NATIONAL_GUARDED_rental` はPのうち建物の比率も将来制限の取扱いも不明なので、開始後の控除・残存損税・税ベース差額を空欄にする。管理費ケースの通常仕入控除仮定と建物特例を混同しない。国税庁の既存調査済み制度条件は入力Notesを再利用し、今回再調査していない。\n\n## 系列の意味\n\n```text\nL_SQ = input_VAT_SQ − input_credit_SQ\nL_F  = input_VAT_F  − input_credit_F\n損税削減 = (input_VAT_SQ−input_VAT_F) + (input_credit_F−input_credit_SQ)\n税ベース差額 = output_VAT_F − (input_credit_F−input_credit_SQ)\n税率差額 = input_VAT_F − input_VAT_SQ（開始後も別掲）\n税収帰属差額 = 税ベース差額 + 税率差額\n将来output VAT公費負担 = phi × output_VAT_F\n既存補填変更 = A_F − A_SQ（input VATとは別）\n```\n\n税収帰属差額は部門上流の埋込税を含む旧モデルと同じ限定的な会計帰属指標で、国全体の税収純増ではない。全体効果は行動・価格・他部門・補填の公的負担分等が不足。`delta_public_budget_with_known_compensation` は必要系列がすべて既知の場合だけ計算し、unknownを0で埋めない。将来φの負担と歴史的補填を同一系列にしない。`macro_GDP_addition=0` は意図的に接続しない構造ゼロであり、経済効果がゼロという評価ではない。\n\nCSVは同じケースのF/SQを横持ちし、排他ケースはcase_idで分離。assumptions_refは同梱JSONのprofilesのid、全国仮定はprototype_config+policyを参照する。全ケース合計・全国と施設平均の合計は提供しない。欠損の合計も未算出。JSONのケースを編集する場合でも同一排他群・二重計上・未取得値・計画額の誤採用は検査で拒否する。\n\n## 成果物のローカル同一性\n\n|ファイル|bytes|SHA-256|\n|---|---:|---|\n{chr(10).join(artifacts)}\n\n本報告自身のサイズ・SHAは引渡し回答で提示する。原コード実行の `claude-baseline/` と取得原本、補助ログはローカル作業用であり、GitHub追加対象は指定4件だけ。完成4件の事後再取得はGitHub保存後に別途確認し、書込み前の本報告では保全PASSを先取りしない。\n\n## 残余と終了\n\n全国値・実際の将来投資・医療補填の公的負担内訳・教育用途按分・住宅建物の将来控除制度は未確定。成功済みの基準再現・部分計算・年次CSV生成は維持する。後続Claudeは同じ4原本から再実行し、独立に確認可能。\n\n正式エンジン・政策原本・main・DecisionLogは未変更。正式Acceptance、Finding Close、Freeze、Canonical化、HOLD解除、新規RP・多AIレビュー工程は実施しない。RP-023／M19–25 HOLD、RP-024 PENDING維持。4原本の引渡し後停止。\n'''\n\n\ndef main():\n    ap=argparse.ArgumentParser(description=__doc__)\n    ap.add_argument('inputs',type=Path)\n    ap.add_argument('--outdir',type=Path,default=Path('.'))\n    args=ap.parse_args();cfg=json.loads(args.inputs.read_text(encoding='utf-8'))\n    mod,candidates=originals(cfg)\n    rows=all_rows(cfg,candidates)\n    checks=run_checks(cfg,candidates,mod,rows)\n    args.outdir.mkdir(parents=True,exist_ok=True)\n    csvpath=args.outdir/cfg['artifacts']['annual']\n    with csvpath.open('w',encoding='utf-8',newline='') as f:\n        w=csv.DictWriter(f,fieldnames=list(rows[0]),lineterminator='\\n');w.writeheader();w.writerows(rows)\n    with csvpath.open(encoding='utf-8',newline='') as f:\n        reread=list(csv.DictReader(f))\n    assert len(reread)==len(rows)\n    guarded=next(r for r in reread if r['case_id']=='NATIONAL_GUARDED_rental' and r['year']=='2040')\n    assert guarded['input_credit_F']=='' and guarded['L_F']==''\n    checks.append('PASS saved CSV reread, row count and unknown fields remain blank')\n    # The input remains one independent original; replay needs no external source files.\n    input_dst=args.outdir/cfg['artifacts']['inputs']\n    if input_dst.resolve()!=args.inputs.resolve():\n        input_dst.write_bytes(args.inputs.read_bytes())\n    report=args.outdir/cfg['artifacts']['report']\n    report.write_text(report_text(cfg,rows,checks,args.outdir),encoding='utf-8',newline='\\n')\n    for line in checks: print(line)\n    print(f'rows={len(rows)}; profiles={len(cfg[\"profiles\"])}+6; years=2026..2055; exit=0')\n    for path in [Path(__file__),input_dst,csvpath,report]:\n        b=path.read_bytes();print(path.name,len(b),digest(b))\n\n\nif __name__=='__main__':\n    main()\n"
+      },
+      "sonzei_original.csv": {
+        "commit": "5f7899dd4d3e1fdd5f7e8c8202d23795bbc8e914",
+        "bytes": 926134,
+        "sha256": "e4a0e91e3f24ffec14a831c95b7d44bc116afff7655ff1ba483b9066c2c6ed5a",
+        "role": "fixed expected CSV digest; regenerable from pinned code and inputs"
+      },
+      "Claude_verification.md": {
+        "commit": "f9493d7f076cb71ed3623d8a80e05aeb34454f3b",
+        "bytes": 16877,
+        "sha256": "7adf71e5131225651b816faa8fa04dd9003e82f945b7856176c5d13a02a88369",
+        "utf8": "# SPE｜F損税モデル・ChatGPT実装 Claude独立検証結果\n\n**Status:** DRAFT / READ-ONLY VERIFICATION / NON-CANONICAL(Claude 作成、2026-11-15)\n**対象:** 実装 Commit `5f7899dd4d3e1fdd5f7e8c8202d23795bbc8e914`、`handoff/f-sonzei-calculation-20261115/` の4原本\n**依頼:** Owner 指示「SPE｜F損税モデル・ChatGPT実装のClaude独立検証依頼」(2026-11-15)。新規レビュー工程・追加調査・統計の再調査は行っていない。対象原本への書込みなし。本書のみを `work/claude-handoff` に格納(Owner 指示)。\n\n## 0. 判定\n\n| 区分 | 判定 | 範囲 |\n|---|---|---|\n| 実行再現性 | **PASS** | 固定 Commit の4原本の実バイト一致、コード再実行で 1,980 行の CSV が原本とバイト一致、旧Claude試作 90 行と数値一致(定義差1件は §4 で恒等式として説明) |\n| 計算式 | **PASS** | 損税削減・課税ベース拡大・税率効果・既存補填・公費負担の式を、別途書いた再計算(付録A)で全 1,980 行の主要6列(8,554 セル)と照合し一致。空欄(未取得・未確定)3,326 セルも一致 |\n| 入力適用範囲・混同防止 | **PASS(軽微な留意あり)** | 91行の入力候補の排他条件・二重計上・単位換算・欠損値、住宅賃貸の現行制限と将来Fの未確定条件、全国仮定・部分実測・条件付き推計の区別は、確認した範囲で混同なし |\n| 政策推計の妥当性 | **判定対象外(未取得データ待ち)** | 全国の課税仕入率などは未取得。これを理由に、上の実装 PASS を取り消さない(Owner 指示)。数値は「出典付き部分値」または「全国仮定(無出典)」の診断で、全国推計の完成とは言えない |\n\nCritical・Major の指摘なし。以下の指摘(V-01〜V-05)は、いずれも計算結果を変えない注意・軽微な改善で、実装 PASS の条件ではない。\n\n## 1. 固定対象の取得と実バイト照合\n\n固定 Commit `5f7899dd…`(`spe-flatvat/SPE`)から `git fetch --depth=1`(完全 SHA 指定)→ `git show` で取得。サイズ・SHA-256・Git blob SHA-1 を実測。\n\n| 原本 | bytes | SHA-256 | blob SHA-1 |\n|---|---:|---|---|\n| `SPE_F_Sonzei_Three_Sector_Prototype_DRAFT_20261115.py` | 31,746 | `95ea3c5ca87dfebd42eb4551ddf97a2396734b89d47926d4b8c0e21ada5538a4` | `71e84308db4e19d8fbe288e0a29f496efe07284d` |\n| `SPE_F_Sonzei_Three_Sector_Inputs_DRAFT_20261115.json` | 137,774 | `92d96a59888c50f97fe8c23a49109c9836856579971156b7e0970042dba8643d` | `015b7e4d4831f0c95c980bf051c448bdc624ce82` |\n| `SPE_F_StatusQuo_Sonzei_Annual_Diagnostics_DRAFT_20261115.csv` | 926,134 | `e4a0e91e3f24ffec14a831c95b7d44bc116afff7655ff1ba483b9066c2c6ed5a` | `0ef275507b6ce32d402ec369f728cb9bbda48258` |\n| `SPE_F_Sonzei_Three_Sector_Run_Report_DRAFT_20261115.md` | 13,377 | `1c3995638500ac9a620fafc2ed5da9bacbcd2dc2978b0f4cfa7de998b471318c` | `5b41f4f295752a51ea823dea6600d88a4f85dd41` |\n\n- 原本の実行報告が記載する3件(コード・入力・CSV)の SHA-256 と、上の実測が一致。報告自身の SHA-256 は報告内に無く(「引渡し回答で提示」とある)、上の値は私の実測で、ChatGPT の引渡し値とは照合していない。\n- 入力 JSON に埋め込まれた固定原本6件(Claude 試作3件=Commit `e87e4378…`、入力候補CSV・Notes=`05d2ea05…`、F基準書=`cc4a6054…`)を、それぞれの固定 Commit から取得し直し、埋め込み本文・サイズ・SHA-256 がバイト単位で一致することを確認(6/6)。\n- 固定 Commit は浅い取得で、親 Commit の確認はしていない(依頼の対象外)。\n\n## 2. 再実行と再生成\n\n```text\npython3 -I SPE_F_Sonzei_Three_Sector_Prototype_DRAFT_20261115.py SPE_F_Sonzei_Three_Sector_Inputs_DRAFT_20261115.json --outdir replay\n```\n\n- 実行環境: Python 3.13.17 / Linux(原本の実行報告は 3.12.14)。標準ライブラリのみ。出力末尾に `exit=0`、内蔵18項目すべて PASS、`rows=1980; profiles=60+6; years=2026..2055`。\n- 再生成 CSV: 1,981 行(見出し+1,980 行)、**原本とバイト一致**(`cmp` 差なし)。再生成 JSON も入力とバイト一致。\n- 再生成された実行報告は、原本と **1 行だけ**異なる(「実行環境: Python 3.13.17」と「3.12.14」)。環境表記による差で、数値・文面の差は無い。\n- 66 ケース(部分計算・感度 60 + 全国仮定 6)× 30 年、case_id と年の重複なし。\n\n## 3. 旧Claude試作 90 行との照合\n\n旧試作(`e87e4378`、`SPE_sonzei_min_run_DRAFT.py`)の基準ケース出力 `base_yearly.csv`(90 行 = 3部門×30年)と、CSV の `CLAUDE_BASELINE_*`(90行)を、15 項目で照合(単位は兆円に換算)。\n\n- R、P、L_SQ、L_F、損税削減、損税削減の税率部分・課税化部分、ΔT_base、旧 `dT_rate`(= `legacy_delta_tax_rate_prestart`)、出力税、控除、公費補填、消費者負担、事業者残存の **14 項目は 1,260 セル(90 行×14)すべてが絶対差 1e-9 以内で一致**。\n- 残る 1 項目(旧 `dT_base_net_of_public` と、新 `delta_tax_after_future_public`)は**定義が異なる**ため一致しない。新=旧+`delta_tax_rate_all_years`(全年度の上流税率差)の恒等式が、90 行すべてで成り立つ(最大差 4.4e-16 兆円)。原本の実行報告が明記した変更(§4 V-01)。\n- 原コード(`mod.selfcheck` と `mod.run`)を ChatGPT のコード内で実行する構造(埋め込みコードを `exec`)であることを確認。固定した本文(SHA 検査済み)のみを実行している。\n- 旧試作の結果文書(2026-11-14)の2040年の値(損税削減 1.81、ΔT_base 3.53 兆円)は、CSV の基準ケース合算値と一致。\n\n## 4. 指摘事項(いずれも計算は変えない)\n\n| ID | 重大度 | 内容 | 影響範囲 | 最小修正案 |\n|---|---|---|---|---|\n| V-01 | Minor | 旧 `dT_base_net_of_public` と新 `delta_tax_after_future_public` は名前が近いが、後者は**全年度の税率差を含む**(上述の恒等式)。旧の列だけを前提にした集計が新 CSV を読むと、2027〜2035 年や 2038 年以降の値が食い違う | 旧試作の出力を使う後続スクリプト、旧結果文書の解釈 | CSV の列説明か実行報告に、対応表「新=旧+`delta_tax_rate_all_years`」を1行追記。実行報告の「系列の意味」節に既にほぼ記載があり、対応表の追加で足りる |\n| V-02 | Minor(潜在) | `business_retained_credit_only` は `(1−θ)×credit_f` で、`credit_f − credit_sq` ではない。現行設定は `current_exempt_activity_input_credit=0` のため、`credit_sq=0` で結果は同じ。この係数を 0 以外にすると、損税解消による増分でなく控除総額を事業者残存として出す | 現行出力は影響なし。パラメータを変更した感度実行のみ | `(1−θ)×(credit_f−credit_sq)` に変更(行 193 付近)。係数 0 の現行出力は不変 |\n| V-03 | Editorial | `CLAUDE_BASELINE_*` と `NATIONAL_GUARDED_*` は、医療・教育で全 30 年が数値一致(住宅のみ 2037 年以降 19 年で差)。同一系列が2つあり、部門でグループ化して合算すると二重計上になる。CSV には `aggregate_permission=NEVER_SUM_DIFFERENT_CASES` があり、意図的な構造だが、合算を防ぐ手段は注記のみ | 部門別・年別の集計を行う後続利用 | `duplicate_of`(または `series_family`)の列を追加。または実行報告に「医療・教育の2系列は同一値、比較用」と1行追記 |\n| V-04 | Editorial | `year_value_class` は全 1,980 行が `PROJECTED_ASSUMPTION_NOT_OBSERVED` で、出典付き部分値(2023/24年の観測値を成長率で投影)・条件付き仮定(教育の按分、住宅の管理費率)・無出典の全国仮定の区別を持たない。区別は `scope`・`calculation_kind` にあり、混同はコード検査で確認済み(§5 の8) | 列を1つだけ見て読む利用 | `evidence_class`(SOURCED_PARTIAL / CONDITIONAL_ASSUMPTION / UNSOURCED_PLACEHOLDER)の列を追加(任意) |\n| V-05 | 留意 | `delta_tax_attribution_total` は上流税率差(減税そのもの)を含む。将来 engine のマクロ側の減税(`tax_factor`)と接続すると重複する可能性。現状は `macro_GDP_addition=0` で未接続 | engine 接続時 | 接続する際は、旧構想メモ案3(別表示)を維持するか、税率差を除いた `delta_tax_base` だけを渡す。今回は対応不要 |\n\n## 5. 依頼項目ごとの確認結果\n\n1. **固定 Commit・実バイト SHA-256:** 一致(§1)。\n2. **コード再実行・1,980 行の再生成:** 成功(§2)。\n3. **再生成 CSV と原本の実バイト一致:** 一致(§2)。\n4. **旧 Claude 試作 90 行との数値一致:** 14 項目一致、1 項目は定義差で恒等式により一致(§3)。\n5. **91 行の入力候補:**\n   - 排他条件: 税込/税抜の対(19 の `…-ACCOUNTING` グループ)が各2件で、同時選択はコードが拒否(`exclusive gross/net`)。親の束(`MED-BUNDLE-*`、n=732)と詳細の併用、回答標本の異なる費目の合算、重なる R の併用、重複指定も拒否する検査が通過。\n   - 単位換算: 単位列(`JPY/facility/year`ほか)と `reported_amount_yen` の積が、数値と単位が両方ある行で全件一致(不一致 0)。20 組の GROSS/NET で、GROSS は `reported = net + vat`、NET は `reported = net`、`vat = net×税率`(医療 M11 と束は 8%/混在)が一致。束(`MED-BUNDLE-NET`)は M10〜M13 の合計と一致(1,173,208,000 円)。\n   - 欠損値: `GAP-*` 6 行(`NO_DIRECT_REPLACEMENT`)と `MISSING_NOT_ZERO` 2 行は値が空で、プロファイルに選べない。出力 CSV の空欄 3,326 セルは未取得・条件未確定を表し、0 に埋めていない(実際の 0 は、開始前の控除 0 などの制度上の 0 のみ)。\n   - 二重計上: 予定工事費(`RENT-PLAN`)や修繕(`NOT_ACTUAL_REPAIR_P`)を P に使う経路は拒否される。\n6. **計算式:** 付録Aの独立再計算(式を別に書き直し、入力 JSON だけから 66 ケース×30 年を再計算)で、`input_VAT_SQ/F`、`input_credit_F`、`L_SQ`、`L_F`、`output_VAT_F` が全 8,554 セルで相対差 0、空欄の位置も 3,326 セルで一致。恒等式(`L=VAT−控除`、損税削減=税率部分+課税化部分、帰属差額=税ベース差額+税率差額、公費+消費者=出力税、`delta_tax_after_future_public`=帰属差額−公費)も 90 行で確認。8%/10% 混在の仕入は 5% へ収束し、8% 成分を比例縮小した 4% にならない。\n7. **住宅賃貸:** 現行制度の非課税売上に対応する仕入の控除なし(`current_exempt_activity_input_credit=0`)と、将来 F の建物仕入の控除(`residential_building_credit_F=UNRESOLVED`)は別のパラメータ。`NATIONAL_GUARDED_rental` は開始後の控除・残存損税・税ベース差額が空欄(未確定)で、`CLAUDE_BASELINE_rental` は「旧κ=1の式の再現専用」と明記。管理費 3/5/10% の3ケースは通常の仕入として扱い、建物特例とは混ぜていない。\n8. **全国仮定・部分実測・条件付き推計:** `scope` が3群に分離(`NATIONAL_PLACEHOLDER_NOT_SOURCED_ESTIMATE` は基準・全国仮定の6系列のみ。部分値は施設・収入部分集合・補填のみ)。部分値と全国仮定の合算・全国化は、CSV の構造上できず、コード検査(`scopes`)も通過。軽微な区別上の留意は V-03・V-04。\n\n## 6. 限界(私の検証が確認していないこと)\n\n- 検証の独立性: 付録Aの再計算は、式の実装を別に書いたものだが、入力 JSON(同一の91行CSVと政策条件)に依存する。入力の元の統計値(2023/24年の観測値など)は、出典と照合していない(依頼で再調査不要)。\n- 住宅の建物仕入税額控除の現行条文や、F の将来条件そのものの正誤は検証していない(コードが未確定として扱うことだけを確認)。\n- 税率経路、部門別開始年、φ、θ、κ、成長率は、固定 Claude 試作の暫定値のままで、政策確定値ではない。\n- 実行報告が「再実行で確認」とする18項目のうち、コード内の検査が妥当かの観点は、私は付録Aと上記の観察で補ったが、すべての境界条件の網羅は主張しない。\n- 実ブラウザ・実環境の差(Python 3.13.17 と 3.12.14)で数値差は出なかった。他環境は未確認。\n\n## 7. 引き継ぎ・次の入力\n\n- 出典付きの全国値(医療・教育・不動産賃貸の非課税売上と課税仕入率)が入った時に、入力 JSON の `prototype_config` と `profiles` を差し替えて再実行できる構造。検証手順(§2・付録A)をそのまま再利用できる。\n- RP-023／M19–25 の HOLD、RP-024 の PENDING は維持。Finding Close、正式 Acceptance、engine 変更、政策本文変更、新規 RP は行っていない。\n\n## 付録A: 独立再計算スクリプト(`indep_recalc.py`、参考。本書以外のファイルとしては格納しない)\n\n使い方: `python3 -I indep_recalc.py <入力JSON> <CSV>`。結果: `independent recompute: cells 8554 blank-consistent 3326 max rel diff 0 profiles 66`。\n\n```python\nimport json,csv,io,math,sys\ncfg=json.load(open(sys.argv[1],encoding='utf-8'))\ncand={r['candidate_id']:r for r in csv.DictReader(io.StringIO(cfg['sources']['candidate_csv']['utf8']))}\npol=cfg['policy']\ndef f(x):\n    try: return float(x)\n    except: return None\ndef tauF(y):\n    pts=sorted((int(k),v) for k,v in pol['tax_F_points'].items())\n    if y<=pts[0][0]: return pts[0][1]\n    for (a,va),(b,vb) in zip(pts,pts[1:]):\n        if y<=b: return va+(vb-va)*(y-a)/(b-a)\n    return pts[-1][1]\ndef base_for(p):\n    sel=[cand[i] for i in p['selected']]\n    k=p['kind']; d=dict(R=None,P=None,V=None,A=None,B=None)\n    if k in('purchase_partial','rental_management_partial'):\n        c=[r for r in sel if r['module_use'] in('PARTIAL_COMPONENT','CONDITIONAL_PARTIAL_P')][0]\n        d['P']=f(c['net_taxable_base_yen']); d['V']=f(c['input_vat_yen'])\n        if k=='rental_management_partial': d['R']=f([r for r in sel if r['module_use']=='SUBSET_R_ONLY'][0]['value'])\n    elif k=='sales_partial': d['R']=f(sel[0]['value'])\n    elif k=='education_cost_sensitivity':\n        P=f(sel[0]['value'])*p['taxable_education_composite_share']/1.1; d['P']=P; d['V']=P*.1\n    elif k=='compensation_only':\n        d['A']=f([r for r in sel if r['parameter']=='compensation_A'][0]['value']); d['B']=f([r for r in sel if r['parameter']=='tax_increase_B'][0]['value'])\n    return d\ndef calc(p,d,y):\n    g=(1+p['growth_pct']/100)**(y-p['base_year'])\n    s={k:(None if v is None else v*g) for k,v in d.items()}\n    R,P,V=s['R'],s['P'],s['V']; t=tauF(y); st=pol['start_years'][p['sector']]; on=y>=st\n    out={}\n    if P is not None:\n        # split P into 8% and 10% parts from V\n        rb=max(0,min(P,(0.1*P-V)/0.02)); sb=P-rb\n        Vf=rb*min(.08,t)+sb*min(.1,t)\n        cf=0.0 if not on else (None if p['credit_category']=='mixed_unknown' else pol['kappa']*Vf)\n        out.update(Vsq=V,Vf=Vf,cf=cf,Lsq=V,Lf=None if cf is None else Vf-cf)\n    else: out.update(Vsq=None,Vf=None,cf=None,Lsq=None,Lf=None)\n    out['ov']=0.0 if not on else (None if R is None else t*R)\n    return out,s\nrows=list(csv.DictReader(open(sys.argv[2],encoding='utf-8')))\nidx={(r['case_id'],int(r['year'])):r for r in rows}\nmx=0;n=0;blankmis=0\nprofiles=[]\nfor p in cfg['profiles']: profiles.append((p,base_for(p)))\nfor sec,s in cfg['prototype_config']['sectors'].items():\n    R=s['R_2025']['value']*1e12; pr=s['p_ratio']['value']\n    for pre,cat in(('CLAUDE_BASELINE_','ordinary'),('NATIONAL_GUARDED_','mixed_unknown' if sec=='rental' else 'ordinary')):\n        p=dict(id=pre+sec,sector=sec,base_year=2025,growth_pct=cfg['prototype_config']['nominal_growth_pct']['value'],credit_category=cat)\n        profiles.append((p,dict(R=R,P=R*pr,V=.1*R*pr,A=None,B=None)))\nfor p,d in profiles:\n    for y in range(2026,2056):\n        o,s=calc(p,d,y); r=idx[(p['id'],y)]\n        for key,val in (('input_VAT_SQ',o['Vsq']),('input_VAT_F',o['Vf']),('input_credit_F',o['cf']),('L_SQ',o['Lsq']),('L_F',o['Lf']),('output_VAT_F',o['ov'])):\n            c=f(r[key])\n            if val is None: \n                assert r[key]=='' ,(p['id'],y,key,r[key]); blankmis+=1\n            else:\n                assert c is not None,(p['id'],y,key)\n                mx=max(mx,abs(c-val)/max(1,abs(val))); n+=1\nprint('independent recompute: cells',n,'blank-consistent',blankmis,'max rel diff',mx,'profiles',len(profiles))\n```\n\n---\n*本書は、実装の再現性・計算式・入力の取り扱いの確認で、政策の推奨・数値の保証ではありません。*\n"
+      }
+    },
+    "f_config": {
+      "_meta": {
+        "status": "DRAFT / PROVISIONAL INPUT / NON-CANONICAL",
+        "case": "F施策",
+        "date": "2026-11-10",
+        "note": "各値のタグ: v5=シミュレーション条件仕様書v5記載, v6=v6仕様書記載, 推定=推定値, 近似=区切り年などの近似, 仮定=仕様に値がなく作成者が置いた値。Ownerが確定した値ではない。",
+        "engine_commit": "4389951293b5ff91bbfec58a613b30458e1fb544",
+        "source_input_sha256": "e07756d34b83bd24a18b56f931b641a6c86b381c45e5505bc56646cbdef56ac0",
+        "boundary_cases": [
+          {
+            "id": "F_2026_INITIAL_29",
+            "meaning": "2026 is initial state, 2027-2055 transitions, 29 periods",
+            "primary": true
+          },
+          {
+            "id": "F_2026_TRANSITION_30",
+            "meaning": "legacy comparison only: initial stocks relabelled 2025-end and 2026 shock applied; 30 periods",
+            "primary": false
+          }
+        ],
+        "legacy_include_2026": true,
+        "source_rules": {
+          "documented_fixed_v5": "F effects schedule, ageing drag, risks, expenditure, alpha/phi (the latter remain model assumptions, not empirical estimates)",
+          "provisional_reused": "2033/2041 elasticity boundaries; linear migration ramp 2030-34; wage geometric interpolation; zero VAT transitional inflation",
+          "unresolved_initial_wage": "v5 section 1 real median wage 380 vs section 4-2 anchor 400; use section 4-2 anchor 400 for legacy comparability, no adjudication",
+          "not_implemented": "tax rate to tax base, actual bond debt/interest/PB, household distribution, political sequencing additional issuance, automatic F 2035 triggers",
+          "legacy_initial_state_field": "initial_state_2025_end name retained for data compatibility only; primary case labels these stocks as 2026 initial state"
+        }
+      },
+      "end_year": 2055,
+      "initial_state_2025_end": {
+        "real_gdp": 580.0,
+        "nominal_gdp": 600.0,
+        "tax_revenue": 80.0,
+        "expenditure": 108.0,
+        "population": 121500000,
+        "deaths": 1590000,
+        "births": 640000,
+        "tag": "v5"
+      },
+      "alpha": {
+        "value": 0.35,
+        "tag": "推定"
+      },
+      "phi": {
+        "value": 0.15,
+        "tag": "推定"
+      },
+      "death_rate_coefficient": {
+        "value": 1.015,
+        "tag": "v5"
+      },
+      "birth_decline_coefficient": {
+        "value": 0.975,
+        "tag": "v5"
+      },
+      "base_growth_rate_pct": {
+        "value": 1.0,
+        "tag": "v5"
+      },
+      "base_inflation_rate_pct": {
+        "value": 2.0,
+        "tag": "v5"
+      },
+      "tax_cap_ratio_of_nominal_gdp": {
+        "value": 0.3,
+        "tag": "v5"
+      },
+      "tax_factor_by_year": {
+        "2031": 0.9,
+        "tag": "v5"
+      },
+      "policy_effects_pct": {
+        "tag": "v5 §4",
+        "consumption_stimulus": [
+          {
+            "from": 2026,
+            "value": 0.3
+          },
+          {
+            "from": 2028,
+            "value": 0.5
+          },
+          {
+            "from": 2032,
+            "value": 0.7
+          }
+        ],
+        "investment_promotion": [
+          {
+            "from": 2026,
+            "value": 0.3
+          },
+          {
+            "from": 2030,
+            "value": 0.5
+          }
+        ],
+        "education": [
+          {
+            "from": 2026,
+            "value": 0.0
+          },
+          {
+            "from": 2028,
+            "value": 0.3
+          }
+        ]
+      },
+      "aging_drag_pp": {
+        "tag": "v5 §7",
+        "table": [
+          {
+            "from": 2026,
+            "value": -0.0525
+          },
+          {
+            "from": 2033,
+            "value": -0.8123
+          },
+          {
+            "from": 2044,
+            "value": -0.3737
+          },
+          {
+            "from": 2046,
+            "value": -0.1683
+          }
+        ]
+      },
+      "risk_shock_pct": {
+        "tag": "v5 §3",
+        "rules": [
+          {
+            "type": "once",
+            "year": 2026,
+            "pct": 3.0
+          },
+          {
+            "type": "once",
+            "year": 2027,
+            "pct": 5.0
+          },
+          {
+            "type": "once",
+            "year": 2031,
+            "pct": 3.0
+          },
+          {
+            "type": "every",
+            "start": 2029,
+            "step": 3,
+            "pct": 1.0
+          },
+          {
+            "type": "every",
+            "start": 2027,
+            "step": 2,
+            "pct": 0.5
+          }
+        ]
+      },
+      "inflation_extra_pp": {
+        "tag": "v5 §3",
+        "by_year": {
+          "2026": 2.0,
+          "2027": 5.0
+        }
+      },
+      "tax_elasticity": {
+        "tag": "近似(区切り年)",
+        "table": [
+          {
+            "from": 2026,
+            "value": 1.5
+          },
+          {
+            "from": 2033,
+            "value": 1.7
+          },
+          {
+            "from": 2041,
+            "value": 2.0
+          }
+        ]
+      },
+      "expenditure_growth_pct": {
+        "tag": "v5",
+        "table": [
+          {
+            "from": 2026,
+            "value": 2.5
+          },
+          {
+            "from": 2035,
+            "value": 1.5
+          },
+          {
+            "from": 2045,
+            "value": 1.0
+          }
+        ]
+      },
+      "migration": {
+        "tag": "定常値=v6仕様書4.1.1。増加の刻みは仮定",
+        "steady_per_year": 400000,
+        "ramp_start": 2030,
+        "ramp_years": 5
+      },
+      "wage_anchor_man_yen": {
+        "tag": "2055年値=v5。途中年は2点の幾何補間(仮定)",
+        "anchors": {
+          "2026": 400.0,
+          "2055": 860.0
+        }
+      },
+      "reference_v5_section8": {
+        "real_gdp": 661.9,
+        "cagr_pct": 0.44,
+        "population_man": 8458,
+        "tax_to_gdp_max_pct": 22.3,
+        "bonds_2055": 0
+      }
+    },
+    "assumptions": {
+      "primary_boundary": "2026 initial; transitions 2027..2055 (29)",
+      "sq_base_growth_pct": [
+        [
+          2026,
+          1.0
+        ],
+        [
+          2035,
+          0.6
+        ],
+        [
+          2045,
+          0.3
+        ]
+      ],
+      "sq_elasticity": [
+        [
+          2026,
+          0.85
+        ],
+        [
+          2035,
+          0.75
+        ]
+      ],
+      "sq_expenditure_growth_pct": 3.0,
+      "sq_migration_steady": 357000,
+      "migration_ramp_start": 2030,
+      "migration_ramp_years": 5,
+      "migration_origin": "v5 reverse-calibrated from former population target, not observed current immigration",
+      "wage_anchors_sq_man_yen": {
+        "2026": 400,
+        "2055": 472
+      },
+      "gini_anchors_sq": {
+        "2026": 0.38,
+        "2055": 0.415
+      },
+      "gini_anchors_f": {
+        "2026": 0.38,
+        "2055": 0.348
+      },
+      "gini_interpolation": "linear illustrative anchor, not endogenous result",
+      "policy9_sensitivity_low": {
+        "base_growth_pct": 1.0,
+        "investment_pp": 0.3,
+        "elasticity": 1.5
+      },
+      "policy9_sensitivity_high": {
+        "base_growth_pct": 1.0,
+        "investment_pp": 0.5,
+        "elasticity": 2.0
+      },
+      "common_migration_counterfactual": {
+        "sq_migration_steady": 400000,
+        "purpose": "identify immigration assumption effect; not the SQ primary policy"
+      },
+      "v5_old_reference": {
+        "real_gdp_2055_trn": 381.4,
+        "population_2055": 82980000,
+        "funding_gap_labelled_bonds_2055_trn": 174
+      }
+    },
+    "artifacts": {
+      "v02": "SPE_F_Sonzei_V02_Fixed_DRAFT_20261115.py",
+      "model": "SPE_StatusQuo_Provisional_Model_DRAFT_20261115.py",
+      "inputs": "SPE_StatusQuo_Provisional_Inputs_DRAFT_20261115.json",
+      "csv": "SPE_F_StatusQuo_Annual_Comparison_DRAFT_20261115.csv",
+      "report": "SPE_StatusQuo_Implementation_Run_Report_DRAFT_20261115.md"
+    }
+  }
+}

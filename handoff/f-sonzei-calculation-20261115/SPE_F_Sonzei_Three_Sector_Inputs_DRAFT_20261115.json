@@ -1,0 +1,1033 @@
+{
+  "status": "DRAFT / PROVISIONAL / NON-CANONICAL / DIAGNOSTIC ONLY",
+  "created_at": "2026-11-15T10:11:05+00:00",
+  "repository": "spe-flatvat/SPE",
+  "sources": {
+    "prototype_code": {
+      "filename": "SPE_sonzei_min_run_DRAFT.py",
+      "bytes": 8422,
+      "sha256": "b220c105469b0b393d85d40486032ffe704b0e833f590760e7c73d211d09f8e3",
+      "utf8": "#!/usr/bin/env python3\n\"\"\"SPE 損税モジュール 最小試作 (DRAFT / PROVISIONAL / NON-CANONICAL / DIAGNOSTIC ONLY)\n\nengine には接続しない(案3: 既存マクロ効果とは別表示)。入力は SPE_sonzei_min_inputs_DRAFT.json。\n定義(部門 s, 年 t, 単位=兆円):\n  R=非課税売上, P=課税仕入・設備投資(税抜)=p_ratio*R, tau=税率, kappa=仕入税額控除の実現率\n  現行制度(StatusQuo): 損税 L_SQ = tau0*P\n  F・開始前          : 損税 L_F  = tau_F*P            (税率低下のみの効果)\n  F・開始後          : 損税 L_F  = (1-kappa)*tau_F*P  (残存)\n  部門に帰属する国庫収入(上流で徴収された埋込税を含む):\n    開始前 tau*P / 開始後 tau*R + (1-kappa)*tau*P\n  課税ベース拡大効果 dT_base = (開始後) tau_F*R - kappa*tau_F*P   (同一税率で未開始とした場合との差)\n  税率効果 dT_rate = (tau_F - tau0)*P (開始前のみ。マクロ側の減税と重複しうるため別掲)\n  帰着: 公費補填 phi*tau_F*R, 消費者負担 (1-phi)*tau_F*R, 事業者残存利益 (1-theta)*kappa*tau_F*P\n使い方: python3 SPE_sonzei_min_run_DRAFT.py inputs.json outdir\n\"\"\"\nimport json, sys, os, csv, copy\n\ndef interp(points, year):\n    ks = sorted(int(k) for k in points)\n    if year <= ks[0]:\n        return points[str(ks[0])]\n    for a, b in zip(ks, ks[1:]):\n        if a <= year <= b:\n            fa, fb = points[str(a)], points[str(b)]\n            return fa + (fb - fa) * (year - a) / (b - a)\n    return points[str(ks[-1])]\n\ndef v(x):\n    return x[\"value\"] if isinstance(x, dict) and \"value\" in x else x\n\ndef run(cfg, p_mult=1.0, kappa=None, starts=None, phi_med=None):\n    y0, y1 = cfg[\"years\"][\"start\"], cfg[\"years\"][\"end\"]\n    g = v(cfg[\"nominal_growth_pct\"]) / 100.0\n    t0 = v(cfg[\"tau_statusquo_pct\"]) / 100.0\n    kap = v(cfg[\"kappa_realization\"]) if kappa is None else kappa\n    rows = []\n    for t in range(y0, y1 + 1):\n        tauF = interp(cfg[\"tau_F_path_pct\"][\"points\"], t) / 100.0\n        for key, s in cfg[\"sectors\"].items():\n            R = v(s[\"R_2025\"]) * (1 + g) ** (t - 2025)\n            P = v(s[\"p_ratio\"]) * p_mult * R\n            st = (starts or {}).get(key, v(s[\"start_year\"]))\n            phi = v(s[\"phi_public\"])\n            if key == \"medical\" and phi_med is not None:\n                phi = phi_med\n            th = v(s[\"theta_passthrough\"])\n            started = t >= st\n            L_sq = t0 * P\n            if started:\n                L_f = (1 - kap) * tauF * P\n                dT_base = tauF * R - kap * tauF * P\n                dT_rate = 0.0\n                gross_out = tauF * R\n                credit = kap * tauF * P\n                public = phi * gross_out\n                consumer = (1 - phi) * gross_out\n                biz_keep = (1 - th) * kap * tauF * P\n            else:\n                L_f = tauF * P\n                dT_base = 0.0\n                dT_rate = (tauF - t0) * P\n                gross_out = credit = public = consumer = biz_keep = 0.0\n            rows.append(dict(year=t, sector=key, started=int(started), tau_F=tauF, R=R, P=P,\n                             L_statusquo=L_sq, L_F=L_f, L_reduction=L_sq - L_f,\n                             L_reduction_rate_part=(L_sq - tauF * P),\n                             L_reduction_base_part=(tauF * P - L_f),\n                             dT_base=dT_base, dT_rate=dT_rate, output_tax_gross=gross_out,\n                             input_credit=credit, public_compensation=public,\n                             dT_base_net_of_public=dT_base - public,\n                             consumer_burden=consumer, business_retained=biz_keep))\n    return rows\n\ndef totals(rows, upto=None):\n    keys = [\"L_statusquo\", \"L_F\", \"L_reduction\", \"L_reduction_rate_part\", \"L_reduction_base_part\",\n            \"dT_base\", \"dT_rate\", \"output_tax_gross\", \"input_credit\", \"public_compensation\",\n            \"dT_base_net_of_public\", \"consumer_burden\", \"business_retained\"]\n    out = {}\n    for r in rows:\n        if upto and r[\"year\"] > upto:\n            continue\n        for k in keys:\n            out[(r[\"sector\"], k)] = out.get((r[\"sector\"], k), 0.0) + r[k]\n            out[(\"ALL\", k)] = out.get((\"ALL\", k), 0.0) + r[k]\n    return out\n\ndef selfcheck(cfg):\n    # 恒等式・境界条件の検算\n    rows = run(cfg)\n    for r in rows:\n        assert abs(r[\"L_reduction\"] - (r[\"L_reduction_rate_part\"] + r[\"L_reduction_base_part\"])) < 1e-9\n        if not r[\"started\"]:\n            assert r[\"dT_base\"] == 0 and r[\"output_tax_gross\"] == 0\n        else:\n            assert abs(r[\"dT_base\"] - (r[\"output_tax_gross\"] - r[\"input_credit\"])) < 1e-9\n            assert abs(r[\"public_compensation\"] + r[\"consumer_burden\"] - r[\"output_tax_gross\"]) < 1e-9\n    # kappa=0: 損税は解消されず、base_part=0、ΔT_base=課税売上税額\n    for r in run(cfg, kappa=0.0):\n        if r[\"started\"]:\n            assert abs(r[\"L_reduction_base_part\"]) < 1e-9 and abs(r[\"dT_base\"] - r[\"output_tax_gross\"]) < 1e-9\n    # 税率を現行と同一(tauF=tau0)にすれば rate_part=0\n    c2 = copy.deepcopy(cfg)\n    c2[\"tau_F_path_pct\"][\"points\"] = {\"2026\": 10.0, \"2055\": 10.0}\n    assert all(abs(r[\"L_reduction_rate_part\"]) < 1e-9 for r in run(c2))\n    # 開始年を2100にすれば base 効果ゼロ\n    assert all(r[\"dT_base\"] == 0 for r in run(cfg, starts={\"medical\": 2100, \"education\": 2100, \"rental\": 2100}))\n    return True\n\ndef main(inp, outdir):\n    cfg = json.load(open(inp, encoding=\"utf-8\"))\n    selfcheck(cfg)\n    os.makedirs(outdir, exist_ok=True)\n    base = run(cfg)\n    with open(os.path.join(outdir, \"base_yearly.csv\"), \"w\", newline=\"\", encoding=\"utf-8\") as f:\n        w = csv.DictWriter(f, fieldnames=list(base[0].keys()))\n        w.writeheader()\n        w.writerows(base)\n    sens = cfg[\"sensitivity\"]\n    cases = []\n    for pm in sens[\"p_multiplier\"]:\n        for tn, tv in [(\"staggered\", None), (\"all_2038\", sens[\"timing\"][\"all_2038\"]), (\"all_2034\", sens[\"timing\"][\"all_2034\"])]:\n            for kp in sens[\"kappa\"]:\n                cases.append(dict(p_mult=pm, timing=tn, kappa=kp, phi_med=None, starts=tv))\n    for ph in sens[\"phi_medical\"]:\n        cases.append(dict(p_mult=1.0, timing=\"staggered\", kappa=v(cfg[\"kappa_realization\"]), phi_med=ph, starts=None))\n    summary = []\n    for c in cases:\n        rows = run(cfg, p_mult=c[\"p_mult\"], kappa=c[\"kappa\"], starts=c[\"starts\"], phi_med=c[\"phi_med\"])\n        t38 = totals(rows, 2038)\n        t55 = totals(rows)\n        r2040 = [r for r in rows if r[\"year\"] == 2040]\n        s40 = {k: sum(r[k] for r in r2040) for k in [\"L_statusquo\", \"L_F\", \"L_reduction\", \"dT_base\", \"dT_base_net_of_public\", \"business_retained\"]}\n        summary.append(dict(case={k: c[k] for k in [\"p_mult\", \"timing\", \"kappa\", \"phi_med\"]},\n                            y2040=s40,\n                            cum_to_2038={k: t38[(\"ALL\", k)] for k in [\"L_reduction\", \"dT_base\", \"dT_rate\", \"dT_base_net_of_public\"]},\n                            cum_to_2055={k: t55[(\"ALL\", k)] for k in [\"L_reduction\", \"dT_base\", \"dT_rate\", \"dT_base_net_of_public\", \"public_compensation\", \"consumer_burden\", \"business_retained\"]}))\n    with open(os.path.join(outdir, \"sensitivity_summary.json\"), \"w\", encoding=\"utf-8\") as fh:\n        json.dump(summary, fh, ensure_ascii=False, indent=1)\n    # 基準ケースの年次抜粋(全部門合算)\n    pick = [2026, 2027, 2028, 2030, 2034, 2036, 2037, 2038, 2040, 2045, 2050, 2055]\n    lines = []\n    for y in pick:\n        rs = [r for r in base if r[\"year\"] == y]\n        f = lambda k: sum(r[k] for r in rs)\n        lines.append((y, rs[0][\"tau_F\"] * 100, f(\"L_statusquo\"), f(\"L_F\"), f(\"L_reduction\"), f(\"dT_base\"), f(\"dT_rate\"), f(\"dT_base_net_of_public\"), f(\"business_retained\")))\n    with open(os.path.join(outdir, \"base_excerpt.json\"), \"w\") as fh:\n        json.dump(lines, fh)\n    print(\"selfcheck OK; cases:\", len(cases))\n    print(\"year tauF% L_SQ L_F Lred dT_base dT_rate dT_net_pub biz_keep\")\n    for l in lines:\n        print(l[0], \"%.1f\" % l[1], \" \".join(\"%.2f\" % x for x in l[2:]))\n    print(\"-- sensitivity (cum to 2055 of L_reduction / dT_base_net_of_public; 2040 L_reduction)\")\n    for s in summary:\n        print(s[\"case\"], \"L_red55=%.1f\" % s[\"cum_to_2055\"][\"L_reduction\"], \"dTbase55=%.1f\" % s[\"cum_to_2055\"][\"dT_base\"], \"dTnetpub55=%.1f\" % s[\"cum_to_2055\"][\"dT_base_net_of_public\"], \"L_red2040=%.2f\" % s[\"y2040\"][\"L_reduction\"])\n\nif __name__ == \"__main__\":\n    main(sys.argv[1], sys.argv[2])\n",
+      "fixed_commit": "e87e43787ecac73297065ba026b6de41d4f072ee"
+    },
+    "prototype_inputs": {
+      "filename": "SPE_sonzei_min_inputs_DRAFT.json",
+      "bytes": 3067,
+      "sha256": "9fdecef8404e3e4cd6320f21892c54c4443b21d7d4937a2e63ace292ca4c29ac",
+      "utf8": "{\n  \"_meta\": {\n    \"status\": \"DRAFT / PROVISIONAL / NON-CANONICAL / DIAGNOSTIC ONLY\",\n    \"basis\": \"handoff/SPE_F_Provisional_Implementation_Basis_20261114.md (Owner-limited approved) on work/chatgpt-handoff @ cc4a6054\",\n    \"warning\": \"ALL numeric values below marked [PLACEHOLDER] are unsourced provisional inputs chosen by Claude to make the prototype run. They are NOT Owner decisions, NOT official statistics, and NOT calibrated to the F annex 2 estimate (1.7-2.55 trillion yen/yr). Replace with sourced data before any use beyond mechanics testing.\",\n    \"units\": \"trillion yen (nominal), year = calendar year\"\n  },\n  \"years\": {\"start\": 2026, \"end\": 2055},\n  \"nominal_growth_pct\": {\"value\": 1.5, \"tag\": \"[PLACEHOLDER] common nominal growth of R_s and P_s; later link to engine nominal GDP path\"},\n  \"tau_statusquo_pct\": {\"value\": 10.0, \"tag\": \"current standard rate; effective rate incl. reduced rate not modelled\"},\n  \"tau_F_path_pct\": {\n    \"tag\": \"[PLACEHOLDER] rate path (cut-first). Basis doc fixes only: 5% target, cut precedes base expansion. Intermediate years/implementation year are NOT decided.\",\n    \"points\": {\"2026\": 10.0, \"2027\": 7.5, \"2028\": 5.0, \"2055\": 5.0}\n  },\n  \"sectors\": {\n    \"medical\": {\n      \"label\": \"医療(保険診療)\",\n      \"R_2025\": {\"value\": 45.0, \"tag\": \"[PLACEHOLDER] non-taxable sales, order of national medical expenditure; needs source\"},\n      \"p_ratio\": {\"value\": 0.20, \"tag\": \"[PLACEHOLDER] taxable purchases + capex incl. as share of R; needs source\"},\n      \"start_year\": {\"value\": 2038, \"tag\": \"[PLACEHOLDER] year taxation + input credit begins\"},\n      \"phi_public\": {\"value\": 0.9, \"tag\": \"[PLACEHOLDER] share of output tax borne by public funds (fee schedule compensation)\"},\n      \"theta_passthrough\": {\"value\": 0.3, \"tag\": \"[PLACEHOLDER] share of 損税 reduction passed to prices/fees\"}\n    },\n    \"education\": {\n      \"label\": \"教育\",\n      \"R_2025\": {\"value\": 6.0, \"tag\": \"[PLACEHOLDER] needs source\"},\n      \"p_ratio\": {\"value\": 0.25, \"tag\": \"[PLACEHOLDER]\"},\n      \"start_year\": {\"value\": 2036, \"tag\": \"[PLACEHOLDER]\"},\n      \"phi_public\": {\"value\": 0.2, \"tag\": \"[PLACEHOLDER]\"},\n      \"theta_passthrough\": {\"value\": 0.3, \"tag\": \"[PLACEHOLDER]\"}\n    },\n    \"rental\": {\n      \"label\": \"不動産賃貸(居住用)\",\n      \"R_2025\": {\"value\": 20.0, \"tag\": \"[PLACEHOLDER] needs source\"},\n      \"p_ratio\": {\"value\": 0.20, \"tag\": \"[PLACEHOLDER]\"},\n      \"start_year\": {\"value\": 2037, \"tag\": \"[PLACEHOLDER]\"},\n      \"phi_public\": {\"value\": 0.0, \"tag\": \"[PLACEHOLDER]\"},\n      \"theta_passthrough\": {\"value\": 0.3, \"tag\": \"[PLACEHOLDER]\"}\n    }\n  },\n  \"kappa_realization\": {\"value\": 1.0, \"tag\": \"[PLACEHOLDER] realization rate of input credit (F docx monitors <50%)\"},\n  \"sensitivity\": {\n    \"p_multiplier\": [0.75, 1.0, 1.25],\n    \"timing\": {\n      \"staggered\": \"start years as given per sector\",\n      \"all_2038\": {\"medical\": 2038, \"education\": 2038, \"rental\": 2038},\n      \"all_2034\": {\"medical\": 2034, \"education\": 2034, \"rental\": 2034}\n    },\n    \"kappa\": [1.0, 0.5],\n    \"phi_medical\": [0.5, 0.9, 1.0]\n  }\n}\n",
+      "fixed_commit": "e87e43787ecac73297065ba026b6de41d4f072ee"
+    },
+    "prototype_report": {
+      "filename": "SPE_損税モジュール_最小実装_結果_DRAFT_20261114.md",
+      "bytes": 7733,
+      "sha256": "d784ad6f8e21e8f090dd435b1328b36c363389a2dc074e0f8d01196719215c65",
+      "utf8": "# SPE 損税モジュール 最小実装(3部門)試作結果 DRAFT v0.1\n\n**Status:** DRAFT / PROVISIONAL / NON-CANONICAL / DIAGNOSTIC ONLY(Claude 作成、2026-11-14)\n**根拠:** `handoff/SPE_F_Provisional_Implementation_Basis_20261114.md`(Owner 限定承認済、`work/chatgpt-handoff` @ `cc4a6054`)。`Inbox/between_growth_and_discipline_compact_updated.md`(main @ `43899512`、SHA-256 `9c0f3e55…91c5`)も確認済み。\n**成果物:** `SPE_sonzei_min_inputs_DRAFT.json`(暫定入力)/ `SPE_sonzei_min_run_DRAFT.py`(計算)/ `out/`(base_yearly.csv、sensitivity_summary.json)\n\n## 0. 最初に(読み方の注意)\n\n- **本書の数値は予測でも推計でもありません。** 部門規模 R、課税仕入率 p、税率経路、部門別開始年、公費負担率 φ、転嫁率 θ はすべて**私が置いた無出典の仮置き**です(JSON に `[PLACEHOLDER]` と明記)。目的は計算の仕組みの動作確認と、感度の構造を見ることです。\n- **別紙2の 1.7〜2.55 兆円に合わせていません。** 基準値の 2040 年の損税削減が約 1.8 兆円となり同レンジに入りますが、仮置きの結果としての偶然で、**検証にはなりません。** 部門データを出典付きで入れると変わります。\n- 既存のマクロ効果・engine とは**接続していません**(基準書 §4、構想メモ案3)。F の既存試算(弾性値 1.5→1.7→2.0)とは足し合わせないでください。\n- 基準書が確定していないとしている値(施行年・中間税率・部門別開始年・移行支援)は、すべて変更可能な入力です。\n\n## 1. モデルの式(部門 s、年 t、兆円)\n\nR=非課税売上、P=p・R(課税仕入・設備投資、税抜)、τ0=10%(StatusQuo)、τF(t)=F の税率、κ=仕入税額控除の実現率、開始年 S 以降が「課税+控除あり」。\n\n| 項目 | 式 |\n|---|---|\n| StatusQuo の損税 | L_SQ = τ0·P |\n| F・開始前 | L_F = τF·P(税率低下のみ) |\n| F・開始後 | L_F = (1−κ)·τF·P |\n| 損税削減 | L_SQ − L_F(=税率効果 (τ0−τF)·P + 課税化効果 κ·τF·P) |\n| 課税ベース拡大の税収効果 | ΔT_base = τF·R − κ·τF·P(開始後のみ。同一税率で未開始とした場合との差) |\n| 税率効果の税収 | ΔT_rate = (τF−τ0)·P(開始前のみ。マクロの減税と重複しうるため別掲) |\n| 帰着 | 公費補填 φ·τF·R / 消費者 (1−φ)·τF·R / 事業者残存 (1−θ)·κ·τF·P |\n\n損税削減と税収増は**別の量**です(税収増は τ×付加価値に近く、損税削減の 2 倍規模)。同一視しません(基準書 §4)。\n\n## 2. 基準ケースの結果(仮置き入力、全3部門合算、兆円/年)\n\n入力: 税率 10%→7.5%(2027)→5%(2028〜)。開始年: 教育2036、不動産賃貸2037、医療2038。κ=1。R(2025)=医療45・教育6・賃貸20、p=0.20/0.25/0.20、名目成長 1.5%。\n\n| 年 | τF | 損税 StatusQuo | 損税 F | 損税削減 | ΔT_base | ΔT_rate | ΔT_base − 公費補填 | 事業者残存 |\n|---|---|---|---|---|---|---|---|---|\n| 2026 | 10.0% | 1.47 | 1.47 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |\n| 2028 | 5.0% | 1.52 | 0.76 | 0.76 | 0.00 | −0.76 | 0.00 | 0.00 |\n| 2034 | 5.0% | 1.66 | 0.83 | 0.83 | 0.00 | −0.83 | 0.00 | 0.00 |\n| 2036 | 5.0% | 1.71 | 0.77 | 0.94 | 0.27 | −0.77 | 0.19 | 0.06 |\n| 2037 | 5.0% | 1.73 | 0.54 | 1.20 | 1.23 | −0.54 | 1.15 | 0.23 |\n| 2038 | 5.0% | 1.76 | 0.00 | 1.76 | 3.43 | 0.00 | 0.90 | 0.62 |\n| 2040 | 5.0% | 1.81 | 0.00 | 1.81 | 3.53 | 0.00 | 0.93 | 0.63 |\n| 2050 | 5.0% | 2.10 | 0.00 | 2.10 | 4.10 | 0.00 | 1.07 | 0.74 |\n| 2055 | 5.0% | 2.27 | 0.00 | 2.27 | 4.42 | 0.00 | 1.16 | 0.79 |\n\n累計(基準ケース): 〜2038 年 損税削減 10.7、ΔT_base 4.9、ΔT_rate −8.1。〜2055 年 損税削減 45.0、ΔT_base 71.7、公費補填 52.0、消費者負担 38.2、事業者残存 12.9、ΔT_base−公費補填 19.7。\n\n## 3. 構造から読み取れること(仮置きに依存しない部分を中心に)\n\n1. **2038 年より前の「損税削減」は、課税化の効果ではなく単なる税率低下の効果です。** 5% への減税先行により、課税化が始まる前の 2028〜2035 年にも損税は約半分になります。この部分を「損税解消の成果」と呼ぶと、F の成否を誤って評価します。モジュールは `rate_part` と `base_part` を分けて出します。\n2. **課税ベース拡大の税収増(ΔT_base)は、損税削減より大きいです。** ΔT_base は課税売上の税額から控除分を引いたもので、付加価値に税率を掛けた規模です。損税削減の約 2 倍です(基準ケースでは各年 1.95 倍前後)。「損税解消が税収を生む」という既存の物語と、「課税ベース拡大が税収を生む」は別の機構です。\n3. **医療は公費補填の仮定で結果が反転します。** 診療報酬で出力税を全額補填(φ=1)する場合、医療部門の純財政効果(ΔT_base − 公費補填)は負になり得ます(基準ケース φ=0.9 で 累計 −5.6 兆円)。φ の置き方が全体の符号を決めます(φ_medical=0.5/0.9/1.0 で 全体の累計は 42.1/19.7/14.2)。F の診療報酬の設計は、Owner の裁定が要る最大の点です。\n4. **κ(控除の実現率)を下げると、損税削減は減りますが、税収は増えます。** 控除を受けられない分が国庫に残るためです。κ は「執行の質」の指標で、国庫の観点では逆に作用します(F docx が κ<50% を監視指標にしている意味と整合)。\n5. **開始年の前倒し・後ろ倒しは、損税削減の累計には効きにくく、税収側の累計に大きく効きます。** 損税削減の累計は 47.9(全部門2034)/45.0(基準)/44.5(全部門2038)ですが、ΔT_base の累計は 83.5/71.7/70.2 です。\n\n## 4. 感度(21ケース、`sensitivity_summary.json`)\n\n仮置きの p を ×0.75/×1.25 にすると、2040 年の損税削減は 1.36/2.27 兆円。〜2055 年の累計は 33.7/56.2(κ=1、開始年は基準)。κ=0.5 では 26.8〜44.7。不確実性の主因は p(部門データ)と φ(公費補填)です。開始年の違いは累計の差に限られます。\n\n## 5. 検算\n\n- 自己検査(スクリプト内): 損税削減=税率部分+課税化部分、ΔT_base=課税売上税額−控除額、公費+消費者=出力税、κ=0 で課税化部分=0、τF=τ0 で税率部分=0、開始年を遠方にすると ΔT_base=0。すべて通過。\n- 手計算: 2040 年の損税削減 = 0.10×(14.5×1.015¹⁵=18.13)=1.813、ΔT_base=0.05×(88.77−18.13)=3.53(出力と一致)。医療 2038 年: R=54.61、P=10.92、L_SQ=1.092、ΔT_base=2.184(別計算と一致)。\n\n## 6. 次に要るもの(Owner / 他チャットの入力)\n\n- **部門データ**: 医療・教育・不動産賃貸の非課税売上 R と課税仕入・設備投資率 p(出典付き)。無ければ以降の数値は仕組みの確認に留まります。\n- 医療の公費負担(診療報酬での補填)の扱い(φ)。\n- 税率経路と部門別開始年(暫定入力の置換)。\n- 既存マクロ(engine)との接続は、本書の範囲外です。接続の方針(案3: 別表示のまま比較/案1・2: 係数へ写像)は、Owner 判断後に検討します。\n- 賃金初期値 380/400 は、本書の直接計算に不要のため未使用(F/StatusQuo の年次比較時に要裁定)。\n\n---\n*本書は仮定にもとづく計算の試作であり、政策の推奨や数値の保証ではありません。Finding Close、Acceptance、HOLD 解除、Canonical 化、engine の変更はいずれも行っていません。*\n",
+      "fixed_commit": "e87e43787ecac73297065ba026b6de41d4f072ee"
+    },
+    "candidate_csv": {
+      "filename": "SPE_F_Sonzei_Calculation_Input_Candidates_DRAFT_20261115.csv",
+      "bytes": 58122,
+      "sha256": "e3f45a64754f04c12abe6cbd26ead9aedc9fcab0a7f3e4423537396ec03462ac",
+      "utf8": "candidate_id,sector,subgroup,parameter,case_id,value,unit,value_type,reference_period,statistical_scope,sample_n,reported_amount_yen,net_taxable_base_yen,input_vat_yen,assumed_input_vat_rate,module_target,module_use,aggregation_rule,exclusive_group,formula,source_url,source_location,source_commit,source_row,missing_conditions\nMED-M01-GROSS,medical,一般病院・集計1全体,設備関係費のうち消費税課税対象費用,GROSS_10PCT,86140909.0909090909090909090909,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=184,184,94755000,86140909.0909090909090909090909,8614090.90909090909090909090909,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M01-ACCOUNTING,94755000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.394（PDF p.398）,9a2a24e66795338665de0165845d5a3697fb49d2,M01,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。賃借料除外の定義はR02参照。\nMED-M01-NET,medical,一般病院・集計1全体,設備関係費のうち消費税課税対象費用,NET_10PCT,94755000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=184,184,94755000,94755000,9475500.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M01-ACCOUNTING,94755000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.394（PDF p.398）,9a2a24e66795338665de0165845d5a3697fb49d2,M01,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。賃借料除外の定義はR02参照。\nMED-M02-GROSS,medical,一般病院・集計1全体,経費のうち消費税課税対象費用,GROSS_10PCT,106354545.454545454545454545455,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=184,184,116990000,106354545.454545454545454545455,10635454.5454545454545454545455,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M02-ACCOUNTING,116990000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.394（PDF p.398）,9a2a24e66795338665de0165845d5a3697fb49d2,M02,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M02-NET,medical,一般病院・集計1全体,経費のうち消費税課税対象費用,NET_10PCT,116990000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=184,184,116990000,116990000,11699000.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M02-ACCOUNTING,116990000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.394（PDF p.398）,9a2a24e66795338665de0165845d5a3697fb49d2,M02,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M03-GROSS,medical,一般病院・集計1全体,その他医業介護費用のうち消費税課税対象費用,GROSS_10PCT,16552727.2727272727272727272727,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=209,209,18208000,16552727.2727272727272727272727,1655272.72727272727272727272727,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M03-ACCOUNTING,18208000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.394（PDF p.398）,9a2a24e66795338665de0165845d5a3697fb49d2,M03,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M03-NET,medical,一般病院・集計1全体,その他医業介護費用のうち消費税課税対象費用,NET_10PCT,18208000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=209,209,18208000,18208000,1820800.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M03-ACCOUNTING,18208000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.394（PDF p.398）,9a2a24e66795338665de0165845d5a3697fb49d2,M03,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M04-GROSS,medical,精神科病院・集計1全体,設備関係費のうち消費税課税対象費用,GROSS_10PCT,19950000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=51,51,21945000,19950000,1995000,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M04-ACCOUNTING,21945000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.395（PDF p.399）,9a2a24e66795338665de0165845d5a3697fb49d2,M04,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。賃借料除外の定義はR02参照。\nMED-M04-NET,medical,精神科病院・集計1全体,設備関係費のうち消費税課税対象費用,NET_10PCT,21945000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=51,51,21945000,21945000,2194500.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M04-ACCOUNTING,21945000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.395（PDF p.399）,9a2a24e66795338665de0165845d5a3697fb49d2,M04,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。賃借料除外の定義はR02参照。\nMED-M05-GROSS,medical,精神科病院・集計1全体,経費のうち消費税課税対象費用,GROSS_10PCT,56570000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=42,42,62227000,56570000,5657000,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M05-ACCOUNTING,62227000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.395（PDF p.399）,9a2a24e66795338665de0165845d5a3697fb49d2,M05,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M05-NET,medical,精神科病院・集計1全体,経費のうち消費税課税対象費用,NET_10PCT,62227000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=42,42,62227000,62227000,6222700.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M05-ACCOUNTING,62227000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.395（PDF p.399）,9a2a24e66795338665de0165845d5a3697fb49d2,M05,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M06-GROSS,medical,精神科病院・集計1全体,その他医業介護費用のうち消費税課税対象費用,GROSS_10PCT,7762727.27272727272727272727273,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=50,50,8539000,7762727.27272727272727272727273,776272.727272727272727272727273,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M06-ACCOUNTING,8539000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.395（PDF p.399）,9a2a24e66795338665de0165845d5a3697fb49d2,M06,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M06-NET,medical,精神科病院・集計1全体,その他医業介護費用のうち消費税課税対象費用,NET_10PCT,8539000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=50,50,8539000,8539000,853900.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M06-ACCOUNTING,8539000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.395（PDF p.399）,9a2a24e66795338665de0165845d5a3697fb49d2,M06,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M07-GROSS,medical,一般診療所・集計2全体,その他医業介護費用のうち消費税課税対象費用,GROSS_10PCT,19292727.2727272727272727272727,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=337,337,21222000,19292727.2727272727272727272727,1929272.72727272727272727272727,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M07-ACCOUNTING,21222000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.396（PDF p.400）,9a2a24e66795338665de0165845d5a3697fb49d2,M07,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。賃借料除外の定義はR02参照。\nMED-M07-NET,medical,一般診療所・集計2全体,その他医業介護費用のうち消費税課税対象費用,NET_10PCT,21222000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=337,337,21222000,21222000,2122200.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M07-ACCOUNTING,21222000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.396（PDF p.400）,9a2a24e66795338665de0165845d5a3697fb49d2,M07,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。賃借料除外の定義はR02参照。\nMED-M08-GROSS,medical,歯科診療所・集計2全体,その他医業介護費用のうち消費税課税対象費用,GROSS_10PCT,12931818.1818181818181818181818,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=83,83,14225000,12931818.1818181818181818181818,1293181.81818181818181818181818,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M08-ACCOUNTING,14225000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.397（PDF p.401）,9a2a24e66795338665de0165845d5a3697fb49d2,M08,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。賃借料除外の定義はR02参照。\nMED-M08-NET,medical,歯科診療所・集計2全体,その他医業介護費用のうち消費税課税対象費用,NET_10PCT,14225000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=83,83,14225000,14225000,1422500.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M08-ACCOUNTING,14225000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.397（PDF p.401）,9a2a24e66795338665de0165845d5a3697fb49d2,M08,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。賃借料除外の定義はR02参照。\nMED-M09-GROSS,medical,保険薬局・集計2全体,その他経費のうち消費税課税対象費用,GROSS_10PCT,10761818.1818181818181818181818,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=310,310,11838000,10761818.1818181818181818181818,1076181.81818181818181818181818,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M09-ACCOUNTING,11838000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.398（PDF p.402）,9a2a24e66795338665de0165845d5a3697fb49d2,M09,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。賃借料除外の定義はR02参照。\nMED-M09-NET,medical,保険薬局・集計2全体,その他経費のうち消費税課税対象費用,NET_10PCT,11838000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,当該費目の回答施設n=310,310,11838000,11838000,1183800.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M09-ACCOUNTING,11838000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.398（PDF p.402）,9a2a24e66795338665de0165845d5a3697fb49d2,M09,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。賃借料除外の定義はR02参照。\nMED-M10-GROSS,medical,一般病院・集計1全体,医薬品費,GROSS_10PCT,455148181.818181818181818181818,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,通常損益集計n=732,732,500663000,455148181.818181818181818181818,45514818.1818181818181818181818,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M10-ACCOUNTING,500663000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.12（PDF p.16）,9a2a24e66795338665de0165845d5a3697fb49d2,M10,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。材料は費消額→購入フローの在庫調整が必要。\nMED-M10-NET,medical,一般病院・集計1全体,医薬品費,NET_10PCT,500663000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,通常損益集計n=732,732,500663000,500663000,50066300.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M10-ACCOUNTING,500663000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.12（PDF p.16）,9a2a24e66795338665de0165845d5a3697fb49d2,M10,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。材料は費消額→購入フローの在庫調整が必要。\nMED-M11-GROSS,medical,一般病院・集計1全体,給食用材料費,GROSS_8PCT,26316666.6666666666666666666667,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,通常損益集計n=732,732,28422000,26316666.6666666666666666666667,2105333.33333333333333333333334,0.08,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M11-ACCOUNTING,28422000/(1+0.08),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.12（PDF p.16）,9a2a24e66795338665de0165845d5a3697fb49d2,M11,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。材料は費消額→購入フローの在庫調整が必要。\nMED-M11-NET,medical,一般病院・集計1全体,給食用材料費,NET_8PCT,28422000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,通常損益集計n=732,732,28422000,28422000,2273760.00,0.08,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M11-ACCOUNTING,28422000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.12（PDF p.16）,9a2a24e66795338665de0165845d5a3697fb49d2,M11,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。材料は費消額→購入フローの在庫調整が必要。\nMED-M12-GROSS,medical,一般病院・集計1全体,診療材料費・医療消耗器具備品費,GROSS_10PCT,334116363.636363636363636363636,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,通常損益集計n=732,732,367528000,334116363.636363636363636363636,33411636.3636363636363636363636,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M12-ACCOUNTING,367528000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.12（PDF p.16）,9a2a24e66795338665de0165845d5a3697fb49d2,M12,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。材料は費消額→購入フローの在庫調整が必要。\nMED-M12-NET,medical,一般病院・集計1全体,診療材料費・医療消耗器具備品費,NET_10PCT,367528000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,通常損益集計n=732,732,367528000,367528000,36752800.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M12-ACCOUNTING,367528000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.12（PDF p.16）,9a2a24e66795338665de0165845d5a3697fb49d2,M12,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。材料は費消額→購入フローの在庫調整が必要。\nMED-M13-GROSS,medical,一般病院・集計1全体,委託費,GROSS_10PCT,251450000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,通常損益集計n=732,732,276595000,251450000,25145000,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M13-ACCOUNTING,276595000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.12（PDF p.16）,9a2a24e66795338665de0165845d5a3697fb49d2,M13,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M13-NET,medical,一般病院・集計1全体,委託費,NET_10PCT,276595000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,通常損益集計n=732,732,276595000,276595000,27659500.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NOT_COMPLETE_OPEX,M13-ACCOUNTING,276595000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.12（PDF p.16）,9a2a24e66795338665de0165845d5a3697fb49d2,M13,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M14-GROSS,medical,一般病院・集計1,設備投資額のうち消費税課税対象投資額,GROSS_10PCT,286016363.636363636363636363636,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,設備投資回答n=622；総投資額=336375千円/施設,622,314618000,286016363.636363636363636363636,28601636.3636363636363636363636,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NO_DEPRECIATION_ADD,M14-ACCOUNTING,314618000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.361（PDF p.365）,9a2a24e66795338665de0165845d5a3697fb49d2,M14,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M14-NET,medical,一般病院・集計1,設備投資額のうち消費税課税対象投資額,NET_10PCT,314618000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,設備投資回答n=622；総投資額=336375千円/施設,622,314618000,314618000,31461800.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NO_DEPRECIATION_ADD,M14-ACCOUNTING,314618000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.361（PDF p.365）,9a2a24e66795338665de0165845d5a3697fb49d2,M14,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M15-GROSS,medical,精神科病院・集計1,設備投資額のうち消費税課税対象投資額,GROSS_10PCT,57492727.2727272727272727272727,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,設備投資回答n=155；総投資額=67547千円/施設,155,63242000,57492727.2727272727272727272727,5749272.72727272727272727272727,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NO_DEPRECIATION_ADD,M15-ACCOUNTING,63242000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.361（PDF p.365）,9a2a24e66795338665de0165845d5a3697fb49d2,M15,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M15-NET,medical,精神科病院・集計1,設備投資額のうち消費税課税対象投資額,NET_10PCT,63242000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,設備投資回答n=155；総投資額=67547千円/施設,155,63242000,63242000,6324200.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NO_DEPRECIATION_ADD,M15-ACCOUNTING,63242000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.361（PDF p.365）,9a2a24e66795338665de0165845d5a3697fb49d2,M15,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M16-GROSS,medical,一般診療所・集計2全体,設備投資額のうち消費税課税対象投資額,GROSS_10PCT,5198181.81818181818181818181818,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,設備投資回答n=1498；総投資額=6629千円/施設,1498,5718000,5198181.81818181818181818181818,519818.181818181818181818181818,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NO_DEPRECIATION_ADD,M16-ACCOUNTING,5718000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.362（PDF p.366）,9a2a24e66795338665de0165845d5a3697fb49d2,M16,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M16-NET,medical,一般診療所・集計2全体,設備投資額のうち消費税課税対象投資額,NET_10PCT,5718000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,設備投資回答n=1498；総投資額=6629千円/施設,1498,5718000,5718000,571800.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NO_DEPRECIATION_ADD,M16-ACCOUNTING,5718000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.362（PDF p.366）,9a2a24e66795338665de0165845d5a3697fb49d2,M16,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M17-GROSS,medical,歯科診療所・集計2全体,設備投資額のうち消費税課税対象投資額,GROSS_10PCT,4233636.36363636363636363636364,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,設備投資回答n=284；総投資額=6203千円/施設,284,4657000,4233636.36363636363636363636364,423363.636363636363636363636364,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NO_DEPRECIATION_ADD,M17-ACCOUNTING,4657000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.362（PDF p.366）,9a2a24e66795338665de0165845d5a3697fb49d2,M17,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M17-NET,medical,歯科診療所・集計2全体,設備投資額のうち消費税課税対象投資額,NET_10PCT,4657000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,設備投資回答n=284；総投資額=6203千円/施設,284,4657000,4657000,465700.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NO_DEPRECIATION_ADD,M17-ACCOUNTING,4657000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.362（PDF p.366）,9a2a24e66795338665de0165845d5a3697fb49d2,M17,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M18-GROSS,medical,保険薬局・集計2（同一敷地内除く）,設備投資額のうち消費税課税対象投資額,GROSS_10PCT,1157272.72727272727272727272727,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,設備投資回答n=867；総投資額=1385千円/施設,867,1273000,1157272.72727272727272727272727,115727.272727272727272727272727,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NO_DEPRECIATION_ADD,M18-ACCOUNTING,1273000/(1+0.10),https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.362（PDF p.366）,9a2a24e66795338665de0165845d5a3697fb49d2,M18,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-M18-NET,medical,保険薬局・集計2（同一敷地内除く）,設備投資額のうち消費税課税対象投資額,NET_10PCT,1273000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,設備投資回答n=867；総投資額=1385千円/施設,867,1273000,1273000,127300.00,0.10,P_component_net,PARTIAL_COMPONENT,NO_CROSS_SAMPLE_SUM;NO_DEPRECIATION_ADD,M18-ACCOUNTING,1273000,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子p.362（PDF p.366）,9a2a24e66795338665de0165845d5a3697fb49d2,M18,全額が当該税率・当該会計方式という感度仮定。税率別実額・用途配賦・既存控除・標本一致未了。\nMED-BUNDLE-GROSS,medical,一般病院・通常損益n=732,医薬品・給食用材料・診療材料等・委託費の部分束,GROSS_FOOD8_OTHER10,1067031212.12121212121212121212,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,同一公表区分n=732。全課税経常費用ではない,732,1173208000,1067031212.12121212121212121212,106176787.878787878787878787879,MIXED_0.08_0.10,P_opex_partial_net,PARTIAL_COMPONENT,EXCLUSIVE_WITH_M10_M11_M12_M13;NO_CAPEX_SUM,GENERAL732-BUNDLE,Σ_component reported/(1+r) for GROSS;Σreported for NET,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子12頁／PDF16頁,9a2a24e66795338665de0165845d5a3697fb49d2,M10+M11+M12+M13,給食材料8%・他10%の感度仮定。通勤・賃借・その他費用・在庫増減・非課税診療配賦が不足。減価償却は不算入\nMED-BUNDLE-NET,medical,一般病院・通常損益n=732,医薬品・給食用材料・診療材料等・委託費の部分束,NET_FOOD8_OTHER10,1173208000,JPY/facility/year,ASSUMPTION_DERIVED,直近事業年(度)・2025年3月末までに終了（概ねFY2024/個人CY2024）,同一公表区分n=732。全課税経常費用ではない,732,1173208000,1173208000,116752360.00,MIXED_0.08_0.10,P_opex_partial_net,PARTIAL_COMPONENT,EXCLUSIVE_WITH_M10_M11_M12_M13;NO_CAPEX_SUM,GENERAL732-BUNDLE,Σ_component reported/(1+r) for GROSS;Σreported for NET,https://www.mhlw.go.jp/content/10808000/001599550.pdf,冊子12頁／PDF16頁,9a2a24e66795338665de0165845d5a3697fb49d2,M10+M11+M12+M13,給食材料8%・他10%の感度仮定。通勤・賃借・その他費用・在庫増減・非課税診療配賦が不足。減価償却は不算入\nMED-COMP-病院-compensation_A,medical,病院,compensation_A,REFERENCE,46397000,JPY/facility/year,OFFICIAL_SURVEY_ESTIMATE,FY2024,5→10%増分。薬価・特定保険医療材料除外。加重平均n=804,804,,,,,historical_compensation_separate,COMPENSATION_ONLY,NO_OFFSET_AGAINST_TOTAL_INPUT_VAT,,,https://www.mhlw.go.jp/content/10808000/001600994.pdf,資料p.6／PDF7頁,9a2a24e66795338665de0165845d5a3697fb49d2,M19–M22 A/B,全税負担・全国総額・将来補填撤回率・output VAT分担率phiとは別\nMED-COMP-病院-tax_increase_B,medical,病院,tax_increase_B,REFERENCE,44233000,JPY/facility/year,OFFICIAL_SURVEY_ESTIMATE,FY2024,5→10%増分。薬価・特定保険医療材料除外。加重平均n=804,804,,,,,historical_compensation_separate,COMPENSATION_ONLY,NO_OFFSET_AGAINST_TOTAL_INPUT_VAT,,,https://www.mhlw.go.jp/content/10808000/001600994.pdf,資料p.6／PDF7頁,9a2a24e66795338665de0165845d5a3697fb49d2,M19–M22 A/B,全税負担・全国総額・将来補填撤回率・output VAT分担率phiとは別\nMED-COMP-病院-A_minus_B,medical,病院,A_minus_B,REFERENCE,2164000,JPY/facility/year,DERIVED,FY2024,5→10%増分。薬価・特定保険医療材料除外。加重平均n=804,804,,,,,historical_compensation_separate,COMPENSATION_ONLY,NO_OFFSET_AGAINST_TOTAL_INPUT_VAT,,A−B,https://www.mhlw.go.jp/content/10808000/001600994.pdf,資料p.6／PDF7頁,9a2a24e66795338665de0165845d5a3697fb49d2,M19–M22 A/B,全税負担・全国総額・将来補填撤回率・output VAT分担率phiとは別\nMED-COMP-一般診療所-compensation_A,medical,一般診療所,compensation_A,REFERENCE,1359000,JPY/facility/year,OFFICIAL_SURVEY_ESTIMATE,FY2024,5→10%増分。薬価・特定保険医療材料除外。加重平均n=2032,2032,,,,,historical_compensation_separate,COMPENSATION_ONLY,NO_OFFSET_AGAINST_TOTAL_INPUT_VAT,,,https://www.mhlw.go.jp/content/10808000/001600994.pdf,資料p.6／PDF7頁,9a2a24e66795338665de0165845d5a3697fb49d2,M19–M22 A/B,全税負担・全国総額・将来補填撤回率・output VAT分担率phiとは別\nMED-COMP-一般診療所-tax_increase_B,medical,一般診療所,tax_increase_B,REFERENCE,1453000,JPY/facility/year,OFFICIAL_SURVEY_ESTIMATE,FY2024,5→10%増分。薬価・特定保険医療材料除外。加重平均n=2032,2032,,,,,historical_compensation_separate,COMPENSATION_ONLY,NO_OFFSET_AGAINST_TOTAL_INPUT_VAT,,,https://www.mhlw.go.jp/content/10808000/001600994.pdf,資料p.6／PDF7頁,9a2a24e66795338665de0165845d5a3697fb49d2,M19–M22 A/B,全税負担・全国総額・将来補填撤回率・output VAT分担率phiとは別\nMED-COMP-一般診療所-A_minus_B,medical,一般診療所,A_minus_B,REFERENCE,-94000,JPY/facility/year,DERIVED,FY2024,5→10%増分。薬価・特定保険医療材料除外。加重平均n=2032,2032,,,,,historical_compensation_separate,COMPENSATION_ONLY,NO_OFFSET_AGAINST_TOTAL_INPUT_VAT,,A−B,https://www.mhlw.go.jp/content/10808000/001600994.pdf,資料p.6／PDF7頁,9a2a24e66795338665de0165845d5a3697fb49d2,M19–M22 A/B,全税負担・全国総額・将来補填撤回率・output VAT分担率phiとは別\nMED-COMP-歯科診療所-compensation_A,medical,歯科診療所,compensation_A,REFERENCE,758000,JPY/facility/year,OFFICIAL_SURVEY_ESTIMATE,FY2024,5→10%増分。薬価・特定保険医療材料除外。加重平均n=465,465,,,,,historical_compensation_separate,COMPENSATION_ONLY,NO_OFFSET_AGAINST_TOTAL_INPUT_VAT,,,https://www.mhlw.go.jp/content/10808000/001600994.pdf,資料p.6／PDF7頁,9a2a24e66795338665de0165845d5a3697fb49d2,M19–M22 A/B,全税負担・全国総額・将来補填撤回率・output VAT分担率phiとは別\nMED-COMP-歯科診療所-tax_increase_B,medical,歯科診療所,tax_increase_B,REFERENCE,841000,JPY/facility/year,OFFICIAL_SURVEY_ESTIMATE,FY2024,5→10%増分。薬価・特定保険医療材料除外。加重平均n=465,465,,,,,historical_compensation_separate,COMPENSATION_ONLY,NO_OFFSET_AGAINST_TOTAL_INPUT_VAT,,,https://www.mhlw.go.jp/content/10808000/001600994.pdf,資料p.6／PDF7頁,9a2a24e66795338665de0165845d5a3697fb49d2,M19–M22 A/B,全税負担・全国総額・将来補填撤回率・output VAT分担率phiとは別\nMED-COMP-歯科診療所-A_minus_B,medical,歯科診療所,A_minus_B,REFERENCE,-83000,JPY/facility/year,DERIVED,FY2024,5→10%増分。薬価・特定保険医療材料除外。加重平均n=465,465,,,,,historical_compensation_separate,COMPENSATION_ONLY,NO_OFFSET_AGAINST_TOTAL_INPUT_VAT,,A−B,https://www.mhlw.go.jp/content/10808000/001600994.pdf,資料p.6／PDF7頁,9a2a24e66795338665de0165845d5a3697fb49d2,M19–M22 A/B,全税負担・全国総額・将来補填撤回率・output VAT分担率phiとは別\nMED-COMP-保険薬局-compensation_A,medical,保険薬局,compensation_A,REFERENCE,617000,JPY/facility/year,OFFICIAL_SURVEY_ESTIMATE,FY2024,5→10%増分。薬価・特定保険医療材料除外。加重平均n=1064,1064,,,,,historical_compensation_separate,COMPENSATION_ONLY,NO_OFFSET_AGAINST_TOTAL_INPUT_VAT,,,https://www.mhlw.go.jp/content/10808000/001600994.pdf,資料p.6／PDF7頁,9a2a24e66795338665de0165845d5a3697fb49d2,M19–M22 A/B,全税負担・全国総額・将来補填撤回率・output VAT分担率phiとは別\nMED-COMP-保険薬局-tax_increase_B,medical,保険薬局,tax_increase_B,REFERENCE,595000,JPY/facility/year,OFFICIAL_SURVEY_ESTIMATE,FY2024,5→10%増分。薬価・特定保険医療材料除外。加重平均n=1064,1064,,,,,historical_compensation_separate,COMPENSATION_ONLY,NO_OFFSET_AGAINST_TOTAL_INPUT_VAT,,,https://www.mhlw.go.jp/content/10808000/001600994.pdf,資料p.6／PDF7頁,9a2a24e66795338665de0165845d5a3697fb49d2,M19–M22 A/B,全税負担・全国総額・将来補填撤回率・output VAT分担率phiとは別\nMED-COMP-保険薬局-A_minus_B,medical,保険薬局,A_minus_B,REFERENCE,22000,JPY/facility/year,DERIVED,FY2024,5→10%増分。薬価・特定保険医療材料除外。加重平均n=1064,1064,,,,,historical_compensation_separate,COMPENSATION_ONLY,NO_OFFSET_AGAINST_TOTAL_INPUT_VAT,,A−B,https://www.mhlw.go.jp/content/10808000/001600994.pdf,資料p.6／PDF7頁,9a2a24e66795338665de0165845d5a3697fb49d2,M19–M22 A/B,全税負担・全国総額・将来補填撤回率・output VAT分担率phiとは別\nMED-N-一般病院,medical,一般病院,全国活動中施設数,REFERENCE,7003.000000,facilities,OFFICIAL_COUNT,2024-10-01,医療施設（動態）調査・活動中,,,,,,population_count_reference,WEIGHT_REFERENCE_ONLY,NOT_AN_EXPANSION_WEIGHT,,,https://www.mhlw.go.jp/toukei/saikin/hw/iryosd/24/dl/02sisetu06.pdf,概要冊子5頁／PDF1頁 表1,,,経済実態調査の集計1（介護割合2%未満等）・開設者・病床規模・標本無回答補正との一致が未了\nMED-N-精神科病院,medical,精神科病院,全国活動中施設数,REFERENCE,1057.000000,facilities,OFFICIAL_COUNT,2024-10-01,医療施設（動態）調査・活動中,,,,,,population_count_reference,WEIGHT_REFERENCE_ONLY,NOT_AN_EXPANSION_WEIGHT,,,https://www.mhlw.go.jp/toukei/saikin/hw/iryosd/24/dl/02sisetu06.pdf,概要冊子5頁／PDF1頁 表1,,,経済実態調査の集計1（介護割合2%未満等）・開設者・病床規模・標本無回答補正との一致が未了\nMED-N-一般診療所,medical,一般診療所,全国活動中施設数,REFERENCE,105207.000000,facilities,OFFICIAL_COUNT,2024-10-01,医療施設（動態）調査・活動中,,,,,,population_count_reference,WEIGHT_REFERENCE_ONLY,NOT_AN_EXPANSION_WEIGHT,,,https://www.mhlw.go.jp/toukei/saikin/hw/iryosd/24/dl/02sisetu06.pdf,概要冊子5頁／PDF1頁 表1,,,経済実態調査の集計1（介護割合2%未満等）・開設者・病床規模・標本無回答補正との一致が未了\nMED-N-歯科診療所,medical,歯科診療所,全国活動中施設数,REFERENCE,66378.000000,facilities,OFFICIAL_COUNT,2024-10-01,医療施設（動態）調査・活動中,,,,,,population_count_reference,WEIGHT_REFERENCE_ONLY,NOT_AN_EXPANSION_WEIGHT,,,https://www.mhlw.go.jp/toukei/saikin/hw/iryosd/24/dl/02sisetu06.pdf,概要冊子5頁／PDF1頁 表1,,,経済実態調査の集計1（介護割合2%未満等）・開設者・病床規模・標本無回答補正との一致が未了\nMED-N-PHARMACY,medical,薬局,全国薬局数,REFERENCE,63203.000000,facilities,OFFICIAL_COUNT,FY2024末,衛生行政報告例。保険薬局限定・同一敷地内除外ではない,,,,,,population_count_reference,WEIGHT_REFERENCE_ONLY,NOT_AN_EXPANSION_WEIGHT,,,https://www.mhlw.go.jp/toukei/saikin/hw/eisei_houkoku/24/dl/houdou.pdf,薬事関係。2025-10-21公表,,,保険指定・同一敷地内・開設法人等の対応施設数が不足\nEDU-R-PUB,education,公立学校等（大学・短大除く）,授業料＋入学金＋検定料,REFERENCE,232215552000,JPY/year,DERIVED,FY2023,cash_collection,,,,,,R_subset,SUBSET_R_ONLY,ALTERNATIVES_NOT_NATIONAL_TOTAL,PUB-WITH-OR-WITHOUT-KINDER,,https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040409203&fileKind=0,第11表D10:F10／こども園はD12:F12,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,R02-E04/E05,全国全学校ではない。暦年2025変換・対象学納金の税務範囲・附属/併設校対応が未了\nEDU-R-PUB-EX-KINDER,education,公立学校等（こども園除外ケース）,授業料＋入学金＋検定料,REFERENCE,228347735000,JPY/year,ASSUMPTION_DERIVED,FY2023,cash_collection,,,,,,R_subset,SUBSET_R_ONLY,ALTERNATIVES_NOT_NATIONAL_TOTAL,PUB-WITH-OR-WITHOUT-KINDER,,https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040409203&fileKind=0,第11表D10:F10／こども園はD12:F12,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,R02-E04/E05,全国全学校ではない。暦年2025変換・対象学納金の税務範囲・附属/併設校対応が未了\nEDU-R-NAT-CASH,education,82国立大学法人,授業料＋入学金＋検定料のCF収入,REFERENCE,321900000000,JPY/year,DERIVED,FY2023,cash_flow,,,,,,R_subset,SUBSET_R_ONLY,ALTERNATIVES_NOT_NATIONAL_TOTAL,NAT-CASH-OR-ACCRUAL,(2722+404+93)×10^8,https://www.mext.go.jp/content/20250331-mxt_hojinka-000041313_2.pdf,CF冊子4頁／PL冊子3頁；私立は既存初回調査,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,NAT-CASH,全国全学校ではない。暦年2025変換・対象学納金の税務範囲・附属/併設校対応が未了\nEDU-R-NAT-ACCRUAL,education,82国立大学法人,学生納付金収益,REFERENCE,359300000000,JPY/year,OFFICIAL_AGGREGATE,FY2023,accrual,,,,,,R_subset,SUBSET_R_ONLY,ALTERNATIVES_NOT_NATIONAL_TOTAL,NAT-CASH-OR-ACCRUAL,,https://www.mext.go.jp/content/20250331-mxt_hojinka-000041313_01.pdf,CF冊子4頁／PL冊子3頁；私立は既存初回調査,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,NAT-ACCRUAL,全国全学校ではない。暦年2025変換・対象学納金の税務範囲・附属/併設校対応が未了\nEDU-R-PRIVATE,education,私立613法人（医歯学部法人等を除く）,学生生徒等納付金proxy,REFERENCE,2939007400000,JPY/year,DERIVED,FY2023,accrual_approx,,,,,,R_subset,SUBSET_R_ONLY,ALTERNATIVES_NOT_NATIONAL_TOTAL,,4.1629e12×.706,https://www.mext.go.jp/content/20250310-mxt_sigakugy-000040820_6.pdf,CF冊子4頁／PL冊子3頁；私立は既存初回調査,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,PRIVATE,全国全学校ではない。暦年2025変換・対象学納金の税務範囲・附属/併設校対応が未了\nEDU-R-CASH-SUBSET,education,国立CF＋公立3費目,FY2023学納金部分合計,REFERENCE,554115552000,JPY/year,DERIVED_WITH_SCOPE_LIMIT,FY2023,設置主体が分かれた部分集合。現金系列と収益系列を別々に集計,,,,,,R_subset,SUBSET_R_ONLY,NO_ADD_TO_COMPONENTS;NO_CASH_PLUS_ACCRUAL,EDUCATION-PARTIAL-AGGREGATION,321900000000+232215552000,https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040409203&fileKind=0 ; https://www.mext.go.jp/content/20250331-mxt_hojinka-000041313_01.pdf ; https://www.mext.go.jp/content/20250310-mxt_sigakugy-000040820_6.pdf,R02教育節＋既存補完報告E01–04,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,本CSV EDU-R-*,除外学校・費目の一致・法人併設校重複確認。全国値ではない。全ケースを互いに加算しない\nEDU-R-CASH-SUBSET-EX-KINDER,education,国立CF＋公立3費目（こども園除外）,FY2023学納金部分合計,REFERENCE,550247735000,JPY/year,DERIVED_WITH_SCOPE_LIMIT,FY2023,設置主体が分かれた部分集合。現金系列と収益系列を別々に集計,,,,,,R_subset,SUBSET_R_ONLY,NO_ADD_TO_COMPONENTS;NO_CASH_PLUS_ACCRUAL,EDUCATION-PARTIAL-AGGREGATION,321900000000+228347735000,https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040409203&fileKind=0 ; https://www.mext.go.jp/content/20250331-mxt_hojinka-000041313_01.pdf ; https://www.mext.go.jp/content/20250310-mxt_sigakugy-000040820_6.pdf,R02教育節＋既存補完報告E01–04,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,本CSV EDU-R-*,除外学校・費目の一致・法人併設校重複確認。全国値ではない。全ケースを互いに加算しない\nEDU-R-ACCRUAL-SUBSET,education,国立PL＋私立613法人proxy,FY2023学納金部分合計,REFERENCE,3298307400000,JPY/year,DERIVED_WITH_SCOPE_LIMIT,FY2023,設置主体が分かれた部分集合。現金系列と収益系列を別々に集計,,,,,,R_subset,SUBSET_R_ONLY,NO_ADD_TO_COMPONENTS;NO_CASH_PLUS_ACCRUAL,EDUCATION-PARTIAL-AGGREGATION,359300000000+2939007400000,https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040409203&fileKind=0 ; https://www.mext.go.jp/content/20250331-mxt_hojinka-000041313_01.pdf ; https://www.mext.go.jp/content/20250310-mxt_sigakugy-000040820_6.pdf,R02教育節＋既存補完報告E01–04,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,本CSV EDU-R-*,除外学校・費目の一致・法人併設校重複確認。全国値ではない。全ケースを互いに加算しない\nEDU-COST-PURCHASE-CF,education,82国立大学法人（4共同利用機関を除く）,原材料・商品・サービス購入支出,REFERENCE,1392000000000,JPY/year,OFFICIAL_AGGREGATE,FY2023,附属病院・研究等を含む法人集計。原表支出は負号、ここでは支出絶対額,,,,,,education_cost_classification_reference,COST_ENVELOPE_ONLY,CF_AND_PL_NOT_ADDITIVE,,13920×10^8,https://www.mext.go.jp/content/20250331-mxt_hojinka-000041313_2.pdf,CF冊子4頁,,既存取得PDFの未整理列を今回抽出,教育/附属病院/研究按分・給与内通勤・課税率別・税込税抜・土地・償却/在庫。購入CFでも全額課税としない\nEDU-COST-PAYROLL-CF,education,82国立大学法人（4共同利用機関を除く）,人件費支出,REFERENCE,1604800000000,JPY/year,OFFICIAL_AGGREGATE,FY2023,附属病院・研究等を含む法人集計。原表支出は負号、ここでは支出絶対額,,,,,,education_cost_classification_reference,COST_ENVELOPE_ONLY,CF_AND_PL_NOT_ADDITIVE,,16048×10^8,https://www.mext.go.jp/content/20250331-mxt_hojinka-000041313_2.pdf,CF冊子4頁,,既存取得PDFの未整理列を今回抽出,教育/附属病院/研究按分・給与内通勤・課税率別・税込税抜・土地・償却/在庫。購入CFでも全額課税としない\nEDU-COST-CAPEX-CF,education,82国立大学法人（4共同利用機関を除く）,有形・無形固定資産取得支出,REFERENCE,364300000000,JPY/year,OFFICIAL_AGGREGATE,FY2023,附属病院・研究等を含む法人集計。原表支出は負号、ここでは支出絶対額,,,,,,education_cost_classification_reference,COST_ENVELOPE_ONLY,CF_AND_PL_NOT_ADDITIVE,,3643×10^8,https://www.mext.go.jp/content/20250331-mxt_hojinka-000041313_2.pdf,CF冊子4頁,,既存取得PDFの未整理列を今回抽出,教育/附属病院/研究按分・給与内通勤・課税率別・税込税抜・土地・償却/在庫。購入CFでも全額課税としない\nEDU-COST-EDU-PL,education,82国立大学法人（4共同利用機関を除く）,教育経費,REFERENCE,178100000000,JPY/year,OFFICIAL_AGGREGATE,FY2023,附属病院・研究等を含む法人集計。原表支出は負号、ここでは支出絶対額,,,,,,education_cost_classification_reference,COST_ENVELOPE_ONLY,CF_AND_PL_NOT_ADDITIVE,,1781×10^8,https://www.mext.go.jp/content/20250331-mxt_hojinka-000041313_2.pdf,PL冊子3頁,,既存取得PDFの未整理列を今回抽出,教育/附属病院/研究按分・給与内通勤・課税率別・税込税抜・土地・償却/在庫。購入CFでも全額課税としない\nEDU-COST-RESEARCH-PL,education,82国立大学法人（4共同利用機関を除く）,研究経費,REFERENCE,267400000000,JPY/year,OFFICIAL_AGGREGATE,FY2023,附属病院・研究等を含む法人集計。原表支出は負号、ここでは支出絶対額,,,,,,education_cost_classification_reference,COST_ENVELOPE_ONLY,CF_AND_PL_NOT_ADDITIVE,,2674×10^8,https://www.mext.go.jp/content/20250331-mxt_hojinka-000041313_2.pdf,PL冊子3頁,,既存取得PDFの未整理列を今回抽出,教育/附属病院/研究按分・給与内通勤・課税率別・税込税抜・土地・償却/在庫。購入CFでも全額課税としない\nEDU-COST-ADMIN-PL,education,82国立大学法人（4共同利用機関を除く）,一般管理費,REFERENCE,94100000000,JPY/year,OFFICIAL_AGGREGATE,FY2023,附属病院・研究等を含む法人集計。原表支出は負号、ここでは支出絶対額,,,,,,education_cost_classification_reference,COST_ENVELOPE_ONLY,CF_AND_PL_NOT_ADDITIVE,,941×10^8,https://www.mext.go.jp/content/20250331-mxt_hojinka-000041313_2.pdf,PL冊子3頁,,既存取得PDFの未整理列を今回抽出,教育/附属病院/研究按分・給与内通勤・課税率別・税込税抜・土地・償却/在庫。購入CFでも全額課税としない\nEDU-DEPRECIATION,education,82国立大学法人,当期減価償却費,REFERENCE,,JPY/year,MISSING,FY2023,減価償却累計額は当期費用と異なる,,,,,,exclude_from_current_taxable_purchases,MISSING_NOT_ZERO,DO_NOT_ADD_ACCUMULATED_DEPRECIATION,,,https://www.mext.go.jp/content/20250331-mxt_hojinka-000041313_2.pdf,貸借対照表とPL分類,,,当期費用額と活動別配賦未取得。教育経費から未確認額を任意控除しない\nRENT-R-KNOWN,rental,専用住宅の借家,年間家賃proxy,REFERENCE,13741592563200,JPY/year,DERIVED_STOCK_ANNUALIZATION,2023-10時点の年間化,不詳204000戸。ゼロ308500戸は平均に含む。共益費等除外,,,,,,R_subset,SUBSET_R_ONLY,DO_NOT_SUM,RENT-R-KNOWN-OR-IMPUTED,12×(19399600−204000)×59656,https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040210070&fileKind=0,住宅土地統計表126／R02住宅節,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,R02-H40–45,暦年2025・年中変動・不詳・共益費等税務家賃の差。下限上限という統計区間ではない\nRENT-R-IMPUTED,rental,専用住宅の借家,年間家賃proxy,REFERENCE,13887630451200,JPY/year,ASSUMPTION_DERIVED,2023-10時点の年間化,不詳204000戸。ゼロ308500戸は平均に含む。共益費等除外,,,,,,R_subset,SUBSET_R_ONLY,DO_NOT_SUM,RENT-R-KNOWN-OR-IMPUTED,12×19399600×59656,https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040210070&fileKind=0,住宅土地統計表126／R02住宅節,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,R02-H40–45,暦年2025・年中変動・不詳・共益費等税務家賃の差。下限上限という統計区間ではない\nRENT-RAW-N,rental,専用住宅の借家,家賃proxy基礎N,REFERENCE,19399600.000000,dwellings,OFFICIAL_SURVEY_ESTIMATE,2023-10-01,住宅土地統計表126,,,,,,,RENT_FORMULA_INPUT,DO_NOT_SUM,,,https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040210070&fileKind=0,表126／R02-H40–42,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,R02-H40–42,\nRENT-RAW-UNKNOWN,rental,専用住宅の借家,家賃proxy基礎UNKNOWN,REFERENCE,204000.000000,dwellings,OFFICIAL_SURVEY_ESTIMATE,2023-10-01,住宅土地統計表126,,,,,,,RENT_FORMULA_INPUT,DO_NOT_SUM,,,https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040210070&fileKind=0,表126／R02-H40–42,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,R02-H40–42,\nRENT-RAW-MONTHLY,rental,専用住宅の借家,家賃proxy基礎MONTHLY,REFERENCE,59656.000000,JPY/month,OFFICIAL_SURVEY_ESTIMATE,2023-10-01,住宅土地統計表126,,,,,,,RENT_FORMULA_INPUT,DO_NOT_SUM,,,https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040210070&fileKind=0,表126／R02-H40–42,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,R02-H40–42,\nRENT-PLAN,rental,新築居住専用・利用関係単一の貸家,工事費予定額,REFERENCE,4287214150000,JPY,DERIVED_OFFICIAL_PLANS,FY2024,着工2期間合計329929戸。実際の当期取得ではない,,,,,,planned_capex_reference,NOT_P_OR_CREDIT_INPUT,DO_NOT_SUM,,(310928237+117793178)×10000,https://www.e-stat.go.jp/stat-search/files?cycle=8&layout=datalist&month=0&page=1&tclass1val=0&toukei=00600120&tstat=000001016966&year=20241,住宅着工第32表 B032!I12・2期間,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,R02-H30,税含否・契約単位・取得期・完成率・用途・政策上の控除可否\nRENT-PLAN-TAX-GROSS,rental,予定工事費の会計感度,税込10%仮定,GROSS_10PCT,3897467409090.90909090909090909,JPY,ASSUMPTION_DERIVED,FY2024,計画額の税区分感度のみ。実投資・控除可能額ではない,,4287214150000,3897467409090.90909090909090909,389746740909.090909090909090909,0.1,planned_tax_base_reference,NOT_P_OR_CREDIT_INPUT,DO_NOT_SUM,RENT-PLAN-ACCOUNTING,plan/1.1,https://www.e-stat.go.jp/stat-search/files?cycle=8&layout=datalist&month=0&page=1&tclass1val=0&toukei=00600120&tstat=000001016966&year=20241,R02-H31–32,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,,工期配分・費用包含・税率・法的控除条件が不足\nRENT-PLAN-TAX-NET,rental,予定工事費の会計感度,税抜10%仮定,NET_10PCT,4287214150000,JPY,ASSUMPTION_DERIVED,FY2024,計画額の税区分感度のみ。実投資・控除可能額ではない,,4287214150000,4287214150000,428721415000.0,0.1,planned_tax_base_reference,NOT_P_OR_CREDIT_INPUT,DO_NOT_SUM,RENT-PLAN-ACCOUNTING,plan,https://www.e-stat.go.jp/stat-search/files?cycle=8&layout=datalist&month=0&page=1&tclass1val=0&toukei=00600120&tstat=000001016966&year=20241,R02-H31–32,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,,工期配分・費用包含・税率・法的控除条件が不足\nRENT-REPAIR,rental,賃貸住宅改修等,改修等受注高proxy,REFERENCE,924300000000,JPY,OFFICIAL_ESTIMATE_ROUNDED,FY2024,受注高。修繕・改良等を含むため修繕費だけではない,,,,,,repair_order_reference,NOT_ACTUAL_REPAIR_P,DO_NOT_SUM,,,https://www.mlit.go.jp/report/press/content/001894228.xlsx,R02-H46／前回補完報告,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,,完成・計上時期・修繕と資本的支出分離・税率・税込税抜・重複調整\nRENT-MGMT-3,rental,既知家賃×全戸委託の条件付き感度,税込管理委託費候補,FEE_GROSS10_COVERAGE100,374770706269.090909090909090909,JPY/year,ASSUMPTION_DERIVED,2023家賃水準の静態感度,委託率100%を仮置き。料率3/5/10%は業者調査に基づく感度点,,412247776896.00,374770706269.090909090909090909,37477070626.909090909090909091,0.1,P_management_partial_net,CONDITIONAL_PARTIAL_P,EXCLUSIVE_WITH_OTHER_MANAGEMENT_CASES,RENT-MANAGEMENT-RATE,13741592563200×0.03×coverage/1.1；coverage=1例,https://www.mlit.go.jp/tochi_fudousan_kensetsugyo/const/content/001971280.pdf,R02-H47／管理受託調査,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,,\"全国実測率でない。任意のcoverage∈[0,1]で本値を比例縮小。費率の税含否も仮定。2025年変換・現行控除は別\"\nRENT-MGMT-5,rental,既知家賃×全戸委託の条件付き感度,税込管理委託費候補,FEE_GROSS10_COVERAGE100,624617843781.818181818181818182,JPY/year,ASSUMPTION_DERIVED,2023家賃水準の静態感度,委託率100%を仮置き。料率3/5/10%は業者調査に基づく感度点,,687079628160.00,624617843781.818181818181818182,62461784378.181818181818181818,0.1,P_management_partial_net,CONDITIONAL_PARTIAL_P,EXCLUSIVE_WITH_OTHER_MANAGEMENT_CASES,RENT-MANAGEMENT-RATE,13741592563200×0.05×coverage/1.1；coverage=1例,https://www.mlit.go.jp/tochi_fudousan_kensetsugyo/const/content/001971280.pdf,R02-H47／管理受託調査,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,,\"全国実測率でない。任意のcoverage∈[0,1]で本値を比例縮小。費率の税含否も仮定。2025年変換・現行控除は別\"\nRENT-MGMT-10,rental,既知家賃×全戸委託の条件付き感度,税込管理委託費候補,FEE_GROSS10_COVERAGE100,1249235687563.63636363636363636,JPY/year,ASSUMPTION_DERIVED,2023家賃水準の静態感度,委託率100%を仮置き。料率3/5/10%は業者調査に基づく感度点,,1374159256320.00,1249235687563.63636363636363636,124923568756.36363636363636364,0.1,P_management_partial_net,CONDITIONAL_PARTIAL_P,EXCLUSIVE_WITH_OTHER_MANAGEMENT_CASES,RENT-MANAGEMENT-RATE,13741592563200×0.10×coverage/1.1；coverage=1例,https://www.mlit.go.jp/tochi_fudousan_kensetsugyo/const/content/001971280.pdf,R02-H47／管理受託調査,b865861d9e7605c39c9c7c2d2d632cdda60b55ce,,\"全国実測率でない。任意のcoverage∈[0,1]で本値を比例縮小。費率の税含否も仮定。2025年変換・現行控除は別\"\nRENT-RULE-CREDIT-SQ,rental,制度条件,制限対象の居住用賃貸建物に係る仕入税額控除率,REFERENCE,0.000000,ratio,LEGAL_CONDITIONAL_VALUE,2026-11-15確認,全国金額ではない。条件別の制度入力,,,,,,credit_eligibility_separate,RULE_CONDITION,DO_NOT_SUM,,,https://www.nta.go.jp/law/tsutatsu/kihon/shohi/20230930/11/08.htm,消費税法30条10項・消基通11-7-1〜5,,,条件に該当する建物だけ。課税用部分・後年調整・契約経過措置等は個別判定\nRENT-RULE-THRESHOLD,rental,制度条件,高額特定資産の税抜一取引単位閾値,REFERENCE,10000000.000000,JPY,LEGAL_CONDITIONAL_VALUE,2026-11-15確認,全国金額ではない。条件別の制度入力,,,,,,credit_eligibility_separate,RULE_CONDITION,DO_NOT_SUM,,,https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6502.htm,No.6502,,,工事費の一戸平均で判定しない。建物/取引単位・自己建設の累計判定\nRENT-RULE-F-CAPEX-CREDIT,rental,制度条件,Fでの居住用賃貸建物の取得税額控除率,REFERENCE,,ratio,MISSING,2026-11-15確認,全国金額ではない。条件別の制度入力,,,,,,credit_eligibility_separate,MISSING_NOT_ZERO,DO_NOT_SUM,,,https://www.nta.go.jp/law/tsutatsu/kihon/shohi/20230930/11/08.htm,現行制限とFの控除実現率を分離,,,課税化だけで自動控除としない。制限の制度変更・適用関係・時期が必要\nGAP-medical-R_2025,medical,全国同一定義・暦年2025,R_2025,REFERENCE,,trillion_JPY,MISSING,CY2025,prototype sectors.medical.R_2025,,,,,,sectors.medical.R_2025,NO_DIRECT_REPLACEMENT,DO_NOT_SUM,,,https://github.com/spe-flatvat/SPE/blob/e87e43787ecac73297065ba026b6de41d4f072ee/handoff/claude-sonzei-min-20261114/SPE_sonzei_min_inputs_DRAFT.json,入力定義,e87e43787ecac73297065ba026b6de41d4f072ee,,本CSVの部分集合・会計感度から全国2025値を自動生成しない。既存無出典値を出典確定へ昇格しない\nGAP-medical-p_ratio,medical,全国同一定義・暦年2025,p_ratio,REFERENCE,,ratio,MISSING,CY2025,prototype sectors.medical.p_ratio,,,,,,sectors.medical.p_ratio,NO_DIRECT_REPLACEMENT,DO_NOT_SUM,,,https://github.com/spe-flatvat/SPE/blob/e87e43787ecac73297065ba026b6de41d4f072ee/handoff/claude-sonzei-min-20261114/SPE_sonzei_min_inputs_DRAFT.json,入力定義,e87e43787ecac73297065ba026b6de41d4f072ee,,本CSVの部分集合・会計感度から全国2025値を自動生成しない。既存無出典値を出典確定へ昇格しない\nGAP-education-R_2025,education,全国同一定義・暦年2025,R_2025,REFERENCE,,trillion_JPY,MISSING,CY2025,prototype sectors.education.R_2025,,,,,,sectors.education.R_2025,NO_DIRECT_REPLACEMENT,DO_NOT_SUM,,,https://github.com/spe-flatvat/SPE/blob/e87e43787ecac73297065ba026b6de41d4f072ee/handoff/claude-sonzei-min-20261114/SPE_sonzei_min_inputs_DRAFT.json,入力定義,e87e43787ecac73297065ba026b6de41d4f072ee,,本CSVの部分集合・会計感度から全国2025値を自動生成しない。既存無出典値を出典確定へ昇格しない\nGAP-education-p_ratio,education,全国同一定義・暦年2025,p_ratio,REFERENCE,,ratio,MISSING,CY2025,prototype sectors.education.p_ratio,,,,,,sectors.education.p_ratio,NO_DIRECT_REPLACEMENT,DO_NOT_SUM,,,https://github.com/spe-flatvat/SPE/blob/e87e43787ecac73297065ba026b6de41d4f072ee/handoff/claude-sonzei-min-20261114/SPE_sonzei_min_inputs_DRAFT.json,入力定義,e87e43787ecac73297065ba026b6de41d4f072ee,,本CSVの部分集合・会計感度から全国2025値を自動生成しない。既存無出典値を出典確定へ昇格しない\nGAP-rental-R_2025,rental,全国同一定義・暦年2025,R_2025,REFERENCE,,trillion_JPY,MISSING,CY2025,prototype sectors.rental.R_2025,,,,,,sectors.rental.R_2025,NO_DIRECT_REPLACEMENT,DO_NOT_SUM,,,https://github.com/spe-flatvat/SPE/blob/e87e43787ecac73297065ba026b6de41d4f072ee/handoff/claude-sonzei-min-20261114/SPE_sonzei_min_inputs_DRAFT.json,入力定義,e87e43787ecac73297065ba026b6de41d4f072ee,,本CSVの部分集合・会計感度から全国2025値を自動生成しない。既存無出典値を出典確定へ昇格しない\nGAP-rental-p_ratio,rental,全国同一定義・暦年2025,p_ratio,REFERENCE,,ratio,MISSING,CY2025,prototype sectors.rental.p_ratio,,,,,,sectors.rental.p_ratio,NO_DIRECT_REPLACEMENT,DO_NOT_SUM,,,https://github.com/spe-flatvat/SPE/blob/e87e43787ecac73297065ba026b6de41d4f072ee/handoff/claude-sonzei-min-20261114/SPE_sonzei_min_inputs_DRAFT.json,入力定義,e87e43787ecac73297065ba026b6de41d4f072ee,,本CSVの部分集合・会計感度から全国2025値を自動生成しない。既存無出典値を出典確定へ昇格しない\n",
+      "fixed_commit": "05d2ea052ffbfb206193166d43d4656a6b7fdc36"
+    },
+    "candidate_notes": {
+      "filename": "SPE_F_Sonzei_Input_Bridge_Notes_DRAFT_20261115.md",
+      "bytes": 14051,
+      "sha256": "15d6e65a28a2f903b4dbc5fa1856670aa6b99a735cce032098504adf95a4801e",
+      "utf8": "# SPE｜損税モデル 計算用入力候補の接続メモ\n\nStatus: DRAFT / NON-CANONICAL / PARTIAL INPUT BRIDGE  \n作成日時: 2026-11-15T09:54:24+00:00  \n対象: Claudeの医療・教育・住宅賃貸3部門試作。全国完全値への置換・正式エンジン改修ではない。\n\n## 使用ファイルと読み方\n\n計算用CSVは **`SPE_F_Sonzei_Calculation_Input_Candidates_DRAFT_20261115.csv`**、91データ行。金額は原則円、施設別なら円/施設/年。入力定義の兆円への変換は円÷10^12。UTF-8・LF、空欄は未取得でゼロではない。\n\n各行の `module_target` は接続先の意味であり、既存モジュールがその新しいキーを既に受け付けると保証しない。`module_use` が使用範囲、`exclusive_group` が同時採用禁止の選択肢、`aggregation_rule` が合算上の制限。`value_type` で公的集計・派生値・仮定・未取得を区別する。`source_url/location/commit/row` で元値へ戻れる。\n\n**使い方は、1ケース・1範囲を選び、対象期間・会計方式・費目重複を揃えてから計算する。CSV全行の単純合計は禁止。** 税込/税抜の2ケース、国立のCF/PL、公立のこども園有無、家賃既知/不詳補完、管理料率はそれぞれ排他的な選択肢。\n\n## 既存成果の再利用\n\nR02固定Commitは `b865861d9e7605c39c9c7c2d2d632cdda60b55ce`。`handoff/f-sonzei-source-followup-20261115/` のR02報告とCSVをGitHub連携Base64で取得し、実バイトSHAを確認した。24,357 bytes / `0342161f120e4a050af17737565d54d12609c1aa3e41b57d5b4b6cb209588381`、29,504 bytes / `a91a032663a1638c430fa24afc00dcebdf44d3456ceb61e7f958e229ec0ce659`。今回照合PASS。既存調査済み統計の再調査ではなく、計算入力にする原本の取得確認である。\n\n施設別経常費・投資・補填の元行は前回104行CSV、固定Commit `9a2a24e66795338665de0165845d5a3697fb49d2` に由来する。既存取得PDF・実測PASSを再利用した。今回追加したのは施設数・現行控除条件と、既存国立大学PDFの未整理列。Project/過去チャットの手動探索・Owner再提出は不要だった。\n\n## 医療：施設別に直ちに計算できる範囲\n\n公表値は千円単位の施設平均なので、まず×1,000で円へ換算した。M01〜M09の課税対象費用、M10〜M13の通常損益の部分費目、M14〜M18の当期課税設備投資を維持し、各々を税込10%/税抜10%の2ケースへ変換。給食用材料費だけは食材8%の感度条件とした。これは会計方式・税率が未取得であるための条件付き計算で、実際の税率別仕入税額ではない。\n\n```text\n税込仮定: P_net=公表額円/(1+r)、input_VAT=公表額円*r/(1+r)\n税抜仮定: P_net=公表額円、input_VAT=公表額円*r\n```\n\n|当期課税投資・施設別|公表額 円|税込10%のP_net 円|同・税額 円|税抜10%の税額 円|\n|---|---:|---:|---:|---:|\n|一般病院|314,618,000|286,016,363.636|28,601,636.364|31,461,800|\n|精神科病院|63,242,000|57,492,727.273|5,749,272.727|6,324,200|\n|一般診療所|5,718,000|5,198,181.818|519,818.182|571,800|\n|歯科診療所|4,657,000|4,233,636.364|423,363.636|465,700|\n|薬局・同一敷地内除く|1,273,000|1,157,272.727|115,727.273|127,300|\n\n上記は施設区分ごとの**投資部分だけ**。全国額ではない。減価償却を再加算しない。一般病院では医薬品・給食材料・診療材料等・委託費の4費目が同じn=732集計にあり、その部分束も計算した（CSV `MED-BUNDLE-*`）。食材8%、その他10%とし、費消額→購入額の在庫調整、通勤、賃借、その他費用、診療への用途配賦は未了。部分束と構成4費目を重複加算しない。\n\nM01等の課税対象費用は回答標本が異なる。n=184など件数が一致しても同じ施設集合であると推定しない。異なる標本の経常費・設備投資を足して、完成Pやp_ratioを作っていない。医療の48.81兆円FY2024規模proxyを維持し、これら標本の分母へ流用しない。\n\n### 全国加重のために今回補った施設数\n\n2024-10-01活動中施設は一般病院7,003、精神科1,057、一般診療所105,207、歯科66,378（合計179,645）。出典は厚生労働省医療施設調査・概要表1。薬局はFY2024末63,203（衛生行政報告例）。\n\n出典: https://www.mhlw.go.jp/toukei/saikin/hw/iryosd/24/dl/02sisetu06.pdf  \nhttps://www.mhlw.go.jp/toukei/saikin/hw/eisei_houkoku/24/dl/houdou.pdf\n\nこれらは全国母集団の入口であり、経済実態調査の介護割合・開設者・病床規模・保険指定・同一敷地内除外と一致する拡大係数ではない。全国推計には、同じ条件の階層hごとに `Σ_h N_h×mean(P_h)` とし、無回答補正・通年稼働・税率・会計方式・用途を揃える。今回は当該N_hと平均を接続できないため、単純乗算の全国値を提示しない。\n\n### 既存補填は別建て\n\n病院A/B=46,397/44,233、診療所1,359/1,453、歯科758/841、薬局617/595（千円/施設/年）。CSVは各A・B・A−Bを円へ換算した。A−Bはそれぞれ+2,164,000、−94,000、−83,000、+22,000円。ただし薬価等を除いた5→10%増分調査だけの比較であり、全損税ではない。\n\n```text\n現行input VAT控除と課税化後の控除を別計算\nΔcredit = credit_F − credit_StatusQuo\n既存補填の変更額 = A_F − A_StatusQuo（撤回/維持を別の仮定にする）\n医療機関の直接差額候補 = Δcredit + (A_F−A_StatusQuo)\n                     − 当該機関が実際に負担するoutput VAT等\n```\n\nこれは会計接続式で、国庫純収入や患者負担の算出結果ではない。従来補填Aを既にinput VATから差し引いて、さらに撤回分を二重に差し引かない。phiは将来output VATの公費分担仮定で、既存A/Bや公費比率と同じではない。新たなinput VAT控除率・報酬調整・患者転嫁・φは未確定のまま維持。\n\n## 教育：同年度・同じ系列の部分集計\n\n|FY2023の系列|円／年|使える範囲|\n|---|---:|---|\n|公立・授業料/入学金/検定料|232,215,552,000|大学短大等を除く。こども園帰属要確認|\n|同・こども園除外ケース|228,347,735,000|対象範囲の仮定|\n|国立大学CF3費目|321,900,000,000|授業料2,722＋入学404＋検定93億円|\n|国立CF＋公立部分合計|554,115,552,000|現金系列の部分合計。全国額ではない|\n|国立CF＋公立こども園除外|550,247,735,000|上記の範囲感度|\n|国立学生納付金PL|359,300,000,000|CFと別の発生主義収益|\n|私立613法人proxy|2,939,007,400,000|医歯学部法人除外等。全国値ではない|\n|国立PL＋私立proxy|3,298,307,400,000|収益系列の部分合計。私立は丸め比率推計|\n\n設置主体別に国立・公立・私立は分かれるが、対象学納金の完全な一致・法人併設校の学校別対応は未了。CFとPLを混合した全国合計は作らない。上記複数の部分合計同士も足さない。私立小中高・幼稚園、公立大学、医歯学部法人の教育部分等が不足。授業料単価×全在籍数や初年度施設費の毎年適用で穴埋めしない。\n\n### 給与・投資を分離した費目候補\n\n既存PDF `https://www.mext.go.jp/content/20250331-mxt_hojinka-000041313_2.pdf` の冊子3〜4頁の**82国立大学法人列**を抽出した（4大学共同利用機関法人は除外）。前回の合計86法人列と分ける。\n\n|費目|FY2023・億円|接続条件|\n|---|---:|---|\n|原材料・商品・サービス購入のCF支出|13,920|現金購入の入口。教育・病院・研究用途、税率を配賦|\n|人件費CF支出|16,048|別建て。給与全部を課税仕入へ加算しない|\n|有形・無形固定資産取得CF支出|3,643|当期支払。土地・病院・未払変動・税額を分離|\n|教育経費PL|1,781|当期購入と同じではない。償却等を確認|\n|研究経費PL|2,674|学納金対応以外の研究を含む|\n|一般管理費PL|941|共通費配賦・非課税支出・償却の精査が必要|\n\n丸めにより合計は必ずしも一致しない。前回の86法人全体の購入CF14,398億、投資CF3,785億との違いは今回82法人列を選んだためで、元の公表値の誤り訂正ではない。CFとPLの費用を足さない。当期減価償却額は未取得で、貸借対照表の減価償却累計額を当期費用に置換しない。\n\n教育Pの接続は `P_edu = 購入CFから税額・非課税・非教育用途等を調整した経常額 + 同様に調整した当期課税取得額`。現金/発生の時点差も調整する。購入CF1.392兆円と投資CF0.3643兆円をそのまま教育Pへ加算していない。全国p=.25を置換できる状態にはないが、用途按分用の出典付き原額は渡せる。\n\n## 住宅：家賃と支出の時間軸・控除可否を分離\n\n家賃既知分13.7415925632兆円/年、不詳を同平均で補う場合13.8876304512兆円/年を維持。これは2023年10月のストック年間化で統計的上下限ではない。FY2024予定工事費4.28721415兆円（新築居住専用・利用関係単一の貸家）は `NOT_P_OR_CREDIT_INPUT` と明示。実際の当期投資へは、工事着工期uから取得期tへの配分w、完成/中止、対象用途、税含否等が必要。\n\n```text\nK_t候補 = Σ_u planned_cost_u × 実額/計画額比_u × 取得配分w_(u,t)\n          × 対象事業・用途割合（税抜換算は別）\n```\n\nw等は未取得。1年で全額取得、毎年同じ投資を繰返す等の仮定を今回設定していない。\n\n改修等受注高約0.9243兆円は実際の修繕費・完成投資ではない。通常修繕と資本的支出を区別し、予定工事費と足さない。管理料3/5/10%は業者調査に基づく感度点で全国平均ではない。CSVでは委託率100%・料率は税込という明示仮定の例を計算し、委託率c∈[0,1]で比例縮小できる。既知家賃×3%なら税込管理費412,247,776,896円、税抜候補374,770,706,269.091円、税相当37,477,070,626.909円。これは全国実支出の認定ではない。\n\n### 現行の仕入税額控除制限\n\n国税庁の現行公表資料で、次の入力条件を確認した。制度説明は2026-11-15読取時点、将来のF制度変更を先取りしない。\n\n- 住宅家賃は原則非課税。統計家賃は共益費等を除く一方、税務上の家賃には一定の共益費・返還しない金銭も含まれ、Rの範囲が一致しない（No.6226）。\n- 高額特定資産等に当たる居住用賃貸建物の取得税額には特別な控除制限がある。2020-10-01以後を対象とし、一定の旧契約等を区別する。高額特定資産は原則一取引単位・税抜1,000万円以上。戸当たり平均で判定しない。\n- 店舗等の非住宅部分は合理的に区分。資本的支出にも条件付きで制限が及ぶ。すべての修繕・管理料が建物特例に該当するわけではない。非課税売上対応の通常費用は一般の控除計算も考慮する。\n- CSVの現行控除率0は、特別制限対象と確認された部分に限る条件付き値。混合用途・後年調整等を含む全事業者の一律κではない。\n\n出典: https://www.nta.go.jp/law/tsutatsu/kihon/shohi/20230930/11/08.htm （11-7-1〜5）  \nhttps://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6502.htm （閾値）  \nhttps://www.nta.go.jp/publication/pamph/shohi/kaisei/yoshiki/pdf/202008_01.pdf （2022年4月版・PDF6頁。検索結果の見出しではなく本文で開始日確認）  \nhttps://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6226.htm  \nhttps://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6401.htm\n\n将来住宅家賃を課税化しても、建物制限の適用関係を確認せず既存取得税額の全額控除・遡及還付を自動計上しない。Fの当該控除率は未取得として空欄。これは政策を禁止する判断ではなく、現行条件と将来制度シナリオを分ける入力整理である。\n\n## Claudeへの置換案内\n\n試作固定Commit `e87e43787ecac73297065ba026b6de41d4f072ee` の入力は暦年2025・兆円単位。`sectors.medical/education/rental.R_2025` の全国値と `p_ratio` は、今回も同一定義の公的全国値へ直接置換できないため `NO_DIRECT_REPLACEMENT` 行を残した。\n\nただし、部分集合のR、施設別P成分、医療の既存補填、住宅管理費の感度はその範囲を明示して診断計算へ使える。施設平均Pと全国Rを組み合わせたり、2023家賃とFY2024工事予定の比を全国pとすることは避ける。部分Pでpを作る場合にも同じ対象・期間のRが必要。\n\n既存phi、κ、成長率、課税化開始年は出典確定へ昇格しない。F/StatusQuo年次モデルの改修・再計算は今回行っていない。次の実務は、CSVの `PARTIAL_COMPONENT` / `CONDITIONAL_PARTIAL_P` を用途限定の診断入力として取り込み、制度条件を分離して計算すること。\n\n## 検証・引渡し\n\n円換算、税込/税抜分解、A−B、同年度学納金部分合計、施設数合計、CSV再読取・ID一意性を計算確認した。金額の小数桁は仮定に基づく演算結果で、公表値精度の上昇を意味しない。\n\n新規成果は本メモとCSVの2件。指定 `work/chatgpt-handoff` の `handoff/f-sonzei-input-bridge-20261115/` に新規追加する。保全確定Commit・事後SHAは回答で提示し、このメモを事後追記で変更しない。既存原本・main・正式エンジンを変更しない。RP新設・追加レビューなし。RP-023／M19–25 HOLD、RP-024 PENDING維持。引渡し後停止。\n",
+      "fixed_commit": "05d2ea052ffbfb206193166d43d4656a6b7fdc36"
+    },
+    "basis": {
+      "filename": "SPE_F_Provisional_Implementation_Basis_20261114.md",
+      "bytes": 5560,
+      "sha256": "8b88636a5581b28939e340c4beaaac81b3c193caef201a2d7cf1e2770034594b",
+      "utf8": "# SPE｜F施策 標準実施経路・損税モデル暫定実装根拠\n\n**Status:** OWNER-LIMITED APPROVED / PROVISIONAL IMPLEMENTATION BASIS / NON-CANONICAL  \n**承認区分:** OWNER-LIMITED APPROVED / PROVISIONAL IMPLEMENTATION BASIS  \n**日付:** 2026-11-14  \n**格納先:** `handoff/SPE_F_Provisional_Implementation_Basis_20261114.md`  \n**対象:** F施策の損税解消モデル試作およびF／StatusQuo年次比較（2026〜2055年）\n\n## 1. 目的と位置付け\n\n本書は、第二次Milestone宣言に基づくF施策の損税解消モデル開発に必要な、Fの標準実施経路を暫定的に特定する。政策原本の改訂やRPの新設を目的としない。\n\nOwnerが本書を限定承認した場合、本書は対象の試作・検証における実装根拠となる。`policies/FreedomPolicies.md` および `policies/FreedomPolicies_Annex.md` は変更せず、既存原案は参考・比較用に維持する。本書は正式な政策原本・Canonical文書を置き換えない。\n\n## 2. F標準実施経路（Owner方針）\n\n1. **政治調整版の実施経路をFの標準として採用する。** 従来原案は参考・比較対象として残す。\n2. 消費税改革は**5%への減税を先行**し、医療・教育・土地・不動産等への**課税ベース拡大を後続段階**で実施する。\n3. **課税ベース拡大の完了目標年は2038年**とする。従来原案の「2035年頃の完全フラット化」は標準実施経路の完了年としては用いない。\n4. 到達目標は**消費税5%の広い課税ベースによるフラット化**であり、**金融取引は対象外**とする。金融サービスの個別取扱いなど未確定の制度細目は本書で新規裁定しない。\n5. 社会保障経由の低・中所得層への還元、移行支援など、既存F施策の政策目的・制度要素は、本書で明示的に変更しない。\n\n## 3. 年次実装上の取扱い\n\n- 2026〜2055年の年次計算を対象とし、まずF／StatusQuoを同じ初期条件・イベント条件で比較する。N3は優先拡張、N・F3・R4は将来拡張とする。\n- **減税の具体的な施行年、2038年までの中間税率、部門別課税開始年・対象範囲、移行支援額は本書だけでは確定しない。** 既存資料で確認できない数値をOwner決定値として補完しない。\n- 未確定値は、試作時に明示した暫定入力パラメータとして変更可能にする。暫定値の採用は政策原本の確定を意味しない。\n- 損税解消の発生時期は、各部門の課税・仕入税額控除の適用開始時期に応じて計算する。2038年に効果を一括計上することも、減税開始年に全額を先取りすることも、制度条件なしには行わない。\n\n## 4. 損税解消の計算原則\n\n- **損税循環の数理モデルは未実装であり、計算はこれからである。** 既存F試算の成長・税収効果を損税解消から導出済みとは扱わない。\n- 最小試作は医療・教育・不動産賃貸の3部門を対象とし、制度変更前後の控除不能消費税相当額を年次で区別して算出する。\n- 損税額の減少を、そのままGDP増加、税収純増、事業者純利益または家計便益と同一視しない。価格・税収・事業者・家計・公的支出への帰着は区分して扱う。\n- F別紙2の**年間約1.7〜2.55兆円**は従来の概算規模であり、モデルの正解値・保証値・自動入力値にはしない。\n- 既存の税収弾性値（1.5→1.7→2.0等の試算上の経路）は損税解消から導かれたものではない。初期段階では既存マクロ効果と新規損税診断を別表示し、二重計上を避ける。\n- 先行減税と課税ベース拡大の時間差による財政収支・国債発行の変化は計算対象とするが、**税収回収の早期化自体を政策の成功条件とはしない。** 物価、実体経済、分配、供給力、財政制約等を併せて比較する。\n- F別紙6-Gにある追加国債発行累積約120兆円等は従来の暫定試算として参照できるが、新モデルの計算結果として固定しない。\n\n## 5. 実装範囲と既存状態\n\n試作・検証は `handoff/` 等の独立領域で開始できる。検証済み部品を正式エンジンに組み込む際の変更・採用は、既存のOwner承認条件に従う。本書はGitHub書込み、正式Acceptance、Canonical化、既存HOLD解除を自動承認しない。\n\nM19〜25およびRP-023のHOLD、RP-024のPENDINGは維持する。第二次Milestone宣言と既存の試験PASSも変更しない。\n\n## 6. 本書の限定承認対象\n\nOwnerによる承認対象は、**第2節の標準実施経路を、F損税モデルの暫定実装根拠として用いること**、および第3〜5節の未確定事項・計算上の区別を維持することに限る。\n\n本書の承認によって、未確定パラメータの政策的確定、従来概算の妥当性承認、正式エンジン変更、政策原本差替え、RP新設、レビュー義務の追加は発生しない。\n\n---\n\n**承認状態:** Owner限定承認済（2026-11-14）。正式な政策原本・Canonical文書への採用ではない。\n\n**参照原本:** `policies/FreedomPolicies.md`、`policies/FreedomPolicies_Annex.md`、`Inbox/between_growth_and_discipline_compact_updated.md`（いずれもGitHub `spe-flatvat/SPE`）。\n",
+      "fixed_commit": "cc4a6054e716a3d63d2e30f76d0c102f2397e55c"
+    }
+  },
+  "prototype_config": {
+    "_meta": {
+      "status": "DRAFT / PROVISIONAL / NON-CANONICAL / DIAGNOSTIC ONLY",
+      "basis": "handoff/SPE_F_Provisional_Implementation_Basis_20261114.md (Owner-limited approved) on work/chatgpt-handoff @ cc4a6054",
+      "warning": "ALL numeric values below marked [PLACEHOLDER] are unsourced provisional inputs chosen by Claude to make the prototype run. They are NOT Owner decisions, NOT official statistics, and NOT calibrated to the F annex 2 estimate (1.7-2.55 trillion yen/yr). Replace with sourced data before any use beyond mechanics testing.",
+      "units": "trillion yen (nominal), year = calendar year"
+    },
+    "years": {
+      "start": 2026,
+      "end": 2055
+    },
+    "nominal_growth_pct": {
+      "value": 1.5,
+      "tag": "[PLACEHOLDER] common nominal growth of R_s and P_s; later link to engine nominal GDP path"
+    },
+    "tau_statusquo_pct": {
+      "value": 10.0,
+      "tag": "current standard rate; effective rate incl. reduced rate not modelled"
+    },
+    "tau_F_path_pct": {
+      "tag": "[PLACEHOLDER] rate path (cut-first). Basis doc fixes only: 5% target, cut precedes base expansion. Intermediate years/implementation year are NOT decided.",
+      "points": {
+        "2026": 10.0,
+        "2027": 7.5,
+        "2028": 5.0,
+        "2055": 5.0
+      }
+    },
+    "sectors": {
+      "medical": {
+        "label": "医療(保険診療)",
+        "R_2025": {
+          "value": 45.0,
+          "tag": "[PLACEHOLDER] non-taxable sales, order of national medical expenditure; needs source"
+        },
+        "p_ratio": {
+          "value": 0.2,
+          "tag": "[PLACEHOLDER] taxable purchases + capex incl. as share of R; needs source"
+        },
+        "start_year": {
+          "value": 2038,
+          "tag": "[PLACEHOLDER] year taxation + input credit begins"
+        },
+        "phi_public": {
+          "value": 0.9,
+          "tag": "[PLACEHOLDER] share of output tax borne by public funds (fee schedule compensation)"
+        },
+        "theta_passthrough": {
+          "value": 0.3,
+          "tag": "[PLACEHOLDER] share of 損税 reduction passed to prices/fees"
+        }
+      },
+      "education": {
+        "label": "教育",
+        "R_2025": {
+          "value": 6.0,
+          "tag": "[PLACEHOLDER] needs source"
+        },
+        "p_ratio": {
+          "value": 0.25,
+          "tag": "[PLACEHOLDER]"
+        },
+        "start_year": {
+          "value": 2036,
+          "tag": "[PLACEHOLDER]"
+        },
+        "phi_public": {
+          "value": 0.2,
+          "tag": "[PLACEHOLDER]"
+        },
+        "theta_passthrough": {
+          "value": 0.3,
+          "tag": "[PLACEHOLDER]"
+        }
+      },
+      "rental": {
+        "label": "不動産賃貸(居住用)",
+        "R_2025": {
+          "value": 20.0,
+          "tag": "[PLACEHOLDER] needs source"
+        },
+        "p_ratio": {
+          "value": 0.2,
+          "tag": "[PLACEHOLDER]"
+        },
+        "start_year": {
+          "value": 2037,
+          "tag": "[PLACEHOLDER]"
+        },
+        "phi_public": {
+          "value": 0.0,
+          "tag": "[PLACEHOLDER]"
+        },
+        "theta_passthrough": {
+          "value": 0.3,
+          "tag": "[PLACEHOLDER]"
+        }
+      }
+    },
+    "kappa_realization": {
+      "value": 1.0,
+      "tag": "[PLACEHOLDER] realization rate of input credit (F docx monitors <50%)"
+    },
+    "sensitivity": {
+      "p_multiplier": [
+        0.75,
+        1.0,
+        1.25
+      ],
+      "timing": {
+        "staggered": "start years as given per sector",
+        "all_2038": {
+          "medical": 2038,
+          "education": 2038,
+          "rental": 2038
+        },
+        "all_2034": {
+          "medical": 2034,
+          "education": 2034,
+          "rental": 2034
+        }
+      },
+      "kappa": [
+        1.0,
+        0.5
+      ],
+      "phi_medical": [
+        0.5,
+        0.9,
+        1.0
+      ]
+    }
+  },
+  "policy": {
+    "years": [
+      2026,
+      2055
+    ],
+    "tax_standard_statusquo": 0.1,
+    "tax_F_points": {
+      "2026": 0.1,
+      "2027": 0.075,
+      "2028": 0.05,
+      "2055": 0.05
+    },
+    "start_years": {
+      "medical": 2038,
+      "education": 2036,
+      "rental": 2037
+    },
+    "phi": {
+      "medical": 0.9,
+      "education": 0.2,
+      "rental": 0
+    },
+    "kappa": 1,
+    "theta": 0.3,
+    "reduced_input_rate_rule": "MIN_CURRENT_COMPONENT_RATE_AND_STANDARD_F;TERMINAL_FLAT5",
+    "residential_building_credit_F": "UNRESOLVED",
+    "ordinary_credit_after_taxation": "FULL_ELIGIBILITY_ASSUMPTION_TIMES_KAPPA",
+    "current_exempt_activity_input_credit": 0,
+    "national_compensation_amount": null,
+    "national_compensation_retention": null,
+    "macro_GDP_addition": false
+  },
+  "policy_labels": {
+    "tax_F_points": "2038完了・減税先行・5%目標以外の具体年次税率はClaude暫定値",
+    "start_years": "部門別開始年は暫定値、Ownerの政策確定年ではない",
+    "growth": "1.5%名目成長は既存試作仮定。公的観測から将来を確定しない",
+    "kappa": "eligible部分での控除実現率であり住宅建物特例の自動解除ではない"
+  },
+  "profiles": [
+    {
+      "id": "MED-M01-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M01-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M01-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M01-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M02-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M02-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M02-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M02-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M03-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M03-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M03-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M03-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M04-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M04-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M04-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M04-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M05-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M05-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M05-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M05-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M06-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M06-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M06-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M06-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M07-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M07-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M07-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M07-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M08-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M08-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M08-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M08-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M09-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M09-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M09-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M09-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M10-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M10-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M10-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M10-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M11-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M11-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M11-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M11-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M12-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M12-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M12-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M12-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M13-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M13-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M13-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M13-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M14-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M14-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M14-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M14-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M15-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M15-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M15-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M15-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M16-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M16-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M16-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M16-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M17-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M17-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M17-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M17-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M18-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M18-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-M18-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-M18-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-BUNDLE-GROSS",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-BUNDLE-GROSS"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "MED-BUNDLE-NET",
+      "sector": "medical",
+      "kind": "purchase_partial",
+      "scope": "PER_FACILITY_COMPONENT_NOT_NATIONAL",
+      "selected": [
+        "MED-BUNDLE-NET"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "公表施設平均の費目を非課税診療帰属と仮定。会計・税率は候補ケース。2024基準から1.5%名目成長。投資は同水準の年次更新仮定で初期ストックの再控除ではない"
+    },
+    {
+      "id": "EDU-SALES-PUB",
+      "sector": "education",
+      "kind": "sales_partial",
+      "scope": "EDUCATION_REVENUE_SUBSET_NOT_COMPLETE_SECTOR",
+      "selected": [
+        "EDU-R-PUB"
+      ],
+      "base_year": 2023,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "FY2023→暦年近似の年次成長投影。CF/PLは排他。P未取得のため損税等は空欄"
+    },
+    {
+      "id": "EDU-SALES-PUB-EX-KINDER",
+      "sector": "education",
+      "kind": "sales_partial",
+      "scope": "EDUCATION_REVENUE_SUBSET_NOT_COMPLETE_SECTOR",
+      "selected": [
+        "EDU-R-PUB-EX-KINDER"
+      ],
+      "base_year": 2023,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "FY2023→暦年近似の年次成長投影。CF/PLは排他。P未取得のため損税等は空欄"
+    },
+    {
+      "id": "EDU-SALES-NAT-CASH",
+      "sector": "education",
+      "kind": "sales_partial",
+      "scope": "EDUCATION_REVENUE_SUBSET_NOT_COMPLETE_SECTOR",
+      "selected": [
+        "EDU-R-NAT-CASH"
+      ],
+      "base_year": 2023,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "FY2023→暦年近似の年次成長投影。CF/PLは排他。P未取得のため損税等は空欄"
+    },
+    {
+      "id": "EDU-SALES-NAT-ACCRUAL",
+      "sector": "education",
+      "kind": "sales_partial",
+      "scope": "EDUCATION_REVENUE_SUBSET_NOT_COMPLETE_SECTOR",
+      "selected": [
+        "EDU-R-NAT-ACCRUAL"
+      ],
+      "base_year": 2023,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "FY2023→暦年近似の年次成長投影。CF/PLは排他。P未取得のため損税等は空欄"
+    },
+    {
+      "id": "EDU-SALES-PRIVATE",
+      "sector": "education",
+      "kind": "sales_partial",
+      "scope": "EDUCATION_REVENUE_SUBSET_NOT_COMPLETE_SECTOR",
+      "selected": [
+        "EDU-R-PRIVATE"
+      ],
+      "base_year": 2023,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "FY2023→暦年近似の年次成長投影。CF/PLは排他。P未取得のため損税等は空欄"
+    },
+    {
+      "id": "EDU-SALES-CASH-SUBSET",
+      "sector": "education",
+      "kind": "sales_partial",
+      "scope": "EDUCATION_REVENUE_SUBSET_NOT_COMPLETE_SECTOR",
+      "selected": [
+        "EDU-R-CASH-SUBSET"
+      ],
+      "base_year": 2023,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "FY2023→暦年近似の年次成長投影。CF/PLは排他。P未取得のため損税等は空欄"
+    },
+    {
+      "id": "EDU-SALES-CASH-SUBSET-EX-KINDER",
+      "sector": "education",
+      "kind": "sales_partial",
+      "scope": "EDUCATION_REVENUE_SUBSET_NOT_COMPLETE_SECTOR",
+      "selected": [
+        "EDU-R-CASH-SUBSET-EX-KINDER"
+      ],
+      "base_year": 2023,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "FY2023→暦年近似の年次成長投影。CF/PLは排他。P未取得のため損税等は空欄"
+    },
+    {
+      "id": "EDU-SALES-ACCRUAL-SUBSET",
+      "sector": "education",
+      "kind": "sales_partial",
+      "scope": "EDUCATION_REVENUE_SUBSET_NOT_COMPLETE_SECTOR",
+      "selected": [
+        "EDU-R-ACCRUAL-SUBSET"
+      ],
+      "base_year": 2023,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "FY2023→暦年近似の年次成長投影。CF/PLは排他。P未取得のため損税等は空欄"
+    },
+    {
+      "id": "EDU-PURCHASE-SHARE-25",
+      "sector": "education",
+      "kind": "education_cost_sensitivity",
+      "scope": "NATIONAL_UNIVERSITY_COST_ENVELOPE_ASSUMPTION_NOT_EDUCATION_TOTAL",
+      "selected": [
+        "EDU-COST-PURCHASE-CF"
+      ],
+      "base_year": 2023,
+      "growth_pct": 1.5,
+      "taxable_education_composite_share": 0.25,
+      "accounting_assumption": "GROSS10",
+      "credit_category": "ordinary",
+      "assumptions": "82国立大学法人の購入CFのうち教育用途かつ課税対象である合成割合を25/50/75%仮定。税抜は÷1.1。病院等除外の観測値ではない。給与・投資・PLは足さない"
+    },
+    {
+      "id": "EDU-PURCHASE-SHARE-50",
+      "sector": "education",
+      "kind": "education_cost_sensitivity",
+      "scope": "NATIONAL_UNIVERSITY_COST_ENVELOPE_ASSUMPTION_NOT_EDUCATION_TOTAL",
+      "selected": [
+        "EDU-COST-PURCHASE-CF"
+      ],
+      "base_year": 2023,
+      "growth_pct": 1.5,
+      "taxable_education_composite_share": 0.5,
+      "accounting_assumption": "GROSS10",
+      "credit_category": "ordinary",
+      "assumptions": "82国立大学法人の購入CFのうち教育用途かつ課税対象である合成割合を25/50/75%仮定。税抜は÷1.1。病院等除外の観測値ではない。給与・投資・PLは足さない"
+    },
+    {
+      "id": "EDU-PURCHASE-SHARE-75",
+      "sector": "education",
+      "kind": "education_cost_sensitivity",
+      "scope": "NATIONAL_UNIVERSITY_COST_ENVELOPE_ASSUMPTION_NOT_EDUCATION_TOTAL",
+      "selected": [
+        "EDU-COST-PURCHASE-CF"
+      ],
+      "base_year": 2023,
+      "growth_pct": 1.5,
+      "taxable_education_composite_share": 0.75,
+      "accounting_assumption": "GROSS10",
+      "credit_category": "ordinary",
+      "assumptions": "82国立大学法人の購入CFのうち教育用途かつ課税対象である合成割合を25/50/75%仮定。税抜は÷1.1。病院等除外の観測値ではない。給与・投資・PLは足さない"
+    },
+    {
+      "id": "RENT-MANAGEMENT-3",
+      "sector": "rental",
+      "kind": "rental_management_partial",
+      "scope": "RESIDENTIAL_RENT_PROXY_WITH_MANAGEMENT_ONLY_NOT_FULL_P",
+      "selected": [
+        "RENT-R-KNOWN",
+        "RENT-MGMT-3"
+      ],
+      "base_year": 2023,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "既知家賃の静態年間化。全戸委託・税込料率3/5/10%仮定。管理費だけの控除。建物取得費は含まない"
+    },
+    {
+      "id": "RENT-MANAGEMENT-5",
+      "sector": "rental",
+      "kind": "rental_management_partial",
+      "scope": "RESIDENTIAL_RENT_PROXY_WITH_MANAGEMENT_ONLY_NOT_FULL_P",
+      "selected": [
+        "RENT-R-KNOWN",
+        "RENT-MGMT-5"
+      ],
+      "base_year": 2023,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "既知家賃の静態年間化。全戸委託・税込料率3/5/10%仮定。管理費だけの控除。建物取得費は含まない"
+    },
+    {
+      "id": "RENT-MANAGEMENT-10",
+      "sector": "rental",
+      "kind": "rental_management_partial",
+      "scope": "RESIDENTIAL_RENT_PROXY_WITH_MANAGEMENT_ONLY_NOT_FULL_P",
+      "selected": [
+        "RENT-R-KNOWN",
+        "RENT-MGMT-10"
+      ],
+      "base_year": 2023,
+      "growth_pct": 1.5,
+      "credit_category": "ordinary",
+      "assumptions": "既知家賃の静態年間化。全戸委託・税込料率3/5/10%仮定。管理費だけの控除。建物取得費は含まない"
+    },
+    {
+      "id": "MED-COMP-病院-RETAIN",
+      "sector": "medical",
+      "kind": "compensation_only",
+      "scope": "PER_FACILITY_HISTORICAL_COMPENSATION_NOT_INPUT_VAT",
+      "selected": [
+        "MED-COMP-病院-compensation_A",
+        "MED-COMP-病院-tax_increase_B"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "compensation_retention_after_start": 1,
+      "credit_category": "ordinary",
+      "assumptions": "5→10%増分補填A/Bを1.5%で投影。開始後A維持/全撤回は排他的な制度感度。P/Rは別標本のため接続しない"
+    },
+    {
+      "id": "MED-COMP-病院-WITHDRAW",
+      "sector": "medical",
+      "kind": "compensation_only",
+      "scope": "PER_FACILITY_HISTORICAL_COMPENSATION_NOT_INPUT_VAT",
+      "selected": [
+        "MED-COMP-病院-compensation_A",
+        "MED-COMP-病院-tax_increase_B"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "compensation_retention_after_start": 0,
+      "credit_category": "ordinary",
+      "assumptions": "5→10%増分補填A/Bを1.5%で投影。開始後A維持/全撤回は排他的な制度感度。P/Rは別標本のため接続しない"
+    },
+    {
+      "id": "MED-COMP-一般診療所-RETAIN",
+      "sector": "medical",
+      "kind": "compensation_only",
+      "scope": "PER_FACILITY_HISTORICAL_COMPENSATION_NOT_INPUT_VAT",
+      "selected": [
+        "MED-COMP-一般診療所-compensation_A",
+        "MED-COMP-一般診療所-tax_increase_B"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "compensation_retention_after_start": 1,
+      "credit_category": "ordinary",
+      "assumptions": "5→10%増分補填A/Bを1.5%で投影。開始後A維持/全撤回は排他的な制度感度。P/Rは別標本のため接続しない"
+    },
+    {
+      "id": "MED-COMP-一般診療所-WITHDRAW",
+      "sector": "medical",
+      "kind": "compensation_only",
+      "scope": "PER_FACILITY_HISTORICAL_COMPENSATION_NOT_INPUT_VAT",
+      "selected": [
+        "MED-COMP-一般診療所-compensation_A",
+        "MED-COMP-一般診療所-tax_increase_B"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "compensation_retention_after_start": 0,
+      "credit_category": "ordinary",
+      "assumptions": "5→10%増分補填A/Bを1.5%で投影。開始後A維持/全撤回は排他的な制度感度。P/Rは別標本のため接続しない"
+    },
+    {
+      "id": "MED-COMP-歯科診療所-RETAIN",
+      "sector": "medical",
+      "kind": "compensation_only",
+      "scope": "PER_FACILITY_HISTORICAL_COMPENSATION_NOT_INPUT_VAT",
+      "selected": [
+        "MED-COMP-歯科診療所-compensation_A",
+        "MED-COMP-歯科診療所-tax_increase_B"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "compensation_retention_after_start": 1,
+      "credit_category": "ordinary",
+      "assumptions": "5→10%増分補填A/Bを1.5%で投影。開始後A維持/全撤回は排他的な制度感度。P/Rは別標本のため接続しない"
+    },
+    {
+      "id": "MED-COMP-歯科診療所-WITHDRAW",
+      "sector": "medical",
+      "kind": "compensation_only",
+      "scope": "PER_FACILITY_HISTORICAL_COMPENSATION_NOT_INPUT_VAT",
+      "selected": [
+        "MED-COMP-歯科診療所-compensation_A",
+        "MED-COMP-歯科診療所-tax_increase_B"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "compensation_retention_after_start": 0,
+      "credit_category": "ordinary",
+      "assumptions": "5→10%増分補填A/Bを1.5%で投影。開始後A維持/全撤回は排他的な制度感度。P/Rは別標本のため接続しない"
+    },
+    {
+      "id": "MED-COMP-保険薬局-RETAIN",
+      "sector": "medical",
+      "kind": "compensation_only",
+      "scope": "PER_FACILITY_HISTORICAL_COMPENSATION_NOT_INPUT_VAT",
+      "selected": [
+        "MED-COMP-保険薬局-compensation_A",
+        "MED-COMP-保険薬局-tax_increase_B"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "compensation_retention_after_start": 1,
+      "credit_category": "ordinary",
+      "assumptions": "5→10%増分補填A/Bを1.5%で投影。開始後A維持/全撤回は排他的な制度感度。P/Rは別標本のため接続しない"
+    },
+    {
+      "id": "MED-COMP-保険薬局-WITHDRAW",
+      "sector": "medical",
+      "kind": "compensation_only",
+      "scope": "PER_FACILITY_HISTORICAL_COMPENSATION_NOT_INPUT_VAT",
+      "selected": [
+        "MED-COMP-保険薬局-compensation_A",
+        "MED-COMP-保険薬局-tax_increase_B"
+      ],
+      "base_year": 2024,
+      "growth_pct": 1.5,
+      "compensation_retention_after_start": 0,
+      "credit_category": "ordinary",
+      "assumptions": "5→10%増分補填A/Bを1.5%で投影。開始後A維持/全撤回は排他的な制度感度。P/Rは別標本のため接続しない"
+    }
+  ],
+  "artifacts": {
+    "code": "SPE_F_Sonzei_Three_Sector_Prototype_DRAFT_20261115.py",
+    "inputs": "SPE_F_Sonzei_Three_Sector_Inputs_DRAFT_20261115.json",
+    "annual": "SPE_F_StatusQuo_Sonzei_Annual_Diagnostics_DRAFT_20261115.csv",
+    "report": "SPE_F_Sonzei_Three_Sector_Run_Report_DRAFT_20261115.md"
+  }
+}

@@ -1,0 +1,52 @@
+independent dynamic recompute: cases 16 cells 10650 max rel diff 7.55708214880332e-14
+legacy F 2055 real GDP 682.375
+消費→教育→投資 消費刺激 -118.3 | 教育 -45.5 | 投資促進 -67.7 | core 450.947
+投資→教育→消費 投資促進 -88.2 | 教育 -47.8 | 消費刺激 -95.4 | core 450.947
+教育→投資→消費 教育 -54.7 | 投資促進 -81.4 | 消費刺激 -95.4 | core 450.947
+
+CORE 2055 450.947 DYNAMIC_BASE 460.236 policy part 9.29
+
+-- one-at-a-time removals, 2055 --
+DYNAMIC_BASE                                   Y  460.236 (vs CORE  +9.290)  gap   78.57  K  29.82  Td   96.81
+一般減税なし(taxable share=0)                        Y  456.128 (vs CORE  +5.181)  gap   66.39  K  29.82  Td  108.99
+投資促進フローなし                                      Y  456.982 (vs CORE  +6.036)  gap   78.45  K   2.18  Td   96.93
+教育フローなし                                        Y  457.997 (vs CORE  +7.051)  gap   76.47  K  29.82  Td   96.29
+給付なし                                           Y  460.236 (vs CORE  +9.290)  gap   78.57  K  29.82  Td   96.81
+所得フィードバックなし                                    Y  459.807 (vs CORE  +8.861)  gap   78.67  K  29.82  Td   96.71
+供給誘発吸収なし                                       Y  457.960 (vs CORE  +7.013)  gap   79.10  K  29.82  Td   96.28
+資本繰越なし(carry off)                              Y  457.603 (vs CORE  +6.656)  gap   79.18  K   0.00  Td   96.20
+投資+教育+一般減税すべてなし                                Y  450.635 (vs CORE  -0.312)  gap   64.17  K   2.18  Td  108.58
+
+-- structural sensitivity (not fitted), 2055 --
+投資フロー×2(.008)                                  Y  463.490 (vs CORE +12.544)  gap   78.69  K  57.46  Td   96.70
+投資フロー×5(.02)                                   Y  473.252 (vs CORE +22.305)  gap   79.04  K 140.39  Td   96.34
+投資フロー×10(.04)                                  Y  487.562 (vs CORE +36.615)  gap   79.85  K 278.60  Td   95.53
+教育フロー×5(.015)                                  Y  469.192 (vs CORE +18.245)  gap   86.99  K  29.82  Td   98.90
+教育フロー×10(.03)                                  Y  478.416 (vs CORE +27.470)  gap   97.74  K  29.82  Td  101.28
+資本収率×2(.2)                                     Y  461.693 (vs CORE +10.747)  gap   78.23  K  29.82  Td   97.15
+教育収率×2(.12)                                    Y  461.056 (vs CORE +10.109)  gap   78.38  K  29.82  Td   97.00
+吸収率1.0                                         Y  462.513 (vs CORE +11.566)  gap   78.04  K  29.82  Td   97.34
+投資×10+収率×2+吸収1.0                               Y  513.592 (vs CORE +62.645)  gap   71.79  K 278.60  Td  103.59
+投資×10+教育×10+収率×2+吸収1.0                         Y  543.359 (vs CORE +92.412)  gap   86.47  K 278.60  Td  112.55
+一般減税ベース×0.5(.25→.25 share)                     Y  458.182 (vs CORE  +7.235)  gap   72.48  K  29.82  Td  102.90
+一般減税ベース×2                                      Y  464.316 (vs CORE +13.370)  gap   90.75  K  29.82  Td   84.63
+所得FB .08→.3                                    Y  461.662 (vs CORE +10.715)  gap   78.24  K  29.82  Td   97.14
+MPC各×? 消費調整.6→.3                               Y  460.283 (vs CORE  +9.337)  gap   78.56  K  29.82  Td   96.82
+
+-- funding gap path (DYNAMIC_BASE / CORE / legacy) --
+2030 dyn gap 38.7 core gap 32.9 legacy gap 24.178 exp 121.2 taxdiag 82.4
+2035 dyn gap 64.9 core gap 52.5 legacy gap 30.519 exp 135.6 taxdiag 70.6
+2045 dyn gap 73.7 core gap 61.9 legacy gap 0.0 exp 158.6 taxdiag 84.9
+2055 dyn gap 78.6 core gap 65.3 legacy gap 0.0 exp 175.4 taxdiag 96.8
+
+-- medical 2055 (DYNAMIC_BASE) --
+{'rr': 0.7034, 'cr': 0.7034, 'price': 0.2814, 'firm': 1.1254, 'inv': 0.2814, 'pay': 0.2251, 'priv': 0.7913, 'pub': 2.286, 'vat': 3.5169, 'comp': 0.0, 'sup': 0.0, 'pat': 0.3517, 'ins': 0.8792, 'prem': 0.4396}
+vat 3.5169 patient+premium+public 3.0773 unaccounted insurer share 0.4396 = insurer*(1-pt) 0.4396
+implied P_medical 14.068 R 70.339
+
+-- timing 2055 (Y) -- {'DYNAMIC_BASE': 460.236, 'SIMULTANEOUS': 460.241, 'DELAYED': 460.23, 'EARLY_5PCT': 460.278, 'LATE_5PCT': 460.111, 'NO_CARRY': 457.603, 'CAPACITY_TIGHT': 455.297}
+2035 C 3.814 I 2.131 edu 1.555 ind 0.582 sum 8.08
+2055 C 3.784 I 1.977 edu 1.353 ind 2.175 sum 9.29
+
+employment/wage index proxy max rel diff 2.715196193688195e-15
+2055 dyn tax_diag/N 10.83%  exp/N 19.63%

@@ -1,0 +1,35 @@
+cases 26 cells compared 46902 max rel diff 4.938058924851653e-10 mismatches 0
+[]
+TEXT_KNOWN_PARTIAL 2055 gdp/E/Tdiag/pop (493.9259257111405, 223.39178821211968, 133.64437195718816, 86785658.59201825)
+  all channels omitted (493.9259257111405, 223.39178821211968, 133.64437195718816, 86785658.59201825)
+  migration 0 (454.9407378181857, 223.39178821211968, 118.38565130137252, 76385658.59201825)
+  elasticity 1.0 (493.9259257111405, 223.39178821211968, 103.90433429701208, 86785658.59201825)
+E 2030 new 119.212 oldCORE 119.212 108*1.025^i 119.212
+E 2035 new 136.644 oldCORE 133.561 108*1.025^i 134.877
+E 2045 new 174.705 oldCORE 154.24 108*1.025^i 172.654
+E 2055 new 223.392 oldCORE 170.377 108*1.025^i 221.012
+TEXT_KNOWN_PARTIAL cum net migrants 2030-55 10400000 stock(if initial 0 ) 10400000 share of 2055 pop 0.12
+ILLUSTRATIVE_ALL cum net migrants 2030-55 3645942 stock(if initial 2000000.0 ) 5645942 share of 2055 pop 0.071
+NO_LABOR_MIGRATION_PACKAGE cum net migrants 2030-55 0 stock(if initial 2000000.0 ) 2000000 share of 2055 pop 0.026
+DM-04 final-payer identity max resid (CSV, 10sig): 7.99999622103087e-10
+2038 dGDP prem/pub/int 0.0 0.0 0.0 | dExp pub 0.341312 | dTax prem -0.019586 | supply ceiling binding? unmet 3.115294
+2045 dGDP prem/pub/int 0.0 0.0 0.0 | dExp pub 0.378803 | dTax prem -0.023613 | supply ceiling binding? unmet 1.834251
+2055 dGDP prem/pub/int 0.0 0.0 0.0 | dExp pub 0.439616 | dTax prem -0.029052 | supply ceiling binding? unmet 0.575191
+max unmet demand across cases/years 9.032976211
+INVEST_START_ONLY_2029 vs ALL: rate path identical True credit 2028 0.0 1.379797521202518 GDP 2055 diff -0.009483
+tax_macro/N 2055 ALL 0.1498 TEXT 0.1511
+500/300 inclusive & 240 inclusive handled in model: tested via direct calls below
+premium 5.7750525e-07 expected 5.7750525e-07 kind 1e-08
+CIRCUIT halted years [2036, 2037, 2038] .. [2055] count 18
+years with unmet demand>0 (of 30): {'TEXT_KNOWN_PARTIAL': 0, 'ILLUSTRATIVE_ALL': 26, 'ILLUSTRATIVE_PREMIUM': 26, 'ILLUSTRATIVE_PUBLIC': 26, 'ILLUSTRATIVE_INTERNAL': 26, 'ANNEX6_CUT_FIRST_ONLY': 26, 'NO_FOOD_CHANNEL': 23, 'NO_SOCIAL_CHANNEL': 0, 'NO_FIRM_CHANNEL': 21, 'NO_MEDICAL_HUB_CHANNEL': 25, 'NO_TRIGGERS': 25, 'NO_EXTRA_BASES': 26, 'EDUCATION_LEVEL_READING': 26, 'BOUNDED_FLOW_HYPOTHESES': 27, 'TAX_ELASTICITY_2': 26, 'OIL_INITIAL_ALT': 26, 'GOVERNANCE_ANNEX_RULE': 26, 'CIRCUIT_ILLUSTRATION': 7, 'INVEST_START_ONLY_2029': 26, 'GINI_RELATIVE_INCREMENT': 26, 'ANNEX4_MEDICAL_EXTENSION': 20, 'VAT_RETURN_RECLASSIFICATION': 9, 'INVEST_EFFECT_LOW': 27, 'INVEST_EFFECT_HIGH': 27, 'RESOURCE_FLOW_ONLY_SENSITIVITY': 26, 'NO_LABOR_MIGRATION_PACKAGE': 26}
+slack=1.0: PREMIUM-ALL dGDP 2038/2045/2055 [-0.144612, -0.144556, -0.13741] unmet years 0
+CIRCUIT 2040 halted 0 expenditure diff when elderly subsidy+pension set 0: 0.03 (nonzero = paid while halted)
+old risk rules: [{'type': 'once', 'year': 2026, 'pct': 3.0}, {'type': 'once', 'year': 2027, 'pct': 5.0}, {'type': 'once', 'year': 2031, 'pct': 3.0}, {'type': 'every', 'start': 2029, 'step': 3, 'pct': 1.0}, {'type': 'every', 'start': 2027, 'step': 2, 'pct': 0.5}]
+old expenditure growth table: [{'from': 2026, 'value': 2.5}, {'from': 2035, 'value': 1.5}, {'from': 2045, 'value': 1.0}]
+OLD_ rows vs 30b926dd CSV: shared cols 24 cells 17280 string mismatches 0
+baseline attribution: as modelled TEXT_KNOWN_PARTIAL 2055 real GDP 493.926 pop(M) 86.79
+baseline attribution: +old aging drag table TEXT_KNOWN_PARTIAL 2055 real GDP 457.639 pop(M) 86.79
+baseline attribution: +old 5y migration ramp TEXT_KNOWN_PARTIAL 2055 real GDP 490.964 pop(M) 85.99
+baseline attribution: +both TEXT_KNOWN_PARTIAL 2055 real GDP 454.891 pop(M) 85.99
+old expenditure growth table vs new constant 2.5%: 2055 expenditure new 223.39 oldCORE 170.376
+CIRCUIT halted years [2036, 2037, 2038, 2039, 2042, 2043, 2044, 2045, 2046, 2047, 2048, 2049, 2050, 2051, 2052, 2053, 2054, 2055] | expenditure paid during halt (subsidy+pension) in 2036 : 0.03

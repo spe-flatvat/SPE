@@ -1,0 +1,20 @@
+old cases 18 rows 540 cols 90 cells 48600 text-exact mismatches 0
+new total rows 720 cases 24
+DEFAULT max |interaction| by var: {'Y': '1.137e-13', 'K': '8.882e-16', 'T': '8.527e-14', 'Td': '8.527e-14', 'gap': '8.527e-14', 'un': '0.000e+00'}
+CAPACITY_TIGHT max |interaction| by var: {'Y': '1.137e-13', 'K': '8.882e-16', 'T': '3.037e-06', 'Td': '3.037e-06', 'gap': '3.037e-06', 'un': '2.274e-13'}
+TIGHT+HIGH_YIELD max |interaction| by var: {'Y': '1.137e-13', 'K': '8.882e-16', 'T': '4.575e-06', 'Td': '4.575e-06', 'gap': '4.575e-06', 'un': '2.274e-13'}
+promotion flow max diff (tax8-only vs base): 0.0
+tax path (rate) invest-only vs base: hh cash max diff: 0.0
+sector-cash investment state diff 2030 (tax8-only): 0.00937545715159771  promo flow 0.0
+2038 dHHcash -0.341312 -xprem -0.341312 dY -0.085276 dC -0.085276 dI 0.0 dTax -0.014155
+2045 dHHcash -0.378803 -xprem -0.378803 dY -0.144188 dC -0.144188 dI 0.0 dTax -0.02752
+2055 dHHcash -0.439616 -xprem -0.439616 dY -0.137246 dC -0.137246 dI 0.0 dTax -0.031976
+PREMIUM+support=1 2055 dHHcash -1.7763568394002505e-15 (expected ~0 since support offsets)
+cum internal 2055 6.993262120589245
+inv start 2027 first flow year 2027 2055 Y 460.330834
+inv start 2035 first flow year 2035 2055 Y 460.049562
+inv start 2055 first flow year 2055 2055 Y 457.343114
+year8 2029 2055 Y alone 460.236825 with linked inv 460.269688 diff 0.032863
+year8 2033 2055 Y alone 460.234414 with linked inv 460.127422 diff -0.106992
+benefit_start 2027 year8 2030 year5 2035
+independent DM-04/05 recompute: cases 22 cells 22530 max rel diff 7.55708214880332e-14

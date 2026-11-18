@@ -1,0 +1,56 @@
+paths 46 rows 1380
+A numeric cells 62054 (vs_old cells deferred to supplementary A1: 4140 ) blank-compared 46 mismatch 0 max_rel_err 4.791e-11 []
+csv columns not independently rebuilt: ['policy', 'migration_mode', 'anchor', 'employment_fraction', 'value_added_per_worker_2026_yen', 'slack', 'foreign_births', 'foreign_deaths', 'nationality_net_transfer', 'japanese_net_migration']
+B summary cells 1058 mismatch 0
+---SUPPLEMENTARY---
+A1 Summary.csv delta_GDP_vs_old (46 cells) vs exact old engine: mismatches 0
+A1 vs_old columns vs exact old engine: mismatches 0 max_rel_err 4.72e-11
+A2 Report.md lines checked 53 not found 0
+A3 pop = JP + foreign = age sum, max abs dev (persons): 7.45e-09
+A3 Japanese population identical across every anchored path (max dev, persons): 8.94e-08
+A3 IPSS_EXACT_SQ vs IPSS table max dev (persons): 0.00e+00
+A3 cumulative-difference identity, max dev: 7.36e-08
+B F400-SQ population diff 2055 2754415 sum of flow diffs 2754415 ; foreign diff 2754415
+B residual R_F (persons/yr) 2027,2035,2040,2045,2055: [1209, 2209, -1791, -14932, -25895] sum 2027-55 -234987
+B bridge term IPSS_EXACT (persons) 2027,2035,2041,2045,2055: [3209, 3209, -641, -8932, -5895]
+B foreign share 2055 SQ_IPSS (anchored) vs IPSS table: 8378332 7914000 diff 464332 = initial foreign offset 464332
+B 2026 start: pop 122618024 foreign 4005332 JP 118612692; vs 2026-10 estimate 122,690,000 -> -71976
+C zero inflow from 2027: ratio 2026 3.267%, max 3.933% (year 2055), 2055 3.933%
+C constant annual net flow from 2027: 2055 ratio = 3% needs -31804/yr ; max-over-years <= 3% needs -200000/yr
+C constant annual net flow from 2027: 2055 ratio = 4% needs 2297/yr ; max-over-years <= 4% needs 2297/yr
+C constant annual net flow from 2027: 2055 ratio = 5% needs 37115/yr ; max-over-years <= 5% needs 37115/yr
+C2 band rule (speed .2, smoothing .5): matrix [[.9,.5],[-.1,.5]] det=0.50 trace=1.40 |eig|=0.707
+C2 F_BAND3 neg-flow years 25 first 2031 min -214272 cum 2030-55 flow -1713790 max ratio 4.121% ratio2055 3.121%
+C2 F_BAND4 neg-flow years 24 first 2032 min -72560 cum 2030-55 flow -683321 max ratio 4.309% ratio2055 4.160%
+C2 F_BAND5 neg-flow years 19 first 2037 min -37122 cum 2030-55 flow 368843 max ratio 5.198% ratio2055 5.198%
+C2 SQ_COMMON cum 2030-55 flow 7886199
+D elderly_additional_workers (F, from 2030 full): 200000.0  TEXT aging_drag: {'2026': 0.0} labor_response 0.65
+D F_STOCK400 - F_SAME_FLOW (2055): dGDP 11.248兆, dForeignRes 275万, dForeignWorkers 193万, dEffLabour 171.4万, GDP-elasticity-to-labour 0.638, implied real GDP per extra foreign worker 583万円, dNominalGDP 21.251兆
+D F_STOCK300 - F_SAME_FLOW (2055): dGDP 0.634兆, dForeignRes 15万, dForeignWorkers 11万, dEffLabour 9.6万, GDP-elasticity-to-labour 0.641, implied real GDP per extra foreign worker 586万円, dNominalGDP 1.196兆
+D F_BAND4 - F_SAME_FLOW (2055): dGDP -35.875兆, dForeignRes -857万, dForeignWorkers -600万, dEffLabour -533.2万, GDP-elasticity-to-labour 0.654, implied real GDP per extra foreign worker 598万円, dNominalGDP -67.782兆
+D SQ_COMMON - SQ_IPSS (2055): dGDP 17.071兆, dForeignRes 419万, dForeignWorkers 293万, dEffLabour 260.6万, GDP-elasticity-to-labour 0.641, implied real GDP per extra foreign worker 582万円, dNominalGDP 32.345兆
+D employment x coefficient collinearity: ECON_E60_Q8_F400 vs ECON_E80_Q6_F400 max |dGDP| 2.27e-13 max |dTax| 1.42e-13 (employment .6x800 == .8x600)
+D employment x coefficient collinearity: ECON_E60_Q8_SQ vs ECON_E80_Q6_SQ max |dGDP| 1.14e-13 max |dTax| 2.84e-14 (employment .6x800 == .8x600)
+D productivity=0: F_STOCK400 vs F_SAME_FLOW real GDP 2055 502.004818 vs 502.004818 (diff 0.000e+00) -> foreign stock has no GDP channel except weighted labour; extra 2.75M residents with q=0
+E diagnostic nominal attribution diff F_STOCK400-F_SAME_FLOW: 28.781兆 vs actual nominal GDP diff 21.251兆 (ratio 0.74)
+E diagnostic nominal attribution diff F_BAND4-F_SAME_FLOW: -89.688兆 vs actual nominal GDP diff -67.782兆 (ratio 0.76)
+E SQ_COMMON 2055 worker-VA attribution 131.61兆 of nominal GDP 1021.22兆 = 12.89%; legacy resident formula 9.84%; 2026 start legacy 5.34% worker 3.74%
+E F_STOCK400 2055 worker-VA attribution 160.38兆 of nominal GDP 1071.46兆 = 14.97%; legacy resident formula 11.73%; 2026 start legacy 5.34% worker 3.74%
+F F_STOCK400 total 26.220 = [order A: non-migration 14.973 + migration|F 11.248] = [order B: migration alone 11.055 + policy|migration 15.166] ; interaction 0.193
+F F_STOCK300 total 15.606 = [order A: non-migration 14.973 + migration|F 0.634] = [order B: migration alone 0.622 + policy|migration 14.984] ; interaction 0.012
+F F_BAND4 total -20.902 = [order A: non-migration 14.973 + migration|F -35.875] = [order B: migration alone -35.202 + policy|migration 14.300] ; interaction -0.673
+G IPSS table internal: max identity deviation 2000 persons (source tables are in 1,000-person units, so up to a few thousand is rounding); structural problems: []
+G IPSS reference table internal consistency problems: [] | 2025 obs identity dev 24
+G SNA GDP/employed = 9154003.8 yen (report 約915.4万円) | MHLW 2,571,037/4,125,395 = 0.6232
+G implied total net migration from IPSS table (dP-(B-D)), 2027,2035,2040,2041,2045,2050,2055: [167000, 167000, 165000, 162000, 149000, 143000, 140000] | model foreign base flow: [163791, 163791, 162641, 157932, 151959, 145895]
+G2 post-2040 base-flow sensitivity SQ_COMMON 2055: GDP 527.852 -> 528.461, pop 10465.3万 -> 10480.4万, foreign ratio 12.008% -> 12.135%
+G2 post-2040 base-flow sensitivity F_SAME_FLOW 2055: GDP 542.825 -> 543.446, pop 10465.3万 -> 10480.4万, foreign ratio 12.008% -> 12.135%
+G2 post-2040 base-flow sensitivity F_STOCK400 2055: GDP 554.073 -> 554.073, pop 10740.8万 -> 10740.8万, foreign ratio 14.264% -> 14.264%
+G2 post-2040 base-flow sensitivity F_BAND4 2055: GDP 506.950 -> 506.950, pop 9608.4万 -> 9608.4万, foreign ratio 4.160% -> 4.160%
+G2 cumulative base difference 2041-55 (persons): -151048
+H band prev-increment 0: 2030 flow -13447, min flow -38781, max ratio 4.160%, 2055 ratio 4.160%
+H band prev-increment 150000: 2030 flow 61553, min flow -51424, max ratio 4.192%, 2055 ratio 4.160%
+H band prev-increment 350000: 2030 flow 161553, min flow -72560, max ratio 4.309%, 2055 ratio 4.160%
+H band prev-increment 500000: 2030 flow 236553, min flow -88412, max ratio 4.397%, 2055 ratio 4.160%
+A4 case label/parameter columns mismatching case definitions: 0
+A5 foreign_births/foreign_deaths/nationality_net_transfer/japanese_net_migration non-blank cells: 0

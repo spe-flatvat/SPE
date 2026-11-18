@@ -1,0 +1,127 @@
+cases 47 rows 1410 numeric cells compared 78390 string/blank cells 18900 max rel diff 4.96440993243465e-10 mismatches 0
+[]
+
+== A. Legacy replays against stored fixed outputs (independent engine)
+LEGACY_CORE_REPLAY cols 5 max rel diff vs stored 1.778e-15
+TEXT_PREVIOUS_ASSUMPTIONS_REPLAY cols 8 max rel diff vs stored 4.681e-10
+embedded legacy_core_reference == stored 30b926dd CORE_NO_POLICY rows (all shared columns): True
+
+== B. TX-01 2x2 identity from CSV values (independent, all 12 metrics, both cap states)
+cells 720 max |total - (baseline+policy_old+interaction)| 0.00e+00
+
+== C. TX-01 profile coverage and exact factorial (2^7) decomposition, 2055, CAP
+profile keys differing OLD vs TEXT: ['aging_drag_pp', 'birth_mode', 'climate_anchor', 'elasticity', 'expenditure_growth', 'foreign_labor_gap_enabled', 'migration_delivery_ramp_years'] | keys in profile: ['aging_drag_pp', 'birth_mode', 'climate_anchor', 'elasticity', 'expenditure_growth', 'foreign_labor_gap_enabled', 'migration_delivery_ramp_years']
+OLD with all 7 overrides == TEXT profile (F, 2055 GDP): True | SQ: True
+real_gdp_trn 2055 Shapley baseline effect on SQ level (sum 53.449) / on F-SQ gap (sum 3.589)
+   aging_drag_pp                    SQ   +36.109 | F-SQ   +1.190
+   birth_mode                       SQ    -2.489 | F-SQ   -0.035
+   climate_anchor                   SQ    +2.601 | F-SQ   +0.088
+   elasticity                       SQ    +0.000 | F-SQ   +0.000
+   expenditure_growth               SQ    +0.000 | F-SQ   +0.000
+   foreign_labor_gap_enabled        SQ   +14.152 | F-SQ   +1.926
+   migration_delivery_ramp_years    SQ    +3.078 | F-SQ   +0.420
+tax_diagnostic_trn 2055 Shapley baseline effect on SQ level (sum 43.289) / on F-SQ gap (sum 3.713)
+   aging_drag_pp                    SQ   +11.722 | F-SQ   -0.379
+   birth_mode                       SQ    -0.813 | F-SQ   +0.041
+   climate_anchor                   SQ    +0.820 | F-SQ   -0.025
+   elasticity                       SQ   +25.898 | F-SQ   +3.708
+   expenditure_growth               SQ    +0.000 | F-SQ   +0.000
+   foreign_labor_gap_enabled        SQ    +4.637 | F-SQ   +0.300
+   migration_delivery_ramp_years    SQ    +1.025 | F-SQ   +0.068
+expenditure_diagnostic_trn 2055 Shapley baseline effect on SQ level (sum 50.635) / on F-SQ gap (sum 0.856)
+   aging_drag_pp                    SQ    +0.000 | F-SQ   +0.561
+   birth_mode                       SQ    +0.000 | F-SQ   -0.038
+   climate_anchor                   SQ    +0.000 | F-SQ   +0.038
+   elasticity                       SQ    +0.000 | F-SQ   +0.000
+   expenditure_growth               SQ   +50.635 | F-SQ   +0.000
+   foreign_labor_gap_enabled        SQ    +0.000 | F-SQ   +0.242
+   migration_delivery_ramp_years    SQ    +0.000 | F-SQ   +0.053
+check: OLD F-SQ gap 2055 + sum of Shapley gap effects = TEXT F-SQ gap -> 20.378474 vs 20.378474
+sum of one-at-a-time SQ GDP effects 51.008 vs exact total baseline effect 53.449 (non-additive residual 2.441)
+
+== D. Is F-SQ GDP gap a labour-supply effect (core GDP) or a demand/policy effect?
+OLD_ASSUMPTIONS 2035 F-SQ real GDP 13.047 = core(labour) 1.591 + gap-part 11.457
+OLD_ASSUMPTIONS 2045 F-SQ real GDP 15.060 = core(labour) 2.971 + gap-part 12.089
+OLD_ASSUMPTIONS 2055 F-SQ real GDP 16.790 = core(labour) 4.696 + gap-part 12.094
+TEXT_ASSUMPTIONS 2035 F-SQ real GDP 14.052 = core(labour) 2.238 + gap-part 11.814
+TEXT_ASSUMPTIONS 2045 F-SQ real GDP 17.488 = core(labour) 4.450 + gap-part 13.038
+TEXT_ASSUMPTIONS 2055 F-SQ real GDP 20.378 = core(labour) 7.128 + gap-part 13.250
+
+== E. TX-02 supply ceiling / price channel
+OLD_ASSUMPTIONS SQ cap/uncapped/price-neutral identical in all columns: True | SQ binding years: 0
+  F_CAP binding years 26 (2030-2055), max unmet 3.335 in 2037; first-year unmet 0.219
+  F_UNCAPPED excess_vs_ceiling max 3.461; GDP 2055 CAP 464.260 UNCAPPED 465.044 diff +0.784 (0.17%)
+  price channel: tax_diag 2055 CAP 100.6394 PRICE_NEUTRAL 100.5511 diff +0.0883 ; nominal GDP diff +0.7359 ; max cumulative-year tax diff 0.2783
+  real GDP identical CAP vs PRICE_NEUTRAL in every year: True
+  DM-04 2055 real GDP diff vs UNALLOCATED:  CAP: PREMIUM +0.000000 PUBLIC +0.000000 INTERNAL +0.000000 | UNCAPPED: PREMIUM -0.137253 PUBLIC +0.000000 INTERNAL +0.000000
+  DM-04 under CAP: PREMIUM tax_diag 2055 diff -0.01565, nominal diff -0.13044 (real GDP unchanged but price channel moves nominal/tax)
+  PREMIUM vs UNALLOCATED UNCAPPED: largest annual GDP diff -0.1471 in 2040; cumulative-2055 -0.1373
+  PUBLIC vs UNALLOCATED UNCAPPED real GDP identical all years: True | expenditure diff 2055 +0.4396 | fiscal_balance diff 2055 -0.4396
+  INTERNAL vs UNALLOCATED UNCAPPED real GDP identical all years: True | expenditure diff 2055 +0.0000 | fiscal_balance diff 2055 +0.0000
+TEXT_ASSUMPTIONS SQ cap/uncapped/price-neutral identical in all columns: True | SQ binding years: 0
+  F_CAP binding years 26 (2030-2055), max unmet 3.103 in 2037; first-year unmet 0.186
+  F_UNCAPPED excess_vs_ceiling max 3.221; GDP 2055 CAP 521.298 UNCAPPED 521.594 diff +0.296 (0.06%)
+  price channel: tax_diag 2055 CAP 147.6416 PRICE_NEUTRAL 147.5783 diff +0.0633 ; nominal GDP diff +0.2692 ; max cumulative-year tax diff 0.4342
+  real GDP identical CAP vs PRICE_NEUTRAL in every year: True
+  DM-04 2055 real GDP diff vs UNALLOCATED:  CAP: PREMIUM +0.000000 PUBLIC +0.000000 INTERNAL +0.000000 | UNCAPPED: PREMIUM -0.137597 PUBLIC +0.000000 INTERNAL +0.000000
+  DM-04 under CAP: PREMIUM tax_diag 2055 diff -0.03003, nominal diff -0.13034 (real GDP unchanged but price channel moves nominal/tax)
+  PREMIUM vs UNALLOCATED UNCAPPED: largest annual GDP diff -0.1473 in 2040; cumulative-2055 -0.1376
+  PUBLIC vs UNALLOCATED UNCAPPED real GDP identical all years: True | expenditure diff 2055 +0.4396 | fiscal_balance diff 2055 -0.4396
+  INTERNAL vs UNALLOCATED UNCAPPED real GDP identical all years: True | expenditure diff 2055 +0.0000 | fiscal_balance diff 2055 +0.0000
+
+== F. TX-03 flow / stock / ratio: closed-form checks and breach years
+OLD_ASSUMPTIONS_SQ_CAP     common cum 8568000 (model common-pop minus births-deaths ok) | F add closed None vs model 0 | stock closed None vs model 10568000
+OLD_ASSUMPTIONS_F_CAP      common cum 8568000 (model common-pop minus births-deaths ok) | F add closed 1032000 vs model 1032000 | stock closed 11600000 vs model 11600000
+TEXT_ASSUMPTIONS_SQ_CAP    common cum 9282000 (model common-pop minus births-deaths ok) | F add closed None vs model 0 | stock closed None vs model 11282000
+TEXT_ASSUMPTIONS_F_CAP     common cum 9282000 (model common-pop minus births-deaths ok) | F add closed 1118000 vs model 1118000 | stock closed 12400000 vs model 12400000
+MIG_ADDITIONAL400K         common cum 9282000 (model common-pop minus births-deaths ok) | F add closed 10400000 vs model 10400000 | stock closed 21682000 vs model 21682000
+MIG_COMMON_ZERO_SQ         common cum 0 (model common-pop minus births-deaths ok) | F add closed None vs model 0 | stock closed None vs model 2000000
+MIG_COMMON_ZERO_F          common cum 0 (model common-pop minus births-deaths ok) | F add closed 10400000 vs model 10400000 | stock closed 12400000 vs model 12400000
+MIG_RETENTION_98           common cum 9282000 (model common-pop minus births-deaths ok) | F add closed 1118000 vs model 1118000 | stock closed None vs model 9285325
+
+first year ratio > 3% / > 5% (population ratio of conditional foreign stock), ratio in 2026 and 2030, and GDP-contribution ratio (stock*8e-6/coreN) 2055:
+  OLD_ASSUMPTIONS_SQ_CAP             >3%: 2035  >5%: 2041  ratio2026 1.65% 2030 1.76% 2055 12.34% | GDP-share 2055 9.73% (2035 4.07%) | trigger_migration(2035)=0
+  OLD_ASSUMPTIONS_F_CAP              >3%: 2035  >5%: 2040  ratio2026 1.65% 2030 1.77% 2055 13.38% | GDP-share 2055 10.57% (2035 4.26%) | trigger_migration(2035)=0
+  TEXT_ASSUMPTIONS_SQ_CAP            >3%: 2034  >5%: 2039  ratio2026 1.65% 2030 2.00% 2055 13.17% | GDP-share 2055 9.30% (2035 4.76%) | trigger_migration(2035)=0
+  TEXT_ASSUMPTIONS_F_CAP             >3%: 2033  >5%: 2038  ratio2026 1.65% 2030 2.04% 2055 14.29% | GDP-share 2055 10.08% (2035 5.04%) | trigger_migration(2035)=0
+  MIG_ADDITIONAL400K                 >3%: 2032  >5%: 2035  ratio2026 1.65% 2030 2.34% 2055 22.57% | GDP-share 2055 16.17% (2035 7.36%) | trigger_migration(2035)=0
+  MIG_GDP_STOCK_CAP_INTERPRETATION   >3%: 2033  >5%: 2039  ratio2026 1.65% 2030 2.04% 2055 13.39% | GDP-share 2055 9.43% (2035 4.99%) | trigger_migration(2035)=0
+  MIG_RETENTION_98                   >3%: 2034  >5%: 2040  ratio2026 1.65% 2030 1.91% 2055 10.70% | GDP-share 2055 7.63% (2035 4.53%) | trigger_migration(2035)=0
+  MIG_COMMON_ZERO_SQ                 >3%: None  >5%: None  ratio2026 1.65% 2030 1.71% 2055 2.62% | GDP-share 2055 1.83% (2035 2.34%) | trigger_migration(2035)=0
+  MIG_COMMON_ZERO_F                  >3%: 2033  >5%: 2038  ratio2026 1.65% 2030 2.04% 2055 14.29% | GDP-share 2055 10.08% (2035 5.04%) | trigger_migration(2035)=0
+trigger_migration fired (pop<1e8 in 2035) in any of 47 paths: []
+min population 2034 across paths: 112467034 ; max: 116252034
+GDP_STOCK interpretation: F accepted flow by year (nonzero): {2030: 43000, 2031: 43000, 2032: 43000, 2033: 43000, 2034: 43000, 2035: 0, 2036: 0, 2037: 0, 2038: 0, 2039: 0} | ceiling persons 2031/2035/2055: 4068677 / 4300742 / 5981962
+  cap binds on F additions from year 2035 ; GDP-share of stock vs 5% in same case 2031..2035: [3.45, 3.9, 4.27, 4.65, 4.99]
+RETENTION_98: foreign labour term sign 2027-2029 (stock - initial): [-40000, -79200, -117616] -> labour growth pct [-0.8297, -0.7687, -0.8077] vs retention=1 TEXT_F [-0.8147, -0.7538, -0.7928]
+F-additional share of 2055 stock excess: TEXT_F stock 12400000 of which F additional 1118000 (9.0%)
+
+== G. Regression / side effects: DM-04 payer identities and DM-05 start-year independence
+insurer funding identity violations over 1410 rows: 0
+investment_flow_share = None
+   I_policy_real 2029/2031/2035: base [0.58015, 0.81707, 0.89767] | tax-start only [0.58015, 0.80774, 0.91204] | invest-start only [0.2757, 0.76835, 0.89642] | both [0.2757, 0.75902, 0.91079]
+   corporate credit proxy via firm_credit not exported; GDP 2035: base 530.7237 tax-start-only 530.5018 invest-only 530.6700 both 530.4709
+investment_flow_share = 0.01
+   I_policy_real 2029/2031/2035: base [3.21272, 5.75752, 6.11533] | tax-start only [3.21272, 5.74819, 6.1297] | invest-start only [0.2757, 3.34112, 6.05347] | both [0.2757, 3.33179, 6.06784]
+   corporate credit proxy via firm_credit not exported; GDP 2035: base 533.1470 tax-start-only 533.1439 invest-only 532.2481 both 532.2450
+model default investment_start=2028, year8=2030, investment_flow_share=None, education_flow_share=None
+INVEST_START_ONLY_2029 vs base: rates identical: True | I_policy 2028/2029/2030 base [0.365464, 0.580149, 0.758345] vs 2029-start [0.146368, 0.49251, 0.72329]
+
+== H. Report tables regenerated independently and found verbatim in the markdown report
+report table lines regenerated: 68 missing from report: 0
+
+== I. Regression: all 26 prior (db52249f) F-text paths replayed on the independent TX-structure engine
+prior paths replayed: 26 ; paths with max rel diff <= 1e-8: 26 ; max over all: 4.938e-10
+not reproduced / error: []
+
+== J. Sensitivity (not calibration): initial foreign stock 2.0M (model) vs 4,281,026 (MOJ/ISA resident foreigners, end of June 2026, public release 2026-10-16)
+initial stock 2000000 | TEXT_ASSUMPTIONS_SQ_CAP    ratio2026 1.65% first>3%: 2034 first>5%: 2039 ratio2055 13.17% GDP-share 2035 4.76% 2055 9.30%
+initial stock 2000000 | TEXT_ASSUMPTIONS_F_CAP     ratio2026 1.65% first>3%: 2033 first>5%: 2038 ratio2055 14.29% GDP-share 2035 5.04% 2055 10.08%
+initial stock 2000000 | MIG_COMMON_ZERO_SQ         ratio2026 1.65% first>3%: None first>5%: None ratio2055 2.62% GDP-share 2035 2.34% 2055 1.83%
+initial stock 4281026 | TEXT_ASSUMPTIONS_SQ_CAP    ratio2026 3.52% first>3%: 2026 first>5%: 2034 ratio2055 15.83% GDP-share 2035 7.38% 2055 11.18%
+initial stock 4281026 | TEXT_ASSUMPTIONS_F_CAP     ratio2026 3.52% first>3%: 2026 first>5%: 2033 ratio2055 16.92% GDP-share 2035 7.65% 2055 11.94%
+initial stock 4281026 | MIG_COMMON_ZERO_SQ         ratio2026 3.52% first>3%: 2026 first>5%: 2051 ratio2055 5.60% GDP-share 2035 5.01% 2055 3.91%
+
+== K. Ceiling vs price channel on 2055 tax_diagnostic (F): real-ceiling effect = NEUTRAL - UNCAPPED ; price effect = CAP - NEUTRAL
+OLD_ASSUMPTIONS ceiling-real -0.1826 ; price +0.0883 ; net CAP-UNCAPPED -0.0943
+TEXT_ASSUMPTIONS ceiling-real -0.1338 ; price +0.0633 ; net CAP-UNCAPPED -0.0705

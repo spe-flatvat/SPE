@@ -1,0 +1,83 @@
+
+== A1. case set and annual rows vs Sensitivity_Annual.csv
+independent cases 96 | csv cases 96 | csv rows 2880 | name sets equal True
+numeric cells compared 74880 max rel diff 4.977e-10 mismatches 0 []
+
+== A2. thresholds (reach = >=, exceed = >) and 2055 end values vs Sensitivity_Summary.csv
+summary cells compared 3264 mismatches 0 []
+
+== A3. Stock400 ledger: S(y)=S(2026)+400000*(y-2026); denominator = SQ population with 400k net migration from 2027
+ledger rows 90 mismatches 0 | first year >5%: {'LEGACY': 2036, 'END25': 2031, 'JUN26': 2031} | 2055 END25 stock 15725395 ratio 17.873%
+independent engine ANNUAL400_2027_END25_SQ stock = ledger stock for all years: True
+population denominator independent of initial foreign stock (END25 vs LEGACY SQ): True
+
+== B1. Official_Statistics.csv internal identities (2020-2025)
+violations []
+2025: net migration + natural + nationality = 333174 (report: 333,174 = population_foreign 2025 - 2024: 333174.0 )
+resident-stock yoy: 2025 356418 (report 356,418), 2026H1 155631 (report 155,631); workers yoy 2025 268450 (report 268,450)
+avg 2023-25 net migration 303315.333 ; 2025 vs 357000: +29443 ; avg vs 357000: +53684.667
+net migration needed for stock +400,000 using 2025 residual (natural+nationality=+5617): 394383
+
+== B2. table in Research_and_Owner_Decisions.md section A vs CSV
+table rows 6 mismatches []
+2026 values: Oct provisional 122690000, May final 122812000, foreign(May) 3974314, 2026-06 resident 4281026
+foreign share definitions 2026: pop-estimate 3,974,314/122,812,000 = 3.236% ; resident 4,281,026/122,812,000 = 3.486% ; model END25 4,125,395/121.5M = 3.395% ; model JUN26 = 3.523%
+
+== C. GDP-5% reference: stock x 8e-6 trn / core nominal GDP (2026 core nominal = 600 trn)
+  LEGACY 2.0M                        initial GDP-share 2.67%
+  END25 resident 4,125,395           initial GDP-share 5.50%
+  JUN26 resident 4,281,026           initial GDP-share 5.71%
+  END25 workers notified 2,571,037   initial GDP-share 3.43%
+  implied employed persons behind 8M yen/person: 75.0 million ; actual employed 2025 (Labour Force Survey): 68.28 million -> GDP per employed person 8.79 M yen
+  workers / residents (2025) = 0.623 ; foreign workers / employed = 3.77%
+  END25 initial, workers-only (ratio x 0.623): GDP-share 3.43%
+  END25_LAST25_S02_SQ        first >5% as defined: 2026 ; if only workers (x0.623 of stock) counted: 2040 ; 2055 share as defined 10.51% / workers-only 6.55%
+  END25_LAST25_S02_F         first >5% as defined: 2026 ; if only workers (x0.623 of stock) counted: 2038 ; 2055 share as defined 11.81% / workers-only 7.36%
+  LEGACY_LEGACY357_S02_SQ    first >5% as defined: 2036 ; if only workers (x0.623 of stock) counted: 2048 ; 2055 share as defined 9.30% / workers-only 5.80%
+  ANNUAL400_2027_END25_SQ    first >5% as defined: 2026 ; if only workers (x0.623 of stock) counted: 2033 ; 2055 share as defined 12.67% / workers-only 7.89%
+
+== D. Stated comparisons (Research_and_Owner_Decisions.md) re-derived
+initial-stock-only change leaves real GDP unchanged (LEGACY/END25/JUN26 x same flow/slack/policy):  True
+F paths identical across the four common-flow levels (same total 400k):  True
+  F-SQ real GDP 2055, common flow LEGACY357: 20.378  (F additional persons 1118000)
+  F-SQ real GDP 2055, common flow AVG23_25 : 27.706  (F additional persons 2513801)
+  F-SQ real GDP 2055, common flow LAST25   : 24.390  (F additional persons 1883518)
+  F-SQ real GDP 2055, common flow NET400   : 14.550  (F additional persons 0)
+  => non-migration F channels (NET400, F additional = 0): 14.550 ; migration part at LEGACY357: 5.828 per 1.118 M extra persons
+  slack 2%: F binding years 26, F 2055 GDP 521.298419 tax 147.641601
+  slack 5%: F binding years 0, F 2055 GDP 521.594148 tax 147.712063
+  slack 10%: F binding years 0, F 2055 GDP 521.594148 tax 147.712063
+  slack5 == slack10 == UNCAPPED_F in every year (real GDP, tax): True
+  MED_PREMIUM_S05 vs UNALLOCATED(S05) 2055 GDP diff: -0.137597 ; PUBLIC/INTERNAL: +0.000000 / +0.000000 ; at S02 (capped): +0.000000
+  RET98  F 2055 GDP 514.560 (base 521.298, diff -6.739) ; SQ 490.892 (diff -6.016) ; F-SQ 23.667 ; stock F 10468355 ; pop F 86785659
+  LAB60  F 2055 GDP 507.429 (base 521.298, diff -13.870) ; SQ 485.661 (diff -11.248) ; F-SQ 21.768 ; stock F 14525395 ; pop F 86785659
+  LAB70  F 2055 GDP 514.388 (base 521.298, diff -6.910) ; SQ 491.302 (diff -5.607) ; F-SQ 23.087 ; stock F 14525395 ; pop F 86785659
+  F 2055 pop 86785659 births 307124 deaths 2448569 ; IPSS 2055 100,508,000 -> gap 13722341
+
+== E. Timing sensitivity (not in the ChatGPT set; independent): actual-level common inflow already from 2027 instead of 2030
+  END25 LAST25 from 2030 (set)   SQ: >3% 2026  >5% 2034  stock2030 4452952  ratio2030 3.79%  ratio2055 14.89%
+  END25 LAST25 from 2030 (set)   F : >3% 2026  >5% 2034  stock2030 4525395  ratio2030 3.84%  ratio2055 16.74%
+  END25 LAST25 from 2027         SQ: >3% 2026  >5% 2032  stock2030 5435623  ratio2030 4.58%  ratio2055 15.86%
+  END25 LAST25 from 2027         F : >3% 2026  >5% 2031  stock2030 5725395  ratio2030 4.82%  ratio2055 17.87%
+  END25 LEGACY357 from 2027      SQ: >3% 2026  >5% 2031  stock2030 5553395  ratio2030 4.68%  ratio2055 16.69%
+  END25 LEGACY357 from 2027      F : >3% 2026  >5% 2031  stock2030 5725395  ratio2030 4.82%  ratio2055 17.87%
+
+== F. Report tables (Research_and_Owner_Decisions.md) vs independent engine
+quoted table cells compared 134 mismatches 0 []
+
+== G. Initial stock on population-estimate basis (foreign usual residents) vs residence-status basis; common flow LAST25 from 2030 (as in the set)
+  model 2.0M                           SQ ratio2026 1.65% >3%: 2034 >5%: 2040 ratio2055 12.39%
+  model 2.0M                           F  ratio2026 1.65% >3%: 2033 >5%: 2038 ratio2055 14.29%
+  pop-estimate 2025-10 (3,839,332)     SQ ratio2026 3.16% >3%: 2026 >5%: 2035 ratio2055 14.55%
+  pop-estimate 2025-10 (3,839,332)     F  ratio2026 3.16% >3%: 2026 >5%: 2034 ratio2055 16.41%
+  pop-estimate 2026-05 (3,974,314)     SQ ratio2026 3.27% >3%: 2026 >5%: 2035 ratio2055 14.71%
+  pop-estimate 2026-05 (3,974,314)     F  ratio2026 3.27% >3%: 2026 >5%: 2034 ratio2055 16.56%
+  resident END25 (4,125,395)           SQ ratio2026 3.40% >3%: 2026 >5%: 2034 ratio2055 14.89%
+  resident END25 (4,125,395)           F  ratio2026 3.40% >3%: 2026 >5%: 2034 ratio2055 16.74%
+  resident JUN26 (4,281,026)           SQ ratio2026 3.52% >3%: 2026 >5%: 2034 ratio2055 15.07%
+  resident JUN26 (4,281,026)           F  ratio2026 3.52% >3%: 2026 >5%: 2033 ratio2055 16.92%
+
+== H. Zero-inflow and break-even reading (model denominators; initial stock = resident END25)
+  END25, common net flow 0, SQ: ratio 2026 3.40% 2035 3.71% 2045 4.30% 2055 5.40% ; first >5%: 2053 ; population 2055 76385659
+  constant common net inflow from 2027 that gives exactly 5.00% in 2055 (END25 start): 0 per year (negative = net outflow needed: yes)
+  2055 ratio with 0 inflow from 2027: 5.40% ; with 100,000/yr: 8.86% ; with 327,557/yr: 15.86%

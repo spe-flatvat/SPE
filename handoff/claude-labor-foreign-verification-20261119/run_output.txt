@@ -1,0 +1,69 @@
+paths 38 rows 1140
+A numeric cells 43282 (vs_previous cells deferred to supplementary: 3420 ) blank-compared 38 mismatch 0 max_rel_err 4.925e-11 []
+B summary cells 950 mismatch 0
+---SUPPLEMENTARY---
+A1 vs_previous columns vs exact prior d27b659f Annual (tolerance: 1e-6兆円 / 0.01人 for 10-11 digit storage): mismatches 0 max |diff|/tol 0.00
+A2 OLD stage vs prior model real GDP, max abs diff (兆円): 4.98e-09
+A3 Report.md lines checked 23 not found 0
+B effective workers 2026/2055 (万人): OLD 6552.8/5256.8 (ratio 0.8022) | DOM 6766.1/5395.3 (ratio 0.7974)
+B domestic employed 2026/2055 (万人): OLD 6303.6/4474.9 | DOM 6516.9/4613.4 ; GDP 2055 OLD 527.852 DOM 525.791 (diff -2.061)
+B GDP per effective worker 2026: OLD 885.121万円 DOM 857.216万円 (initial real GDP 580兆 fixed)
+B scaling effective workers by a constant (all years) changes 2055 GDP by 1.14e-13 (GDP depends on labour growth, not level)
+B2 OLD_SQ domestic employed 2026 6303.6 -> 2055 4474.9 (-29.0%); foreign employed 280.4 -> 879.7; effective workers 6552.8 -> 5256.8 (-19.78%); GDP 580.00 -> 527.85
+B2 DOM_SQ domestic employed 2026 6516.9 -> 2055 4613.4 (-29.2%); foreign employed 280.4 -> 879.7; effective workers 6766.1 -> 5395.3 (-20.26%); GDP 580.00 -> 525.79
+B2 POLICY_HIST_SQ domestic employed 2026 6516.9 -> 2055 4613.4 (-29.2%); foreign employed 279.7 -> 861.9; effective workers 6796.6 -> 5475.3 (-19.44%); GDP 580.00 -> 529.28
+B2 POLICY_HIST_F domestic employed 2026 6516.9 -> 2055 4613.4 (-29.2%); foreign employed 279.7 -> 861.9; effective workers 6796.6 -> 5475.3 (-19.44%); GDP 580.00 -> 544.24
+B3 Japanese 65+ (unscaled interpolation) population 3636万, employed 937万 (25.8%), year 2026
+B3 Japanese 65+ (unscaled interpolation) population 3879万, employed 1052万 (27.1%), year 2040
+B3 Japanese 65+ (unscaled interpolation) population 3687万, employed 876万 (23.7%), year 2055
+C elderly module inputs (inherited TX policy_inputs): additional workers 200000, subsidy 10.0万円/人, pension relief 5.0万円/人 (F text gives no number)
+C sanity: independent F rerun GDP2055 544.237066 vs recompute 544.237066
+C elderly workers=0: GDP2055 542.956 (vs F as built -1.281), expenditure2055 247.590, funding gap2055 90.959
+C elderly workers=200000: GDP2055 544.237 (vs F as built +0.000), expenditure2055 247.639, funding gap2055 90.470
+C elderly workers=400000: GDP2055 545.517 (vs F as built +1.280), expenditure2055 247.688, funding gap2055 89.981
+C elderly workers=1000000: GDP2055 549.348 (vs F as built +5.111), expenditure2055 247.836, funding gap2055 88.513
+C subsidy+pension relief set to 0: expenditure2055 247.6092 vs 247.6392 (diff 0.0300兆円/yr), GDP diff 0.0054
+C reported domestic_employed F vs SQ 2055 identical: True | elderly add-on enters effective workers only (200000 workers = 0.43% of domestic employed)
+C 2055 Japanese 65+ population 3687万, employed 876万; +1pp employment rate of 65+ = 36.9万人 workers
+D F-SQ total 14.956 = F-core (tax-rate path, sector VAT/credit, no extra channel) 3.595 + channels 11.361 ; F-all-on check 14.956
+D Shapley contribution to 2055 GDP (兆円): ELDER +1.272, EDU +2.211, ADMIN +0.015, FIRM +1.121, SOCIAL +6.242, MEDICAL +0.041, EXTRA -0.576, TRIG +0.381, FOOD +0.654 | sum 11.361
+D one-at-a-time from F-core: ELDER +1.268, EDU +2.092, ADMIN +0.015, FIRM +1.146, SOCIAL +5.894, MEDICAL +0.045, EXTRA -0.752, TRIG +0.000, FOOD +0.574
+D leave-one-out from full F: ELDER +1.281, EDU +2.342, ADMIN +0.014, FIRM +1.071, SOCIAL +6.638, MEDICAL +0.026, EXTRA +0.050, TRIG +0.785, FOOD +0.780
+D largest pairwise interactions (from F-core): SOCIAL×TRIG +0.535, EDU×TRIG +0.333, SOCIAL×FOOD +0.287, ELDER×SOCIAL +0.005, ELDER×EXTRA -0.002, ELDER×FOOD +0.001
+D total interaction beyond additive one-at-a-time: 1.078
+D Shapley tax 2055: ELDER +0.53, EDU +1.01, ADMIN -0.01, FIRM -1.48, SOCIAL +2.83, MEDICAL +0.02, EXTRA +3.14, TRIG +0.18, FOOD -1.54
+D Shapley expenditure 2055: ELDER +0.04, EDU +2.50, ADMIN +0.00, FIRM +0.00, SOCIAL +19.02, MEDICAL +0.03, EXTRA +1.20, TRIG +0.99, FOOD +0.46
+D Shapley funding gap 2055: ELDER -0.50, EDU +1.49, ADMIN +0.01, FIRM +1.48, SOCIAL +16.19, MEDICAL +0.01, EXTRA -1.94, TRIG +0.80, FOOD +2.00
+E supply_cap=True: F-SQ 2055 14.956 (F 544.237, SQ 529.281)
+E supply_cap=False: F-SQ 2055 15.039 (F 544.320, SQ 529.281)
+E binding years (cap on) POLICY_HIST_F 26, POLICY_HIST_SQ 0, F_STOCK400 25; unmet demand 2055 F 0.07
+E SLACK5_SQ GDP2055 529.281
+E SLACK5_F GDP2055 556.170
+E slack5 F-SQ (STOCK400 vs COMMON mixed pair, for reference) n/a; F_STOCK400 slack2 556.157 vs slack5 556.170
+F F_STOCK400 - POLICY_HIST_F 2055: dGDP 11.920兆, dForeignWorkers 188.9万, implied real GDP per extra foreign worker 631万円, dNominalGDP 22.533 vs diagnostic VA attribution diff 32.262 (ratio 0.70)
+F F_STOCK300 - POLICY_HIST_F 2055: dGDP 0.672兆, dForeignWorkers 10.6万, implied real GDP per extra foreign worker 634万円, dNominalGDP 1.268 vs diagnostic VA attribution diff 1.809 (ratio 0.70)
+F POLICY_HIST_SQ - POLICY_IPSS_SQ 2055: dGDP 18.125兆, dForeignWorkers 287.3万, implied real GDP per extra foreign worker 631万円, dNominalGDP 34.341 vs diagnostic VA attribution diff 49.103 (ratio 0.70)
+F F_BAND4 - POLICY_HIST_F 2055: dGDP -38.116兆, dForeignWorkers -587.8万, implied real GDP per extra foreign worker 648万円, dNominalGDP -72.016 vs diagnostic VA attribution diff -100.547 (ratio 0.72)
+F2 POLICY_HIST_F foreign employment fraction 2026 0.698 2040 0.692 2055 0.686; foreign workers 2026 280万 2055 862万
+F2 F_STOCK400 foreign employment fraction 2026 0.698 2040 0.692 2055 0.686; foreign workers 2026 280万 2055 1051万
+F2 POLICY_HIST_SQ foreign employment fraction 2026 0.698 2040 0.692 2055 0.686; foreign workers 2026 280万 2055 862万
+F3 initial level check: real GDP0 580兆/effective workers0 = 853.37万円; nominal GDP0 600兆/effective workers0 = 882.80万円; VA reference (SNA 2024) = 915.40万円; model nominal GDP0 600兆 vs SNA 2024 nominal 634.2兆
+F4 VA weight q/dq: stage VA = 1.000 ; stage OLD..FOREIGN = 0.889 ; VA6 0.655 VA12 1.311
+F5 VA6_F GDP2055 538.048 (reference F_STOCK400 556.157, diff -18.109)
+F5 VA12_F GDP2055 571.709 (reference F_STOCK400 556.157, diff +15.552)
+F5 VA6_SQ GDP2055 515.270 (reference POLICY_HIST_SQ 529.281, diff -14.011)
+F5 VA12_SQ GDP2055 541.429 (reference POLICY_HIST_SQ 529.281, diff +12.148)
+F5 EMP85_F GDP2055 548.395 (reference F_STOCK400 556.157, diff -7.763)
+F5 EMP114_F GDP2055 562.184 (reference F_STOCK400 556.157, diff +6.027)
+F5 EMP85_SQ GDP2055 523.255 (reference POLICY_HIST_SQ 529.281, diff -6.026)
+F5 EMP114_SQ GDP2055 533.982 (reference POLICY_HIST_SQ 529.281, diff +4.701)
+F6 POLICY_HIST_F-POLICY_HIST_SQ 2055: 14.956 ; SQ level 529.281
+F6 POLICY_LATEST_F-POLICY_LATEST_SQ 2055: 15.014 ; SQ level 532.292
+F6 POLICY_IPSS_F-POLICY_IPSS_SQ 2055: 14.607 ; SQ level 511.156
+F7 SQ future-inflow paths 2055 ratio/GDP: HIST 12.01%/529.28, LATEST 12.59%/532.29, IPSS 8.34%/511.16 ; first year >5%: POLICY_HIST_SQ 2033, POLICY_LATEST_SQ 2033, POLICY_IPSS_SQ 2037
+G elderly add-on effect under POLICY_HIST_F: +1.281兆円 (2055)
+G elderly add-on effect under F_STOCK400: +1.259兆円 (2055)
+G elderly add-on effect under F_BAND4: +1.332兆円 (2055)
+G elderly add-on effect under POLICY_IPSS_F: +1.304兆円 (2055)
+H elderly add-on ramp (workers): 2027:0, 2028:66667, 2029:133333, 2030:200000, 2031:200000
+I foreign-package numerical effect columns in Annual.csv: identified_foreign_policy_GDP_effect non-blank cells = 0 ; F_effective_admission_cap non-blank = 0 ; F_N4_quantity_effect_identified non-blank = 0

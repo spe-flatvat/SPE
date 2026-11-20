@@ -1,0 +1,109 @@
+{
+  "status": "CUSTODY_PASS_FOR_16_DELIVERED_FILES",
+  "fixed_commit": "7c21590ca8d50018b5df4b02d64e185db391cba0",
+  "branch": "work/chatgpt-handoff",
+  "retrieval_route": "Fresh git clone from https://github.com/spe-flatvat/SPE.git after branch update; git show fixed_commit:path bytes",
+  "files": [
+    {
+      "path": "handoff/f-pension-policy-20261120/Annual.csv",
+      "size": 1089910,
+      "sha256": "9df58954465260d53b8e76c14a5780ebe58e2d91cc1809d1adc39e4483b23bf5",
+      "match": true
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Comparison.csv",
+      "size": 199183,
+      "sha256": "8004282cff12fe13d47e683c50c00bbe2859836c2fb7c2ab5bccd9fe035e877c",
+      "match": true
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Inputs.json",
+      "size": 1282097,
+      "sha256": "5969792ecb9218dc3668d56ec426076d0359e1e4c403914f535390972f082514",
+      "match": true
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Interactions.csv",
+      "size": 31215,
+      "sha256": "f0cf7621a99b21e0b1d8420e058539c9021b41d44fcfd4d15b1f3ffabaa0de6a",
+      "match": true
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Model.py",
+      "size": 30852,
+      "sha256": "645c64f8ea4f0b2b60d233e19dddee49653d1a39ea77931385cefcfaa3d10e53",
+      "match": true
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Private_Distribution.csv",
+      "size": 257066,
+      "sha256": "60e78eeab5e52398a338720c3b00a83b7f25331c1f4810b10649bef985062fae",
+      "match": true
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Public_Strata.csv",
+      "size": 1176444,
+      "sha256": "c87351cb6ffee506b26747b103f022e6de40fadb0101e8f65118f3e1ed6c99b3",
+      "match": true
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Report.md",
+      "size": 10979,
+      "sha256": "007079540cd1f0e181fa43874a273398cf202d694187136e544138d9f540115f",
+      "match": true
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Reproduction.md",
+      "size": 2446,
+      "sha256": "1113bce7d38690c8f1f7c733d4f3688809a4a7f928f565ba60a66af3144037ef",
+      "match": true
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/SHA256SUMS.txt",
+      "size": 1216,
+      "sha256": "bf0a614f4ff3d52c70d32b7565589f07212c333d48afd191a0be46d46f1a118a",
+      "match": true
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Source_Integrity.json",
+      "size": 15387,
+      "sha256": "ba9e5445f38db076c6707b4b86de2e7ead3a62c83a6075e9fd00c32c19c9ca85",
+      "match": true
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Sources_and_Map.md",
+      "size": 14402,
+      "sha256": "7ef66d6f0848b19a8f18e0942318ad5113bf2a967474f77a0555831ef742f41d",
+      "match": true
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/StatusQuo.csv",
+      "size": 16903,
+      "sha256": "04816a04cbe5c35f0b8f9a89c128a23323ee8b41c6c0d96479efd30de55e1446",
+      "match": true
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Summary.csv",
+      "size": 31015,
+      "sha256": "921ca2fd5465fa5e7290b23f63264ebf25dbb26f58fb276a6e07c0a488628225",
+      "match": true
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Validation.json",
+      "size": 740,
+      "sha256": "af213ba156878bb79b6184de2f756cd14afc5b06e70b989b4b0b2fdc190c1ebb",
+      "match": true
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Verify.py",
+      "size": 4415,
+      "sha256": "e7f1cae823c8a9df2c2996d9824b2d36c96f4c0eef5f9cae3991bd0ce8033a65",
+      "match": true
+    }
+  ],
+  "preserved_existing_blobs": 203,
+  "total_blobs": 219,
+  "verification": "All16 original byte sizes and SHA-256 matched independently retrieved fixed-commit bytes",
+  "scope": "Generated deliverables only; public web originals are not archived; this record does not self-certify its own custody",
+  "record_scope": "This post-fetch verification record is appended after the verified16-file commit. SHA256SUMS covers those original16 files except itself. This record is not included in that self-referential manifest."
+}

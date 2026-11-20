@@ -1,0 +1,11 @@
+{
+  "cases": 58,
+  "annual_rows": 1740,
+  "reference_regression_cells": 420,
+  "accounting": "PASS",
+  "no_pre2030_quantity_effect": "PASS",
+  "no_exposure_falsification": "PASS",
+  "factorial_identities": "PASS",
+  "stable_elder_policy": "FIXED_RATES_WEIGHT_0.5",
+  "GDP_link": "PRESERVED_LEVEL_0.65"
+}

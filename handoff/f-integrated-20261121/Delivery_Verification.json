@@ -1,0 +1,175 @@
+{
+  "status": "CUSTODY_PASS_FOR_20_ORIGINAL_DELIVERABLES",
+  "original_fixed_commit": "aa0fc6c9de3a6fc33a50e68fb7948940941990dc",
+  "parent_commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+  "branch": "work/chatgpt-handoff",
+  "directory": "handoff/f-integrated-20261121",
+  "retrieval_route": "Separate fresh HTTPS git clone after connector ref update; git show original_fixed_commit:path; actual byte-size and SHA256 comparison",
+  "verified_at_utc": "2026-11-20T15:57:10.346245+00:00",
+  "files": [
+    {
+      "file": "Annual.csv",
+      "size": 2082920,
+      "sha256": "eb92953e843dfd7b84a0476b2f41ae310cafbf976cb857895b7363beabdf4772",
+      "retrieved_size": 2082920,
+      "retrieved_sha256": "eb92953e843dfd7b84a0476b2f41ae310cafbf976cb857895b7363beabdf4772",
+      "match": true
+    },
+    {
+      "file": "Comparison.csv",
+      "size": 680660,
+      "sha256": "afe616d0d15370d359c7a63cda7209d41f69ee32a1cd89d1f235c471938369a4",
+      "retrieved_size": 680660,
+      "retrieved_sha256": "afe616d0d15370d359c7a63cda7209d41f69ee32a1cd89d1f235c471938369a4",
+      "match": true
+    },
+    {
+      "file": "Dependencies.json",
+      "size": 28211,
+      "sha256": "95786aa3b3da47011341520cc4f6afc6d6ad864c71d6c9352f41b338fadbb835",
+      "retrieved_size": 28211,
+      "retrieved_sha256": "95786aa3b3da47011341520cc4f6afc6d6ad864c71d6c9352f41b338fadbb835",
+      "match": true
+    },
+    {
+      "file": "Fiscal.csv",
+      "size": 518878,
+      "sha256": "802077412925259c5b1c323e2d37a6477ad76690b99fef41324eac82165791ba",
+      "retrieved_size": 518878,
+      "retrieved_sha256": "802077412925259c5b1c323e2d37a6477ad76690b99fef41324eac82165791ba",
+      "match": true
+    },
+    {
+      "file": "Fiscal_Comparison.csv",
+      "size": 180714,
+      "sha256": "805f6f5c5f1f8208ac4883ffe612f314b2acdbd9429f1f98b201e580b8a19fa3",
+      "retrieved_size": 180714,
+      "retrieved_sha256": "805f6f5c5f1f8208ac4883ffe612f314b2acdbd9429f1f98b201e580b8a19fa3",
+      "match": true
+    },
+    {
+      "file": "Household.csv",
+      "size": 260210,
+      "sha256": "fa52c0b2de76337d1547acd6ae67c7eb747ae406b99866d6f9a48865575f176a",
+      "retrieved_size": 260210,
+      "retrieved_sha256": "fa52c0b2de76337d1547acd6ae67c7eb747ae406b99866d6f9a48865575f176a",
+      "match": true
+    },
+    {
+      "file": "Income_Groups.csv",
+      "size": 2141823,
+      "sha256": "b00d110ecb0f73cf53943e6ee4b28be50e392c1fe73c856b783be4750ac95ce5",
+      "retrieved_size": 2141823,
+      "retrieved_sha256": "b00d110ecb0f73cf53943e6ee4b28be50e392c1fe73c856b783be4750ac95ce5",
+      "match": true
+    },
+    {
+      "file": "Inputs.json",
+      "size": 7865,
+      "sha256": "87d454a5205869e58dee2836103499ee1eee89105cf9d14c62724df0561c66f5",
+      "retrieved_size": 7865,
+      "retrieved_sha256": "87d454a5205869e58dee2836103499ee1eee89105cf9d14c62724df0561c66f5",
+      "match": true
+    },
+    {
+      "file": "Interactions.csv",
+      "size": 109308,
+      "sha256": "1e811e8108d298f3f29119bb60d5bf45b8695883cd700e66d2f9f9516b88d19a",
+      "retrieved_size": 109308,
+      "retrieved_sha256": "1e811e8108d298f3f29119bb60d5bf45b8695883cd700e66d2f9f9516b88d19a",
+      "match": true
+    },
+    {
+      "file": "Labor.csv",
+      "size": 194513,
+      "sha256": "9b929466e3b96c2cb7214e3a9981a10a22ff8572fd1ee0065e1165f96b4a8e89",
+      "retrieved_size": 194513,
+      "retrieved_sha256": "9b929466e3b96c2cb7214e3a9981a10a22ff8572fd1ee0065e1165f96b4a8e89",
+      "match": true
+    },
+    {
+      "file": "Model.py",
+      "size": 21624,
+      "sha256": "42adedbe340a089e126c22987df89894943fcece54b6ac85ffa002fb886bf71c",
+      "retrieved_size": 21624,
+      "retrieved_sha256": "42adedbe340a089e126c22987df89894943fcece54b6ac85ffa002fb886bf71c",
+      "match": true
+    },
+    {
+      "file": "Policy_Effects.csv",
+      "size": 67381,
+      "sha256": "6ce76b3daf549fdccf909bc1a73bfb3e88c686d8124f342676cd90a9a7d8cf71",
+      "retrieved_size": 67381,
+      "retrieved_sha256": "6ce76b3daf549fdccf909bc1a73bfb3e88c686d8124f342676cd90a9a7d8cf71",
+      "match": true
+    },
+    {
+      "file": "Policy_Map.csv",
+      "size": 3542,
+      "sha256": "0de344bc4b95f8b72554b20d8fe5eedc069d141451406e99555a1fb2322fc234",
+      "retrieved_size": 3542,
+      "retrieved_sha256": "0de344bc4b95f8b72554b20d8fe5eedc069d141451406e99555a1fb2322fc234",
+      "match": true
+    },
+    {
+      "file": "Report.md",
+      "size": 9893,
+      "sha256": "d21c9f71901add63d3f402f9fd3b8881703741b22341f61f4bfd49f635729214",
+      "retrieved_size": 9893,
+      "retrieved_sha256": "d21c9f71901add63d3f402f9fd3b8881703741b22341f61f4bfd49f635729214",
+      "match": true
+    },
+    {
+      "file": "Reproduction.md",
+      "size": 3411,
+      "sha256": "a82d313ec46f77151904949f1b7033f74ece2a6f529186e7836dc76139477a5d",
+      "retrieved_size": 3411,
+      "retrieved_sha256": "a82d313ec46f77151904949f1b7033f74ece2a6f529186e7836dc76139477a5d",
+      "match": true
+    },
+    {
+      "file": "SHA256SUMS.json",
+      "size": 2881,
+      "sha256": "f90861c164b950331968231a62825db2ffaf91b2fd2a95448e8b6193ed78ff22",
+      "retrieved_size": 2881,
+      "retrieved_sha256": "f90861c164b950331968231a62825db2ffaf91b2fd2a95448e8b6193ed78ff22",
+      "match": true
+    },
+    {
+      "file": "Summary.csv",
+      "size": 77120,
+      "sha256": "3f4e221a80526c503cac04cf49b244e15e12ec34e300fe00f68a373bf2c3cbf2",
+      "retrieved_size": 77120,
+      "retrieved_sha256": "3f4e221a80526c503cac04cf49b244e15e12ec34e300fe00f68a373bf2c3cbf2",
+      "match": true
+    },
+    {
+      "file": "Validation.json",
+      "size": 631,
+      "sha256": "9a37e695f19ff908f281432b13c0288528ed745c459a26493d83246c88aa09e8",
+      "retrieved_size": 631,
+      "retrieved_sha256": "9a37e695f19ff908f281432b13c0288528ed745c459a26493d83246c88aa09e8",
+      "match": true
+    },
+    {
+      "file": "Verification.json",
+      "size": 2441,
+      "sha256": "1e1ed87850ab138d5ef092dc6d1a2ff0825d60d344c5309cdd02f04a839af238",
+      "retrieved_size": 2441,
+      "retrieved_sha256": "1e1ed87850ab138d5ef092dc6d1a2ff0825d60d344c5309cdd02f04a839af238",
+      "match": true
+    },
+    {
+      "file": "Verify.py",
+      "size": 4445,
+      "sha256": "d9ef909f3138a6007dd5145fec3d7170cd81fcf733e231003f1364e68d728d2d",
+      "retrieved_size": 4445,
+      "retrieved_sha256": "d9ef909f3138a6007dd5145fec3d7170cd81fcf733e231003f1364e68d728d2d",
+      "match": true
+    }
+  ],
+  "numerical_replay": "11 numerical outputs exact-byte match in fresh directory before delivery; recorded SHA256 values preserved",
+  "prior_fixed_regression_cells": 360,
+  "elder_stage2_matching_cells": 180,
+  "scope": "DRAFT/NON-CANONICAL; partial public accounts and synthetic household proxies. No national full-F closure, PB or bond issuance claim; no Acceptance/Close/Freeze/HOLD changes"
+}

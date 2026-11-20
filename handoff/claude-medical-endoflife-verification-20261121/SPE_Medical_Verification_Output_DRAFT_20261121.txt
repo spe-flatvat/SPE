@@ -1,0 +1,87 @@
+## 取得・照合
+request SHA-256: b6e2f48bda738117c45f055bbbfdc40ea0a3dd7c2c9977ffcbfdcdadbbddd510
+Manifest entries 25 all match: True
+pinned dependencies matching: 9 / 9
+## replay (python3 -I Model.py Inputs.json --outdir X): 14 generated files compared byte-for-byte with originals
+same Annual.csv 3077541 fb778157a62bd604
+same Common_EndOfLife.csv 567389 0916d3c3dcf2d027
+same Common_Interface_Tests.csv 121498 fc01196c94dee744
+same Comparison.csv 492182 3dfa9b3c590f3b76
+same Education_Preserved.csv 742948 a3a1767f4cad94cd
+same Fiscal.csv 847793 f864bcd343a1a681
+same Household_Age_Income.csv 5379011 d7be33acd4ac78a3
+same Household_EndOfLife.csv 155200 bf3226cbd73850ec
+same Interactions.csv 49505 db1175def50f61da
+same Legacy_Medical.csv 30256 557ed0f6e31e2735
+same Medical_Accounts.csv 482348 78b309b3b5a38b4f
+same Summary.csv 91168 dcd0ca9ce3ed81cb
+same VAT_No_DoubleCount.csv 426420 922568caafb3351a
+same Validation.json 1105 f441b49ceb2e508e
+## Verify.py --replay
+exit 0 (output: PASS_LOCAL, 14 replay files, Verification.json unchanged after run)
+## SPE_Medical_Independent_Recalc_DRAFT_20261121.py
+A medical+common recompute: cells 46170 mismatch 0 max err (rel for |x|>1e-3 else abs) 4.754e-12 []
+B COMMON_ONLY household (independent, 兆円 / 億円):
+  2035 patient_payment_delta=-0.000624(-6.24億) noninsured_household_d=0.000516(5.16億) ltc_copay_delta=0.000442(4.42億) proxy_household_net_de=0.000342(3.42億) guarantee_cost_avoided=0.001467(14.67億) family_income_loss=0.000236(2.36億) household_direct_cash_=-0.000555(-5.55億) household_total_econom=-0.000201(-2.01億)
+    identities: cash = patient + extra: True | total - cash = (1-0.4)*opportunity: True (opp-loss = 0.000354, 60% of opportunity)
+    cash components: patient -0.000624 + nonins 0.000516 + ltc 0.000442 + proxy 0.000342 - guarantee 0.001467 + income loss 0.000236 = -0.000555
+  2040 patient_payment_delta=-0.002683(-26.83億) noninsured_household_d=0.002217(22.17億) ltc_copay_delta=0.001901(19.01億) proxy_household_net_de=0.000736(7.36億) guarantee_cost_avoided=0.003152(31.52億) family_income_loss=0.001014(10.14億) household_direct_cash_=0.000032(0.32億) household_total_econom=0.001553(15.53億)
+    identities: cash = patient + extra: True | total - cash = (1-0.4)*opportunity: True (opp-loss = 0.001520, 60% of opportunity)
+    cash components: patient -0.002683 + nonins 0.002217 + ltc 0.001901 + proxy 0.000736 - guarantee 0.003152 + income loss 0.001014 = 0.000032
+  2055 patient_payment_delta=-0.003294(-32.94億) noninsured_household_d=0.002723(27.23億) ltc_copay_delta=0.002334(23.34億) proxy_household_net_de=0.000903(9.03億) guarantee_cost_avoided=0.003871(38.71億) family_income_loss=0.001245(12.45億) household_direct_cash_=0.000040(0.40億) household_total_econom=0.001907(19.07億)
+    identities: cash = patient + extra: True | total - cash = (1-0.4)*opportunity: True (opp-loss = 0.001867, 60% of opportunity)
+    cash components: patient -0.003294 + nonins 0.002723 + ltc 0.002334 + proxy 0.000903 - guarantee 0.003871 + income loss 0.001245 = 0.000040
+C 2040 direct cash difference (億円) under single changes:
+   base 0.323 | income_loss_share 0 -9.814 | 0.6 5.391 | guarantee 0 31.845 | guarantee 60k -31.199 | proxy fee 0 -10.185 | noninsured home 400k 28.831 | hour_value 3000 5.391 | pub proxy coverage 0.3 12.406
+## SPE_Medical_Supplementary_Checks_DRAFT_20261121.py
+1 Report GDP table rows checked 11 mismatch 0
+  stress table (CSV, COMMON_F_HOUSEHOLD_STRESS: shares COMMON_F full-F case, so common-only stress is recomputed in recalc script) [(2035, -0.000555, 0.003263, 0.005032), (2040, 3.2e-05, 0.01644, 0.024043), (2055, 4e-05, 0.020189, 0.029525)]
+2 timeline COMMON_ONLY (year: law, impl_phase, national_op, registry adoption, chosen transitions, immunity flag)
+   2026 0 0 0 0 0 0
+   2027 0 0 0 0 0 0
+   2029 0 0 0 0 0 0
+   2030 1 0 0 0 0 0
+   2031 1 0 0 0.06 0 0
+   2032 1 0.25 0 0.12 476 1
+   2033 1 0.5 0 0.18 2131 1
+   2034 1 0.75 0 0.24 5653 1
+   2035 1 1 1 0.3 11718 1
+   2036 1 1 1 0.36 16785 1
+   2040 1 1 1 0.6 45610 1
+   2045 1 1 1 0.6 44284 1
+   2055 1 1 1 0.6 41603 1
+  protection flags (all cases x years, distinct values): {'registration_changes_benefits': ['0'], 'registration_changes_copay': ['0'], 'registration_changes_palliative_priority': ['0'], 'registration_voluntary': ['1'], 'revocation_allowed': ['1'], 'latest_wish_priority': ['1'], 'active_life_termination': ['0'], 'treatment_automatically_stopped': ['0'], 'unknown_wish_assumed_refusal': ['0']}
+  protection flags are literal constants in the row dict (not computed): True | unknown_wish_assumed_refusal literal 0: True
+  behavioural: adoption_target 0 / 1 -> chosen 0.0 81396.0 (base 48838); patient payment per clinical euro identical: True | proxy_designation_target 0 leaves chosen: True
+  confirmed_share=0 or explicit_preference_share=0 => chosen: 0.0 0.0
+  unknown-wish pathway: no_record_episodes (2040) 180000, chosen from them: 0 by construction (chosen<=willing<=recorded*...) ; fallback multidisciplinary episodes 63000 are cost-only
+  set independence: CommonEndOfLife imports only math; F modules import from it: ['import math'] | FMedical-> ['from CommonEndOfLife import calculate,close']
+3 counterfactual harness reproduces original 2055 GDP for 9 cases: True
+  2055 real GDP minus OFF (兆円): {'COMMON_ONLY': 0.0111, 'COPAY_ONLY': -0.1891, 'PROVIDER_ONLY': 0.2979, 'F_COMBINED': 0.1088, 'FX_P_S0': 0.3713, 'FX_PC_S0': 0.1822, 'ZERO_CLINICAL_SAVING': 0.393, 'FX_PZC': 0.2039, 'COST_INCREASE': 0.4792, 'COMMON_ZERO_SAVING': 0.0218, 'FX_PC_ND': 0.0609}
+  ZERO_CLINICAL_SAVING - F_COMBINED = 0.284241
+  decomposition (sequential, provider on): F_COMBINED -> remove copay (PROVIDER_ONLY) +0.1891 -> saving 0 (FX_P_S0) +0.0734 -> common zero-cost cfg (ZERO) +0.0218 ; total +0.2842
+  other order: F_COMBINED -> saving 0 (FX_PC_S0) +0.0734 -> remove copay (FX_P_S0) +0.1891 -> common (ZERO) +0.0218
+  channel ablation: 2055 GDP(F_COMBINED), GDP(ZERO), gap  [channel zeroed in the engine hook]
+    none 540.5022 540.7864 gap 0.2842
+    service_production 540.3813 540.5721 gap 0.1908
+    investment_nominal 540.3788 540.6630 gap 0.2842
+    health_effective 540.4463 540.7229 gap 0.2766
+    household_cash 540.6935 540.7946 gap 0.1011
+    government_cost 540.5022 540.7864 gap 0.2842
+    service_production,investment_nominal,health_effective,household_cash,government_cost 540.3934 540.3934 gap 0.0000
+   PROVIDER_ONLY service_prod 0.1851 invest 0.1346 labour 10000 cash 0.0342 govcost 0.6549 clinical -0.1122
+   COPAY_ONLY service_prod 0.0379 invest 0.0000 labour -1208 cash -0.6459 govcost -0.4025 clinical 0.0422
+   F_COMBINED service_prod 0.2231 invest 0.1346 labour 8792 cash -0.6117 govcost 0.2524 clinical -0.0700
+   ZERO_CLINICAL_SAVING service_prod 0.3955 invest 0.1346 labour 10000 cash -0.0262 govcost 0.7886 clinical 0.0748
+   COST_INCREASE service_prod 0.5939 invest 0.1346 labour 10000 cash -0.0946 govcost 0.8900 clinical 0.2953
+  marginal GDP per 1兆円 of extra clinical cost, from COST_INCREASE vs ZERO: 0.391
+4 closure: ancillary receipts equal extra household cash burden + subsidy by construction -> True ; transfer_residual 3.46944695195e-18
+5 old medical removed: legacy columns all zero in OLD_MEDICAL_REMOVED: True
+  legacy preserved (LATEST_EDUCATION_FIXED) 2055 government legacy medical: ['0.03'] ; education COMBINED GDP 2055 540.438560038 vs LATEST_EDUCATION_FIXED 540.438560038
+6 education COMBINED regression (independent comparison with f-education Annual.csv): cells 480 mismatch 0
+  old medical flows exactly zero in removed-legacy cases (case-years): 150 /150 ; legacy preserved cases nonzero in: 56
+  VAT file columns: ['new_input_credit_trn', 'buyer_credit_fixed_volume_trn', 'SQ_buyer_transition_credit_trn', 'buyer_credit_trn', 'medical_reimbursement_rebase_trn', 'medical_credit_readded_trn'] rows 870
+  medical-sector VAT/credit columns: max |F_COMBINED - OLD_MEDICAL_REMOVED| in 2055 = 0.0 (0 means the medical sector VAT lines do not respond to the new medical flows)
+7 baseline medical bill (nominal 兆円) / clinical episodes:  2026: 48.8 / 450000, 2035: 58.9 / 431875, 2040: 63.3 / 420263, 2055: 77.8 / 383338
+  clinical episodes follow total population scale (aging-structure not used): 2055/2026 = 0.852
+  COMMON_ONLY clinical / program / total resource cost (兆円): [(2035, -0.0053, 0.0217, 0.0164), (2040, -0.0228, 0.0373, 0.0144), (2055, -0.028, 0.0471, 0.0191)]

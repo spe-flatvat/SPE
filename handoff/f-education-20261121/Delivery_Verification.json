@@ -1,0 +1,186 @@
+{
+  "status": "CUSTODY_PASS_FOR_21_ORIGINAL_DELIVERABLES",
+  "original_fixed_commit": "4a2e0d6c6e0752309dce6ead03c68381090e6b64",
+  "parent_commit": "2296a7e13a5adb246b436799ecc509fd19fbad4f",
+  "branch": "work/chatgpt-handoff",
+  "directory": "handoff/f-education-20261121",
+  "retrieval_route": "Separate fresh HTTPS git clone after ref update, git show fixed_commit:path; actual byte-size and SHA256 comparison",
+  "verified_at_utc": "2026-11-20T16:29:07.080176+00:00",
+  "files": [
+    {
+      "file": "Annual.csv",
+      "size": 1996375,
+      "sha256": "e9cc9c08e5a5529d6da208c49822c144ee2a5a7827dc5e7aa200a62fde541db6",
+      "retrieved_size": 1996375,
+      "retrieved_sha256": "e9cc9c08e5a5529d6da208c49822c144ee2a5a7827dc5e7aa200a62fde541db6",
+      "match": true
+    },
+    {
+      "file": "Comparison.csv",
+      "size": 310316,
+      "sha256": "14cbb1e3e75a5c6ca0c63efa999301f26f5cf5c6d53b382ecd8f5f032dc61ae5",
+      "retrieved_size": 310316,
+      "retrieved_sha256": "14cbb1e3e75a5c6ca0c63efa999301f26f5cf5c6d53b382ecd8f5f032dc61ae5",
+      "match": true
+    },
+    {
+      "file": "Corporate_Training.csv",
+      "size": 84707,
+      "sha256": "f4ab6a1d6d5e4846d40b542b456f81d90b7d3ac2681be0203d3f923d5166837b",
+      "retrieved_size": 84707,
+      "retrieved_sha256": "f4ab6a1d6d5e4846d40b542b456f81d90b7d3ac2681be0203d3f923d5166837b",
+      "match": true
+    },
+    {
+      "file": "Dependencies_and_Sources.json",
+      "size": 6435,
+      "sha256": "aa4e711535f42165b523d2206d2d2bb379217e8be8ce98101499345c86516af1",
+      "retrieved_size": 6435,
+      "retrieved_sha256": "aa4e711535f42165b523d2206d2d2bb379217e8be8ce98101499345c86516af1",
+      "match": true
+    },
+    {
+      "file": "Education.csv",
+      "size": 436163,
+      "sha256": "b1e7a4278efeea4f8f07f52aa3693b8856c3a20c9e232f71970d80a5dbcd0c7e",
+      "retrieved_size": 436163,
+      "retrieved_sha256": "b1e7a4278efeea4f8f07f52aa3693b8856c3a20c9e232f71970d80a5dbcd0c7e",
+      "match": true
+    },
+    {
+      "file": "Education_Investment.csv",
+      "size": 60288,
+      "sha256": "969310204762207ca563053d74e91676555312428f462cc4807ada7c6ac301a8",
+      "retrieved_size": 60288,
+      "retrieved_sha256": "969310204762207ca563053d74e91676555312428f462cc4807ada7c6ac301a8",
+      "match": true
+    },
+    {
+      "file": "Fiscal_Bonds.csv",
+      "size": 168347,
+      "sha256": "2129833f437eca902cdf231be39d5d47e3c08eed01c4e209db68e277b60fdf92",
+      "retrieved_size": 168347,
+      "retrieved_sha256": "2129833f437eca902cdf231be39d5d47e3c08eed01c4e209db68e277b60fdf92",
+      "match": true
+    },
+    {
+      "file": "Human_Capital.csv",
+      "size": 136916,
+      "sha256": "f47c5598e9b0bc9c575b2dd200d31c215e5dd346bcae023e8779884aecd64621",
+      "retrieved_size": 136916,
+      "retrieved_sha256": "f47c5598e9b0bc9c575b2dd200d31c215e5dd346bcae023e8779884aecd64621",
+      "match": true
+    },
+    {
+      "file": "Inputs.json",
+      "size": 6825,
+      "sha256": "d796d432c1f625784c322bbb330d5da8ab59fbbdfa6043cf3a10538c2901e651",
+      "retrieved_size": 6825,
+      "retrieved_sha256": "d796d432c1f625784c322bbb330d5da8ab59fbbdfa6043cf3a10538c2901e651",
+      "match": true
+    },
+    {
+      "file": "Interactions.csv",
+      "size": 13848,
+      "sha256": "533afde753801b84cdae6e8a8ad499411bddca497ab8f23bf534c60966edf960",
+      "retrieved_size": 13848,
+      "retrieved_sha256": "533afde753801b84cdae6e8a8ad499411bddca497ab8f23bf534c60966edf960",
+      "match": true
+    },
+    {
+      "file": "Model.py",
+      "size": 24178,
+      "sha256": "08d6b409e9e815e6eb34878c69457c77a7a7e7fe9f5b85fa2debeb0f1a8ee88c",
+      "retrieved_size": 24178,
+      "retrieved_sha256": "08d6b409e9e815e6eb34878c69457c77a7a7e7fe9f5b85fa2debeb0f1a8ee88c",
+      "match": true
+    },
+    {
+      "file": "Report.md",
+      "size": 13600,
+      "sha256": "49daac4138989c9234072367cb948b5e92d8323ab1c92a00106584b1bc0dca31",
+      "retrieved_size": 13600,
+      "retrieved_sha256": "49daac4138989c9234072367cb948b5e92d8323ab1c92a00106584b1bc0dca31",
+      "match": true
+    },
+    {
+      "file": "Reproduction.md",
+      "size": 2841,
+      "sha256": "38eebbd75eae59143b5234e276be3d2552e1b2fe65ebae0cd6e572a5ae5c3328",
+      "retrieved_size": 2841,
+      "retrieved_sha256": "38eebbd75eae59143b5234e276be3d2552e1b2fe65ebae0cd6e572a5ae5c3328",
+      "match": true
+    },
+    {
+      "file": "SHA256SUMS.json",
+      "size": 3071,
+      "sha256": "598e63e56a6127de3ba75cb3b7f8c4116cb4ecae5c239c3a4e683f64a86732d9",
+      "retrieved_size": 3071,
+      "retrieved_sha256": "598e63e56a6127de3ba75cb3b7f8c4116cb4ecae5c239c3a4e683f64a86732d9",
+      "match": true
+    },
+    {
+      "file": "Scholarship.csv",
+      "size": 143668,
+      "sha256": "81019200fb6870821325fee449e7b47c6d7f6bc658188e8324027ed9bba3c15b",
+      "retrieved_size": 143668,
+      "retrieved_sha256": "81019200fb6870821325fee449e7b47c6d7f6bc658188e8324027ed9bba3c15b",
+      "match": true
+    },
+    {
+      "file": "Scholarship_Groups.csv",
+      "size": 233794,
+      "sha256": "f0aa794b91dd6138544c9d04dfd9242cae40c9241beb10e38dbbb9745a8dad1a",
+      "retrieved_size": 233794,
+      "retrieved_sha256": "f0aa794b91dd6138544c9d04dfd9242cae40c9241beb10e38dbbb9745a8dad1a",
+      "match": true
+    },
+    {
+      "file": "Sources_and_Map.md",
+      "size": 5524,
+      "sha256": "73848f5afb081f874f257da77ada18dccc35999176cea4dd00a179d2b84bcd46",
+      "retrieved_size": 5524,
+      "retrieved_sha256": "73848f5afb081f874f257da77ada18dccc35999176cea4dd00a179d2b84bcd46",
+      "match": true
+    },
+    {
+      "file": "Summary.csv",
+      "size": 47228,
+      "sha256": "36d8a10f01cfc86c506369059605f2092b0ee498f0a8f097edc4b27915c0d227",
+      "retrieved_size": 47228,
+      "retrieved_sha256": "36d8a10f01cfc86c506369059605f2092b0ee498f0a8f097edc4b27915c0d227",
+      "match": true
+    },
+    {
+      "file": "Validation.json",
+      "size": 529,
+      "sha256": "683dcc5c550635adb6f9ee387860dd28bd92f09c69b76a04c2c5aba965c77a16",
+      "retrieved_size": 529,
+      "retrieved_sha256": "683dcc5c550635adb6f9ee387860dd28bd92f09c69b76a04c2c5aba965c77a16",
+      "match": true
+    },
+    {
+      "file": "Verification.json",
+      "size": 2938,
+      "sha256": "de860a4bbb6bf6b83e0d640422bd97704d9f19f3f40c851181f5cf10fe04584a",
+      "retrieved_size": 2938,
+      "retrieved_sha256": "de860a4bbb6bf6b83e0d640422bd97704d9f19f3f40c851181f5cf10fe04584a",
+      "match": true
+    },
+    {
+      "file": "Verify.py",
+      "size": 6450,
+      "sha256": "766279e0d0f60a47664991dba4e978b9988f1501a3ea927a8d89e684e8015a67",
+      "retrieved_size": 6450,
+      "retrieved_sha256": "766279e0d0f60a47664991dba4e978b9988f1501a3ea927a8d89e684e8015a67",
+      "match": true
+    }
+  ],
+  "numerical_replay": "12 numerical outputs byte-identical on fresh directory execution before delivery; recorded hashes preserved",
+  "fixed_integration_regression_cells": 480,
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+  },
+  "scope": "Education, grants, training and education-bond scenario model, not empirical causal estimates or full national fiscal closure. DRAFT/NON-CANONICAL. No Acceptance/Close/Freeze/HOLD changes."
+}

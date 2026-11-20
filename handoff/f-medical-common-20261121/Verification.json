@@ -1,0 +1,84 @@
+{
+  "status": "PASS_LOCAL",
+  "checks": {
+    "timeline_protection_household_years": 30,
+    "new_clinical_and_transfer_rows": 810,
+    "backfill_cancellation_years": 30,
+    "old_medical_zero_year_cases": 150,
+    "VAT_medical_rows": 870,
+    "education_bond_identity_rows": 870
+  },
+  "replay_outputs": [
+    {
+      "file": "Annual.csv",
+      "size": 3077541,
+      "sha256": "fb778157a62bd604c0be3cbf3d3786142719199b4de84b5debfbb6a7674d4cb6"
+    },
+    {
+      "file": "Common_EndOfLife.csv",
+      "size": 567389,
+      "sha256": "0916d3c3dcf2d027fb0ae557ec9ae21c236250e6868ddb2b4b63349f7c63dd34"
+    },
+    {
+      "file": "Common_Interface_Tests.csv",
+      "size": 121498,
+      "sha256": "fc01196c94dee744541b3694c890e006763981a056866e2f4e7722bbe3d18c30"
+    },
+    {
+      "file": "Comparison.csv",
+      "size": 492182,
+      "sha256": "3dfa9b3c590f3b76d26320c739806982815e51d64f8948ec823b72401820d8c4"
+    },
+    {
+      "file": "Education_Preserved.csv",
+      "size": 742948,
+      "sha256": "a3a1767f4cad94cd7e649b0f9e56ea261b17ffae4383ff01d396a0623ead7575"
+    },
+    {
+      "file": "Fiscal.csv",
+      "size": 847793,
+      "sha256": "f864bcd343a1a681950af7195b4020e5cc4a241167a3e3897cb53f2ee2b2f2a3"
+    },
+    {
+      "file": "Household_Age_Income.csv",
+      "size": 5379011,
+      "sha256": "d7be33acd4ac78a3e62f276fef10a1e24ae7683b5563b8e274a76735375976b8"
+    },
+    {
+      "file": "Household_EndOfLife.csv",
+      "size": 155200,
+      "sha256": "bf3226cbd73850ec7f27ec09cd74d4521cd9ffb8d35833af086bf9b22632e10c"
+    },
+    {
+      "file": "Interactions.csv",
+      "size": 49505,
+      "sha256": "db1175def50f61da57d12ced8f2098025bfa42ff7b0a09fa3685e0c5b21d6614"
+    },
+    {
+      "file": "Legacy_Medical.csv",
+      "size": 30256,
+      "sha256": "557ed0f6e31e2735ff141e9f35423ced5dc1f8c524cdfa5a33bac3ddd76b11c3"
+    },
+    {
+      "file": "Medical_Accounts.csv",
+      "size": 482348,
+      "sha256": "78b309b3b5a38b4f6168c36c7cad929899baa743114634c6165a84b8b869e605"
+    },
+    {
+      "file": "Summary.csv",
+      "size": 91168,
+      "sha256": "dcd0ca9ce3ed81cb63e69f958807573a8309c4c1e62b93bce0a96334c2dda963"
+    },
+    {
+      "file": "VAT_No_DoubleCount.csv",
+      "size": 426420,
+      "sha256": "922568caafb3351a4b352f06af1f64bdcbb502168ccd13bc3e47dc59e9266b3f"
+    },
+    {
+      "file": "Validation.json",
+      "size": 1105,
+      "sha256": "f441b49ceb2e508e8a05e990edc4c09aae7f8cc0098fb099603072c9858cff04"
+    }
+  ],
+  "note": "No clinical causal validation, national fiscal closure, formal acceptance or canonicalization implied."
+}

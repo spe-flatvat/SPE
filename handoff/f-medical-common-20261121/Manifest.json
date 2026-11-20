@@ -1,0 +1,134 @@
+{
+  "status": "DRAFT / NON-CANONICAL",
+  "excludes": [
+    "Manifest.json (self)",
+    "Delivery_Verification.json (post-fetch record)"
+  ],
+  "files": [
+    {
+      "path": "handoff/f-medical-common-20261121/Annual.csv",
+      "size": 3077541,
+      "sha256": "fb778157a62bd604c0be3cbf3d3786142719199b4de84b5debfbb6a7674d4cb6"
+    },
+    {
+      "path": "handoff/f-medical-common-20261121/CommonEndOfLife.py",
+      "size": 8086,
+      "sha256": "7db090b52f41728047a16ce3fe3e61688da5761e09acd91b7812f9fa067fc2fc"
+    },
+    {
+      "path": "handoff/f-medical-common-20261121/Common_EndOfLife.csv",
+      "size": 567389,
+      "sha256": "0916d3c3dcf2d027fb0ae557ec9ae21c236250e6868ddb2b4b63349f7c63dd34"
+    },
+    {
+      "path": "handoff/f-medical-common-20261121/Common_Interface_Tests.csv",
+      "size": 121498,
+      "sha256": "fc01196c94dee744541b3694c890e006763981a056866e2f4e7722bbe3d18c30"
+    },
+    {
+      "path": "handoff/f-medical-common-20261121/Comparison.csv",
+      "size": 492182,
+      "sha256": "3dfa9b3c590f3b76d26320c739806982815e51d64f8948ec823b72401820d8c4"
+    },
+    {
+      "path": "handoff/f-medical-common-20261121/Education_Preserved.csv",
+      "size": 742948,
+      "sha256": "a3a1767f4cad94cd7e649b0f9e56ea261b17ffae4383ff01d396a0623ead7575"
+    },
+    {
+      "path": "handoff/f-medical-common-20261121/FMedical.py",
+      "size": 9615,
+      "sha256": "7cd70d3e71a29e0fe8d2d5bb401428ca24ecbe9adddc9932a5a7bf4f951e96b5"
+    },
+    {
+      "path": "handoff/f-medical-common-20261121/Fiscal.csv",
+      "size": 847793,
+      "sha256": "f864bcd343a1a681950af7195b4020e5cc4a241167a3e3897cb53f2ee2b2f2a3"
+    },
+    {
+      "path": "handoff/f-medical-common-20261121/Household_Age_Income.csv",
+      "size": 5379011,
+      "sha256": "d7be33acd4ac78a3e62f276fef10a1e24ae7683b5563b8e274a76735375976b8"
+    },
+    {
+      "path": "handoff/f-medical-common-20261121/Household_EndOfLife.csv",
+      "size": 155200,
+      "sha256": "bf3226cbd73850ec7f27ec09cd74d4521cd9ffb8d35833af086bf9b22632e10c"
+    },
+    {
+      "path": "handoff/f-medical-common-20261121/Inputs.json",
+      "size": 11093,
+      "sha256": "b952c29a8b9ccd68a77c0b74b608e588422a43e9932b8fe18f620deef7beaed1"
+    },
+    {
+      "path": "handoff/f-medical-common-20261121/Interactions.csv",
+      "size": 49505,
+      "sha256": "db1175def50f61da57d12ced8f2098025bfa42ff7b0a09fa3685e0c5b21d6614"
+    },
+    {
+      "path": "handoff/f-medical-common-20261121/Legacy_Medical.csv",
+      "size": 30256,
+      "sha256": "557ed0f6e31e2735ff141e9f35423ced5dc1f8c524cdfa5a33bac3ddd76b11c3"
+    },
+    {
+      "path": "handoff/f-medical-common-20261121/Medical_Accounts.csv",
+      "size": 482348,
+      "sha256": "78b309b3b5a38b4f6168c36c7cad929899baa743114634c6165a84b8b869e605"
+    },
+    {
+      "path": "handoff/f-medical-common-20261121/Model.py",
+      "size": 11966,
+      "sha256": "cc637886191540890bb86d699851b52f072960a822ac56637de359e2176951cd"
+    },
+    {
+      "path": "handoff/f-medical-common-20261121/Policy_Retrieval.json",
+      "size": 1013,
+      "sha256": "0a828627a0b35236c2b73dda793cfe7890e4900942882fed6821611f2222fe82"
+    },
+    {
+      "path": "handoff/f-medical-common-20261121/Policy_Statistics_Implementation.csv",
+      "size": 5972,
+      "sha256": "cdaaef3cac67edd1b87465dca45455a5c4bfe376ab71ca4e9dda3f58ca697095"
+    },
+    {
+      "path": "handoff/f-medical-common-20261121/Report.md",
+      "size": 8987,
+      "sha256": "4b553289cf7370d1e5e86adad58c03a55cd033036876d8ecbf0afd7f4c0de7ac"
+    },
+    {
+      "path": "handoff/f-medical-common-20261121/Reproduce.md",
+      "size": 1622,
+      "sha256": "58d91a098a2869f248c745396fb958b76e3d961d23ef2aec1ec7ff4df3d8f8ef"
+    },
+    {
+      "path": "handoff/f-medical-common-20261121/Source_Retrieval.json",
+      "size": 3270,
+      "sha256": "dca7475dc2060c01aed6095ac315e11d4bfcc32efee7ff9106ae7b8513b7c86a"
+    },
+    {
+      "path": "handoff/f-medical-common-20261121/Summary.csv",
+      "size": 91168,
+      "sha256": "dcd0ca9ce3ed81cb63e69f958807573a8309c4c1e62b93bce0a96334c2dda963"
+    },
+    {
+      "path": "handoff/f-medical-common-20261121/VAT_No_DoubleCount.csv",
+      "size": 426420,
+      "sha256": "922568caafb3351a4b352f06af1f64bdcbb502168ccd13bc3e47dc59e9266b3f"
+    },
+    {
+      "path": "handoff/f-medical-common-20261121/Validation.json",
+      "size": 1105,
+      "sha256": "f441b49ceb2e508e8a05e990edc4c09aae7f8cc0098fb099603072c9858cff04"
+    },
+    {
+      "path": "handoff/f-medical-common-20261121/Verification.json",
+      "size": 2581,
+      "sha256": "4572d0cc991be772ce11c4a720317f552954149bb08322eb4377ef189a38549b"
+    },
+    {
+      "path": "handoff/f-medical-common-20261121/Verify.py",
+      "size": 5367,
+      "sha256": "8a8735baee4b3695e822211b1f26dc8fb19fc5e3410e7e05efa441a9e444a615"
+    }
+  ]
+}

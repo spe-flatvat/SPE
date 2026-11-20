@@ -1,0 +1,27 @@
+reference,item,evidence_type,treatment,implementation,limitation
+本文71・85行,高額療養費引き下げ・医療改革2028〜2032,原文,患者上限引下げ／保険給付引下げを別条件,"FMedical.annual_patient,cap_mode",原文は変更幅・意味を未確定
+Annex74行,一律3割負担化,原文,ANNEX_THIRTY候補,FMedical.patient_claim,本文候補と分離、段階移行・法的特例は未確定
+Annex77〜79行,加算最大4%・2.5%、緩和移行補助5年,原文,MEDIUM2%/1.5%、HIGH4%/2.5%,Inputs.defaults/cases,対象診療報酬5/4兆円・参加能力80%は感度仮定
+Annex82・88行,拠点800〜1200、移行2028〜2030,原文,800/1000/1200、建設運営費別,FMedical.step,単価・人件費は候補、既存拠点改修中心を想定
+Owner指示5,意思確認・医療適切性・共通モジュール,Owner指定,患者意思・支援・提供能力の漏斗,CommonEndOfLife.calculate,カードは治療停止命令ではない
+R06data.pdf表1/3/5,2024国民医療費48.8100兆円,公的統計,総額・年齢医療費シェア参照,Inputs.observations/age_cost_weights,2026に据置基準額、以後固定人口・デフレーターで伸縮、将来年齢構成変化未推計
+R06data.pdf表3,公費18.2678・保険料24.5671・患者5.7411兆円,公的統計,財源統計として保存,Inputs.observations,財源割合は給付負担割合と異なる。内訳丸め差0.0001兆円
+001726232.pdf p2〜4,2026年8月・2027年8月高額療養費改定,制度,代表4所得帯・月/多数回/年上限、暦年加重,FMedical.patient_claim/annual_patient,全所得区分・外来特例・世帯合算・自治体助成・年を跨ぐ多数回履歴未実装
+0000197721.pdf,2018意思決定プロセス指針,公的制度指針,本人意思・繰返し確認・チーム支援,CommonEndOfLife.calculate,個人臨床判断の自動代替をしない
+saisyuiryo_a_r04.pdf p26,ACPよく知る5.9%、知らない72.1%、一般国民3000人,公的調査,認知と意思確認・移行希望の区別,Report/Inputs common parameters,認知率を移行率・節減率へ転用しない
+医療経済実態調査第25回,施設別収入・費用・給与調査,公的統計確認,全国限界費用・利益は未算定,provider_profit_delta_trn空欄,開設者報酬や調査対象差があり全国の限界利益に外挿しない
+医療施設調査2024/2025・2023静態,病床・在宅・緩和体制統計,公的統計確認,提供能力を独立制約にする,Common transition_capacity/provider_capacity,全国の移行対象患者数や移行可能率へ自動外挿せず候補
+高齢社会白書2026,2022健康寿命男性72.57/女性75.45年,公的統計確認,実測健康寿命効果は空欄,healthy_life_years_gain,政策因果効果を当てはめない
+医療費適正化基本方針2023,予防・健康・医療介護連携,制度方針,発見費増・遅行費用変化・労働影響別,FMedical.step,医療費純減・就業増の係数は未較正
+VAT固定原本76aca...,医療入力税控除と帰属先,既存実装,価格/賃金/投資/残余利益を保持、新規加算0,VAT_No_DoubleCount.csv,医療利用量変更に伴うVAT衛星再較正・再価格付けは未算定
+教育固定原本4a2e...,教育・奨学金・訓練・教育国債,既存実装,教育状態を同一年次エンジン内で維持,Education_Preserved.csv,成長率条件付き教育トリガーは既存COMBINEDのOFFを保持
+旧macro medical_reform,損税以外の固定医療仮定,既存実装,旧政府/家計/保険者/拠点流を全除外後置換,Model.patch/Legacy_Medical.csv,VAT側医療負担は維持し新医療に再追加しない
+代表請求分布・所得重み,3受診型×4年齢×4所得,未較正仮定,医療総額を割当、患者自己負担残差を明示,Household_Age_Income.csv,保険給付実測予測ではない、強制患者負担較正なし
+共通臨床需要45万episode,がん18万/臓器12万/神経虚弱15万,未較正仮定,互いに排他的な候補臨床需要、死亡者数は不使用,Inputs.clinical_strata,重複しないepisodeを入力する契約、国民実数の主張なし
+共通価格・経路・確認率,採用60%・確認70%・支援80%・適切80%・希望50%,未較正仮定,LOW/HIGH・ゼロ希望・容量制約・費用増を比較,Inputs.common_parameters/cases,認知率や年齢を生命価値に変換しない
+医療生産・健康就業接続,国内生産比90%・資源費比85%・健康1万人相当,未較正仮定,労働は実効換算だけ追加、人数・死亡は変更しない,FMedical.step/Model.patch,サービス額は付加価値近似、SNA産業連関・一般均衡の実証推計でない
+End-of-Life_Stage.md 2/3/6; Owner継続指示4,3本柱・供給先行・指定工程,政策原文＋Owner指定,2027準備、2030可決、2032〜35施行、2035本格、2040定着,CommonEndOfLife.calculate,全国運用開始と登録率100%は異なる
+End-of-Life_Stage.md 3(1)(4),紙電子・最新意思・変更撤回・救急参照・条件付き免責,政策原文,登録stock/net flow、確認変更撤回、参照、法整備フラグ,Common_EndOfLife.csv,率は未較正候補。法的効力を現行法と主張しない
+End-of-Life_Stage.md 3(2)(3),非がん緩和・代理・単身・低所得・保証代替,政策原文,別の代理指定率、公認支援、補助、チーム協議、医師看護24h研修能力,CommonEndOfLife.calculate,能力は費用換算候補、実測人員純増ではない
+Owner継続指示7,家計7内訳,Owner指定,保険自己負担、保険外、介護、経路単価、時間所得、代理保証、貯蓄借入,Household_EndOfLife.csv,追加項目単価と行動率は全て未較正。貯蓄借入は負担変化配分代理
+Owner継続指示8,一律3割,Owner指定,基本Fに採用、旧年齢率はF_EXISTING_AGE_RATES,FMedical.step,段階適用、未確定高額上限の候補解釈は維持

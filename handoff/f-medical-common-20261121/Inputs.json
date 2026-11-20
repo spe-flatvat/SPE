@@ -1,0 +1,445 @@
+{
+  "status": "DRAFT / NON-CANONICAL",
+  "date_jst": "2026-11-21",
+  "policy_commit": "5804388482864af08204ba0d0e76a46206dacdbd",
+  "education_original_commit": "4a2e0d6c6e0752309dce6ead03c68381090e6b64",
+  "education_record_commit": "e907a27cf57b4a56bf92e2ea1f9f17d28a83b66d",
+  "runtime_dependencies": [
+    {
+      "path": "handoff/f-integrated-20261121/Model.py",
+      "commit": "aa0fc6c9de3a6fc33a50e68fb7948940941990dc",
+      "size": 21624,
+      "sha256": "42adedbe340a089e126c22987df89894943fcece54b6ac85ffa002fb886bf71c"
+    },
+    {
+      "path": "handoff/f-integrated-20261121/Inputs.json",
+      "commit": "aa0fc6c9de3a6fc33a50e68fb7948940941990dc",
+      "size": 7865,
+      "sha256": "87d454a5205869e58dee2836103499ee1eee89105cf9d14c62724df0561c66f5"
+    },
+    {
+      "path": "handoff/f-integrated-20261121/Annual.csv",
+      "commit": "aa0fc6c9de3a6fc33a50e68fb7948940941990dc",
+      "size": 2082920,
+      "sha256": "eb92953e843dfd7b84a0476b2f41ae310cafbf976cb857895b7363beabdf4772"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/Model.py",
+      "commit": "76aca9274151139cf0791365f5f9307fcc6f8fa6",
+      "size": 27668,
+      "sha256": "8c55442439d20b750ba6576ce8efa8a98e3f37b92df070a6a99dc498cd173837"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/Inputs.json",
+      "commit": "76aca9274151139cf0791365f5f9307fcc6f8fa6",
+      "size": 2559157,
+      "sha256": "f9de79d09488aa26cefc27a6a43c8d0d0b165b054b04839a4bace97ecf6cd2a9"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/Annual.csv",
+      "commit": "76aca9274151139cf0791365f5f9307fcc6f8fa6",
+      "size": 2087811,
+      "sha256": "35c78607be9b171f82201dc4b7ffadf9a6cf85bd19d6185bd37e120f2219364c"
+    },
+    {
+      "path": "handoff/f-education-20261121/Model.py",
+      "commit": "4a2e0d6c6e0752309dce6ead03c68381090e6b64",
+      "size": 24178,
+      "sha256": "08d6b409e9e815e6eb34878c69457c77a7a7e7fe9f5b85fa2debeb0f1a8ee88c"
+    },
+    {
+      "path": "handoff/f-education-20261121/Inputs.json",
+      "commit": "4a2e0d6c6e0752309dce6ead03c68381090e6b64",
+      "size": 6825,
+      "sha256": "d796d432c1f625784c322bbb330d5da8ab59fbbdfa6043cf3a10538c2901e651"
+    },
+    {
+      "path": "handoff/f-education-20261121/Annual.csv",
+      "commit": "4a2e0d6c6e0752309dce6ead03c68381090e6b64",
+      "size": 1996375,
+      "sha256": "e9cc9c08e5a5529d6da208c49822c144ee2a5a7827dc5e7aa200a62fde541db6"
+    }
+  ],
+  "observations": {
+    "medical_total_2024_trn": 48.81,
+    "public_financing_2024_trn": 18.2678,
+    "premium_financing_2024_trn": 24.5671,
+    "patient_financing_2024_trn": 5.7411,
+    "other_financing_2024_trn": 0.2341,
+    "age_medical_100million": {
+      "UNDER65": 194608,
+      "AGE65_69": 38380,
+      "AGE70_74": 53994,
+      "AGE75PLUS": 201117
+    },
+    "financing_rounding_residual_trn": 0.0001
+  },
+  "age_cost_weights": {
+    "PRESCHOOL": 7956.299999999999,
+    "AGE6_69": 225031.7,
+    "AGE70_74": 53994,
+    "AGE75PLUS": 201117
+  },
+  "income_weights": {
+    "TAXFREE": 0.2,
+    "GENERAL": 0.55,
+    "MIDDLE": 0.2,
+    "HIGH": 0.05
+  },
+  "claim_profiles": [
+    {
+      "id": "ORDINARY",
+      "probability": 0.8,
+      "months": 12,
+      "bill_yen": 20000
+    },
+    {
+      "id": "CHRONIC",
+      "probability": 0.15,
+      "months": 4,
+      "bill_yen": 1000000
+    },
+    {
+      "id": "ACUTE",
+      "probability": 0.05,
+      "months": 1,
+      "bill_yen": 2000000
+    }
+  ],
+  "clinical_strata": [
+    {
+      "id": "ADVANCED_CANCER",
+      "episodes_reference": 180000
+    },
+    {
+      "id": "ADVANCED_ORGAN_FAILURE",
+      "episodes_reference": 120000
+    },
+    {
+      "id": "NEURO_FRAILTY",
+      "episodes_reference": 150000
+    }
+  ],
+  "registry_population_reference": 100000000,
+  "common_parameters": {
+    "enabled": true,
+    "start_year": 2028,
+    "ramp_years": 8,
+    "adoption_target": 0.6,
+    "confirmed_share": 0.7,
+    "support_completion": 0.8,
+    "clinical_appropriateness": 0.8,
+    "explicit_preference_share": 0.5,
+    "transition_capacity": 100000,
+    "baseline_setting_shares": {
+      "HOSPITAL": 0.7,
+      "HOME": 0.2,
+      "FACILITY": 0.1
+    },
+    "baseline_cost_yen": {
+      "HOSPITAL": 1500000,
+      "HOME": 700000,
+      "FACILITY": 800000
+    },
+    "destination_shares": {
+      "HOSPITAL": 0.3,
+      "HOME": 0.5,
+      "FACILITY": 0.2
+    },
+    "destination_cost_yen": {
+      "HOSPITAL": 1000000,
+      "HOME": 700000,
+      "FACILITY": 800000
+    },
+    "palliative_additional_yen": 100000,
+    "initial_record_cost_yen": 200,
+    "record_maintenance_yen": 50,
+    "decision_support_yen": 5000,
+    "annual_infrastructure_trn": 0.02,
+    "extra_home_care_hours": 40,
+    "reference_target": 0.85,
+    "timeline_delay": 0,
+    "supply_capacity_factor": 1.0,
+    "proxy_designation_target": 0.5,
+    "latest_wish_confirmation": 0.95
+  },
+  "common_financing": {
+    "HOUSEHOLD": 0.117621389,
+    "GOVERNMENT": 0.4411893055,
+    "INSURER": 0.4411893055
+  },
+  "defaults": {
+    "common": false,
+    "copay": false,
+    "provider": false,
+    "keep_legacy": false,
+    "uniform_thirty": true,
+    "cap_mode": "PATIENT_CAP_DOWN",
+    "cap_change": 0.1,
+    "demand_elasticity": 0.1,
+    "necessary_care_share": 0.2,
+    "harm_worker_equivalent_per_trn": 10000,
+    "preventive_spend_trn": 0.15,
+    "prevention_discovery_trn": 0.05,
+    "prevention_saving_trn": 0.1,
+    "health_lag": 5,
+    "health_worker_equivalent": 10000,
+    "eligible_preventive_fee_trn": 5.0,
+    "preventive_award": 0.02,
+    "eligible_equipment_fee_trn": 4.0,
+    "equipment_award": 0.015,
+    "equipment_spend_trn": 0.1,
+    "provider_capacity": 0.8,
+    "hub_target": 1000,
+    "hub_capital_yen": 200000000,
+    "hub_operation_yen": 50000000,
+    "hub_staff_share": 0.7,
+    "transition_support_trn": 0.1,
+    "palliative_provider_support_trn": 0.05,
+    "clinical_public_fraction": 0.5,
+    "premium_pass": 0.5,
+    "government_insurer_backfill_share": 0.0,
+    "domestic_service_share": 0.9,
+    "domestic_capital_share": 0.9,
+    "start_year": 2028,
+    "ramp_years": 8,
+    "C": true,
+    "C_mode": "ADDITIONAL_BUDGET",
+    "common_overrides": {}
+  },
+  "cases": [
+    {
+      "id": "LATEST_EDUCATION_FIXED",
+      "keep_legacy": true
+    },
+    {
+      "id": "ADDITIONAL_ZERO",
+      "keep_legacy": true
+    },
+    {
+      "id": "OLD_MEDICAL_REMOVED"
+    },
+    {
+      "id": "COMMON_ONLY",
+      "common": true
+    },
+    {
+      "id": "COPAY_ONLY",
+      "copay": true
+    },
+    {
+      "id": "PROVIDER_ONLY",
+      "provider": true
+    },
+    {
+      "id": "F_COMBINED",
+      "copay": true,
+      "provider": true
+    },
+    {
+      "id": "COMMON_F_MEDIUM",
+      "common": true,
+      "copay": true,
+      "provider": true
+    },
+    {
+      "id": "COMMON_F_LOW",
+      "common": true,
+      "copay": true,
+      "provider": true,
+      "demand_elasticity": 0.05,
+      "prevention_saving_trn": 0.0,
+      "health_worker_equivalent": 0.0,
+      "hub_target": 800,
+      "common_overrides": {
+        "adoption_target": 0.3,
+        "confirmed_share": 0.5
+      }
+    },
+    {
+      "id": "COMMON_F_HIGH",
+      "common": true,
+      "copay": true,
+      "provider": true,
+      "demand_elasticity": 0.2,
+      "prevention_saving_trn": 0.2,
+      "health_worker_equivalent": 20000,
+      "hub_target": 1200,
+      "preventive_award": 0.04,
+      "equipment_award": 0.025,
+      "common_overrides": {
+        "adoption_target": 0.8,
+        "confirmed_share": 0.9
+      }
+    },
+    {
+      "id": "ANNEX_THIRTY",
+      "common": true,
+      "copay": true,
+      "provider": true,
+      "uniform_thirty": true
+    },
+    {
+      "id": "BENEFIT_DOWN_INTERPRETATION",
+      "common": true,
+      "copay": true,
+      "provider": true,
+      "cap_mode": "BENEFIT_DOWN"
+    },
+    {
+      "id": "NO_DEMAND_RESPONSE",
+      "common": true,
+      "copay": true,
+      "provider": true,
+      "demand_elasticity": 0.0,
+      "necessary_care_share": 0.0
+    },
+    {
+      "id": "NO_HEALTH_GAIN",
+      "common": true,
+      "copay": true,
+      "provider": true,
+      "health_worker_equivalent": 0.0
+    },
+    {
+      "id": "ZERO_CLINICAL_SAVING",
+      "common": true,
+      "provider": true,
+      "prevention_saving_trn": 0.0,
+      "common_overrides": {
+        "destination_cost_yen": {
+          "HOME": 1270000,
+          "FACILITY": 1270000,
+          "HOSPITAL": 1270000
+        },
+        "palliative_additional_yen": 0.0
+      }
+    },
+    {
+      "id": "COST_INCREASE",
+      "common": true,
+      "provider": true,
+      "prevention_saving_trn": -0.1,
+      "common_overrides": {
+        "destination_cost_yen": {
+          "HOSPITAL": 1600000,
+          "HOME": 1600000,
+          "FACILITY": 1600000
+        }
+      }
+    },
+    {
+      "id": "NO_CONFIRMED_WISHES",
+      "common": true,
+      "common_overrides": {
+        "confirmed_share": 0.0
+      }
+    },
+    {
+      "id": "NO_EXPLICIT_PREFERENCE",
+      "common": true,
+      "common_overrides": {
+        "explicit_preference_share": 0.0
+      }
+    },
+    {
+      "id": "BACKFILL_TEST",
+      "common": true,
+      "copay": true,
+      "provider": true,
+      "government_insurer_backfill_share": 0.5
+    },
+    {
+      "id": "C_DIRECT",
+      "common": true,
+      "copay": true,
+      "provider": true,
+      "C": false
+    },
+    {
+      "id": "C_FUNDED",
+      "common": true,
+      "copay": true,
+      "provider": true,
+      "C_mode": "VAT_INCREMENT_POOL"
+    },
+    {
+      "id": "COMMON_ZERO_SAVING",
+      "common": true,
+      "common_overrides": {
+        "destination_cost_yen": {
+          "HOME": 1270000,
+          "FACILITY": 1270000,
+          "HOSPITAL": 1270000
+        },
+        "palliative_additional_yen": 0.0
+      }
+    },
+    {
+      "id": "COMMON_COST_INCREASE",
+      "common": true,
+      "common_overrides": {
+        "destination_cost_yen": {
+          "HOME": 1600000,
+          "FACILITY": 1600000,
+          "HOSPITAL": 1600000
+        }
+      }
+    },
+    {
+      "id": "COMMON_CAPACITY_LIMIT",
+      "common": true,
+      "common_overrides": {
+        "transition_capacity": 10000
+      }
+    },
+    {
+      "id": "F_EXISTING_AGE_RATES",
+      "copay": true,
+      "provider": true,
+      "common": true,
+      "uniform_thirty": false
+    },
+    {
+      "id": "COMMON_F_DELAYED",
+      "common": true,
+      "copay": true,
+      "provider": true,
+      "common_overrides": {
+        "timeline_delay": 5
+      }
+    },
+    {
+      "id": "COMMON_F_SUPPLY_SHORT",
+      "common": true,
+      "copay": true,
+      "provider": true,
+      "common_overrides": {
+        "supply_capacity_factor": 0.15
+      }
+    },
+    {
+      "id": "COMMON_F_EARLY",
+      "common": true,
+      "copay": true,
+      "provider": true,
+      "common_overrides": {
+        "timeline_delay": -2
+      }
+    },
+    {
+      "id": "COMMON_F_HOUSEHOLD_STRESS",
+      "common": true,
+      "copay": true,
+      "provider": true,
+      "common_overrides": {
+        "family_hours_multiplier": 5,
+        "noninsured_yen": {
+          "HOSPITAL": 200000,
+          "HOME": 800000,
+          "FACILITY": 700000
+        }
+      }
+    }
+  ]
+}

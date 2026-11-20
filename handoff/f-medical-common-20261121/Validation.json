@@ -1,0 +1,30 @@
+{
+  "status": "PASS_LOCAL",
+  "cases": 30,
+  "annual_rows": 900,
+  "legacy_regression_cells": 480,
+  "common_policy_label_rows": 150,
+  "claims_rows": 38880,
+  "checks": [
+    "9 pinned dependency byte identities",
+    "education COMBINED reproduced through medical identity hook",
+    "old medical flows removed before replacement",
+    "clinical payer sum",
+    "HH-provider-government-insurer-supplier transfer sum",
+    "internal transfer cancellation",
+    "common same-input five-label identity",
+    "no confirmed wishes / no explicit preference => zero transitions",
+    "clinical saving zero and cost increase cases",
+    "original GDP / capital identities",
+    "VAT credit added zero",
+    "education subsystem retained"
+  ],
+  "limitations": [
+    "synthetic claim and income mix not statutory entitlement forecast",
+    "fixed age cost shares",
+    "clinical eligible pool and all causal coefficients uncalibrated",
+    "QOL/QALY/healthy life years unknown",
+    "medical volume valued with explicit domestic value-added proxy",
+    "national PB/debt and full insurer accounts unknown"
+  ]
+}

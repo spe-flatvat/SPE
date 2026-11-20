@@ -1,0 +1,90 @@
+[
+  {
+    "id": "medical_cost_2024",
+    "url": "https://www.mhlw.go.jp/toukei/saikin/hw/k-iryohi/24/dl/R06data.pdf",
+    "status": 200,
+    "size": 1840992,
+    "sha256": "4a133a63614f450df06fe7c1ca4245d2ff7ab7b55905287e57c7d5466169f210",
+    "final_url": "https://www.mhlw.go.jp/toukei/saikin/hw/k-iryohi/24/dl/R06data.pdf"
+  },
+  {
+    "id": "medical_structure",
+    "url": "https://www.mhlw.go.jp/toukei/saikin/hw/k-iryohi/24/dl/R06sankou.pdf",
+    "status": 200,
+    "size": 136825,
+    "sha256": "eee0725fce2639a1c9687ffae2984758b502fc47867efe60d13bacd5825a8e3c",
+    "final_url": "https://www.mhlw.go.jp/toukei/saikin/hw/k-iryohi/24/dl/R06sankou.pdf"
+  },
+  {
+    "id": "caps_portal",
+    "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryouhoken/juuyou/kougakuiryou/index.html",
+    "status": 200,
+    "size": 63659,
+    "sha256": "f0359573fdc1c984f0d71f622a59fa1ba2ac0594400175b324750877b60d05ef",
+    "final_url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryouhoken/juuyou/kougakuiryou/index.html"
+  },
+  {
+    "id": "acp_portal",
+    "url": "https://www.mhlw.go.jp/stf/newpage_02783.html",
+    "status": 200,
+    "size": 80669,
+    "sha256": "c8bab06a7a65d757726c36c3d394345b3cec685908965c4b8a4644d76eaee849",
+    "final_url": "https://www.mhlw.go.jp/stf/newpage_02783.html"
+  },
+  {
+    "id": "guideline2018",
+    "url": "https://www.mhlw.go.jp/file/04-Houdouhappyou-10802000-Iseikyoku-Shidouka/0000197701.pdf",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "id": "providers",
+    "url": "https://www.mhlw.go.jp/bunya/iryouhoken/database/zenpan/iryoukikan.html",
+    "status": 200,
+    "size": 9955,
+    "sha256": "31fa69962aee73190c1453474910ba07eba2cf3620b1119eef76df501a859fa6",
+    "final_url": "https://www.mhlw.go.jp/bunya/iryouhoken/database/zenpan/iryoukikan.html"
+  },
+  {
+    "id": "facilities",
+    "url": "https://www.mhlw.go.jp/toukei/list/79-1.html",
+    "status": 200,
+    "size": 13026,
+    "sha256": "b6f29356bf661e9ae29d640537451f90e5fda5e954e73e37f1356e59f32cdcfe",
+    "final_url": "https://www.mhlw.go.jp/toukei/list/79-1.html"
+  },
+  {
+    "id": "caps2026",
+    "url": "https://www.mhlw.go.jp/content/001726232.pdf",
+    "status": 200,
+    "size": 1071016,
+    "sha256": "df9834435fe4d02466f94fbc8cecf5e7e544ea169ae111942d4ae5be9974c6b9"
+  },
+  {
+    "id": "guideline",
+    "url": "https://www.mhlw.go.jp/file/06-Seisakujouhou-10800000-Iseikyoku/0000197721.pdf",
+    "status": 200,
+    "size": 104362,
+    "sha256": "73c6afd4b214b679a313b9659fe6826be844577bc9ad13d0da48867ae1519dad"
+  },
+  {
+    "id": "acp_survey2022",
+    "url": "https://www.mhlw.go.jp/toukei/list/dl/saisyuiryo_a_r04.pdf",
+    "status": 200,
+    "size": 2811640,
+    "sha256": "b1b99ca84cad3d74cb47c2f761cb04fe4fff83ac2a43238e09b8500373b8d446"
+  },
+  {
+    "id": "healthy_life",
+    "url": "https://www8.cao.go.jp/kourei/whitepaper/w-2026/html/zenbun/s1_2_2.html",
+    "status": 200,
+    "size": 20966,
+    "sha256": "9887acd8336eefba88ec58729a73ad8d65bc1ee977fc2b099a311263594370ea"
+  },
+  {
+    "id": "prevention_policy",
+    "url": "https://www.mhlw.go.jp/web/t_doc?dataId=00013020",
+    "status": 200,
+    "size": 161605,
+    "sha256": "302294dc663cbc668dfd85d3ca8cfbd7e5cdf44a2e27e6eef7adbc639d2446b9"
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "previous_sources": [
+    {
+      "path": "policies/FreedomPolicies.md",
+      "commit": "5804388482864af08204ba0d0e76a46206dacdbd",
+      "size": 9241,
+      "sha256": "0dedd2c1126613c30a7d96732d226cc787f6597437137424845d64d041db0204",
+      "acquisition": "git show fixed commit; original not modified"
+    },
+    {
+      "path": "policies/FreedomPolicies_Annex.md",
+      "commit": "5804388482864af08204ba0d0e76a46206dacdbd",
+      "size": 12319,
+      "sha256": "ee62de32582a0f6d559029e7e9810b161c6a975ff22b498493d9ca960ca29e83",
+      "acquisition": "git show fixed commit; original not modified"
+    }
+  ],
+  "end_of_life_priority_source": {
+    "path": "Inbox/End-of-Life_Stage.md",
+    "commit": "e907a27cf57b4a56bf92e2ea1f9f17d28a83b66d",
+    "size": 8287,
+    "sha256": "b75e095ad9d833bec75154ff24e82ae815f571ab27b49d83fc656f0110a241d4",
+    "git_blob_sha": "9816784c99a0c5592fa28c72bdbeb76d6b15ee7d",
+    "acquisition": "git clone https://github.com/spe-flatvat/SPE.git; fixed HEAD verified"
+  }
+}

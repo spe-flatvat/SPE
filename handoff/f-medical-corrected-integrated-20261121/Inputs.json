@@ -1,0 +1,1012 @@
+{
+  "status": "DRAFT / NON-CANONICAL",
+  "date_jst": "2026-11-21",
+  "policy_commit": "5804388482864af08204ba0d0e76a46206dacdbd",
+  "education_original_commit": "4a2e0d6c6e0752309dce6ead03c68381090e6b64",
+  "education_record_commit": "e907a27cf57b4a56bf92e2ea1f9f17d28a83b66d",
+  "runtime_dependencies": [
+    {
+      "path": "handoff/f-integrated-20261121/Model.py",
+      "commit": "aa0fc6c9de3a6fc33a50e68fb7948940941990dc",
+      "size": 21624,
+      "sha256": "42adedbe340a089e126c22987df89894943fcece54b6ac85ffa002fb886bf71c"
+    },
+    {
+      "path": "handoff/f-integrated-20261121/Inputs.json",
+      "commit": "aa0fc6c9de3a6fc33a50e68fb7948940941990dc",
+      "size": 7865,
+      "sha256": "87d454a5205869e58dee2836103499ee1eee89105cf9d14c62724df0561c66f5"
+    },
+    {
+      "path": "handoff/f-integrated-20261121/Annual.csv",
+      "commit": "aa0fc6c9de3a6fc33a50e68fb7948940941990dc",
+      "size": 2082920,
+      "sha256": "eb92953e843dfd7b84a0476b2f41ae310cafbf976cb857895b7363beabdf4772"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/Model.py",
+      "commit": "76aca9274151139cf0791365f5f9307fcc6f8fa6",
+      "size": 27668,
+      "sha256": "8c55442439d20b750ba6576ce8efa8a98e3f37b92df070a6a99dc498cd173837"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/Inputs.json",
+      "commit": "76aca9274151139cf0791365f5f9307fcc6f8fa6",
+      "size": 2559157,
+      "sha256": "f9de79d09488aa26cefc27a6a43c8d0d0b165b054b04839a4bace97ecf6cd2a9"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/Annual.csv",
+      "commit": "76aca9274151139cf0791365f5f9307fcc6f8fa6",
+      "size": 2087811,
+      "sha256": "35c78607be9b171f82201dc4b7ffadf9a6cf85bd19d6185bd37e120f2219364c"
+    },
+    {
+      "path": "handoff/f-education-20261121/Model.py",
+      "commit": "4a2e0d6c6e0752309dce6ead03c68381090e6b64",
+      "size": 24178,
+      "sha256": "08d6b409e9e815e6eb34878c69457c77a7a7e7fe9f5b85fa2debeb0f1a8ee88c"
+    },
+    {
+      "path": "handoff/f-education-20261121/Inputs.json",
+      "commit": "4a2e0d6c6e0752309dce6ead03c68381090e6b64",
+      "size": 6825,
+      "sha256": "d796d432c1f625784c322bbb330d5da8ab59fbbdfa6043cf3a10538c2901e651"
+    },
+    {
+      "path": "handoff/f-education-20261121/Annual.csv",
+      "commit": "4a2e0d6c6e0752309dce6ead03c68381090e6b64",
+      "size": 1996375,
+      "sha256": "e9cc9c08e5a5529d6da208c49822c144ee2a5a7827dc5e7aa200a62fde541db6"
+    },
+    {
+      "path": "handoff/f-medical-common-20261121/Annual.csv",
+      "commit": "d257875123279a2bc424a52e3c68d154bb99db15",
+      "size": 3077541,
+      "sha256": "fb778157a62bd604c0be3cbf3d3786142719199b4de84b5debfbb6a7674d4cb6"
+    },
+    {
+      "path": "handoff/f-medical-common-20261121/Common_EndOfLife.csv",
+      "commit": "d257875123279a2bc424a52e3c68d154bb99db15",
+      "size": 567389,
+      "sha256": "0916d3c3dcf2d027fb0ae557ec9ae21c236250e6868ddb2b4b63349f7c63dd34"
+    },
+    {
+      "path": "handoff/f-medical-common-20261121/Medical_Accounts.csv",
+      "commit": "d257875123279a2bc424a52e3c68d154bb99db15",
+      "size": 482348,
+      "sha256": "78b309b3b5a38b4f6168c36c7cad929899baa743114634c6165a84b8b869e605"
+    }
+  ],
+  "observations": {
+    "medical_total_2024_trn": 48.81,
+    "public_financing_2024_trn": 18.2678,
+    "premium_financing_2024_trn": 24.5671,
+    "patient_financing_2024_trn": 5.7411,
+    "other_financing_2024_trn": 0.2341,
+    "age_medical_100million": {
+      "UNDER65": 194608,
+      "AGE65_69": 38380,
+      "AGE70_74": 53994,
+      "AGE75PLUS": 201117
+    },
+    "financing_rounding_residual_trn": 0.0001
+  },
+  "age_cost_weights": {
+    "PRESCHOOL": 7956.299999999999,
+    "AGE6_69": 225031.7,
+    "AGE70_74": 53994,
+    "AGE75PLUS": 201117
+  },
+  "income_weights": {
+    "TAXFREE": 0.2,
+    "GENERAL": 0.55,
+    "MIDDLE": 0.2,
+    "HIGH": 0.05
+  },
+  "claim_profiles": [
+    {
+      "id": "ORDINARY",
+      "probability": 0.8,
+      "months": 12,
+      "bill_yen": 20000
+    },
+    {
+      "id": "CHRONIC",
+      "probability": 0.15,
+      "months": 4,
+      "bill_yen": 1000000
+    },
+    {
+      "id": "ACUTE",
+      "probability": 0.05,
+      "months": 1,
+      "bill_yen": 2000000
+    }
+  ],
+  "clinical_strata": [
+    {
+      "id": "ADVANCED_CANCER",
+      "episodes_reference": 180000
+    },
+    {
+      "id": "ADVANCED_ORGAN_FAILURE",
+      "episodes_reference": 120000
+    },
+    {
+      "id": "NEURO_FRAILTY",
+      "episodes_reference": 150000
+    }
+  ],
+  "registry_population_reference": 100000000,
+  "common_parameters": {
+    "enabled": true,
+    "start_year": 2028,
+    "ramp_years": 8,
+    "adoption_target": 0.6,
+    "confirmed_share": 0.7,
+    "support_completion": 0.8,
+    "clinical_appropriateness": 0.8,
+    "explicit_preference_share": 0.5,
+    "transition_capacity": 100000,
+    "baseline_setting_shares": {
+      "HOSPITAL": 0.7,
+      "HOME": 0.2,
+      "FACILITY": 0.1
+    },
+    "baseline_cost_yen": {
+      "HOSPITAL": 1500000,
+      "HOME": 700000,
+      "FACILITY": 800000
+    },
+    "destination_shares": {
+      "HOSPITAL": 0.3,
+      "HOME": 0.5,
+      "FACILITY": 0.2
+    },
+    "destination_cost_yen": {
+      "HOSPITAL": 1000000,
+      "HOME": 700000,
+      "FACILITY": 800000
+    },
+    "palliative_additional_yen": 100000,
+    "initial_record_cost_yen": 200,
+    "record_maintenance_yen": 50,
+    "decision_support_yen": 5000,
+    "annual_infrastructure_trn": 0.02,
+    "extra_home_care_hours": 40,
+    "reference_target": 0.85,
+    "timeline_delay": 0,
+    "supply_capacity_factor": 1.0,
+    "proxy_designation_target": 0.5,
+    "latest_wish_confirmation": 0.95
+  },
+  "common_financing": {
+    "HOUSEHOLD": 0.117621389,
+    "GOVERNMENT": 0.4411893055,
+    "INSURER": 0.4411893055
+  },
+  "defaults": {
+    "common": true,
+    "copay": true,
+    "provider": true,
+    "keep_legacy": false,
+    "uniform_thirty": true,
+    "cap_mode": "PATIENT_CAP_DOWN",
+    "cap_change": 0.1,
+    "demand_elasticity": 0.1,
+    "necessary_care_share": 0.2,
+    "harm_worker_equivalent_per_trn": 10000,
+    "preventive_spend_trn": 0.15,
+    "prevention_discovery_trn": 0.05,
+    "prevention_saving_trn": 0.1,
+    "health_lag": 5,
+    "health_worker_equivalent": 10000,
+    "eligible_preventive_fee_trn": 5.0,
+    "preventive_award": 0.02,
+    "eligible_equipment_fee_trn": 4.0,
+    "equipment_award": 0.015,
+    "equipment_spend_trn": 0.1,
+    "provider_capacity": 0.8,
+    "hub_target": 1000,
+    "hub_capital_yen": 200000000,
+    "hub_operation_yen": 50000000,
+    "hub_staff_share": 0.7,
+    "transition_support_trn": 0.1,
+    "palliative_provider_support_trn": 0.05,
+    "clinical_public_fraction": 0.5,
+    "premium_pass": 0.5,
+    "government_insurer_backfill_share": 0.0,
+    "domestic_service_share": 0.9,
+    "domestic_capital_share": 0.9,
+    "start_year": 2028,
+    "ramp_years": 8,
+    "C": true,
+    "C_mode": "ADDITIONAL_BUDGET",
+    "common_overrides": {},
+    "demand_mode": "AGE",
+    "payer_mode": "CLAIMS",
+    "universal_palliative": true,
+    "capacity_multiplier": 1.0,
+    "episode_months": 3,
+    "medical_import_share": 0.1,
+    "medical_intermediate_share": 0.4,
+    "medical_VA_scale": 0.5,
+    "medical_displacement_share": 0.2,
+    "capital_VA_ratio": 0.6,
+    "other_spending_VA_ratio": 0.6,
+    "finance_fraction": 0.5,
+    "finance_mix": {
+      "TAX": 0.25,
+      "PREMIUM": 0.25,
+      "DEBT": 0.25,
+      "OTHER_SPENDING": 0.25
+    },
+    "medical_debt_rate": 0.02,
+    "legacy_GDP": false,
+    "vat_response": true,
+    "edu_E": true,
+    "edu_S": true,
+    "edu_T": true
+  },
+  "cases": [
+    {
+      "id": "LATEST_F"
+    },
+    {
+      "id": "MEDICAL_OFF",
+      "common": false,
+      "copay": false,
+      "provider": false
+    },
+    {
+      "id": "COMMON_ONLY",
+      "copay": false,
+      "provider": false
+    },
+    {
+      "id": "F_ONLY",
+      "common": false
+    },
+    {
+      "id": "POP_PROPORTIONAL",
+      "demand_mode": "TOTAL"
+    },
+    {
+      "id": "LEGACY_PAYER",
+      "payer_mode": "LEGACY"
+    },
+    {
+      "id": "NO_UNIVERSAL",
+      "universal_palliative": false
+    },
+    {
+      "id": "OLD_GDP_CONNECTION",
+      "legacy_GDP": true,
+      "finance_fraction": 0.0
+    },
+    {
+      "id": "NO_VAT_RESPONSE",
+      "vat_response": false
+    },
+    {
+      "id": "CAP_BENEFIT_DOWN",
+      "cap_mode": "BENEFIT_DOWN"
+    },
+    {
+      "id": "LOW",
+      "common_overrides": {
+        "adoption_target": 0.3,
+        "confirmed_share": 0.5
+      },
+      "prevention_saving_trn": 0.0,
+      "health_worker_equivalent": 0.0,
+      "provider_capacity": 0.5
+    },
+    {
+      "id": "HIGH",
+      "common_overrides": {
+        "adoption_target": 0.8,
+        "confirmed_share": 0.9
+      },
+      "prevention_saving_trn": 0.2,
+      "health_worker_equivalent": 20000.0,
+      "provider_capacity": 1.0
+    },
+    {
+      "id": "DELAYED",
+      "common_overrides": {
+        "timeline_delay": 5
+      }
+    },
+    {
+      "id": "SUPPLY_SHORT",
+      "common_overrides": {
+        "supply_capacity_factor": 0.15
+      }
+    },
+    {
+      "id": "F_ONLY_NO_COPAY",
+      "common": false,
+      "copay": false
+    },
+    {
+      "id": "F_ONLY_NO_COPAY_NO_PREVENT_SAVING",
+      "common": false,
+      "copay": false,
+      "prevention_saving_trn": 0.0
+    },
+    {
+      "id": "ZERO_COMMON_CLINICAL_SAVING",
+      "copay": false,
+      "prevention_saving_trn": 0.0,
+      "common_overrides": {
+        "destination_cost_yen": {
+          "HOME": 1270000,
+          "FACILITY": 1270000,
+          "HOSPITAL": 1270000
+        },
+        "palliative_additional_yen": 0.0
+      }
+    },
+    {
+      "id": "COMMON_COST_INCREASE",
+      "common_overrides": {
+        "destination_cost_yen": {
+          "HOME": 1600000,
+          "FACILITY": 1600000,
+          "HOSPITAL": 1600000
+        }
+      }
+    },
+    {
+      "id": "VA0_FIN0",
+      "medical_VA_scale": 0.0,
+      "finance_fraction": 0.0
+    },
+    {
+      "id": "VA0_FIN50",
+      "medical_VA_scale": 0.0,
+      "finance_fraction": 0.5
+    },
+    {
+      "id": "VA0_FIN100",
+      "medical_VA_scale": 0.0,
+      "finance_fraction": 1.0
+    },
+    {
+      "id": "VA50_FIN0",
+      "medical_VA_scale": 0.5,
+      "finance_fraction": 0.0
+    },
+    {
+      "id": "VA50_FIN50",
+      "medical_VA_scale": 0.5,
+      "finance_fraction": 0.5
+    },
+    {
+      "id": "VA50_FIN100",
+      "medical_VA_scale": 0.5,
+      "finance_fraction": 1.0
+    },
+    {
+      "id": "VA100_FIN0",
+      "medical_VA_scale": 1.0,
+      "finance_fraction": 0.0
+    },
+    {
+      "id": "VA100_FIN50",
+      "medical_VA_scale": 1.0,
+      "finance_fraction": 0.5
+    },
+    {
+      "id": "VA100_FIN100",
+      "medical_VA_scale": 1.0,
+      "finance_fraction": 1.0
+    },
+    {
+      "id": "FINANCE_TAX",
+      "finance_fraction": 1.0,
+      "finance_mix": {
+        "TAX": 1.0,
+        "PREMIUM": 0.0,
+        "DEBT": 0.0,
+        "OTHER_SPENDING": 0.0
+      }
+    },
+    {
+      "id": "FINANCE_PREMIUM",
+      "finance_fraction": 1.0,
+      "finance_mix": {
+        "TAX": 0.0,
+        "PREMIUM": 1.0,
+        "DEBT": 0.0,
+        "OTHER_SPENDING": 0.0
+      }
+    },
+    {
+      "id": "FINANCE_DEBT",
+      "finance_fraction": 1.0,
+      "finance_mix": {
+        "TAX": 0.0,
+        "PREMIUM": 0.0,
+        "DEBT": 1.0,
+        "OTHER_SPENDING": 0.0
+      }
+    },
+    {
+      "id": "FINANCE_CROWD",
+      "finance_fraction": 1.0,
+      "finance_mix": {
+        "TAX": 0.0,
+        "PREMIUM": 0.0,
+        "DEBT": 0.0,
+        "OTHER_SPENDING": 1.0
+      }
+    },
+    {
+      "id": "HH_NO_INCOME_LOSS",
+      "common_overrides": {
+        "income_loss_share": 0.0
+      }
+    },
+    {
+      "id": "HH_NO_GUARANTEE_AVOIDED",
+      "common_overrides": {
+        "guarantee_avoided_yen": 0.0
+      }
+    },
+    {
+      "id": "HH_HOME_COST_HIGH",
+      "common_overrides": {
+        "noninsured_yen": {
+          "HOSPITAL": 200000,
+          "HOME": 400000,
+          "FACILITY": 400000
+        }
+      }
+    },
+    {
+      "id": "HH_PROXY_LOW",
+      "common_overrides": {
+        "public_proxy_coverage": 0.3
+      }
+    },
+    {
+      "id": "HH_FAMILY_HOURS_HIGH",
+      "common_overrides": {
+        "family_hours_multiplier": 5.0
+      }
+    },
+    {
+      "id": "HH_HH_COMBINED_STRESS",
+      "common_overrides": {
+        "income_loss_share": 1.0,
+        "family_hours_multiplier": 5.0,
+        "guarantee_avoided_yen": 0.0,
+        "public_proxy_coverage": 0.3,
+        "noninsured_yen": {
+          "HOSPITAL": 200000,
+          "HOME": 800000,
+          "FACILITY": 700000
+        }
+      }
+    },
+    {
+      "id": "NO_VAT",
+      "VAT": false
+    },
+    {
+      "id": "NO_FOREIGN",
+      "F": false
+    },
+    {
+      "id": "NO_ELDER",
+      "E": false
+    },
+    {
+      "id": "NO_PENSION",
+      "PEN": false
+    },
+    {
+      "id": "NO_HOUSEHOLD_A",
+      "A": false
+    },
+    {
+      "id": "NO_HOUSEHOLD_B",
+      "B": false
+    },
+    {
+      "id": "NO_HOUSEHOLD_C",
+      "C": false
+    },
+    {
+      "id": "NO_EDUCATION",
+      "edu_E": false,
+      "edu_S": false,
+      "edu_T": false
+    },
+    {
+      "id": "NO_INVESTMENT",
+      "omit_investment": true
+    },
+    {
+      "id": "NO_FIRM",
+      "omit_firm": true
+    },
+    {
+      "id": "NO_COMMON",
+      "common": false
+    },
+    {
+      "id": "NO_F_MEDICAL",
+      "copay": false,
+      "provider": false
+    },
+    {
+      "id": "HH_GUARANTEE_HIGH",
+      "common_overrides": {
+        "guarantee_avoided_yen": 100000
+      }
+    },
+    {
+      "id": "NO_EDUCATION_NO_MEDICAL",
+      "edu_E": false,
+      "edu_S": false,
+      "edu_T": false,
+      "common": false,
+      "copay": false,
+      "provider": false
+    },
+    {
+      "id": "NO_VAT_NO_MEDICAL",
+      "VAT": false,
+      "common": false,
+      "copay": false,
+      "provider": false
+    }
+  ],
+  "request_commit": "fa66e4b73dd135ede5322d489f2a875c4eb3d989",
+  "medical_original_commit": "d257875123279a2bc424a52e3c68d154bb99db15",
+  "population_reference": {
+    "2025": {
+      "population": 123262000,
+      "under15": 13633000,
+      "working_age": 73101000,
+      "elderly": 36529000,
+      "japanese": 119887000,
+      "japanese_working_age": 70259000,
+      "japanese_under15": 13341000,
+      "japanese_elderly": 36288000,
+      "foreign": 3375000,
+      "births_calendar": 774000,
+      "deaths_calendar": 1525000
+    },
+    "2026": {
+      "population": 122661000,
+      "under15": 13355000,
+      "working_age": 72742000,
+      "elderly": 36564000,
+      "japanese": 119120000,
+      "japanese_working_age": 69765000,
+      "japanese_under15": 13045000,
+      "japanese_elderly": 36311000,
+      "foreign": 3541000,
+      "births_calendar": 771000,
+      "deaths_calendar": 1541000
+    },
+    "2027": {
+      "population": 122044000,
+      "under15": 13100000,
+      "working_age": 72335000,
+      "elderly": 36609000,
+      "japanese": 118338000,
+      "japanese_working_age": 69222000,
+      "japanese_under15": 12774000,
+      "japanese_elderly": 36342000,
+      "foreign": 3706000,
+      "births_calendar": 772000,
+      "deaths_calendar": 1556000
+    },
+    "2028": {
+      "population": 121414000,
+      "under15": 12850000,
+      "working_age": 71880000,
+      "elderly": 36683000,
+      "japanese": 117542000,
+      "japanese_working_age": 68636000,
+      "japanese_under15": 12506000,
+      "japanese_elderly": 36399000,
+      "foreign": 3872000,
+      "births_calendar": 773000,
+      "deaths_calendar": 1570000
+    },
+    "2029": {
+      "population": 120771000,
+      "under15": 12625000,
+      "working_age": 71367000,
+      "elderly": 36779000,
+      "japanese": 116733000,
+      "japanese_working_age": 67991000,
+      "japanese_under15": 12263000,
+      "japanese_elderly": 36479000,
+      "foreign": 4038000,
+      "births_calendar": 774000,
+      "deaths_calendar": 1583000
+    },
+    "2030": {
+      "population": 120116000,
+      "under15": 12397000,
+      "working_age": 70757000,
+      "elderly": 36962000,
+      "japanese": 115912000,
+      "japanese_working_age": 67251000,
+      "japanese_under15": 12016000,
+      "japanese_elderly": 36645000,
+      "foreign": 4204000,
+      "births_calendar": 774000,
+      "deaths_calendar": 1596000
+    },
+    "2031": {
+      "population": 119448000,
+      "under15": 12193000,
+      "working_age": 70438000,
+      "elderly": 36817000,
+      "japanese": 115078000,
+      "japanese_working_age": 66800000,
+      "japanese_under15": 11793000,
+      "japanese_elderly": 36485000,
+      "foreign": 4370000,
+      "births_calendar": 773000,
+      "deaths_calendar": 1607000
+    },
+    "2032": {
+      "population": 118766000,
+      "under15": 12026000,
+      "working_age": 69705000,
+      "elderly": 37035000,
+      "japanese": 114231000,
+      "japanese_working_age": 65938000,
+      "japanese_under15": 11606000,
+      "japanese_elderly": 36687000,
+      "foreign": 4535000,
+      "births_calendar": 770000,
+      "deaths_calendar": 1618000
+    },
+    "2033": {
+      "population": 118071000,
+      "under15": 11879000,
+      "working_age": 68949000,
+      "elderly": 37243000,
+      "japanese": 113370000,
+      "japanese_working_age": 65056000,
+      "japanese_under15": 11439000,
+      "japanese_elderly": 36875000,
+      "foreign": 4701000,
+      "births_calendar": 766000,
+      "deaths_calendar": 1628000
+    },
+    "2034": {
+      "population": 117362000,
+      "under15": 11771000,
+      "working_age": 68111000,
+      "elderly": 37480000,
+      "japanese": 112494000,
+      "japanese_working_age": 64093000,
+      "japanese_under15": 11309000,
+      "japanese_elderly": 37092000,
+      "foreign": 4868000,
+      "births_calendar": 761000,
+      "deaths_calendar": 1637000
+    },
+    "2035": {
+      "population": 116639000,
+      "under15": 11691000,
+      "working_age": 67216000,
+      "elderly": 37732000,
+      "japanese": 111605000,
+      "japanese_working_age": 63073000,
+      "japanese_under15": 11208000,
+      "japanese_elderly": 37325000,
+      "foreign": 5034000,
+      "births_calendar": 755000,
+      "deaths_calendar": 1645000
+    },
+    "2036": {
+      "population": 115902000,
+      "under15": 11605000,
+      "working_age": 66268000,
+      "elderly": 38030000,
+      "japanese": 110703000,
+      "japanese_working_age": 62000000,
+      "japanese_under15": 11100000,
+      "japanese_elderly": 37602000,
+      "foreign": 5199000,
+      "births_calendar": 749000,
+      "deaths_calendar": 1652000
+    },
+    "2037": {
+      "population": 115152000,
+      "under15": 11551000,
+      "working_age": 65230000,
+      "elderly": 38371000,
+      "japanese": 109789000,
+      "japanese_working_age": 60835000,
+      "japanese_under15": 11028000,
+      "japanese_elderly": 37926000,
+      "foreign": 5363000,
+      "births_calendar": 741000,
+      "deaths_calendar": 1657000
+    },
+    "2038": {
+      "population": 114391000,
+      "under15": 11520000,
+      "working_age": 64132000,
+      "elderly": 38739000,
+      "japanese": 108862000,
+      "japanese_working_age": 59609000,
+      "japanese_under15": 10978000,
+      "japanese_elderly": 38275000,
+      "foreign": 5529000,
+      "births_calendar": 734000,
+      "deaths_calendar": 1662000
+    },
+    "2039": {
+      "population": 113619000,
+      "under15": 11474000,
+      "working_age": 63080000,
+      "elderly": 39066000,
+      "japanese": 107926000,
+      "japanese_working_age": 58427000,
+      "japanese_under15": 10915000,
+      "japanese_elderly": 38585000,
+      "foreign": 5693000,
+      "births_calendar": 726000,
+      "deaths_calendar": 1664000
+    },
+    "2040": {
+      "population": 112837000,
+      "under15": 11419000,
+      "working_age": 62133000,
+      "elderly": 39285000,
+      "japanese": 106982000,
+      "japanese_working_age": 57351000,
+      "japanese_under15": 10843000,
+      "japanese_elderly": 38788000,
+      "foreign": 5855000,
+      "births_calendar": 718000,
+      "deaths_calendar": 1665000
+    },
+    "2041": {
+      "population": 112045000,
+      "under15": 11360000,
+      "working_age": 61254000,
+      "elderly": 39431000,
+      "japanese": 106030000,
+      "japanese_working_age": 56345000,
+      "japanese_under15": 10768000,
+      "japanese_elderly": 38917000,
+      "foreign": 6015000,
+      "births_calendar": 710000,
+      "deaths_calendar": 1664000
+    },
+    "2042": {
+      "population": 111243000,
+      "under15": 11292000,
+      "working_age": 60451000,
+      "elderly": 39500000,
+      "japanese": 105074000,
+      "japanese_working_age": 55421000,
+      "japanese_under15": 10685000,
+      "japanese_elderly": 38968000,
+      "foreign": 6169000,
+      "births_calendar": 701000,
+      "deaths_calendar": 1661000
+    },
+    "2043": {
+      "population": 110434000,
+      "under15": 11214000,
+      "working_age": 59691000,
+      "elderly": 39529000,
+      "japanese": 104114000,
+      "japanese_working_age": 54543000,
+      "japanese_under15": 10593000,
+      "japanese_elderly": 38978000,
+      "foreign": 6320000,
+      "births_calendar": 692000,
+      "deaths_calendar": 1656000
+    },
+    "2044": {
+      "population": 109620000,
+      "under15": 11126000,
+      "working_age": 58989000,
+      "elderly": 39505000,
+      "japanese": 103152000,
+      "japanese_working_age": 53728000,
+      "japanese_under15": 10491000,
+      "japanese_elderly": 38933000,
+      "foreign": 6468000,
+      "births_calendar": 683000,
+      "deaths_calendar": 1649000
+    },
+    "2045": {
+      "population": 108801000,
+      "under15": 11027000,
+      "working_age": 58323000,
+      "elderly": 39451000,
+      "japanese": 102190000,
+      "japanese_working_age": 52953000,
+      "japanese_under15": 10380000,
+      "japanese_elderly": 38857000,
+      "foreign": 6611000,
+      "births_calendar": 672000,
+      "deaths_calendar": 1640000
+    },
+    "2046": {
+      "population": 107981000,
+      "under15": 10919000,
+      "working_age": 57720000,
+      "elderly": 39342000,
+      "japanese": 101229000,
+      "japanese_working_age": 52243000,
+      "japanese_under15": 10261000,
+      "japanese_elderly": 38725000,
+      "foreign": 6752000,
+      "births_calendar": 662000,
+      "deaths_calendar": 1630000
+    },
+    "2047": {
+      "population": 107159000,
+      "under15": 10801000,
+      "working_age": 57125000,
+      "elderly": 39232000,
+      "japanese": 100268000,
+      "japanese_working_age": 51548000,
+      "japanese_under15": 10134000,
+      "japanese_elderly": 38587000,
+      "foreign": 6891000,
+      "births_calendar": 651000,
+      "deaths_calendar": 1619000
+    },
+    "2048": {
+      "population": 106336000,
+      "under15": 10676000,
+      "working_age": 56529000,
+      "elderly": 39131000,
+      "japanese": 99309000,
+      "japanese_working_age": 50850000,
+      "japanese_under15": 10000000,
+      "japanese_elderly": 38459000,
+      "foreign": 7027000,
+      "births_calendar": 639000,
+      "deaths_calendar": 1607000
+    },
+    "2049": {
+      "population": 105512000,
+      "under15": 10544000,
+      "working_age": 55945000,
+      "elderly": 39022000,
+      "japanese": 98352000,
+      "japanese_working_age": 50166000,
+      "japanese_under15": 9861000,
+      "japanese_elderly": 38324000,
+      "foreign": 7160000,
+      "births_calendar": 628000,
+      "deaths_calendar": 1596000
+    },
+    "2050": {
+      "population": 104686000,
+      "under15": 10406000,
+      "working_age": 55402000,
+      "elderly": 38878000,
+      "japanese": 97395000,
+      "japanese_working_age": 49524000,
+      "japanese_under15": 9717000,
+      "japanese_elderly": 38154000,
+      "foreign": 7291000,
+      "births_calendar": 616000,
+      "deaths_calendar": 1585000
+    },
+    "2051": {
+      "population": 103859000,
+      "under15": 10263000,
+      "working_age": 54900000,
+      "elderly": 38696000,
+      "japanese": 96439000,
+      "japanese_working_age": 48926000,
+      "japanese_under15": 9569000,
+      "japanese_elderly": 37944000,
+      "foreign": 7420000,
+      "births_calendar": 604000,
+      "deaths_calendar": 1575000
+    },
+    "2052": {
+      "population": 103029000,
+      "under15": 10115000,
+      "working_age": 54409000,
+      "elderly": 38505000,
+      "japanese": 95482000,
+      "japanese_working_age": 48344000,
+      "japanese_under15": 9418000,
+      "japanese_elderly": 37720000,
+      "foreign": 7547000,
+      "births_calendar": 594000,
+      "deaths_calendar": 1566000
+    },
+    "2053": {
+      "population": 102195000,
+      "under15": 9965000,
+      "working_age": 53941000,
+      "elderly": 38288000,
+      "japanese": 94523000,
+      "japanese_working_age": 47789000,
+      "japanese_under15": 9265000,
+      "japanese_elderly": 37469000,
+      "foreign": 7672000,
+      "births_calendar": 583000,
+      "deaths_calendar": 1560000
+    },
+    "2054": {
+      "population": 101355000,
+      "under15": 9813000,
+      "working_age": 53500000,
+      "elderly": 38042000,
+      "japanese": 93561000,
+      "japanese_working_age": 47269000,
+      "japanese_under15": 9111000,
+      "japanese_elderly": 37181000,
+      "foreign": 7794000,
+      "births_calendar": 574000,
+      "deaths_calendar": 1555000
+    },
+    "2055": {
+      "population": 100508000,
+      "under15": 9659000,
+      "working_age": 53070000,
+      "elderly": 37779000,
+      "japanese": 92594000,
+      "japanese_working_age": 46766000,
+      "japanese_under15": 8956000,
+      "japanese_elderly": 36872000,
+      "foreign": 7914000,
+      "births_calendar": 566000,
+      "deaths_calendar": 1553000
+    }
+  },
+  "population_sources": [
+    {
+      "id": "IPSS",
+      "url": "https://www.ipss.go.jp/pp-zenkoku/j/zenkoku2023/pp2023_gaiyou.pdf",
+      "publication_date": "2023-04-26",
+      "download_sha256": "e74e441f13607549227c48d0bd04e1e6a1602a706bff8515daeb324fe1eb07e9",
+      "tables": "1-1;1-5;JapaneseReference1;4-4",
+      "unit": "original1000persons converted persons;foreign net count exact"
+    },
+    {
+      "id": "POP",
+      "url": "https://www.stat.go.jp/data/jinsui/pdf/202610.pdf",
+      "publication_date": "2026-10-20",
+      "basis": "2020census;2025annualpopulation Oct1;rebasing pending"
+    }
+  ],
+  "demand_parameters": {
+    "episodes_2026_anchor": 450000,
+    "episode_rates": {
+      "U15": 5e-05,
+      "A15_64": 0.0005,
+      "65_69": 0.003,
+      "70_74": 0.005,
+      "75plus": 0.014
+    },
+    "under15_preschool_share": 0.4,
+    "cost_weights_2024": {
+      "PRESCHOOL": 7956.299999999999,
+      "AGE6_69": 225031.7,
+      "AGE70_74": 53994,
+      "AGE75PLUS": 201117
+    },
+    "rate_status": "UNCALIBRATED;2026 normalization to legacy candidate anchor,not observed incidence",
+    "interpolation": "None:new age totals use yearly existing model;elder subage shares rescaled to its elderly total"
+  },
+  "case_interpretation": "LATEST_F is a named middle sensitivity,not adopted policy or calibrated central forecast. ALL_IMPLEMENTED refers to existing channels;proxies and omissions remain."
+}

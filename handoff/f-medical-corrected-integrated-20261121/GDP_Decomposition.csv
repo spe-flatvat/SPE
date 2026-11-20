@@ -1,0 +1,4 @@
+step,from_case,to_case,year,corrected_GDP_difference_trn,Claude_original_approx_difference_trn,original_source,interpretation
+1,F_ONLY,F_ONLY_NO_COPAY,2055,0.168390728,0.1891,c8405cd2 report4-2,Remove_copay:HH_cash_volume_harm
+2,F_ONLY_NO_COPAY,F_ONLY_NO_COPAY_NO_PREVENT_SAVING,2055,-0.011822299,0.0734,c8405cd2 report4-2,Remove_prevention_saving:more_medical_production_and_financing
+3,F_ONLY_NO_COPAY_NO_PREVENT_SAVING,ZERO_COMMON_CLINICAL_SAVING,2055,-0.00265937400002,0.0218,c8405cd2 report4-2,Add_common:universal_care_registry_proxy_and_neutral_transition

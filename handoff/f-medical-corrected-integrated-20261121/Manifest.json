@@ -1,0 +1,194 @@
+{
+  "status": "DRAFT / NON-CANONICAL",
+  "excluded": [
+    "Manifest.json self",
+    "Delivery_Verification.json post-fetch record"
+  ],
+  "files": [
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/Annual.csv",
+      "size": 6366242,
+      "sha256": "f2fc04798b762e3eb126930af1c7ac088e66852c45e4b4fab5eb11fed8033181"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/Claims_Examples.csv",
+      "size": 1169074,
+      "sha256": "9d69f16dd70ff115b5e703571c046a465cf838c0f20e5b38de02bb6d46513064"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/Claude_SPE_Medical_EndOfLife_Claude_Independent_Verification_DRAFT_20261121.md",
+      "size": 16474,
+      "sha256": "0b458ae8c20d0ff0e28a37dbca130e20d706e3b235c9b0565725954af5a3df7d"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/Claude_SPE_Medical_Independent_Recalc_DRAFT_20261121.py",
+      "size": 14887,
+      "sha256": "28149f3b419e49a60b5a7aa9eef0291305835da339798ef13416d3cad6a71a6f"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/Claude_SPE_Medical_Supplementary_Checks_DRAFT_20261121.py",
+      "size": 13916,
+      "sha256": "47b2cb2c39fa36714b40739e1bd0ce19e6fbbfbce1cf59bae46d01d29dcd8206"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/Claude_SPE_Medical_Verification_Output_DRAFT_20261121.txt",
+      "size": 8457,
+      "sha256": "5d2f9c44ef58f4045a785dd675478e5ec503cc28f94664b589f7066016228cc4"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/CommonEndOfLife.py",
+      "size": 9457,
+      "sha256": "bdf84b076737a32aedcc81dc9bb7e240a5c7172c3c8bfc8452ad04af3e6a5ebe"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/Common_EndOfLife.csv",
+      "size": 1270366,
+      "sha256": "e07ed5fbbc2f6688615df6e88d4725db2c9e0db8ba2501fc39339cd165ec287c"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/Comparison.csv",
+      "size": 1182820,
+      "sha256": "6e0a369dbec04338e45ca0ce40cd6aeaa9704c34bf5cd60224c248f063020a93"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/Demand.py",
+      "size": 2544,
+      "sha256": "fab0a6c505c9bb5041bfb38ec199617b6c4171891ec4fc49ba90eec2ae05f30d"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/Demand_Comparison.csv",
+      "size": 1342,
+      "sha256": "41b30a2da74ca4bbf30c3fcdd130258a1a9ec2b4134009935975262750d86b4f"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/Demography_Demand.csv",
+      "size": 1378450,
+      "sha256": "d114ef5d9664699952cd2fffa79e52c5963bc69614ebfba529163d40e0b917bf"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/Diagnostics.csv",
+      "size": 3100,
+      "sha256": "889de72216a3b791be4126f6e7215f0db68c6a9c62c173493493b331ac3710d1"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/Education.csv",
+      "size": 1290051,
+      "sha256": "f849cedf087bcd230c757f7e856cf94f19c54da7b0fd17208e21b2e75a191ed5"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/FMedical.py",
+      "size": 16468,
+      "sha256": "6b5631543b4807056041092353c1d8893afe4ee7c09194412c2f4f0b06748f69"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/Fiscal.csv",
+      "size": 2114685,
+      "sha256": "d7ab61561c9f5bb9a0856b59a36e865ecab43eb765f12072f7724e3c1f5885d7"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/GDP_Decomposition.csv",
+      "size": 563,
+      "sha256": "244958d5301b97e153da1b34a3a1eae0e38bf7a12f0179f19eb878b051667b29"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/Household.csv",
+      "size": 519968,
+      "sha256": "852421d8c0d2b0a723655ac5209836ee6782578ed872342d152525f697c2efec"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/Household_Sensitivity.csv",
+      "size": 15341,
+      "sha256": "da46d188211c471e401cd6bcb994301a242d56a2ce716721c33cb98766a35d23"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/Independent_Callers.csv",
+      "size": 3453,
+      "sha256": "082113ca71083fe729674e682c52c73c2dac0ccb29d97e364fd298412a4d7d52"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/Inputs.json",
+      "size": 26760,
+      "sha256": "ce0804a1358b05641e1b03ba9b141f19b0e56abe9d300cde9d5060102ca4814c"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/Interactions.csv",
+      "size": 86953,
+      "sha256": "8b1c04815d00593579f8b226d8122410f698b86f2d09fa41105c1e14c8bac398"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/Labor.csv",
+      "size": 337914,
+      "sha256": "a062ec3e932555562a1e9cd3c1993662a7f98438605906264dff7be8bad869c1"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/Medical_Accounts.csv",
+      "size": 1506014,
+      "sha256": "45d62163fc38079094b64427ea10b7ad57613d4dd129f6068b4c86d2d91e1032"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/Model.py",
+      "size": 15069,
+      "sha256": "2833ead97c31d2f5ead087383dd0ef93d8e9d00fe8b6ef962ac0cf3dce2b1186"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/Policy_Effects.csv",
+      "size": 320889,
+      "sha256": "917acc1a34c3a945dfdfc67766f544b72b9fd6665371de3a2de687aef31f23fc"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/Policy_Map.csv",
+      "size": 7470,
+      "sha256": "732862dd3ba271df21eb992ee4b68da7872f1ae538dc02c0f2b5d2df1ed67a5f"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/Protection_Tests.csv",
+      "size": 20641,
+      "sha256": "967f3dbd77caf91d360db64b41841338f40258dfb440221e4c59c87815a02a48"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/Report.md",
+      "size": 10726,
+      "sha256": "20102f4ded2c2796433641d9acd3d8d5cd30b97bcb5726e2ac442acb115237c2"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/Reproduction.md",
+      "size": 3241,
+      "sha256": "0e0223e8c2dafd91064e2169a218016046e3a36d7d3b82b832e219e66c20dd08"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/Results.py",
+      "size": 13931,
+      "sha256": "cea4993f0ba585baf927e6b9da07910ce97f99b570d29f81a3c5387e4215332d"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/Source_Reuse.json",
+      "size": 4529,
+      "sha256": "cd77f52446327c483e2a9bc9f3b74a10a9178207a7978fd44266f4db56bc9216"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/Summary.csv",
+      "size": 216992,
+      "sha256": "5c1926d1c19138fd4f4cf812f065b744eae161a6c2981cda50093b1f58baef32"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/VAT_Medical.csv",
+      "size": 826625,
+      "sha256": "c2488645b7e672513884a8a95ef3881dfc65ec9256ee9e9b3fe11d52ebffbbe7"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/Validation.json",
+      "size": 501,
+      "sha256": "97708c384e50f451d28e2881b4db40d9e20b82a8c6b70499dbec331c4ad3a779"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/Verification.json",
+      "size": 3008,
+      "sha256": "42dcf5b29418fd4254ce51a13ea2f39635c3e1401a047de41fd4cfd6abef2c62"
+    },
+    {
+      "path": "handoff/f-medical-corrected-integrated-20261121/Verify.py",
+      "size": 7711,
+      "sha256": "5e62a17821275af64912cb424d88b0092b9dcd15b610f160a0411ed43c18ec3b"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "claude_branch_head": "c8405cd2fc286e23f21be0f07cc8ef7b38bfa766",
+  "claude_subfolder": "claude/ absent at branch head;known handoff fixed originals used",
+  "claude": [
+    {
+      "source_commit": "c8405cd2fc286e23f21be0f07cc8ef7b38bfa766",
+      "source_path": "handoff/claude-medical-endoflife-verification-20261121/SPE_Medical_Verification_Output_DRAFT_20261121.txt",
+      "saved_file": "Claude_SPE_Medical_Verification_Output_DRAFT_20261121.txt",
+      "size": 8457,
+      "sha256": "5d2f9c44ef58f4045a785dd675478e5ec503cc28f94664b589f7066016228cc4",
+      "identity": "SELF_FETCHED_FIXED_GIT_BYTES",
+      "role": "REUSED_CLAUDE_FINDINGS;not claimed as own independent reimplementation"
+    },
+    {
+      "source_commit": "c8405cd2fc286e23f21be0f07cc8ef7b38bfa766",
+      "source_path": "handoff/claude-medical-endoflife-verification-20261121/SPE_Medical_Supplementary_Checks_DRAFT_20261121.py",
+      "saved_file": "Claude_SPE_Medical_Supplementary_Checks_DRAFT_20261121.py",
+      "size": 13916,
+      "sha256": "47b2cb2c39fa36714b40739e1bd0ce19e6fbbfbce1cf59bae46d01d29dcd8206",
+      "identity": "SELF_FETCHED_FIXED_GIT_BYTES",
+      "role": "REUSED_CLAUDE_FINDINGS;not claimed as own independent reimplementation"
+    },
+    {
+      "source_commit": "c8405cd2fc286e23f21be0f07cc8ef7b38bfa766",
+      "source_path": "handoff/claude-medical-endoflife-verification-20261121/SPE_Medical_EndOfLife_Claude_Independent_Verification_DRAFT_20261121.md",
+      "saved_file": "Claude_SPE_Medical_EndOfLife_Claude_Independent_Verification_DRAFT_20261121.md",
+      "size": 16474,
+      "sha256": "0b458ae8c20d0ff0e28a37dbca130e20d706e3b235c9b0565725954af5a3df7d",
+      "identity": "SELF_FETCHED_FIXED_GIT_BYTES",
+      "role": "REUSED_CLAUDE_FINDINGS;not claimed as own independent reimplementation"
+    },
+    {
+      "source_commit": "c8405cd2fc286e23f21be0f07cc8ef7b38bfa766",
+      "source_path": "handoff/claude-medical-endoflife-verification-20261121/SPE_Medical_Independent_Recalc_DRAFT_20261121.py",
+      "saved_file": "Claude_SPE_Medical_Independent_Recalc_DRAFT_20261121.py",
+      "size": 14887,
+      "sha256": "28149f3b419e49a60b5a7aa9eef0291305835da339798ef13416d3cad6a71a6f",
+      "identity": "SELF_FETCHED_FIXED_GIT_BYTES",
+      "role": "REUSED_CLAUDE_FINDINGS;not claimed as own independent reimplementation"
+    }
+  ],
+  "adopted_education": "4a2e0d6c6e0752309dce6ead03c68381090e6b64",
+  "newer_work_history": "fa66e4b only instructions since original medical;no newer computation",
+  "existing_PASS_reused": [
+    "Claude 46170 cells mismatch0",
+    "Claude 14 output byte equality",
+    "Claude education regression480 cells"
+  ],
+  "additional_self_checked_sources": [
+    {
+      "path": "handoff/medical-recovery-20261121/SPE_Work_Medical_Corrections_F_Integrated_Run_20261121.md",
+      "fixed_retrieval_commit": "fa66e4b73dd135ede5322d489f2a875c4eb3d989",
+      "last_change_commit": "fa66e4b73dd135ede5322d489f2a875c4eb3d989",
+      "size": 10677,
+      "sha256": "ca03367955e61cf9d708de1f905243c7f40fe341f80e4ee1d600b2e65afee029",
+      "status": "SELF_BYTE_MATCH"
+    },
+    {
+      "path": "handoff/demography-improved-scenarios-20261118/Inputs.json",
+      "fixed_retrieval_commit": "fa66e4b73dd135ede5322d489f2a875c4eb3d989",
+      "last_change_commit": "60bb36a98d02bab152d2d8052621deb1b757ebdc",
+      "size": 769658,
+      "sha256": "06a6ceb8c19c1483654448d51464d7fc016bb450bcf525e67ae11dec2e3e39b6",
+      "status": "SELF_BYTE_MATCH"
+    },
+    {
+      "path": "policies/FreedomPolicies.md",
+      "fixed_retrieval_commit": "fa66e4b73dd135ede5322d489f2a875c4eb3d989",
+      "last_change_commit": "73e3c95dc6f2586eb9b4c6e9ff79353a2f4892a3",
+      "size": 9241,
+      "sha256": "0dedd2c1126613c30a7d96732d226cc787f6597437137424845d64d041db0204",
+      "status": "SELF_BYTE_MATCH"
+    },
+    {
+      "path": "policies/FreedomPolicies_Annex.md",
+      "fixed_retrieval_commit": "fa66e4b73dd135ede5322d489f2a875c4eb3d989",
+      "last_change_commit": "a186addc525b374dd4eaa9846f4c061d6006aac4",
+      "size": 12319,
+      "sha256": "ee62de32582a0f6d559029e7e9810b161c6a975ff22b498493d9ca960ca29e83",
+      "status": "SELF_BYTE_MATCH"
+    },
+    {
+      "path": "Inbox/End-of-Life_Stage.md",
+      "fixed_retrieval_commit": "fa66e4b73dd135ede5322d489f2a875c4eb3d989",
+      "last_change_commit": "6540959f82b2207c7a028afdc06cb64340662c42",
+      "size": 8287,
+      "sha256": "b75e095ad9d833bec75154ff24e82ae815f571ab27b49d83fc656f0110a241d4",
+      "status": "SELF_BYTE_MATCH"
+    }
+  ]
+}

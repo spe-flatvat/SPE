@@ -1,0 +1,20 @@
+{
+  "status": "PASS_LOCAL_EXECUTION",
+  "cases": 55,
+  "executed_cases": 52,
+  "fixed_references": 3,
+  "annual_rows": 1650,
+  "years": [
+    2026,
+    2055
+  ],
+  "checks": [
+    "inherited GDP/capital identities",
+    "old clinical flows zero",
+    "payer claim sum",
+    "explicit counterpart sum",
+    "government-insurer sum",
+    "fixed dependency byte identity"
+  ],
+  "scope": "Existing implemented F channels and provisional background;not all original policy instruments causally modeled"
+}

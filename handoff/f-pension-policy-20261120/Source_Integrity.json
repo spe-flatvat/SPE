@@ -1,0 +1,350 @@
+{
+  "parent_commit": "c7cf29ac124db92376f051686a1fc3643c85c517",
+  "fixed_prior_source_evidence_reused": [
+    {
+      "commit": "47deeee23621d2b6804351ef9131b6dbde51ffda",
+      "path": "handoff/labor-foreign-policy-comparison-20261119/Annual.csv",
+      "bytes": 706406,
+      "sha256": "df386b57ce65717080f61bc14d5be3a901ca35d40c90f098bec3495ac72dd33c",
+      "git_blob_sha1": "44674a5a95a9a2d5f6cfc04eb1b4315a93ca1685",
+      "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+    },
+    {
+      "commit": "47deeee23621d2b6804351ef9131b6dbde51ffda",
+      "path": "handoff/labor-foreign-policy-comparison-20261119/Inputs.json",
+      "bytes": 678355,
+      "sha256": "d519caccd10db68e3625c3d0c164bbee61885b92310ee9d8d61268ab0913dd5f",
+      "git_blob_sha1": "115ee33e3f8394f6b295be38b16662be5b49af73",
+      "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+    },
+    {
+      "commit": "47deeee23621d2b6804351ef9131b6dbde51ffda",
+      "path": "handoff/labor-foreign-policy-comparison-20261119/Model.py",
+      "bytes": 25333,
+      "sha256": "4364610a3f93d651c900e4556d331bd17f976fb507318d78cdcf65d7760f644a",
+      "git_blob_sha1": "91574dd417a7fa642b51dca9b559456b3fca856f",
+      "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+    },
+    {
+      "commit": "47deeee23621d2b6804351ef9131b6dbde51ffda",
+      "path": "handoff/labor-foreign-policy-comparison-20261119/Policy_Comparison.md",
+      "bytes": 8531,
+      "sha256": "9b80eacde416a6a9ee8d4e0f07a04c19426986939e6346ea77f57b03abd46d6b",
+      "git_blob_sha1": "36bdfeabe260b44559e77a4137732a93b7af5f6e",
+      "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+    },
+    {
+      "commit": "47deeee23621d2b6804351ef9131b6dbde51ffda",
+      "path": "handoff/labor-foreign-policy-comparison-20261119/Report.md",
+      "bytes": 12711,
+      "sha256": "89d76a48065ff2e37cd9dc08c3aa4cdf2522a907d59e4cbcbd8bad00e98356a2",
+      "git_blob_sha1": "03b41f19ce079340e65c22a6a032d96083aa2fdc",
+      "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+    },
+    {
+      "commit": "47deeee23621d2b6804351ef9131b6dbde51ffda",
+      "path": "handoff/labor-foreign-policy-comparison-20261119/Sources.md",
+      "bytes": 7072,
+      "sha256": "7065d02136eb85b5ce0e8ef0a44e3e454f217a1aae10f0e27a0597c2b099d80e",
+      "git_blob_sha1": "d723330987d4022598ca261b56858c3c0c51a308",
+      "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+    },
+    {
+      "commit": "47deeee23621d2b6804351ef9131b6dbde51ffda",
+      "path": "handoff/labor-foreign-policy-comparison-20261119/Summary.csv",
+      "bytes": 10951,
+      "sha256": "a5e33e1b2eadec8b27c29f40f9db0b36be51c8a4b9123e05e5d55732c85ac4fb",
+      "git_blob_sha1": "cafd1ffdfe5f85d5ae2620cb0bb0f2742d2beff6",
+      "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+    },
+    {
+      "commit": "10cf5847cbffc9d8c33ad777ef48523cd0aadc1c",
+      "path": "handoff/f-elder-assumptions-20261119/Annual.csv",
+      "bytes": 748989,
+      "sha256": "2fa720dea287b25337bae3b6f3345431ad7d245228736e00bdd29d1da1aaaf79",
+      "git_blob_sha1": "4fc95f3fbb1fbef5c5e517ce7d2ce55e33aca5e2",
+      "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+    },
+    {
+      "commit": "10cf5847cbffc9d8c33ad777ef48523cd0aadc1c",
+      "path": "handoff/f-elder-assumptions-20261119/Comparison.csv",
+      "bytes": 128713,
+      "sha256": "d3c176e888be28ffc3ddec11470004534b8d3ecfacfa5d107de67d3d673f8c95",
+      "git_blob_sha1": "c144759124201ffa395bb35a7ad9818d3c630762",
+      "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+    },
+    {
+      "commit": "10cf5847cbffc9d8c33ad777ef48523cd0aadc1c",
+      "path": "handoff/f-elder-assumptions-20261119/Employment_History.csv",
+      "bytes": 2347,
+      "sha256": "ebfa9e8484e7db9243617631d7b9aada61c80cd6d37070bfb6f74c5fb201bea4",
+      "git_blob_sha1": "a864a37b1d7521c69a39741f2a69248b01ce5a63",
+      "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+    },
+    {
+      "commit": "10cf5847cbffc9d8c33ad777ef48523cd0aadc1c",
+      "path": "handoff/f-elder-assumptions-20261119/Inputs.json",
+      "bytes": 648966,
+      "sha256": "c955c197ee46caa80b2289038b804bcb0bd71c139f449eeeb55a439053daa3d3",
+      "git_blob_sha1": "fa85750c8ac3433174b2158b68e3cd02a82deb34",
+      "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+    },
+    {
+      "commit": "10cf5847cbffc9d8c33ad777ef48523cd0aadc1c",
+      "path": "handoff/f-elder-assumptions-20261119/Interactions.csv",
+      "bytes": 3212,
+      "sha256": "8cb34e06b41a2b3e6a43aff679c65e489578007ecead1c499aa65a26dc687aad",
+      "git_blob_sha1": "896040acb25d70bc1bba8b5a415795f0fe0511c4",
+      "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+    },
+    {
+      "commit": "10cf5847cbffc9d8c33ad777ef48523cd0aadc1c",
+      "path": "handoff/f-elder-assumptions-20261119/Model.py",
+      "bytes": 11686,
+      "sha256": "1c387c61fa76f08b48ebef916b2738e4e6f23f4a882222a6186fddc4b9d70efc",
+      "git_blob_sha1": "9f5d06a772277726e6cb82189925de3559007b36",
+      "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+    },
+    {
+      "commit": "10cf5847cbffc9d8c33ad777ef48523cd0aadc1c",
+      "path": "handoff/f-elder-assumptions-20261119/Report.md",
+      "bytes": 5172,
+      "sha256": "bb3e1bf0322f276bee13863311502025b2c31af7e6cc9b51123acf1af42801fb",
+      "git_blob_sha1": "bcbcce379d58d3db8377e06fedc36fc669ac6cbe",
+      "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+    },
+    {
+      "commit": "10cf5847cbffc9d8c33ad777ef48523cd0aadc1c",
+      "path": "handoff/f-elder-assumptions-20261119/Sources.md",
+      "bytes": 6147,
+      "sha256": "5c7ca805a59b19ac108c7afa4cbf999046a1aa9b4f1f3bc63d2e4ed0f9334d92",
+      "git_blob_sha1": "367798dd77bb4023677fc49d84913cdcf6777e5e",
+      "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+    },
+    {
+      "commit": "47d18eb1d9af7c725527fda2a288cd427bfa934d",
+      "path": "handoff/f-elder-gdp-stage1-20261119/Annual.csv",
+      "bytes": 612579,
+      "sha256": "56f5c73a3c8a357e85c009ff23c5394f1c67e1097b2f1fec9066abf8a4c729fc",
+      "git_blob_sha1": "e88f620f051d2538ffa87dc317177ee54ae06973",
+      "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+    },
+    {
+      "commit": "47d18eb1d9af7c725527fda2a288cd427bfa934d",
+      "path": "handoff/f-elder-gdp-stage1-20261119/Comparison.csv",
+      "bytes": 6772,
+      "sha256": "1c34a43e8ce79a8a53b97fd8bf3cc48e3fb8e89becc9aca2035bfbe24ffd9690",
+      "git_blob_sha1": "972b54bd725024be7eafaa3351404ef444677d74",
+      "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+    },
+    {
+      "commit": "47d18eb1d9af7c725527fda2a288cd427bfa934d",
+      "path": "handoff/f-elder-gdp-stage1-20261119/Inputs.json",
+      "bytes": 600863,
+      "sha256": "924937ebb3e90adfb618c52582210b43db8f7720a68f945ed58bb60338acd60b",
+      "git_blob_sha1": "59ec5a55c09d424b77d066eb968ace630f837ef7",
+      "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+    },
+    {
+      "commit": "47d18eb1d9af7c725527fda2a288cd427bfa934d",
+      "path": "handoff/f-elder-gdp-stage1-20261119/Interactions.csv",
+      "bytes": 5858,
+      "sha256": "8bee55454d70fb832f01ae502abb2885947ec5ca762e5f0584f17b42c6524425",
+      "git_blob_sha1": "105c6dd6e4cfff1b2b02cfb49c5f134cc5b4c72d",
+      "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+    },
+    {
+      "commit": "47d18eb1d9af7c725527fda2a288cd427bfa934d",
+      "path": "handoff/f-elder-gdp-stage1-20261119/Model.py",
+      "bytes": 29588,
+      "sha256": "f94eda31b10ee97c8325588d54a4fc8a40b68a909ed4af0c0f46fc1f04a0da5a",
+      "git_blob_sha1": "eb311d0165b4a6f362ff562ef52ec9caab7c4044",
+      "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+    },
+    {
+      "commit": "47d18eb1d9af7c725527fda2a288cd427bfa934d",
+      "path": "handoff/f-elder-gdp-stage1-20261119/Report.md",
+      "bytes": 13782,
+      "sha256": "a4e47866321e56770a2ec372b1d4baa2423e46e6880bf368cf0c5e3ee4bbb7f4",
+      "git_blob_sha1": "e212d9a148f77b0f3ad7cb89f6afc98e56858ae2",
+      "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+    },
+    {
+      "commit": "5804388482864af08204ba0d0e76a46206dacdbd",
+      "path": "policies/FreedomPolicies.md",
+      "bytes": 9241,
+      "sha256": "0dedd2c1126613c30a7d96732d226cc787f6597437137424845d64d041db0204",
+      "route": "FIXED_GITHUB_BASE64_DECODE"
+    },
+    {
+      "commit": "5804388482864af08204ba0d0e76a46206dacdbd",
+      "path": "policies/FreedomPolicies_Annex.md",
+      "bytes": 12319,
+      "sha256": "ee62de32582a0f6d559029e7e9810b161c6a975ff22b498493d9ca960ca29e83",
+      "route": "FIXED_GITHUB_BASE64_DECODE"
+    },
+    {
+      "commit": "cdd6feaccf87eae80436b2cac265a3d0cc243d4f",
+      "path": "handoff/claude-labor-foreign-verification-20261119/SPE_LaborForeign_Claude_Independent_Verification_DRAFT_20261119.md",
+      "bytes": 11809,
+      "sha256": "d22d49ff1b5c5bef3e1ca973ba24c952db2320f9cb4f65788b1f8185289f19d8",
+      "git_blob_sha1": "654b22a6d2581f9add9cdc0264ee6ee38c9405e8",
+      "route": "FIXED_GITHUB_BASE64_DECODE"
+    },
+    {
+      "url": "https://www.mhlw.go.jp/content/12602000/001770216.pdf",
+      "bytes": 1510933,
+      "sha256": "1a37442991a8850c65814994f5f01279df1fc7ea904f053a83f18733dd46a5a7",
+      "retrieved": "2026-11-20",
+      "route": "HTTPS_PRIMARY_PDF_BYTES"
+    },
+    {
+      "url": "https://www.mhlw.go.jp/content/11650000/001742823.pdf",
+      "bytes": 1635526,
+      "sha256": "b63dd81ec509b0d53807daef071d5a5a313a44282369f2a20748a3d2c8935ac9",
+      "retrieved": "2026-11-20",
+      "route": "HTTPS_PRIMARY_PDF_BYTES"
+    }
+  ],
+  "dependencies": {
+    "foreign_model": {
+      "sha256": "b27e4471b885b76d55fac6024e9de3ecb1707d4a78f9a05e916bc49bf1afb0d2",
+      "size": 32941
+    },
+    "engine": {
+      "sha256": "259dadea4f02b9e4b10e6895153ce581657e2e27d8c801ada071748a32c61543",
+      "size": 62992
+    }
+  },
+  "policy_originals": [
+    {
+      "commit": "5804388482864af08204ba0d0e76a46206dacdbd",
+      "path": "policies/FreedomPolicies.md",
+      "size": 9241,
+      "sha256": "0dedd2c1126613c30a7d96732d226cc787f6597437137424845d64d041db0204",
+      "route": "GitHub fixed commit, git blob comparison reused"
+    },
+    {
+      "commit": "5804388482864af08204ba0d0e76a46206dacdbd",
+      "path": "policies/FreedomPolicies_Annex.md",
+      "size": 12319,
+      "sha256": "ee62de32582a0f6d559029e7e9810b161c6a975ff22b498493d9ca960ca29e83",
+      "route": "GitHub fixed commit, git blob comparison reused"
+    }
+  ],
+  "web_evidence": [
+    {
+      "id": "working_pension",
+      "url": "https://www.nenkin.go.jp/service/jukyu/seido/roureinenkin/zaishoku/20150401-01.html",
+      "bytes": 37618,
+      "sha256": "d13dfccb9f16b43020c4fcc0c942cc7ab2074bf9f8f6285700f800498760ca43",
+      "route": "HTTPS urllib downloaded response bytes 2026-11-20 UTC",
+      "local_path": "pension-work/working_pension.html",
+      "archived_in_delivery": false
+    },
+    {
+      "id": "working_reform",
+      "url": "https://www.nenkin.go.jp/tokusetsu/zairoukaisei.html",
+      "bytes": 28730,
+      "sha256": "e50c088180cd50f4109a536e388e35eb71ba9438606406d84b21ab4e5ab2f86e",
+      "route": "HTTPS urllib downloaded response bytes 2026-11-20 UTC",
+      "local_path": "pension-work/working_reform.html",
+      "archived_in_delivery": false
+    },
+    {
+      "id": "dc_reform",
+      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/nenkin/nenkin/kyoshutsu/2025kaisei.html",
+      "bytes": 70567,
+      "sha256": "94056db6e609cd9a1158cb3d46e13601ec8dbf7fb6df40695f498f666d24832f",
+      "route": "HTTPS urllib downloaded response bytes 2026-11-20 UTC",
+      "local_path": "pension-work/dc_reform.html",
+      "archived_in_delivery": false
+    },
+    {
+      "id": "ideco_september",
+      "url": "https://www.ideco-koushiki.jp/library/pdf/join_overview_R0809.pdf",
+      "bytes": 275823,
+      "sha256": "aa3c3db4024bcaddc9cbe68c8ab3aa522de6ecac4d9c6b97c3564089f709984e",
+      "route": "HTTPS urllib downloaded response bytes 2026-11-20 UTC",
+      "local_path": "pension-work/ideco_september.pdf",
+      "archived_in_delivery": false
+    },
+    {
+      "id": "contribution_deduction",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1135.htm",
+      "bytes": 15894,
+      "sha256": "7feba875b3b0ce80b04421bca1a3ca54715d25065f2b7471477d8940cc31f5e0",
+      "route": "HTTPS urllib downloaded response bytes 2026-11-20 UTC",
+      "local_path": "pension-work/contribution_deduction.html",
+      "archived_in_delivery": false
+    },
+    {
+      "id": "private_tax",
+      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/nenkin/nenkin/kyoshutsu/ideco.html",
+      "error": "HTTP Error 404: Not Found",
+      "archived_in_delivery": false
+    },
+    {
+      "id": "pension_tax",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1600.htm",
+      "bytes": 19985,
+      "sha256": "b1462536b3908406ac41af713c78cd69032b56ddad75bfeb26ff00afe2bca850",
+      "route": "HTTPS urllib downloaded response bytes 2026-11-20 UTC",
+      "local_path": "pension-work/pension_tax.html",
+      "archived_in_delivery": false
+    },
+    {
+      "id": "income_tax",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2260.htm",
+      "bytes": 20526,
+      "sha256": "eefcf231ae9e5393dc6c975dcd79a0c482d9ddb0938df09f8eebba017c84a225",
+      "route": "HTTPS urllib downloaded response bytes 2026-11-20 UTC",
+      "local_path": "pension-work/income_tax.html",
+      "archived_in_delivery": false
+    },
+    {
+      "id": "retirement_tax",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1420.htm",
+      "bytes": 22332,
+      "sha256": "daef0c400c24bbe4b4b5414d8462b175126e3b5ac42f7fdced6b3bc50b5d8fb9",
+      "route": "HTTPS urllib downloaded response bytes 2026-11-20 UTC",
+      "local_path": "pension-work/retirement_tax.html",
+      "archived_in_delivery": false
+    },
+    {
+      "id": "premium_reform",
+      "url": "https://www.mhlw.go.jp/content/12500000/001496971.pdf",
+      "bytes": 1416813,
+      "sha256": "eb8438c7eb970a014ae8f77006175f95961a73474af5b3d97ff2343c0e5ce87c",
+      "route": "HTTPS urllib downloaded response bytes 2026-11-20 UTC",
+      "local_path": "pension-work/premium_reform.pdf",
+      "archived_in_delivery": false
+    },
+    {
+      "id": "surtax",
+      "url": "https://www.nta.go.jp/publication/pamph/pdf/0026005-024_03.pdf",
+      "bytes": 421662,
+      "sha256": "6cb9e41a7547af5c098a08cd37e9917a2755d2be4df858b31eca4a17e64a0b80",
+      "route": "HTTPS urllib downloaded response bytes 2026-11-20 UTC",
+      "local_path": "pension-work/surtax.pdf",
+      "archived_in_delivery": false
+    },
+    {
+      "id": "ideco_march",
+      "url": "https://www.ideco-koushiki.jp/library/pdf/system_overview_0803.pdf",
+      "bytes": 1229142,
+      "sha256": "b1a1ede5769deef40980911b8bb5b94abf1cbbec2530d7947959be983bde7b51",
+      "route": "HTTPS urllib direct bytes; web click initially timed out, alternative succeeded",
+      "local_path": "pension-work/ideco-age-202603.pdf",
+      "archived_in_delivery": false
+    },
+    {
+      "id": "private_tax_alternative",
+      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/nenkin/kyoshutsu/ideco.html",
+      "bytes": 69087,
+      "sha256": "9e365dabf67c149b00904a3aa452c6b5e351caa37cd9b618eed2b6bfd71cf00a",
+      "route": "HTTPS urllib; corrected URL after first path404",
+      "archived_in_delivery": false
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "status": "PASS_LOCAL_MODEL_CHECKS",
+  "cases": 30,
+  "annual_rows": 900,
+  "years": 30,
+  "old_and_zero_regression_cells": 990,
+  "checks": [
+    "fixed dependencies bytes",
+    "recaptured macro exact match",
+    "old foreign results",
+    "zero overlay equality",
+    "public suspension identity",
+    "private cohort stock-flow identity",
+    "remaining labor pool bounds",
+    "zero behavior",
+    "zero uptake",
+    "pure asset-transfer control",
+    "finite outputs",
+    "factorial effects"
+  ],
+  "limitations": "No causal effect calibration; national pension and private/DC totals not estimated. Local tests are not delivery or custody.",
+  "input_sha256": "5969792ecb9218dc3668d56ec426076d0359e1e4c403914f535390972f082514"
+}

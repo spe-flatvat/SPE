@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "checks": [
+    "government/insurer transfer cancellation and subtotal",
+    "known SI components once",
+    "VAT satellite not added to macro tax a second time",
+    "national fiscal totals and bonds/PB blank",
+    "cash-price-kind separation",
+    "direct household saving identity",
+    "weighted income-grid aggregation with explicit unmatched macro gap",
+    "C display-only no new cash/GDP",
+    "resource-limited C constraint",
+    "unchanged labour and population across C/price sensitivities",
+    "foreign employee/employer cash links match existing half-share amounts",
+    "2026 common GDP anchor",
+    "single vs integrated policy effect identity and calculated interactions",
+    "fresh numerical replay exact-byte match"
+  ],
+  "replayed_outputs": [
+    {
+      "file": "Annual.csv",
+      "size": 2082920,
+      "sha256": "eb92953e843dfd7b84a0476b2f41ae310cafbf976cb857895b7363beabdf4772"
+    },
+    {
+      "file": "Comparison.csv",
+      "size": 680660,
+      "sha256": "afe616d0d15370d359c7a63cda7209d41f69ee32a1cd89d1f235c471938369a4"
+    },
+    {
+      "file": "Fiscal.csv",
+      "size": 518878,
+      "sha256": "802077412925259c5b1c323e2d37a6477ad76690b99fef41324eac82165791ba"
+    },
+    {
+      "file": "Fiscal_Comparison.csv",
+      "size": 180714,
+      "sha256": "805f6f5c5f1f8208ac4883ffe612f314b2acdbd9429f1f98b201e580b8a19fa3"
+    },
+    {
+      "file": "Household.csv",
+      "size": 260210,
+      "sha256": "fa52c0b2de76337d1547acd6ae67c7eb747ae406b99866d6f9a48865575f176a"
+    },
+    {
+      "file": "Income_Groups.csv",
+      "size": 2141823,
+      "sha256": "b00d110ecb0f73cf53943e6ee4b28be50e392c1fe73c856b783be4750ac95ce5"
+    },
+    {
+      "file": "Interactions.csv",
+      "size": 109308,
+      "sha256": "1e811e8108d298f3f29119bb60d5bf45b8695883cd700e66d2f9f9516b88d19a"
+    },
+    {
+      "file": "Labor.csv",
+      "size": 194513,
+      "sha256": "9b929466e3b96c2cb7214e3a9981a10a22ff8572fd1ee0065e1165f96b4a8e89"
+    },
+    {
+      "file": "Policy_Effects.csv",
+      "size": 67381,
+      "sha256": "6ce76b3daf549fdccf909bc1a73bfb3e88c686d8124f342676cd90a9a7d8cf71"
+    },
+    {
+      "file": "Summary.csv",
+      "size": 77120,
+      "sha256": "3f4e221a80526c503cac04cf49b244e15e12ec34e300fe00f68a373bf2c3cbf2"
+    },
+    {
+      "file": "Validation.json",
+      "size": 631,
+      "sha256": "9a37e695f19ff908f281432b13c0288528ed745c459a26493d83246c88aa09e8"
+    }
+  ]
+}

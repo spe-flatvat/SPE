@@ -1,0 +1,680 @@
+{
+  "status": "PINNED_BYTES_VERIFIED_NOT_NEW_REVIEW",
+  "parent_commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+  "files": [
+    {
+      "path": "handoff/f-macro-dynamic-20261116/SPE_F_Macro_Dynamic_Annual_Comparison_DRAFT_20261116.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 614958,
+      "sha256": "13417fc6d344e54f7732c9c19d460a69bb9ccbb3e77c88567e0d4059858180fe",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-macro-dynamic-20261116/SPE_F_Macro_Dynamic_Halation_DRAFT_20261116.py",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 29794,
+      "sha256": "b497972ed514ea46474f86e89ffdceccd23b221989ea17559a6f6426fb3a200f",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-macro-dynamic-20261116/SPE_F_Macro_Dynamic_Inputs_DRAFT_20261116.json",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 585464,
+      "sha256": "49b14d866ede3d6761c4a571e2dde034c1a5581779b7a4dd0e350b8e72ccad7c",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-macro-dynamic-20261116/SPE_F_Macro_Dynamic_Read_Receipt_20261117.md",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 4593,
+      "sha256": "91913f1c299129ca669782a31028e75fac76b17919a53540e2fa39cf12d9d59e",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-macro-dynamic-20261116/SPE_F_Macro_Dynamic_Run_Report_DRAFT_20261116.md",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 12607,
+      "sha256": "468de76ed7da54b5b8c0ec889a715e47cd8d43e27957811af090ea242dee3111",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-macro-dynamic-dm04-dm05-20261117/SPE_F_Macro_DM04_DM05_Annual_Comparison_DRAFT_20261117.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 1042158,
+      "sha256": "726e26f9d7e9741d759558ed2414ac6f69030846077f2ae0c056bb1f42829f41",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-macro-dynamic-dm04-dm05-20261117/SPE_F_Macro_DM04_DM05_Inputs_DRAFT_20261117.json",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 920536,
+      "sha256": "01fa7d4342412c9c46148b72f577158aa01afaea6e632e1e8e9aac1440a0a033",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-macro-dynamic-dm04-dm05-20261117/SPE_F_Macro_DM04_DM05_Model_DRAFT_20261117.py",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 37343,
+      "sha256": "29264f0232481a0e8130b9964b3ef65dc49184a91650d56ae76fce59a79b00fa",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-macro-dynamic-dm04-dm05-20261117/SPE_F_Macro_DM04_DM05_Run_Report_DRAFT_20261117.md",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 21842,
+      "sha256": "1017599b27b801427323dedc73c0c2a22dd7a531b2396156c65269a9dd1b9aee",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-foreign-quantity-20261120/Annual.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 1706846,
+      "sha256": "33a7af5b2cb2efaaa2cc2792a9884aadcd2c369466143bb20c447bd833670601",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-foreign-quantity-20261120/Comparison.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 300082,
+      "sha256": "b63b2d0cef5c2b1b3ca61868a4ffe69589f64962d95e13fd363478c9eb192c4c",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-foreign-quantity-20261120/Inputs.json",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 845356,
+      "sha256": "f898f3ca27052835352da28a8b4cbfc9cb47e64fe95795618d94dade9f2df80d",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-foreign-quantity-20261120/Interactions.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 112608,
+      "sha256": "e47efaf5319d53bdec07e003de6d5a5c7c7ca8b59f6a68e0f3725c5e8394ca7d",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-foreign-quantity-20261120/Model.py",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 32941,
+      "sha256": "b27e4471b885b76d55fac6024e9de3ecb1707d4a78f9a05e916bc49bf1afb0d2",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-foreign-quantity-20261120/Policy_and_Sources.md",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 12215,
+      "sha256": "476cb0a8cabd685494fc80abe652891b6cebee852dedd23bbc859fcd7d474c35",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-foreign-quantity-20261120/Report.md",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 12067,
+      "sha256": "dd6ec725d3f00965efff4d3c365d05ae512c3627c06732216615ad95c15ef088",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-foreign-quantity-20261120/Reproduction.md",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 1734,
+      "sha256": "3b4741972b80127eedbc80569ad9b52fd233a7a76aa284344ccf5e53ee1eeb0c",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-foreign-quantity-20261120/SHA256SUMS.txt",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 964,
+      "sha256": "494deb19459f1b005ab5078e6098c9fe25835aafe81b18345cd8307b49fdc9c8",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-foreign-quantity-20261120/Source_Integrity.json",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 9017,
+      "sha256": "e08e25c1e4cef1eb2405cc9d289aa7c0bb4394f75e726839ce03c99411e07265",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-foreign-quantity-20261120/Summary.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 62251,
+      "sha256": "7a617863236ec6f748a4867ab2ed6aaeb51b77e6bc7e599f1a79bfe4d4f7ae71",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-foreign-quantity-20261120/Validation.json",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 304,
+      "sha256": "48140aaae871373f9da2035e7bbdc56af3bc38f4811d71fdfea4c1821765c1de",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-foreign-quantity-20261120/Verify.py",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 8344,
+      "sha256": "82426d5ccb9db7de817b6252a34e799cce53d7665421de8d5e94e1ad2fa52196",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Annual.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 1089910,
+      "sha256": "9df58954465260d53b8e76c14a5780ebe58e2d91cc1809d1adc39e4483b23bf5",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Comparison.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 199183,
+      "sha256": "8004282cff12fe13d47e683c50c00bbe2859836c2fb7c2ab5bccd9fe035e877c",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Delivery_Verification.json",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 4096,
+      "sha256": "97a163d10b67f945c9f05b579649808614000be71bde5c3437f5b56f17c40704",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Inputs.json",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 1282097,
+      "sha256": "5969792ecb9218dc3668d56ec426076d0359e1e4c403914f535390972f082514",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Interactions.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 31215,
+      "sha256": "f0cf7621a99b21e0b1d8420e058539c9021b41d44fcfd4d15b1f3ffabaa0de6a",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Model.py",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 30852,
+      "sha256": "645c64f8ea4f0b2b60d233e19dddee49653d1a39ea77931385cefcfaa3d10e53",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Private_Distribution.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 257066,
+      "sha256": "60e78eeab5e52398a338720c3b00a83b7f25331c1f4810b10649bef985062fae",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Public_Strata.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 1176444,
+      "sha256": "c87351cb6ffee506b26747b103f022e6de40fadb0101e8f65118f3e1ed6c99b3",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Report.md",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 10979,
+      "sha256": "007079540cd1f0e181fa43874a273398cf202d694187136e544138d9f540115f",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Reproduction.md",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 2446,
+      "sha256": "1113bce7d38690c8f1f7c733d4f3688809a4a7f928f565ba60a66af3144037ef",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/SHA256SUMS.txt",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 1216,
+      "sha256": "bf0a614f4ff3d52c70d32b7565589f07212c333d48afd191a0be46d46f1a118a",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Source_Integrity.json",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 15387,
+      "sha256": "ba9e5445f38db076c6707b4b86de2e7ead3a62c83a6075e9fd00c32c19c9ca85",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Sources_and_Map.md",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 14402,
+      "sha256": "7ef66d6f0848b19a8f18e0942318ad5113bf2a967474f77a0555831ef742f41d",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/StatusQuo.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 16903,
+      "sha256": "04816a04cbe5c35f0b8f9a89c128a23323ee8b41c6c0d96479efd30de55e1446",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Summary.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 31015,
+      "sha256": "921ca2fd5465fa5e7290b23f63264ebf25dbb26f58fb276a6e07c0a488628225",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Validation.json",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 740,
+      "sha256": "af213ba156878bb79b6184de2f756cd14afc5b06e70b989b4b0b2fdc190c1ebb",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Verify.py",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 4415,
+      "sha256": "e7f1cae823c8a9df2c2996d9824b2d36c96f4c0eef5f9cae3991bd0ce8033a65",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Annual.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 1497203,
+      "sha256": "16334cc15d570ec8897f2c5a44aefc0a1bd27dd79294ecf6d54586bee9a8b8e0",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Comparison.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 364315,
+      "sha256": "205dd3b946c169c7efdebea76d6322bb23e4d79b3fe763a3dc5f96cd0727235a",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Delivery_Verification.json",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 5080,
+      "sha256": "471aacc3f31d4c142c92e67156564b22b7d925624ff3be2dd0513d21ae96479c",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Fiscal_Insurer.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 354984,
+      "sha256": "5b8a2ac40589f42498fe447412946138de36abecca4fa8c1aba1ad68c06b2daa",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Household_Detail.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 845458,
+      "sha256": "1c3b681d074d50ad3fdf9da98e6dc0d1ac1a30c18b0a6110e02add311ca84dd0",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Household_Income.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 3377677,
+      "sha256": "372e63c83b2e4d4526b9cef68dfdee823ec24176097b32ab06ff9ccf7f6cc587",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Inputs.json",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 1746742,
+      "sha256": "8a7df2e6b7228177b28346386437b3b7dc6a5f1b8547507a114daf1fc5472766",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Interactions.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 57954,
+      "sha256": "4a6396282aa398eb26c180d4cf4fb4c854c14c54ede59590d234a97d46309af1",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Model.py",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 28365,
+      "sha256": "926f162b2f24abb8fe6d348bb96adfccb0a4b49bd9e7438ff9977aabbbc0d153",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Report.md",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 16611,
+      "sha256": "a5ad23b1d3501c2789dc1018b9edfda4deec0d280048ab1c1873492323fd8eb0",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Reproduction.md",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 2543,
+      "sha256": "0b205aeb1d89db0b582a8b3744b767df78a0afffbbb909ce7accf517b39a8ee6",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-household-social-20261120/SHA256SUMS.txt",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 1468,
+      "sha256": "2ce8038a7801fdf29752d71d808f84514ce2415f1f997991e077cb944b7e54b8",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Source_Integrity.json",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 58173,
+      "sha256": "1ca3bff77d04d73ef6b4d4707125258fae7dcbc07f0567c8a9eff9826cf3f3ef",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Sources_and_Map.md",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 15315,
+      "sha256": "c27b18bbfbe1b42fb16cf2e4f213ee99b671d1813b9feeb92fe09075216f6c6e",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-household-social-20261120/StatusQuo.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 16903,
+      "sha256": "04816a04cbe5c35f0b8f9a89c128a23323ee8b41c6c0d96479efd30de55e1446",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Statutory_Examples.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 1564,
+      "sha256": "93d1ee8f95746c208f72dc8676772ea1c7ef7b779e6b5e1de6bdcfdf1cf7b675",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Summary.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 54395,
+      "sha256": "9dc5ee93f2bef8bc9464447a7dc1a47d64d32cc1acce4494abb16d9eadbc5c5f",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Triggers.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 136517,
+      "sha256": "29cd4443e0ad52a96844e48fd644db9388de8b396bbfd54dc984e8b9eda19973",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Validation.json",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 905,
+      "sha256": "47bd9e43c19f11eaa666d90e08a7eae2eacd4efe6b88f831c24a99b031fd67a7",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Verify.py",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 6365,
+      "sha256": "84ab72509561a74fef8aae50f8f63d18a404f15b9e1faf0afaa177537dcc390d",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/Annual.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 2087811,
+      "sha256": "35c78607be9b171f82201dc4b7ffadf9a6cf85bd19d6185bd37e120f2219364c",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/C_Funding.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 234962,
+      "sha256": "e996d1abcd4c34feb4f05ce449119aa54ad84051c09f3520a9c38dc4a7a34ea0",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/Comparison.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 248194,
+      "sha256": "d672e7cb87fe892f71fd6a8dbef9c803564bc6d2c1d0d20895920a41c45ab6ee",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/Delivery_Verification.json",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 7723,
+      "sha256": "5327eb3290b491e90ee34ba82e5d8eb3ddbd24ec562389c8bfd0c9972bd39a3b",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/Household_Income.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 2978597,
+      "sha256": "b830680195370a953e2970463cf5fb5b153bd819a204aba50e6e7720505cf7d4",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/Inputs.json",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 2559157,
+      "sha256": "f9de79d09488aa26cefc27a6a43c8d0d0b165b054b04839a4bace97ecf6cd2a9",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/Interactions.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 21839,
+      "sha256": "e45c4d0fd04dad82138f9637c348523d62584bc182e6551db67abbed67bc4a8b",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/Model.py",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 27668,
+      "sha256": "8c55442439d20b750ba6576ce8efa8a98e3f37b92df070a6a99dc498cd173837",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/Price_Incidence.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 266836,
+      "sha256": "31e7fcd04a86200c39c944abd395492c5dc36971369d3ec1e00cdbbc8075657d",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/Report.md",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 13331,
+      "sha256": "17bfd7dedf3398829c9cbfe118e9b6b1db02237e4b5c6e9fdc662c94b26fcaf8",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/Reproduction.md",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 2876,
+      "sha256": "fdec62d8702ec0b0dc0379ed0e5f8e18fa3c24908da9d86639339a3c2e6c85dd",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/SHA256SUMS.json",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 3086,
+      "sha256": "b50a09e97f12350d0fed68e5251e00495bf3a25e442740fc91371a159386c962",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/Sonzei_Incidence.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 2803194,
+      "sha256": "934848f51109070d251856f262e4c4695b4dffbd19f218e3df4783f235bf4355",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/Source_Integrity.json",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 70012,
+      "sha256": "74a8fe2083279fe4c4bd62c32e9d3f505815cfddf5d54072db754dfd552af8d0",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/Sources_and_Map.md",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 8694,
+      "sha256": "dcb6d13f62373c092208dfb904ee66da3079b9fd764d8b29be170bddfcd2a740",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/StatusQuo_Fixed.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 16903,
+      "sha256": "04816a04cbe5c35f0b8f9a89c128a23323ee8b41c6c0d96479efd30de55e1446",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/StatusQuo_Updated.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 8246,
+      "sha256": "481a1c3fab7daf542325ebf757880ee4a3d0345bcf20b5f368a505041737c43c",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/Summary.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 36715,
+      "sha256": "7f7b31efcb041e2145baca4be02a0f0b78077cbc583a35e661c0aa001a6e4e6e",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/Tax_Decomposition.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 355792,
+      "sha256": "51cfae74896580815cfd416b976a895683a36dc3555d9987c3d85ca0de21d1a4",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/Validation.json",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 934,
+      "sha256": "6f3ff87bf470b92ab96fa050891e22f00ee4e432413077fbcae0853c81b78aa5",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/Verification.json",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 2778,
+      "sha256": "50931e65549a5bdb8593eae64fe8fd4a74f93134b5561fbf430fb098e171e9cf",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/Verify.py",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 5873,
+      "sha256": "9a466280495616d3920e2f5b7dc6691112e103158fe475722d96afabeb563371",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-text-aligned-20261117/SPE_F_Text_Annual_Comparison_DRAFT_20261117.csv",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 878795,
+      "sha256": "fb260467b56804b6ecb545c306dd10f851c1772d90cc74765d6ca7507ff4c6a0",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-text-aligned-20261117/SPE_F_Text_Inputs_DRAFT_20261117.json",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 800069,
+      "sha256": "68d23953f102acf5a429a8f419e307b138b5e87fdabd32101946b1a58dfe2c22",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-text-aligned-20261117/SPE_F_Text_Model_DRAFT_20261117.py",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 52167,
+      "sha256": "8699b69af76c043ca1baeea099cf8706fe334e58843acfb6285fa6c7edc922bc",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-text-aligned-20261117/SPE_F_Text_Policy_Map_DRAFT_20261117.md",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 102389,
+      "sha256": "be5acf7da5e99c7ee85b7f9ef0e87374a91449dd22d276f129680a60bcf53257",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-text-aligned-20261117/SPE_F_Text_Run_Report_DRAFT_20261117.md",
+      "commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+      "size": 19557,
+      "sha256": "63587de7dc6ead62c2078547ae6ce4e3bcc572c068f5bb812cbd0d9c2f531c0a",
+      "role": "PINNED_EXISTING_REFERENCE"
+    },
+    {
+      "path": "handoff/f-elder-assumptions-20261119/Annual.csv",
+      "commit": "10cf5847cbffc9d8c33ad777ef48523cd0aadc1c",
+      "size": 748989,
+      "sha256": "2fa720dea287b25337bae3b6f3345431ad7d245228736e00bdd29d1da1aaaf79",
+      "role": "STAGE2_ELDER_REFERENCE"
+    },
+    {
+      "path": "handoff/f-elder-assumptions-20261119/Comparison.csv",
+      "commit": "10cf5847cbffc9d8c33ad777ef48523cd0aadc1c",
+      "size": 128713,
+      "sha256": "d3c176e888be28ffc3ddec11470004534b8d3ecfacfa5d107de67d3d673f8c95",
+      "role": "STAGE2_ELDER_REFERENCE"
+    },
+    {
+      "path": "handoff/f-elder-assumptions-20261119/Employment_History.csv",
+      "commit": "10cf5847cbffc9d8c33ad777ef48523cd0aadc1c",
+      "size": 2347,
+      "sha256": "ebfa9e8484e7db9243617631d7b9aada61c80cd6d37070bfb6f74c5fb201bea4",
+      "role": "STAGE2_ELDER_REFERENCE"
+    },
+    {
+      "path": "handoff/f-elder-assumptions-20261119/Inputs.json",
+      "commit": "10cf5847cbffc9d8c33ad777ef48523cd0aadc1c",
+      "size": 648966,
+      "sha256": "c955c197ee46caa80b2289038b804bcb0bd71c139f449eeeb55a439053daa3d3",
+      "role": "STAGE2_ELDER_REFERENCE"
+    },
+    {
+      "path": "handoff/f-elder-assumptions-20261119/Interactions.csv",
+      "commit": "10cf5847cbffc9d8c33ad777ef48523cd0aadc1c",
+      "size": 3212,
+      "sha256": "8cb34e06b41a2b3e6a43aff679c65e489578007ecead1c499aa65a26dc687aad",
+      "role": "STAGE2_ELDER_REFERENCE"
+    },
+    {
+      "path": "handoff/f-elder-assumptions-20261119/Model.py",
+      "commit": "10cf5847cbffc9d8c33ad777ef48523cd0aadc1c",
+      "size": 11686,
+      "sha256": "1c387c61fa76f08b48ebef916b2738e4e6f23f4a882222a6186fddc4b9d70efc",
+      "role": "STAGE2_ELDER_REFERENCE"
+    },
+    {
+      "path": "handoff/f-elder-assumptions-20261119/Report.md",
+      "commit": "10cf5847cbffc9d8c33ad777ef48523cd0aadc1c",
+      "size": 5172,
+      "sha256": "bb3e1bf0322f276bee13863311502025b2c31af7e6cc9b51123acf1af42801fb",
+      "role": "STAGE2_ELDER_REFERENCE"
+    },
+    {
+      "path": "handoff/f-elder-assumptions-20261119/Sources.md",
+      "commit": "10cf5847cbffc9d8c33ad777ef48523cd0aadc1c",
+      "size": 6147,
+      "sha256": "5c7ca805a59b19ac108c7afa4cbf999046a1aa9b4f1f3bc63d2e4ed0f9334d92",
+      "role": "STAGE2_ELDER_REFERENCE"
+    },
+    {
+      "path": "policies/FreedomPolicies.md",
+      "commit": "5804388482864af08204ba0d0e76a46206dacdbd",
+      "size": 9241,
+      "sha256": "0dedd2c1126613c30a7d96732d226cc787f6597437137424845d64d041db0204",
+      "role": "POLICY_ORIGINAL"
+    },
+    {
+      "path": "policies/FreedomPolicies_Annex.md",
+      "commit": "5804388482864af08204ba0d0e76a46206dacdbd",
+      "size": 12319,
+      "sha256": "ee62de32582a0f6d559029e7e9810b161c6a975ff22b498493d9ca960ca29e83",
+      "role": "POLICY_ORIGINAL"
+    }
+  ],
+  "stage2_elder_fixed_path_matching_cells": 180,
+  "immutable_nested_dependencies": "VAT Inputs embeds household -> pension -> foreign -> elder -> demographic/macro; each original loader verifies declared hashes"
+}

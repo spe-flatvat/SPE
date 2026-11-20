@@ -1,0 +1,18 @@
+{
+  "status": "PASS_LOCAL_INTEGRATION",
+  "cases": 37,
+  "annual_rows": 1110,
+  "fixed_VAT_regression_cells": 360,
+  "checks": [
+    "fixed dependency bytes",
+    "same engine reexecution, not GDP summation",
+    "employment/effective-labour identity",
+    "legacy VAT scenario regression",
+    "insurer receipts less spending identity",
+    "government-insurer transfer cancellation",
+    "cash vs price and in-kind separated",
+    "no bond/PB imputation",
+    "all pairwise interactions computed"
+  ],
+  "limitations": "Partial fiscal proxies and synthetic micro distribution; no national closed budget or observed wage bill."
+}

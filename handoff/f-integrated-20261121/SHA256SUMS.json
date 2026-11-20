@@ -1,0 +1,100 @@
+{
+  "status": "LOCAL_ORIGINAL_INVENTORY",
+  "files": [
+    {
+      "file": "Annual.csv",
+      "size": 2082920,
+      "sha256": "eb92953e843dfd7b84a0476b2f41ae310cafbf976cb857895b7363beabdf4772"
+    },
+    {
+      "file": "Comparison.csv",
+      "size": 680660,
+      "sha256": "afe616d0d15370d359c7a63cda7209d41f69ee32a1cd89d1f235c471938369a4"
+    },
+    {
+      "file": "Dependencies.json",
+      "size": 28211,
+      "sha256": "95786aa3b3da47011341520cc4f6afc6d6ad864c71d6c9352f41b338fadbb835"
+    },
+    {
+      "file": "Fiscal.csv",
+      "size": 518878,
+      "sha256": "802077412925259c5b1c323e2d37a6477ad76690b99fef41324eac82165791ba"
+    },
+    {
+      "file": "Fiscal_Comparison.csv",
+      "size": 180714,
+      "sha256": "805f6f5c5f1f8208ac4883ffe612f314b2acdbd9429f1f98b201e580b8a19fa3"
+    },
+    {
+      "file": "Household.csv",
+      "size": 260210,
+      "sha256": "fa52c0b2de76337d1547acd6ae67c7eb747ae406b99866d6f9a48865575f176a"
+    },
+    {
+      "file": "Income_Groups.csv",
+      "size": 2141823,
+      "sha256": "b00d110ecb0f73cf53943e6ee4b28be50e392c1fe73c856b783be4750ac95ce5"
+    },
+    {
+      "file": "Inputs.json",
+      "size": 7865,
+      "sha256": "87d454a5205869e58dee2836103499ee1eee89105cf9d14c62724df0561c66f5"
+    },
+    {
+      "file": "Interactions.csv",
+      "size": 109308,
+      "sha256": "1e811e8108d298f3f29119bb60d5bf45b8695883cd700e66d2f9f9516b88d19a"
+    },
+    {
+      "file": "Labor.csv",
+      "size": 194513,
+      "sha256": "9b929466e3b96c2cb7214e3a9981a10a22ff8572fd1ee0065e1165f96b4a8e89"
+    },
+    {
+      "file": "Model.py",
+      "size": 21624,
+      "sha256": "42adedbe340a089e126c22987df89894943fcece54b6ac85ffa002fb886bf71c"
+    },
+    {
+      "file": "Policy_Effects.csv",
+      "size": 67381,
+      "sha256": "6ce76b3daf549fdccf909bc1a73bfb3e88c686d8124f342676cd90a9a7d8cf71"
+    },
+    {
+      "file": "Policy_Map.csv",
+      "size": 3542,
+      "sha256": "0de344bc4b95f8b72554b20d8fe5eedc069d141451406e99555a1fb2322fc234"
+    },
+    {
+      "file": "Report.md",
+      "size": 9893,
+      "sha256": "d21c9f71901add63d3f402f9fd3b8881703741b22341f61f4bfd49f635729214"
+    },
+    {
+      "file": "Reproduction.md",
+      "size": 3411,
+      "sha256": "a82d313ec46f77151904949f1b7033f74ece2a6f529186e7836dc76139477a5d"
+    },
+    {
+      "file": "Summary.csv",
+      "size": 77120,
+      "sha256": "3f4e221a80526c503cac04cf49b244e15e12ec34e300fe00f68a373bf2c3cbf2"
+    },
+    {
+      "file": "Validation.json",
+      "size": 631,
+      "sha256": "9a37e695f19ff908f281432b13c0288528ed745c459a26493d83246c88aa09e8"
+    },
+    {
+      "file": "Verification.json",
+      "size": 2441,
+      "sha256": "1e1ed87850ab138d5ef092dc6d1a2ff0825d60d344c5309cdd02f04a839af238"
+    },
+    {
+      "file": "Verify.py",
+      "size": 4445,
+      "sha256": "d9ef909f3138a6007dd5145fec3d7170cd81fcf733e231003f1364e68d728d2d"
+    }
+  ]
+}

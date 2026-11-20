@@ -1,0 +1,365 @@
+{
+  "status": "DRAFT/NON-CANONICAL",
+  "date_jst": "2026-11-21",
+  "parent_commit": "2307ec3314acddf030d444dc7309bf4b5d15bce0",
+  "policy_commit": "5804388482864af08204ba0d0e76a46206dacdbd",
+  "vat_model": "handoff/f-vat-core-20261120/Model.py",
+  "vat_inputs": "handoff/f-vat-core-20261120/Inputs.json",
+  "runtime_dependencies": [
+    {
+      "path": "handoff/f-vat-core-20261120/Model.py",
+      "size": 27668,
+      "sha256": "8c55442439d20b750ba6576ce8efa8a98e3f37b92df070a6a99dc498cd173837",
+      "commit": "76aca9274151139cf0791365f5f9307fcc6f8fa6"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/Inputs.json",
+      "size": 2559157,
+      "sha256": "f9de79d09488aa26cefc27a6a43c8d0d0b165b054b04839a4bace97ecf6cd2a9",
+      "commit": "76aca9274151139cf0791365f5f9307fcc6f8fa6"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/Annual.csv",
+      "size": 2087811,
+      "sha256": "35c78607be9b171f82201dc4b7ffadf9a6cf85bd19d6185bd37e120f2219364c",
+      "commit": "76aca9274151139cf0791365f5f9307fcc6f8fa6"
+    }
+  ],
+  "cases": [
+    {
+      "id": "REPLAY_DIRECT",
+      "C": false,
+      "new_connection": false,
+      "reproduce": "MM_FULL_DIRECT"
+    },
+    {
+      "id": "REPLAY_ADDITIONAL",
+      "C": true,
+      "new_connection": false,
+      "reproduce": "MM_FULL_ADDITIONAL"
+    },
+    {
+      "id": "FULL_DIRECT",
+      "C": false
+    },
+    {
+      "id": "FULL_RECLASSIFY",
+      "C": true,
+      "C_mode": "RECLASSIFY_ONLY"
+    },
+    {
+      "id": "FULL_ADDITIONAL",
+      "C": true
+    },
+    {
+      "id": "FULL_POOL",
+      "C": true,
+      "C_mode": "VAT_INCREMENT_POOL"
+    },
+    {
+      "id": "FULL_OLD_C",
+      "C": true,
+      "C_source": "RATE_ONLY"
+    },
+    {
+      "id": "FULL_LOW",
+      "background": "MM",
+      "rate_pass": 0.5,
+      "output_pass": 1.0,
+      "input_ratio_scale": 0.5
+    },
+    {
+      "id": "FULL_HIGH",
+      "background": "MM",
+      "rate_pass": 1.0,
+      "output_pass": 0.5,
+      "input_ratio_scale": 1.5
+    },
+    {
+      "id": "FULL_FUND",
+      "C": true,
+      "fund_switch": true,
+      "forecast_gap": 0.1
+    },
+    {
+      "id": "FULL_FUND_POOL",
+      "C": true,
+      "C_mode": "VAT_INCREMENT_POOL",
+      "fund_switch": true,
+      "forecast_gap": 0.1
+    },
+    {
+      "id": "DIRECT_NO_E",
+      "C": false,
+      "E": false
+    },
+    {
+      "id": "DIRECT_NO_P",
+      "C": false,
+      "PEN": false
+    },
+    {
+      "id": "DIRECT_NO_EP",
+      "C": false,
+      "E": false,
+      "PEN": false
+    },
+    {
+      "id": "DIRECT_NO_FOREIGN",
+      "C": false,
+      "F": false
+    },
+    {
+      "id": "DIRECT_NO_A",
+      "C": false,
+      "A": false
+    },
+    {
+      "id": "DIRECT_NO_B",
+      "C": false,
+      "B": false
+    },
+    {
+      "id": "DIRECT_NO_AB",
+      "C": false,
+      "A": false,
+      "B": false
+    },
+    {
+      "id": "DIRECT_NO_VAT",
+      "C": false,
+      "VAT": false
+    },
+    {
+      "id": "DIRECT_NO_DEDUCTION_ADJUST",
+      "C": false,
+      "deduction_adjusts": false
+    },
+    {
+      "id": "DIRECT_NO_INVEST_RELEASE",
+      "C": false,
+      "VAT_investment_link": false
+    },
+    {
+      "id": "CHANNELS_OFF",
+      "C": false,
+      "E": false,
+      "F": false,
+      "PEN": false,
+      "A": false,
+      "B": false,
+      "VAT": false
+    },
+    {
+      "id": "ONLY_E",
+      "C": false,
+      "E": true,
+      "F": false,
+      "PEN": false,
+      "A": false,
+      "B": false,
+      "VAT": false
+    },
+    {
+      "id": "ONLY_F",
+      "C": false,
+      "E": false,
+      "F": true,
+      "PEN": false,
+      "A": false,
+      "B": false,
+      "VAT": false
+    },
+    {
+      "id": "ONLY_PEN",
+      "C": false,
+      "E": false,
+      "F": false,
+      "PEN": true,
+      "A": false,
+      "B": false,
+      "VAT": false
+    },
+    {
+      "id": "ONLY_A",
+      "C": false,
+      "E": false,
+      "F": false,
+      "PEN": false,
+      "A": true,
+      "B": false,
+      "VAT": false
+    },
+    {
+      "id": "ONLY_B",
+      "C": false,
+      "E": false,
+      "F": false,
+      "PEN": false,
+      "A": false,
+      "B": true,
+      "VAT": false
+    },
+    {
+      "id": "ONLY_VAT",
+      "C": false,
+      "E": false,
+      "F": false,
+      "PEN": false,
+      "A": false,
+      "B": false,
+      "VAT": true
+    },
+    {
+      "id": "NO_VAT_WITH_C",
+      "VAT": false,
+      "C": true
+    },
+    {
+      "id": "NO_FOREIGN_NO_LINK",
+      "C": false,
+      "F": false,
+      "new_connection": false
+    },
+    {
+      "id": "NO_A_NO_DEDUCTION",
+      "C": false,
+      "A": false,
+      "deduction_adjusts": false
+    },
+    {
+      "id": "DIRECT_NO_RECOVERY",
+      "C": false,
+      "recovery": false
+    },
+    {
+      "id": "DIRECT_NO_RECOVERY_NO_INVEST",
+      "C": false,
+      "recovery": false,
+      "VAT_investment_link": false
+    },
+    {
+      "id": "DIRECT_FUND",
+      "C": false,
+      "fund_switch": true,
+      "forecast_gap": 0.1
+    }
+  ],
+  "interactions": [
+    {
+      "id": "ELDER_PENSION",
+      "paths": [
+        "DIRECT_NO_EP",
+        "DIRECT_NO_P",
+        "DIRECT_NO_E",
+        "FULL_DIRECT"
+      ],
+      "metrics": [
+        "real_gdp_trn",
+        "consolidated_partial_balance_proxy_trn",
+        "macro_cash_DI_proxy_trn",
+        "labor_force_population_proxy"
+      ]
+    },
+    {
+      "id": "A_B",
+      "paths": [
+        "DIRECT_NO_AB",
+        "DIRECT_NO_B",
+        "DIRECT_NO_A",
+        "FULL_DIRECT"
+      ],
+      "metrics": [
+        "real_gdp_trn",
+        "consolidated_partial_balance_proxy_trn",
+        "macro_cash_DI_proxy_trn",
+        "labor_force_population_proxy"
+      ]
+    },
+    {
+      "id": "VAT_C",
+      "paths": [
+        "DIRECT_NO_VAT",
+        "FULL_DIRECT",
+        "NO_VAT_WITH_C",
+        "FULL_ADDITIONAL"
+      ],
+      "metrics": [
+        "real_gdp_trn",
+        "consolidated_partial_balance_proxy_trn",
+        "macro_cash_DI_proxy_trn",
+        "labor_force_population_proxy"
+      ]
+    },
+    {
+      "id": "FOREIGN_CASH_LINK",
+      "paths": [
+        "NO_FOREIGN_NO_LINK",
+        "REPLAY_DIRECT",
+        "DIRECT_NO_FOREIGN",
+        "FULL_DIRECT"
+      ],
+      "metrics": [
+        "real_gdp_trn",
+        "consolidated_partial_balance_proxy_trn",
+        "macro_cash_DI_proxy_trn"
+      ]
+    },
+    {
+      "id": "PREMIUM_RELIEF_TAX_DEDUCTION",
+      "paths": [
+        "NO_A_NO_DEDUCTION",
+        "DIRECT_NO_DEDUCTION_ADJUST",
+        "DIRECT_NO_A",
+        "FULL_DIRECT"
+      ],
+      "metrics": [
+        "real_gdp_trn",
+        "consolidated_partial_balance_proxy_trn",
+        "macro_cash_DI_proxy_trn"
+      ]
+    },
+    {
+      "id": "INPUT_CREDIT_INVESTMENT_LINK",
+      "paths": [
+        "DIRECT_NO_RECOVERY_NO_INVEST",
+        "DIRECT_NO_INVEST_RELEASE",
+        "DIRECT_NO_RECOVERY",
+        "FULL_DIRECT"
+      ],
+      "metrics": [
+        "real_gdp_trn",
+        "consolidated_partial_balance_proxy_trn",
+        "macro_cash_DI_proxy_trn"
+      ]
+    },
+    {
+      "id": "C_FUND",
+      "paths": [
+        "FULL_DIRECT",
+        "FULL_ADDITIONAL",
+        "DIRECT_FUND",
+        "FULL_FUND"
+      ],
+      "metrics": [
+        "real_gdp_trn",
+        "consolidated_partial_balance_proxy_trn",
+        "macro_cash_DI_proxy_trn"
+      ]
+    }
+  ],
+  "scope": "Existing implemented channels; fixed provisional F background retained, not complete F implementation",
+  "new_connections": [
+    "Foreign employee pension deductions and employer pension/program cash costs use existing amounts and existing investment response",
+    "Government/insurer presentation bridge for already-financed pension expenses",
+    "Known SI receipts included once in partial public balance"
+  ],
+  "unchanged": [
+    "2026 anchors",
+    "age-sex employment rates",
+    "elder effective weight=.5",
+    "foreign reference coefficients",
+    "pension candidate",
+    "macro/GDP/supply-cap/consumption/capital equations"
+  ]
+}

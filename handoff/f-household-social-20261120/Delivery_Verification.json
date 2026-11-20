@@ -1,0 +1,135 @@
+{
+  "status": "CUSTODY_PASS_FOR_19_ORIGINAL_DELIVERABLES",
+  "fixed_original_commit": "c38a9ecef47d6e551e43f619d1d71c2be15ba04b",
+  "parent_commit": "376817b94ddd92ce5d5e1f39722a71477938dc3f",
+  "branch": "work/chatgpt-handoff",
+  "retrieval_route": "Fresh HTTPS Git clone after branch update; each file read with git show fixed_commit:path",
+  "verification": "Original byte sizes and actual SHA-256 matched for all19 files",
+  "files": [
+    {
+      "path": "handoff/f-household-social-20261120/Annual.csv",
+      "size": 1497203,
+      "sha256": "16334cc15d570ec8897f2c5a44aefc0a1bd27dd79294ecf6d54586bee9a8b8e0",
+      "match": true
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Comparison.csv",
+      "size": 364315,
+      "sha256": "205dd3b946c169c7efdebea76d6322bb23e4d79b3fe763a3dc5f96cd0727235a",
+      "match": true
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Fiscal_Insurer.csv",
+      "size": 354984,
+      "sha256": "5b8a2ac40589f42498fe447412946138de36abecca4fa8c1aba1ad68c06b2daa",
+      "match": true
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Household_Detail.csv",
+      "size": 845458,
+      "sha256": "1c3b681d074d50ad3fdf9da98e6dc0d1ac1a30c18b0a6110e02add311ca84dd0",
+      "match": true
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Household_Income.csv",
+      "size": 3377677,
+      "sha256": "372e63c83b2e4d4526b9cef68dfdee823ec24176097b32ab06ff9ccf7f6cc587",
+      "match": true
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Inputs.json",
+      "size": 1746742,
+      "sha256": "8a7df2e6b7228177b28346386437b3b7dc6a5f1b8547507a114daf1fc5472766",
+      "match": true
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Interactions.csv",
+      "size": 57954,
+      "sha256": "4a6396282aa398eb26c180d4cf4fb4c854c14c54ede59590d234a97d46309af1",
+      "match": true
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Model.py",
+      "size": 28365,
+      "sha256": "926f162b2f24abb8fe6d348bb96adfccb0a4b49bd9e7438ff9977aabbbc0d153",
+      "match": true
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Report.md",
+      "size": 16611,
+      "sha256": "a5ad23b1d3501c2789dc1018b9edfda4deec0d280048ab1c1873492323fd8eb0",
+      "match": true
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Reproduction.md",
+      "size": 2543,
+      "sha256": "0b205aeb1d89db0b582a8b3744b767df78a0afffbbb909ce7accf517b39a8ee6",
+      "match": true
+    },
+    {
+      "path": "handoff/f-household-social-20261120/SHA256SUMS.txt",
+      "size": 1468,
+      "sha256": "2ce8038a7801fdf29752d71d808f84514ce2415f1f997991e077cb944b7e54b8",
+      "match": true
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Source_Integrity.json",
+      "size": 58173,
+      "sha256": "1ca3bff77d04d73ef6b4d4707125258fae7dcbc07f0567c8a9eff9826cf3f3ef",
+      "match": true
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Sources_and_Map.md",
+      "size": 15315,
+      "sha256": "c27b18bbfbe1b42fb16cf2e4f213ee99b671d1813b9feeb92fe09075216f6c6e",
+      "match": true
+    },
+    {
+      "path": "handoff/f-household-social-20261120/StatusQuo.csv",
+      "size": 16903,
+      "sha256": "04816a04cbe5c35f0b8f9a89c128a23323ee8b41c6c0d96479efd30de55e1446",
+      "match": true
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Statutory_Examples.csv",
+      "size": 1564,
+      "sha256": "93d1ee8f95746c208f72dc8676772ea1c7ef7b779e6b5e1de6bdcfdf1cf7b675",
+      "match": true
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Summary.csv",
+      "size": 54395,
+      "sha256": "9dc5ee93f2bef8bc9464447a7dc1a47d64d32cc1acce4494abb16d9eadbc5c5f",
+      "match": true
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Triggers.csv",
+      "size": 136517,
+      "sha256": "29cd4443e0ad52a96844e48fd644db9388de8b396bbfd54dc984e8b9eda19973",
+      "match": true
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Validation.json",
+      "size": 905,
+      "sha256": "47bd9e43c19f11eaa666d90e08a7eae2eacd4efe6b88f831c24a99b031fd67a7",
+      "match": true
+    },
+    {
+      "path": "handoff/f-household-social-20261120/Verify.py",
+      "size": 6365,
+      "sha256": "84ab72509561a74fef8aae50f8f63d18a404f15b9e1faf0afaa177537dcc390d",
+      "match": true
+    }
+  ],
+  "preserved_existing_files": 220,
+  "total_files": 239,
+  "scope": "Generated deliverables only. Six official statistical CSV originals are also embedded byte-for-byte in Source_Integrity.json; other public web originals are not all archived.",
+  "record_scope": "This verification record is appended after the verified original commit. It is not self-certified by its own contents and is outside the original SHA256SUMS manifest.",
+  "postfetch_execution_verification": {
+    "status": "PASS",
+    "cases": 53,
+    "annual_rows": 1590,
+    "byte_identical_replay_outputs": 10,
+    "method": "Verify.py executed from independently fetched repository; all numerical/accounting tests and replay passed"
+  }
+}

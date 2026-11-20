@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "checks": [
+    "independent seller/output/input-credit examples including disabled recovery",
+    "2026 budget anchor",
+    "tax decomposition and national/local reference sum",
+    "fixed-volume household/business/government/insurer/land transfer closure",
+    "seller and buyer credit chain",
+    "credit incidence sum",
+    "quantity transaction closure including upstream supplies",
+    "land principal no direct GDP or induced investment",
+    "C and fund resource separation",
+    "reclassification no extra cash/GDP",
+    "pool constrained to net government resources",
+    "50% lagged excess fund rule",
+    "land scope changes tax but no mechanical GDP gain",
+    "positive-resource C payment and competing fund edge scenarios",
+    "all numerical outputs byte-identical on fresh execution",
+    "720 old/extra-zero regression cells and unchanged population/labor (model assertions)"
+  ],
+  "replayed_outputs": [
+    {
+      "file": "Annual.csv",
+      "size": 2087811,
+      "sha256": "35c78607be9b171f82201dc4b7ffadf9a6cf85bd19d6185bd37e120f2219364c"
+    },
+    {
+      "file": "C_Funding.csv",
+      "size": 234962,
+      "sha256": "e996d1abcd4c34feb4f05ce449119aa54ad84051c09f3520a9c38dc4a7a34ea0"
+    },
+    {
+      "file": "Comparison.csv",
+      "size": 248194,
+      "sha256": "d672e7cb87fe892f71fd6a8dbef9c803564bc6d2c1d0d20895920a41c45ab6ee"
+    },
+    {
+      "file": "Household_Income.csv",
+      "size": 2978597,
+      "sha256": "b830680195370a953e2970463cf5fb5b153bd819a204aba50e6e7720505cf7d4"
+    },
+    {
+      "file": "Interactions.csv",
+      "size": 21839,
+      "sha256": "e45c4d0fd04dad82138f9637c348523d62584bc182e6551db67abbed67bc4a8b"
+    },
+    {
+      "file": "Price_Incidence.csv",
+      "size": 266836,
+      "sha256": "31e7fcd04a86200c39c944abd395492c5dc36971369d3ec1e00cdbbc8075657d"
+    },
+    {
+      "file": "Sonzei_Incidence.csv",
+      "size": 2803194,
+      "sha256": "934848f51109070d251856f262e4c4695b4dffbd19f218e3df4783f235bf4355"
+    },
+    {
+      "file": "StatusQuo_Fixed.csv",
+      "size": 16903,
+      "sha256": "04816a04cbe5c35f0b8f9a89c128a23323ee8b41c6c0d96479efd30de55e1446"
+    },
+    {
+      "file": "StatusQuo_Updated.csv",
+      "size": 8246,
+      "sha256": "481a1c3fab7daf542325ebf757880ee4a3d0345bcf20b5f368a505041737c43c"
+    },
+    {
+      "file": "Summary.csv",
+      "size": 36715,
+      "sha256": "7f7b31efcb041e2145baca4be02a0f0b78077cbc583a35e661c0aa001a6e4e6e"
+    },
+    {
+      "file": "Tax_Decomposition.csv",
+      "size": 355792,
+      "sha256": "51cfae74896580815cfd416b976a895683a36dc3555d9987c3d85ca0de21d1a4"
+    },
+    {
+      "file": "Validation.json",
+      "size": 934,
+      "sha256": "6f3ff87bf470b92ab96fa050891e22f00ee4e432413077fbcae0853c81b78aa5"
+    }
+  ]
+}

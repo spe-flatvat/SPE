@@ -1,0 +1,24 @@
+{
+  "status": "PASS_LOCAL_MODEL_CHECKS",
+  "cases": 46,
+  "SQ_paths": 2,
+  "annual_rows": 1380,
+  "previous_model_regression_cells": 720,
+  "household_income_rows": 10080,
+  "sector_rows": 6300,
+  "input_sha256": "f9de79d09488aa26cefc27a6a43c8d0d0b165b054b04839a4bace97ecf6cd2a9",
+  "checks": [
+    "immutable dependencies",
+    "old and extra-zero reproduction",
+    "tax decomposition",
+    "seller and buyer input credits",
+    "fixed and quantity transfer identities",
+    "sonzei allocation",
+    "land not directly GDP",
+    "C price display no extra benefit",
+    "fund and C separate pools",
+    "unchanged population and labor",
+    "capital and GDP original engine identities"
+  ],
+  "limitations": "Budget-anchored covered-market VAT estimates; turnover/input/price/quantity shares partly hypothetical. Full all-transaction totals unestimated. Quantity sensitivities adjust tax bases, not a second GDP volume increment."
+}

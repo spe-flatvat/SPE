@@ -1,0 +1,10 @@
+{
+  "status": "PASS_LOCAL_CHANGED_IMPLEMENTATION",
+  "capacity_rows": 1650,
+  "independent_financing_rows": 1650,
+  "source_error_injection_detected": true,
+  "set_interface_rows": 150,
+  "patient_cap_audit_rows": 144,
+  "formal_acceptance": false,
+  "N3_policy_model_implemented": false
+}

@@ -1,0 +1,265 @@
+{
+  "status": "DRAFT_NON_CANONICAL",
+  "files": [
+    {
+      "file": "Annual.csv",
+      "size": 6775129,
+      "sha256": "1754500818d58de9b075106cb1185322dc5c961a3438dbcfa0a2883917d8ba79"
+    },
+    {
+      "file": "Before_After.csv",
+      "size": 1634928,
+      "sha256": "b41c36a18bb27886d8179dee5b98a393cfa598e5aafea9dd7d321f47879c4092"
+    },
+    {
+      "file": "Claims_Examples.csv",
+      "size": 1169074,
+      "sha256": "9d69f16dd70ff115b5e703571c046a465cf838c0f20e5b38de02bb6d46513064"
+    },
+    {
+      "file": "CommonBaseline.py",
+      "size": 4168,
+      "sha256": "106e298f0a819edc9f6fc2a9f254d50ca3edc2fa4e312d82205888f63e911430"
+    },
+    {
+      "file": "CommonEndOfLife.py",
+      "size": 10956,
+      "sha256": "c930a8df539ff676e55180b75cfe899084caa656f738c371aac44ce1f7693fae"
+    },
+    {
+      "file": "CommonInterface.py",
+      "size": 420,
+      "sha256": "4b56a30806da8bd5f39566a622fac1119e93f0842d40983deafb6dca4c88f4e2"
+    },
+    {
+      "file": "Common_EndOfLife.csv",
+      "size": 1594136,
+      "sha256": "072f23920d760b05c41ee8fa35670af49878c7eac7c0433b53314b314e26003e"
+    },
+    {
+      "file": "Common_ON_F_SQ_Comparison.csv",
+      "size": 36416,
+      "sha256": "6f60adba4f6eeaabe39996f48086fbea834d1f362cdfb7595cae899bb02e6c58"
+    },
+    {
+      "file": "Comparison.csv",
+      "size": 1248763,
+      "sha256": "9972f1d7ee3eef037a6da27425a18ee275904c803ad6e713cb845138ef314e8f"
+    },
+    {
+      "file": "Demand.py",
+      "size": 2544,
+      "sha256": "fab0a6c505c9bb5041bfb38ec199617b6c4171891ec4fc49ba90eec2ae05f30d"
+    },
+    {
+      "file": "Demography_Demand.csv",
+      "size": 1460587,
+      "sha256": "bb17d65a864479ff848e0765b1ca36a0f31c9cc48a03d0567cd30b076f677860"
+    },
+    {
+      "file": "Education.csv",
+      "size": 1367079,
+      "sha256": "e13635f0e8cfe2d2533d6659beb201be423696939985cf15cf88602f24c3eaf8"
+    },
+    {
+      "file": "Evidence_Reuse.json",
+      "size": 2192,
+      "sha256": "5872d4823c974610354ad87ac75883929817750cead13911cade9064f4347399"
+    },
+    {
+      "file": "Evidence_SPE_FIntegrated_Claude_Independent_Verification_DRAFT_20261121.md",
+      "size": 7673,
+      "sha256": "c22cf9e5a08933a6066a95ef2e0f41ccc401336bb4021db5500439e81b7e8e8f"
+    },
+    {
+      "file": "Evidence_SPE_MedicalIntegrated_Independent_Recalc_DRAFT_20261121.py",
+      "size": 20200,
+      "sha256": "ffaf8ee0fe9a7686c6e40c420fa000d3980ad40b87fc97ba33b94a03fb3e5f19"
+    },
+    {
+      "file": "Evidence_SPE_MedicalIntegrated_Supplementary_Checks_DRAFT_20261121.py",
+      "size": 5485,
+      "sha256": "d7977e05b4ed3a1cf9d3e2dd7a8f2bf549afb68affc40756efaf05f1a418a4c8"
+    },
+    {
+      "file": "Evidence_SPE_MedicalIntegrated_Verification_Output_DRAFT_20261121.txt",
+      "size": 2294,
+      "sha256": "f60ef2e84e7cb512bd8debe62f22518c0802f74850291747083357c4e471a520"
+    },
+    {
+      "file": "ExtendedVerify.py",
+      "size": 2265,
+      "sha256": "ad88c2a1e5245948f3a5394adb2d55ea4cd34c56e6b5724f0d9afa4ffb74b9b8"
+    },
+    {
+      "file": "Extended_Checks.json",
+      "size": 875,
+      "sha256": "dcbde3e820b57da6afa66632663edd7a9b728bf6e240bc2ca005cf0ca7e430fd"
+    },
+    {
+      "file": "FMedical.py",
+      "size": 17478,
+      "sha256": "b36a21bead583b13c338f31dcd42e90c1e24a2814024024e872e993a9754dd80"
+    },
+    {
+      "file": "Final_Checks.json",
+      "size": 290,
+      "sha256": "1961b2ce6e236f96d3f1c924be68decb28fb1f7d44f503e8834a54d8ca1c45a9"
+    },
+    {
+      "file": "Finalize.py",
+      "size": 6850,
+      "sha256": "1c4cfb790d0b87d6edc39ab6133c0e28c4553ff0ab1cb9e8061e6cfd250c33ed"
+    },
+    {
+      "file": "Fiscal.csv",
+      "size": 2259915,
+      "sha256": "2fc3d72b0aeca22bece7f208c4fc0c6e50636e3cfe40d18a6aabe7f247f7252d"
+    },
+    {
+      "file": "Household.csv",
+      "size": 561361,
+      "sha256": "9b83405307ef478c768eebb887f396ec75a519efa3fa2082fb63b1abb20290d3"
+    },
+    {
+      "file": "Household_Sensitivity.csv",
+      "size": 15336,
+      "sha256": "f3771fb0202c3c64d414be56fbc9a35b6d4071c99cbacb9c7dc6dc4e318a1fbb"
+    },
+    {
+      "file": "Independent_Callers.csv",
+      "size": 3880,
+      "sha256": "797b64d42ced195af10a1064d87607dd2275980e8edb4aafa12560cec7fdb11d"
+    },
+    {
+      "file": "Inputs.json",
+      "size": 27093,
+      "sha256": "6da4648a8823c041197e9082d6814b6e19710afdf7bb7c7130dc58d4cabd6095"
+    },
+    {
+      "file": "Interactions.csv",
+      "size": 86787,
+      "sha256": "49af579f1c7228913d44936b3a17c9839f468add1c023239c0b96c4cfdd68abb"
+    },
+    {
+      "file": "Labor.csv",
+      "size": 358159,
+      "sha256": "fe4b50f8868f11d77ea52028bd0913b637be6a0fefb8b733b55b9a5252a41c3f"
+    },
+    {
+      "file": "Medical_Accounts.csv",
+      "size": 1643416,
+      "sha256": "f2247dd1f1546a70d10526a245000ac9a89db254c0f0dcd44660da1f322e60ae"
+    },
+    {
+      "file": "Model.py",
+      "size": 15152,
+      "sha256": "e45b234545e17cfc486a488a4c06f68e49b03234d2847142ded3ce6c2998d4fd"
+    },
+    {
+      "file": "Nonadditivity.csv",
+      "size": 2316,
+      "sha256": "70cb58dac199e521db991f232e52b79fbc11c1ba0a8efbb22c7b164a41d4d09e"
+    },
+    {
+      "file": "Patient_Cap_Audit.csv",
+      "size": 16297,
+      "sha256": "5ef5a9b5c8aeda131e5273f80410ec62a0cb577d742d9316b41e58090d37b37e"
+    },
+    {
+      "file": "Policy_Effects.csv",
+      "size": 387093,
+      "sha256": "1210c6446c6484c21859fd09b8d702ba050f4395ff1a1a381482e29713add0ae"
+    },
+    {
+      "file": "Policy_Map.csv",
+      "size": 8361,
+      "sha256": "3a6d3ff11af72ab6e617410af37fb3ff9feb3921ed7b78357e47e63c09abfa9f"
+    },
+    {
+      "file": "Protection_Tests.csv",
+      "size": 20689,
+      "sha256": "3cf1e3b0259c020b137cf5f2f6443312ff06c307d0187de32269e34fefb37370"
+    },
+    {
+      "file": "Report.md",
+      "size": 7850,
+      "sha256": "e34f279d3fe57b607e8a5cb2aa149164d15bba287666f37816726a94b0181685"
+    },
+    {
+      "file": "ReportResults.py",
+      "size": 9762,
+      "sha256": "b164ccc68bb0d9aeb97d09a0c64cedd76689e1347928099add4817b38806660d"
+    },
+    {
+      "file": "Reproduction.md",
+      "size": 2648,
+      "sha256": "731a9a3e08ac81613f64eadd80e010ca66f72807458a6cbd0c27d04e7d2f5754"
+    },
+    {
+      "file": "SQ_Common_Accounts.csv",
+      "size": 40342,
+      "sha256": "88d41855b996e0bd1405efd40196d7f4706a3eedf654be246532a6eaaff88fe6"
+    },
+    {
+      "file": "SQ_Common_Annual.csv",
+      "size": 96901,
+      "sha256": "b31b82e455257b178db6b274f87fed614ca6d0ba2dddab536b97296cb902e389"
+    },
+    {
+      "file": "SQ_Common_Comparison.csv",
+      "size": 28604,
+      "sha256": "8163938a39c1fe826633dd737d849ccc05f401fe827cee9dcc9ab558fa3a3f29"
+    },
+    {
+      "file": "SQ_Common_Patients.csv",
+      "size": 44335,
+      "sha256": "4030a5179af01faa118737a619d9128fd991c4895b19ef2531af87bf1065d87f"
+    },
+    {
+      "file": "Set_Interface_Tests.csv",
+      "size": 115106,
+      "sha256": "70cde65b700625be1d4b9b667091cd4151f66ee45913239c44280899c88f028a"
+    },
+    {
+      "file": "Source_Provenance.json",
+      "size": 1931,
+      "sha256": "b3c75414a72c3d3a6dd1113d8ea0fdae6f624fda97e8059756c580e71ab0833c"
+    },
+    {
+      "file": "Summary.csv",
+      "size": 228769,
+      "sha256": "f951a7a1f33091fbef957fe5231a04aed4fbae8776fe8753b780a105f839d6e2"
+    },
+    {
+      "file": "Supply_Before_After.csv",
+      "size": 483605,
+      "sha256": "5fc301500abc915403987ea50fb424c22e58f2cb028e985b85b3a49727a51b51"
+    },
+    {
+      "file": "VAT_Medical.csv",
+      "size": 875746,
+      "sha256": "79e7d0326fc86ae0f3a4560995bbc837fdf608dca20648f7477d83d838ece963"
+    },
+    {
+      "file": "Validation.json",
+      "size": 501,
+      "sha256": "ae500593de85bed755cd4de15b62d15408a87b47b398999c2ec18de229e77d9a"
+    },
+    {
+      "file": "Verification.json",
+      "size": 3017,
+      "sha256": "d811eccc6da3a407954c1324ee5531a486894e81207e88b69e239959d0430bd7"
+    },
+    {
+      "file": "Verify.py",
+      "size": 7725,
+      "sha256": "867a99b8faa2b689e26622ec8404995c2946b28ce1d8ed64ee39d4c0533208ff"
+    }
+  ],
+  "excludes": [
+    "Manifest.json",
+    "Delivery_Verification.json"
+  ],
+  "delivery": "fixed commit and actual refetch recorded separately"
+}

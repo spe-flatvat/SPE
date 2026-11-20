@@ -1,0 +1,41 @@
+{
+  "existing_Claude_PASS": "37/37 manifest;12/12 deps;16 byte outputs;154440 cells;OLD_VERSION_ONLY",
+  "originals": [
+    {
+      "commit": "995cbca98935752234452c6a6760150e639b312d",
+      "path": "handoff/claude-f-integrated-verification-20261121/SPE_FIntegrated_Claude_Independent_Verification_DRAFT_20261121.md",
+      "saved_file": "Evidence_SPE_FIntegrated_Claude_Independent_Verification_DRAFT_20261121.md",
+      "size": 7673,
+      "sha256": "c22cf9e5a08933a6066a95ef2e0f41ccc401336bb4021db5500439e81b7e8e8f",
+      "route": "git fetch fixed commit then git show",
+      "verification": "OWN_BYTE_IDENTITY_TO_FIXED_GIT_OBJECT"
+    },
+    {
+      "commit": "995cbca98935752234452c6a6760150e639b312d",
+      "path": "handoff/claude-f-integrated-verification-20261121/SPE_MedicalIntegrated_Independent_Recalc_DRAFT_20261121.py",
+      "saved_file": "Evidence_SPE_MedicalIntegrated_Independent_Recalc_DRAFT_20261121.py",
+      "size": 20200,
+      "sha256": "ffaf8ee0fe9a7686c6e40c420fa000d3980ad40b87fc97ba33b94a03fb3e5f19",
+      "route": "git fetch fixed commit then git show",
+      "verification": "OWN_BYTE_IDENTITY_TO_FIXED_GIT_OBJECT"
+    },
+    {
+      "commit": "995cbca98935752234452c6a6760150e639b312d",
+      "path": "handoff/claude-f-integrated-verification-20261121/SPE_MedicalIntegrated_Supplementary_Checks_DRAFT_20261121.py",
+      "saved_file": "Evidence_SPE_MedicalIntegrated_Supplementary_Checks_DRAFT_20261121.py",
+      "size": 5485,
+      "sha256": "d7977e05b4ed3a1cf9d3e2dd7a8f2bf549afb68affc40756efaf05f1a418a4c8",
+      "route": "git fetch fixed commit then git show",
+      "verification": "OWN_BYTE_IDENTITY_TO_FIXED_GIT_OBJECT"
+    },
+    {
+      "commit": "995cbca98935752234452c6a6760150e639b312d",
+      "path": "handoff/claude-f-integrated-verification-20261121/SPE_MedicalIntegrated_Verification_Output_DRAFT_20261121.txt",
+      "saved_file": "Evidence_SPE_MedicalIntegrated_Verification_Output_DRAFT_20261121.txt",
+      "size": 2294,
+      "sha256": "f60ef2e84e7cb512bd8debe62f22518c0802f74850291747083357c4e471a520",
+      "route": "git fetch fixed commit then git show",
+      "verification": "OWN_BYTE_IDENTITY_TO_FIXED_GIT_OBJECT"
+    }
+  ]
+}

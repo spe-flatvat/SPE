@@ -1,0 +1,95 @@
+{
+  "status": "PASS_LOCAL_CHANGED_MODEL",
+  "checks": {
+    "unchanged_education_integration_regression_cells": 240,
+    "clinical_and_explicit_counterparty_rows": 1650,
+    "behavioral_protection_claim_rows": 288,
+    "nonidentical_common_callers": 2,
+    "age_vs_total_demand_differences": 3,
+    "VAT_real_flow_response_nonzero": true
+  },
+  "deterministic_replay": [
+    {
+      "file": "Annual.csv",
+      "size": 6775129,
+      "sha256": "1754500818d58de9b075106cb1185322dc5c961a3438dbcfa0a2883917d8ba79"
+    },
+    {
+      "file": "Claims_Examples.csv",
+      "size": 1169074,
+      "sha256": "9d69f16dd70ff115b5e703571c046a465cf838c0f20e5b38de02bb6d46513064"
+    },
+    {
+      "file": "Common_EndOfLife.csv",
+      "size": 1594136,
+      "sha256": "072f23920d760b05c41ee8fa35670af49878c7eac7c0433b53314b314e26003e"
+    },
+    {
+      "file": "Comparison.csv",
+      "size": 1248763,
+      "sha256": "9972f1d7ee3eef037a6da27425a18ee275904c803ad6e713cb845138ef314e8f"
+    },
+    {
+      "file": "Demography_Demand.csv",
+      "size": 1460587,
+      "sha256": "bb17d65a864479ff848e0765b1ca36a0f31c9cc48a03d0567cd30b076f677860"
+    },
+    {
+      "file": "Education.csv",
+      "size": 1367079,
+      "sha256": "e13635f0e8cfe2d2533d6659beb201be423696939985cf15cf88602f24c3eaf8"
+    },
+    {
+      "file": "Fiscal.csv",
+      "size": 2259915,
+      "sha256": "2fc3d72b0aeca22bece7f208c4fc0c6e50636e3cfe40d18a6aabe7f247f7252d"
+    },
+    {
+      "file": "Household.csv",
+      "size": 561361,
+      "sha256": "9b83405307ef478c768eebb887f396ec75a519efa3fa2082fb63b1abb20290d3"
+    },
+    {
+      "file": "Household_Sensitivity.csv",
+      "size": 15336,
+      "sha256": "f3771fb0202c3c64d414be56fbc9a35b6d4071c99cbacb9c7dc6dc4e318a1fbb"
+    },
+    {
+      "file": "Interactions.csv",
+      "size": 86787,
+      "sha256": "49af579f1c7228913d44936b3a17c9839f468add1c023239c0b96c4cfdd68abb"
+    },
+    {
+      "file": "Labor.csv",
+      "size": 358159,
+      "sha256": "fe4b50f8868f11d77ea52028bd0913b637be6a0fefb8b733b55b9a5252a41c3f"
+    },
+    {
+      "file": "Medical_Accounts.csv",
+      "size": 1643416,
+      "sha256": "f2247dd1f1546a70d10526a245000ac9a89db254c0f0dcd44660da1f322e60ae"
+    },
+    {
+      "file": "Policy_Effects.csv",
+      "size": 387093,
+      "sha256": "1210c6446c6484c21859fd09b8d702ba050f4395ff1a1a381482e29713add0ae"
+    },
+    {
+      "file": "Summary.csv",
+      "size": 228769,
+      "sha256": "f951a7a1f33091fbef957fe5231a04aed4fbae8776fe8753b780a105f839d6e2"
+    },
+    {
+      "file": "VAT_Medical.csv",
+      "size": 875746,
+      "sha256": "79e7d0326fc86ae0f3a4560995bbc837fdf608dca20648f7477d83d838ece963"
+    },
+    {
+      "file": "Validation.json",
+      "size": 501,
+      "sha256": "ae500593de85bed755cd4de15b62d15408a87b47b398999c2ec18de229e77d9a"
+    }
+  ],
+  "reused_Claude_PASS": "154440 cells / 16 byte-equal outputs / 37 manifest / 12 dependencies;old-version independent evidence only",
+  "limitations": "Causal calibration and national budget closure unavailable"
+}

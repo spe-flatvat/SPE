@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "SQ_replay": [
+    {
+      "file": "SQ_Common_Annual.csv",
+      "size": 96901,
+      "sha256": "b31b82e455257b178db6b274f87fed614ca6d0ba2dddab536b97296cb902e389"
+    },
+    {
+      "file": "SQ_Common_Accounts.csv",
+      "size": 40342,
+      "sha256": "88d41855b996e0bd1405efd40196d7f4706a3eedf654be246532a6eaaff88fe6"
+    },
+    {
+      "file": "SQ_Common_Patients.csv",
+      "size": 44335,
+      "sha256": "4030a5179af01faa118737a619d9128fd991c4895b19ef2531af87bf1065d87f"
+    },
+    {
+      "file": "SQ_Common_Comparison.csv",
+      "size": 28604,
+      "sha256": "8163938a39c1fe826633dd737d849ccc05f401fe827cee9dcc9ab558fa3a3f29"
+    }
+  ],
+  "SQ_OFF_fixed_regression_cells": 180,
+  "independent_cap_formula_examples": 144,
+  "medical_debt_asset_stockflow_rows": 1650,
+  "unconnected_SQ": [
+    "medical VAT volume hook",
+    "health QOL"
+  ]
+}

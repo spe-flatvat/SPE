@@ -1,0 +1,51 @@
+[
+  {
+    "commit": "12f8f43b874940cb695da54168f97ff5beb6a4a8",
+    "path": "handoff/medical-recovery-20261121/SPE_Work_Common_EndOfLife_F_Recalculation_Instruction_20261121.md",
+    "size": 8112,
+    "sha256": "d8d8f8d0a50a4ec53bf79fc72122144e433b2a8fa367ecd7babdffb9b87bbea8",
+    "state": "OWN_FIXED_GIT_BYTES_MATCH"
+  },
+  {
+    "commit": "6986bb7d11dc25a84189192963da878abd6d6572",
+    "path": "handoff/f-medical-corrected-integrated-20261121/Inputs.json",
+    "size": 26760,
+    "sha256": "ce0804a1358b05641e1b03ba9b141f19b0e56abe9d300cde9d5060102ca4814c",
+    "state": "OWN_FIXED_GIT_BYTES_MATCH"
+  },
+  {
+    "commit": "6986bb7d11dc25a84189192963da878abd6d6572",
+    "path": "handoff/f-medical-corrected-integrated-20261121/Annual.csv",
+    "size": 6366242,
+    "sha256": "f2fc04798b762e3eb126930af1c7ac088e66852c45e4b4fab5eb11fed8033181",
+    "state": "OWN_FIXED_GIT_BYTES_MATCH"
+  },
+  {
+    "commit": "6986bb7d11dc25a84189192963da878abd6d6572",
+    "path": "handoff/f-medical-corrected-integrated-20261121/Common_EndOfLife.csv",
+    "size": 1270366,
+    "sha256": "e07ed5fbbc2f6688615df6e88d4725db2c9e0db8ba2501fc39339cd165ec287c",
+    "state": "OWN_FIXED_GIT_BYTES_MATCH"
+  },
+  {
+    "commit": "12f8f43b874940cb695da54168f97ff5beb6a4a8",
+    "path": "policies/FreedomPolicies.md",
+    "size": 9241,
+    "sha256": "0dedd2c1126613c30a7d96732d226cc787f6597437137424845d64d041db0204",
+    "state": "READ_ONLY_UNCHANGED"
+  },
+  {
+    "commit": "12f8f43b874940cb695da54168f97ff5beb6a4a8",
+    "path": "policies/FreedomPolicies_Annex.md",
+    "size": 12319,
+    "sha256": "ee62de32582a0f6d559029e7e9810b161c6a975ff22b498493d9ca960ca29e83",
+    "state": "READ_ONLY_UNCHANGED"
+  },
+  {
+    "commit": "12f8f43b874940cb695da54168f97ff5beb6a4a8",
+    "path": "Inbox/End-of-Life_Stage.md",
+    "size": 8287,
+    "sha256": "b75e095ad9d833bec75154ff24e82ae815f571ab27b49d83fc656f0110a241d4",
+    "state": "READ_ONLY_UNCHANGED"
+  }
+]

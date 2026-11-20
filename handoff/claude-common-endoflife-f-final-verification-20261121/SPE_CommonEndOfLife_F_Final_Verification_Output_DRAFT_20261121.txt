@@ -1,0 +1,67 @@
+# Claude verification output / target commit ff6210061615105de9a0d64767c256796be80ed2 / 2026-11-21
+# commands: python3 -I SPE_CommonEndOfLife_F_Final_Integrity_Check_DRAFT_20261121.py <t3> <replay> DV_from_record_commit.json ; python3 -I SPE_CommonEndOfLife_F_Final_Independent_Recalc_DRAFT_20261121.py <t3> ; python3 SPE_CommonEndOfLife_F_Final_Supplementary_Checks_DRAFT_20261121.py <t3> <6986bb7 tree>
+# replay: python3 {Model.py Inputs.json --outdir, CommonBaseline.py, Finalize.py, Verify.py --replay, ExtendedVerify.py, ReportResults.py} run in a copy of the fixed tree (Finalize needs git object 995cbca fetched); '-I' not usable for CommonBaseline/ReportResults (sibling imports)
+
+## 0 integrity
+I1 Manifest entries 51, size+SHA-256 match 51 (Manifest excludes Manifest.json and Delivery_Verification.json)
+I2 runtime_dependencies 12, size+SHA-256 match 12
+I3 files physically in the fixed folder: 52 (= 51 Manifest entries + Manifest.json)
+I4 replay (Model, CommonBaseline, Finalize, Verify --replay, ExtendedVerify, ReportResults) byte-identical files: 52 of 52 ; differing: none
+I5 Delivery_Verification.json (record commit 6a9ccc85...): status CUSTODY_PASS, artifact_commit ff621006, entries 52, all MATCH True, entries agreeing with my own bytes 52 of 52
+
+## 1 independent recompute
+A final-run allocation/medical/common/demand recompute (ff621006): cells 176550 mismatch 0 max err (rel for |x|>1e-3 else abs) 2.598e-10 []
+
+## 2 supplementary checks
+B0 counts: Annual rows 1740 cases 58 | Common_EndOfLife rows 1650 cases 55 | fixed refs ['OLD_EDUCATION_F', 'OLD_MEDICAL_F', 'SQ_FIXED']
+B1 invariants over 1650 case-years: violations none | max used/capacity 1.000000
+B2 allocation modes (rows): {'OVERLAP_EQUAL_ACCESS': 1620, 'EXTRA_TRANSITION_RESOURCE': 30}
+B3 fully-implemented case-years where capacity binds: 982 of 1003
+B4 LATEST_F 2035 new chosen 2391 served 61696 cap 61696 overlap 2391 unique 61696 used 61696 access 0.1917 | old chosen 12474 served 61696 cap 61696 (old chosen+served 74171)
+B4 LATEST_F 2040 new chosen 14479 served 93392 cap 93392 overlap 14479 unique 93392 used 93392 access 0.2881 | old chosen 50257 served 93392 cap 93392 (old chosen+served 143649)
+B4 LATEST_F 2055 new chosen 13207 served 85186 cap 85186 overlap 13207 unique 85186 used 85186 access 0.2495 | old chosen 52929 served 85186 cap 85186 (old chosen+served 138115)
+B5 unmet reported before implementation: 2026 need 315000 served 0 unmet 315000 (impl phase 0.00) ; 2031 unmet 319903
+B6 capacity_unmet (uses willing, not phase-scaled need) exceeds transition_unmet in LATEST_F years: 4 e.g. [('LATEST_F', 2031)] ; 2035 capacity_unmet 10083 vs transition_unmet 10083
+B7 edge-case calls matching independent closed form and protection flags: 80 (16 scenarios x 5 years)
+B8 extreme registration: transition_need 363375 universal_need 4500 served 100000 chosen 100000 access 0.275 overlap<=served True
+B9 access probability low registration 0.3175 vs high registration 0.3175 (equal while target = universal need)
+C1 imports in CommonEndOfLife.py + CommonInterface.py: ['import math', 'from CommonEndOfLife import calculate']
+C2 mentions of F/N3/set names in the two files: ['caller']
+C3 Set_Interface_Tests: 150 rows, 5 callers; columns that vary across callers: ['borrowing_need_delta_trn', 'household_direct_cash_burden_delta_trn', 'household_total_economic_burden_delta_trn', 'insurer_clinical_payment_delta_trn', 'patient_payment_delta_trn', 'public_clinical_payment_delta_trn', 'savings_drawdown_delta_trn', 'universal_palliative_insurer_trn', 'universal_palliative_patient_trn', 'universal_palliative_public_trn']
+C4 non-payer columns that vary across callers (should be none): []
+C5 financing share 0/.3/1 -> supply/eligibility columns that changed: none | patient payment varies: [0.0, 0.00086, 0.00287]
+D1 LATEST_F real GDP new-old: 2035 0.000048 2040 0.000352 2055 0.000166 ; max |diff| 0.000352 (2040), sign changes 2
+D2 LATEST_F 2055 real GDP new 540.274554375 old 540.274388667
+D3 other cases max |real GDP new-old| (NO_VAT, NO_EDUCATION, MEDICAL_OFF, F_ONLY_NO_COPAY): 0.000369
+D4 MEDICAL_OFF new-old max abs diff 0.00e+00 (should be 0: no medical change)
+D5 SQ common OFF replay vs fixed SQ: max abs diff over 180 cells 4.92e-09
+D6 SQ common effect 2035:  {'real_gdp_trn': 5.4e-05, 'nominal_gdp_trn': 7e-05, 'tax_diagnostic_trn': 0.003369, 'household_consumption_nominal_proxy_trn': -0.003993, 'I_policy_real_trn': 0.0, 'capital_total_real_trn': 0.0}
+D6 SQ common effect 2040:  {'real_gdp_trn': 2.9e-05, 'nominal_gdp_trn': 4.2e-05, 'tax_diagnostic_trn': 0.005154, 'household_consumption_nominal_proxy_trn': -0.00574, 'I_policy_real_trn': 0.0, 'capital_total_real_trn': 0.0}
+D6 SQ common effect 2055:  {'real_gdp_trn': -0.000122, 'nominal_gdp_trn': -0.000236, 'tax_diagnostic_trn': 0.006712, 'household_consumption_nominal_proxy_trn': -0.007532, 'I_policy_real_trn': 0.0, 'capital_total_real_trn': 0.0}
+D7 F(common ON) - SQ(common ON) 2055: {'real_gdp_trn': 11.3122, 'nominal_gdp_trn': 21.7937, 'household_consumption_nominal_proxy_trn': 14.286, 'I_policy_real_trn': 1.317, 'capital_total_real_trn': 26.8252, 'tax_diagnostic_trn': -20.7912}
+   scope note: F medical VAT-volume hook connected;SQ volume hook unconnected;reported separately
+D8 LATEST_F minus SQ common-OFF replay 2055: 11.312096
+D9 Nonadditivity.csv recomputed from Policy_Effects/Annual: max abs diff 4.40e-12 ; 2055 nonadditivity 2.002190 ; additive flag False
+D10 INVESTMENT rows 300 connection_status {'UNCONNECTED'}
+E1 financing ledger residual over 1650 rows: max abs 1.00e-12
+E2 clinical claims identity (patient+public+insurer = clinical cost) max abs 1.00e-11
+E3 error injection of +0.01兆円 into a single source: detected in 3300 of 4950 trials
+E4 debt/asset stock-flow max abs 5.90e-12
+E5 financing_account_status counts {'CLOSED_PARTIAL_ONLY': 350, 'OPEN_UNASSIGNED': 1300} ; post_financing_transfer_residual blank in all rows: True
+E6 Household_Sensitivity recomputed min/max: mismatching rows 0
+E7 direct cash burden range 2030: 0.0 ~ +0.0 億円/年 (sign reversal False)  | total medical household cash (incl. taxes/premiums) -1741 ~ -1741 億円/年
+E7 direct cash burden range 2035: -45.6 ~ +16.0 億円/年 (sign reversal True)  | total medical household cash (incl. taxes/premiums) -4962 ~ -4902 億円/年
+E7 direct cash burden range 2040: -91.2 ~ +96.8 億円/年 (sign reversal True)  | total medical household cash (incl. taxes/premiums) -5188 ~ -5004 億円/年
+E7 direct cash burden range 2045: -103.0 ~ +104.2 億円/年 (sign reversal True)  | total medical household cash (incl. taxes/premiums) -5946 ~ -5743 億円/年
+E7 direct cash burden range 2050: -118.5 ~ +112.0 億円/年 (sign reversal True)  | total medical household cash (incl. taxes/premiums) -6792 ~ -6566 億円/年
+E7 direct cash burden range 2055: -132.0 ~ +120.0 億円/年 (sign reversal True)  | total medical household cash (incl. taxes/premiums) -7590 ~ -7343 億円/年
+E8 years with sign reversal in direct cash burden (2026-2055): [2031, 2032, 2033] ... 25 years
+F1 Patient_Cap_Audit: 144 rows recomputed with separate claim code: max abs diff (yen) 0.0000 ; marginal rate outside [0,0.3]: 0 ; rate range 0.0000..0.3000
+F2 universal palliative patient share of its cost (LATEST_F 2035/2040/2055): [0.7, 0.82, 0.69] %
+G1 Before_After.csv rows rebuilt from Annual.csv of both folders: 19530 rows, mismatches 0
+G2 Supply_Before_After.csv rebuilt from Common_EndOfLife.csv of both folders: 6240 rows, mismatches 0
+G3 LATEST_F years where capacity_unmet > transition_unmet + 1: [2031, 2032, 2033, 2034]
+G4 LATEST_F chosen transitions new/old: [(2032, 259, 497), (2033, 676, 2237), (2034, 1367, 5976), (2035, 2391, 12474), (2045, 14058, 51109), (2055, 13207, 52929)]
+G5 LATEST_F household direct cash burden 2055 new -0.00171 old 0.00421 (兆円)
+G6 case-years with universal_palliative_served > universal_palliative_need: 0
+G7 Household.csv sign convention: positive_sign = burden_increase

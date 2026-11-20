@@ -1,0 +1,222 @@
+{
+ "status": "DRAFT / NON-CANONICAL",
+ "date_jst": "2026-11-21",
+ "author": "Claude (independent verifier role; this draft is self-authored and NOT independently verified)",
+ "policy_text": "policies/New3linesPolicies.md",
+ "fixed_engine_commit": "ff6210061615105de9a0d64767c256796be80ed2",
+ "note": "値は採用政策値ではない。source_classが「原文記載」でも、モデル上の解釈(年次・範囲)は候補である。RP-023/M19-25 HOLD, RP-024 PENDING, 政策原文・正式承認状態は変更しない。",
+ "inputs": [
+  {
+   "id": "N3-I01",
+   "name": "消費税 標準税率の経路",
+   "value": {
+    "2030": "軽減税率廃止(標準10%)",
+    "2032": 0.12,
+    "2034": 0.15,
+    "2038": 0.18,
+    "2040": 0.2
+   },
+   "source_class": "原文記載",
+   "text_ref": "policies/New3linesPolicies.md §4A",
+   "used_in_script": true,
+   "note": "年次の値は原文のとおり。食品軽減(8%)は2030年から標準率に統合する読みを採用(試作の解釈)。2031年は10%のまま(原文の「2030年10%」を2030-31年の水準と読む)。"
+  },
+  {
+   "id": "N3-I02",
+   "name": "2035年の自動凍結条項",
+   "value": {
+    "switch": "FREEZE2035(2035年水準15%で凍結)/PATH(凍結なし)"
+   },
+   "source_class": "原文に数値条件なし・候補",
+   "text_ref": "policies/New3linesPolicies.md §4A, §6, §7",
+   "used_in_script": true,
+   "note": "原文は「経済状況を鑑み、目標値に達しない場合」「所得成長率未達」とだけ記し、閾値がない。試作は外部スイッチとして扱い、判定式は置いていない。"
+  },
+  {
+   "id": "N3-I03",
+   "name": "医療 自己負担率の目標",
+   "value": 0.5,
+   "source_class": "原文記載(目標値のみ)",
+   "text_ref": "policies/New3linesPolicies.md §4B",
+   "used_in_script": true,
+   "note": "「段階的に5割へ」。対象年齢・所得区分は原文に記載なし。"
+  },
+  {
+   "id": "N3-I04",
+   "name": "5割の年齢範囲",
+   "value": {
+    "ALL_AGES": "全年齢を5割(未就学・高齢の軽減区分も5割)",
+    "ONLY_CURRENT_30": "現行3割の区分のみ5割(10/20%区分は据置)"
+   },
+   "source_class": "原文に記載なし・候補(Owner未裁定)",
+   "text_ref": "policies/New3linesPolicies.md §4B",
+   "used_in_script": true,
+   "note": "二つの読みを並走。効果は約2.6倍(2055年 患者負担増 4.47 対 1.74兆円)違う。"
+  },
+  {
+   "id": "N3-I05",
+   "name": "段階的引上げの開始年と期間",
+   "value": {
+    "start_year": 2033,
+    "ramp_years": 6,
+    "sensitivity": [
+     {
+      "start": 2030,
+      "ramp": 6
+     },
+     {
+      "start": 2033,
+      "ramp": 3
+     }
+    ]
+   },
+   "source_class": "原文に記載なし・候補",
+   "text_ref": "policies/New3linesPolicies.md §5 フェーズ2(2033-2038)から着想",
+   "used_in_script": true,
+   "note": "原文は医療負担の開始年を明記しない。フェーズ2の期間に合わせた候補。"
+  },
+  {
+   "id": "N3-I06",
+   "name": "高額療養費 限度額の「縮小」の向きと幅",
+   "value": {
+    "CAP_SAME": 0.0,
+    "CAP_UP10": "+10%(給付を絞る読み)",
+    "CAP_DOWN10": "-10%(上限額そのものを下げる読み)"
+   },
+   "source_class": "原文に記載なし・向きが未確定",
+   "text_ref": "policies/New3linesPolicies.md §4B",
+   "used_in_script": true,
+   "note": "「限度額を縮小」は、(A)給付の縮小=患者の上限額を上げる、(B)上限額の縮小=患者の上限額を下げる、の二通りに読める。幅±10%は例示で根拠なし。基準ケースは変更なし(0)。"
+  },
+  {
+   "id": "N3-I07",
+   "name": "受診量の価格弾力性(上下限 0.7〜1.2)",
+   "value": 0.1,
+   "source_class": "F基盤から継承(未較正)",
+   "text_ref": "handoff/f-common-endoflife-finalization-20261121/Inputs.json defaults",
+   "used_in_script": true,
+   "note": "Fの試算と同じ値。N3用の根拠なし。"
+  },
+  {
+   "id": "N3-I08",
+   "name": "臨床費用の公費・保険者の按分",
+   "value": {
+    "clinical_public_fraction": 0.5
+   },
+   "source_class": "F基盤から継承(未較正)",
+   "text_ref": "handoff/f-common-endoflife-finalization-20261121/Inputs.json defaults",
+   "used_in_script": true,
+   "note": "給付減を公費と保険者へ半々。"
+  },
+  {
+   "id": "N3-I09",
+   "name": "医療の財源・節減の使途(税・保険料・国債・他支出への配分)",
+   "value": {
+    "finance_fraction": 0.5,
+    "finance_mix": {
+     "TAX": 0.25,
+     "PREMIUM": 0.25,
+     "DEBT": 0.25,
+     "OTHER_SPENDING": 0.25
+    }
+   },
+   "source_class": "F基盤から継承(未較正)",
+   "text_ref": "handoff/f-common-endoflife-finalization-20261121/Inputs.json defaults",
+   "used_in_script": true,
+   "note": "N3は「国債依存からの脱却」「財政の完全自律」を掲げており(§2)、節減分の使途がFと同じとは限らない。家計現金への影響はこの配分に強く依存する。Owner判断事項。"
+  },
+  {
+   "id": "N3-I10",
+   "name": "共通の終末期モジュールの入力(登録目標・容量・配分方式ほか)",
+   "value": {
+    "adoption_target": 0.6,
+    "transition_capacity": 100000,
+    "capacity_allocation": "OVERLAP_EQUAL_ACCESS",
+    "universal_need_share": 0.7
+   },
+   "source_class": "共通モジュール(Owner未裁定の未較正候補)",
+   "text_ref": "handoff/f-common-endoflife-finalization-20261121/Inputs.json common_parameters",
+   "used_in_script": true,
+   "note": "N3は「終末医療は緩和ケア主体へ移行し、延命拒否意思表示カードの普及を推進」(§4B)。登録率にN3固有値を置くかは未決。呼出は施策名を引数に取らない。"
+  },
+  {
+   "id": "N3-I11",
+   "name": "初期値・リスクイベント・人口の基準",
+   "value": {
+    "engine": "共通SQ基準(F基盤の固定SQ)"
+   },
+   "source_class": "F基盤から継承",
+   "text_ref": "handoff/f-common-endoflife-finalization-20261121/CommonBaseline.py",
+   "used_in_script": true,
+   "note": "原文§9の初期値・リスクイベントはF基盤のSQ基準に入っている(F・N3共通の前提)。v5仕様のN3専用の成長式・弾性値・歳出成長は使っていない。"
+  },
+  {
+   "id": "N3-I12",
+   "name": "VATの価格転嫁率ほか(rate_pass=0.8 等)",
+   "value": {
+    "rate_pass": 0.8
+   },
+   "source_class": "F基盤から継承(未較正)",
+   "text_ref": "handoff/f-vat-core-20261120/Inputs.json defaults",
+   "used_in_script": true,
+   "note": "税率上昇の家計価格への転嫁。N3固有の根拠なし。"
+  }
+ ],
+ "not_modeled": [
+  {
+   "id": "N3-X01",
+   "item": "インボイス制度の大幅簡素化(小規模事業者負担軽減措置維持)",
+   "reason": "原文に率・金額なし。損税解消はN3の施策に含まれない(F固有)ため、F側の損税・インボイス入力を流用しない。"
+  },
+  {
+   "id": "N3-X02",
+   "item": "全控除廃止と3段階フラット税率(金融・法人・消費20%/給与・事業30%/相続・贈与40%)",
+   "reason": "所得・控除の分布データ(十分位別)が未取得。マクロ税収としてのみ近似する選択肢もあるが、採否はOwner判断。"
+  },
+  {
+   "id": "N3-X03",
+   "item": "企業優遇(配当性向60%以上かつ設備投資20%以上で法人税実効16%)",
+   "reason": "エンジン内にF用の企業政策関数がある。流用可否・条件充足率の入力は未調査。"
+  },
+  {
+   "id": "N3-X04",
+   "item": "年金・医療の半官営強制加入、受給開始75歳",
+   "reason": "F基盤にはF用の年金候補があるが、N3の75歳・確定拠出型は別設計。人口・給付・保険料の入力が要る。"
+  },
+  {
+   "id": "N3-X05",
+   "item": "自治体共済の広域化(10〜15ブロック)",
+   "reason": "数量・費用・給付への効果の記載なし。構造のみ。"
+  },
+  {
+   "id": "N3-X06",
+   "item": "EITC廃止、年収500万円以下の社会保険料の所得連動減免・現物給付",
+   "reason": "対象人数・減免率の記載なし。所得分布データが要る。"
+  },
+  {
+   "id": "N3-X07",
+   "item": "公務員正規化(雇用アンカー)",
+   "reason": "人数・年次・費用・賃金への効果の記載なし。"
+  },
+  {
+   "id": "N3-X08",
+   "item": "外国人材(GDP比5%以内、日本語N4以上、地域分散)",
+   "reason": "F基盤の外国人材・人口モデルの流用可否はOwner判断(Fと共通の基準かN3固有か)。"
+  },
+  {
+   "id": "N3-X09",
+   "item": "スマート・シュリンク(コンパクト化)",
+   "reason": "インフラ投資の優先順位付けの数量記載なし。"
+  },
+  {
+   "id": "N3-X10",
+   "item": "KPIに基づく自動修正(所得成長未達→消費税引上げ凍結、ジニ悪化→F的軽減措置の一時復活、保険運用不振→民間競争強化)",
+   "reason": "数値閾値なし。トリガー判定式は未実装。"
+  },
+  {
+   "id": "N3-X11",
+   "item": "v5仕様のN3専用パラメータ(増税ショック-0.6%、税収弾性0.98/1.1/1.2、歳出成長1.0/0.5/0.0%、賃金・ジニのアンカー)",
+   "reason": "仕様書上は[推定]。新エンジンでは使わず、価格転嫁経路で税の効果を出す。v5のN3結果との並置はしない。"
+  }
+ ]
+}

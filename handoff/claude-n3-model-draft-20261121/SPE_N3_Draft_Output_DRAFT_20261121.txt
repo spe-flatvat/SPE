@@ -1,0 +1,35 @@
+# SPE N3 draft run output (DRAFT) - 2026-11-21
+# fixed engine tree: Commit ff6210061615105de9a0d64767c256796be80ed2 (extracted via git archive; read-only use)
+# commands:
+#  python3 SPE_N3_Medical_On_CommonSQ_Draft_DRAFT_20261121.py <tree_root> <outdir>
+#  python3 -I SPE_N3_Draft_Checks_DRAFT_20261121.py <tree_root> <outdir>
+# --- run (progress) ---
+done SQ_COMMON_OFF
+done SQ_COMMON_ON
+done N3_MED_50_CAP_SAME
+done N3_MED_50_CAP_UP10
+done N3_MED_50_CAP_DOWN10
+done N3_MED_50_COMMON_OFF
+done N3_MED_40_CAP_SAME
+done N3_MED_50_ONLY_CURRENT_30
+done N3_MED_50_START2030
+done N3_MED_50_FAST3Y
+done F_RULE_ON_SQ_30_CAP_DOWN10
+done N3_VAT_PATH_ONLY
+done N3_VAT_FREEZE2035_ONLY
+done N3_VAT_PATH_PLUS_MED_50
+COMPLETE 420
+# --- selftest json ---
+{"tests": 432, "max_abs_diff_yen": 0.0}
+# --- checks ---
+PASS regression: SQ common OFF/ON equal fixed SQ_Common_Annual (6 metrics x 30y x 2) | max abs diff=0
+PASS claim identity patient+public+insurer=clinical cost | max abs=1.1e-11 rows=420
+PASS protection invariants zero in every case-year | rows=420 violations=0
+PASS common module physical quantities do not depend on N3 coinsurance/VAT/case (same SQ population) | max abs diff across 12 common-ON cases=0
+PASS common OFF => no transitions | max=0
+PASS N3 medical rule inactive before 2033 start (equals SQ common ON; patient, household cash, real GDP) | max abs diff 2026-2032=0
+PASS VAT experiment: identical to SQ through 2029 | max abs real GDP diff=0
+PASS VAT path standard rate non-decreasing and reaches 0.20 in 2040 | 2031=0.1 2032=0.12 2034=0.15 2038=0.18 2040=0.2
+PASS VAT freeze case holds 0.15 from 2035 | [0.15]
+PASS VAT experiment: modeled VAT >= SQ in every year (direction only) | 
+SUMMARY 10 / 10 PASS

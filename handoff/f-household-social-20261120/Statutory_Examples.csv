@@ -1,0 +1,13 @@
+reference,income_yen,age,health_employee_yen,pension_employee_yen,care_employee_yen,employment_employee_yen,child_support_employee_yen,pension_employer_yen,employment_employer_yen,self_employed_national_pension_annual_yen,municipal_NHI_actual,senior_health_actual
+FY2026_snapshot_annualized_not_calendar_actual,1500000,35,74250.0,137250.0,,7500.0,1725.0,137250.0,12750.000000000002,215040,,
+FY2026_snapshot_annualized_not_calendar_actual,1500000,45,74250.0,137250.0,12150.0,7500.0,1725.0,137250.0,12750.000000000002,215040,,
+FY2026_snapshot_annualized_not_calendar_actual,1500000,72,,0,,0,,0,0,,,
+FY2026_snapshot_annualized_not_calendar_actual,3000000,35,148500.0,274500.0,,15000.0,3450.0,274500.0,25500.000000000004,215040,,
+FY2026_snapshot_annualized_not_calendar_actual,3000000,45,148500.0,274500.0,24300.0,15000.0,3450.0,274500.0,25500.000000000004,215040,,
+FY2026_snapshot_annualized_not_calendar_actual,3000000,72,,0,,0,,0,0,,,
+FY2026_snapshot_annualized_not_calendar_actual,4500000,35,222750.0,411750.0,,22500.0,5175.0,411750.0,38250.0,215040,,
+FY2026_snapshot_annualized_not_calendar_actual,4500000,45,222750.0,411750.0,36450.0,22500.0,5175.0,411750.0,38250.0,215040,,
+FY2026_snapshot_annualized_not_calendar_actual,4500000,72,,0,,0,,0,0,,,
+FY2026_snapshot_annualized_not_calendar_actual,8000000,35,396000.0,713700.0,,40000.0,9200.0,713700.0,68000.0,215040,,
+FY2026_snapshot_annualized_not_calendar_actual,8000000,45,396000.0,713700.0,64800.0,40000.0,9200.0,713700.0,68000.0,215040,,
+FY2026_snapshot_annualized_not_calendar_actual,8000000,72,,0,,0,,0,0,,,

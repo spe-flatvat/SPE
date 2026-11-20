@@ -1,0 +1,26 @@
+{
+  "status": "PASS_LOCAL_CHECKS",
+  "cases": 53,
+  "annual_rows": 1590,
+  "income_rows": 11760,
+  "household_detail_rows": 6960,
+  "old_reference_cells": 720,
+  "input_sha256": "8a7df2e6b7228177b28346386437b3b7dc6a5f1b8547507a114daf1fc5472766",
+  "checks": [
+    "immutable pension bytes",
+    "old and extra-zero regression",
+    "premium payer identity",
+    "B utilization and substitution identities",
+    "household disposable-consumption-saving identity",
+    "government+insurer consolidated identity",
+    "fund balance nonnegative",
+    "no reuse of VAT pool",
+    "all factorial interactions",
+    "zero use and full overlap",
+    "strict Gini boundary",
+    "zero VAT excess",
+    "C reclassification control",
+    "unchanged population and labor"
+  ],
+  "limitations": "Synthetic household joint distributions; no observed national Gini; unassigned funding is not an actual debt forecast."
+}

@@ -1,0 +1,701 @@
+{
+  "parent_commit": "376817b94ddd92ce5d5e1f39722a71477938dc3f",
+  "pension_original_commit": "7c21590ca8d50018b5df4b02d64e185db391cba0",
+  "prior_delivery_verification": {
+    "status": "CUSTODY_PASS_FOR_16_DELIVERED_FILES",
+    "fixed_commit": "7c21590ca8d50018b5df4b02d64e185db391cba0",
+    "branch": "work/chatgpt-handoff",
+    "retrieval_route": "Fresh git clone from https://github.com/spe-flatvat/SPE.git after branch update; git show fixed_commit:path bytes",
+    "files": [
+      {
+        "path": "handoff/f-pension-policy-20261120/Annual.csv",
+        "size": 1089910,
+        "sha256": "9df58954465260d53b8e76c14a5780ebe58e2d91cc1809d1adc39e4483b23bf5",
+        "match": true
+      },
+      {
+        "path": "handoff/f-pension-policy-20261120/Comparison.csv",
+        "size": 199183,
+        "sha256": "8004282cff12fe13d47e683c50c00bbe2859836c2fb7c2ab5bccd9fe035e877c",
+        "match": true
+      },
+      {
+        "path": "handoff/f-pension-policy-20261120/Inputs.json",
+        "size": 1282097,
+        "sha256": "5969792ecb9218dc3668d56ec426076d0359e1e4c403914f535390972f082514",
+        "match": true
+      },
+      {
+        "path": "handoff/f-pension-policy-20261120/Interactions.csv",
+        "size": 31215,
+        "sha256": "f0cf7621a99b21e0b1d8420e058539c9021b41d44fcfd4d15b1f3ffabaa0de6a",
+        "match": true
+      },
+      {
+        "path": "handoff/f-pension-policy-20261120/Model.py",
+        "size": 30852,
+        "sha256": "645c64f8ea4f0b2b60d233e19dddee49653d1a39ea77931385cefcfaa3d10e53",
+        "match": true
+      },
+      {
+        "path": "handoff/f-pension-policy-20261120/Private_Distribution.csv",
+        "size": 257066,
+        "sha256": "60e78eeab5e52398a338720c3b00a83b7f25331c1f4810b10649bef985062fae",
+        "match": true
+      },
+      {
+        "path": "handoff/f-pension-policy-20261120/Public_Strata.csv",
+        "size": 1176444,
+        "sha256": "c87351cb6ffee506b26747b103f022e6de40fadb0101e8f65118f3e1ed6c99b3",
+        "match": true
+      },
+      {
+        "path": "handoff/f-pension-policy-20261120/Report.md",
+        "size": 10979,
+        "sha256": "007079540cd1f0e181fa43874a273398cf202d694187136e544138d9f540115f",
+        "match": true
+      },
+      {
+        "path": "handoff/f-pension-policy-20261120/Reproduction.md",
+        "size": 2446,
+        "sha256": "1113bce7d38690c8f1f7c733d4f3688809a4a7f928f565ba60a66af3144037ef",
+        "match": true
+      },
+      {
+        "path": "handoff/f-pension-policy-20261120/SHA256SUMS.txt",
+        "size": 1216,
+        "sha256": "bf0a614f4ff3d52c70d32b7565589f07212c333d48afd191a0be46d46f1a118a",
+        "match": true
+      },
+      {
+        "path": "handoff/f-pension-policy-20261120/Source_Integrity.json",
+        "size": 15387,
+        "sha256": "ba9e5445f38db076c6707b4b86de2e7ead3a62c83a6075e9fd00c32c19c9ca85",
+        "match": true
+      },
+      {
+        "path": "handoff/f-pension-policy-20261120/Sources_and_Map.md",
+        "size": 14402,
+        "sha256": "7ef66d6f0848b19a8f18e0942318ad5113bf2a967474f77a0555831ef742f41d",
+        "match": true
+      },
+      {
+        "path": "handoff/f-pension-policy-20261120/StatusQuo.csv",
+        "size": 16903,
+        "sha256": "04816a04cbe5c35f0b8f9a89c128a23323ee8b41c6c0d96479efd30de55e1446",
+        "match": true
+      },
+      {
+        "path": "handoff/f-pension-policy-20261120/Summary.csv",
+        "size": 31015,
+        "sha256": "921ca2fd5465fa5e7290b23f63264ebf25dbb26f58fb276a6e07c0a488628225",
+        "match": true
+      },
+      {
+        "path": "handoff/f-pension-policy-20261120/Validation.json",
+        "size": 740,
+        "sha256": "af213ba156878bb79b6184de2f756cd14afc5b06e70b989b4b0b2fdc190c1ebb",
+        "match": true
+      },
+      {
+        "path": "handoff/f-pension-policy-20261120/Verify.py",
+        "size": 4415,
+        "sha256": "e7f1cae823c8a9df2c2996d9824b2d36c96f4c0eef5f9cae3991bd0ce8033a65",
+        "match": true
+      }
+    ],
+    "preserved_existing_blobs": 203,
+    "total_blobs": 219,
+    "verification": "All16 original byte sizes and SHA-256 matched independently retrieved fixed-commit bytes",
+    "scope": "Generated deliverables only; public web originals are not archived; this record does not self-certify its own custody",
+    "record_scope": "This post-fetch verification record is appended after the verified16-file commit. SHA256SUMS covers those original16 files except itself. This record is not included in that self-referential manifest."
+  },
+  "prior_source_integrity": {
+    "parent_commit": "c7cf29ac124db92376f051686a1fc3643c85c517",
+    "fixed_prior_source_evidence_reused": [
+      {
+        "commit": "47deeee23621d2b6804351ef9131b6dbde51ffda",
+        "path": "handoff/labor-foreign-policy-comparison-20261119/Annual.csv",
+        "bytes": 706406,
+        "sha256": "df386b57ce65717080f61bc14d5be3a901ca35d40c90f098bec3495ac72dd33c",
+        "git_blob_sha1": "44674a5a95a9a2d5f6cfc04eb1b4315a93ca1685",
+        "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+      },
+      {
+        "commit": "47deeee23621d2b6804351ef9131b6dbde51ffda",
+        "path": "handoff/labor-foreign-policy-comparison-20261119/Inputs.json",
+        "bytes": 678355,
+        "sha256": "d519caccd10db68e3625c3d0c164bbee61885b92310ee9d8d61268ab0913dd5f",
+        "git_blob_sha1": "115ee33e3f8394f6b295be38b16662be5b49af73",
+        "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+      },
+      {
+        "commit": "47deeee23621d2b6804351ef9131b6dbde51ffda",
+        "path": "handoff/labor-foreign-policy-comparison-20261119/Model.py",
+        "bytes": 25333,
+        "sha256": "4364610a3f93d651c900e4556d331bd17f976fb507318d78cdcf65d7760f644a",
+        "git_blob_sha1": "91574dd417a7fa642b51dca9b559456b3fca856f",
+        "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+      },
+      {
+        "commit": "47deeee23621d2b6804351ef9131b6dbde51ffda",
+        "path": "handoff/labor-foreign-policy-comparison-20261119/Policy_Comparison.md",
+        "bytes": 8531,
+        "sha256": "9b80eacde416a6a9ee8d4e0f07a04c19426986939e6346ea77f57b03abd46d6b",
+        "git_blob_sha1": "36bdfeabe260b44559e77a4137732a93b7af5f6e",
+        "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+      },
+      {
+        "commit": "47deeee23621d2b6804351ef9131b6dbde51ffda",
+        "path": "handoff/labor-foreign-policy-comparison-20261119/Report.md",
+        "bytes": 12711,
+        "sha256": "89d76a48065ff2e37cd9dc08c3aa4cdf2522a907d59e4cbcbd8bad00e98356a2",
+        "git_blob_sha1": "03b41f19ce079340e65c22a6a032d96083aa2fdc",
+        "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+      },
+      {
+        "commit": "47deeee23621d2b6804351ef9131b6dbde51ffda",
+        "path": "handoff/labor-foreign-policy-comparison-20261119/Sources.md",
+        "bytes": 7072,
+        "sha256": "7065d02136eb85b5ce0e8ef0a44e3e454f217a1aae10f0e27a0597c2b099d80e",
+        "git_blob_sha1": "d723330987d4022598ca261b56858c3c0c51a308",
+        "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+      },
+      {
+        "commit": "47deeee23621d2b6804351ef9131b6dbde51ffda",
+        "path": "handoff/labor-foreign-policy-comparison-20261119/Summary.csv",
+        "bytes": 10951,
+        "sha256": "a5e33e1b2eadec8b27c29f40f9db0b36be51c8a4b9123e05e5d55732c85ac4fb",
+        "git_blob_sha1": "cafd1ffdfe5f85d5ae2620cb0bb0f2742d2beff6",
+        "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+      },
+      {
+        "commit": "10cf5847cbffc9d8c33ad777ef48523cd0aadc1c",
+        "path": "handoff/f-elder-assumptions-20261119/Annual.csv",
+        "bytes": 748989,
+        "sha256": "2fa720dea287b25337bae3b6f3345431ad7d245228736e00bdd29d1da1aaaf79",
+        "git_blob_sha1": "4fc95f3fbb1fbef5c5e517ce7d2ce55e33aca5e2",
+        "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+      },
+      {
+        "commit": "10cf5847cbffc9d8c33ad777ef48523cd0aadc1c",
+        "path": "handoff/f-elder-assumptions-20261119/Comparison.csv",
+        "bytes": 128713,
+        "sha256": "d3c176e888be28ffc3ddec11470004534b8d3ecfacfa5d107de67d3d673f8c95",
+        "git_blob_sha1": "c144759124201ffa395bb35a7ad9818d3c630762",
+        "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+      },
+      {
+        "commit": "10cf5847cbffc9d8c33ad777ef48523cd0aadc1c",
+        "path": "handoff/f-elder-assumptions-20261119/Employment_History.csv",
+        "bytes": 2347,
+        "sha256": "ebfa9e8484e7db9243617631d7b9aada61c80cd6d37070bfb6f74c5fb201bea4",
+        "git_blob_sha1": "a864a37b1d7521c69a39741f2a69248b01ce5a63",
+        "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+      },
+      {
+        "commit": "10cf5847cbffc9d8c33ad777ef48523cd0aadc1c",
+        "path": "handoff/f-elder-assumptions-20261119/Inputs.json",
+        "bytes": 648966,
+        "sha256": "c955c197ee46caa80b2289038b804bcb0bd71c139f449eeeb55a439053daa3d3",
+        "git_blob_sha1": "fa85750c8ac3433174b2158b68e3cd02a82deb34",
+        "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+      },
+      {
+        "commit": "10cf5847cbffc9d8c33ad777ef48523cd0aadc1c",
+        "path": "handoff/f-elder-assumptions-20261119/Interactions.csv",
+        "bytes": 3212,
+        "sha256": "8cb34e06b41a2b3e6a43aff679c65e489578007ecead1c499aa65a26dc687aad",
+        "git_blob_sha1": "896040acb25d70bc1bba8b5a415795f0fe0511c4",
+        "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+      },
+      {
+        "commit": "10cf5847cbffc9d8c33ad777ef48523cd0aadc1c",
+        "path": "handoff/f-elder-assumptions-20261119/Model.py",
+        "bytes": 11686,
+        "sha256": "1c387c61fa76f08b48ebef916b2738e4e6f23f4a882222a6186fddc4b9d70efc",
+        "git_blob_sha1": "9f5d06a772277726e6cb82189925de3559007b36",
+        "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+      },
+      {
+        "commit": "10cf5847cbffc9d8c33ad777ef48523cd0aadc1c",
+        "path": "handoff/f-elder-assumptions-20261119/Report.md",
+        "bytes": 5172,
+        "sha256": "bb3e1bf0322f276bee13863311502025b2c31af7e6cc9b51123acf1af42801fb",
+        "git_blob_sha1": "bcbcce379d58d3db8377e06fedc36fc669ac6cbe",
+        "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+      },
+      {
+        "commit": "10cf5847cbffc9d8c33ad777ef48523cd0aadc1c",
+        "path": "handoff/f-elder-assumptions-20261119/Sources.md",
+        "bytes": 6147,
+        "sha256": "5c7ca805a59b19ac108c7afa4cbf999046a1aa9b4f1f3bc63d2e4ed0f9334d92",
+        "git_blob_sha1": "367798dd77bb4023677fc49d84913cdcf6777e5e",
+        "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+      },
+      {
+        "commit": "47d18eb1d9af7c725527fda2a288cd427bfa934d",
+        "path": "handoff/f-elder-gdp-stage1-20261119/Annual.csv",
+        "bytes": 612579,
+        "sha256": "56f5c73a3c8a357e85c009ff23c5394f1c67e1097b2f1fec9066abf8a4c729fc",
+        "git_blob_sha1": "e88f620f051d2538ffa87dc317177ee54ae06973",
+        "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+      },
+      {
+        "commit": "47d18eb1d9af7c725527fda2a288cd427bfa934d",
+        "path": "handoff/f-elder-gdp-stage1-20261119/Comparison.csv",
+        "bytes": 6772,
+        "sha256": "1c34a43e8ce79a8a53b97fd8bf3cc48e3fb8e89becc9aca2035bfbe24ffd9690",
+        "git_blob_sha1": "972b54bd725024be7eafaa3351404ef444677d74",
+        "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+      },
+      {
+        "commit": "47d18eb1d9af7c725527fda2a288cd427bfa934d",
+        "path": "handoff/f-elder-gdp-stage1-20261119/Inputs.json",
+        "bytes": 600863,
+        "sha256": "924937ebb3e90adfb618c52582210b43db8f7720a68f945ed58bb60338acd60b",
+        "git_blob_sha1": "59ec5a55c09d424b77d066eb968ace630f837ef7",
+        "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+      },
+      {
+        "commit": "47d18eb1d9af7c725527fda2a288cd427bfa934d",
+        "path": "handoff/f-elder-gdp-stage1-20261119/Interactions.csv",
+        "bytes": 5858,
+        "sha256": "8bee55454d70fb832f01ae502abb2885947ec5ca762e5f0584f17b42c6524425",
+        "git_blob_sha1": "105c6dd6e4cfff1b2b02cfb49c5f134cc5b4c72d",
+        "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+      },
+      {
+        "commit": "47d18eb1d9af7c725527fda2a288cd427bfa934d",
+        "path": "handoff/f-elder-gdp-stage1-20261119/Model.py",
+        "bytes": 29588,
+        "sha256": "f94eda31b10ee97c8325588d54a4fc8a40b68a909ed4af0c0f46fc1f04a0da5a",
+        "git_blob_sha1": "eb311d0165b4a6f362ff562ef52ec9caab7c4044",
+        "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+      },
+      {
+        "commit": "47d18eb1d9af7c725527fda2a288cd427bfa934d",
+        "path": "handoff/f-elder-gdp-stage1-20261119/Report.md",
+        "bytes": 13782,
+        "sha256": "a4e47866321e56770a2ec372b1d4baa2423e46e6880bf368cf0c5e3ee4bbb7f4",
+        "git_blob_sha1": "e212d9a148f77b0f3ad7cb89f6afc98e56858ae2",
+        "route": "EXISTING_FILE_BYTES_MATCH_FIXED_GITHUB_TREE"
+      },
+      {
+        "commit": "5804388482864af08204ba0d0e76a46206dacdbd",
+        "path": "policies/FreedomPolicies.md",
+        "bytes": 9241,
+        "sha256": "0dedd2c1126613c30a7d96732d226cc787f6597437137424845d64d041db0204",
+        "route": "FIXED_GITHUB_BASE64_DECODE"
+      },
+      {
+        "commit": "5804388482864af08204ba0d0e76a46206dacdbd",
+        "path": "policies/FreedomPolicies_Annex.md",
+        "bytes": 12319,
+        "sha256": "ee62de32582a0f6d559029e7e9810b161c6a975ff22b498493d9ca960ca29e83",
+        "route": "FIXED_GITHUB_BASE64_DECODE"
+      },
+      {
+        "commit": "cdd6feaccf87eae80436b2cac265a3d0cc243d4f",
+        "path": "handoff/claude-labor-foreign-verification-20261119/SPE_LaborForeign_Claude_Independent_Verification_DRAFT_20261119.md",
+        "bytes": 11809,
+        "sha256": "d22d49ff1b5c5bef3e1ca973ba24c952db2320f9cb4f65788b1f8185289f19d8",
+        "git_blob_sha1": "654b22a6d2581f9add9cdc0264ee6ee38c9405e8",
+        "route": "FIXED_GITHUB_BASE64_DECODE"
+      },
+      {
+        "url": "https://www.mhlw.go.jp/content/12602000/001770216.pdf",
+        "bytes": 1510933,
+        "sha256": "1a37442991a8850c65814994f5f01279df1fc7ea904f053a83f18733dd46a5a7",
+        "retrieved": "2026-11-20",
+        "route": "HTTPS_PRIMARY_PDF_BYTES"
+      },
+      {
+        "url": "https://www.mhlw.go.jp/content/11650000/001742823.pdf",
+        "bytes": 1635526,
+        "sha256": "b63dd81ec509b0d53807daef071d5a5a313a44282369f2a20748a3d2c8935ac9",
+        "retrieved": "2026-11-20",
+        "route": "HTTPS_PRIMARY_PDF_BYTES"
+      }
+    ],
+    "dependencies": {
+      "foreign_model": {
+        "sha256": "b27e4471b885b76d55fac6024e9de3ecb1707d4a78f9a05e916bc49bf1afb0d2",
+        "size": 32941
+      },
+      "engine": {
+        "sha256": "259dadea4f02b9e4b10e6895153ce581657e2e27d8c801ada071748a32c61543",
+        "size": 62992
+      }
+    },
+    "policy_originals": [
+      {
+        "commit": "5804388482864af08204ba0d0e76a46206dacdbd",
+        "path": "policies/FreedomPolicies.md",
+        "size": 9241,
+        "sha256": "0dedd2c1126613c30a7d96732d226cc787f6597437137424845d64d041db0204",
+        "route": "GitHub fixed commit, git blob comparison reused"
+      },
+      {
+        "commit": "5804388482864af08204ba0d0e76a46206dacdbd",
+        "path": "policies/FreedomPolicies_Annex.md",
+        "size": 12319,
+        "sha256": "ee62de32582a0f6d559029e7e9810b161c6a975ff22b498493d9ca960ca29e83",
+        "route": "GitHub fixed commit, git blob comparison reused"
+      }
+    ],
+    "web_evidence": [
+      {
+        "id": "working_pension",
+        "url": "https://www.nenkin.go.jp/service/jukyu/seido/roureinenkin/zaishoku/20150401-01.html",
+        "bytes": 37618,
+        "sha256": "d13dfccb9f16b43020c4fcc0c942cc7ab2074bf9f8f6285700f800498760ca43",
+        "route": "HTTPS urllib downloaded response bytes 2026-11-20 UTC",
+        "local_path": "pension-work/working_pension.html",
+        "archived_in_delivery": false
+      },
+      {
+        "id": "working_reform",
+        "url": "https://www.nenkin.go.jp/tokusetsu/zairoukaisei.html",
+        "bytes": 28730,
+        "sha256": "e50c088180cd50f4109a536e388e35eb71ba9438606406d84b21ab4e5ab2f86e",
+        "route": "HTTPS urllib downloaded response bytes 2026-11-20 UTC",
+        "local_path": "pension-work/working_reform.html",
+        "archived_in_delivery": false
+      },
+      {
+        "id": "dc_reform",
+        "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/nenkin/nenkin/kyoshutsu/2025kaisei.html",
+        "bytes": 70567,
+        "sha256": "94056db6e609cd9a1158cb3d46e13601ec8dbf7fb6df40695f498f666d24832f",
+        "route": "HTTPS urllib downloaded response bytes 2026-11-20 UTC",
+        "local_path": "pension-work/dc_reform.html",
+        "archived_in_delivery": false
+      },
+      {
+        "id": "ideco_september",
+        "url": "https://www.ideco-koushiki.jp/library/pdf/join_overview_R0809.pdf",
+        "bytes": 275823,
+        "sha256": "aa3c3db4024bcaddc9cbe68c8ab3aa522de6ecac4d9c6b97c3564089f709984e",
+        "route": "HTTPS urllib downloaded response bytes 2026-11-20 UTC",
+        "local_path": "pension-work/ideco_september.pdf",
+        "archived_in_delivery": false
+      },
+      {
+        "id": "contribution_deduction",
+        "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1135.htm",
+        "bytes": 15894,
+        "sha256": "7feba875b3b0ce80b04421bca1a3ca54715d25065f2b7471477d8940cc31f5e0",
+        "route": "HTTPS urllib downloaded response bytes 2026-11-20 UTC",
+        "local_path": "pension-work/contribution_deduction.html",
+        "archived_in_delivery": false
+      },
+      {
+        "id": "private_tax",
+        "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/nenkin/nenkin/kyoshutsu/ideco.html",
+        "error": "HTTP Error 404: Not Found",
+        "archived_in_delivery": false
+      },
+      {
+        "id": "pension_tax",
+        "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1600.htm",
+        "bytes": 19985,
+        "sha256": "b1462536b3908406ac41af713c78cd69032b56ddad75bfeb26ff00afe2bca850",
+        "route": "HTTPS urllib downloaded response bytes 2026-11-20 UTC",
+        "local_path": "pension-work/pension_tax.html",
+        "archived_in_delivery": false
+      },
+      {
+        "id": "income_tax",
+        "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2260.htm",
+        "bytes": 20526,
+        "sha256": "eefcf231ae9e5393dc6c975dcd79a0c482d9ddb0938df09f8eebba017c84a225",
+        "route": "HTTPS urllib downloaded response bytes 2026-11-20 UTC",
+        "local_path": "pension-work/income_tax.html",
+        "archived_in_delivery": false
+      },
+      {
+        "id": "retirement_tax",
+        "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1420.htm",
+        "bytes": 22332,
+        "sha256": "daef0c400c24bbe4b4b5414d8462b175126e3b5ac42f7fdced6b3bc50b5d8fb9",
+        "route": "HTTPS urllib downloaded response bytes 2026-11-20 UTC",
+        "local_path": "pension-work/retirement_tax.html",
+        "archived_in_delivery": false
+      },
+      {
+        "id": "premium_reform",
+        "url": "https://www.mhlw.go.jp/content/12500000/001496971.pdf",
+        "bytes": 1416813,
+        "sha256": "eb8438c7eb970a014ae8f77006175f95961a73474af5b3d97ff2343c0e5ce87c",
+        "route": "HTTPS urllib downloaded response bytes 2026-11-20 UTC",
+        "local_path": "pension-work/premium_reform.pdf",
+        "archived_in_delivery": false
+      },
+      {
+        "id": "surtax",
+        "url": "https://www.nta.go.jp/publication/pamph/pdf/0026005-024_03.pdf",
+        "bytes": 421662,
+        "sha256": "6cb9e41a7547af5c098a08cd37e9917a2755d2be4df858b31eca4a17e64a0b80",
+        "route": "HTTPS urllib downloaded response bytes 2026-11-20 UTC",
+        "local_path": "pension-work/surtax.pdf",
+        "archived_in_delivery": false
+      },
+      {
+        "id": "ideco_march",
+        "url": "https://www.ideco-koushiki.jp/library/pdf/system_overview_0803.pdf",
+        "bytes": 1229142,
+        "sha256": "b1a1ede5769deef40980911b8bb5b94abf1cbbec2530d7947959be983bde7b51",
+        "route": "HTTPS urllib direct bytes; web click initially timed out, alternative succeeded",
+        "local_path": "pension-work/ideco-age-202603.pdf",
+        "archived_in_delivery": false
+      },
+      {
+        "id": "private_tax_alternative",
+        "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/nenkin/kyoshutsu/ideco.html",
+        "bytes": 69087,
+        "sha256": "9e365dabf67c149b00904a3aa452c6b5e351caa37cd9b618eed2b6bfd71cf00a",
+        "route": "HTTPS urllib; corrected URL after first path404",
+        "archived_in_delivery": false
+      }
+    ]
+  },
+  "pension_files": [
+    {
+      "path": "handoff/f-pension-policy-20261120/Annual.csv",
+      "size": 1089910,
+      "sha256": "9df58954465260d53b8e76c14a5780ebe58e2d91cc1809d1adc39e4483b23bf5",
+      "retrieval": "Fresh Git clone at376817;16 original files matched7c21590 receipt; added record kept distinct"
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Comparison.csv",
+      "size": 199183,
+      "sha256": "8004282cff12fe13d47e683c50c00bbe2859836c2fb7c2ab5bccd9fe035e877c",
+      "retrieval": "Fresh Git clone at376817;16 original files matched7c21590 receipt; added record kept distinct"
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Delivery_Verification.json",
+      "size": 4096,
+      "sha256": "97a163d10b67f945c9f05b579649808614000be71bde5c3437f5b56f17c40704",
+      "retrieval": "Fresh Git clone at376817;16 original files matched7c21590 receipt; added record kept distinct"
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Inputs.json",
+      "size": 1282097,
+      "sha256": "5969792ecb9218dc3668d56ec426076d0359e1e4c403914f535390972f082514",
+      "retrieval": "Fresh Git clone at376817;16 original files matched7c21590 receipt; added record kept distinct"
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Interactions.csv",
+      "size": 31215,
+      "sha256": "f0cf7621a99b21e0b1d8420e058539c9021b41d44fcfd4d15b1f3ffabaa0de6a",
+      "retrieval": "Fresh Git clone at376817;16 original files matched7c21590 receipt; added record kept distinct"
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Model.py",
+      "size": 30852,
+      "sha256": "645c64f8ea4f0b2b60d233e19dddee49653d1a39ea77931385cefcfaa3d10e53",
+      "retrieval": "Fresh Git clone at376817;16 original files matched7c21590 receipt; added record kept distinct"
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Private_Distribution.csv",
+      "size": 257066,
+      "sha256": "60e78eeab5e52398a338720c3b00a83b7f25331c1f4810b10649bef985062fae",
+      "retrieval": "Fresh Git clone at376817;16 original files matched7c21590 receipt; added record kept distinct"
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Public_Strata.csv",
+      "size": 1176444,
+      "sha256": "c87351cb6ffee506b26747b103f022e6de40fadb0101e8f65118f3e1ed6c99b3",
+      "retrieval": "Fresh Git clone at376817;16 original files matched7c21590 receipt; added record kept distinct"
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Report.md",
+      "size": 10979,
+      "sha256": "007079540cd1f0e181fa43874a273398cf202d694187136e544138d9f540115f",
+      "retrieval": "Fresh Git clone at376817;16 original files matched7c21590 receipt; added record kept distinct"
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Reproduction.md",
+      "size": 2446,
+      "sha256": "1113bce7d38690c8f1f7c733d4f3688809a4a7f928f565ba60a66af3144037ef",
+      "retrieval": "Fresh Git clone at376817;16 original files matched7c21590 receipt; added record kept distinct"
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/SHA256SUMS.txt",
+      "size": 1216,
+      "sha256": "bf0a614f4ff3d52c70d32b7565589f07212c333d48afd191a0be46d46f1a118a",
+      "retrieval": "Fresh Git clone at376817;16 original files matched7c21590 receipt; added record kept distinct"
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Source_Integrity.json",
+      "size": 15387,
+      "sha256": "ba9e5445f38db076c6707b4b86de2e7ead3a62c83a6075e9fd00c32c19c9ca85",
+      "retrieval": "Fresh Git clone at376817;16 original files matched7c21590 receipt; added record kept distinct"
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Sources_and_Map.md",
+      "size": 14402,
+      "sha256": "7ef66d6f0848b19a8f18e0942318ad5113bf2a967474f77a0555831ef742f41d",
+      "retrieval": "Fresh Git clone at376817;16 original files matched7c21590 receipt; added record kept distinct"
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/StatusQuo.csv",
+      "size": 16903,
+      "sha256": "04816a04cbe5c35f0b8f9a89c128a23323ee8b41c6c0d96479efd30de55e1446",
+      "retrieval": "Fresh Git clone at376817;16 original files matched7c21590 receipt; added record kept distinct"
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Summary.csv",
+      "size": 31015,
+      "sha256": "921ca2fd5465fa5e7290b23f63264ebf25dbb26f58fb276a6e07c0a488628225",
+      "retrieval": "Fresh Git clone at376817;16 original files matched7c21590 receipt; added record kept distinct"
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Validation.json",
+      "size": 740,
+      "sha256": "af213ba156878bb79b6184de2f756cd14afc5b06e70b989b4b0b2fdc190c1ebb",
+      "retrieval": "Fresh Git clone at376817;16 original files matched7c21590 receipt; added record kept distinct"
+    },
+    {
+      "path": "handoff/f-pension-policy-20261120/Verify.py",
+      "size": 4415,
+      "sha256": "e7f1cae823c8a9df2c2996d9824b2d36c96f4c0eef5f9cae3991bd0ce8033a65",
+      "retrieval": "Fresh Git clone at376817;16 original files matched7c21590 receipt; added record kept distinct"
+    }
+  ],
+  "public_sources": [
+    {
+      "id": "health_rates",
+      "url": "https://www.kyoukaikenpo.or.jp/about/business/insurance_rate/rate_prefectures/r08/",
+      "error": "HTTP Error 403: Forbidden",
+      "original_archived": false,
+      "web_read_confirmed": true,
+      "byte_retrieval_status": "HTTPS403; public content read through web search/open; no byte SHA claim"
+    },
+    {
+      "id": "employment_rates",
+      "url": "https://www.mhlw.go.jp/content/001692566.pdf",
+      "size": 360445,
+      "sha256": "69ca914736d051ffa067464756500c2a8cf597186e9cf091b54512a68d3b1be9",
+      "retrieval": "HTTPS response bytes; 2026-11-20",
+      "original_archived": false
+    },
+    {
+      "id": "national_pension",
+      "url": "https://www.nenkin.go.jp/service/kokunen/hokenryo/hokenryo.html",
+      "size": 31506,
+      "sha256": "3dc7a93c7eca385dccc2448a94151ac986b4092d74ed1bffd07ffb27ff9dca4f",
+      "retrieval": "HTTPS response bytes; 2026-11-20",
+      "original_archived": false
+    },
+    {
+      "id": "national_health_reduction",
+      "url": "https://www.mhlw.go.jp/stf/newpage_21517.html",
+      "size": 52757,
+      "sha256": "ff675110222c80bad462e2cb6fdcfff8ba977cc7db6458c5fb2f7aced816dc1f",
+      "retrieval": "HTTPS response bytes; 2026-11-20",
+      "original_archived": false
+    },
+    {
+      "id": "child_services",
+      "url": "https://www.cfa.go.jp/policies/kokoseido/mushouka/gaiyou",
+      "size": 53709,
+      "sha256": "10780137d0049ba65e2fc85a637016ffcc3bc6aebc413372890cc6cae11f049e",
+      "retrieval": "HTTPS response bytes; 2026-11-20",
+      "original_archived": false
+    },
+    {
+      "id": "medical_copayment",
+      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryouhoken/juuyou/kougakuiryou/index.html",
+      "size": 63659,
+      "sha256": "f0359573fdc1c984f0d71f622a59fa1ba2ac0594400175b324750877b60d05ef",
+      "retrieval": "HTTPS response bytes; 2026-11-20",
+      "original_archived": false
+    },
+    {
+      "id": "social_deduction",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1130.htm",
+      "size": 20169,
+      "sha256": "eb55eb32e48ff54dfb00477e5ad6177162ae07a466defca88e83293c65b63239",
+      "retrieval": "HTTPS response bytes; 2026-11-20",
+      "original_archived": false
+    },
+    {
+      "id": "VAT_rates",
+      "url": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6303.htm",
+      "size": 15271,
+      "sha256": "c432eba7c6897560c10fd7ef4cdb7535c9e7fe5e2ead8ec0dbf03083dbacd507",
+      "retrieval": "HTTPS response bytes; 2026-11-20",
+      "original_archived": false
+    },
+    {
+      "id": "VAT_budget",
+      "url": "https://www.mof.go.jp/policy/budget/budger_workflow/budget/fy2026/seifuan2026/24.pdf",
+      "size": 53970,
+      "sha256": "6e16b6776142b4cf6f8c69c9b5a166c079ff2817d0213a44c5b1e29ad6817ab6",
+      "retrieval": "HTTPS response bytes; 2026-11-20",
+      "original_archived": false
+    },
+    {
+      "id": "t1",
+      "url": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040473360&fileKind=1",
+      "size": 3804,
+      "sha256": "4d5b81c72ff487ea22ae885dda19957ac6d1581d1073813aee67e012e793901d",
+      "original_bytes_base64": "MjAyNSiX35hhNymUTiyNkZavkLaKiIrukWKSso24LCwNCoJRj4qTvpVbgUCR5oJPgk+CUJVcLJW9i8+PipO+i+CKeoF8lb2Lz5CikdGQbIj1gXyVvYvPl0yLxpBsiPWBQ5ROjp+Vyg0KgUCBQJKNgUaCUIFqgXWR5oJRj82PipO+gXaCyYKogq+C6YF1lb2Lz5CikdGQbIj1gXaBdZW9i8+XTIvGkGyI9YF2gs2BQZKyjbiRzo/bgsmC3IKpgsiCopV0gquCzJe+gUWK8Y9ojsmCqorcgtyC6oLEgqKCyIKigr2C34FBDQqBQIFAgUCBQIFAgXWR5oJQj82QopHRgXaCyYKogq+C6ZCUkmyCxoLNiNmCyILpgUINCoFAgUCBQIFAglGBaoF1icKPiJWqj4qTvovginqBdoLNgUGVvZCsMzCUToKpgueOWo9vlfuWQILwlc+NWIK1gsSCooLpgUINCoFAgUCBQIFAglKBaoF1lb2Lz4nCj4iVqo+Kk76L4Ip6gXaCyYLNgUGL4Ip6lXOP2oLMkKKR0YLNityC3ILIgqKBQg0KgUCBQIFAgUCCU4Fqlb2QrIJVlE6CzJCUkmyCzYFBlbqMyYyngvCPnIKigr2C4ILMgsWCoILpgUINCoFAgUCBQIFAglSBapW9kKwyMZROgsyVvYvPj4qTvovginqBQZW9i8+Jwo+IlaqPipO+i+CKeoLMkJSSbILJgs2BQY+Kk76CzI7tl96CzIKkgr+BQYF1gruCzJG8gsyPipO+gXaCyYrcgtyC6oLpgXWS6Ip6i4uVdIvggXYNCoFAgUCBQIFAgUCBdY5xiOeCxImeiYeTwZXKjuiTloF2gsWV4oqugvCNc4LBgr2Mi4nKgvCK3ILegUINCoFAgUCBQIFAglWBapW9kKwyMpROgsyQlJJsgs2BQYrijuiMp4FBi3uP6Yyni3mC0ZWfk4eMp4Lwj5yCooK9guCCzILFgqCC6YFCDQqBQIFAgUCBQIJWgWqVvZCsMjOUToLMkJSSbILNgUGVn5OHjKeC8I+cgqKCvYLggsyCxYKggumBQg0KgUCBQIFAgUCCV4Fqlb2QrDI3lE6CzJCUkmyCzYFBjEaWe4yngvCPnIKigr2C4ILMgsWCoILpgUINCoFAgUCBQIFAgliBapffmGGCUZROgs2BQZKyjbiBaZffmGGMs5ROgsyPipO+gWqC8I7AjnuCtYLEgqKCyIKigUINCpROjp8slb2Lz4+Kk76L4Ip6gWmWnIl+gWosLCyVvYvPicKPiJWqj4qTvovginqBaZaciX6BaiwsLJdMi8aQbIj1LJW9i8+QopHRkGyI9SyVvYvPl0yLxpBsiPUNCiyCUJCikdGTloK9gugskKKR0ZBsiPUsk5mJvyyCUJCikdGTloK9gugskKKR0ZBsiPUsk5mJvyyCUJBsk5aCvYLoLIFpkGyBaiyBaZBsgWoNCiwsglCQbJOWgr2C6CwsLIJQkGyTloK9gugsLJW9i8+J0pOtLCwNCiwsLCwsLCyPipO+i+CKeiwsDQosLCwsLCwsgWmWnIl+gWosLA0KMTk4NSiPuphhNjAplE4sNDkzLjMsMTQ0LjYsMjc3LjAsNDMwLjgsMTI1LjksMjQyLjEsMjgzLjIsMy40MSwxLjU1DQoxOTg2KI+6mGE2MSmUTiw1MDUuNiwxNDkuMiwyODUuNiyBYyyBYyyBYywyODAuNSwzLjM5LDEuNTgNCjE5ODcoj7qYYTYyKZROLDUxMy4yLDE1NS4xLDI5My4wLIFjLIFjLIFjLDI3Mi45LDMuMzEsMS42Mw0KMTk4OCiPuphhNjMplE4sNTQ1LjMsMTY0LjAsMzEwLjMsNDU3LjYsMTM3LjcsMjYwLjcsMjk4LjcsMy4zMywxLjU4DQoxOTg5KJW9kKyMsymUTiw1NjYuNywxNzQuNiwzMjkuMyyBYyyBYyyBYywyOTUuOSwzLjI1LDEuNjINCjE5OTAolb2QrDIplE4sNTk2LjYsMTgzLjYsMzQ1LjgsgWMsgWMsgWMsMzIwLjMsMy4yNSwxLjYyDQoxOTkxKJW9kKwzKZROLDYyOC44LDE5Ny44LDM2OC43LDUyMS45LDE2NC42LDMwNi42LDM1NC40LDMuMTgsMS41NA0KMTk5MiiVvZCsNCmUTiw2NDcuOCwyMDcuMSwzODUuMCyBYyyBYyyBYywzNTUuOSwzLjEzLDEuNTcNCjE5OTMolb2QrDUplE4sNjU3LjUsMjExLjEsMzkxLjEsgWMsgWMsgWMsMzY4LjAsMy4xMiwxLjU2DQoxOTk0KJW9kKw2KZROLDY2NC4yLDIxNi40LDM5OC4yLDU0Ni44LDE4MC4zLDMzMC4zLDM4NS43LDMuMDcsMS40Nw0KMTk5NSiVvZCsNymUTiw2NTkuNiwyMTkuMiwzOTkuMiw1NDUuNCwxODIuOSwzMzEuMiwzNzcuMywzLjAxLDEuNDkNCjE5OTYolb2QrDgplE4sNjYxLjIsMjI1LjgsNDA5LjgsNTQ3LjEsMTg4LjEsMzQwLjYsMzg0LjQsMi45MywxLjQ2DQoxOTk3KJW9kKw5KZROLDY1Ny43LDIyMi43LDQwMy44LDU0OS45LDE4Ny40LDMzOS4wLDM4Ny44LDIuOTUsMS40Mg0KMTk5OCiVvZCsMTAplE4sNjU1LjIsMjIyLjYsNDAxLjUsNTQ0LjksMTg2LjUsMzM1LjAsMzc4LjQsMi45NCwxLjQzDQoxOTk5KJW9kKwxMSmUTiw2MjYuMCwyMTkuOCwzOTIuNCw1MjMuOCwxODUuMywzMjkuMiwzNjUuNiwyLjg1LDEuNDANCjIwMDAolb2QrDEyKZROLDYxNi45LDIxMi4xLDM4MC45LDUxMi4wLDE3OC40LDMxOC41LDMzMS42LDIuOTEsMS40OQ0KMjAwMSiVvZCsMTMplE4sNjAyLjAsMjEzLjUsMzgwLjYsNDkwLjMsMTc2LjksMzEzLjEsMzU1LjMsMi44MiwxLjM2DQoyMDAyKJW9kKwxNCmUTiw1ODkuMywyMDQuNywzNjcuMSw0ODAuNSwxNzAuNywzMDMuMywzNDAuNywyLjg4LDEuMzcNCjIwMDMolb2QrDE1KZROLDU3OS43LDIwMy40LDM2My42LDQ1NS40LDE2Ny45LDI5My4wLDMzMi41LDIuODUsMS4zNw0KMjAwNCiVvZCsMTYplE4sNTgwLjQsMjAzLjMsMzY0LjUsNDcxLjcsMTY5LjUsMzAwLjksMzE3LjcsMi44NSwxLjQ0DQoyMDA1KJW9kKwxNymUTiw1NjMuOCwyMDUuOSwzNjIuOCw0NDguNSwxNjguOCwyOTIuNywzMjAuNiwyLjc0LDEuMzYNCjIwMDYolb2QrDE4KZROLDU2Ni44LDIwNy4xLDM2Mi42LDQ0NS41LDE2Ny41LDI4OS43LDMxOS45LDIuNzQsMS4zNg0KMjAwNyiVvZCsMTkplE4sNTU2LjIsMjA3LjEsMzU5LjQsNDQzLjMsMTcxLjIsMjkxLjQsMzEzLjIsMi42OSwxLjM4DQoyMDA4KJW9kKwyMCmUTiw1NDcuNSwyMDguNCwzNTguNCw0MjQuMCwxNjcuMiwyODMuMSwzMjEuNiwyLjYzLDEuMzENCjIwMDkolb2QrDIxKZROLDU0OS42LDIwNy4zLDM1Ni44LDQzMC4xLDE3MS4zLDI4OC4xLDMxNS42LDIuNjUsMS4yOQ0KMjAxMCiVvZCsMjIplE4sNTM4LjAsMjAwLjQsMzQ4LjUsNDIwLjQsMTY1LjEsMjc5LjksMjkwLjcsMi42OCwxLjM3DQoyMDExKJW9kKwyMymUTiw1NDguMiwyMDguMywzNTguNiw0MjQuMSwxNjkuMCwyODQuMiwzMDYuMCwyLjYzLDEuMzQNCjIwMTIolb2QrDI0KZROLDUzNy4yLDIwMy43LDM0OS4zLDQxNy4xLDE2Ni4zLDI3OC4zLDMwNy4wLDIuNjQsMS4yOQ0KMjAxMyiVvZCsMjUplE4sNTI4LjksMjA1LjMsMzUwLjIsNDE1LjQsMTY4LjEsMjgxLjEsMjk3LjksMi41OCwxLjI4DQoyMDE0KJW9kKwyNimUTiw1NDEuOSwyMTEuMCwzNTkuOCw0MjAuMCwxNzEuNSwyODYuMCwzMDguNiwyLjU3LDEuMzENCjIwMTUolb2QrDI3KZROLDU0NS40LDIxMi4yLDM2MS4yLDQxNi40LDE3MC45LDI4My43LDMxMS40LDIuNTcsMS4zMA0KMjAxNiiVvZCsMjgplE4sNTYwLjIsMjE5LjUsMzcxLjksNDI4LjgsMTc1LjQsMjkxLjEsMzI1LjgsMi41NSwxLjMwDQoyMDE3KJW9kKwyOSmUTiw1NTEuNiwyMjIuMSwzNzAuOCw0MjEuMywxNzguNywyOTAuOSwzMjEuMywyLjQ4LDEuMjYNCjIwMTgolb2QrDMwKZROLDU1Mi4zLDIyMi4zLDM3MS43LDQxNy43LDE3OC42LDI5MC4wLDMxOC41LDIuNDgsMS4yOQ0KMjAxOSiX35hhjLMplE4sgWMsgWMsgWMsgWMsgWMsgWMsgWMsgWMsgWMNCjIwMjAol9+YYTIplE4sNTY0LjMsMjM2LjMsMzg5LjQsNDM5LjIsMTkyLjQsMzEwLjIsMzIzLjUsMi4zOSwxLjI0DQoyMDIxKJffmGEzKZROLDU0NS43LDIzNS4wLDM4MS44LDQxOC4xLDE4OS44LDI5OS45LDMzMy4zLDIuMzIsMS4yMA0KMjAyMiiX35hhNCmUTiw1MjQuMiwyMzUuOCwzNzYuOCw0MDUuOCwxODkuMSwyOTUuOSwzMjkuNCwyLjIyLDEuMTYNCjIwMjMol9+YYTUplE4sNTM2LjAsMjQzLjYsMzg2LjEsNDE1LjYsMTk2LjEsMzA0LjEsMzM2LjYsMi4yMCwxLjE2DQoyMDI0KJffmGE2KZROLDU3NS4yLDI1OS4yLDQxMC44LDQzOS40LDIwNy4zLDMyMC41LDM1Ni4xLDIuMjIsMS4yMA0K",
+      "original_archived": true,
+      "encoding": "cp932",
+      "retrieval": "e-Stat official CSV response"
+    },
+    {
+      "id": "t2",
+      "url": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040473361&fileKind=1",
+      "size": 11451,
+      "sha256": "34098cf46bf2753948892d68b6a6fd8bc764c0c63626bee02945f3c7eee150d4",
+      "original_bytes_base64": "MjAyNSiX35hhNymUTiyNkZavkLaKiIrukWKSso24LCyBaZJQiMqBRoGTgWoNCoJRj4qTvpVbgUCR5oJPgk+CUZVcLJCikdGQlILMkYqRzpN4kJSVqpV6gXyX3ZDPk3iQlJWqlXqBQ5ROjp+BRY+Kk76L4Ip6ikuLiZXKDQqBQIFAko2BRoJQgWqVvZCsglWUToLMkJSSbILNgUGVuozJjKeC8I+cgqKCvYLggsyCxYKggumBQg0KgUCBQIFAgUCCUYFqlb2QrDIxlE6CzI+Kk76L4Ip6ikuLiYLJgs2BQY+Kk76CzI7tl96CzIKkgr+BQYF1gruCzJG8gsyPipO+gXaCyYrcgtyC6oLpgXWS6Ip6i4uVdIvggXaBdY5xiOeCxImeiYeTwZXKjuiTloF2gsWV4oqugvCNc4LBgr2Mi4nKgvCK3ILegUINCoFAgUCBQIFAglKBapW9kKwyMpROgsyQlJJsgs2BQYrijuiMp4FBi3uP6Yyni3mC0ZWfk4eMp4Lwj5yCooK9guCCzILFgqCC6YFCDQqBQIFAgUCBQIJTgWqVvZCsMjOUToLMkJSSbILNgUGVn5OHjKeC8I+cgqKCvYLggsyCxYKggumBQg0KgUCBQIFAgUCCVIFqlb2QrDI3lE6CzJCUkmyCzYFBjEaWe4yngvCPnIKigr2C4ILMgsWCoILpgUINCoFAgUCBQIFAglWBapffmGGCUZROgs2BQZKyjbiBaZffmGGMs5ROgsyPipO+gWqC8I7AjnuCtYLEgqKCyIKigUINCo+Kk76L4Ip6ikuLiSwxOTg1KI+6mGE2MCmUTiwxOTg2KI+6mGE2MSmUTiwxOTg3KI+6mGE2MimUTiwxOTg4KI+6mGE2MymUTiwxOTg5KJW9kKyMsymUTiwxOTkwKJW9kKwyKZROLDE5OTEolb2QrDMplE4sMTk5MiiVvZCsNCmUTiwxOTkzKJW9kKw1KZROLDE5OTQolb2QrDYplE4sMTk5NSiVvZCsNymUTiwxOTk2KJW9kKw4KZROLDE5OTcolb2QrDkplE4sMTk5OCiVvZCsMTAplE4sMTk5OSiVvZCsMTEplE4sMjAwMCiVvZCsMTIplE4sMjAwMSiVvZCsMTMplE4sMjAwMiiVvZCsMTQplE4sMjAwMyiVvZCsMTUplE4sMjAwNCiVvZCsMTYplE4sMjAwNSiVvZCsMTcplE4sMjAwNiiVvZCsMTgplE4sMjAwNyiVvZCsMTkplE4sMjAwOCiVvZCsMjAplE4sMjAwOSiVvZCsMjEplE4sMjAxMCiVvZCsMjIplE4sMjAxMSiVvZCsMjMplE4sMjAxMiiVvZCsMjQplE4sMjAxMyiVvZCsMjUplE4sMjAxNCiVvZCsMjYplE4sMjAxNSiVvZCsMjcplE4sMjAxNiiVvZCsMjgplE4sMjAxNyiVvZCsMjkplE4sMjAxOCiVvZCsMzAplE4sMjAxOSiX35hhjLMplE4sMjAyMCiX35hhMimUTiwyMDIxKJffmGEzKZROLDIwMjIol9+YYTQplE4sMjAyMyiX35hhNSmUTiwyMDI0KJffmGE2KZRODQosLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsDQqRipHOk3iQlJWqlXoNCpGNgUCBQIFAkJQsMTAwLjAsMTAwLjAsMTAwLjAsMTAwLjAsMTAwLjAsMTAwLjAsMTAwLjAsMTAwLjAsMTAwLjAsMTAwLjAsMTAwLjAsMTAwLjAsMTAwLjAsMTAwLjAsMTAwLjAsMTAwLjAsMTAwLjAsMTAwLjAsMTAwLjAsMTAwLjAsMTAwLjAsMTAwLjAsMTAwLjAsMTAwLjAsMTAwLjAsMTAwLjAsMTAwLjAsMTAwLjAsMTAwLjAsMTAwLjAsMTAwLjAsMTAwLjAsMTAwLjAsMTAwLjAsgWMsMTAwLjAsMTAwLjAsMTAwLjAsMTAwLjAsMTAwLjANCoFAglSCT5aciX6WopaeLDEuMSwwLjksMC44LDEuMCwxLjEsMS4xLDEuNSwxLjQsMC45LDEuNCwxLjAsMS40LDEuMSwxLjQsMS4xLDEuOCwxLjIsMS45LDEuNiwxLjksMS40LDEuNiwxLjAsMS43LDEuMSwxLjMsMS4wLDEuMywxLjIsMS4wLDEuMCwxLjAsMC45LDEuMiyBYywwLjcsMS4yLDEuMywxLjEsMC43DQqBQIJUgk+BYIJQgk+CTywzLjksMy45LDQuMiwzLjksMy43LDMuMSwzLjYsMy4xLDMuMCwzLjMsMi45LDMuMywzLjUsMy4xLDMuNCwzLjcsNC4zLDQuMyw0LjMsNC43LDQuNiw0LjYsNC45LDQuOSw0LjgsNS4yLDUuOSw0LjksNS40LDUuNCw1LjIsNC42LDUuMyw1LjIsgWMsNC43LDUuNSw1LjYsNS42LDUuMQ0KgUCCUIJPgk+BYIJQglSCTyw2LjMsNS41LDUuMyw2LjAsNS40LDUuMSw0LjcsNC41LDQuMSw0LjgsNC43LDUuMCw1LjQsNC41LDYuMSw1LjIsNi4wLDYuMCw1LjgsNi4wLDUuOSw1LjgsNi41LDYuNyw2LjMsNi41LDYuNCw2LjYsNi43LDYuNSw2LjUsNS45LDYuNiw2LjMsgWMsNi4yLDYuNCw3LjAsNy40LDUuOQ0KgUCCUIJUgk+BYIJRgk+CTyw2LjMsNi4yLDYuMyw1LjUsNS40LDQuOSw0LjQsNC42LDQuMyw0LjUsNC4zLDUuMSw1LjEsNS4yLDUuNSw1LjYsNS42LDUuOSw1LjgsNi4wLDYuOSw1LjgsNi4xLDYuMSw2LjQsNi42LDYuNiw2LjcsNy4yLDcuMiw2LjksNi40LDcuMCw2LjMsgWMsNy4wLDYuNiw3LjYsNy4xLDYuMw0KgUCCUYJPgk+BYIJRglSCTyw3LjEsNi43LDcuNSw2LjIsNS45LDUuNiw1LjQsNC43LDQuOSw0LjksNC45LDUuMCw1LjAsNC44LDUuNSw1LjcsNS44LDUuOCw1LjgsNi4xLDYuMiw2LjgsNi41LDcuMSw2LjgsNi44LDUuOCw2LjgsNy4wLDYuNyw3LjMsNi45LDYuNiw2LjksgWMsNi43LDcuNyw3LjYsNy40LDcuMA0KgUCCUYJUgk+BYIJSgk+CTyw3LjAsNy43LDYuNSw2LjUsNS45LDUuMSw1LjEsNC45LDQuNSw0LjUsNC42LDQuNyw1LjAsNC45LDUuNSw1LjYsNS4zLDUuMCw1LjUsNS44LDUuNiw2LjEsNi4zLDYuOCw2LjcsNi41LDYuNiw2LjQsNy4zLDcuMyw2LjQsNi41LDcuMCw2LjcsgWMsNi43LDYuOSw2LjksNy4wLDYuNQ0KgUCCUoJPgk+BYIJSglSCTyw3LjYsNy4xLDcuNSw2LjcsNi42LDYuMyw1LjYsNS45LDUuNyw1LjgsNS44LDUuNSw1LjUsNS4yLDYuMSw2LjMsNi40LDYuMSw2LjIsNi43LDYuNyw3LjEsNi45LDcuMiw2LjYsNy4yLDYuOSw2LjksNy4xLDcuMSw3LjAsNy4zLDcuNSw3LjEsgWMsNy4xLDcuMSw3LjEsNy4yLDYuOQ0KgUCCUoJUgk+BYIJTgk+CTyw3LjMsNy4wLDYuOCw2LjksNi42LDUuOSw1LjUsNS42LDUuMiw1LjIsNS42LDUuNyw1LjIsNS43LDUuOCw1LjYsNS44LDUuOSw2LjAsNS42LDUuOSw2LjAsNi4xLDYuMSw2LjUsNi40LDYuNCw2LjMsNi4zLDYuMCw2LjIsNi41LDYuMSw1LjcsgWMsNi40LDUuNSw1LjcsNS45LDYuMQ0KgUCCU4JPgk+BYIJTglSCTyw3LjIsNy42LDYuOCw2LjUsNi40LDYuNCw1LjgsNS4wLDUuOSw1LjMsNS4yLDUuMyw1LjQsNS4wLDUuMyw1LjYsNi4xLDYuMiw2LjIsNS41LDUuNiw1LjcsNi4wLDUuNSw2LjAsNi4wLDYuMyw1LjksNS4zLDQuOSw1LjYsNS42LDUuOCw1LjYsgWMsNS41LDUuNiw1LjgsNS4xLDUuMQ0KgUCCU4JUgk+BYIJUgk+CTyw2LjUsNi4yLDUuOSw1LjgsNS45LDUuNiw1LjMsNS41LDUuMSw1LjAsNC45LDQuNiw0LjgsNS40LDQuNSw0LjgsNC45LDUuMiw0LjksNS41LDUuMiw1LjAsNS4xLDQuNSw1LjIsNC44LDUuMiw1LjEsNC44LDQuOSw0LjgsNS4wLDQuNCw0LjksgWMsNS4wLDQuNyw0LjksNC44LDQuNQ0KgUCCVIJPgk+BYIJUglSCTyw2LjMsNS44LDYuMyw2LjIsNS44LDYuMSw1LjYsNS4wLDUuNyw1LjQsNS43LDUuMSw1LjAsNS4zLDUuNSw1LjIsNC43LDUuMSw1LjEsNC4yLDUuMCw1LjAsNC43LDQuOCw1LjEsNC45LDUuMSw1LjAsNC44LDQuOSw0LjgsNC43LDQuOSw0LjksgWMsNC40LDQuNiw0LjksNC41LDUuMQ0KgUCCVIJUgk+BYIJVgk+CTyw1LjEsNC45LDQuOSw0LjksNS4wLDQuNyw0LjcsNC44LDQuMyw0LjUsNC40LDQuNCw0LjEsNC43LDQuMyw0LjEsNC40LDMuOSwzLjksMy44LDQuNiw0LjIsNC45LDQuMCw0LjMsNC4yLDQuMSw0LjAsMy42LDMuOSw0LjAsNC4yLDMuNSwzLjgsgWMsMy45LDMuOCwzLjYsNC4wLDQuMQ0KgUCCVYJPgk+BYIJVglSCTyw0LjgsNC45LDQuOSw0LjgsNC44LDUuMiw0LjksNS4wLDUuMSw0LjcsNS4wLDQuNCw0LjUsNC44LDQuMiw0LjIsNC4xLDQuNSw0LjQsMy44LDQuMyw0LjEsNC4zLDMuNyw0LjEsNC4yLDMuOCwzLjksMy44LDQuMCw0LjAsNC4zLDQuNCw0LjYsgWMsNC41LDMuOSwzLjMsNC4zLDQuMQ0KgUCCVYJUgk+BYIJWgk+CTywzLjgsNC4xLDMuOCw0LjAsNC4yLDQuMyw0LjIsNC41LDQuMiw0LjAsMy44LDMuNSwzLjgsMy45LDMuNSwzLjUsMy40LDMuMyw0LjEsMi45LDMuOSwzLjcsMy40LDMuNSwzLjQsMy4zLDMuMywzLjQsMy4xLDMuMiwzLjYsMy4yLDMuMiwzLjQsgWMsMy40LDMuMywzLjEsMy4zLDMuMw0KgUCCVoJPgk+BYIJWglSCTywzLjIsMy44LDMuNSwzLjgsMy44LDQuMyw0LjIsMy43LDQuNCw0LjAsNC4yLDMuNiwzLjcsNC4yLDMuNiwzLjYsMy44LDMuNSwzLjMsMy4xLDMuMywzLjQsMy40LDMuMSwzLjIsMy4xLDMuMCwzLjUsMy4zLDMuNCwzLjYsMy4zLDMuMSwzLjMsgWMsMy40LDMuMiwzLjAsMi43LDMuMw0KgUCCVoJUgk+BYIJXgk+CTywyLjYsMi44LDIuOSwzLjAsMy4wLDMuMSwzLjQsMy42LDMuMSwzLjMsMy44LDMuNCwzLjMsMy40LDIuOSwzLjEsMi45LDMuMCwzLjIsMi44LDIuNiwzLjAsMi45LDMuMCwyLjgsMi45LDMuMSwzLjAsMy4xLDMuMCwyLjcsMi45LDIuOCwyLjksgWMsMi42LDMuMCwyLjcsMi43LDIuOQ0KgUCCV4JPgk+BYIJXglSCTywyLjIsMi40LDIuOSwyLjksMy4xLDMuMywzLjQsMy4xLDMuMywzLjYsMy41LDMuMywzLjQsMy40LDMuMiwzLjQsMy4wLDMuMSwzLjEsMy4zLDMuMCwyLjUsMi44LDIuNiwyLjYsMi41LDIuNiwzLjAsMi45LDIuNSwyLjcsMi45LDIuNywyLjYsgWMsMi44LDIuNywyLjYsMi4zLDIuNw0KgUCCV4JUgk+BYIJYgk+CTywxLjgsMS44LDEuOSwyLjEsMi40LDIuNiwyLjYsMi42LDMuMSwyLjksMi43LDIuOCwyLjcsMy4wLDIuOSwyLjUsMi40LDIuNCwyLjcsMi42LDIuMiwyLjQsMi40LDIuNCwyLjQsMi4zLDIuMiwyLjEsMi4xLDIuMSwyLjIsMi43LDEuOSwyLjMsgWMsMi42LDIuMiwyLjAsMi4xLDIuMw0KgUCCWIJPgk+BYIJYglSCTywxLjYsMS43LDEuOSwyLjAsMi4xLDIuMywyLjUsMi41LDIuNywyLjQsMi44LDIuNiwyLjgsMi43LDIuNywyLjUsMi4zLDIuMiwyLjEsMi41LDIuMiwyLjMsMi4yLDIuMCwyLjAsMi4yLDIuMywyLjEsMi4xLDIuMSwyLjEsMS45LDIuNCwyLjIsgWMsMi4yLDIuMCwyLjAsMS43LDIuMw0KgUCCWIJUgk+BYIJQgk+CT4JPLDEuMiwxLjUsMS4zLDEuNiwxLjQsMi4xLDIuMSwyLjMsMi41LDIuMSwyLjEsMi40LDIuMywyLjIsMS45LDIuMSwyLjAsMS44LDEuOCwyLjEsMS44LDIuMCwxLjgsMS45LDEuNywxLjMsMS43LDEuNywxLjcsMS44LDEuNiwxLjcsMS44LDEuOSyBYywxLjgsMS42LDEuNywxLjcsMi4wDQqBQIJQgk+CT4JPgWCCUIJQgk+CTywxLjgsMi4xLDIuNCwyLjUsMi45LDMuNCwzLjcsNC40LDQuMiw0LjAsMy45LDQuMiwzLjksMy45LDMuOCwzLjUsMy4zLDMuNiwzLjUsMy44LDMuMywyLjksMi44LDMuMCwyLjksMy4xLDIuOSwzLjAsMi44LDIuOCwyLjcsMy4wLDMuMCwzLjEsgWMsMi43LDMuMSwyLjYsMi44LDMuMQ0KgUCCUIJQgk+CT4FgglCCUYJPgk8sMS4yLDEuMywxLjYsMS43LDIuMSwyLjIsMi42LDMuMSwyLjYsMy4wLDMuMSwyLjksMy4xLDIuOSwyLjgsMi44LDIuNSwyLjYsMi41LDIuNiwyLjEsMi4yLDIuMSwyLjEsMi4xLDIuMCwyLjAsMi4wLDIuMiwyLjQsMi4wLDIuMiwxLjgsMS45LIFjLDIuMiwyLjEsMi4zLDIuMCwyLjMNCoFAglCCUYJPgk+BYIJQglSCT4JPLDIuMCwyLjMsMi4zLDMuMCwzLjUsMy45LDQuNiw1LjMsNS45LDUuNSw1LjgsNi4xLDUuNiw1LjMsNC45LDQuOCw1LjIsNC41LDQuNSw1LjAsMy41LDQuMSwzLjgsMy45LDMuNiwzLjUsMy40LDMuNCwzLjIsMy45LDMuNiw0LjEsNC4xLDMuOCyBYyw0LjEsMy43LDMuNiwzLjUsNC4zDQqBQIJQglSCT4JPgWCCUYJPgk+CTywxLjAsMS4xLDEuMiwxLjUsMS41LDIuMSwyLjYsMy4xLDMuNCwzLjUsMy4yLDMuNSwzLjUsMy40LDMuMCwyLjksMy4xLDIuOSwyLjQsMi40LDIuNywyLjMsMi4wLDIuMiwyLjIsMi4xLDIuMCwxLjksMS43LDIuMSwyLjAsMi4wLDEuOSwyLjEsgWMsMi4yLDIuMSwxLjksMi42LDIuNg0KgUCCUYJPgk+CT5aciX6IyI/jLDAuOCwwLjgsMC43LDEuMiwxLjQsMS41LDEuOCwxLjcsMS45LDIuMSwxLjksMi4yLDIuMSwxLjksMi4wLDEuOCwxLjQsMS40LDEuMiwxLjMsMS4yLDEuNCwxLjMsMS4yLDEuMiwxLjAsMS4zLDEuMCwxLjIsMS4wLDEuMywxLjMsMS4zLDEuMiyBYywxLjQsMS40LDEuMywxLjQsMS42DQqX3ZDPk3iQlJWqlXoNCpGNgUCBQIFAkJQsgUUsgUUsgUUsgUUsgUUsgUUsgUUsgUUsgUUsgUUsgUUsgUUsgUUsgUUsgUUsgUUsgUUsgUUsgUUsgUUsgUUsgUUsgUUsgUUsgUUsgUUsgUUsgUUsgUUsgUUsgUUsgUUsgUUsgUUsgUUsgUUsgUUsgUUsgUUsgUUNCoFAglSCT5aciX6WopaeLDEuMSwwLjksMC44LDEuMCwxLjEsMS4xLDEuNSwxLjQsMC45LDEuNCwxLjAsMS40LDEuMSwxLjQsMS4xLDEuOCwxLjIsMS45LDEuNiwxLjksMS40LDEuNiwxLjAsMS43LDEuMSwxLjMsMS4wLDEuMywxLjIsMS4wLDEuMCwxLjAsMC45LDEuMiyBYywwLjcsMS4yLDEuMywxLjEsMC43DQqBQIJUgk+BYIJQgk+CTyw1LjAsNC44LDUuMCw0LjksNC44LDQuMSw1LjEsNC41LDQuMCw0LjgsMy45LDQuNyw0LjYsNC41LDQuNSw1LjUsNS41LDYuMiw1LjksNi42LDYuMCw2LjIsNS45LDYuNiw1LjksNi41LDYuOSw2LjIsNi42LDYuNCw2LjIsNS42LDYuMiw2LjQsgWMsNS40LDYuNyw2LjksNi43LDUuOA0KgUCCUIJPgk+BYIJQglSCTywxMS40LDEwLjMsMTAuMywxMC45LDEwLjIsOS4zLDkuOCw5LjAsOC4xLDkuNiw4LjYsOS42LDEwLjAsOC45LDEwLjYsMTAuNywxMS41LDEyLjIsMTEuNiwxMi43LDExLjksMTIuMCwxMi4zLDEzLjMsMTIuMiwxMy4wLDEzLjIsMTIuOCwxMy4yLDEyLjksMTIuNywxMS41LDEyLjgsMTIuNyyBYywxMS42LDEzLjEsMTMuOSwxNC4xLDExLjgNCoFAglCCVIJPgWCCUYJPgk8sMTcuNywxNi41LDE2LjYsMTYuNCwxNS43LDE0LjIsMTQuMywxMy42LDEyLjMsMTQuMSwxMi45LDE0LjgsMTUuMSwxNC4yLDE2LjEsMTYuMywxNy4xLDE4LjEsMTcuNSwxOC43LDE4LjgsMTcuOCwxOC40LDE5LjQsMTguNSwxOS42LDE5LjksMTkuNCwyMC40LDIwLjEsMTkuNiwxNy45LDE5LjgsMTkuMCyBYywxOC42LDE5LjcsMjEuNSwyMS4xLDE4LjENCoFAglGCT4JPgWCCUYJUgk8sMjQuOCwyMy4yLDI0LjAsMjIuNiwyMS42LDE5LjgsMTkuNiwxOC4zLDE3LjMsMTkuMCwxNy44LDE5LjcsMjAuMSwxOC45LDIxLjYsMjEuOSwyMi45LDIzLjksMjMuMywyNC44LDI1LjAsMjQuNywyNC45LDI2LjUsMjUuMywyNi40LDI1LjcsMjYuMywyNy41LDI2LjcsMjYuOSwyNC44LDI2LjUsMjUuOSyBYywyNS4yLDI3LjQsMjkuMCwyOC41LDI1LjENCoFAglGCVIJPgWCCUoJPgk8sMzEuOCwzMC45LDMwLjUsMjkuMCwyNy40LDI0LjksMjQuNywyMy4yLDIxLjcsMjMuNSwyMi40LDI0LjQsMjUuMSwyMy44LDI3LjIsMjcuNSwyOC4yLDI4LjksMjguOCwzMC42LDMwLjYsMzAuNywzMS4yLDMzLjMsMzIuMCwzMi44LDMyLjMsMzIuNywzNC44LDM0LjAsMzMuMywzMS4yLDMzLjUsMzIuNiyBYywzMS45LDM0LjMsMzUuOSwzNS41LDMxLjUNCoFAglKCT4JPgWCCUoJUgk8sMzkuNCwzOC4wLDM4LjAsMzUuNywzNC4wLDMxLjEsMzAuNCwyOS4xLDI3LjUsMjkuMywyOC4yLDI5LjksMzAuNiwyOS4wLDMzLjMsMzMuOCwzNC42LDM1LjAsMzUuMCwzNy4zLDM3LjMsMzcuOCwzOC4xLDQwLjUsMzguNyw0MC4wLDM5LjIsMzkuNiw0MS45LDQxLjEsNDAuMywzOC41LDQxLjAsMzkuNyyBYywzOS4wLDQxLjQsNDMuMSw0Mi43LDM4LjQNCoFAglKCVIJPgWCCU4JPgk8sNDYuNyw0NS4wLDQ0LjgsNDIuNiw0MC42LDM3LjAsMzUuOSwzNC42LDMyLjYsMzQuNiwzMy43LDM1LjYsMzUuOCwzNC43LDM5LjAsMzkuNCw0MC40LDQwLjksNDEuMCw0Mi44LDQzLjMsNDMuOSw0NC4yLDQ2LjYsNDUuMiw0Ni40LDQ1LjcsNDUuOSw0OC4yLDQ3LjEsNDYuNSw0NS4wLDQ3LjAsNDUuNCyBYyw0NS40LDQ3LjAsNDguOCw0OC42LDQ0LjUNCoFAglOCT4JPgWCCU4JUgk8sNTMuOSw1Mi42LDUxLjUsNDkuMSw0Ny4wLDQzLjUsNDEuNywzOS42LDM4LjUsMzkuOSwzOS4wLDQwLjgsNDEuMywzOS43LDQ0LjMsNDUuMSw0Ni41LDQ3LjAsNDcuMyw0OC4zLDQ4LjksNDkuNiw1MC4xLDUyLjIsNTEuMSw1Mi40LDUyLjAsNTEuOCw1My41LDUyLjAsNTIuMiw1MC42LDUyLjgsNTEuMCyBYyw1MC44LDUyLjYsNTQuNiw1My42LDQ5LjUNCoFAglOCVIJPgWCCVIJPgk8sNjAuNCw1OC44LDU3LjQsNTQuOSw1Mi45LDQ5LjAsNDYuOSw0NS4xLDQzLjYsNDQuOSw0My45LDQ1LjUsNDYuMSw0NS4xLDQ4LjgsNDkuOSw1MS40LDUyLjIsNTIuMiw1My44LDU0LjEsNTQuNSw1NS4zLDU2LjYsNTYuMyw1Ny4yLDU3LjIsNTYuOSw1OC4zLDU2LjksNTcuMCw1NS42LDU3LjIsNTUuOSyBYyw1NS44LDU3LjMsNTkuNSw1OC40LDU0LjENCoFAglSCT4JPgWCCVIJUgk8sNjYuOCw2NC42LDYzLjcsNjEuMSw1OC43LDU1LjEsNTIuNSw1MC4xLDQ5LjQsNTAuMyw0OS42LDUwLjYsNTEuMSw1MC40LDU0LjMsNTUuMSw1Ni4xLDU3LjMsNTcuMiw1OC4wLDU5LjIsNTkuNSw2MC4wLDYxLjUsNjEuNCw2Mi4yLDYyLjMsNjEuOSw2My4xLDYxLjgsNjEuOCw2MC4zLDYyLjEsNjAuOCyBYyw2MC4yLDYxLjksNjQuNCw2Mi45LDU5LjINCoFAglSCVIJPgWCCVYJPgk8sNzEuOSw2OS41LDY4LjYsNjYuMCw2My43LDU5LjgsNTcuMiw1NC45LDUzLjYsNTQuOCw1NC4wLDU1LjAsNTUuMiw1NS4yLDU4LjYsNTkuMiw2MC41LDYxLjIsNjEuMiw2MS44LDYzLjgsNjMuNyw2NC45LDY1LjUsNjUuNyw2Ni4zLDY2LjQsNjUuOSw2Ni44LDY1LjcsNjUuOCw2NC41LDY1LjYsNjQuNiyBYyw2NC4xLDY1LjYsNjguMCw2Ni45LDYzLjINCoFAglWCT4JPgWCCVYJUgk8sNzYuNyw3NC40LDczLjQsNzAuOCw2OC41LDY1LjAsNjIuMSw1OS44LDU4LjcsNTkuNSw1OS4wLDU5LjQsNTkuNyw2MC4wLDYyLjgsNjMuNCw2NC42LDY1LjYsNjUuNSw2NS41LDY4LjEsNjcuOSw2OS4yLDY5LjIsNjkuNyw3MC42LDcwLjEsNjkuOCw3MC42LDY5LjcsNjkuOCw2OC44LDcwLjAsNjkuMiyBYyw2OC42LDY5LjYsNzEuMyw3MS4yLDY3LjQNCoFAglWCVIJPgWCCVoJPgk8sODAuNSw3OC41LDc3LjIsNzQuOCw3Mi43LDY5LjMsNjYuMyw2NC40LDYyLjksNjMuNSw2Mi44LDYyLjksNjMuNSw2My44LDY2LjMsNjYuOSw2OC4wLDY4LjksNjkuNiw2OC40LDcyLjAsNzEuNSw3Mi42LDcyLjYsNzMuMSw3My45LDczLjQsNzMuMiw3My43LDczLjAsNzMuNCw3MS45LDczLjIsNzIuNiyBYyw3Mi4xLDcyLjksNzQuMyw3NC41LDcwLjcNCoFAglaCT4JPgWCCVoJUgk8sODMuNyw4Mi4zLDgwLjcsNzguNiw3Ni42LDczLjUsNzAuNSw2OC4xLDY3LjMsNjcuNSw2Ny4wLDY2LjUsNjcuMiw2OC4wLDcwLjAsNzAuNiw3MS44LDcyLjQsNzMuMCw3MS41LDc1LjMsNzQuOSw3NS45LDc1LjcsNzYuNCw3Ny4wLDc2LjUsNzYuOCw3Ny4wLDc2LjMsNzcuMCw3NS4yLDc2LjMsNzUuOSyBYyw3NS40LDc2LjEsNzcuNCw3Ny4yLDc0LjANCoFAglaCVIJPgWCCV4JPgk8sODYuMyw4NS4xLDgzLjcsODEuNiw3OS42LDc2LjYsNzMuOSw3MS44LDcwLjQsNzAuOCw3MC44LDcwLjAsNzAuNSw3MS40LDcyLjksNzMuNiw3NC43LDc1LjQsNzYuMiw3NC4zLDc3LjksNzcuOSw3OC44LDc4LjgsNzkuMiw3OS45LDc5LjYsNzkuNyw4MC4xLDc5LjMsNzkuNyw3OC4yLDc5LjIsNzguOCyBYyw3OC4wLDc5LjEsODAuMSw3OS45LDc2LjkNCoFAgleCT4JPgWCCV4JUgk8sODguNSw4Ny41LDg2LjYsODQuNCw4Mi43LDc5LjksNzcuMyw3NC45LDczLjcsNzQuNCw3NC4zLDczLjMsNzMuOSw3NC44LDc2LjEsNzcuMCw3Ny44LDc4LjUsNzkuMyw3Ny42LDgwLjksODAuNCw4MS42LDgxLjQsODEuOCw4Mi41LDgyLjIsODIuOCw4My4wLDgxLjgsODIuNCw4MS4xLDgxLjgsODEuNCyBYyw4MC44LDgxLjgsODIuNyw4Mi4yLDc5LjYNCoFAgleCVIJPgWCCWIJPgk8sOTAuMyw4OS4zLDg4LjUsODYuNSw4NS4wLDgyLjUsNzkuOSw3Ny41LDc2LjcsNzcuMyw3Ny4xLDc2LjEsNzYuNiw3Ny44LDc4LjksNzkuNiw4MC4yLDgwLjksODIuMCw4MC4yLDgzLjEsODIuOCw4NC4wLDgzLjgsODQuMyw4NC44LDg0LjQsODQuOSw4NS4xLDg0LjAsODQuNyw4My43LDgzLjcsODMuNyyBYyw4My40LDg0LjAsODQuNyw4NC40LDgxLjgNCoFAgliCT4JPgWCCWIJUgk8sOTEuOSw5MS4wLDkwLjQsODguNSw4Ny4yLDg0LjgsODIuNCw4MC4wLDc5LjQsNzkuNyw3OS45LDc4LjcsNzkuNCw4MC41LDgxLjYsODIuMCw4Mi41LDgzLjEsODQuMCw4Mi43LDg1LjQsODUuMCw4Ni4yLDg1LjksODYuMyw4Ny4wLDg2LjcsODcuMCw4Ny4yLDg2LjEsODYuOCw4NS42LDg2LjEsODUuOSyBYyw4NS41LDg2LjAsODYuNyw4Ni4wLDg0LjENCoFAgliCVIJPgWCCUIJPgk+CTyw5My4xLDkyLjQsOTEuNyw5MC4wLDg4LjYsODYuOCw4NC42LDgyLjQsODEuOSw4MS44LDgyLjAsODEuMSw4MS44LDgyLjYsODMuNiw4NC4yLDg0LjYsODUuMCw4NS44LDg0LjgsODcuMiw4Ny4wLDg4LjAsODcuNyw4OC4wLDg4LjMsODguNCw4OC43LDg4LjgsODcuOCw4OC40LDg3LjQsODcuOSw4Ny43LIFjLDg3LjMsODcuNiw4OC4zLDg3LjcsODYuMQ0KgUCCUIJPgk+CT4FgglCCUIJPgk8sOTQuOSw5NC41LDk0LjIsOTIuNiw5MS41LDkwLjMsODguMyw4Ni43LDg2LjEsODUuOCw4NS45LDg1LjMsODUuNyw4Ni42LDg3LjQsODcuNyw4Ny45LDg4LjYsODkuNCw4OC43LDkwLjUsODkuOSw5MC44LDkwLjcsOTAuOSw5MS41LDkxLjMsOTEuNyw5MS43LDkwLjcsOTEuMSw5MC40LDkwLjksOTAuOSyBYyw5MC4xLDkwLjcsOTEuMCw5MC41LDg5LjINCoFAglCCUIJPgk+BYIJQglGCT4JPLDk2LjIsOTUuOCw5NS44LDk0LjMsOTMuNiw5Mi41LDkwLjksODkuOCw4OC44LDg4LjgsODkuMSw4OC4yLDg4LjcsODkuNSw5MC4yLDkwLjUsOTAuNCw5MS4yLDkxLjksOTEuMyw5Mi42LDkyLjEsOTMuMCw5Mi44LDkzLjAsOTMuNSw5My4zLDkzLjcsOTMuOCw5My4xLDkzLjEsOTIuNiw5Mi43LDkyLjgsgWMsOTIuMiw5Mi44LDkzLjIsOTIuNSw5MS42DQqBQIJQglGCT4JPgWCCUIJUgk+CTyw5OC4yLDk4LjEsOTguMSw5Ny4yLDk3LjEsOTYuNCw5NS41LDk1LjEsOTQuNyw5NC40LDk0LjgsOTQuMyw5NC40LDk0LjcsOTUuMSw5NS4zLDk1LjUsOTUuNyw5Ni4zLDk2LjMsOTYuMSw5Ni4zLDk2LjgsOTYuNyw5Ni42LDk2LjksOTYuNyw5Ny4xLDk3LjEsOTcuMCw5Ni43LDk2LjcsOTYuOCw5Ni42LIFjLDk2LjQsOTYuNSw5Ni45LDk2LjAsOTUuOQ0KgUCCUIJUgk+CT4FgglGCT4JPgk8sOTkuMiw5OS4yLDk5LjMsOTguOCw5OC42LDk4LjUsOTguMiw5OC4zLDk4LjEsOTcuOSw5OC4xLDk3LjgsOTcuOSw5OC4xLDk4LjAsOTguMiw5OC42LDk4LjYsOTguOCw5OC43LDk4LjgsOTguNiw5OC43LDk4LjgsOTguOCw5OS4wLDk4LjcsOTkuMCw5OC44LDk5LjAsOTguNyw5OC43LDk4LjcsOTguOCyBYyw5OC42LDk4LjYsOTguNyw5OC42LDk4LjQNCoFAglGCT4JPgk+WnIl+iMiP4ywxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCyBYywxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMA0K",
+      "original_archived": true,
+      "encoding": "cp932",
+      "retrieval": "e-Stat official CSV response"
+    },
+    {
+      "id": "t21",
+      "url": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040473380&fileKind=1",
+      "size": 1957,
+      "sha256": "c8616d85dbafdf9251eca938abf1cb246a9de250e4937b2247ede3e76e489f43",
+      "original_bytes_base64": "MjAyNSiX35hhNymUTiyNkZavkLaKiIrukWKSso24LCwNCoJRj4qTvpVbgUCR5oJPglGCUJVcLJCikdGQlILMkYqRzpN4kJSVqpV6gXyCUJCikdGTloK9guiVvYvPj4qTvovginqBfJCikdGQbIj1glCQbJOWgr2C6JW9i8+PipO+i+CKeoF8koaJm5JsgXyVvYvPj4qTvovginqIyIm6gsyQopHRgsyKhI2HgUOQopHRl96MXoF8jpmTtoLMgqKC6ZCikdGBfIJVglSNzojIj+OCzI7SgsyCooLpkKKR0YFFj4qTvovginqKS4uJlcoNCoFAgUCSjYFGgXWCu4LMkbyCzJCikdGBdoLJgs2BQYF1lYOOcZCikdGBdoLwityC3oFCDQqPipO+i+CKeopLi4kskY2QlCyNgpfujtKQopHRLI2Cl+6O0pCikdGIyIpPgsyQopHRLCwsgWmNxIxmgWosgWmNxIxmgWoNCiwsLCyV6o5xkKKR0SyCu4LMkbyCzJCikdEsjpmTtoLMgqKC6ZCikdEsglWCVI3OiMiP44LMjtKCzIKigumQopHRDQosLCwsLCwsDQqQopHRkJSCzJGKkc6TeJCUlaqVeiiBkyksICwgLCAsICwgLCAsIA0KkY2BQIFAgUCQlCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMCwxMDAuMA0KgUCCVIJPlpyJfpailp4sMC43LDAuOSwwLjYsLSwwLjYsMC4wLDAuNg0KgUCCVIJPgWCCUIJPgk8sNS4xLDkuNiwyLjgsMi42LDIuOCwwLjYsNi43DQqBQIJQgk+CT4FgglCCVIJPLDUuOSwxMC42LDMuNSw2LjksMy40LDEuNSw3LjcNCoFAglCCVIJPgWCCUYJPgk8sNi4zLDEyLjIsMy4yLDkuMiwzLjEsMS40LDkuMA0KgUCCUYJPgk+BYIJRglSCTyw3LjAsMTEuNSw0LjYsMjAuNSw0LjQsMi42LDkuMQ0KgUCCUYJUgk+BYIJSgk+CTyw2LjUsMTAuNSw0LjQsMTAuNyw0LjMsMi4zLDguMw0KgUCCUoJPgk+BYIJSglSCTyw2LjksMTAuMyw1LjAsOC4yLDUuMCwxLjksOC41DQqBQIJSglSCT4FgglOCT4JPLDYuMSw4LjAsNS4xLDEzLjksNS4wLDIuNyw3LjUNCoFAglOCT4JPgWCCU4JUgk8sNS4xLDUuMSw1LjAsNi42LDUuMCwzLjIsNS4xDQqBQIJTglSCT4FgglSCT4JPLDQuNSw0LjEsNC44LDYuMyw0LjgsMy45LDQuNA0KgUCCVIJPgk+BYIJUglSCTyw1LjEsMy44LDUuNyw0LjEsNS43LDUuMyw0LjYNCoFAglSCVIJPgWCCVYJPgk8sNC4xLDIuNSw0LjksMi4wLDQuOSw1LjEsMy42DQqBQIJVgk+CT4FgglWCVIJPLDQuMSwyLjAsNS4zLDAuOCw1LjMsNi4yLDMuMQ0KgUCCVYJUgk+BYIJWgk+CTywzLjMsMS42LDQuMiwyLjUsNC4zLDQuNywyLjgNCoFAglaCT4JPgWCCVoJUgk8sMy4zLDEuMiw0LjQsMC40LDQuNCw2LjUsMi4yDQqBQIJWglSCT4FggleCT4JPLDIuOSwxLjMsMy43LDIuOSwzLjcsNS4yLDIuMg0KgUCCV4JPgk+BYIJXglSCTywyLjcsMC41LDMuOCwwLjUsMy45LDUuOSwxLjUNCoFAgleCVIJPgWCCWIJPgk8sMi4zLDAuNiwzLjEsMC41LDMuMiw0LjQsMS42DQqBQIJYgk+CT4FggliCVIJPLDIuMywwLjQsMy4yLC0sMy4zLDQuOCwxLjMNCoFAgliCVIJPgWCCUIJPgk+CTywyLjAsMC41LDIuOCwtLDIuOSw0LjAsMS4zDQqBQIJQgk+CT4JPgWCCUIJQgk+CTywzLjEsMC42LDQuNCwtLDQuNSw2LjUsMi4wDQqBQIJQglCCT4JPgWCCUIJRgk+CTywyLjMsMC40LDMuMywtLDMuNCw1LjEsMS40DQqBQIJQglGCT4JPgWCCUIJUgk+CTyw0LjMsMC44LDYuMSwxLjQsNi4yLDguMCwyLjgNCoFAglCCVIJPgk+BYIJRgk+CT4JPLDIuNiwwLjMsMy43LC0sMy44LDQuOCwxLjYNCoFAglGCT4JPgk+WnIl+iMiP4ywxLjYsMC40LDIuMiwtLDIuMiwzLjMsMS4wDQoxkKKR0ZOWgr2C6JW9i8+PipO+i+CKeiiWnIl+KSw1NzUuMiwzMzYuMSw3MDAuNywzNDUuMyw3MDUuNSw4NTcuMyw0NzAuMw0KkKKR0ZBsiPUxkGyTloK9guiVvYvPj4qTvovginoolpyJfiksMjU5LjIsMjE4LjAsMjcyLjEsMTQwLjAsMjczLjksMjIwLjQsMjIyLjcNCpKGiZuSbCiWnIl+KSw0NTEsMjczLDYwMCwyOTksNjAxLDc2NiwzNDkNCpW9i8+PipO+i+CKeojIibqCzJCikdGCzIqEjYcogZMpLDYxLjUsNjMuMiw1OS43LDU3LjMsNTkuNiw1OS45LDY0LjUNCg==",
+      "original_archived": true,
+      "encoding": "cp932",
+      "retrieval": "e-Stat official CSV response"
+    },
+    {
+      "id": "t138",
+      "url": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040473497&fileKind=1",
+      "size": 1099,
+      "sha256": "8aa0da36579878f24395e6410cafd42f9832f84ee5e5b2ab75709d1f42320660",
+      "original_bytes_base64": "MjAyNSiX35hhNymUTiyNkZavkLaKiIrukWKSso24LCwNCoJRj4qTvpVbgUCR5oJQglKCV5VcLJCikdGQlIF8glCQopHRk5aCvYLolb2Lz4vginqBQ4uSj2+L4JOZgsyO7ZfegUWPipO+jNyVqojKikuLiZXKDQqBQIFAko2BRoF1k5aKWYuSj2+L4JOZgsyCoILpglCQopHRk5aCvYLolb2Lz4vginqBdoLJgs2BQYvginqVc4/agsyQopHRgs2K3ILcgsiCooFCDQqPipO+jNyVqojKikuLiSyLko9vi+AsLCwsLCyK6YvGlE6L4Ip8i+AsjMKQbJROi+CTmYp8i+AsjmSRl4Loi+CKeg0KLCyPipO+kMUsj1qWr5DFLI7Qie+V24yvl78sjMWS6I6RjlmQxYFFLI6pk66O1JDFk5ksLCwNCiwsLCwsk3OOc4x2ieaQxSwsLCwNCpOWilmLko9vi+CTmYLMgqCC6ZCikdGQlCiQopHRkJSCUJackc4pLCAsICwgLCAsICwgLCAsICwgDQqRjYFAgUCQlCw5NjA2LDY2MjAsNzU0MSw4ODY2LDY2OTAsNjQxNCw3MzcsMTczMCw1MjYNCoFAkeaBQPpKLDE2NjksMjY1LDQ4MywxMjkyLDEwMTIsNzIzLDYsNzksMzgNCoFAkeaBQPpLLDE5MzksOTU1LDEzNDIsMTcyMCwxMjY4LDExNTcsMzMsMTY0LDY5DQqBQJHmgUD6TCwxOTk5LDE1NDUsMTgxNywxOTE2LDEzMTksMTM4MCwxMDMsMzA5LDkzDQqBQJHmgUD6TSwyMDAwLDE4NzksMTkyMywxOTU5LDE0NjksMTU0OCwxOTksNDY3LDEzNA0KgUCR5oFA+k4sMjAwMCwxOTc2LDE5NzYsMTk3OCwxNjIxLDE2MDYsMzk2LDcxMiwxOTINCpOWilmLko9vi+CTmYLMgqCC6YJQkKKR0ZOWgr2C6JW9i8+L4Ip6KJJQiMqBRpaciX4pLCAsICwgLCAsICwgLCAsICwgDQqRjYFAgUCQlCwxMTkuMCw0Mi4zLDI2LjIsNzAuMCwxMi4zLDQuMSwyMi4wLDI0LjIsNjcuNg0KgUCR5oFA+kosMTUuOCw2LjcsMy4yLDExLjEsNy44LDIuNCwxMS40LDE1LjIsNTIuNQ0KgUCR5oFA+kssMzkuMiw3LjUsNi43LDI3LjIsOS41LDMuMSwxNS41LDE4LjgsNjAuOQ0KgUCR5oFA+kwsNzUuOCwxMi4yLDEyLjQsNDguOSwxMS40LDMuNywxNy41LDIzLjAsNTYuOA0KgUCR5oFA+k0sMTQwLjEsMjUuMiwyMy4zLDgzLjQsMTIuOCw0LjQsMTkuOCwyMy4wLDYwLjgNCoFAkeaBQPpOLDMyNC41LDEwMS44LDYwLjYsMTQ5LjgsMTcuMiw1LjYsMjQuOSwyNy43LDgyLjgNCg==",
+      "original_archived": true,
+      "encoding": "cp932",
+      "retrieval": "e-Stat official CSV response"
+    },
+    {
+      "id": "t151",
+      "url": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040473510&fileKind=1",
+      "size": 1068,
+      "sha256": "20640e992b37ea10ac927818f3f22685e4947e07ede666131ec427bd24495c82",
+      "original_bytes_base64": "MjAyNSiX35hhNymUTiyNkZavkLaKiIrukWKSso24LCyBaZCikdGQlIJQlpyRzoFqDQqCUY+Kk76VW4FAkeaCUIJUglCVXCyQopHRkJSBQ4+Kk76M3JWqiMqKS4uJgUWO0InvlduMr5e/inqKS4uJlcoNCoFAgUCSjYFGgXWRU5CikdGBdoLJgs2BQY54laWCooLIgrWLeYLRjniVpYKigsyXTJazlXOP2oLMkKKR0YLwityC3oFCDQqBQIFAgUCBQIKxgsyCvYLfgUGRU5CikdGCqYLnjniVpYKigqCC6ILwjbeCtYj4gqKCvZCikdGQlIKqgUGOeJWlgqKCyIK1gsaCzYLIgueCyIKigUINCo7Qie+V24yvl7+KeopLi4kskY2BQIFAkJQsgUCR5oFA+kosgUCR5oFA+kssgUCR5oFA+kwsgUCR5oFA+k0sgUCR5oFA+k4NCpFTgUCQooFAkdEsMTAwMDAsMjAwMCwyMDAwLDIwMDAsMjAwMCwyMDAwDQqBQI54laWCooKggugsODg2NiwxMjkyLDE3MjAsMTkxNiwxOTU5LDE5NzgNCoFAgUCCVJaciX6WopaeLDUxOCwzNzcsMTA5LDIzLDgsMQ0KgUCBQIJUgWCBQIJQgk8sNTIxLDI4OSwxNTAsNTcsMjIsMg0KgUCBQIJQgk+BYIFAglCCVCw0MTcsMTQ0LDE2Myw3NSwyNCwxMQ0KgUCBQIJQglSBYIFAglGCTywzNjIsODMsMTcxLDcwLDI5LDcNCoFAgUCCUYJPgWCBQIJRglQsMzE3LDUwLDE1Myw3OSwyNiw5DQqBQIFAglGCVIFggUCCUoJPLDMyMCw0NywxNTgsNzQsMzMsOQ0KgUCBQIJSgk+BYIFAglKCVCwzNTcsMzcsMTYyLDExMywzOCw4DQqBQIFAglKCVIFggUCCU4JPLDM0NiwyMSwxNDIsMTMzLDM5LDEyDQqBQIFAglOCT4FggUCCU4JULDI1OCw4LDk4LDEwNiwzNyw4DQqBQIFAglOCVIFggUCCVIJPLDI5MiwxMSwxMDQsMTEzLDUwLDE1DQqBQIFAglSCT4FggUCCVYJPLDQ3Miw3LDg3LDI1MCw5MywzNg0KgUCBQIJVgk+BYIFAglaCTyw0NzIsLSw0MCwyNjcsMTM4LDI3DQqBQIFAglaCT4FggUCCV4JPLDM4OCwwLDEzLDE3OCwxNzAsMjYNCoFAgUCCV4JPgWCBQIJYgk8sMzcwLC0sNCw4NSwyMjgsNTMNCoFAgUCCWIJPgWCCUIJPgk8sMzI5LC0sMSwyOCwyNDgsNTINCoFAgUCCUIJPgk+WnIl+iMiP4ywyMDk3LC0sLSwyOSw1NzAsMTQ5OQ0KgUCBQJVzgUCBQI/aLDEwMzAsMjE3LDE2NiwyMzgsMjA2LDIwMw0K",
+      "original_archived": true,
+      "encoding": "cp932",
+      "retrieval": "e-Stat official CSV response"
+    },
+    {
+      "id": "t153",
+      "url": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040473512&fileKind=1",
+      "size": 1027,
+      "sha256": "f8eee770a14bb43a1ca0bb5b23db8dc229433a1fcafb2eac93bafcdab714b333",
+      "original_bytes_base64": "MjAyNSiX35hhNymUTiyNkZavkLaKiIrukWKSso24LCwNCoJRj4qTvpVbgUCR5oJQglSCUpVcLI7Qie+V24yvl7+CzIKggumQopHRgsyCUJCikdGTloK9guiVvYvPjtCJ75XbjK+Xv4p6gXyRjY+Kk76CyZDogt+C6YqEjYeBQ4+Kk76M3JWqiMqKS4uJgUWO0InvlduMr5e/gsyO7ZfelcoNCoFAgUCSjYFGgXWO0InvlduMr5e/gsyCoILpkKKR0YLMglCQopHRk5aCvYLolb2Lz47Qie+V24yvl7+KeoF2gsmCzYFBi+CKepVzj9qCzJCikdGCzYrcgtyCyIKigUINCo7Qie+V24yvl7+CzI7tl94skY2BQIFAkJQsgUCR5oFA+kosgUCR5oFA+kssgUCR5oFA+kwsgUCR5oFA+k0sgUCR5oFA+k4NCiwsLCwsLA0KjtCJ75XbjK+Xv4LMgqCC6ZCikdGCzIJQkKKR0ZOWgr2C6JW9i8+O0InvlduMr5e/inooklCIyoFGlpyJfiksICwgLCAsICwgLCANCoFAjtAgie8gldsgjK8gl78sNzAuMCwxMS4xLDI3LjIsNDguOSw4My40LDE0OS44DQqBQIFAiOOXw5XbjK8sMjYuNiw0LjEsMTEuNiwxOS43LDMxLjUsNTQuOA0KgUCBQJROi+CV24yvLDMyLjQsMi4zLDcuMywxOC44LDM5LjksNzguMA0KgUCBQInujOyV24yvLDguMyw0LjMsNy40LDguMyw4LjUsMTEuMw0KgUCBQIzZl3CV24yvLDIuOCwwLjMsMS4wLDIuMCwzLjYsNS43DQqO0InvlduMr5e/gsyCoILpkKKR0YLMkY2PipO+LCAsICwgLCAsICwgDQqBQJW9i8+PipO+i+CKeoFpklCIyoFGlpyJfoFqLDYyNC4wLDE0MS4yLDI4Ny4xLDQ1NC4zLDY5My42LDEzMDMuMA0KjtCJ75XbjK+Xv4LMgqCC6ZCikdGCzIJQkKKR0ZOWgr2C6JW9i8+O0InvlduMr5e/inqCzJGNj4qTvoLJkOiC34LpioSNhyiSUIjKgUaBkyksICwgLCAsICwgLCANCoFAjtAgie8gldsgjK8gl78sMTEuMiw3LjksOS41LDEwLjgsMTIuMCwxMS41DQqBQIFAiOOXw5XbjK8sNC4zLDIuOSw0LjEsNC4zLDQuNSw0LjINCoFAgUCUTovglduMryw1LjIsMS43LDIuNSw0LjEsNS43LDYuMA0KgUCBQInujOyV24yvLDEuMywzLjEsMi42LDEuOCwxLjIsMC45DQqBQIFAjNmXcJXbjK8sMC40LDAuMiwwLjMsMC40LDAuNSwwLjQNCg==",
+      "original_archived": true,
+      "encoding": "cp932",
+      "retrieval": "e-Stat official CSV response"
+    }
+  ]
+}

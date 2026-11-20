@@ -1,0 +1,27 @@
+cases 55 rows 1650
+1 Policy_Effects GDP marginals vs Annual recompute: max abs diff 9.03e-10
+2 2030 total vs SQ 5.4127  sum LOO marginals 5.9804  non-additive 0.5677
+2 2040 total vs SQ 10.5600  sum LOO marginals 12.4431  non-additive 1.8832
+2 2055 total vs SQ 11.3119  sum LOO marginals 13.3140  non-additive 2.0021
+3 NO_INVESTMENT: differing columns 0; max |GDP marginal| 0.00e+00
+3 NO_COMMON: differing columns 118; max |GDP marginal| 3.35e-04
+4 capacity double use: years with chosen+universal > capacity: 21 (first [2035]), max ratio 1.621
+    2035 {'chosen_transitions': 12474, 'universal_palliative_served': 61696, 'transition_capacity': 61696}
+    2045 {'chosen_transitions': 51109, 'universal_palliative_served': 90676, 'transition_capacity': 90676}
+    2055 {'chosen_transitions': 52929, 'universal_palliative_served': 85186, 'transition_capacity': 85186}
+5 2035 universal cost 0.0078 patient 0.0001 (0.9%) public 0.0038 insurer 0.0038
+5 2055 universal cost 0.0159 patient 0.0001 (0.9%) public 0.0079 insurer 0.0079
+6 GDP2055 grid (rows VA 0/50/100, cols FIN 0/50/100):
+    [540.1968, 540.228, 540.2592]
+    [540.2432, 540.2744, 540.3056]
+    [540.2895, 540.3208, 540.352]
+7 LATEST_F - SQ_FIXED GDP: {2030: 5.4127, 2040: 10.56, 2055: 11.3119}
+7 LATEST_F - OLD_EDUCATION_F GDP: {2030: -0.2065, 2040: -0.1807, 2055: -0.1642}
+7 LATEST_F - OLD_MEDICAL_F GDP: {2030: -0.1167, 2040: -0.1983, 2055: -0.2388}
+7 LATEST_F - MEDICAL_OFF GDP: {2030: -0.0478, 2040: -0.1075, 2055: -0.119}
+8 finance sources identity (need = tax+prem+crowd+debt net+unassigned) max abs 6.00e-12
+9 largest yoy GDP moves LATEST_F: [(2027, 23.817), (2031, 11.401), (2050, 5.676)]
+10 household direct cash burden range (兆円/年): [('2035', -0.0036, 'HH_GUARANTEE_HIGH', 0.0074, 'HH_HH_COMBINED_STRESS', 'True'), ('2040', -0.0053, 'HH_GUARANTEE_HIGH', 0.0324, 'HH_HH_COMBINED_STRESS', 'True'), ('2055', -0.0073, 'HH_GUARANTEE_HIGH', 0.0461, 'HH_HH_COMBINED_STRESS', 'True')]
+11 post_financing_transfer_residual_trn max |value| over all 1650 rows: 4.44e-16 (identically 0 = not an independent check)
+12 GDP 2026->2027 step: SQ_FIXED 580.0 -> 555.3 ; LATEST_F 580.0 -> 556.2 (same step, not F-induced)
+A corrected medical+common+demand recompute: cells 154440 mismatch 0 max err (rel for |x|>1e-3 else abs) 3.981e-10 []

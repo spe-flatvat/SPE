@@ -1,0 +1,155 @@
+{
+  "status": "FIXED_MODEL_BYTES_AND_RESEARCH_RECORD",
+  "runtime_dependencies": [
+    {
+      "path": "handoff/f-integrated-20261121/Model.py",
+      "commit": "aa0fc6c9de3a6fc33a50e68fb7948940941990dc",
+      "size": 21624,
+      "sha256": "42adedbe340a089e126c22987df89894943fcece54b6ac85ffa002fb886bf71c"
+    },
+    {
+      "path": "handoff/f-integrated-20261121/Inputs.json",
+      "commit": "aa0fc6c9de3a6fc33a50e68fb7948940941990dc",
+      "size": 7865,
+      "sha256": "87d454a5205869e58dee2836103499ee1eee89105cf9d14c62724df0561c66f5"
+    },
+    {
+      "path": "handoff/f-integrated-20261121/Annual.csv",
+      "commit": "aa0fc6c9de3a6fc33a50e68fb7948940941990dc",
+      "size": 2082920,
+      "sha256": "eb92953e843dfd7b84a0476b2f41ae310cafbf976cb857895b7363beabdf4772"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/Model.py",
+      "commit": "76aca9274151139cf0791365f5f9307fcc6f8fa6",
+      "size": 27668,
+      "sha256": "8c55442439d20b750ba6576ce8efa8a98e3f37b92df070a6a99dc498cd173837"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/Inputs.json",
+      "commit": "76aca9274151139cf0791365f5f9307fcc6f8fa6",
+      "size": 2559157,
+      "sha256": "f9de79d09488aa26cefc27a6a43c8d0d0b165b054b04839a4bace97ecf6cd2a9"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/Annual.csv",
+      "commit": "76aca9274151139cf0791365f5f9307fcc6f8fa6",
+      "size": 2087811,
+      "sha256": "35c78607be9b171f82201dc4b7ffadf9a6cf85bd19d6185bd37e120f2219364c"
+    }
+  ],
+  "policy_originals": [
+    {
+      "path": "policies/FreedomPolicies.md",
+      "commit": "5804388482864af08204ba0d0e76a46206dacdbd",
+      "size": 9241,
+      "sha256": "0dedd2c1126613c30a7d96732d226cc787f6597437137424845d64d041db0204"
+    },
+    {
+      "path": "policies/FreedomPolicies_Annex.md",
+      "commit": "5804388482864af08204ba0d0e76a46206dacdbd",
+      "size": 12319,
+      "sha256": "ee62de32582a0f6d559029e7e9810b161c6a975ff22b498493d9ca960ca29e83"
+    }
+  ],
+  "external_sources": [
+    {
+      "id": "jasso2025",
+      "url": "https://www.jasso.go.jp/about/organization/__icsFiles/afieldfile/2026/10/23/annrep25_1_2.pdf",
+      "final_url": "https://www.jasso.go.jp/about/organization/__icsFiles/afieldfile/2026/10/23/annrep25_1_2.pdf",
+      "status": 200,
+      "size": 2920984,
+      "sha256": "32c3ff80a844316c51f55ff5c203e166c32bf5ae01d990aa2395c57c88413f73",
+      "content_type": "application/pdf"
+    },
+    {
+      "id": "training2025",
+      "url": "https://www.mhlw.go.jp/content/11801500/001728125.pdf",
+      "final_url": "https://www.mhlw.go.jp/content/11801500/001728125.pdf",
+      "status": 200,
+      "size": 1713463,
+      "sha256": "ae2e3f9b4d4e3abd99dffce5bb4c339bc9254bb87d655191b8a3786f524addd0",
+      "content_type": "application/pdf"
+    },
+    {
+      "id": "dropout2024",
+      "url": "https://www.mext.go.jp/content/20250822-mxt_gakushi01-000013028_2.pdf",
+      "final_url": "https://www.mext.go.jp/content/20250822-mxt_gakushi01-000013028_2.pdf",
+      "status": 200,
+      "size": 631615,
+      "sha256": "9916c123ae5e60b36e253c89c2cf10b492287644d5648787171a8e6af8f2e83f",
+      "content_type": "application/pdf"
+    },
+    {
+      "id": "education_finance",
+      "url": "https://www.mext.go.jp/content/20250625-mxt_chousa01-000043292_1.pdf",
+      "final_url": "https://www.mext.go.jp/content/20250625-mxt_chousa01-000043292_1.pdf",
+      "status": 200,
+      "size": 859067,
+      "sha256": "3259387b115726f27eecf4765224bf02c5e3da2c121d2643b28ef8e2189292fe",
+      "content_type": "application/pdf"
+    },
+    {
+      "id": "grant_rules",
+      "url": "https://www.jasso.go.jp/shogakukin/about/kyufu/kingaku.html",
+      "final_url": "https://www.jasso.go.jp/shogakukin/about/kyufu/kingaku.html",
+      "status": 200,
+      "size": 84097,
+      "sha256": "5076d1e7a9e597d8d136c698252aad09833e79ee7aca29fbde12061e8a3d1f67",
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "id": "bond_law",
+      "url": "https://www.mof.go.jp/faq/budget/01aa.htm",
+      "final_url": "https://www.mof.go.jp/faq/budget/01aa.htm",
+      "status": 200,
+      "size": 22596,
+      "sha256": "28e151bc512eabcfc4ed3f3b231e552ba0ca28f4b552bc44bff40795d693e0c6",
+      "content_type": "text/html"
+    },
+    {
+      "id": "training_tax",
+      "url": "https://www.chusho.meti.go.jp/zaimu/zeisei/syotokukakudai/chinnagesokushin_gudebook.pdf",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "student_survey",
+      "url": "https://www.jasso.go.jp/statistics/gakusei_chosa/index.html",
+      "final_url": "https://www.jasso.go.jp/statistics/gakusei_chosa/index.html",
+      "status": 200,
+      "size": 311407,
+      "sha256": "56daf10520e7b4744ec1b9a4ee240addc9bea92ed6f3340c3455677960b80359",
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "id": "oecd2026",
+      "url": "https://www.oecd.org/en/publications/education-at-a-glance-2026_c0e523a9-en/japan_8a64c682-en.html",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "id": "student_cost2024",
+      "url": "https://www.jasso.go.jp/statistics/gakusei_chosa/__icsFiles/afieldfile/2026/10/16/data24_1.pdf",
+      "status": 200,
+      "size": 1278850,
+      "sha256": "da9bf0c92afb9a4a90c88527fb15e48a6744c3b6c26768ea45316f4847c42d7c",
+      "role": "Verified current linked PDF, supersedes stale search URL"
+    },
+    {
+      "id": "tax_outline",
+      "url": "https://www.mof.go.jp/tax_policy/tax_reform/outline/fy2026/08taikou_gaiyou.htm",
+      "status": 200,
+      "size": 34623,
+      "sha256": "b95fa46d7e670372a3d4e698967f15d65c72dd6a6011edea12f284071cca8546"
+    },
+    {
+      "id": "training_support",
+      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/jinzaikaihatsu/kyouiku.html",
+      "status": 200,
+      "size": 62635,
+      "sha256": "4a0348aac7ddfd9f8a478b0461cde27f97647a80d7acddac4a6dda63d76f51ca"
+    }
+  ],
+  "external_source_custody": "Hashes refer to locally fetched source bytes; source PDFs/HTML are not deliverables and are not claimed as GitHub custody",
+  "prior_pass_reuse": "Use existing integration receipt and its 11-output replay; focus new tests on education. New LEGACY/EXTRA_ZERO 480 cells match fixed integration.",
+  "research_limitations": "Training expense is conditional on spending firms, not a population total. Income shares, causal returns, policy amounts, tax design, lags and financing terms remain scenarios."
+}

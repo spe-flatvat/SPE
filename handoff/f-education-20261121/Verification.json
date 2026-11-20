@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "checks": [
+    "education spending composition, no financing double count",
+    "grant cash-consumption-saving-borrowing uses",
+    "existing and induced training tax support separated",
+    "policy-specific bond stock-flow and interest cost scope",
+    "national debt/PB and measured causal rates blank",
+    "legacy plus additional-zero equality",
+    "old budget/scholarship/H-stock removed before replacement",
+    "no education job headcount double counting",
+    "effective labour plus skills minus time identity",
+    "inherited capital identity",
+    "bond financing has no direct GDP demand",
+    "loan displacement alone has no consumption stimulus",
+    "tax subsidy without additional training has no new participants",
+    "zero causal return control",
+    "separate 1/4/8-year training/scholar/school lags",
+    "strict trigger threshold and lagged endogenous assessment",
+    "hand debt cohort example: issue, half-year interest, grace, 20 repayments",
+    "single/combined interaction decomposition",
+    "fresh numerical output byte replay"
+  ],
+  "replayed_outputs": [
+    {
+      "file": "Annual.csv",
+      "size": 1996375,
+      "sha256": "e9cc9c08e5a5529d6da208c49822c144ee2a5a7827dc5e7aa200a62fde541db6"
+    },
+    {
+      "file": "Comparison.csv",
+      "size": 310316,
+      "sha256": "14cbb1e3e75a5c6ca0c63efa999301f26f5cf5c6d53b382ecd8f5f032dc61ae5"
+    },
+    {
+      "file": "Corporate_Training.csv",
+      "size": 84707,
+      "sha256": "f4ab6a1d6d5e4846d40b542b456f81d90b7d3ac2681be0203d3f923d5166837b"
+    },
+    {
+      "file": "Education.csv",
+      "size": 436163,
+      "sha256": "b1e7a4278efeea4f8f07f52aa3693b8856c3a20c9e232f71970d80a5dbcd0c7e"
+    },
+    {
+      "file": "Education_Investment.csv",
+      "size": 60288,
+      "sha256": "969310204762207ca563053d74e91676555312428f462cc4807ada7c6ac301a8"
+    },
+    {
+      "file": "Fiscal_Bonds.csv",
+      "size": 168347,
+      "sha256": "2129833f437eca902cdf231be39d5d47e3c08eed01c4e209db68e277b60fdf92"
+    },
+    {
+      "file": "Human_Capital.csv",
+      "size": 136916,
+      "sha256": "f47c5598e9b0bc9c575b2dd200d31c215e5dd346bcae023e8779884aecd64621"
+    },
+    {
+      "file": "Interactions.csv",
+      "size": 13848,
+      "sha256": "533afde753801b84cdae6e8a8ad499411bddca497ab8f23bf534c60966edf960"
+    },
+    {
+      "file": "Scholarship.csv",
+      "size": 143668,
+      "sha256": "81019200fb6870821325fee449e7b47c6d7f6bc658188e8324027ed9bba3c15b"
+    },
+    {
+      "file": "Scholarship_Groups.csv",
+      "size": 233794,
+      "sha256": "f0aa794b91dd6138544c9d04dfd9242cae40c9241beb10e38dbbb9745a8dad1a"
+    },
+    {
+      "file": "Summary.csv",
+      "size": 47228,
+      "sha256": "36d8a10f01cfc86c506369059605f2092b0ee498f0a8f097edc4b27915c0d227"
+    },
+    {
+      "file": "Validation.json",
+      "size": 529,
+      "sha256": "683dcc5c550635adb6f9ee387860dd28bd92f09c69b76a04c2c5aba965c77a16"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "status": "LOCAL_ORIGINAL_INVENTORY",
+  "files": [
+    {
+      "file": "Annual.csv",
+      "size": 1996375,
+      "sha256": "e9cc9c08e5a5529d6da208c49822c144ee2a5a7827dc5e7aa200a62fde541db6"
+    },
+    {
+      "file": "Comparison.csv",
+      "size": 310316,
+      "sha256": "14cbb1e3e75a5c6ca0c63efa999301f26f5cf5c6d53b382ecd8f5f032dc61ae5"
+    },
+    {
+      "file": "Corporate_Training.csv",
+      "size": 84707,
+      "sha256": "f4ab6a1d6d5e4846d40b542b456f81d90b7d3ac2681be0203d3f923d5166837b"
+    },
+    {
+      "file": "Dependencies_and_Sources.json",
+      "size": 6435,
+      "sha256": "aa4e711535f42165b523d2206d2d2bb379217e8be8ce98101499345c86516af1"
+    },
+    {
+      "file": "Education.csv",
+      "size": 436163,
+      "sha256": "b1e7a4278efeea4f8f07f52aa3693b8856c3a20c9e232f71970d80a5dbcd0c7e"
+    },
+    {
+      "file": "Education_Investment.csv",
+      "size": 60288,
+      "sha256": "969310204762207ca563053d74e91676555312428f462cc4807ada7c6ac301a8"
+    },
+    {
+      "file": "Fiscal_Bonds.csv",
+      "size": 168347,
+      "sha256": "2129833f437eca902cdf231be39d5d47e3c08eed01c4e209db68e277b60fdf92"
+    },
+    {
+      "file": "Human_Capital.csv",
+      "size": 136916,
+      "sha256": "f47c5598e9b0bc9c575b2dd200d31c215e5dd346bcae023e8779884aecd64621"
+    },
+    {
+      "file": "Inputs.json",
+      "size": 6825,
+      "sha256": "d796d432c1f625784c322bbb330d5da8ab59fbbdfa6043cf3a10538c2901e651"
+    },
+    {
+      "file": "Interactions.csv",
+      "size": 13848,
+      "sha256": "533afde753801b84cdae6e8a8ad499411bddca497ab8f23bf534c60966edf960"
+    },
+    {
+      "file": "Model.py",
+      "size": 24178,
+      "sha256": "08d6b409e9e815e6eb34878c69457c77a7a7e7fe9f5b85fa2debeb0f1a8ee88c"
+    },
+    {
+      "file": "Report.md",
+      "size": 13600,
+      "sha256": "49daac4138989c9234072367cb948b5e92d8323ab1c92a00106584b1bc0dca31"
+    },
+    {
+      "file": "Reproduction.md",
+      "size": 2841,
+      "sha256": "38eebbd75eae59143b5234e276be3d2552e1b2fe65ebae0cd6e572a5ae5c3328"
+    },
+    {
+      "file": "Scholarship.csv",
+      "size": 143668,
+      "sha256": "81019200fb6870821325fee449e7b47c6d7f6bc658188e8324027ed9bba3c15b"
+    },
+    {
+      "file": "Scholarship_Groups.csv",
+      "size": 233794,
+      "sha256": "f0aa794b91dd6138544c9d04dfd9242cae40c9241beb10e38dbbb9745a8dad1a"
+    },
+    {
+      "file": "Sources_and_Map.md",
+      "size": 5524,
+      "sha256": "73848f5afb081f874f257da77ada18dccc35999176cea4dd00a179d2b84bcd46"
+    },
+    {
+      "file": "Summary.csv",
+      "size": 47228,
+      "sha256": "36d8a10f01cfc86c506369059605f2092b0ee498f0a8f097edc4b27915c0d227"
+    },
+    {
+      "file": "Validation.json",
+      "size": 529,
+      "sha256": "683dcc5c550635adb6f9ee387860dd28bd92f09c69b76a04c2c5aba965c77a16"
+    },
+    {
+      "file": "Verification.json",
+      "size": 2938,
+      "sha256": "de860a4bbb6bf6b83e0d640422bd97704d9f19f3f40c851181f5cf10fe04584a"
+    },
+    {
+      "file": "Verify.py",
+      "size": 6450,
+      "sha256": "766279e0d0f60a47664991dba4e978b9988f1501a3ea927a8d89e684e8015a67"
+    }
+  ]
+}

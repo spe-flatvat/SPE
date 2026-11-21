@@ -1,0 +1,58 @@
+id,area,description,expected,actual,abs_diff,tol,verdict
+R01,R,"79 cases x 30 years = 2,370 rows in every one of 4 candidate runs, no missing/duplicate keys",True,True,0,0,PASS
+R02,R,"4 candidates x 79 x 30 = 9,480 case-years re-executed by Claude",True,True,0,0,PASS
+A01,A,"fund roll-forward begin+contribution+return-payout=end, 2040 rows over 4 candidates",0.0,7.659934908588184e-10,7.659934908588184e-10,5e-09,PASS
+A02,A,fund return = begin stock x case return rate (default 2%; case overrides 0/4%),0.0,2.000177801164682e-11,2.000177801164682e-11,5e-09,PASS
+A03,A,"each candidate assigns 100% of the return to exactly one channel (LEGACY none/unattributed, DOMESTIC debit, FOREIGN external, ADDITIONAL_VA service VA); direct GDP subtraction 0; second contribution charge 0 (all 9,480 rows)",0,0,0,0,PASS
+A04,A,"fund stock/contribution/payout and benefit delta identical to pre-correction in all 4 candidates (no change in fund balance, no second contribution deduction)",0.0,0.0,0.0,1e-09,PASS
+A05,A,"policy household cash(mode) = pre-correction cash - domestic debit, all 4 candidates x 2,370 rows",0.0,9.300151759816799e-10,9.300151759816799e-10,1e-09,PASS
+A06,A,"policy service VA(mode) = pre-correction VA + additional VA only (ADDITIONAL_VA), all rows",0.0,8.600231637956313e-12,8.600231637956313e-12,1e-09,PASS
+A07,A,DOMESTIC total household_cash_delta moves by exactly -debit (no extra channel),0.0,9.100240561110695e-10,9.100240561110695e-10,1e-09,PASS
+A08,A,"LEGACY and FOREIGN_INCOME reproduce all 412,380 pre-correction cells exactly (string-equal) per mode",0,0,0,0,PASS
+A09,A,DOMESTIC_TRANSFER incremental primary income = 0 in all rows,0.0,0.0,0.0,1e-12,PASS
+A10,A,ADDITIONAL_VA incremental primary income = return (counterfactual labelled separately),0.0,0.0,0.0,1e-12,PASS
+A11,A,Pension_Source_Accounts.csv (1564 rows) re-derived from Claude re-run; rows not found=0; unallocated residual = return - sum(channels); LEGACY residual = 100%,0.0,0.0,0.0,1e-09,PASS
+A12,A,only LEGACY has an unallocated source; the three candidates leave zero residual,True,True,0,0,PASS
+B01,B,2055 real GDP LEGACY N3_CONNECTED_COMPONENTS_A,477.587252101,477.587252101,0.0,5e-07,PASS
+B02,B,2055 real GDP DOMESTIC_TRANSFER N3_CONNECTED_COMPONENTS_A,475.923625914,475.923625914,0.0,5e-07,PASS
+B03,B,2055 real GDP FOREIGN_INCOME N3_CONNECTED_COMPONENTS_A,477.587252101,477.587252101,0.0,5e-07,PASS
+B04,B,2055 real GDP ADDITIONAL_VA N3_CONNECTED_COMPONENTS_A,480.566616773,480.566616773,0.0,5e-07,PASS
+B05,B,2055 real GDP LEGACY PENSION_COUNTERPART_R0,518.507629544,518.507629544,0.0,5e-07,PASS
+B06,B,2055 real GDP DOMESTIC_TRANSFER PENSION_COUNTERPART_R0,518.507629544,518.507629544,0.0,5e-07,PASS
+B07,B,2055 real GDP DOMESTIC_TRANSFER PENSION_COUNTERPART_R0p02,516.912231237,516.912231237,0.0,5e-07,PASS
+B08,B,2055 real GDP DOMESTIC_TRANSFER PENSION_COUNTERPART_R0p04,514.665206158,514.665206158,0.0,5e-07,PASS
+B09,B,A case DOMESTIC 2055 GDP diff vs pre-correction,-1.663626187,-1.663626186999977,2.2870594307278225e-14,5e-07,PASS
+B10,B,A case ADDITIONAL_VA 2055 GDP diff,2.979364672,2.979364672000031,3.108624468950438e-14,5e-07,PASS
+B11,B,A case DOMESTIC 2055 tax proxy diff,-0.71050592,-0.7105059200000028,2.7755575615628914e-15,5e-07,PASS
+B12,B,A case DOMESTIC 2055 DI proxy diff,-5.763875768,-5.763875767999991,8.881784197001252e-15,5e-07,PASS
+B13,B,A case DOMESTIC 2055 fund asset diff,0.0,0.0,0.0,5e-09,PASS
+B14,B,"old R4-R0 2055 GDP = 0.157022376 (old yield sensitivity, not the counterpart correction amount)",0.157022376,0.15702237599998625,1.3739009929736312e-14,5e-07,PASS
+B15,B,demand-target identity of the correction: dCtarget = ds*MPC*(-debit)/coreD + ds*MPC*0.08*d(gap_t-1); 2291 case-years (all 79 cases),0.0,1.993789577880989e-10,1.993789577880989e-10,5e-09,PASS
+B16,B,"demand falls by MPC x debit only (0.72 of the return), never the full return; gain is not assumed fully consumed | by B15 identity (MPC 0.72, domestic share 0.8)",True,True,0,0,PASS
+B17,B,"ADDITIONAL_VA raises GDP by the explicit VA channel (positive, same order as VA); counterfactual, not adoptable",True,True,0,0,PASS
+B18,B,"FOREIGN_INCOME leaves domestic GDP/tax/DI identical to pre-correction in all 2,370 rows (no direct GDP add; full GNI not implemented)",True,True,0,0,PASS
+B19,B,"tax_diagnostic = macro tax + VAT delta + direct-tax delta (tax counted once) after correction, 2,370 rows",0,0,0,0,PASS
+C01,C,"pre-correction cells compared (2,370 rows x 174 columns)",412380,412380,0,0,PASS
+C02,C,changed cells in DOMESTIC vs pre-correction,2640,2640,0,0,PASS
+C03,C,exactly identical cells,409740,409740,0,0,PASS
+C04,C,"8 changed columns, 330 case-years each | {'real_gdp_trn': 330, 'nominal_gdp_trn': 330, 'tax_diagnostic_trn': 330, 'household_consumption_nominal_proxy_trn': 330, 'consolidated_partial_balance_proxy_trn': 330, 'macro_cash_DI_proxy_trn': 330, 'policy_household_cash_delta_trn': 330, 'household_cash_delta_trn': 330}",True,True,0,0,PASS
+C05,C,"15 changed cases | CONNECTED_Q,CONNECTED_Q_ESTATE,CONNECTED_Q_ESTATE_SEMI,CONNECTED_Q_LOW_LABOUR,CONNECTED_Q_NO_FLAT,N3_CONNECTED_COMPONENTS_A,N3_CONNECTED_COMPONENTS_B,N3_CONNECTED_NO_TAX,N3_CONNECTED_PHASE1_2030,PENSION75_NEW2039,PENSION75_PROTECTED2033,PENSION75_RETURN4,PENSION_COUNTERPART_R0p02,PENSION_COUNTERPART_R0p04,TAX_AND_PENSION",True,True,0,0,PASS
+C06,C,"changed case-years == case-years with positive pension return (zero yield, no pension, pre-start unchanged) | 330 vs 330",True,True,0,0,PASS
+C07,C,"every pension case with zero return (R0, no-pension, pre-start) has zero change",True,True,0,0,PASS
+C08,C,"Work Before_After_Cell_Differences.csv (2,640 rows) equals independent cell-by-cell diff",True,True,0,0,PASS
+C09,C,population/foreign/medical/estate/VAT-delta columns unchanged (not in changed set),True,True,0,0,PASS
+C10,C,"target Gap_Annual.csv == Claude DOMESTIC rerun, all 2,370 x 184 cells string-equal",True,True,0,0,PASS
+C11,C,"Candidate_Sensitivity_Annual.csv: 9,480 unique mode-case-year keys, none missing",True,True,0,0,PASS
+C12,C,Candidate_Sensitivity_Annual values and minus-legacy equal Claude re-runs (max abs diff over 9 metrics x 2),0.0,0.0,0.0,1e-09,PASS
+C13,C,"DOMESTIC rerun CSV vs target bytes: identical=23, different=0 []",0,0,0,0,PASS
+C14,C,number of byte-identical re-run CSVs (Work reported 23),23,23,0,0,PASS
+C16,C,"LEGACY rerun reproduces all 127,890 pre-correction cells of N3_Policy_Accounts / N3_Pension_Accounts / Pension_Counterpart (new columns only added; label column counterparty_status excluded: text intentionally replaced in all 510 rows)",0,0,0,0,PASS
+C15,C,old-46 prior-expansion numeric cells at unchanged (zero-return) case-years equal after correction; cells checked=154692,0,0,0,0,PASS
+D01,D,F_Reference_Annual 30 rows equal fixed ff621006 LATEST_F real/nominal GDP (F not re-run),True,True,0,0,PASS
+D02,D,Key_Years_Comparison (196 rows: 7 cases x 4 years x 7 metrics) re-derived from Claude re-run + fixed F,0.0,0.0,0.0,5e-09,PASS
+D03,D,Key years are exactly 2026/2035/2045/2055; 196 rows,True,True,0,0,PASS
+D04,D,N3 raw macro_cash_DI_proxy includes a non-zero price-benefit term that F cash proxy excludes => same-name direct comparison invalid; matched proxy needed | max |price benefit| 2035-55 = 25.9010,True,True,0,0,PASS
+D05,D,"national PB / debt / bond issue null in all 2,370 corrected rows (not 0)",True,True,0,0,PASS
+D06,D,EITC baseline stays null,True,True,0,0,PASS
+D07,D,"SQ_F_N3_Comparison.csv has 2,370 rows (79 x 30) and minus_SQ equals own recompute for real GDP",True,True,0,0,PASS
+D08,D,SQ_COMMON_ON baseline unchanged by correction (no pension),True,True,0,0,PASS

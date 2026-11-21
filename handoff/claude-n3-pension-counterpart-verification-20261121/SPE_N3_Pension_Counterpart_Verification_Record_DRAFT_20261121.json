@@ -1,0 +1,114 @@
+{
+ "status": "ARTIFACT_STAGED_PRE_PUSH_NON_CANONICAL",
+ "scope": "N3 pension-return counterpart correction limited independent verification (read-only)",
+ "request_commit": "d38337195ea58eaf5765dd37d1fcc60855882111",
+ "target_commit": "76176ae118ee073677e990c0d8c4cfa498e3563d",
+ "pre_correction_commit": "556953292e24615cee47d92bb27e85badf12329c",
+ "prior_claude_pass_reused": "cc032bcd6975105376e31fd00b9a00032d3c0b82",
+ "engine_commit": "ff6210061615105de9a0d64767c256796be80ed2",
+ "branch": "work/claude-handoff",
+ "directory": "handoff/claude-n3-pension-counterpart-verification-20261121/",
+ "results": {
+  "manifest_files": 50,
+  "manifest_mismatch": 0,
+  "pins": 9,
+  "pins_mismatch": 0,
+  "input_receipt_entries": 81,
+  "input_receipt_verified_by_claude": 80,
+  "input_receipt_not_fetched": 1,
+  "input_receipt_mismatch": 0,
+  "reexecuted_candidates": 4,
+  "reexecuted_case_years": 9480,
+  "domestic_rerun_files_byte_identical": "25/25",
+  "legacy_rerun_reproduces_pre_correction_cells": true,
+  "independent_checks": 57,
+  "independent_pass": 57,
+  "independent_fail": 0,
+  "compared_cells": 412380,
+  "changed_cells": 2640,
+  "identical_cells": 409740,
+  "changed_cases": 15,
+  "changed_case_years": 330
+ },
+ "verdicts": {
+  "integrity": "PASS_WITH_LIMITATIONS",
+  "rerun": "PASS",
+  "A": "PASS_WITH_LIMITATIONS",
+  "B": "PASS_WITH_LIMITATIONS",
+  "C": "PASS",
+  "D": "PASS_WITH_LIMITATIONS"
+ },
+ "mismatches_fail": 0,
+ "limitations": [
+  "L1",
+  "L2",
+  "L3",
+  "L4",
+  "L5",
+  "L6",
+  "L7"
+ ],
+ "scope_guards": [
+  "target model not modified",
+  "RP-023/M19-25 HOLD",
+  "RP-024 PENDING",
+  "policy originals and formal approval status maintained",
+  "no Acceptance",
+  "no N3 completion declared",
+  "no ZIP",
+  "no write to other branches or existing originals"
+ ],
+ "files": [
+  {
+   "file": "SPE_N3_Pension_Counterpart_Byte_Comparison_DRAFT_20261121.csv",
+   "size": 10275,
+   "sha256": "c68c7cd56380bc523a8734c837533f5f469a342e0df3d487c0be1701aaebaa0a"
+  },
+  {
+   "file": "SPE_N3_Pension_Counterpart_Candidate_2055_By_Case_DRAFT_20261121.csv",
+   "size": 23004,
+   "sha256": "086eea6a359cf81e0fddc835dee4ee47615b0053a59f074167377843c1eaf793"
+  },
+  {
+   "file": "SPE_N3_Pension_Counterpart_Cell_Differences_Independent_DRAFT_20261121.csv",
+   "size": 266432,
+   "sha256": "8e0dd4c3a5e65666e563007ef2b2341201489d852aecc002913b211256088db6"
+  },
+  {
+   "file": "SPE_N3_Pension_Counterpart_Execution_Log_DRAFT_20261121.txt",
+   "size": 3639,
+   "sha256": "3929c98e1bdae8a908e572be032dce84375fc3e63809a1b67a20a2d4aef78720"
+  },
+  {
+   "file": "SPE_N3_Pension_Counterpart_Independent_Numeric_Comparison_DRAFT_20261121.csv",
+   "size": 7606,
+   "sha256": "78d0e54dd6377504be29995ffa7e65b232ef61d566cdc349710831f1bc5028d3"
+  },
+  {
+   "file": "SPE_N3_Pension_Counterpart_Independent_Recalc_DRAFT_20261121.py",
+   "size": 25974,
+   "sha256": "d8ef6e8082cbd6a6ca4fdd88f403a41dcaec28f983c0d9fc215d83aa335cb1c3"
+  },
+  {
+   "file": "SPE_N3_Pension_Counterpart_Independent_Summary_DRAFT_20261121.json",
+   "size": 1318,
+   "sha256": "e35e5defa293524b841e8ddfd1043ad21375cdfaeec367334d9855cd71eb550f"
+  },
+  {
+   "file": "SPE_N3_Pension_Counterpart_Independent_Verification_Report_DRAFT_20261121.md",
+   "size": 11755,
+   "sha256": "4ae1ac73620283b83327e5b29caee6235e6e205cb1e3a056acb4d39969e2360f"
+  },
+  {
+   "file": "SPE_N3_Pension_Counterpart_Run_Reexecution_DRAFT_20261121.sh",
+   "size": 529,
+   "sha256": "0f16b3270c817d55c49c9e6e6262455a58c916c832d8cf5b2139ef92043e7025"
+  },
+  {
+   "file": "SPE_N3_Pension_Counterpart_Run_Verification_DRAFT_20261121.sh",
+   "size": 1591,
+   "sha256": "a06df76aaa7c2eadd44c447007c06129bf75ca5dd13ba6871aed931755330dec"
+  }
+ ],
+ "note": "Self-record excludes itself. Post-push custody (fixed Commit re-fetch, actual-byte SHA-256 and size) is reported separately."
+}

@@ -1,0 +1,72 @@
+# 注: 実行ログ（時刻UTC）。1)再実行4候補 2)独立検算・バイト比較 3)Input_Receipt照合。独立検算コード初回実行は1件不一致（私のコードの年キー型の不備）、修正後に本ログの実行を行った。
+
+##### [1] run_pension.sh
+== START 2026-11-21T07:07:46Z
+== [DOMESTIC_TRANSFER] Gap_Model.py
+COMPLETE 2370
+
+real	1m9.455s
+user	1m8.720s
+sys	0m0.264s
+== [DOMESTIC_TRANSFER] Build_Results.py
+{"annual_rows": 2370, "cases": 79, "new_cases": 33, "comparison_rows": 2370, "financing_scenario_rows": 7110}
+== [LEGACY] Gap_Model.py
+COMPLETE 2370
+
+real	1m5.544s
+user	1m4.843s
+sys	0m0.261s
+== [LEGACY] Build_Results.py
+{"annual_rows": 2370, "cases": 79, "new_cases": 33, "comparison_rows": 2370, "financing_scenario_rows": 7110}
+== [FOREIGN_INCOME] Gap_Model.py
+COMPLETE 2370
+
+real	1m3.833s
+user	1m3.129s
+sys	0m0.220s
+== [FOREIGN_INCOME] Build_Results.py
+{"annual_rows": 2370, "cases": 79, "new_cases": 33, "comparison_rows": 2370, "financing_scenario_rows": 7110}
+== [ADDITIONAL_VA] Gap_Model.py
+COMPLETE 2370
+
+real	1m4.943s
+user	1m4.310s
+sys	0m0.230s
+== [ADDITIONAL_VA] Build_Results.py
+{"annual_rows": 2370, "cases": 79, "new_cases": 33, "comparison_rows": 2370, "financing_scenario_rows": 7110}
+== END 2026-11-21T07:12:13Z
+
+##### [2] run_pension_verify.sh
+== START 2026-11-21T07:13:19Z
+== independent recompute
+{
+}
+== byte comparison: DOMESTIC rerun vs target; LEGACY rerun vs pre-correction
+DOMESTIC_TRANSFER files 25 identical 25 differ: []
+LEGACY files 25 identical 20 differ: ['Execution_Metadata.json', 'Gap_Annual.csv', 'N3_Pension_Accounts.csv', 'N3_Policy_Accounts.csv', 'Pension_Counterpart.csv']
+== END 2026-11-21T07:13:21Z
+
+##### [3] Input_Receipt / Manifest / pins integrity
+entries 81 {'55695329': 40, 'cc032bcd': 8, '444a34e5': 31, '58043884': 1, 'ffbc4ec6': 1}
+missing handoff/claude-n3-gap-independent-verification-20261121/SPE_N3_Gap_Byte_Comparison_DRAFT_20261121.csv
+missing handoff/claude-n3-gap-independent-verification-20261121/SPE_N3_Gap_Execution_Log_DRAFT_20261121.txt
+missing handoff/claude-n3-gap-independent-verification-20261121/SPE_N3_Gap_Independent_Numeric_Comparison_DRAFT_20261121.csv
+missing handoff/claude-n3-gap-independent-verification-20261121/SPE_N3_Gap_Independent_Recalc_DRAFT_20261121.py
+missing handoff/claude-n3-gap-independent-verification-20261121/SPE_N3_Gap_Independent_Summary_DRAFT_20261121.json
+missing handoff/claude-n3-gap-independent-verification-20261121/SPE_N3_Gap_Independent_Verification_Report_DRAFT_20261121.md
+missing handoff/claude-n3-gap-independent-verification-20261121/SPE_N3_Gap_Run_All_DRAFT_20261121.sh
+missing handoff/claude-n3-gap-independent-verification-20261121/SPE_N3_Gap_Verification_Record_DRAFT_20261121.json
+missing policies/New3linesPolicies.md
+missing handoff/n3-pension-counterpart-work-20261121/SPE_Work_N3_Pension_Counterpart_One_Run_Execution_Instruction_20261121.md
+Input_Receipt entries checked against tree built from fixed commits: missing 10 mismatch 0
+mine True SPE_N3_Gap_Byte_Comparison_DRAFT_20261121.csv
+mine True SPE_N3_Gap_Execution_Log_DRAFT_20261121.txt
+mine True SPE_N3_Gap_Independent_Numeric_Comparison_DRAFT_20261121.csv
+mine True SPE_N3_Gap_Independent_Recalc_DRAFT_20261121.py
+mine True SPE_N3_Gap_Independent_Summary_DRAFT_20261121.json
+mine True SPE_N3_Gap_Independent_Verification_Report_DRAFT_20261121.md
+mine True SPE_N3_Gap_Run_All_DRAFT_20261121.sh
+mine True SPE_N3_Gap_Verification_Record_DRAFT_20261121.json
+policy True
+instruction commit ffbc4ec6ed75e011ba6b10796621eba8c5a79898 (not fetched)
+Manifest 50 files mismatch 0; Dependency_Pins 9 mismatch 0 (checked before rerun)

@@ -1,0 +1,42 @@
+{
+ "total": 57,
+ "pass_": 57,
+ "fail": 0,
+ "failed_ids": [],
+ "by_area": {
+  "R": {
+   "total": 2,
+   "fail": 0
+  },
+  "A": {
+   "total": 12,
+   "fail": 0
+  },
+  "B": {
+   "total": 19,
+   "fail": 0
+  },
+  "C": {
+   "total": 16,
+   "fail": 0
+  },
+  "D": {
+   "total": 8,
+   "fail": 0
+  }
+ },
+ "changed_cells": 2640,
+ "identical_cells": 409740,
+ "compared_cells": 412380,
+ "changed_case_years": 330,
+ "changed_cases": 15,
+ "candidate_case_years": 9480,
+ "byte_identical_csv": 23,
+ "observations": [
+  "DOMESTIC R4-R0 2055 GDP = -3.842423386 (sign flips vs old +0.157022376: domestic debit exceeds retained-return demand effect). Correction amount at R4 = -3.999445762",
+  "ADDITIONAL_VA real VA (nominal/deflator) vs GDP rise: 2035: VA_real=0.0846 dGDP=0.0854; 2045: VA_real=1.4860 dGDP=1.5453; 2055: VA_real=2.8526 dGDP=2.9794",
+  "LEGACY rerun CSV vs pre-correction bytes: identical=19, different=4 (extra legacy columns/new account columns expected where schema grew)",
+  "old-46 regression at unchanged case-years: 154692 numeric cells (Work reports 154,692 annual + 204,292 component = zero-return subset); changed case-years excluded by design.",
+  "F vs N3 comparison: N3 SQ_COMMON_ON 2055 real GDP 528.962336 vs fixed F LATEST_F 540.274554 (different connected scope; differences are not a causal ranking)"
+ ]
+}

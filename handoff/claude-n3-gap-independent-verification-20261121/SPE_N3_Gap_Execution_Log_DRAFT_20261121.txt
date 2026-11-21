@@ -1,0 +1,109 @@
+# 注: 本ログは run_all.sh の実行出力（時刻はUTC）。初回の試行実行で独立コード5項目が不一致（私の期待値の誤り）となり、修正後に本実行を行った。
+== START 2026-11-21T06:36:24Z
+== python Python 3.13.17
+== [1] fixed-input integrity: Manifest.json (38 files) + Dependency_Pins.json (9 pins) vs actual bytes
+manifest files 38 mismatch 0
+pins 9 mismatch 0
+== [2] re-run Gap_Model.py (79 cases) into fresh outdir
+done GIFT_REPORTED_ONLY
+COMPLETE 2370
+
+real	1m11.266s
+user	1m10.672s
+sys	0m0.251s
+== [3] Build_Results.py
+{"annual_rows": 2370, "cases": 79, "new_cases": 33, "comparison_rows": 2370, "financing_scenario_rows": 7110}
+== [4] Work Verify.py (reference only, not counted as independent)
+  "cases": 79,
+  "annual_rows": 2370,
+  "new_cases": 33,
+  "tests": {
+    "old46_annual_numeric_cells": 177396,
+    "old46_component_numeric_cells": 271964,
+    "tax_once_payer_identity_open_national_nonnegative_rows": 2370,
+    "common_wish_and_capacity_rows": 2370,
+    "VAT_quantity_sales_tax_identities": 7110,
+    "elasticity_GDP_monotonic_same_price_pass": 3,
+    "partial_financing_stock_flow_rows": 7110,
+    "pension_stock_flow_counterparty_rows": 510,
+    "semi_medical_no_fabricated_saving_rows": 120,
+    "foreign_N4_cap_SQ_nonduplication_rows": 120,
+    "estate_reported_only_tax_delta": 90,
+    "gift_standalone_no_estate_overlap": 30
+  }
+}
+== [5] Claude independent recompute (own code)
+{
+ "total": 76,
+ "pass_": 76,
+ "fail": 0,
+ "by_area": {
+  "A": {
+   "total": 20,
+   "fail": 0
+  },
+  "B": {
+   "total": 10,
+   "fail": 0
+  },
+  "C": {
+   "total": 14,
+   "fail": 0
+  },
+  "D": {
+   "total": 20,
+   "fail": 0
+  },
+  "E": {
+   "total": 12,
+   "fail": 0
+  }
+ },
+ "failed_ids": [],
+ "old46_annual_cells": 177396,
+ "old46_component_cells": 271964,
+ "rows_2370": 2370,
+ "vat_hh_market_year_rows": 986,
+ "financing_rows": 7110
+}
+== [6] byte comparison replay2 vs fixed target outputs
+DIFF Checks.json
+DIFF Execution_Metadata.json
+SAME F_Reference_Annual.csv
+SAME Gap_Additional_Accounts.csv
+SAME Gap_Annual.csv
+SAME Gap_Common.csv
+SAME Gap_Foreign_Bridge.csv
+SAME Gap_Semi_Medical.csv
+SAME Gap_vs_SQ.csv
+SAME Interactions.csv
+SAME Key_Years.csv
+SAME N3_Claim_Candidate_Audit.csv
+SAME N3_Corporate_Accounts.csv
+SAME N3_Engine_Accounts.csv
+SAME N3_Income_Distribution.csv
+SAME N3_Pension_Accounts.csv
+SAME N3_Policy_Accounts.csv
+SAME N3_Selftest.json
+SAME N3_Structural_Interfaces.csv
+SAME N3_VAT_Regular_Quantity.csv
+SAME N3_VAT_Sectors.csv
+SAME Partial_Fiscal_Financing.csv
+SAME Pension_Counterpart.csv
+SAME SQ_F_N3_Comparison.csv
+SAME Sensitivity.csv
+SAME VAT_Price_Quantity_Income.csv
+files 26 identical 24
+== [7] second pass: independent recompute against Work's own delivered outputs (not the replay)
+ "total": 76,
+ "pass_": 76,
+ "fail": 0,
+   "total": 20,
+   "fail": 0
+   "total": 10,
+   "fail": 0
+   "total": 14,
+   "fail": 0
+   "total": 20,
+replay-based and delivered-output-based comparison CSV identical
+== END 2026-11-21T06:37:39Z

@@ -1,0 +1,33 @@
+{
+ "total": 76,
+ "pass_": 76,
+ "fail": 0,
+ "by_area": {
+  "A": {
+   "total": 20,
+   "fail": 0
+  },
+  "B": {
+   "total": 10,
+   "fail": 0
+  },
+  "C": {
+   "total": 14,
+   "fail": 0
+  },
+  "D": {
+   "total": 20,
+   "fail": 0
+  },
+  "E": {
+   "total": 12,
+   "fail": 0
+  }
+ },
+ "failed_ids": [],
+ "old46_annual_cells": 177396,
+ "old46_component_cells": 271964,
+ "rows_2370": 2370,
+ "vat_hh_market_year_rows": 986,
+ "financing_rows": 7110
+}

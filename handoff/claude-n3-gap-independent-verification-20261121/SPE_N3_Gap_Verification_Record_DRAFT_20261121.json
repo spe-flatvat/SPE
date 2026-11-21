@@ -1,0 +1,103 @@
+{
+ "status": "ARTIFACT_STAGED_PRE_PUSH_NON_CANONICAL",
+ "scope": "N3 gap-closure 79-case limited independent verification (read-only)",
+ "request_commit": "1c3582b0faee7f9e8f462f09c4f7a5e2e0a93a83",
+ "target_commit": "556953292e24615cee47d92bb27e85badf12329c",
+ "target_dir": "handoff/chatgpt-n3-gap-closure-20261121/",
+ "engine_commit": "ff6210061615105de9a0d64767c256796be80ed2",
+ "pin_commit_n3_expansion": "444a34e5349099482c0e51f9ccf9efef199a652b",
+ "draft_commit": "3c77eafc2073fdaba4c129164817d2f57c9421b9",
+ "branch": "work/claude-handoff",
+ "directory": "handoff/claude-n3-gap-independent-verification-20261121/",
+ "results": {
+  "target_manifest_files_checked": 38,
+  "manifest_mismatch": 0,
+  "pins_checked": 9,
+  "pins_mismatch": 0,
+  "delivery_verification_entries": 39,
+  "delivery_verification_mismatch": 0,
+  "rerun_files_compared": 26,
+  "rerun_byte_identical": 24,
+  "rerun_differences": [
+   "Execution_Metadata.json (absolute source_script path)",
+   "Checks.json (Verify.py replay field not added outside Reproduce.py)"
+  ],
+  "independent_checks": 76,
+  "independent_pass": 76,
+  "independent_fail": 0,
+  "rows": 2370,
+  "cases": 79,
+  "old46_annual_cells": 177396,
+  "old46_component_cells": 271964,
+  "financing_rows": 7110,
+  "vat_hh_market_year_rows": 986
+ },
+ "verdicts": {
+  "integrity": "PASS",
+  "rerun": "PASS",
+  "A": "PASS_WITH_LIMITATIONS",
+  "B": "PASS_WITH_LIMITATIONS",
+  "C": "PASS_WITH_LIMITATIONS",
+  "D": "PASS_WITH_LIMITATIONS",
+  "E": "PASS"
+ },
+ "mismatches_fail": 0,
+ "limitations": [
+  "M1",
+  "M2",
+  "M3",
+  "L1",
+  "L2",
+  "L3",
+  "L4",
+  "L5"
+ ],
+ "scope_guards": [
+  "target model not modified",
+  "RP-023/M19-25 HOLD",
+  "RP-024 PENDING",
+  "policy originals and formal approval status maintained",
+  "no Acceptance",
+  "no N3 full-policy completion declared",
+  "no ZIP",
+  "no write to work/chatgpt-handoff/main/policies/Inbox"
+ ],
+ "files": [
+  {
+   "file": "SPE_N3_Gap_Byte_Comparison_DRAFT_20261121.csv",
+   "size": 4503,
+   "sha256": "f07f56eaddf0e211b87d8ab4d1e00626b6ad51f2f18ab03df10ba9079663dca6"
+  },
+  {
+   "file": "SPE_N3_Gap_Execution_Log_DRAFT_20261121.txt",
+   "size": 2999,
+   "sha256": "ef9bb3bd953ff7efaa696ab107943ab093854a2ce643760c185fa9ae25e7d6a5"
+  },
+  {
+   "file": "SPE_N3_Gap_Independent_Numeric_Comparison_DRAFT_20261121.csv",
+   "size": 9306,
+   "sha256": "633f3900e156296b6f11bbe283aadebfa8ad8ae9d794272b27491cba8ebfc24f"
+  },
+  {
+   "file": "SPE_N3_Gap_Independent_Recalc_DRAFT_20261121.py",
+   "size": 30672,
+   "sha256": "c2aa67eedabe8d3ef4ede3349577d99b33b8b0b523d1ebc46cead5e8ddf38f78"
+  },
+  {
+   "file": "SPE_N3_Gap_Independent_Summary_DRAFT_20261121.json",
+   "size": 437,
+   "sha256": "e0787965ff5161a6d1605da47c7d01088f59072c6c79aca05c2c0e09744dddc9"
+  },
+  {
+   "file": "SPE_N3_Gap_Independent_Verification_Report_DRAFT_20261121.md",
+   "size": 13165,
+   "sha256": "da66440b240935db4949fc2dc536d5f8526a6ee1507b698dc6d93734803967c0"
+  },
+  {
+   "file": "SPE_N3_Gap_Run_All_DRAFT_20261121.sh",
+   "size": 2949,
+   "sha256": "db8e5abd3589545d4853c0fbc7fe2178000cd543abba3d790885ab5c04c40495"
+  }
+ ],
+ "note": "Self-record excludes itself. Post-push custody (fixed Commit re-fetch, actual-byte SHA-256 and size) is reported separately after the push."
+}

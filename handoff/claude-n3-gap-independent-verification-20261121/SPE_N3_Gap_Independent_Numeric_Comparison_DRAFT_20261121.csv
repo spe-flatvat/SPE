@@ -1,0 +1,77 @@
+id,area,description,expected,actual,abs_diff,tol,verdict
+E01,E,"79 cases x 30 years = 2,370 annual rows | rows=2370 cases=79",True,True,0,0,PASS
+E02,E,every case has years 2026..2055 exactly once,True,True,0,0,PASS
+E03,E,Execution_Metadata executed_cases/annual_rows match,True,True,0,0,PASS
+A01,A,"2055 real GDP e=0,p=0.8",526.234068,526.234067925,7.500000265281415e-08,5e-07,PASS
+A02,A,"2055 real GDP e=0.25,p=0.8",523.596278,523.596278032,3.200000264769187e-08,5e-07,PASS
+A03,A,"2055 real GDP e=0.75,p=0.8",518.464138,518.464138036,3.599996034608921e-08,5e-07,PASS
+A04,A,GDP strictly decreasing in elasticity for p=0.6/0.8/1.0,True,True,0,0,PASS
+A05_VAT_ELASTIC_025,A,old price-benefit model 2055 GDP (VAT_ELASTIC_025) = 518.277707,518.277707,518.277707368,3.680000872918754e-07,5e-07,PASS
+A05_VAT_ELASTIC_075,A,old price-benefit model 2055 GDP (VAT_ELASTIC_075) = 518.277707,518.277707,518.277707368,3.680000872918754e-07,5e-07,PASS
+A06,A,old-model GDP indifferent to elasticity (0.25 vs 0.75),518.277707368,518.277707368,0.0,5e-07,PASS
+A07_Q_E0p25_P0p8_2030,A,non-household quantity stays 1,1.0,1.0,0.0,1e-12,PASS
+A07_Q_E0p25_P0p8_2055,A,non-household quantity stays 1,1.0,1.0,0.0,1e-12,PASS
+A08,A,price ratio = 1+pass*(new-old)/(1+old) from statutory rates; 986 HH market-year rows; max|obs-exp| (incl. old VAT=rate*base),0.0,8.000711204658728e-12,8.000711204658728e-12,5e-09,PASS
+A09,A,"q = clip(ratio^-e, 0.7, 1.3); max |q_obs - q_exp|",0.0,4.931610675384945e-13,4.931610675384945e-13,5e-09,PASS
+A10,A,annual quantity_nominal_volume_delta = sum over HH markets of gross0*(q-1) (purchaser prices),0.0,1.56035184772918e-10,1.56035184772918e-10,5e-09,PASS
+A11,A,annual quantity_replaced_price_benefit = sum of HH price_HH (0 for INCREMENTAL_RESIDUAL),0.0,8.999911926821369e-11,8.999911926821369e-11,5e-09,PASS
+A12,A,"demand-target replacement identity, 4 matched new-vs-old pairs x 29 yrs = 116 rows; max |dCtarget_obs - exp|",0.0,9.265477274311706e-11,9.265477274311706e-11,5e-06,PASS
+A13,A,"e=0: quantity==1 for all HH market-years, volume delta == 0",True,True,0,0,PASS
+A14,A,"e=0 quantity route still lifts GDP vs old price route (price benefit removed from demand, none replaced): 2055 GDP(Q_E0) > old 518.277707",True,True,0,0,PASS
+A15,A,INCREMENTAL_RESIDUAL cases replace no price benefit,True,True,0,0,PASS
+A16,A,"tax_diagnostic = macro tax + VAT delta + direct-tax delta, all 2,370 rows (tax counted once)",0,0,0,0,PASS
+A17,A,2026 initial year carries no quantity channel,0,0,0,0,PASS
+A18,A,quantity audit lists only HH_STANDARD/HH_FOOD/NON_HH per case-year; medical/exempt not a quantity market,True,True,0,0,PASS
+B01,B,"7,110 financing rows = 2,370 x 3 candidate rates; rates in {0,2,4%}",True,True,0,0,PASS
+B02,B,"independent debt/asset recursion (issue,redeem,draw,add,interest,stocks) for 7110 rows; max abs diff",0.0,0.0,0.0,5e-07,PASS
+B03,B,national PB / debt / bond issue columns are empty in all financing rows,True,True,0,0,PASS
+B04,B,"national PB / debt / bond issue empty in all 2,370 annual rows",True,True,0,0,PASS
+B05,B,"residual debt/asset stocks start at 0 in 2026 (initial 0 is partial-model origin, not national debt 0)",True,True,0,0,PASS
+B06,B,status labelled PARTIAL_CLOSURE_INCREMENTAL_UNALLOCATED_GOVERNMENT_ONLY,True,True,0,0,PASS
+B07,B,interest 0% => debt carries no interest; interest>0 never lowers need at equal debt,True,True,0,0,PASS
+B08,B,SQ_COMMON_ON baseline has zero financing need/debt at every rate/year (increment-only scope),True,True,0,0,PASS
+B09,B,"engine direct tax delta = medical financing tax + policy tax delta (no third term, no VAT inside)",0.0,8.542002660760772e-10,8.542002660760772e-10,5e-07,PASS
+B10,B,policy unclosed budget = policy gov cost - insurer cash - policy tax,0.0,7.430003279296216e-10,7.430003279296216e-10,5e-07,PASS
+C01,C,FLAT_HH_SURVEY 2055 GDP - SQ,-34.609662,-34.60966213900008,1.3900007900247147e-07,5e-07,PASS
+C02,C,FLAT_SOURCE_LOW_LABOUR 2055 GDP - SQ,-23.554667,-23.55466702500007,2.500007312278285e-08,5e-07,PASS
+C03,C,FLAT_HH_SURVEY 2055 policy tax delta proxy,110.345869,110.345868915,8.49999963747905e-08,5e-07,PASS
+C04,C,FLAT_SOURCE_LOW_LABOUR 2055 policy tax delta proxy,75.099265,75.0992653298,3.298000024187786e-07,5e-07,PASS
+C05,C,"policy tax delta ordered by the working-age labour share actually used (SURVEY .95 > ""HIGH_LABOUR"" .80 > ""LOW_LABOUR"" .65) in 2055 | NAMING NOTE: FLAT_SOURCE_HIGH_LABOUR (0.80) is LOWER in labour share than the survey default (0.95); only HIGH>LOW holds by name",True,True,0,0,PASS
+C06,C,flat labour/business 30% and financial 20% parts sum to policy tax delta for flat cases (no other tax component),True,True,0,0,PASS
+C07,C,"estate delta = (40% x 23.3846 - 3.2446) x deflator index x phase, 5 cases x 30y",0.0,4.786038232396095e-11,4.786038232396095e-11,5e-09,PASS
+C08,C,"estate 40% minus old-tax constant (2024 base, tax-paying returns only)",6.10924,6.10924,0.0,1e-09,PASS
+C09,C,gift delta = (40% x 2.6761 - 0.3178) x idx x phase,0.0,4.85766982194491e-12,4.85766982194491e-12,5e-09,PASS
+C10,C,gift 40% minus old-tax constant,0.75264,0.75264,0.0,1e-09,PASS
+C11,C,estate and gift never additive in one case,True,True,0,0,PASS
+C12,C,EITC baseline stays empty (OPEN) in all rows,True,True,0,0,PASS
+C13,C,"estate cases: GDP strictly lower with higher MPC offset? (MPC channel: tax transfer reduces HH cash by MPC difference vs generic) | 2055 GDP MPC0/0.1/0.5 = [528.962336333, 528.467066402, 526.485986676]",True,True,0,0,PASS
+C14,C,estate tax pass-through zero before household_start 2030,0.0,0.0,0.0,0.0,PASS
+D01,D,"independent foreign cap recursion (admission, retention 98%, cap, VA) for 120 rows; max rel diff",0.0,4.754047962015327e-12,4.754047962015327e-12,1e-09,PASS
+D02,D,annual foreign_extra_employed equals bridge extra_end (persons),0.0,4.163302946835756e-08,4.163302946835756e-08,1e-06,PASS
+D03,D,"2055 additional stay working adults, WAGE_BILL 0.05",68953.6,68953.6274391,0.02743909999844618,0.05,PASS
+D04,D,"2055 additional stay working adults, VALUE_ADDED 0.05 (SQ stock already above cap -> 0)",0.0,0.0,0.0,1e-09,PASS
+D05,D,"2055 GDP - SQ, FOREIGN_WAGE_BILL_0p05",0.57924,0.5792403409999451,3.4099994516978427e-07,5e-07,PASS
+D06,D,"2055 GDP - SQ, FOREIGN_VALUE_ADDED_0p05 and both 0.001 cases all zero",0.0,0.0,0.0,5e-07,PASS
+D07,D,WAGE_BILL and VALUE_ADDED definitions produce different admissions (not confused),True,True,0,0,PASS
+D08,D,foreign pilot never alters shared SQ inflow (common_SQ_inflow_changed False in all rows); no admission before 2033,True,True,0,0,PASS
+D09,D,foreign costs left unallocated (None) in pilot cases,True,True,0,0,PASS
+D10,D,SQ baseline stock already above cap is charged first: VALUE_ADDED 0.001 and 0.05 baseline_over_cap all True and admitted 0 (2033+),True,True,0,0,PASS
+D11,D,"semi-public fund roll-forward, reserve=rate x claims, premium=claims, counterpart=-return, public net 0 (120 rows)",0.0,7.746692176624492e-12,7.746692176624492e-12,5e-09,PASS
+D12,D,redirected claims scale exactly with share (0.5/0.25=2),0.0,4.000000330961484e-11,4.000000330961484e-11,5e-09,PASS
+D13,D,semi-public pure transfer (no reserve) leaves real GDP identical to the same medical reform without it (0.25),0.0,0.0,0.0,5e-09,PASS
+D14,D,semi-public pure transfer (no reserve) leaves real GDP identical (0.5),0.0,0.0,0.0,5e-09,PASS
+D15,D,no fictitious public saving: partial public balance unchanged by pure transfer,0.0,0.0,0.0,5e-09,PASS
+D16,D,optional 2% reserve premium is a HH cash reduction => GDP differs from pure transfer | max |GDP diff|=0.118136,True,True,0,0,PASS
+D17,D,reserve premium reduces household cash one-for-one (no second charge),0.0,0.0,0.0,5e-09,PASS
+D18,D,"pension fund roll-forward, return counterpart = -return, no second HH deduction (510 rows)",0.0,7.659934908588184e-10,7.659934908588184e-10,5e-09,PASS
+D19,D,pension fund return = begin stock x candidate return rate (0/2/4%),0.0,2.0085266783098632e-11,2.0085266783098632e-11,5e-09,PASS
+D20,D,"OBSERVATION: 2055 GDP rises with fund return (R0<R2<R4) via larger fund payout to households; financial-sector counterpart is labelled only, not deducted from any income | GDP2055 R0/R2/R4=518.507630/518.575857/518.664652; payout 2055 R0=0.7876 R4=1.3326; LIMITATION: counterpart residual not netted",True,True,0,0,PASS
+E04,E,old-46 annual numeric cells checked=177396; mismatches,0,0,0,0,PASS
+E05,E,"old-46 annual numeric cell count equals Work-reported 177,396 | actual 177396",True,True,0,0,PASS
+E06,E,"old expansion output has 46 cases (14 legacy + 32 added), new = 33 | old=46 new=33",True,True,0,0,PASS
+E07,E,old-46 component numeric cells checked=271964; mismatches,0,0,0,0,PASS
+E08,E,"component cell count equals Work-reported 271,964 | actual 271964",True,True,0,0,PASS
+E09,E,F_Reference_Annual has 30 rows equal in real_gdp/nominal_gdp to fixed ff621006 LATEST_F,True,True,0,0,PASS
+E10,E,Execution_Metadata legacy_cases/new_cases = 14/65 vs README 46/33 (labels differ; total 79 equal) | label-only inconsistency: 14 draft + 65 config cases = 79; old46/new33 split is Work-narrative,True,True,0,0,PASS
+E11,E,Interactions.csv marks attribution=False for all rows (no causal ranking),True,True,0,0,PASS
+E12,E,interaction = combined - a - b (vs base) identity (single/combined/interaction separated),0.0,5.684341886080802e-14,5.684341886080802e-14,5e-07,PASS

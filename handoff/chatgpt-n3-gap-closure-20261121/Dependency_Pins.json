@@ -1,0 +1,65 @@
+[
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_Expansion_Model.py",
+    "size": 10861,
+    "sha256": "bfb46b0f5bb02d628582c3772dd686be7efc94227b128d516899a3ebceb1b54a",
+    "verification": "LOCAL_READ_EQUALS_FIXED_GIT_BLOB"
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_Expansion_Inputs.json",
+    "size": 7908,
+    "sha256": "f4382122f3bd0c5fc5ea8adf06832d4d6cdfa5177db40d71da17d57e23ebc422",
+    "verification": "LOCAL_READ_EQUALS_FIXED_GIT_BLOB"
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_Components.py",
+    "size": 12416,
+    "sha256": "3da949845436180fb2038e109afe9d01c66c5c9ca064dad548326777ea4a9519",
+    "verification": "LOCAL_READ_EQUALS_FIXED_GIT_BLOB"
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_Expansion_Annual.csv",
+    "size": 1835282,
+    "sha256": "fcc7783bc11e7d781eaf6470f23ef0da5e93edaae6e6f8570cf862e90f326749",
+    "verification": "LOCAL_READ_EQUALS_FIXED_GIT_BLOB"
+  },
+  {
+    "commit": "ff6210061615105de9a0d64767c256796be80ed2",
+    "path": "handoff/f-common-endoflife-finalization-20261121/Inputs.json",
+    "size": 27093,
+    "sha256": "6da4648a8823c041197e9082d6814b6e19710afdf7bb7c7130dc58d4cabd6095",
+    "verification": "LOCAL_READ_EQUALS_FIXED_GIT_BLOB"
+  },
+  {
+    "commit": "ff6210061615105de9a0d64767c256796be80ed2",
+    "path": "handoff/f-common-endoflife-finalization-20261121/Annual.csv",
+    "size": 6775129,
+    "sha256": "1754500818d58de9b075106cb1185322dc5c961a3438dbcfa0a2883917d8ba79",
+    "verification": "LOCAL_READ_EQUALS_FIXED_GIT_BLOB"
+  },
+  {
+    "commit": "ff6210061615105de9a0d64767c256796be80ed2",
+    "path": "handoff/f-integrated-20261121/Annual.csv",
+    "size": 2082920,
+    "sha256": "eb92953e843dfd7b84a0476b2f41ae310cafbf976cb857895b7363beabdf4772",
+    "verification": "LOCAL_READ_EQUALS_FIXED_GIT_BLOB"
+  },
+  {
+    "commit": "ff6210061615105de9a0d64767c256796be80ed2",
+    "path": "handoff/f-household-social-20261120/Inputs.json",
+    "size": 1746742,
+    "sha256": "8a7df2e6b7228177b28346386437b3b7dc6a5f1b8547507a114daf1fc5472766",
+    "verification": "LOCAL_READ_EQUALS_FIXED_GIT_BLOB"
+  },
+  {
+    "commit": "ff6210061615105de9a0d64767c256796be80ed2",
+    "path": "handoff/f-pension-policy-20261120/Inputs.json",
+    "size": 1282097,
+    "sha256": "5969792ecb9218dc3668d56ec426076d0359e1e4c403914f535390972f082514",
+    "verification": "LOCAL_READ_EQUALS_FIXED_GIT_BLOB"
+  }
+]

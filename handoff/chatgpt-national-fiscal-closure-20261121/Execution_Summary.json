@@ -1,0 +1,15 @@
+{
+  "status": "EXECUTED_PARTIAL_CLOSURE",
+  "macro_cases_per_mode": 79,
+  "macro_modes": 4,
+  "macro_case_years": 9480,
+  "national_fiscal_rows": 23910,
+  "basic_annual_rows": 2370,
+  "f_reexecuted": false,
+  "macro_financing_feedback": false,
+  "full_GG_closed": false,
+  "years": [
+    2026,
+    2055
+  ]
+}

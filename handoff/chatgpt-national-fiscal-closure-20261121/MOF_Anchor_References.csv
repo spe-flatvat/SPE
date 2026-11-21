@@ -1,0 +1,9 @@
+source_url,time_basis,vintage,scope,metric,value_trn,use_in_fiscal_runtime
+https://www.mof.go.jp/policy/budget/budger_workflow/budget/fy2026/seifuan2026/01.pdf,FY2026,INITIAL_BUDGET_GOVERNMENT_PROPOSAL,CENTRAL_GENERAL_ACCOUNT,total_expenditure,122.3092,NO_BOUNDARY_REFERENCE_ONLY
+https://www.mof.go.jp/policy/budget/budger_workflow/budget/fy2026/seifuan2026/01.pdf,FY2026,INITIAL_BUDGET_GOVERNMENT_PROPOSAL,CENTRAL_GENERAL_ACCOUNT,tax_and_stamp,83.735,NO_BOUNDARY_REFERENCE_ONLY
+https://www.mof.go.jp/policy/budget/budger_workflow/budget/fy2026/seifuan2026/01.pdf,FY2026,INITIAL_BUDGET_GOVERNMENT_PROPOSAL,CENTRAL_GENERAL_ACCOUNT,other_revenue,8.9902,NO_BOUNDARY_REFERENCE_ONLY
+https://www.mof.go.jp/jgbs/issuance_plan/fy2026/issuanceplan251226.pdf,FY2026,2025_12_26_INITIAL_PLAN,CENTRAL_NEW_CONSTRUCTION_DEFICIT_BONDS,new_bonds,29.584,NO_NOT_CENTRAL_LOCAL_ALL_ISSUANCE
+https://www.mof.go.jp/jgbs/issuance_plan/fy2026/issuanceplan251226.pdf,FY2026,2025_12_26_INITIAL_PLAN,CENTRAL_ISSUANCE_PLAN,refunding_bonds,135.7586,NO_NOT_REDEMPTION_OF_CL_STOCK
+https://www.mof.go.jp/jgbs/issuance_plan/fy2026/issuanceplan251226.pdf,FY2026,2025_12_26_INITIAL_PLAN,CENTRAL_ISSUANCE_PLAN_ALL_TYPES,total_gross_issuance,180.692,NO_INCLUDES_FISCAL_LOAN_AND_OTHER_BONDS
+https://www.mof.go.jp/jgbs/reference/gbb/202603.html,2026_03_END,FY2025_END_PUBLISHED_2026_05_08,CENTRAL_ORDINARY_JGB_INCLUDING_ADVANCE_REFUNDING,ordinary_JGB_stock,1104.2984,NO_KEEP_DISTINCT_FROM_CAO_CL_STOCK
+https://www.mof.go.jp/jgbs/reference/gbb/202603.html,2026_03_END,FY2025_END_PUBLISHED_2026_05_08,CENTRAL_ORDINARY_JGB_COMPONENT,advance_refunding_stock,26.4841,NO_BOUNDARY_REFERENCE_ONLY

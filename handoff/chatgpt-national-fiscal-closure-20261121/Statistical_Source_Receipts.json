@@ -1,0 +1,38 @@
+[
+  {
+    "file": "CAO_202607_Projections.xlsx",
+    "url": "https://www5.cao.go.jp/keizai2/keizai-syakai/shisan/keisuuhyo.xlsx",
+    "size": 84842,
+    "sha256": "eb45004885411574edc94b5ac5b7dabe127a63b73bbb63a4a130e64b7e01e4c5",
+    "retrieved_date_JST": "2026-11-21",
+    "retrieval": "PYTHON_URLLIB_PUBLIC_HTTPS",
+    "data_status": "OFFICIAL_PUBLISHED_ESTIMATES_OR_PROJECTION_NOT_SPE_ASSUMPTION"
+  },
+  {
+    "file": "SNA2024_GFS.xlsx",
+    "url": "https://www.esri.cao.go.jp/jp/sna/data/data_list/kakuhou/files/2024/tables/2024s6_2_jp.xlsx",
+    "size": 238733,
+    "sha256": "362f28742ebef20bb4e97036bb080f246e69c42d7856012b1a2d84356bcb6aad",
+    "retrieved_date_JST": "2026-11-21",
+    "retrieval": "PYTHON_URLLIB_PUBLIC_HTTPS",
+    "data_status": "OFFICIAL_PUBLISHED_ESTIMATES_OR_PROJECTION_NOT_SPE_ASSUMPTION"
+  },
+  {
+    "file": "SNA2024_Sector_Accounts.xlsx",
+    "url": "https://www.esri.cao.go.jp/jp/sna/data/data_list/kakuhou/files/2024/tables/2024s6_jp.xlsx",
+    "size": 95572,
+    "sha256": "124032a480312e5645c355e4534898a4a316f5c8257c426443fddd69501b1871",
+    "retrieved_date_JST": "2026-11-21",
+    "retrieval": "PYTHON_URLLIB_PUBLIC_HTTPS",
+    "data_status": "OFFICIAL_PUBLISHED_ESTIMATES_OR_PROJECTION_NOT_SPE_ASSUMPTION"
+  },
+  {
+    "file": "SNA2024_Sector_Stocks.xlsx",
+    "url": "https://www.esri.cao.go.jp/jp/sna/data/data_list/kakuhou/files/2024/tables/2024ss3_jp.xlsx",
+    "size": 39897,
+    "sha256": "5a5eb8d7ff206dfa9dddd5d776fb47d74a0b30522bcd725c1978b7a44834a8dc",
+    "retrieved_date_JST": "2026-11-21",
+    "retrieval": "PYTHON_URLLIB_PUBLIC_HTTPS",
+    "data_status": "OFFICIAL_PUBLISHED_ESTIMATES_OR_PROJECTION_NOT_SPE_ASSUMPTION"
+  }
+]

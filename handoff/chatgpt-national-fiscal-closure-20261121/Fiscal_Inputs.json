@@ -1,0 +1,21 @@
+{
+  "status": "DRAFT_NON_CANONICAL_PARTIAL_CLOSURE",
+  "years": [2026,2055],
+  "macro_fiscal_feedback": false,
+  "baseline": "CAO_202607_CURRENT_PROJECTION_ALL_INCLUDED_CENTRAL_LOCAL",
+  "first_year_debt": "2025_END_OFFICIAL_PROJECTION_1270p2_NOT_ZERO_NOT_GG_DEBT",
+  "time_bridge": "SPE_YEAR_y_ASSIGNED_TO_JAPAN_FY_y_CANDIDATE_NO_QUARTERLY_CONVERSION",
+  "allocation": "CENTRAL_PLUS_LOCAL_ONLY_NO_CENTRAL_LOCAL_TAX_SPLIT",
+  "general_government_series": "NULL_NO_FORWARD_SOCIAL_SECURITY_BASELINE",
+  "scenarios": [
+    {"id":"REFERENCE_CANDIDATE","incremental_interest_rate":0.02,"insurer_deficit_backfill":0,"macro_tax_feedback_scale":1,"tail":"NOMINAL_HOLD_2040","refinance_share":0.10},
+    {"id":"STRICT_SOURCE_ONLY","incremental_interest_rate":0.02,"insurer_deficit_backfill":0,"macro_tax_feedback_scale":1,"tail":"NULL_AFTER_2040","refinance_share":0.10},
+    {"id":"INTEREST_ZERO","incremental_interest_rate":0,"insurer_deficit_backfill":0,"macro_tax_feedback_scale":1,"tail":"NOMINAL_HOLD_2040","refinance_share":0.10},
+    {"id":"INTEREST_4PCT","incremental_interest_rate":0.04,"insurer_deficit_backfill":0,"macro_tax_feedback_scale":1,"tail":"NOMINAL_HOLD_2040","refinance_share":0.10},
+    {"id":"INSURER_FULL_BACKFILL","incremental_interest_rate":0.02,"insurer_deficit_backfill":1,"macro_tax_feedback_scale":1,"tail":"NOMINAL_HOLD_2040","refinance_share":0.10},
+    {"id":"MACRO_TAX_HALF","incremental_interest_rate":0.02,"insurer_deficit_backfill":0,"macro_tax_feedback_scale":0.5,"tail":"NOMINAL_HOLD_2040","refinance_share":0.10},
+    {"id":"REFINANCE_20PCT","incremental_interest_rate":0.02,"insurer_deficit_backfill":0,"macro_tax_feedback_scale":1,"tail":"NOMINAL_HOLD_2040","refinance_share":0.20}
+  ],
+  "mode_scope": "REFERENCE_CANDIDATE_ALL_FOUR_MODES;OTHER_SCENARIOS_DOMESTIC_ONLY;F_FIXED_ALL_SCENARIOS",
+  "unallocated": ["BASELINE_STOCK_FLOW_ADJUSTMENT","CENTRAL_LOCAL_POLICY_ALLOCATION","SOCIAL_SECURITY_2026_2055_BASELINE","ACTUAL_GROSS_BOND_MATURITY_SCHEDULE","MACRO_PROXY_TO_OFFICIAL_TAX_CALIBRATION","OFFICIAL_BASELINE_VS_SPE_GDP_CALIBRATION","POST2040_BASELINE","FINANCING_FEEDBACK_TO_GDP"]
+}

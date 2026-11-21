@@ -1,0 +1,16 @@
+{
+  "status": "PASS_IMPLEMENTER_TESTS_NOT_NEW_CLAUDE_REVIEW",
+  "checks": {
+    "fiscal_rows": 23910,
+    "account_identity_rows": 22710,
+    "strict_missing_tail_rows": 1200,
+    "national_GG_unknowns_retained_rows": 23910,
+    "refinancing_changes_gross_only_rows": 2341,
+    "backfill_consolidated_primary_neutral_rows": 2400,
+    "old79_original_cells_exact_unchanged": 436080,
+    "four_mode_annual_regression_numeric_cells": 47400,
+    "official_2024_sector_and_consolidation_rows": 5,
+    "unchanged_pension_protection_foreign_source_CSVs": 3,
+    "fiscal_reexecution_byte_identical_files": 17
+  }
+}

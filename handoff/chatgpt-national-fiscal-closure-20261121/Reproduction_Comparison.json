@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "complete_entrypoint_executed": true,
+  "macro_modes": 4,
+  "macro_case_years": 9480,
+  "output_CSVs_byte_identical_to_full_reproduction": 20,
+  "files": [
+    "Annual79_With_Fiscal.csv",
+    "Fiscal_Baseline_Annual.csv",
+    "Fiscal_Channels_All_Modes.csv",
+    "Key_Year_Differences.csv",
+    "Key_Years_Fiscal_Comparison.csv",
+    "National_Fiscal_Annual.csv",
+    "National_Fiscal_Mode_ADDITIONAL_VA.csv",
+    "National_Fiscal_Mode_FOREIGN_INCOME.csv",
+    "National_Fiscal_Mode_LEGACY.csv",
+    "National_Fiscal_Scenario_INSURER_FULL_BACKFILL.csv",
+    "National_Fiscal_Scenario_INTEREST_4PCT.csv",
+    "National_Fiscal_Scenario_INTEREST_ZERO.csv",
+    "National_Fiscal_Scenario_MACRO_TAX_HALF.csv",
+    "National_Fiscal_Scenario_REFINANCE_20PCT.csv",
+    "National_Fiscal_Scenario_STRICT_SOURCE_ONLY.csv",
+    "Old_New_All79_Comparison.csv",
+    "Old_New_Column_Regression.csv",
+    "Old_New_Macro_Changed_Cells.csv",
+    "Pension_Mode_Fiscal_Comparison.csv",
+    "Transfer_Audit.csv"
+  ]
+}

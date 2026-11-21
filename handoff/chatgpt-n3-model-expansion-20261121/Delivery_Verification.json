@@ -1,0 +1,290 @@
+{
+  "status": "CUSTODY_PASS",
+  "artifact_status": "ARTIFACT_READY",
+  "checked_at_utc": "2026-11-21T00:43:35.208267+00:00",
+  "repository": "spe-flatvat/SPE",
+  "branch": "work/chatgpt-handoff",
+  "artifact_commit": "58bfcf6b16966128ea578760731f3b9a03e7de72",
+  "directory": "handoff/chatgpt-n3-model-expansion-20261121/",
+  "acquisition_route": "Fresh empty bare Git repository; HTTPS fetch exact commit from https://github.com/spe-flatvat/SPE.git after connector delivery; git show commit:path to real bytes",
+  "originals_verified": 30,
+  "sha256_and_size_all_match": true,
+  "manifest_entries_verified": 29,
+  "changed_paths_only_authorized_directory": true,
+  "files": [
+    {
+      "file": "Build_Results.py",
+      "local_size": 18287,
+      "retrieved_size": 18287,
+      "local_sha256": "b837838d173444d005f98aa3d3700da47efea4c93cb4d93a8eb13f5c4c8c89d2",
+      "retrieved_sha256": "b837838d173444d005f98aa3d3700da47efea4c93cb4d93a8eb13f5c4c8c89d2",
+      "match": true,
+      "saved_at": "/tmp/spe-n3-expansion-refetched-20261121/Build_Results.py"
+    },
+    {
+      "file": "Component_Interactions.csv",
+      "local_size": 10524,
+      "retrieved_size": 10524,
+      "local_sha256": "32e446caf0c7623d383af4c0fcce32e50e6adac598e21dcd20ac8c35bdb5051f",
+      "retrieved_sha256": "32e446caf0c7623d383af4c0fcce32e50e6adac598e21dcd20ac8c35bdb5051f",
+      "match": true,
+      "saved_at": "/tmp/spe-n3-expansion-refetched-20261121/Component_Interactions.csv"
+    },
+    {
+      "file": "Execution_Metadata.json",
+      "local_size": 404,
+      "retrieved_size": 404,
+      "local_sha256": "0fea146b3ed715f02ed58e7195ffd8efa2974c6aa326aef91bc0d25350f54959",
+      "retrieved_sha256": "0fea146b3ed715f02ed58e7195ffd8efa2974c6aa326aef91bc0d25350f54959",
+      "match": true,
+      "saved_at": "/tmp/spe-n3-expansion-refetched-20261121/Execution_Metadata.json"
+    },
+    {
+      "file": "Implementation_Status.csv",
+      "local_size": 2385,
+      "retrieved_size": 2385,
+      "local_sha256": "f4a70228ee0798a2a856bf14aa335a04323e563d2ed05d30f7179a6d07ffc740",
+      "retrieved_sha256": "f4a70228ee0798a2a856bf14aa335a04323e563d2ed05d30f7179a6d07ffc740",
+      "match": true,
+      "saved_at": "/tmp/spe-n3-expansion-refetched-20261121/Implementation_Status.csv"
+    },
+    {
+      "file": "Manifest.json",
+      "local_size": 4735,
+      "retrieved_size": 4735,
+      "local_sha256": "f51cd4726f6039702df190b50c6011b67c133ed8986447e700b604b54c0bfdac",
+      "retrieved_sha256": "f51cd4726f6039702df190b50c6011b67c133ed8986447e700b604b54c0bfdac",
+      "match": true,
+      "saved_at": "/tmp/spe-n3-expansion-refetched-20261121/Manifest.json"
+    },
+    {
+      "file": "Medical_Interpolation_Comparison.csv",
+      "local_size": 1395,
+      "retrieved_size": 1395,
+      "local_sha256": "ec76e7b16a21a09f621a8fdad20fa65223e1c91ed1fb646fdc832183719a323f",
+      "retrieved_sha256": "ec76e7b16a21a09f621a8fdad20fa65223e1c91ed1fb646fdc832183719a323f",
+      "match": true,
+      "saved_at": "/tmp/spe-n3-expansion-refetched-20261121/Medical_Interpolation_Comparison.csv"
+    },
+    {
+      "file": "N3_Claim_Candidate_Audit.csv",
+      "local_size": 129958,
+      "retrieved_size": 129958,
+      "local_sha256": "df979f72589b929f2c7f978ebd7a6512e027e79ccd1767fefcde68b07c88eded",
+      "retrieved_sha256": "df979f72589b929f2c7f978ebd7a6512e027e79ccd1767fefcde68b07c88eded",
+      "match": true,
+      "saved_at": "/tmp/spe-n3-expansion-refetched-20261121/N3_Claim_Candidate_Audit.csv"
+    },
+    {
+      "file": "N3_Components.py",
+      "local_size": 12416,
+      "retrieved_size": 12416,
+      "local_sha256": "3da949845436180fb2038e109afe9d01c66c5c9ca064dad548326777ea4a9519",
+      "retrieved_sha256": "3da949845436180fb2038e109afe9d01c66c5c9ca064dad548326777ea4a9519",
+      "match": true,
+      "saved_at": "/tmp/spe-n3-expansion-refetched-20261121/N3_Components.py"
+    },
+    {
+      "file": "N3_Corporate_Accounts.csv",
+      "local_size": 145917,
+      "retrieved_size": 145917,
+      "local_sha256": "1368dcf43d8728106a79cfa93ff21c6f0f272576c76f002c875636a90d1f87e8",
+      "retrieved_sha256": "1368dcf43d8728106a79cfa93ff21c6f0f272576c76f002c875636a90d1f87e8",
+      "match": true,
+      "saved_at": "/tmp/spe-n3-expansion-refetched-20261121/N3_Corporate_Accounts.csv"
+    },
+    {
+      "file": "N3_Engine_Accounts.csv",
+      "local_size": 213113,
+      "retrieved_size": 213113,
+      "local_sha256": "947402bc61f1676987dc738cd8946077ac7692cf822f17ee6b0ade5fc1079137",
+      "retrieved_sha256": "947402bc61f1676987dc738cd8946077ac7692cf822f17ee6b0ade5fc1079137",
+      "match": true,
+      "saved_at": "/tmp/spe-n3-expansion-refetched-20261121/N3_Engine_Accounts.csv"
+    },
+    {
+      "file": "N3_Expansion_Annual.csv",
+      "local_size": 1835282,
+      "retrieved_size": 1835282,
+      "local_sha256": "fcc7783bc11e7d781eaf6470f23ef0da5e93edaae6e6f8570cf862e90f326749",
+      "retrieved_sha256": "fcc7783bc11e7d781eaf6470f23ef0da5e93edaae6e6f8570cf862e90f326749",
+      "match": true,
+      "saved_at": "/tmp/spe-n3-expansion-refetched-20261121/N3_Expansion_Annual.csv"
+    },
+    {
+      "file": "N3_Expansion_Checks.json",
+      "local_size": 3443,
+      "retrieved_size": 3443,
+      "local_sha256": "dd61afa64bdbe5fcb4c523ede228fa4d611f68dd0a238444d9b5fb463fff7913",
+      "retrieved_sha256": "dd61afa64bdbe5fcb4c523ede228fa4d611f68dd0a238444d9b5fb463fff7913",
+      "match": true,
+      "saved_at": "/tmp/spe-n3-expansion-refetched-20261121/N3_Expansion_Checks.json"
+    },
+    {
+      "file": "N3_Expansion_Common.csv",
+      "local_size": 1434724,
+      "retrieved_size": 1434724,
+      "local_sha256": "e68b9d89eba3b47a6fa141c8493f9e65c8b23f1b520c419f1867f27d4e3bf1c9",
+      "retrieved_sha256": "e68b9d89eba3b47a6fa141c8493f9e65c8b23f1b520c419f1867f27d4e3bf1c9",
+      "match": true,
+      "saved_at": "/tmp/spe-n3-expansion-refetched-20261121/N3_Expansion_Common.csv"
+    },
+    {
+      "file": "N3_Expansion_Comparison.csv",
+      "local_size": 297067,
+      "retrieved_size": 297067,
+      "local_sha256": "3b9def9c5dc41386564b909839c246069f8a159bb1c127642605b4c14511b984",
+      "retrieved_sha256": "3b9def9c5dc41386564b909839c246069f8a159bb1c127642605b4c14511b984",
+      "match": true,
+      "saved_at": "/tmp/spe-n3-expansion-refetched-20261121/N3_Expansion_Comparison.csv"
+    },
+    {
+      "file": "N3_Expansion_Inputs.json",
+      "local_size": 7908,
+      "retrieved_size": 7908,
+      "local_sha256": "f4382122f3bd0c5fc5ea8adf06832d4d6cdfa5177db40d71da17d57e23ebc422",
+      "retrieved_sha256": "f4382122f3bd0c5fc5ea8adf06832d4d6cdfa5177db40d71da17d57e23ebc422",
+      "match": true,
+      "saved_at": "/tmp/spe-n3-expansion-refetched-20261121/N3_Expansion_Inputs.json"
+    },
+    {
+      "file": "N3_Expansion_Model.py",
+      "local_size": 10861,
+      "retrieved_size": 10861,
+      "local_sha256": "bfb46b0f5bb02d628582c3772dd686be7efc94227b128d516899a3ebceb1b54a",
+      "retrieved_sha256": "bfb46b0f5bb02d628582c3772dd686be7efc94227b128d516899a3ebceb1b54a",
+      "match": true,
+      "saved_at": "/tmp/spe-n3-expansion-refetched-20261121/N3_Expansion_Model.py"
+    },
+    {
+      "file": "N3_Expansion_Run.txt",
+      "local_size": 1169,
+      "retrieved_size": 1169,
+      "local_sha256": "0b8dd355dceffff0e368fa743f9ca8b7b13e605362ca9eac9e18c1af472a264d",
+      "retrieved_sha256": "0b8dd355dceffff0e368fa743f9ca8b7b13e605362ca9eac9e18c1af472a264d",
+      "match": true,
+      "saved_at": "/tmp/spe-n3-expansion-refetched-20261121/N3_Expansion_Run.txt"
+    },
+    {
+      "file": "N3_Expansion_Test_Output.txt",
+      "local_size": 2925,
+      "retrieved_size": 2925,
+      "local_sha256": "c2e75c0784da91c9fd06c8f6e540ac03bcca4804d6b6f414b4490099442b6180",
+      "retrieved_sha256": "c2e75c0784da91c9fd06c8f6e540ac03bcca4804d6b6f414b4490099442b6180",
+      "match": true,
+      "saved_at": "/tmp/spe-n3-expansion-refetched-20261121/N3_Expansion_Test_Output.txt"
+    },
+    {
+      "file": "N3_Expansion_Verify.py",
+      "local_size": 11306,
+      "retrieved_size": 11306,
+      "local_sha256": "01aedef500b1191479ec082d22d071629c04a0e3459092f461ad9becc7964022",
+      "retrieved_sha256": "01aedef500b1191479ec082d22d071629c04a0e3459092f461ad9becc7964022",
+      "match": true,
+      "saved_at": "/tmp/spe-n3-expansion-refetched-20261121/N3_Expansion_Verify.py"
+    },
+    {
+      "file": "N3_Income_Distribution.csv",
+      "local_size": 2664466,
+      "retrieved_size": 2664466,
+      "local_sha256": "d08b67826d4622e5c5a61009cdbffc43dd09039d0eb33c8948aea8636b2ee92a",
+      "retrieved_sha256": "d08b67826d4622e5c5a61009cdbffc43dd09039d0eb33c8948aea8636b2ee92a",
+      "match": true,
+      "saved_at": "/tmp/spe-n3-expansion-refetched-20261121/N3_Income_Distribution.csv"
+    },
+    {
+      "file": "N3_Pension_Accounts.csv",
+      "local_size": 67341,
+      "retrieved_size": 67341,
+      "local_sha256": "7efe424a170caee967e45574dfc41e5ef7dc01d0d8f326d537875110a75185bc",
+      "retrieved_sha256": "7efe424a170caee967e45574dfc41e5ef7dc01d0d8f326d537875110a75185bc",
+      "match": true,
+      "saved_at": "/tmp/spe-n3-expansion-refetched-20261121/N3_Pension_Accounts.csv"
+    },
+    {
+      "file": "N3_Policy_Accounts.csv",
+      "local_size": 256888,
+      "retrieved_size": 256888,
+      "local_sha256": "49145a85253023b531e4b9a4da5f7e6e456b0a17abc38710292dc7c9c7b42745",
+      "retrieved_sha256": "49145a85253023b531e4b9a4da5f7e6e456b0a17abc38710292dc7c9c7b42745",
+      "match": true,
+      "saved_at": "/tmp/spe-n3-expansion-refetched-20261121/N3_Policy_Accounts.csv"
+    },
+    {
+      "file": "N3_SQ_F_Comparison.csv",
+      "local_size": 3543206,
+      "retrieved_size": 3543206,
+      "local_sha256": "80fb9283bdd4d11ccd7843bc8ba4065760c00e5c34931aa03a730cb7d039da88",
+      "retrieved_sha256": "80fb9283bdd4d11ccd7843bc8ba4065760c00e5c34931aa03a730cb7d039da88",
+      "match": true,
+      "saved_at": "/tmp/spe-n3-expansion-refetched-20261121/N3_SQ_F_Comparison.csv"
+    },
+    {
+      "file": "N3_Selftest.json",
+      "local_size": 40,
+      "retrieved_size": 40,
+      "local_sha256": "9b80d04dc9d8018ec322701f3f0bdbb68e6037bcf232cbd8aacbac74feedfe3f",
+      "retrieved_sha256": "9b80d04dc9d8018ec322701f3f0bdbb68e6037bcf232cbd8aacbac74feedfe3f",
+      "match": true,
+      "saved_at": "/tmp/spe-n3-expansion-refetched-20261121/N3_Selftest.json"
+    },
+    {
+      "file": "N3_Structural_Interfaces.csv",
+      "local_size": 128281,
+      "retrieved_size": 128281,
+      "local_sha256": "02da41d24026b6185762ea479a3784e0f5c92ef5fb71cd7f6d28797f8504207a",
+      "retrieved_sha256": "02da41d24026b6185762ea479a3784e0f5c92ef5fb71cd7f6d28797f8504207a",
+      "match": true,
+      "saved_at": "/tmp/spe-n3-expansion-refetched-20261121/N3_Structural_Interfaces.csv"
+    },
+    {
+      "file": "N3_VAT_Regular_Quantity.csv",
+      "local_size": 536652,
+      "retrieved_size": 536652,
+      "local_sha256": "62d51c6255f8ee3f2c91c5b8aac4d666f2c08c9ae2dbfbab9417a8bc0641fbfc",
+      "retrieved_sha256": "62d51c6255f8ee3f2c91c5b8aac4d666f2c08c9ae2dbfbab9417a8bc0641fbfc",
+      "match": true,
+      "saved_at": "/tmp/spe-n3-expansion-refetched-20261121/N3_VAT_Regular_Quantity.csv"
+    },
+    {
+      "file": "N3_VAT_Sectors.csv",
+      "local_size": 1944495,
+      "retrieved_size": 1944495,
+      "local_sha256": "7705932c329c03d35f97b2ddfd947eb23c48ad020d21545feb7cab14795907bb",
+      "retrieved_sha256": "7705932c329c03d35f97b2ddfd947eb23c48ad020d21545feb7cab14795907bb",
+      "match": true,
+      "saved_at": "/tmp/spe-n3-expansion-refetched-20261121/N3_VAT_Sectors.csv"
+    },
+    {
+      "file": "Reproduction.md",
+      "local_size": 5088,
+      "retrieved_size": 5088,
+      "local_sha256": "c28cf4ca755153516814cfdd6f4bdff075edb3684bd793aad3dd79e18d718cfa",
+      "retrieved_sha256": "c28cf4ca755153516814cfdd6f4bdff075edb3684bd793aad3dd79e18d718cfa",
+      "match": true,
+      "saved_at": "/tmp/spe-n3-expansion-refetched-20261121/Reproduction.md"
+    },
+    {
+      "file": "SPE_N3_Model_Expansion_Report_DRAFT_20261121.md",
+      "local_size": 12019,
+      "retrieved_size": 12019,
+      "local_sha256": "f080479f56a0dc8566e3f757704c7b1cd8a4d81e49487224afd58c82d465f55e",
+      "retrieved_sha256": "f080479f56a0dc8566e3f757704c7b1cd8a4d81e49487224afd58c82d465f55e",
+      "match": true,
+      "saved_at": "/tmp/spe-n3-expansion-refetched-20261121/SPE_N3_Model_Expansion_Report_DRAFT_20261121.md"
+    },
+    {
+      "file": "Source_Reuse.json",
+      "local_size": 4352,
+      "retrieved_size": 4352,
+      "local_sha256": "4a1f85ca847583fb4800a9b9af8ecbcfd9d4ab5b96d34c57652dbcf18c127943",
+      "retrieved_sha256": "4a1f85ca847583fb4800a9b9af8ecbcfd9d4ab5b96d34c57652dbcf18c127943",
+      "match": true,
+      "saved_at": "/tmp/spe-n3-expansion-refetched-20261121/Source_Reuse.json"
+    }
+  ],
+  "receipt_self_excluded": "This post-verification receipt is an additional file. It does not claim self-hash validation or extend scientific validation.",
+  "formal_acceptance": false,
+  "RP023_M1925": "HOLD",
+  "RP024": "PENDING"
+}

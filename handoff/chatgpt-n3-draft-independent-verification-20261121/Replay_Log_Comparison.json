@@ -1,0 +1,7 @@
+{
+  "full_log_byte_equal": false,
+  "reason": "original log contains author headers and placeholder commands;outputs compared by exact sections",
+  "run_section_equal": true,
+  "checks_section_equal": true,
+  "selftest_section_equal": true
+}

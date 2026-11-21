@@ -1,0 +1,155 @@
+{
+  "status": "DRAFT_NON_CANONICAL",
+  "files": [
+    {
+      "file": "Build_Report.py",
+      "size": 15408,
+      "sha256": "e3498e133110617df1e3e03daf40686b223fcbb58656d403c56bc03b72b437ed"
+    },
+    {
+      "file": "Claude_Checks_Reexecuted.txt",
+      "size": 918,
+      "sha256": "de9cfa36018337b4d364dfbfee50753dcdd9e25c2aa1ed5c1c183954eaa60935"
+    },
+    {
+      "file": "Common_Behavior_Boundaries.csv",
+      "size": 3335,
+      "sha256": "e340b5223cead7ac0722031bd29e8efe38a14149f5aa117caae19000eb508335"
+    },
+    {
+      "file": "Environment.json",
+      "size": 383,
+      "sha256": "89682b7533138f50417c3bffe8c918e9f9b7078594b3eeee3e6c03007c330812"
+    },
+    {
+      "file": "Independent_Cell_Comparisons.csv",
+      "size": 2705381,
+      "sha256": "c265011bf339516526600335f2e864266380fd50b8a36a7590f44e9a9684e9ba"
+    },
+    {
+      "file": "Independent_Claim_Boundaries.csv",
+      "size": 1844726,
+      "sha256": "7f343008465bafd953925a7b042fdcaf2043a2305095cc8b8051394d81384e88"
+    },
+    {
+      "file": "Independent_Medical_Finance.csv",
+      "size": 39547,
+      "sha256": "3a593c2b1a306da5f7f153856d5443054ab58a000aa39de79318029224e68ec2"
+    },
+    {
+      "file": "Independent_Result.json",
+      "size": 55321,
+      "sha256": "9caab8a0b9c5941a13cf968a348a7405f85fdfe60ea4d017b5efb4b998ed91f5"
+    },
+    {
+      "file": "Independent_Run.txt",
+      "size": 626,
+      "sha256": "2939100f190e2060a2cbd3b0b882718fe60a37e7a90b19ed8af82c04a2aafd2a"
+    },
+    {
+      "file": "Independent_VAT.csv",
+      "size": 30279,
+      "sha256": "551c8d161d722da816384a0c012f83e6444cb62496695f51f8d84f71f0f365a7"
+    },
+    {
+      "file": "Independent_VAT_Sectors.csv",
+      "size": 135791,
+      "sha256": "8e21f7234a6386d39e628d67e95a4f18df48f8afe6cc2882194d24e7ff4bc2ec"
+    },
+    {
+      "file": "Independent_Verify.py",
+      "size": 22012,
+      "sha256": "d506ae4a016b03de13fa8b2758364c4f895a8d7f0d23fd431883222aa4588c46"
+    },
+    {
+      "file": "Key_Results_Compared_To_Common_ON.csv",
+      "size": 16187,
+      "sha256": "cba11b34d5b5b8d7bc1e6e154191d1a4f8f5d848157a54bcc6de4b048fd01da6"
+    },
+    {
+      "file": "Observed_Replay_Run.txt",
+      "size": 363,
+      "sha256": "61f4836140ba91a123746f0d9d7d04573e660342ce93e1757210a8679c260531"
+    },
+    {
+      "file": "Phase_Interpretation_Audit.csv",
+      "size": 73536,
+      "sha256": "9ea5ed4286c8d59bfc53db9fcd95e4dec1e088d3caf66f54ca29895316712499"
+    },
+    {
+      "file": "Policy_Implementation_Check.csv",
+      "size": 1226,
+      "sha256": "054e66418d42b13309c137a287586d83b17614cac0e3d0783443ec4f5db518b3"
+    },
+    {
+      "file": "Replay_Comparison.json",
+      "size": 1166,
+      "sha256": "e2b8180c2cb4c45c2dcfca67d64a45cc2939f9b2c52ce15e0f9d8f66295dce55"
+    },
+    {
+      "file": "Replay_Log_Comparison.json",
+      "size": 242,
+      "sha256": "d61c69dd3c83e9f9438cb403a5f25e12e159685b8ccd3d882e8e4a437c5a77ac"
+    },
+    {
+      "file": "Replay_N3_Medical_Annual.csv",
+      "size": 190282,
+      "sha256": "e31d8f3144a0caa2a5d96b5af85a7427add9eb05ce1ab20a2ab7b671dc32b7d3"
+    },
+    {
+      "file": "Replay_N3_Medical_Common.csv",
+      "size": 79582,
+      "sha256": "ff525918955990d00c96ea610eb595e3a57f6f7a627cbe7a059ee5a91da640c9"
+    },
+    {
+      "file": "Replay_N3_Medical_vs_SQ_Common_On.csv",
+      "size": 66041,
+      "sha256": "c269f6799eba671b151d31b3735a4fd0489a4a6a6db688be841a62c769cda4ba"
+    },
+    {
+      "file": "Replay_Run.txt",
+      "size": 363,
+      "sha256": "61f4836140ba91a123746f0d9d7d04573e660342ce93e1757210a8679c260531"
+    },
+    {
+      "file": "Replay_Selftest.json",
+      "size": 40,
+      "sha256": "9b80d04dc9d8018ec322701f3f0bdbb68e6037bcf232cbd8aacbac74feedfe3f"
+    },
+    {
+      "file": "Reproduction.md",
+      "size": 3652,
+      "sha256": "765a21668d5902d33a5c55e47a76e7c9efe4d36753ff74e6c93d53f01927853b"
+    },
+    {
+      "file": "SPE_N3_Draft_ChatGPT_Independent_Verification_DRAFT_20261121.md",
+      "size": 11370,
+      "sha256": "cc98761af807617ed8f9426efc78099c77d94db6b1a5744a96726e5d28054458"
+    },
+    {
+      "file": "Source_Identity.json",
+      "size": 2270,
+      "sha256": "c28493f58abe9bcd7e47c624d16650229621acfaec2b1e9a3aa18610e5f980a0"
+    },
+    {
+      "file": "Supplementary_Result.json",
+      "size": 2065,
+      "sha256": "ec92559fdb0e342b0f19eadabb675ff53ddae47a51f79fdab41d39c219037445"
+    },
+    {
+      "file": "Supplementary_Run.txt",
+      "size": 1851,
+      "sha256": "52be1d31d6741c225e1db74b7fc6dd4ab4b1070ee2fb2ab6dac2f1f27f3867f1"
+    },
+    {
+      "file": "Supplementary_Verify.py",
+      "size": 5321,
+      "sha256": "e85641a67a13fcc9ab6eede662f80899460100dc42769221b12c13f286c93666"
+    }
+  ],
+  "excludes": [
+    "Manifest.json",
+    "Delivery_Verification.json"
+  ],
+  "verdict": "CONDITIONAL GO;reproducibility and independent arithmetic PASS;policy validity not certified"
+}

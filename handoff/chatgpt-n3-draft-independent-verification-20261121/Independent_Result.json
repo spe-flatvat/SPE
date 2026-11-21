@@ -1,0 +1,2483 @@
+{
+  "status": "PASS_INDEPENDENT_ARITHMETIC",
+  "source_originals": 8,
+  "replay": [
+    {
+      "file": "SPE_N3_Medical_Annual_DRAFT_20261121.csv",
+      "replayed_size": 190282,
+      "replayed_sha256": "e31d8f3144a0caa2a5d96b5af85a7427add9eb05ce1ab20a2ab7b671dc32b7d3",
+      "source_size": 190282,
+      "source_sha256": "e31d8f3144a0caa2a5d96b5af85a7427add9eb05ce1ab20a2ab7b671dc32b7d3",
+      "byte_equal": true,
+      "rows": 420,
+      "columns": 44,
+      "parsed_equal": true
+    },
+    {
+      "file": "SPE_N3_Medical_Common_DRAFT_20261121.csv",
+      "replayed_size": 79582,
+      "replayed_sha256": "ff525918955990d00c96ea610eb595e3a57f6f7a627cbe7a059ee5a91da640c9",
+      "source_size": 79582,
+      "source_sha256": "ff525918955990d00c96ea610eb595e3a57f6f7a627cbe7a059ee5a91da640c9",
+      "byte_equal": true,
+      "rows": 420,
+      "columns": 21,
+      "parsed_equal": true
+    },
+    {
+      "file": "SPE_N3_Medical_vs_SQ_Common_On_DRAFT_20261121.csv",
+      "replayed_size": 66041,
+      "replayed_sha256": "c269f6799eba671b151d31b3735a4fd0489a4a6a6db688be841a62c769cda4ba",
+      "source_size": 66041,
+      "source_sha256": "c269f6799eba671b151d31b3735a4fd0489a4a6a6db688be841a62c769cda4ba",
+      "byte_equal": true,
+      "rows": 420,
+      "columns": 20,
+      "parsed_equal": true
+    }
+  ],
+  "claim_boundary_examples": 25920,
+  "medical_case_years": 420,
+  "VAT_case_years": 420,
+  "independent_numeric_comparisons": 26385,
+  "max_absolute_numeric_difference": 9.040066029086802e-09,
+  "failed_checks": 0,
+  "checks": [
+    {
+      "test": "eight_fixed_source_originals",
+      "passed": true,
+      "detail": 8
+    },
+    {
+      "test": "420_rows_14_cases_all_three_CSV_byte_equal",
+      "passed": true,
+      "detail": [
+        {
+          "file": "SPE_N3_Medical_Annual_DRAFT_20261121.csv",
+          "replayed_size": 190282,
+          "replayed_sha256": "e31d8f3144a0caa2a5d96b5af85a7427add9eb05ce1ab20a2ab7b671dc32b7d3",
+          "source_size": 190282,
+          "source_sha256": "e31d8f3144a0caa2a5d96b5af85a7427add9eb05ce1ab20a2ab7b671dc32b7d3",
+          "byte_equal": true,
+          "rows": 420,
+          "columns": 44,
+          "parsed_equal": true
+        },
+        {
+          "file": "SPE_N3_Medical_Common_DRAFT_20261121.csv",
+          "replayed_size": 79582,
+          "replayed_sha256": "ff525918955990d00c96ea610eb595e3a57f6f7a627cbe7a059ee5a91da640c9",
+          "source_size": 79582,
+          "source_sha256": "ff525918955990d00c96ea610eb595e3a57f6f7a627cbe7a059ee5a91da640c9",
+          "byte_equal": true,
+          "rows": 420,
+          "columns": 21,
+          "parsed_equal": true
+        },
+        {
+          "file": "SPE_N3_Medical_vs_SQ_Common_On_DRAFT_20261121.csv",
+          "replayed_size": 66041,
+          "replayed_sha256": "c269f6799eba671b151d31b3735a4fd0489a4a6a6db688be841a62c769cda4ba",
+          "source_size": 66041,
+          "source_sha256": "c269f6799eba671b151d31b3735a4fd0489a4a6a6db688be841a62c769cda4ba",
+          "byte_equal": true,
+          "rows": 420,
+          "columns": 20,
+          "parsed_equal": true
+        }
+      ]
+    },
+    {
+      "test": "independent_claim_boundaries",
+      "passed": true,
+      "detail": {
+        "examples": 25920,
+        "max_error_yen": 2.3283064365386963e-10
+      }
+    },
+    {
+      "test": "VAT_actual_case_years",
+      "passed": true,
+      "detail": 420
+    },
+    {
+      "test": "VAT_candidate_quantity_elasticity_zero",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_NO_REGISTRATION_2026",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_WITHDRAW_ALL_2026",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_UNKNOWN_WISH_2026",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_NO_EXPLICIT_PREFERENCE_2026",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_NO_CAPACITY_2026",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_NO_DEMAND_2026",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_DISABLED_2026",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "registration_does_not_change_palliative_access_2026",
+      "passed": true,
+      "detail": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "test": "no_automatic_transition_NO_REGISTRATION_2031",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_WITHDRAW_ALL_2031",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_UNKNOWN_WISH_2031",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_NO_EXPLICIT_PREFERENCE_2031",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_NO_CAPACITY_2031",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_NO_DEMAND_2031",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_DISABLED_2031",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "registration_does_not_change_palliative_access_2031",
+      "passed": true,
+      "detail": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "test": "no_automatic_transition_NO_REGISTRATION_2032",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_WITHDRAW_ALL_2032",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_UNKNOWN_WISH_2032",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_NO_EXPLICIT_PREFERENCE_2032",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_NO_CAPACITY_2032",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_NO_DEMAND_2032",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_DISABLED_2032",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "registration_does_not_change_palliative_access_2032",
+      "passed": true,
+      "detail": [
+        42857.142857142855,
+        42857.142857142855,
+        42857.142857142855
+      ]
+    },
+    {
+      "test": "no_automatic_transition_NO_REGISTRATION_2035",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_WITHDRAW_ALL_2035",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_UNKNOWN_WISH_2035",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_NO_EXPLICIT_PREFERENCE_2035",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_NO_CAPACITY_2035",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_NO_DEMAND_2035",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_DISABLED_2035",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "registration_does_not_change_palliative_access_2035",
+      "passed": true,
+      "detail": [
+        64285.71428571429,
+        64285.71428571429,
+        64285.71428571429
+      ]
+    },
+    {
+      "test": "no_automatic_transition_NO_REGISTRATION_2040",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_WITHDRAW_ALL_2040",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_UNKNOWN_WISH_2040",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_NO_EXPLICIT_PREFERENCE_2040",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_NO_CAPACITY_2040",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_NO_DEMAND_2040",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_DISABLED_2040",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "registration_does_not_change_palliative_access_2040",
+      "passed": true,
+      "detail": [
+        100000.0,
+        100000.0,
+        100000.0
+      ]
+    },
+    {
+      "test": "no_automatic_transition_NO_REGISTRATION_2055",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_WITHDRAW_ALL_2055",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_UNKNOWN_WISH_2055",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_NO_EXPLICIT_PREFERENCE_2055",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_NO_CAPACITY_2055",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_NO_DEMAND_2055",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "no_automatic_transition_DISABLED_2055",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "registration_does_not_change_palliative_access_2055",
+      "passed": true,
+      "detail": [
+        100000.0,
+        100000.0,
+        100000.0
+      ]
+    },
+    {
+      "test": "capacity_SQ_COMMON_OFF_2026",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_OFF_2027",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_OFF_2028",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_OFF_2029",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_OFF_2030",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_OFF_2031",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_OFF_2032",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_OFF_2033",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_OFF_2034",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_OFF_2035",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_OFF_2036",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_OFF_2037",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_OFF_2038",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_OFF_2039",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_OFF_2040",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_OFF_2041",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_OFF_2042",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_OFF_2043",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_OFF_2044",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_OFF_2045",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_OFF_2046",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_OFF_2047",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_OFF_2048",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_OFF_2049",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_OFF_2050",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_OFF_2051",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_OFF_2052",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_OFF_2053",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_OFF_2054",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_OFF_2055",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_ON_2026",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_ON_2027",
+      "passed": true,
+      "detail": -7115.042794159184
+    },
+    {
+      "test": "capacity_SQ_COMMON_ON_2028",
+      "passed": true,
+      "detail": -14172.94231517204
+    },
+    {
+      "test": "capacity_SQ_COMMON_ON_2029",
+      "passed": true,
+      "detail": -21171.426699412943
+    },
+    {
+      "test": "capacity_SQ_COMMON_ON_2030",
+      "passed": true,
+      "detail": -28108.457094910176
+    },
+    {
+      "test": "capacity_SQ_COMMON_ON_2031",
+      "passed": true,
+      "detail": -34981.645132211175
+    },
+    {
+      "test": "capacity_SQ_COMMON_ON_2032",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_ON_2033",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_ON_2034",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_ON_2035",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_ON_2036",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_ON_2037",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_ON_2038",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_ON_2039",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_ON_2040",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_ON_2041",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_ON_2042",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_ON_2043",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_ON_2044",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_ON_2045",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_ON_2046",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_ON_2047",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_ON_2048",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_ON_2049",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_ON_2050",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_ON_2051",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_ON_2052",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_ON_2053",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_ON_2054",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_SQ_COMMON_ON_2055",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_SAME_2026",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_SAME_2027",
+      "passed": true,
+      "detail": -7115.042794159184
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_SAME_2028",
+      "passed": true,
+      "detail": -14172.94231517204
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_SAME_2029",
+      "passed": true,
+      "detail": -21171.426699412943
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_SAME_2030",
+      "passed": true,
+      "detail": -28108.457094910176
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_SAME_2031",
+      "passed": true,
+      "detail": -34981.645132211175
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_SAME_2032",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_SAME_2033",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_SAME_2034",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_SAME_2035",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_SAME_2036",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_SAME_2037",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_SAME_2038",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_SAME_2039",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_SAME_2040",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_SAME_2041",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_SAME_2042",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_SAME_2043",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_SAME_2044",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_SAME_2045",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_SAME_2046",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_SAME_2047",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_SAME_2048",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_SAME_2049",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_SAME_2050",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_SAME_2051",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_SAME_2052",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_SAME_2053",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_SAME_2054",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_SAME_2055",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_UP10_2026",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_UP10_2027",
+      "passed": true,
+      "detail": -7115.042794159184
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_UP10_2028",
+      "passed": true,
+      "detail": -14172.94231517204
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_UP10_2029",
+      "passed": true,
+      "detail": -21171.426699412943
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_UP10_2030",
+      "passed": true,
+      "detail": -28108.457094910176
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_UP10_2031",
+      "passed": true,
+      "detail": -34981.645132211175
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_UP10_2032",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_UP10_2033",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_UP10_2034",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_UP10_2035",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_UP10_2036",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_UP10_2037",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_UP10_2038",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_UP10_2039",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_UP10_2040",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_UP10_2041",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_UP10_2042",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_UP10_2043",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_UP10_2044",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_UP10_2045",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_UP10_2046",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_UP10_2047",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_UP10_2048",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_UP10_2049",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_UP10_2050",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_UP10_2051",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_UP10_2052",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_UP10_2053",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_UP10_2054",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_UP10_2055",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_DOWN10_2026",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_DOWN10_2027",
+      "passed": true,
+      "detail": -7115.042794159184
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_DOWN10_2028",
+      "passed": true,
+      "detail": -14172.94231517204
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_DOWN10_2029",
+      "passed": true,
+      "detail": -21171.426699412943
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_DOWN10_2030",
+      "passed": true,
+      "detail": -28108.457094910176
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_DOWN10_2031",
+      "passed": true,
+      "detail": -34981.645132211175
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_DOWN10_2032",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_DOWN10_2033",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_DOWN10_2034",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_DOWN10_2035",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_DOWN10_2036",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_DOWN10_2037",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_DOWN10_2038",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_DOWN10_2039",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_DOWN10_2040",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_DOWN10_2041",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_DOWN10_2042",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_DOWN10_2043",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_DOWN10_2044",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_DOWN10_2045",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_DOWN10_2046",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_DOWN10_2047",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_DOWN10_2048",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_DOWN10_2049",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_DOWN10_2050",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_DOWN10_2051",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_DOWN10_2052",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_DOWN10_2053",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_DOWN10_2054",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_CAP_DOWN10_2055",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_COMMON_OFF_2026",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_COMMON_OFF_2027",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_COMMON_OFF_2028",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_COMMON_OFF_2029",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_COMMON_OFF_2030",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_COMMON_OFF_2031",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_COMMON_OFF_2032",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_COMMON_OFF_2033",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_COMMON_OFF_2034",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_COMMON_OFF_2035",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_COMMON_OFF_2036",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_COMMON_OFF_2037",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_COMMON_OFF_2038",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_COMMON_OFF_2039",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_COMMON_OFF_2040",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_COMMON_OFF_2041",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_COMMON_OFF_2042",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_COMMON_OFF_2043",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_COMMON_OFF_2044",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_COMMON_OFF_2045",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_COMMON_OFF_2046",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_COMMON_OFF_2047",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_COMMON_OFF_2048",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_COMMON_OFF_2049",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_COMMON_OFF_2050",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_COMMON_OFF_2051",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_COMMON_OFF_2052",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_COMMON_OFF_2053",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_COMMON_OFF_2054",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_COMMON_OFF_2055",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_40_CAP_SAME_2026",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_40_CAP_SAME_2027",
+      "passed": true,
+      "detail": -7115.042794159184
+    },
+    {
+      "test": "capacity_N3_MED_40_CAP_SAME_2028",
+      "passed": true,
+      "detail": -14172.94231517204
+    },
+    {
+      "test": "capacity_N3_MED_40_CAP_SAME_2029",
+      "passed": true,
+      "detail": -21171.426699412943
+    },
+    {
+      "test": "capacity_N3_MED_40_CAP_SAME_2030",
+      "passed": true,
+      "detail": -28108.457094910176
+    },
+    {
+      "test": "capacity_N3_MED_40_CAP_SAME_2031",
+      "passed": true,
+      "detail": -34981.645132211175
+    },
+    {
+      "test": "capacity_N3_MED_40_CAP_SAME_2032",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_40_CAP_SAME_2033",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_40_CAP_SAME_2034",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_40_CAP_SAME_2035",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_40_CAP_SAME_2036",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_40_CAP_SAME_2037",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_40_CAP_SAME_2038",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_40_CAP_SAME_2039",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_40_CAP_SAME_2040",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_40_CAP_SAME_2041",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_40_CAP_SAME_2042",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_40_CAP_SAME_2043",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_40_CAP_SAME_2044",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_40_CAP_SAME_2045",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_40_CAP_SAME_2046",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_40_CAP_SAME_2047",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_40_CAP_SAME_2048",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_40_CAP_SAME_2049",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_40_CAP_SAME_2050",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_40_CAP_SAME_2051",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_40_CAP_SAME_2052",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_40_CAP_SAME_2053",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_40_CAP_SAME_2054",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_40_CAP_SAME_2055",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_ONLY_CURRENT_30_2026",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_ONLY_CURRENT_30_2027",
+      "passed": true,
+      "detail": -7115.042794159184
+    },
+    {
+      "test": "capacity_N3_MED_50_ONLY_CURRENT_30_2028",
+      "passed": true,
+      "detail": -14172.94231517204
+    },
+    {
+      "test": "capacity_N3_MED_50_ONLY_CURRENT_30_2029",
+      "passed": true,
+      "detail": -21171.426699412943
+    },
+    {
+      "test": "capacity_N3_MED_50_ONLY_CURRENT_30_2030",
+      "passed": true,
+      "detail": -28108.457094910176
+    },
+    {
+      "test": "capacity_N3_MED_50_ONLY_CURRENT_30_2031",
+      "passed": true,
+      "detail": -34981.645132211175
+    },
+    {
+      "test": "capacity_N3_MED_50_ONLY_CURRENT_30_2032",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_ONLY_CURRENT_30_2033",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_ONLY_CURRENT_30_2034",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_ONLY_CURRENT_30_2035",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_ONLY_CURRENT_30_2036",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_ONLY_CURRENT_30_2037",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_ONLY_CURRENT_30_2038",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_ONLY_CURRENT_30_2039",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_ONLY_CURRENT_30_2040",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_ONLY_CURRENT_30_2041",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_ONLY_CURRENT_30_2042",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_ONLY_CURRENT_30_2043",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_ONLY_CURRENT_30_2044",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_ONLY_CURRENT_30_2045",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_ONLY_CURRENT_30_2046",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_ONLY_CURRENT_30_2047",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_ONLY_CURRENT_30_2048",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_ONLY_CURRENT_30_2049",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_ONLY_CURRENT_30_2050",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_ONLY_CURRENT_30_2051",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_ONLY_CURRENT_30_2052",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_ONLY_CURRENT_30_2053",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_ONLY_CURRENT_30_2054",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_ONLY_CURRENT_30_2055",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_START2030_2026",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_START2030_2027",
+      "passed": true,
+      "detail": -7115.042794159184
+    },
+    {
+      "test": "capacity_N3_MED_50_START2030_2028",
+      "passed": true,
+      "detail": -14172.94231517204
+    },
+    {
+      "test": "capacity_N3_MED_50_START2030_2029",
+      "passed": true,
+      "detail": -21171.426699412943
+    },
+    {
+      "test": "capacity_N3_MED_50_START2030_2030",
+      "passed": true,
+      "detail": -28108.457094910176
+    },
+    {
+      "test": "capacity_N3_MED_50_START2030_2031",
+      "passed": true,
+      "detail": -34981.645132211175
+    },
+    {
+      "test": "capacity_N3_MED_50_START2030_2032",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_START2030_2033",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_START2030_2034",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_START2030_2035",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_START2030_2036",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_START2030_2037",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_START2030_2038",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_START2030_2039",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_START2030_2040",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_START2030_2041",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_START2030_2042",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_START2030_2043",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_START2030_2044",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_START2030_2045",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_START2030_2046",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_START2030_2047",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_START2030_2048",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_START2030_2049",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_START2030_2050",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_START2030_2051",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_START2030_2052",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_START2030_2053",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_START2030_2054",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_START2030_2055",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_FAST3Y_2026",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_FAST3Y_2027",
+      "passed": true,
+      "detail": -7115.042794159184
+    },
+    {
+      "test": "capacity_N3_MED_50_FAST3Y_2028",
+      "passed": true,
+      "detail": -14172.94231517204
+    },
+    {
+      "test": "capacity_N3_MED_50_FAST3Y_2029",
+      "passed": true,
+      "detail": -21171.426699412943
+    },
+    {
+      "test": "capacity_N3_MED_50_FAST3Y_2030",
+      "passed": true,
+      "detail": -28108.457094910176
+    },
+    {
+      "test": "capacity_N3_MED_50_FAST3Y_2031",
+      "passed": true,
+      "detail": -34981.645132211175
+    },
+    {
+      "test": "capacity_N3_MED_50_FAST3Y_2032",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_FAST3Y_2033",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_FAST3Y_2034",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_FAST3Y_2035",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_FAST3Y_2036",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_FAST3Y_2037",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_FAST3Y_2038",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_FAST3Y_2039",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_FAST3Y_2040",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_FAST3Y_2041",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_FAST3Y_2042",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_FAST3Y_2043",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_FAST3Y_2044",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_FAST3Y_2045",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_FAST3Y_2046",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_FAST3Y_2047",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_FAST3Y_2048",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_FAST3Y_2049",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_FAST3Y_2050",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_FAST3Y_2051",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_FAST3Y_2052",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_FAST3Y_2053",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_FAST3Y_2054",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_MED_50_FAST3Y_2055",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_F_RULE_ON_SQ_30_CAP_DOWN10_2026",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_F_RULE_ON_SQ_30_CAP_DOWN10_2027",
+      "passed": true,
+      "detail": -7115.042794159184
+    },
+    {
+      "test": "capacity_F_RULE_ON_SQ_30_CAP_DOWN10_2028",
+      "passed": true,
+      "detail": -14172.94231517204
+    },
+    {
+      "test": "capacity_F_RULE_ON_SQ_30_CAP_DOWN10_2029",
+      "passed": true,
+      "detail": -21171.426699412943
+    },
+    {
+      "test": "capacity_F_RULE_ON_SQ_30_CAP_DOWN10_2030",
+      "passed": true,
+      "detail": -28108.457094910176
+    },
+    {
+      "test": "capacity_F_RULE_ON_SQ_30_CAP_DOWN10_2031",
+      "passed": true,
+      "detail": -34981.645132211175
+    },
+    {
+      "test": "capacity_F_RULE_ON_SQ_30_CAP_DOWN10_2032",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_F_RULE_ON_SQ_30_CAP_DOWN10_2033",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_F_RULE_ON_SQ_30_CAP_DOWN10_2034",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_F_RULE_ON_SQ_30_CAP_DOWN10_2035",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_F_RULE_ON_SQ_30_CAP_DOWN10_2036",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_F_RULE_ON_SQ_30_CAP_DOWN10_2037",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_F_RULE_ON_SQ_30_CAP_DOWN10_2038",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_F_RULE_ON_SQ_30_CAP_DOWN10_2039",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_F_RULE_ON_SQ_30_CAP_DOWN10_2040",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_F_RULE_ON_SQ_30_CAP_DOWN10_2041",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_F_RULE_ON_SQ_30_CAP_DOWN10_2042",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_F_RULE_ON_SQ_30_CAP_DOWN10_2043",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_F_RULE_ON_SQ_30_CAP_DOWN10_2044",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_F_RULE_ON_SQ_30_CAP_DOWN10_2045",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_F_RULE_ON_SQ_30_CAP_DOWN10_2046",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_F_RULE_ON_SQ_30_CAP_DOWN10_2047",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_F_RULE_ON_SQ_30_CAP_DOWN10_2048",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_F_RULE_ON_SQ_30_CAP_DOWN10_2049",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_F_RULE_ON_SQ_30_CAP_DOWN10_2050",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_F_RULE_ON_SQ_30_CAP_DOWN10_2051",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_F_RULE_ON_SQ_30_CAP_DOWN10_2052",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_F_RULE_ON_SQ_30_CAP_DOWN10_2053",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_F_RULE_ON_SQ_30_CAP_DOWN10_2054",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_F_RULE_ON_SQ_30_CAP_DOWN10_2055",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_ONLY_2026",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_ONLY_2027",
+      "passed": true,
+      "detail": -7115.042794159184
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_ONLY_2028",
+      "passed": true,
+      "detail": -14172.94231517204
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_ONLY_2029",
+      "passed": true,
+      "detail": -21171.426699412943
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_ONLY_2030",
+      "passed": true,
+      "detail": -28108.457094910176
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_ONLY_2031",
+      "passed": true,
+      "detail": -34981.645132211175
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_ONLY_2032",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_ONLY_2033",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_ONLY_2034",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_ONLY_2035",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_ONLY_2036",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_ONLY_2037",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_ONLY_2038",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_ONLY_2039",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_ONLY_2040",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_ONLY_2041",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_ONLY_2042",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_ONLY_2043",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_ONLY_2044",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_ONLY_2045",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_ONLY_2046",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_ONLY_2047",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_ONLY_2048",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_ONLY_2049",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_ONLY_2050",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_ONLY_2051",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_ONLY_2052",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_ONLY_2053",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_ONLY_2054",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_ONLY_2055",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_FREEZE2035_ONLY_2026",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_FREEZE2035_ONLY_2027",
+      "passed": true,
+      "detail": -7115.042794159184
+    },
+    {
+      "test": "capacity_N3_VAT_FREEZE2035_ONLY_2028",
+      "passed": true,
+      "detail": -14172.94231517204
+    },
+    {
+      "test": "capacity_N3_VAT_FREEZE2035_ONLY_2029",
+      "passed": true,
+      "detail": -21171.426699412943
+    },
+    {
+      "test": "capacity_N3_VAT_FREEZE2035_ONLY_2030",
+      "passed": true,
+      "detail": -28108.457094910176
+    },
+    {
+      "test": "capacity_N3_VAT_FREEZE2035_ONLY_2031",
+      "passed": true,
+      "detail": -34981.645132211175
+    },
+    {
+      "test": "capacity_N3_VAT_FREEZE2035_ONLY_2032",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_FREEZE2035_ONLY_2033",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_FREEZE2035_ONLY_2034",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_FREEZE2035_ONLY_2035",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_FREEZE2035_ONLY_2036",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_FREEZE2035_ONLY_2037",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_FREEZE2035_ONLY_2038",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_FREEZE2035_ONLY_2039",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_FREEZE2035_ONLY_2040",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_FREEZE2035_ONLY_2041",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_FREEZE2035_ONLY_2042",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_FREEZE2035_ONLY_2043",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_FREEZE2035_ONLY_2044",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_FREEZE2035_ONLY_2045",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_FREEZE2035_ONLY_2046",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_FREEZE2035_ONLY_2047",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_FREEZE2035_ONLY_2048",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_FREEZE2035_ONLY_2049",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_FREEZE2035_ONLY_2050",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_FREEZE2035_ONLY_2051",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_FREEZE2035_ONLY_2052",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_FREEZE2035_ONLY_2053",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_FREEZE2035_ONLY_2054",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_FREEZE2035_ONLY_2055",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_PLUS_MED_50_2026",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_PLUS_MED_50_2027",
+      "passed": true,
+      "detail": -7115.042794159184
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_PLUS_MED_50_2028",
+      "passed": true,
+      "detail": -14172.94231517204
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_PLUS_MED_50_2029",
+      "passed": true,
+      "detail": -21171.426699412943
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_PLUS_MED_50_2030",
+      "passed": true,
+      "detail": -28108.457094910176
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_PLUS_MED_50_2031",
+      "passed": true,
+      "detail": -34981.645132211175
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_PLUS_MED_50_2032",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_PLUS_MED_50_2033",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_PLUS_MED_50_2034",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_PLUS_MED_50_2035",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_PLUS_MED_50_2036",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_PLUS_MED_50_2037",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_PLUS_MED_50_2038",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_PLUS_MED_50_2039",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_PLUS_MED_50_2040",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_PLUS_MED_50_2041",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_PLUS_MED_50_2042",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_PLUS_MED_50_2043",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_PLUS_MED_50_2044",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_PLUS_MED_50_2045",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_PLUS_MED_50_2046",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_PLUS_MED_50_2047",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_PLUS_MED_50_2048",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_PLUS_MED_50_2049",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_PLUS_MED_50_2050",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_PLUS_MED_50_2051",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_PLUS_MED_50_2052",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_PLUS_MED_50_2053",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_PLUS_MED_50_2054",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "test": "capacity_N3_VAT_PATH_PLUS_MED_50_2055",
+      "passed": true,
+      "detail": 0.0
+    }
+  ],
+  "failures": [],
+  "macro_independent_reimplementation": false,
+  "shared_inputs": [
+    "demography/cost-age weights from fixed Demand module",
+    "price indices",
+    "candidate costs/income weights",
+    "common program and extra cash ledgers for finance reconstruction"
+  ],
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41"
+}

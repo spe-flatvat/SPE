@@ -1,0 +1,12 @@
+item,text,implementation,status
+VAT,2030軽減廃止、2032/34/38/40の12/15/18/20%,実験的接続、2035凍結は外生候補,DRAFT_NOT_POLICY_ADOPTION
+医療,段階的5割、高額療養費限度額縮小,接続、年齢・時期・±10%・段階補間は候補,DRAFT_NOT_POLICY_ADOPTION
+終末期,緩和ケア主体、意思表示カード,既存共通モジュール、容量等は未較正候補,DRAFT_NOT_POLICY_ADOPTION
+フラット税20/30/40,原文あり,未実装,DRAFT_NOT_POLICY_ADOPTION
+年金75歳・半官営強制加入,原文あり,未実装,DRAFT_NOT_POLICY_ADOPTION
+企業優遇16%・配当60%/投資20%,原文あり,未実装,DRAFT_NOT_POLICY_ADOPTION
+EITC廃止・500万円以下の保険料減免,原文あり,未実装,DRAFT_NOT_POLICY_ADOPTION
+外国人材・雇用アンカー,原文あり,N3固有部分未実装,DRAFT_NOT_POLICY_ADOPTION
+自治体共済・スマートシュリンク,原文あり,構造記載のみ、未実装,DRAFT_NOT_POLICY_ADOPTION
+インボイス大幅簡素化,原文あり,定量未実装、F損税解消をN3へ流用しない,DRAFT_NOT_POLICY_ADOPTION
+KPI自動調整,原文あり、閾値なし,凍結スイッチのみ、内生判定未実装,DRAFT_NOT_POLICY_ADOPTION

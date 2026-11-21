@@ -1,0 +1,35 @@
+[
+  {
+    "file": "SPE_N3_Medical_Annual_DRAFT_20261121.csv",
+    "replayed_size": 190282,
+    "replayed_sha256": "e31d8f3144a0caa2a5d96b5af85a7427add9eb05ce1ab20a2ab7b671dc32b7d3",
+    "source_size": 190282,
+    "source_sha256": "e31d8f3144a0caa2a5d96b5af85a7427add9eb05ce1ab20a2ab7b671dc32b7d3",
+    "byte_equal": true,
+    "rows": 420,
+    "columns": 44,
+    "parsed_equal": true
+  },
+  {
+    "file": "SPE_N3_Medical_Common_DRAFT_20261121.csv",
+    "replayed_size": 79582,
+    "replayed_sha256": "ff525918955990d00c96ea610eb595e3a57f6f7a627cbe7a059ee5a91da640c9",
+    "source_size": 79582,
+    "source_sha256": "ff525918955990d00c96ea610eb595e3a57f6f7a627cbe7a059ee5a91da640c9",
+    "byte_equal": true,
+    "rows": 420,
+    "columns": 21,
+    "parsed_equal": true
+  },
+  {
+    "file": "SPE_N3_Medical_vs_SQ_Common_On_DRAFT_20261121.csv",
+    "replayed_size": 66041,
+    "replayed_sha256": "c269f6799eba671b151d31b3735a4fd0489a4a6a6db688be841a62c769cda4ba",
+    "source_size": 66041,
+    "source_sha256": "c269f6799eba671b151d31b3735a4fd0489a4a6a6db688be841a62c769cda4ba",
+    "byte_equal": true,
+    "rows": 420,
+    "columns": 20,
+    "parsed_equal": true
+  }
+]

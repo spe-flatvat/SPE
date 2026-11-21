@@ -1,0 +1,11 @@
+PASS regression: SQ common OFF/ON equal fixed SQ_Common_Annual (6 metrics x 30y x 2) | max abs diff=0
+PASS claim identity patient+public+insurer=clinical cost | max abs=1.1e-11 rows=420
+PASS protection invariants zero in every case-year | rows=420 violations=0
+PASS common module physical quantities do not depend on N3 coinsurance/VAT/case (same SQ population) | max abs diff across 12 common-ON cases=0
+PASS common OFF => no transitions | max=0
+PASS N3 medical rule inactive before 2033 start (equals SQ common ON; patient, household cash, real GDP) | max abs diff 2026-2032=0
+PASS VAT experiment: identical to SQ through 2029 | max abs real GDP diff=0
+PASS VAT path standard rate non-decreasing and reaches 0.20 in 2040 | 2031=0.1 2032=0.12 2034=0.15 2038=0.18 2040=0.2
+PASS VAT freeze case holds 0.15 from 2035 | [0.15]
+PASS VAT experiment: modeled VAT >= SQ in every year (direction only) | 
+SUMMARY 10 / 10 PASS

@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "SQ_regression_cells": 360,
+  "SQ_max_difference": 0.0,
+  "log_comparison": {
+    "full_log_byte_equal": false,
+    "reason": "original log contains author headers and placeholder commands;outputs compared by exact sections",
+    "run_section_equal": true,
+    "checks_section_equal": true,
+    "selftest_section_equal": true
+  },
+  "phase_interpretation_examples": 576,
+  "phase_interpretation_differing_examples": 125,
+  "phase_max_difference_yen": 19250.000000000007,
+  "engine_commit": "ff6210061615105de9a0d64767c256796be80ed2",
+  "immutable_worktrees_unchanged": true,
+  "references": [
+    {
+      "commit": "5804388482864af08204ba0d0e76a46206dacdbd",
+      "path": "policies/New3linesPolicies.md",
+      "size": 7039,
+      "sha256": "2f5806addb870863961d9b6a6722d9c1e38bc2b097e1a6cd0e07b39f56b77830",
+      "route": "fixed Git object"
+    },
+    {
+      "commit": "3c77eafc2073fdaba4c129164817d2f57c9421b9",
+      "path": "specifications/SimulationSpecification_v5.md",
+      "size": 17708,
+      "sha256": "fd10290c97daa3a77bd1348ac4c2a1536da634a7b9408737dcd7713adc671b65",
+      "route": "fixed Git object"
+    },
+    {
+      "commit": "8437d285b179e30a9a93236cafe56daa4b571791",
+      "path": "handoff/n3-draft-independent-verification-20261121/SPE_Work_N3_Draft_Independent_Verification_Instruction_20261121.md",
+      "size": 9210,
+      "sha256": "d957e994ce9d1486fe643fac1cc72f452fc116116cd6316c0bafe7ba2d617310",
+      "route": "fixed Git object"
+    },
+    {
+      "commit": "4924c8e4be45e1f0b66013ef4aa87d139ff7c7b5",
+      "path": "handoff/claude-common-endoflife-f-final-verification-20261121/SPE_CommonEndOfLife_F_Final_Claude_Independent_Verification_DRAFT_20261121.md",
+      "size": 18224,
+      "sha256": "644e6eb22181d96a0f33b350cfe40eadc25255e2f39a314a45440be6f1f2b5af",
+      "route": "fixed Git object"
+    }
+  ],
+  "policy_unchanged": true,
+  "v5_path_note": "requested claude/ path absent;equivalent named specification found at specifications/SimulationSpecification_v5.md;not a target for output fitting"
+}

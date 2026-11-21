@@ -1,0 +1,58 @@
+[
+  {
+    "commit": "3c77eafc2073fdaba4c129164817d2f57c9421b9",
+    "path": "handoff/claude-n3-model-draft-20261121/SPE_N3_Draft_Checks_DRAFT_20261121.py",
+    "size": 4562,
+    "sha256": "08b9f9ebcab069a46cc03ef7fb4c07c5ed738dc19974ca8c01e7296296f953b8",
+    "match": true
+  },
+  {
+    "commit": "3c77eafc2073fdaba4c129164817d2f57c9421b9",
+    "path": "handoff/claude-n3-model-draft-20261121/SPE_N3_Draft_Output_DRAFT_20261121.txt",
+    "size": 1714,
+    "sha256": "05c998c2e510b8f3482ff464e8d1898b99d28ea25f6212d19a6551674afee6d1",
+    "match": true
+  },
+  {
+    "commit": "3c77eafc2073fdaba4c129164817d2f57c9421b9",
+    "path": "handoff/claude-n3-model-draft-20261121/SPE_N3_Inputs_Candidates_DRAFT_20261121.json",
+    "size": 9392,
+    "sha256": "ce1b0e874fd12035fb31fd22d1ad6f0a7959266c7ec11dd81e6446d1010e3c68",
+    "match": true
+  },
+  {
+    "commit": "3c77eafc2073fdaba4c129164817d2f57c9421b9",
+    "path": "handoff/claude-n3-model-draft-20261121/SPE_N3_Medical_Annual_DRAFT_20261121.csv",
+    "size": 190282,
+    "sha256": "e31d8f3144a0caa2a5d96b5af85a7427add9eb05ce1ab20a2ab7b671dc32b7d3",
+    "match": true
+  },
+  {
+    "commit": "3c77eafc2073fdaba4c129164817d2f57c9421b9",
+    "path": "handoff/claude-n3-model-draft-20261121/SPE_N3_Medical_Common_DRAFT_20261121.csv",
+    "size": 79582,
+    "sha256": "ff525918955990d00c96ea610eb595e3a57f6f7a627cbe7a059ee5a91da640c9",
+    "match": true
+  },
+  {
+    "commit": "3c77eafc2073fdaba4c129164817d2f57c9421b9",
+    "path": "handoff/claude-n3-model-draft-20261121/SPE_N3_Medical_On_CommonSQ_Draft_DRAFT_20261121.py",
+    "size": 12405,
+    "sha256": "b6cd8413c68967ac413e43342e44804b0e416137c2a80e579772a54bb41b7387",
+    "match": true
+  },
+  {
+    "commit": "3c77eafc2073fdaba4c129164817d2f57c9421b9",
+    "path": "handoff/claude-n3-model-draft-20261121/SPE_N3_Medical_vs_SQ_Common_On_DRAFT_20261121.csv",
+    "size": 66041,
+    "sha256": "c269f6799eba671b151d31b3735a4fd0489a4a6a6db688be841a62c769cda4ba",
+    "match": true
+  },
+  {
+    "commit": "3c77eafc2073fdaba4c129164817d2f57c9421b9",
+    "path": "handoff/claude-n3-model-draft-20261121/SPE_N3_Model_Draft_Design_DRAFT_20261121.md",
+    "size": 18401,
+    "sha256": "91d071f0fea2793a891bb8bad9f27c2e5514561f780c26a22361675d0fa80ff3",
+    "match": true
+  }
+]

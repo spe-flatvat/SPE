@@ -1,0 +1,202 @@
+{
+  "status": "DRAFT_NON_CANONICAL_PAYLOAD_MANIFEST",
+  "branch": "work/chatgpt-handoff",
+  "directory": "handoff/chatgpt-n3-gap-closure-20261121",
+  "payload_files": 38,
+  "files": [
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/Build_Results.py",
+      "size": 8797,
+      "sha256": "6dc025d3a5385e4653b63f74796fa8dffdfef9473e17f10b7d22365aaf90d3ce"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/Checks.json",
+      "size": 761,
+      "sha256": "1659e9ed35bbffba595bf5f07f6a90f6f2de307783683aedfaf91c914283776b"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/Dependency_Pins.json",
+      "size": 2674,
+      "sha256": "1673cccbca8ae7f2f4fb8b60fc4a77143c3fd51e79a03e3c218818ca3d172f85"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/Execution.log",
+      "size": 1970,
+      "sha256": "71accedee8d5e27cee7b1110d55319f6afa2351ebff57e7da99e9728eae7fa93"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/Execution_Metadata.json",
+      "size": 411,
+      "sha256": "6d1d5c5df0c906554f5a846ae3ee35ed2cb2178d71f17fe0589599f3cc0d9839"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/F_Reference_Annual.csv",
+      "size": 7397,
+      "sha256": "5eb20d64170592971a796c670adee51d081c8db6dc6e79909dd1757bd81cfd36"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/Gap_Additional_Accounts.csv",
+      "size": 141776,
+      "sha256": "1ade5fbe0853d25b7a40d87f9bb2345e758d235121511204e523e9f16d07afae"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/Gap_Annual.csv",
+      "size": 3457023,
+      "sha256": "7a547b54c8d61c972e115cf5ca941ca8a4340683950085273e80429c991dc9f6"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/Gap_Common.csv",
+      "size": 2493184,
+      "sha256": "702704bc0eb7d7ef46f362659b779affc4890bccb143944a964f830bf484af6a"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/Gap_Components.py",
+      "size": 7905,
+      "sha256": "eb6b66f9bc067c8a271fc99b03c6bf1fba0037ea337ea683d194c24ff0f878b1"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/Gap_Foreign_Bridge.csv",
+      "size": 29502,
+      "sha256": "cd90d2074b1b7d69fcf73873063329f43e3ead78d7d543d042fa3fcc663ef15d"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/Gap_Inputs.json",
+      "size": 16622,
+      "sha256": "181af41fc4145e097bed4514be3d49f9f85561827e3f54223de11196d110f868"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/Gap_Model.py",
+      "size": 12306,
+      "sha256": "716e4e15461c5cc4b45d17fb73bd34dd35b01704b4885675d37ce841d04a9e78"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/Gap_Semi_Medical.csv",
+      "size": 25326,
+      "sha256": "2a25799ec9123e888a2038b3663fe0351f6223141027a25ff4caed1dfa097a5f"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/Gap_vs_SQ.csv",
+      "size": 508881,
+      "sha256": "9d2c1be74ec1aaaeb2388a775f3697b928b35d8397a450e9bf85b23e641999d5"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/Interactions.csv",
+      "size": 73038,
+      "sha256": "a126571f60fd8da8a07c7f60f0c011fe666ce14c319578a388ea5a8d370c73f4"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/Key_Years.csv",
+      "size": 248887,
+      "sha256": "1da30aea3715bb07a2cf9cd2e7d5186a0011cbdf5eae5024d18fc34eb224ad3c"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/N3_Claim_Candidate_Audit.csv",
+      "size": 129958,
+      "sha256": "df979f72589b929f2c7f978ebd7a6512e027e79ccd1767fefcde68b07c88eded"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/N3_Corporate_Accounts.csv",
+      "size": 253533,
+      "sha256": "7c5a56591488a0a6a530c4faf9fa20ec80f7bf193876ef639d71806048cb2295"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/N3_Engine_Accounts.csv",
+      "size": 498776,
+      "sha256": "91c8b4f847cae7830c2f62171c1c5e472f2b527e7f97ec6802fef19b6164c566"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/N3_Income_Distribution.csv",
+      "size": 4479634,
+      "sha256": "175931d4c220b7db9c5adb5581d4d69919370ebec598a9d154647b236dc473a5"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/N3_Pension_Accounts.csv",
+      "size": 127286,
+      "sha256": "ad4687312611734aeb8763f4385b4e4d59c7bb87cb46cc2519e82ec391590082"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/N3_Policy_Accounts.csv",
+      "size": 515502,
+      "sha256": "8f90b80540b4b1787fff6330ff1fd67ca0e2a7b8fd33a84bff5f72df736370bc"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/N3_Selftest.json",
+      "size": 40,
+      "sha256": "9b80d04dc9d8018ec322701f3f0bdbb68e6037bcf232cbd8aacbac74feedfe3f"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/N3_Structural_Interfaces.csv",
+      "size": 218179,
+      "sha256": "4ae6333c688538cb1b0f8b66bbcab70fd3abe21f5374dbce765ddfc61fa78818"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/N3_VAT_Regular_Quantity.csv",
+      "size": 958427,
+      "sha256": "b27330203446311756b1a23b8631015784196c0b155a24da45afbff186961976"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/N3_VAT_Sectors.csv",
+      "size": 3511740,
+      "sha256": "a6d47fd8c2e59f3bcd8d02e35af831659341fee2f6b3edbbe6b8f0050a2d99c1"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/Partial_Fiscal_Financing.csv",
+      "size": 2807163,
+      "sha256": "7538c2ac7296c37d27dc98bd64da40d7058fb007d79f6e2b9bbf6ebfe9e46527"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/Pension_Counterpart.csv",
+      "size": 181044,
+      "sha256": "7706eb5e026dc1be4d6e6ba0f6052ff598510871d6ba33424d6dc0820f3e219f"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/README.md",
+      "size": 2534,
+      "sha256": "1b35bbcefbeb39f9bfcff24c54ba3a3738c50b2530beaf30c5abdf7f7f9e37bb"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/Replay.log",
+      "size": 1970,
+      "sha256": "71accedee8d5e27cee7b1110d55319f6afa2351ebff57e7da99e9728eae7fa93"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/Report.md",
+      "size": 8569,
+      "sha256": "65a6f4a3b2b8e4bc7dc61c14580eb630bdf5dbaca5734933f075f6480ae8836b"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/Reproduce.py",
+      "size": 1433,
+      "sha256": "3e831d8d72c6ec1bb68a51307c6c8b582255bf5935d8d34aa1c4d8547dd73ae5"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/Research_and_Boundaries.md",
+      "size": 6546,
+      "sha256": "ab1cc720942a2e217cf3504e19f2161d1b280ef979f0b5adba38f587164a64d6"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/SQ_F_N3_Comparison.csv",
+      "size": 1603848,
+      "sha256": "c375e839eae1686a42fcf57af0269c19c369a30ed941105540275f32a1cfcc02"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/Sensitivity.csv",
+      "size": 97236,
+      "sha256": "92536732345ad4aecac7786a8b7e926c82a0cee3de76fd70b0bdc6f8435c6465"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/VAT_Price_Quantity_Income.csv",
+      "size": 1815406,
+      "sha256": "75e89f6eda2182fece572fbcd6c2cc4d4ab51cbb0d19ec9f14967b13ae143f13"
+    },
+    {
+      "path": "handoff/chatgpt-n3-gap-closure-20261121/Verify.py",
+      "size": 7876,
+      "sha256": "2c80a482b9444fa90b9ac24e6888ad57fb1524aa1a6e175fdb4468585a0ca067"
+    }
+  ],
+  "exclusions": {
+    "Manifest.json": "self-reference avoided;verified separately after fixed commit",
+    "Delivery_Verification.json": "post-delivery receipt;verified at its own subsequent fixed commit"
+  }
+}

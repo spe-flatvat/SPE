@@ -1,0 +1,106 @@
+{
+ "status": "ARTIFACT_STAGED_PRE_PUSH_NON_CANONICAL",
+ "scope": "National fiscal (central+local, conditional) connection limited independent verification (read-only)",
+ "request_commit": "7bd6991837701a9089698642fdf36c69f1a52ccf",
+ "target_commit": "747273674daed0d648c58aa8fdc07ebe203e6046",
+ "target_dir": "handoff/chatgpt-national-fiscal-closure-20261121/",
+ "prior_inputs": {
+  "pension_target": "76176ae118ee073677e990c0d8c4cfa498e3563d",
+  "claude_pension_verification": "fbcfa37a47239b4084498847f66316eccc67cd19",
+  "pre_correction": "556953292e24615cee47d92bb27e85badf12329c",
+  "F_fixed": "ff6210061615105de9a0d64767c256796be80ed2",
+  "work_instruction": "93e77c97d271d03bdec9f9d177407ebe3c4b821f"
+ },
+ "branch": "work/claude-handoff",
+ "directory": "handoff/claude-national-fiscal-verification-20261121/",
+ "results": {
+  "manifest_files": 48,
+  "manifest_mismatch": 0,
+  "runtime_pins": 67,
+  "runtime_pins_verified": 67,
+  "official_xlsx": 4,
+  "official_xlsx_sha_match": 4,
+  "statistical_cells": 400,
+  "statistical_cell_mismatch": 0,
+  "rerun_output_files": 21,
+  "rerun_byte_identical": 21,
+  "independent_checks": 62,
+  "independent_pass": 62,
+  "independent_fail": 0,
+  "recomputed_nonnull_fiscal_rows": 22710,
+  "fiscal_rows": 23910,
+  "macro_case_years_rerun": 9480,
+  "old_macro_cells_unchanged": 436080,
+  "new_fiscal_columns": 73
+ },
+ "verdicts": {
+  "overall": "PASS_WITH_LIMITATIONS",
+  "statistical_inputs": "PASS_WITH_LIMITATIONS",
+  "accounting_identities": "PASS",
+  "transfers_and_sensitivities": "PASS",
+  "rerun_regression": "PASS",
+  "key_year_comparison": "PASS_WITH_LIMITATIONS",
+  "N3_2055_zero_debt_arithmetic": "PASS",
+  "N3_2055_zero_debt_assumption_dependence": "PASS_WITH_LIMITATIONS",
+  "MOF_anchors_and_stock_table": "NOT_VERIFIED"
+ },
+ "mismatches_fail": 0,
+ "scope_guards": [
+  "target and policy originals not modified",
+  "RP-023/M19-25 HOLD",
+  "RP-024 PENDING",
+  "formal approval status maintained",
+  "no Acceptance / Finding Close / DecisionLog / Freeze / Canonical",
+  "no general-government gap filled with guessed values",
+  "no ZIP",
+  "only new Claude-side directory written"
+ ],
+ "files": [
+  {
+   "file": "Execution_Log.txt",
+   "size": 1297,
+   "sha256": "24b59e3a1edbf07f7ff4e8c5cd9d264ae525f994a01e881add09762d5748769b"
+  },
+  {
+   "file": "Fiscal_Byte_Comparison.csv",
+   "size": 4032,
+   "sha256": "b0502991a4a0999cd47b73665548a5c7606d061ae8b1472152fdb0e67a0b59b3"
+  },
+  {
+   "file": "Independent_Fiscal_Check.py",
+   "size": 35151,
+   "sha256": "65a7182d9f07cdd78ae6b88e5b3a43a4fcc3c27d2f20c27ebff9e628613b1e41"
+  },
+  {
+   "file": "Independent_Fiscal_Key_Years.csv",
+   "size": 1489,
+   "sha256": "a04c0168644f49e936179979f0ea5c7fd6a512d6e1b7582620aef5f431933cf8"
+  },
+  {
+   "file": "Independent_Fiscal_Numeric_Comparison.csv",
+   "size": 8294,
+   "sha256": "52fb624757acacb0265a83f4062719bf352fd206b27b746f6f99cfd4cbf8cef8"
+  },
+  {
+   "file": "Independent_Fiscal_Stress_Tests.csv",
+   "size": 1408,
+   "sha256": "114e72f7eb3f272041117975c0d12754fab93f148997dc12a423a23ac89c383a"
+  },
+  {
+   "file": "Independent_Fiscal_Summary.json",
+   "size": 5357,
+   "sha256": "e1270ff83d6fae42c4b92422885771228ff69dab1a8ff82d1f8295cf2c4f900e"
+  },
+  {
+   "file": "Run_Fiscal_Verification.sh",
+   "size": 2756,
+   "sha256": "a94ad6d3cbce8dc92e313b4253cb98278eaf048f7e9560fbe40b477201cc40fc"
+  },
+  {
+   "file": "SPE_National_Fiscal_Limited_Independent_Verification_Report_DRAFT_20261121.md",
+   "size": 13990,
+   "sha256": "5d74e96104aa7b4d1847e59fa64686e298d1aa24bab58cb01b0012054aa1caf4"
+  }
+ ],
+ "note": "Self-record excludes itself. Post-push custody (fixed Commit re-fetch, actual-byte SHA-256 and size) reported separately."
+}

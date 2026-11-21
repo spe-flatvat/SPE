@@ -1,0 +1,31 @@
+# 注: 実行ログ（時刻UTC）。マクロ入力は前タスクで私が再実行した4候補の出力（pr/）。独立コードは開発中に2回の軽微な修正（型・フィルタ）を経て最終版を実行した。
+== START 2026-11-21T08:16:04Z
+== [1] integrity: Manifest (48 files), Receipts (4 xlsx), Runtime_Pins (67)
+manifest files 48 mismatch 0
+pins 67 verified 67 not retrievable 0 mismatch 0
+== [2] National_Fiscal.py x2 on Claude macro outputs
+{"fiscal_rows": 23910, "annual79_rows": 2370, "source_channel_rows": 9510}
+{"fiscal_rows": 23910, "annual79_rows": 2370, "source_channel_rows": 9510}
+== [3] Build_Comparison.py
+{"old_macro_changed_cells": 0, "compared_cells": 436080, "new_fiscal_columns": 73, "key_year_comparison_metric_rows": 1820}
+== [4] byte comparison vs Work (20 CSV + 1 JSON)
+files 21 identical 21 second-run identical 17
+== [5] independent recompute
+ "total": 62,
+ "pass_": 62,
+ "fail": 0,
+   "total": 21,
+   "fail": 0
+   "total": 6,
+   "fail": 0
+   "total": 13,
+   "fail": 0
+   "total": 8,
+   "fail": 0
+   "total": 7,
+   "fail": 0
+   "total": 7,
+   "fail": 0
+ "recomputed_nonnull_rows": 22710,
+  "Break-even: N3 A reaches zero 2055 debt only if >= 81.8% of the modelled policy primary delta is real (reference conditions)",
+== END 2026-11-21T08:16:13Z

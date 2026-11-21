@@ -1,0 +1,178 @@
+{
+ "total": 62,
+ "pass_": 62,
+ "fail": 0,
+ "failed_ids": [],
+ "by_area": {
+  "S": {
+   "total": 21,
+   "fail": 0
+  },
+  "F": {
+   "total": 6,
+   "fail": 0
+  },
+  "A": {
+   "total": 13,
+   "fail": 0
+  },
+  "T": {
+   "total": 8,
+   "fail": 0
+  },
+  "R": {
+   "total": 7,
+   "fail": 0
+  },
+  "D": {
+   "total": 7,
+   "fail": 0
+  }
+ },
+ "recomputed_nonnull_rows": 22710,
+ "fiscal_rows": 23910,
+ "observations": [
+  "Baseline SFA 2026-2040 (trn): 2026:20.7, 2027:9.2, 2028:11.7, 2029:13.2, 2030:13.9, 2031:13.4, 2032:13.8, 2033:14.1, 2034:14.4, 2035:14.4, 2036:14.3, 2037:14.2, 2038:14.0, 2039:13.6, 2040:13.4; sum=208.3; assumed 0 from 2041 in tail",
+  "Official nominal GDP FY2026 = 689.3 vs SPE common SQ 2026 nominal GDP (see D)",
+  "GFS FY2024 GG PB(SNA)=-8.192 net lending=-8.912; central+local PB candidate (this model) is a different boundary (excludes social security funds) -> not comparable with GG.",
+  "Statistical_Cell_Map central_GA_* and local_ordinary_* rows (rows 28-48 of the detail sheet) belong to the general-account / ordinary-account tables whose basis (excluding vs including recon/GX/AI) is not stated; they are carried in Official_Fiscal_Baseline but NOT used by the fiscal runtime.",
+  "N3 A: debt first reaches 0 in 2052; 2040 debt=1207.5 (baseline 1802.1); assets 2055=524.6",
+  "2055 SQ: PB=-1.200 interest=34.500 debt=2337.600 assets=0.000 borrowing=35.700",
+  "2055 F: PB=-28.864 interest=48.316 debt=3069.890 assets=0.000 borrowing=77.181",
+  "2055 N3: PB=134.093 interest=-7.657 debt=0.000 assets=524.610 borrowing=0.000",
+  "Break-even: N3 A reaches zero 2055 debt only if >= 81.8% of the modelled policy primary delta is real (reference conditions)",
+  "N3 A 2055 primary delta 135.29 trn = 14.7% of SPE nominal GDP (920.7); baseline PB 2040 -1.2 trn on official GDP 929.6 trn",
+  "tax diagnostic 2055: N3 A 292.1 vs SQ 159.8 (+132.4); policy tax delta 2055 98.7",
+  "N3 A 2055 channels: tax delta (once) 132.38, expenditure delta -2.91, balance delta 135.30, insurer delta 10.55"
+ ],
+ "stress": [
+  {
+   "test": "POLICY_PRIMARY_DELTA_SCALE",
+   "multiplier": 1.0,
+   "debt_2040": 1207.484183669523,
+   "debt_2055": 0.0,
+   "assets_2055": 524.610060916094,
+   "first_zero_debt_year": 2052
+  },
+  {
+   "test": "POLICY_PRIMARY_DELTA_SCALE",
+   "multiplier": 0.75,
+   "debt_2040": 1356.1381377521423,
+   "debt_2055": 193.66705081290212,
+   "assets_2055": 0.0,
+   "first_zero_debt_year": null
+  },
+  {
+   "test": "POLICY_PRIMARY_DELTA_SCALE",
+   "multiplier": 0.5,
+   "debt_2040": 1504.7920918347615,
+   "debt_2055": 908.311367208602,
+   "assets_2055": 0.0,
+   "first_zero_debt_year": null
+  },
+  {
+   "test": "POLICY_PRIMARY_DELTA_SCALE",
+   "multiplier": 0.4,
+   "debt_2040": 1564.2536734678088,
+   "debt_2055": 1194.1690937668807,
+   "assets_2055": 0.0,
+   "first_zero_debt_year": null
+  },
+  {
+   "test": "POLICY_PRIMARY_DELTA_SCALE",
+   "multiplier": 0.3,
+   "debt_2040": 1623.7152551008571,
+   "debt_2055": 1480.0268203251612,
+   "assets_2055": 0.0,
+   "first_zero_debt_year": null
+  },
+  {
+   "test": "POLICY_PRIMARY_DELTA_SCALE",
+   "multiplier": 0.25,
+   "debt_2040": 1653.4460459173804,
+   "debt_2055": 1622.9556836043,
+   "assets_2055": 0.0,
+   "first_zero_debt_year": null
+  },
+  {
+   "test": "POLICY_PRIMARY_DELTA_SCALE",
+   "multiplier": 0.2,
+   "debt_2040": 1683.1768367339046,
+   "debt_2055": 1765.884546883441,
+   "assets_2055": 0.0,
+   "first_zero_debt_year": null
+  },
+  {
+   "test": "POLICY_PRIMARY_DELTA_SCALE",
+   "multiplier": 0.1,
+   "debt_2040": 1742.6384183669522,
+   "debt_2055": 2051.74227344172,
+   "assets_2055": 0.0,
+   "first_zero_debt_year": null
+  },
+  {
+   "test": "POLICY_PRIMARY_DELTA_SCALE",
+   "multiplier": 0.0,
+   "debt_2040": 1802.1,
+   "debt_2055": 2337.5999999999985,
+   "assets_2055": 0.0,
+   "first_zero_debt_year": null
+  },
+  {
+   "test": "BREAK_EVEN_POLICY_PRIMARY_DELTA_SCALE_FOR_ZERO_2055_DEBT",
+   "multiplier": 0.8177494546480375,
+   "debt_2040": 1315.8532404706548,
+   "debt_2055": 3.8969005800026935e-10,
+   "assets_2055": 0.0,
+   "first_zero_debt_year": 2055
+  },
+  {
+   "test": "TAIL_INTEREST_COMPOUNDS_AT_2040_EFFECTIVE_RATE_0.0197",
+   "multiplier": 1.0,
+   "debt_2040": 1207.484183669523,
+   "debt_2055": 0.0,
+   "assets_2055": 508.5820996313913,
+   "first_zero_debt_year": 2052
+  },
+  {
+   "test": "TAIL_INTEREST_COMPOUNDS_AT_2040_EFFECTIVE_RATE_0.0197",
+   "multiplier": 0.5,
+   "debt_2040": 1504.7920918347615,
+   "debt_2055": 963.1834222054199,
+   "assets_2055": 0.0,
+   "first_zero_debt_year": null
+  },
+  {
+   "test": "TAIL_INTEREST_COMPOUNDS_AT_2040_EFFECTIVE_RATE_0.0197",
+   "multiplier": 0.25,
+   "debt_2040": 1653.4460459173804,
+   "debt_2055": 1698.9539544165386,
+   "assets_2055": 0.0,
+   "first_zero_debt_year": null
+  },
+  {
+   "test": "SQ_BASELINE_TAIL_COMPOUNDING",
+   "multiplier": 0,
+   "debt_2040": 1802.1,
+   "debt_2055": 2434.7244866276565,
+   "assets_2055": 0.0,
+   "first_zero_debt_year": null
+  },
+  {
+   "test": "SFA_AFTER_2040_CONTINUES_AT_2026_40_AVERAGE_13.89",
+   "multiplier": 1.0,
+   "debt_2040": 1207.484183669523,
+   "debt_2055": 0.0,
+   "assets_2055": 288.4508389448108,
+   "first_zero_debt_year": 2053
+  },
+  {
+   "test": "SFA_AFTER_2040_CONTINUES_AT_2026_40_AVERAGE_13.89",
+   "multiplier": 0.5,
+   "debt_2040": 1504.7920918347615,
+   "debt_2055": 1141.8847131895852,
+   "assets_2055": 0.0,
+   "first_zero_debt_year": null
+  }
+ ]
+}

@@ -1,0 +1,353 @@
+{
+  "status": "CUSTODY_PASS",
+  "artifact_status": "ARTIFACT_READY",
+  "scope": "49 individual originals including Manifest; receipt itself excluded",
+  "commit": "8ae91435c78ee8836349f3776d75a4f04f2824ec",
+  "branch": "work/chatgpt-handoff",
+  "verified_utc": "2026-11-21T08:03:29.803767+00:00",
+  "files": [
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/ADDITIONAL_VA_Macro_Execution.log",
+      "size": 2080,
+      "sha256": "9366cb6af8e1d667b1894f0bd3a320d0f1245c6aaaf7d5ea7690a8eaa4d1221d",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/ADDITIONAL_VA_Macro_Execution.log"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/Accounting_and_Boundaries.md",
+      "size": 7300,
+      "sha256": "5ff4e22b3a14fc2671bcd0d91eb74e3d9eccd300032573febcff27d26432c41a",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/Accounting_and_Boundaries.md"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/Annual79_With_Fiscal.csv",
+      "size": 5406364,
+      "sha256": "12dbd457f164b952fe1da45dd6192b73df92d5454e5dae78d7f476e40706894a",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/Annual79_With_Fiscal.csv"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/Build_Comparison.py",
+      "size": 3043,
+      "sha256": "c6edb947ad6fc5a87fcf0be4f23691722351c1ddd0c13f2ed3206e1d78bc5e43",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/Build_Comparison.py"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/CAO_202607_Projections.xlsx",
+      "size": 84842,
+      "sha256": "eb45004885411574edc94b5ac5b7dabe127a63b73bbb63a4a130e64b7e01e4c5",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/CAO_202607_Projections.xlsx"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/Checks.json",
+      "size": 607,
+      "sha256": "c4e70c07b1cc09f9eae9ecb5611cbd60c216acff32e8dcb7a98a6328fc040190",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/Checks.json"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/DOMESTIC_TRANSFER_Macro_Execution.log",
+      "size": 2080,
+      "sha256": "9366cb6af8e1d667b1894f0bd3a320d0f1245c6aaaf7d5ea7690a8eaa4d1221d",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/DOMESTIC_TRANSFER_Macro_Execution.log"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/Execution_Summary.json",
+      "size": 309,
+      "sha256": "0dcfc7db1a7a870cd974d5c6d52335cac620208e75f52276d9f3dd39159265ad",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/Execution_Summary.json"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/Extract_Statistics.py",
+      "size": 4402,
+      "sha256": "64f0ccf8e798cae4b9b2ed0c83bb973c0b28e3acd7f8e9e0c5b661ffd9a1c375",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/Extract_Statistics.py"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/FOREIGN_INCOME_Macro_Execution.log",
+      "size": 2080,
+      "sha256": "9366cb6af8e1d667b1894f0bd3a320d0f1245c6aaaf7d5ea7690a8eaa4d1221d",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/FOREIGN_INCOME_Macro_Execution.log"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/Fiscal_Baseline_Annual.csv",
+      "size": 82657,
+      "sha256": "3af7bffed7ddbd5e5d3f61a81ffb8cc38870c15a70e1abfc8b15c6fc5324f5ec",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/Fiscal_Baseline_Annual.csv"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/Fiscal_Channels_All_Modes.csv",
+      "size": 2555479,
+      "sha256": "ac64fd60df8de32cb4c358f46a99046dd90cccecc7ed6d10339eb39aaa91014f",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/Fiscal_Channels_All_Modes.csv"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/Fiscal_Inputs.json",
+      "size": 2124,
+      "sha256": "d79ad4d2ba7c5748beb727d7d0586d1367061c6cc69e17012d7afd7c73ce22b9",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/Fiscal_Inputs.json"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/Full_Reproduction.log",
+      "size": 1247,
+      "sha256": "dff34b92a32e0dc0a6b225ed7e0f0d06bb23183fb4f90c395e2371df04c28d3f",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/Full_Reproduction.log"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/Key_Year_Differences.csv",
+      "size": 409560,
+      "sha256": "c13e60e21033bad13db9efd40751d40f295472c3ee509c3af8ba42cb13f40716",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/Key_Year_Differences.csv"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/Key_Years_Fiscal_Comparison.csv",
+      "size": 106170,
+      "sha256": "26c9d76b4d2d94e6b171653d8b7182d501533ba33ae1a043d665d9377c36bab2",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/Key_Years_Fiscal_Comparison.csv"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/LEGACY_Macro_Execution.log",
+      "size": 2080,
+      "sha256": "9366cb6af8e1d667b1894f0bd3a320d0f1245c6aaaf7d5ea7690a8eaa4d1221d",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/LEGACY_Macro_Execution.log"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/MOF_Anchor_References.csv",
+      "size": 1649,
+      "sha256": "50a9b97ecb0be8da6d2b77cbd886c0113ab5ccaaaff389ead2773dd772e0abe4",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/MOF_Anchor_References.csv"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/National_Fiscal.py",
+      "size": 12677,
+      "sha256": "cf92a903f028c31ea8e8c62fb5d9cd906d7075d77420513af6b1ff8527237b9b",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/National_Fiscal.py"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/National_Fiscal_Annual.csv",
+      "size": 1919239,
+      "sha256": "5e4c5d364c85f17f9df814660166a4d4db0f2f0c9707112822eb14aaa883d33d",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/National_Fiscal_Annual.csv"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/National_Fiscal_Mode_ADDITIONAL_VA.csv",
+      "size": 1883523,
+      "sha256": "003c00bf70b48d742139d0ad18640a2e3d9c2a96a91a56103a188b201536e0dc",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/National_Fiscal_Mode_ADDITIONAL_VA.csv"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/National_Fiscal_Mode_FOREIGN_INCOME.csv",
+      "size": 1885865,
+      "sha256": "e589582d61a3a52ac1b24d91bfced352288abf77d26d1f15cb2b58a1671767ef",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/National_Fiscal_Mode_FOREIGN_INCOME.csv"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/National_Fiscal_Mode_LEGACY.csv",
+      "size": 1866905,
+      "sha256": "a7e8e7c8ae91f0bebef098b95a917d958c30a42fea9e17ecb67ff39cd5422831",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/National_Fiscal_Mode_LEGACY.csv"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/National_Fiscal_Scenario_INSURER_FULL_BACKFILL.csv",
+      "size": 1923899,
+      "sha256": "24aea6a207ccc2a0d5a21f67696b191370222ff0002e9d1cee984ab725763b7b",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/National_Fiscal_Scenario_INSURER_FULL_BACKFILL.csv"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/National_Fiscal_Scenario_INTEREST_4PCT.csv",
+      "size": 1904786,
+      "sha256": "b95c7bb4f273341715630a9a68683d78cefc1d905f512e89a3854e8eec9c2416",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/National_Fiscal_Scenario_INTEREST_4PCT.csv"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/National_Fiscal_Scenario_INTEREST_ZERO.csv",
+      "size": 1887693,
+      "sha256": "7aa2b8c79e0a6b6b3aadc9a6459ff3237845f352c7ce23383d1d8a1edcc874ae",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/National_Fiscal_Scenario_INTEREST_ZERO.csv"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/National_Fiscal_Scenario_MACRO_TAX_HALF.csv",
+      "size": 1934214,
+      "sha256": "17b4c5eac023378bcf878516f2ad2b4df0e7b50352621670e91b6aa2acacbb02",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/National_Fiscal_Scenario_MACRO_TAX_HALF.csv"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/National_Fiscal_Scenario_REFINANCE_20PCT.csv",
+      "size": 1909376,
+      "sha256": "e3111e48e1708631d5b8c422f6286e3e199a976da4ff6e6d3ff941a359f50137",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/National_Fiscal_Scenario_REFINANCE_20PCT.csv"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/National_Fiscal_Scenario_STRICT_SOURCE_ONLY.csv",
+      "size": 1651390,
+      "sha256": "dbf98f8eaf92fa8431fb9b18800e708d5bd85d127058b4ee38737975a29d5c62",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/National_Fiscal_Scenario_STRICT_SOURCE_ONLY.csv"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/Official_Fiscal_Baseline_2025_2040.csv",
+      "size": 6181,
+      "sha256": "14a0fb9de6f47e92f36d549a7ded572928fc91f8a43702fc5fe42a5d8c4286f6",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/Official_Fiscal_Baseline_2025_2040.csv"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/Old_New_All79_Comparison.csv",
+      "size": 162817,
+      "sha256": "7984e2ac252591818b4e83c9bb6f4f04984875a8954cc92e1ddd77c4e9a5f2f9",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/Old_New_All79_Comparison.csv"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/Old_New_Column_Regression.csv",
+      "size": 8130,
+      "sha256": "ee78d6f89aca99b436b499b4bc017b98c8b6f2f1d8c15cc25f448398a1bc3a3e",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/Old_New_Column_Regression.csv"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/Old_New_Macro_Changed_Cells.csv",
+      "size": 30,
+      "sha256": "8794482311162c5415de4c8aa20ff1d506063a8f5bd997c94f4e85db74a7afc6",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/Old_New_Macro_Changed_Cells.csv"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/Pension_Mode_Fiscal_Comparison.csv",
+      "size": 971260,
+      "sha256": "fdbdf720b11e89626e18906a78e6d2f079bf10faed0d4d1bc1b76ef248c8829b",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/Pension_Mode_Fiscal_Comparison.csv"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/README.md",
+      "size": 2959,
+      "sha256": "2425210c87ae1dcc5678b697b5f9ea55318614112b8af3b2cb7608b03e4b18f7",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/README.md"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/Report.md",
+      "size": 8994,
+      "sha256": "c37091c119ae9e377d5a7a4424b1e80323c0978fa29cecc75155f4ed6d3b818c",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/Report.md"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/Reproduce.py",
+      "size": 2762,
+      "sha256": "7e67fd6857ee90bf13bc36576a5e2acf8069ec136a5a97daab1b16385f16da49",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/Reproduce.py"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/Reproduction_Comparison.json",
+      "size": 1021,
+      "sha256": "96bcd2d3f9d9293ab4100a06cca8c702ca4cc756c6775fa5140d33eda580dac9",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/Reproduction_Comparison.json"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/Runtime_Pins.json",
+      "size": 20272,
+      "sha256": "c430d84e68a96e49114934a973682753e81147cd2cee59a5c6c8f20585ef9202",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/Runtime_Pins.json"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/SNA2024_GFS.xlsx",
+      "size": 238733,
+      "sha256": "362f28742ebef20bb4e97036bb080f246e69c42d7856012b1a2d84356bcb6aad",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/SNA2024_GFS.xlsx"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/SNA2024_Sector_Accounts.xlsx",
+      "size": 95572,
+      "sha256": "124032a480312e5645c355e4534898a4a316f5c8257c426443fddd69501b1871",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/SNA2024_Sector_Accounts.xlsx"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/SNA2024_Sector_Snapshot.csv",
+      "size": 1487,
+      "sha256": "a2ad71f585e41001cc1ecf64b9f5b3cff7b5f1ccc7ca37ab4512ad490040a711",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/SNA2024_Sector_Snapshot.csv"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/SNA2024_Sector_Stocks.xlsx",
+      "size": 39897,
+      "sha256": "5a5eb8d7ff206dfa9dddd5d776fb47d74a0b30522bcd725c1978b7a44834a8dc",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/SNA2024_Sector_Stocks.xlsx"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/Statistical_Cell_Map.csv",
+      "size": 51386,
+      "sha256": "34451637af86fd6f2a9fd82a90652bfeea3011b34d4bbd2f9d563256ae9aea31",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/Statistical_Cell_Map.csv"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/Statistical_Source_Receipts.json",
+      "size": 1681,
+      "sha256": "2de0b66b345a3461abb1f91ce612349504736ee8a674fd32d1be4434699fa6f2",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/Statistical_Source_Receipts.json"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/Transfer_Audit.csv",
+      "size": 155983,
+      "sha256": "a37512a108a9b0188781ba206eb31501d274e32e1baa0609848556a05cc7ff81",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/Transfer_Audit.csv"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/Validation.log",
+      "size": 731,
+      "sha256": "656a77b8d8643e1e5df9db9fbf9125fd35bc7d2ffad483e57daddb548f24de76",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/Validation.log"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/Verify.py",
+      "size": 7521,
+      "sha256": "3054f427292f6c2918e488bc52eb639b406fe5f53b460409ff979b4548f0f5f7",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/Verify.py"
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/Manifest.json",
+      "size": 10208,
+      "sha256": "611a8dccc4116bfc400c83f42a956a521aa1d0e1b58bb7df3fe202cf3e95266a",
+      "match": true,
+      "source": "git fetch origin 8ae91435c78ee8836349f3776d75a4f04f2824ec; git show 8ae91435c78ee8836349f3776d75a4f04f2824ec:handoff/chatgpt-national-fiscal-closure-20261121/Manifest.json"
+    }
+  ]
+}

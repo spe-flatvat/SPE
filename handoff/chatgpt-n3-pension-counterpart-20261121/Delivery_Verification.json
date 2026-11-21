@@ -1,0 +1,533 @@
+{
+  "status": "ARTIFACT_READY_CUSTODY_PASS",
+  "verified_fixed_commit": "76176ae118ee073677e990c0d8c4cfa498e3563d",
+  "repository": "spe-flatvat/SPE",
+  "branch": "work/chatgpt-handoff",
+  "directory": "handoff/chatgpt-n3-pension-counterpart-20261121",
+  "verified_files": 51,
+  "all_sha256_and_size_match": true,
+  "local_tree_sha": "2f258c7a436494da931ed07b7e3f9d9253bf8170",
+  "scope": "51 payload originals including Manifest; this post-delivery receipt is excluded from its own manifest",
+  "policy_state": "DRAFT_NON_CANONICAL; RP023_M19_25_HOLD; RP024_PENDING; OWNER_POLICY_ADOPTION_UNCHANGED",
+  "execution_status": {
+    "implementation": "COMPLETE_CANDIDATE_CLOSURE",
+    "annual79": "COMPLETE_2370_ROWS",
+    "candidate_modes": "COMPLETE_9480_ROWS",
+    "comparison": "COMPLETE",
+    "comparability": "COMPLETE_LIMITATIONS_RECORDED",
+    "github_payload": "COMPLETE",
+    "post_fetch_verification": "PASS"
+  },
+  "files": [
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/ADDITIONAL_VA_Execution.log",
+      "size": 2080,
+      "sha256": "9366cb6af8e1d667b1894f0bd3a320d0f1245c6aaaf7d5ea7690a8eaa4d1221d",
+      "retrieved_size": 2080,
+      "retrieved_sha256": "9366cb6af8e1d667b1894f0bd3a320d0f1245c6aaaf7d5ea7690a8eaa4d1221d",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/ADDITIONAL_VA_Execution.log"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Before_After_All79.csv",
+      "size": 671244,
+      "sha256": "027399c2ec1cdef395d47972bebdec85fb93722005f2b4ed9fdfc2ce405f3e87",
+      "retrieved_size": 671244,
+      "retrieved_sha256": "027399c2ec1cdef395d47972bebdec85fb93722005f2b4ed9fdfc2ce405f3e87",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Before_After_All79.csv"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Before_After_Cell_Differences.csv",
+      "size": 266432,
+      "sha256": "5a571e25c12a4570427371ec5c1ebd67e2171180188cdd76b833daf52973ba60",
+      "retrieved_size": 266432,
+      "retrieved_sha256": "5a571e25c12a4570427371ec5c1ebd67e2171180188cdd76b833daf52973ba60",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Before_After_Cell_Differences.csv"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Build_Results.py",
+      "size": 8776,
+      "sha256": "3e51574a2674cef36492c0372e5eaee34a117901261d380985814a2e7e95a712",
+      "retrieved_size": 8776,
+      "retrieved_sha256": "3e51574a2674cef36492c0372e5eaee34a117901261d380985814a2e7e95a712",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Build_Results.py"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Candidate_Sensitivity_Annual.csv",
+      "size": 2006570,
+      "sha256": "518a45d540e0d54648d4871da7dda47d6ac5a0be86677bf0eff888671925818c",
+      "retrieved_size": 2006570,
+      "retrieved_sha256": "518a45d540e0d54648d4871da7dda47d6ac5a0be86677bf0eff888671925818c",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Candidate_Sensitivity_Annual.csv"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Checks.json",
+      "size": 785,
+      "sha256": "f70fb74e31e686b3580e9e20272853975bc66f14a4feebfd33f4b1e179ae5e19",
+      "retrieved_size": 785,
+      "retrieved_sha256": "f70fb74e31e686b3580e9e20272853975bc66f14a4feebfd33f4b1e179ae5e19",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Checks.json"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Comparability.md",
+      "size": 5541,
+      "sha256": "06e44ffca48fac730e2e9ef4d18161354bc7e7c68d7cac5d517682ee63ed955f",
+      "retrieved_size": 5541,
+      "retrieved_sha256": "06e44ffca48fac730e2e9ef4d18161354bc7e7c68d7cac5d517682ee63ed955f",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Comparability.md"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Counterpart_Checks.json",
+      "size": 1121,
+      "sha256": "9dc4895c758693573aabcb0e949bf0808da59f8e9a3ca949cacfdb7b18610b84",
+      "retrieved_size": 1121,
+      "retrieved_sha256": "9dc4895c758693573aabcb0e949bf0808da59f8e9a3ca949cacfdb7b18610b84",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Counterpart_Checks.json"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Dependency_Pins.json",
+      "size": 2674,
+      "sha256": "1673cccbca8ae7f2f4fb8b60fc4a77143c3fd51e79a03e3c218818ca3d172f85",
+      "retrieved_size": 2674,
+      "retrieved_sha256": "1673cccbca8ae7f2f4fb8b60fc4a77143c3fd51e79a03e3c218818ca3d172f85",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Dependency_Pins.json"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Evaluate.py",
+      "size": 6670,
+      "sha256": "c88dcbcadd1212ac548b6eb03681d351d690b1738ccb4766120eadc82640ccfd",
+      "retrieved_size": 6670,
+      "retrieved_sha256": "c88dcbcadd1212ac548b6eb03681d351d690b1738ccb4766120eadc82640ccfd",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Evaluate.py"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Execution.log",
+      "size": 1970,
+      "sha256": "71accedee8d5e27cee7b1110d55319f6afa2351ebff57e7da99e9728eae7fa93",
+      "retrieved_size": 1970,
+      "retrieved_sha256": "71accedee8d5e27cee7b1110d55319f6afa2351ebff57e7da99e9728eae7fa93",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Execution.log"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Execution_Metadata.json",
+      "size": 582,
+      "sha256": "dc4af37d409cf156593b0305914eb86424c5d929e9ee44692d71135cfc6310f2",
+      "retrieved_size": 582,
+      "retrieved_sha256": "dc4af37d409cf156593b0305914eb86424c5d929e9ee44692d71135cfc6310f2",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Execution_Metadata.json"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/FOREIGN_INCOME_Execution.log",
+      "size": 2080,
+      "sha256": "9366cb6af8e1d667b1894f0bd3a320d0f1245c6aaaf7d5ea7690a8eaa4d1221d",
+      "retrieved_size": 2080,
+      "retrieved_sha256": "9366cb6af8e1d667b1894f0bd3a320d0f1245c6aaaf7d5ea7690a8eaa4d1221d",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/FOREIGN_INCOME_Execution.log"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/F_Reference_Annual.csv",
+      "size": 7397,
+      "sha256": "5eb20d64170592971a796c670adee51d081c8db6dc6e79909dd1757bd81cfd36",
+      "retrieved_size": 7397,
+      "retrieved_sha256": "5eb20d64170592971a796c670adee51d081c8db6dc6e79909dd1757bd81cfd36",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/F_Reference_Annual.csv"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Gap_Additional_Accounts.csv",
+      "size": 141776,
+      "sha256": "1ade5fbe0853d25b7a40d87f9bb2345e758d235121511204e523e9f16d07afae",
+      "retrieved_size": 141776,
+      "retrieved_sha256": "1ade5fbe0853d25b7a40d87f9bb2345e758d235121511204e523e9f16d07afae",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Gap_Additional_Accounts.csv"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Gap_Annual.csv",
+      "size": 3613974,
+      "sha256": "6c36f3d91e528f8eae55678a15c49d05752fbd7aad0cb7b8b1f8a9144b5e0ce6",
+      "retrieved_size": 3613974,
+      "retrieved_sha256": "6c36f3d91e528f8eae55678a15c49d05752fbd7aad0cb7b8b1f8a9144b5e0ce6",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Gap_Annual.csv"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Gap_Common.csv",
+      "size": 2493184,
+      "sha256": "702704bc0eb7d7ef46f362659b779affc4890bccb143944a964f830bf484af6a",
+      "retrieved_size": 2493184,
+      "retrieved_sha256": "702704bc0eb7d7ef46f362659b779affc4890bccb143944a964f830bf484af6a",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Gap_Common.csv"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Gap_Components.py",
+      "size": 9411,
+      "sha256": "a0f0b4fe7f7ced6a8a9546e7b68a458ad8c6aaf888a7e57412a746a2090760dd",
+      "retrieved_size": 9411,
+      "retrieved_sha256": "a0f0b4fe7f7ced6a8a9546e7b68a458ad8c6aaf888a7e57412a746a2090760dd",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Gap_Components.py"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Gap_Foreign_Bridge.csv",
+      "size": 29502,
+      "sha256": "cd90d2074b1b7d69fcf73873063329f43e3ead78d7d543d042fa3fcc663ef15d",
+      "retrieved_size": 29502,
+      "retrieved_sha256": "cd90d2074b1b7d69fcf73873063329f43e3ead78d7d543d042fa3fcc663ef15d",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Gap_Foreign_Bridge.csv"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Gap_Inputs.json",
+      "size": 16622,
+      "sha256": "181af41fc4145e097bed4514be3d49f9f85561827e3f54223de11196d110f868",
+      "retrieved_size": 16622,
+      "retrieved_sha256": "181af41fc4145e097bed4514be3d49f9f85561827e3f54223de11196d110f868",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Gap_Inputs.json"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Gap_Model.py",
+      "size": 12587,
+      "sha256": "9a33fb0946a9fe3087574f5d5cff1bf1e7f7e8b99570173169a31e0ac25b1cef",
+      "retrieved_size": 12587,
+      "retrieved_sha256": "9a33fb0946a9fe3087574f5d5cff1bf1e7f7e8b99570173169a31e0ac25b1cef",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Gap_Model.py"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Gap_Semi_Medical.csv",
+      "size": 25326,
+      "sha256": "2a25799ec9123e888a2038b3663fe0351f6223141027a25ff4caed1dfa097a5f",
+      "retrieved_size": 25326,
+      "retrieved_sha256": "2a25799ec9123e888a2038b3663fe0351f6223141027a25ff4caed1dfa097a5f",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Gap_Semi_Medical.csv"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Gap_vs_SQ.csv",
+      "size": 509086,
+      "sha256": "773fcab3b007887c30a112835b3c6aea9c603132c7c85eb45c6c07a12c911afa",
+      "retrieved_size": 509086,
+      "retrieved_sha256": "773fcab3b007887c30a112835b3c6aea9c603132c7c85eb45c6c07a12c911afa",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Gap_vs_SQ.csv"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Input_Receipt.json",
+      "size": 28229,
+      "sha256": "f46fe15ecb0bd01afe44f5c927054679b0f2b97dba6293dd9e4bfc4725c7ee75",
+      "retrieved_size": 28229,
+      "retrieved_sha256": "f46fe15ecb0bd01afe44f5c927054679b0f2b97dba6293dd9e4bfc4725c7ee75",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Input_Receipt.json"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Interactions.csv",
+      "size": 72867,
+      "sha256": "be50c90f7254366a4ae0345686f427f6040569ffc8350d96c5dc1905d58a622e",
+      "retrieved_size": 72867,
+      "retrieved_sha256": "be50c90f7254366a4ae0345686f427f6040569ffc8350d96c5dc1905d58a622e",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Interactions.csv"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Key_Years.csv",
+      "size": 249056,
+      "sha256": "f0e1735ec24966c1c0836ddfb9a5a1d5c228648e64eb462f3a2a4190a30537c4",
+      "retrieved_size": 249056,
+      "retrieved_sha256": "f0e1735ec24966c1c0836ddfb9a5a1d5c228648e64eb462f3a2a4190a30537c4",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Key_Years.csv"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Key_Years_Comparison.csv",
+      "size": 31124,
+      "sha256": "4bdf361d6fb2965f8b6588445d181109a0e1a71e06cff622ef4d74a12df4aedf",
+      "retrieved_size": 31124,
+      "retrieved_sha256": "4bdf361d6fb2965f8b6588445d181109a0e1a71e06cff622ef4d74a12df4aedf",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Key_Years_Comparison.csv"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/LEGACY_Execution.log",
+      "size": 2080,
+      "sha256": "9366cb6af8e1d667b1894f0bd3a320d0f1245c6aaaf7d5ea7690a8eaa4d1221d",
+      "retrieved_size": 2080,
+      "retrieved_sha256": "9366cb6af8e1d667b1894f0bd3a320d0f1245c6aaaf7d5ea7690a8eaa4d1221d",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/LEGACY_Execution.log"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Manifest.json",
+      "size": 10215,
+      "sha256": "5c382ec82f41bc44af8be21c5a6aa987e711154ac349900334d68325c7fc7354",
+      "retrieved_size": 10215,
+      "retrieved_sha256": "5c382ec82f41bc44af8be21c5a6aa987e711154ac349900334d68325c7fc7354",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Manifest.json"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/N3_Claim_Candidate_Audit.csv",
+      "size": 129958,
+      "sha256": "df979f72589b929f2c7f978ebd7a6512e027e79ccd1767fefcde68b07c88eded",
+      "retrieved_size": 129958,
+      "retrieved_sha256": "df979f72589b929f2c7f978ebd7a6512e027e79ccd1767fefcde68b07c88eded",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/N3_Claim_Candidate_Audit.csv"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/N3_Corporate_Accounts.csv",
+      "size": 253533,
+      "sha256": "7c5a56591488a0a6a530c4faf9fa20ec80f7bf193876ef639d71806048cb2295",
+      "retrieved_size": 253533,
+      "retrieved_sha256": "7c5a56591488a0a6a530c4faf9fa20ec80f7bf193876ef639d71806048cb2295",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/N3_Corporate_Accounts.csv"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/N3_Engine_Accounts.csv",
+      "size": 498836,
+      "sha256": "5996ee1b8c519046f0b99aaf2d276836714e44031c65214c4aee07a1c1ed10e8",
+      "retrieved_size": 498836,
+      "retrieved_sha256": "5996ee1b8c519046f0b99aaf2d276836714e44031c65214c4aee07a1c1ed10e8",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/N3_Engine_Accounts.csv"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/N3_Income_Distribution.csv",
+      "size": 4479634,
+      "sha256": "175931d4c220b7db9c5adb5581d4d69919370ebec598a9d154647b236dc473a5",
+      "retrieved_size": 4479634,
+      "retrieved_sha256": "175931d4c220b7db9c5adb5581d4d69919370ebec598a9d154647b236dc473a5",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/N3_Income_Distribution.csv"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/N3_Pension_Accounts.csv",
+      "size": 151848,
+      "sha256": "d00317e3f4a569d45ede5fb0f909b4cbb98f8b4961b79d8c99be2744196df2e9",
+      "retrieved_size": 151848,
+      "retrieved_sha256": "d00317e3f4a569d45ede5fb0f909b4cbb98f8b4961b79d8c99be2744196df2e9",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/N3_Pension_Accounts.csv"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/N3_Policy_Accounts.csv",
+      "size": 672413,
+      "sha256": "c25ca3d7e4b45333870340fad2c532ac56a91ac0d2c8c60f70e4522359f16a5a",
+      "retrieved_size": 672413,
+      "retrieved_sha256": "c25ca3d7e4b45333870340fad2c532ac56a91ac0d2c8c60f70e4522359f16a5a",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/N3_Policy_Accounts.csv"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/N3_Selftest.json",
+      "size": 40,
+      "sha256": "9b80d04dc9d8018ec322701f3f0bdbb68e6037bcf232cbd8aacbac74feedfe3f",
+      "retrieved_size": 40,
+      "retrieved_sha256": "9b80d04dc9d8018ec322701f3f0bdbb68e6037bcf232cbd8aacbac74feedfe3f",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/N3_Selftest.json"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/N3_Structural_Interfaces.csv",
+      "size": 218221,
+      "sha256": "590f1453d5971df0c24f0a3c70509dd060ebbd869a12d955b482ec7ace153795",
+      "retrieved_size": 218221,
+      "retrieved_sha256": "590f1453d5971df0c24f0a3c70509dd060ebbd869a12d955b482ec7ace153795",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/N3_Structural_Interfaces.csv"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/N3_VAT_Regular_Quantity.csv",
+      "size": 958427,
+      "sha256": "b27330203446311756b1a23b8631015784196c0b155a24da45afbff186961976",
+      "retrieved_size": 958427,
+      "retrieved_sha256": "b27330203446311756b1a23b8631015784196c0b155a24da45afbff186961976",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/N3_VAT_Regular_Quantity.csv"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/N3_VAT_Sectors.csv",
+      "size": 3511740,
+      "sha256": "a6d47fd8c2e59f3bcd8d02e35af831659341fee2f6b3edbbe6b8f0050a2d99c1",
+      "retrieved_size": 3511740,
+      "retrieved_sha256": "a6d47fd8c2e59f3bcd8d02e35af831659341fee2f6b3edbbe6b8f0050a2d99c1",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/N3_VAT_Sectors.csv"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Partial_Fiscal_Financing.csv",
+      "size": 2808036,
+      "sha256": "12d6d016ab890a20b0a308899dc5402257353f785c2935441bf49f3aa2b2bb17",
+      "retrieved_size": 2808036,
+      "retrieved_sha256": "12d6d016ab890a20b0a308899dc5402257353f785c2935441bf49f3aa2b2bb17",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Partial_Fiscal_Financing.csv"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Pension_Counterpart.csv",
+      "size": 194896,
+      "sha256": "69deee73f4bc2c5ca3bc8f961c311a8eb4d7c307a8b532dfff9cf396d5b7b740",
+      "retrieved_size": 194896,
+      "retrieved_sha256": "69deee73f4bc2c5ca3bc8f961c311a8eb4d7c307a8b532dfff9cf396d5b7b740",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Pension_Counterpart.csv"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Pension_Source_Accounts.csv",
+      "size": 240062,
+      "sha256": "897d4532ef0f7e4c9b38e807f330f1bec577a9e64bd14b469b2d69361ecaacd5",
+      "retrieved_size": 240062,
+      "retrieved_sha256": "897d4532ef0f7e4c9b38e807f330f1bec577a9e64bd14b469b2d69361ecaacd5",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Pension_Source_Accounts.csv"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/README.md",
+      "size": 2409,
+      "sha256": "afbcb21db27f5c9d02b312c8d8c045b2f66e9f76046d52fdec75ce2df232ea0b",
+      "retrieved_size": 2409,
+      "retrieved_sha256": "afbcb21db27f5c9d02b312c8d8c045b2f66e9f76046d52fdec75ce2df232ea0b",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/README.md"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Replay.log",
+      "size": 1970,
+      "sha256": "71accedee8d5e27cee7b1110d55319f6afa2351ebff57e7da99e9728eae7fa93",
+      "retrieved_size": 1970,
+      "retrieved_sha256": "71accedee8d5e27cee7b1110d55319f6afa2351ebff57e7da99e9728eae7fa93",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Replay.log"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Report.md",
+      "size": 9434,
+      "sha256": "8a654f1e06d0a5171019a9ecae02f250a9987f8420836386c521c642908c56c4",
+      "retrieved_size": 9434,
+      "retrieved_sha256": "8a654f1e06d0a5171019a9ecae02f250a9987f8420836386c521c642908c56c4",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Report.md"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Reproduce.py",
+      "size": 1873,
+      "sha256": "8a151b1e751f8d211903ec52d9b26acac49fbf5ae365b689667876d0b87668e6",
+      "retrieved_size": 1873,
+      "retrieved_sha256": "8a151b1e751f8d211903ec52d9b26acac49fbf5ae365b689667876d0b87668e6",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Reproduce.py"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/SQ_F_N3_Comparison.csv",
+      "size": 1603939,
+      "sha256": "6229b53a13facf0128d05eb66d92145898c055a5e20a04068b7358647c7cb921",
+      "retrieved_size": 1603939,
+      "retrieved_sha256": "6229b53a13facf0128d05eb66d92145898c055a5e20a04068b7358647c7cb921",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/SQ_F_N3_Comparison.csv"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Sensitivity.csv",
+      "size": 97243,
+      "sha256": "afc22de00991bf0206290914f461a41f5aa33492425861262f61d6790f28382e",
+      "retrieved_size": 97243,
+      "retrieved_sha256": "afc22de00991bf0206290914f461a41f5aa33492425861262f61d6790f28382e",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Sensitivity.csv"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/VAT_Price_Quantity_Income.csv",
+      "size": 1815421,
+      "sha256": "972b0cdf5485b201a12f58583b8dbb9524c5b2219a31dea9792a1fc4f1ef1550",
+      "retrieved_size": 1815421,
+      "retrieved_sha256": "972b0cdf5485b201a12f58583b8dbb9524c5b2219a31dea9792a1fc4f1ef1550",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/VAT_Price_Quantity_Income.csv"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Validation.log",
+      "size": 1906,
+      "sha256": "3e1e8e76aed282f0db80b3f3cdf58adc126bb873ea09d0a68277b31753b73c50",
+      "retrieved_size": 1906,
+      "retrieved_sha256": "3e1e8e76aed282f0db80b3f3cdf58adc126bb873ea09d0a68277b31753b73c50",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Validation.log"
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Verify.py",
+      "size": 8068,
+      "sha256": "3716f31095584e51430b4aadedb774ffea6585f5a3761d30a5160be525f0e011",
+      "retrieved_size": 8068,
+      "retrieved_sha256": "3716f31095584e51430b4aadedb774ffea6585f5a3761d30a5160be525f0e011",
+      "status": "PASS",
+      "retrieval": "GITHUB_PUBLIC_HTTPS_GIT_FETCH_FIXED_COMMIT_THEN_GIT_SHOW",
+      "saved_path": "/workspace/scratch/6707f7551a55/SPE/handoff/chatgpt-n3-pension-counterpart-20261121/Verify.py"
+    }
+  ]
+}

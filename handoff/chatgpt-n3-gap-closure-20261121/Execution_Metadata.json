@@ -1,0 +1,14 @@
+{
+  "executed_cases": 79,
+  "years": [
+    2026,
+    2055
+  ],
+  "annual_rows": 2370,
+  "legacy_cases": 14,
+  "new_cases": 65,
+  "source_script": "/workspace/scratch/6ff100491c13/source/handoff/claude-n3-model-draft-20261121/SPE_N3_Medical_On_CommonSQ_Draft_DRAFT_20261121.py",
+  "engine_commit": "ff6210061615105de9a0d64767c256796be80ed2",
+  "scope": "N3_PARTIAL_CONNECTED_CANDIDATES",
+  "not_N3_FULL": true
+}

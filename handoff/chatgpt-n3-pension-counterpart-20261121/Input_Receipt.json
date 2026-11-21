@@ -1,0 +1,648 @@
+[
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/Build_Results.py",
+    "size": 8797,
+    "sha256": "6dc025d3a5385e4653b63f74796fa8dffdfef9473e17f10b7d22365aaf90d3ce",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/Checks.json",
+    "size": 761,
+    "sha256": "1659e9ed35bbffba595bf5f07f6a90f6f2de307783683aedfaf91c914283776b",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/Delivery_Verification.json",
+    "size": 26294,
+    "sha256": "9ec4f7fad8668a11ae7215dc250bb5d1af7675d3c9abddbd359eddf4f24636a7",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/Dependency_Pins.json",
+    "size": 2674,
+    "sha256": "1673cccbca8ae7f2f4fb8b60fc4a77143c3fd51e79a03e3c218818ca3d172f85",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/Execution.log",
+    "size": 1970,
+    "sha256": "71accedee8d5e27cee7b1110d55319f6afa2351ebff57e7da99e9728eae7fa93",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/Execution_Metadata.json",
+    "size": 411,
+    "sha256": "6d1d5c5df0c906554f5a846ae3ee35ed2cb2178d71f17fe0589599f3cc0d9839",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/F_Reference_Annual.csv",
+    "size": 7397,
+    "sha256": "5eb20d64170592971a796c670adee51d081c8db6dc6e79909dd1757bd81cfd36",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/Gap_Additional_Accounts.csv",
+    "size": 141776,
+    "sha256": "1ade5fbe0853d25b7a40d87f9bb2345e758d235121511204e523e9f16d07afae",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/Gap_Annual.csv",
+    "size": 3457023,
+    "sha256": "7a547b54c8d61c972e115cf5ca941ca8a4340683950085273e80429c991dc9f6",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/Gap_Common.csv",
+    "size": 2493184,
+    "sha256": "702704bc0eb7d7ef46f362659b779affc4890bccb143944a964f830bf484af6a",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/Gap_Components.py",
+    "size": 7905,
+    "sha256": "eb6b66f9bc067c8a271fc99b03c6bf1fba0037ea337ea683d194c24ff0f878b1",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/Gap_Foreign_Bridge.csv",
+    "size": 29502,
+    "sha256": "cd90d2074b1b7d69fcf73873063329f43e3ead78d7d543d042fa3fcc663ef15d",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/Gap_Inputs.json",
+    "size": 16622,
+    "sha256": "181af41fc4145e097bed4514be3d49f9f85561827e3f54223de11196d110f868",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/Gap_Model.py",
+    "size": 12306,
+    "sha256": "716e4e15461c5cc4b45d17fb73bd34dd35b01704b4885675d37ce841d04a9e78",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/Gap_Semi_Medical.csv",
+    "size": 25326,
+    "sha256": "2a25799ec9123e888a2038b3663fe0351f6223141027a25ff4caed1dfa097a5f",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/Gap_vs_SQ.csv",
+    "size": 508881,
+    "sha256": "9d2c1be74ec1aaaeb2388a775f3697b928b35d8397a450e9bf85b23e641999d5",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/Interactions.csv",
+    "size": 73038,
+    "sha256": "a126571f60fd8da8a07c7f60f0c011fe666ce14c319578a388ea5a8d370c73f4",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/Key_Years.csv",
+    "size": 248887,
+    "sha256": "1da30aea3715bb07a2cf9cd2e7d5186a0011cbdf5eae5024d18fc34eb224ad3c",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/Manifest.json",
+    "size": 7772,
+    "sha256": "f825ad119ad780accb4281773e6e4f5bf837078b8ba4e95a53e9991a437bcf1d",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/N3_Claim_Candidate_Audit.csv",
+    "size": 129958,
+    "sha256": "df979f72589b929f2c7f978ebd7a6512e027e79ccd1767fefcde68b07c88eded",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/N3_Corporate_Accounts.csv",
+    "size": 253533,
+    "sha256": "7c5a56591488a0a6a530c4faf9fa20ec80f7bf193876ef639d71806048cb2295",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/N3_Engine_Accounts.csv",
+    "size": 498776,
+    "sha256": "91c8b4f847cae7830c2f62171c1c5e472f2b527e7f97ec6802fef19b6164c566",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/N3_Income_Distribution.csv",
+    "size": 4479634,
+    "sha256": "175931d4c220b7db9c5adb5581d4d69919370ebec598a9d154647b236dc473a5",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/N3_Pension_Accounts.csv",
+    "size": 127286,
+    "sha256": "ad4687312611734aeb8763f4385b4e4d59c7bb87cb46cc2519e82ec391590082",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/N3_Policy_Accounts.csv",
+    "size": 515502,
+    "sha256": "8f90b80540b4b1787fff6330ff1fd67ca0e2a7b8fd33a84bff5f72df736370bc",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/N3_Selftest.json",
+    "size": 40,
+    "sha256": "9b80d04dc9d8018ec322701f3f0bdbb68e6037bcf232cbd8aacbac74feedfe3f",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/N3_Structural_Interfaces.csv",
+    "size": 218179,
+    "sha256": "4ae6333c688538cb1b0f8b66bbcab70fd3abe21f5374dbce765ddfc61fa78818",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/N3_VAT_Regular_Quantity.csv",
+    "size": 958427,
+    "sha256": "b27330203446311756b1a23b8631015784196c0b155a24da45afbff186961976",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/N3_VAT_Sectors.csv",
+    "size": 3511740,
+    "sha256": "a6d47fd8c2e59f3bcd8d02e35af831659341fee2f6b3edbbe6b8f0050a2d99c1",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/Partial_Fiscal_Financing.csv",
+    "size": 2807163,
+    "sha256": "7538c2ac7296c37d27dc98bd64da40d7058fb007d79f6e2b9bbf6ebfe9e46527",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/Pension_Counterpart.csv",
+    "size": 181044,
+    "sha256": "7706eb5e026dc1be4d6e6ba0f6052ff598510871d6ba33424d6dc0820f3e219f",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/README.md",
+    "size": 2534,
+    "sha256": "1b35bbcefbeb39f9bfcff24c54ba3a3738c50b2530beaf30c5abdf7f7f9e37bb",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/Replay.log",
+    "size": 1970,
+    "sha256": "71accedee8d5e27cee7b1110d55319f6afa2351ebff57e7da99e9728eae7fa93",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/Report.md",
+    "size": 8569,
+    "sha256": "65a6f4a3b2b8e4bc7dc61c14580eb630bdf5dbaca5734933f075f6480ae8836b",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/Reproduce.py",
+    "size": 1433,
+    "sha256": "3e831d8d72c6ec1bb68a51307c6c8b582255bf5935d8d34aa1c4d8547dd73ae5",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/Research_and_Boundaries.md",
+    "size": 6546,
+    "sha256": "ab1cc720942a2e217cf3504e19f2161d1b280ef979f0b5adba38f587164a64d6",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/SQ_F_N3_Comparison.csv",
+    "size": 1603848,
+    "sha256": "c375e839eae1686a42fcf57af0269c19c369a30ed941105540275f32a1cfcc02",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/Sensitivity.csv",
+    "size": 97236,
+    "sha256": "92536732345ad4aecac7786a8b7e926c82a0cee3de76fd70b0bdc6f8435c6465",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/VAT_Price_Quantity_Income.csv",
+    "size": 1815406,
+    "sha256": "75e89f6eda2182fece572fbcd6c2cc4d4ab51cbb0d19ec9f14967b13ae143f13",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "556953292e24615cee47d92bb27e85badf12329c",
+    "path": "handoff/chatgpt-n3-gap-closure-20261121/Verify.py",
+    "size": 7876,
+    "sha256": "2c80a482b9444fa90b9ac24e6888ad57fb1524aa1a6e175fdb4468585a0ca067",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "cc032bcd6975105376e31fd00b9a00032d3c0b82",
+    "path": "handoff/claude-n3-gap-independent-verification-20261121/SPE_N3_Gap_Byte_Comparison_DRAFT_20261121.csv",
+    "size": 4503,
+    "sha256": "f07f56eaddf0e211b87d8ab4d1e00626b6ad51f2f18ab03df10ba9079663dca6",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": null
+  },
+  {
+    "commit": "cc032bcd6975105376e31fd00b9a00032d3c0b82",
+    "path": "handoff/claude-n3-gap-independent-verification-20261121/SPE_N3_Gap_Execution_Log_DRAFT_20261121.txt",
+    "size": 2999,
+    "sha256": "ef9bb3bd953ff7efaa696ab107943ab093854a2ce643760c185fa9ae25e7d6a5",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": null
+  },
+  {
+    "commit": "cc032bcd6975105376e31fd00b9a00032d3c0b82",
+    "path": "handoff/claude-n3-gap-independent-verification-20261121/SPE_N3_Gap_Independent_Numeric_Comparison_DRAFT_20261121.csv",
+    "size": 9306,
+    "sha256": "633f3900e156296b6f11bbe283aadebfa8ad8ae9d794272b27491cba8ebfc24f",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": null
+  },
+  {
+    "commit": "cc032bcd6975105376e31fd00b9a00032d3c0b82",
+    "path": "handoff/claude-n3-gap-independent-verification-20261121/SPE_N3_Gap_Independent_Recalc_DRAFT_20261121.py",
+    "size": 30672,
+    "sha256": "c2aa67eedabe8d3ef4ede3349577d99b33b8b0b523d1ebc46cead5e8ddf38f78",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": null
+  },
+  {
+    "commit": "cc032bcd6975105376e31fd00b9a00032d3c0b82",
+    "path": "handoff/claude-n3-gap-independent-verification-20261121/SPE_N3_Gap_Independent_Summary_DRAFT_20261121.json",
+    "size": 437,
+    "sha256": "e0787965ff5161a6d1605da47c7d01088f59072c6c79aca05c2c0e09744dddc9",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": null
+  },
+  {
+    "commit": "cc032bcd6975105376e31fd00b9a00032d3c0b82",
+    "path": "handoff/claude-n3-gap-independent-verification-20261121/SPE_N3_Gap_Independent_Verification_Report_DRAFT_20261121.md",
+    "size": 13165,
+    "sha256": "da66440b240935db4949fc2dc536d5f8526a6ee1507b698dc6d93734803967c0",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": null
+  },
+  {
+    "commit": "cc032bcd6975105376e31fd00b9a00032d3c0b82",
+    "path": "handoff/claude-n3-gap-independent-verification-20261121/SPE_N3_Gap_Run_All_DRAFT_20261121.sh",
+    "size": 2949,
+    "sha256": "db8e5abd3589545d4853c0fbc7fe2178000cd543abba3d790885ab5c04c40495",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": null
+  },
+  {
+    "commit": "cc032bcd6975105376e31fd00b9a00032d3c0b82",
+    "path": "handoff/claude-n3-gap-independent-verification-20261121/SPE_N3_Gap_Verification_Record_DRAFT_20261121.json",
+    "size": 3243,
+    "sha256": "8fe38b3df81b7ec552b50fa88b55a1fd554a00edd8f2b3a7105cd066876bb554",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": null
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/Build_Results.py",
+    "size": 18287,
+    "sha256": "b837838d173444d005f98aa3d3700da47efea4c93cb4d93a8eb13f5c4c8c89d2",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/Component_Interactions.csv",
+    "size": 10524,
+    "sha256": "32e446caf0c7623d383af4c0fcce32e50e6adac598e21dcd20ac8c35bdb5051f",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/Delivery_Verification.json",
+    "size": 13007,
+    "sha256": "76d80c10b9f1fdbc6d99d53017c0e894a63c7b671744f7033e083de84241c005",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/Execution_Metadata.json",
+    "size": 404,
+    "sha256": "0fea146b3ed715f02ed58e7195ffd8efa2974c6aa326aef91bc0d25350f54959",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/Implementation_Status.csv",
+    "size": 2385,
+    "sha256": "f4a70228ee0798a2a856bf14aa335a04323e563d2ed05d30f7179a6d07ffc740",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/Manifest.json",
+    "size": 4735,
+    "sha256": "f51cd4726f6039702df190b50c6011b67c133ed8986447e700b604b54c0bfdac",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/Medical_Interpolation_Comparison.csv",
+    "size": 1395,
+    "sha256": "ec76e7b16a21a09f621a8fdad20fa65223e1c91ed1fb646fdc832183719a323f",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_Claim_Candidate_Audit.csv",
+    "size": 129958,
+    "sha256": "df979f72589b929f2c7f978ebd7a6512e027e79ccd1767fefcde68b07c88eded",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_Components.py",
+    "size": 12416,
+    "sha256": "3da949845436180fb2038e109afe9d01c66c5c9ca064dad548326777ea4a9519",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_Corporate_Accounts.csv",
+    "size": 145917,
+    "sha256": "1368dcf43d8728106a79cfa93ff21c6f0f272576c76f002c875636a90d1f87e8",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_Engine_Accounts.csv",
+    "size": 213113,
+    "sha256": "947402bc61f1676987dc738cd8946077ac7692cf822f17ee6b0ade5fc1079137",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_Expansion_Annual.csv",
+    "size": 1835282,
+    "sha256": "fcc7783bc11e7d781eaf6470f23ef0da5e93edaae6e6f8570cf862e90f326749",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_Expansion_Checks.json",
+    "size": 3443,
+    "sha256": "dd61afa64bdbe5fcb4c523ede228fa4d611f68dd0a238444d9b5fb463fff7913",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_Expansion_Common.csv",
+    "size": 1434724,
+    "sha256": "e68b9d89eba3b47a6fa141c8493f9e65c8b23f1b520c419f1867f27d4e3bf1c9",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_Expansion_Comparison.csv",
+    "size": 297067,
+    "sha256": "3b9def9c5dc41386564b909839c246069f8a159bb1c127642605b4c14511b984",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_Expansion_Inputs.json",
+    "size": 7908,
+    "sha256": "f4382122f3bd0c5fc5ea8adf06832d4d6cdfa5177db40d71da17d57e23ebc422",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_Expansion_Model.py",
+    "size": 10861,
+    "sha256": "bfb46b0f5bb02d628582c3772dd686be7efc94227b128d516899a3ebceb1b54a",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_Expansion_Run.txt",
+    "size": 1169,
+    "sha256": "0b8dd355dceffff0e368fa743f9ca8b7b13e605362ca9eac9e18c1af472a264d",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_Expansion_Test_Output.txt",
+    "size": 2925,
+    "sha256": "c2e75c0784da91c9fd06c8f6e540ac03bcca4804d6b6f414b4490099442b6180",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_Expansion_Verify.py",
+    "size": 11306,
+    "sha256": "01aedef500b1191479ec082d22d071629c04a0e3459092f461ad9becc7964022",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_Income_Distribution.csv",
+    "size": 2664466,
+    "sha256": "d08b67826d4622e5c5a61009cdbffc43dd09039d0eb33c8948aea8636b2ee92a",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_Pension_Accounts.csv",
+    "size": 67341,
+    "sha256": "7efe424a170caee967e45574dfc41e5ef7dc01d0d8f326d537875110a75185bc",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_Policy_Accounts.csv",
+    "size": 256888,
+    "sha256": "49145a85253023b531e4b9a4da5f7e6e456b0a17abc38710292dc7c9c7b42745",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_SQ_F_Comparison.csv",
+    "size": 3543206,
+    "sha256": "80fb9283bdd4d11ccd7843bc8ba4065760c00e5c34931aa03a730cb7d039da88",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_Selftest.json",
+    "size": 40,
+    "sha256": "9b80d04dc9d8018ec322701f3f0bdbb68e6037bcf232cbd8aacbac74feedfe3f",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_Structural_Interfaces.csv",
+    "size": 128281,
+    "sha256": "02da41d24026b6185762ea479a3784e0f5c92ef5fb71cd7f6d28797f8504207a",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_VAT_Regular_Quantity.csv",
+    "size": 536652,
+    "sha256": "62d51c6255f8ee3f2c91c5b8aac4d666f2c08c9ae2dbfbab9417a8bc0641fbfc",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_VAT_Sectors.csv",
+    "size": 1944495,
+    "sha256": "7705932c329c03d35f97b2ddfd947eb23c48ad020d21545feb7cab14795907bb",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/Reproduction.md",
+    "size": 5088,
+    "sha256": "c28cf4ca755153516814cfdd6f4bdff075edb3684bd793aad3dd79e18d718cfa",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/SPE_N3_Model_Expansion_Report_DRAFT_20261121.md",
+    "size": 12019,
+    "sha256": "f080479f56a0dc8566e3f757704c7b1cd8a4d81e49487224afd58c82d465f55e",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "444a34e5349099482c0e51f9ccf9efef199a652b",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/Source_Reuse.json",
+    "size": 4352,
+    "sha256": "4a1f85ca847583fb4800a9b9af8ecbcfd9d4ab5b96d34c57652dbcf18c127943",
+    "retrieval": "PUBLIC_GITHUB_CLONE_FIXED_GIT_BLOB",
+    "local_runtime_equals_fixed_blob": true
+  },
+  {
+    "commit": "5804388482864af08204ba0d0e76a46206dacdbd",
+    "path": "policies/New3linesPolicies.md",
+    "size": 7039,
+    "sha256": "2f5806addb870863961d9b6a6722d9c1e38bc2b097e1a6cd0e07b39f56b77830",
+    "retrieval": "FIXED_GIT_BLOB"
+  },
+  {
+    "commit": "ffbc4ec6ed75e011ba6b10796621eba8c5a79898",
+    "path": "handoff/n3-pension-counterpart-work-20261121/SPE_Work_N3_Pension_Counterpart_One_Run_Execution_Instruction_20261121.md",
+    "size": 9289,
+    "sha256": "9321f17a63ef041e73ad3b53e569f075382d8df1a63acbc3b784675319b94184",
+    "retrieval": "FIXED_GIT_BLOB"
+  }
+]

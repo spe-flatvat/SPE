@@ -1,0 +1,21 @@
+{
+  "status": "PASS_IMPLEMENTER_TESTS_NOT_INDEPENDENT_REVIEW",
+  "cases": 79,
+  "annual_rows": 2370,
+  "new_cases": 33,
+  "tests": {
+    "old46_zero_return_annual_numeric_cells": 154692,
+    "old46_zero_return_component_numeric_cells": 204292,
+    "tax_once_payer_identity_open_national_nonnegative_rows": 2370,
+    "common_wish_and_capacity_rows": 2370,
+    "VAT_quantity_sales_tax_identities": 7110,
+    "elasticity_GDP_monotonic_same_price_pass": 3,
+    "partial_financing_stock_flow_rows": 7110,
+    "pension_stock_flow_counterparty_rows": 510,
+    "semi_medical_no_fabricated_saving_rows": 120,
+    "foreign_N4_cap_SQ_nonduplication_rows": 120,
+    "estate_reported_only_tax_delta": 90,
+    "gift_standalone_no_estate_overlap": 30,
+    "reexecuted_byte_identical_files": 24
+  }
+}

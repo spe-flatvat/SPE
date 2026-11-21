@@ -1,0 +1,16 @@
+{
+  "executed_cases": 79,
+  "years": [
+    2026,
+    2055
+  ],
+  "annual_rows": 2370,
+  "legacy_cases": 14,
+  "new_cases": 65,
+  "source_script": "3c77eafc2073fdaba4c129164817d2f57c9421b9:handoff/claude-n3-model-draft-20261121/SPE_N3_Medical_On_CommonSQ_Draft_DRAFT_20261121.py",
+  "engine_commit": "ff6210061615105de9a0d64767c256796be80ed2",
+  "scope": "N3_PARTIAL_CONNECTED_CANDIDATES",
+  "not_N3_FULL": true,
+  "selected_run": "DOMESTIC_TRANSFER_CANDIDATE_NOT_ADOPTED",
+  "case_partition": "14 original draft + 65 configured = 79; previous expansion 46 + gap addition 33 = 79"
+}

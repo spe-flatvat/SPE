@@ -1,0 +1,37 @@
+{
+  "compared_original_cells": 412380,
+  "changed_cells": 2640,
+  "changed_columns": {
+    "real_gdp_trn": 330,
+    "nominal_gdp_trn": 330,
+    "tax_diagnostic_trn": 330,
+    "household_consumption_nominal_proxy_trn": 330,
+    "consolidated_partial_balance_proxy_trn": 330,
+    "macro_cash_DI_proxy_trn": 330,
+    "policy_household_cash_delta_trn": 330,
+    "household_cash_delta_trn": 330
+  },
+  "changed_cases": [
+    "CONNECTED_Q",
+    "CONNECTED_Q_ESTATE",
+    "CONNECTED_Q_ESTATE_SEMI",
+    "CONNECTED_Q_LOW_LABOUR",
+    "CONNECTED_Q_NO_FLAT",
+    "N3_CONNECTED_COMPONENTS_A",
+    "N3_CONNECTED_COMPONENTS_B",
+    "N3_CONNECTED_NO_TAX",
+    "N3_CONNECTED_PHASE1_2030",
+    "PENSION75_NEW2039",
+    "PENSION75_PROTECTED2033",
+    "PENSION75_RETURN4",
+    "PENSION_COUNTERPART_R0p02",
+    "PENSION_COUNTERPART_R0p04",
+    "TAX_AND_PENSION"
+  ],
+  "unrelated_original_cells_exactly_unchanged": 409740,
+  "legacy_exact_original_cells": 412380,
+  "candidate_case_years": 9480,
+  "fund_source_account_rows": 1564,
+  "domestic_deterministic_byte_identical_CSVs": 23,
+  "status": "PASS_IMPLEMENTER_CHECKS_NOT_INDEPENDENT"
+}

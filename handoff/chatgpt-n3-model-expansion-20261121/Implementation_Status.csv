@@ -1,0 +1,17 @@
+item,status,boundary,artifact
+医療負担額/率補間,CONNECTED,候補2方式を2033–2038年並走,N3_Claim_Candidate_Audit.csv
+消費税0/.25/.75数量弾力性・転嫁率.6/.8/1,EXPERIMENTAL,課税取引量と税収へ接続。独立した実消費数量→GDP経路は未接続,N3_VAT_Regular_Quantity.csv
+医療財源,EXPERIMENTAL,F由来4配分、税保険料配分、部分準備資産を比較。全国債務OPEN,N3_Expansion_Annual.csv
+給与/事業30・金融20・全控除廃止,EXPERIMENTAL,既存調査所得階層＋仮定源泉構成。年金所得扱い・地方税は未変更/OPEN,N3_Income_Distribution.csv
+法人20・条件付き16,EXPERIMENTAL,利益GDP比/企業分布/基準実効率は仮定。消費税20は既存VAT経路に一度のみ,N3_Corporate_Accounts.csv
+相続贈与40,OPEN,税源・従前税負担不足。税率インターフェース、年次税収null,N3_Policy_Accounts.csv
+75歳開始・半官営拠出積立,EXPERIMENTAL,既存受給者保護、5歳階級内一様、拠出振替、利回り0/2/4候補,N3_Pension_Accounts.csv
+500万円以下の減免・現物給付,EXPERIMENTAL,世帯年収を暫定単位、減免15/35%、現物3万円は未裁定,N3_Income_Distribution.csv
+EITC廃止,OPEN,比較SQの独立EITC基準額が無いため廃止額を作らない,N3_Policy_Accounts.csv
+公務員正規化・新規雇用,EXPERIMENTAL,10万人・年収300→400万円等は候補。正規化と純増労働を区別,N3_Expansion_Annual.csv
+外国人材,STRUCTURE_ONLY,N4・地域配分・外部GDP比の条件関数を実行。GDP比定義OPENで追加人口は未接続,N3_Structural_Interfaces.csv
+共済10–15ブロック,STRUCTURE_ONLY,範囲検査を実装。費用/給付差不明,N3_Structural_Interfaces.csv
+スマートシュリンク,STRUCTURE_ONLY,密度/生産性/費用の仮定入力で優先順位計算。財源/投資GDPは未接続,N3_Structural_Interfaces.csv
+インボイス簡素化,STRUCTURE_ONLY,時間×単価の関数試験。全国対象/時間が無く年次効果null,N3_Expansion_Checks.json
+KPI自動修正,EXPERIMENTAL,2035以降の前年成長率0%未満候補で15%凍結をラッチ。正式自動裁定ではない,N3_Structural_Interfaces.csv
+N3全政策・全国PB/国債・健康/QOL,NOT_IMPLEMENTED,部分実装。全国財政・因果較正・健康評価を認定しない,N3_Expansion_Annual.csv

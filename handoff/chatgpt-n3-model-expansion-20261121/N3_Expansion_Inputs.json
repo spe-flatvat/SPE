@@ -1,0 +1,323 @@
+{
+  "status": "DRAFT_NON_CANONICAL_ALL_UNSPECIFIED_AMOUNTS_CANDIDATES",
+  "engine_commit": "ff6210061615105de9a0d64767c256796be80ed2",
+  "draft_commit": "3c77eafc2073fdaba4c129164817d2f57c9421b9",
+  "verification_commit": "31d659e573811a2e189350bee08cd5efc2c2c433",
+  "instruction_commit": "64f2a317e6e9827e37346ad80de7cc0649357c05",
+  "draft_script_sha256": "b6cd8413c68967ac413e43342e44804b0e416137c2a80e579772a54bb41b7387",
+  "cases": [
+    {
+      "id": "MED_RATE_INTERPOLATION",
+      "medical": true,
+      "interpolation": "RATE"
+    },
+    {
+      "id": "VAT_ELASTIC_025",
+      "vat": "PATH",
+      "quantity_elasticity": 0.25
+    },
+    {
+      "id": "VAT_ELASTIC_075",
+      "vat": "PATH",
+      "quantity_elasticity": 0.75
+    },
+    {
+      "id": "VAT_PASS_060_EL025",
+      "vat": "PATH",
+      "quantity_elasticity": 0.25,
+      "rate_pass": 0.6
+    },
+    {
+      "id": "VAT_PASS_100_EL025",
+      "vat": "PATH",
+      "quantity_elasticity": 0.25,
+      "rate_pass": 1.0
+    },
+    {
+      "id": "MED_FINANCE_RESERVE",
+      "medical": true,
+      "finance_fraction": 1.0,
+      "finance_mix": {
+        "TAX": 0.0,
+        "PREMIUM": 0.0,
+        "DEBT": 1.0,
+        "OTHER_SPENDING": 0.0
+      }
+    },
+    {
+      "id": "MED_FINANCE_TAX_PREMIUM",
+      "medical": true,
+      "finance_fraction": 1.0,
+      "finance_mix": {
+        "TAX": 0.5,
+        "PREMIUM": 0.5,
+        "DEBT": 0.0,
+        "OTHER_SPENDING": 0.0
+      }
+    },
+    {
+      "id": "FLAT_HH_SURVEY",
+      "flat_hh": true
+    },
+    {
+      "id": "FLAT_HH_INCOME_LOW",
+      "flat_hh": true,
+      "income_scale": 0.9
+    },
+    {
+      "id": "FLAT_HH_INCOME_HIGH",
+      "flat_hh": true,
+      "income_scale": 1.15
+    },
+    {
+      "id": "CORPORATE_FLAT20",
+      "corporate": true
+    },
+    {
+      "id": "CORPORATE_AND_PROFIT",
+      "corporate": true,
+      "corporate_incentive": true
+    },
+    {
+      "id": "CORPORATE_AND_REVENUE",
+      "corporate": true,
+      "corporate_incentive": true,
+      "investment_denominator": "REVENUE"
+    },
+    {
+      "id": "CORPORATE_LOWBASE",
+      "corporate": true,
+      "corporate_incentive": true,
+      "profit_GDP_share": 0.05
+    },
+    {
+      "id": "PENSION75_PROTECTED2033",
+      "pension75": true
+    },
+    {
+      "id": "PENSION75_NEW2039",
+      "pension75": true,
+      "protected_from_year": 2039
+    },
+    {
+      "id": "PENSION75_RETURN0",
+      "pension75": true,
+      "fund_return": 0.0
+    },
+    {
+      "id": "PENSION75_RETURN4",
+      "pension75": true,
+      "fund_return": 0.04
+    },
+    {
+      "id": "RELIEF35_INKIND",
+      "relief": true
+    },
+    {
+      "id": "RELIEF15_INKIND",
+      "relief": true,
+      "relief_maximum": 0.15
+    },
+    {
+      "id": "PUBLIC_REGULARIZE100K",
+      "employment": true
+    },
+    {
+      "id": "PUBLIC_ADD100K",
+      "employment": true,
+      "employment_mode": "ADD_JOBS"
+    },
+    {
+      "id": "FOREIGN_INTERFACE_OPEN"
+    },
+    {
+      "id": "FOREIGN_INTERFACE_EXTERNAL",
+      "foreign_ratio_definition": "EXTERNAL_UNRESOLVED_METRIC_SCENARIO",
+      "foreign_ratio_value": 0.04
+    },
+    {
+      "id": "VAT_KPI_CANDIDATE",
+      "vat": "PATH",
+      "kpi": true,
+      "kpi_growth_threshold_pct": 0.0
+    },
+    {
+      "id": "N3_CONNECTED_COMPONENTS_A",
+      "medical": true,
+      "interpolation": "RATE",
+      "vat": "PATH",
+      "quantity_elasticity": 0.25,
+      "flat_hh": true,
+      "corporate": true,
+      "corporate_incentive": true,
+      "pension75": true,
+      "relief": true,
+      "employment": true
+    },
+    {
+      "id": "N3_CONNECTED_COMPONENTS_B",
+      "medical": true,
+      "interpolation": "RATE",
+      "vat": "PATH",
+      "quantity_elasticity": 0.25,
+      "flat_hh": true,
+      "corporate": true,
+      "corporate_incentive": true,
+      "pension75": true,
+      "relief": true,
+      "employment": true,
+      "protected_from_year": 2039,
+      "investment_denominator": "REVENUE",
+      "finance_fraction": 1.0,
+      "finance_mix": {
+        "TAX": 0.0,
+        "PREMIUM": 0.0,
+        "DEBT": 1.0,
+        "OTHER_SPENDING": 0.0
+      }
+    },
+    {
+      "id": "N3_CONNECTED_NO_TAX",
+      "medical": true,
+      "interpolation": "RATE",
+      "vat": "PATH",
+      "quantity_elasticity": 0.25,
+      "flat_hh": false,
+      "corporate": false,
+      "corporate_incentive": true,
+      "pension75": true,
+      "relief": true,
+      "employment": true
+    },
+    {
+      "id": "N3_CONNECTED_NO_PENSION",
+      "medical": true,
+      "interpolation": "RATE",
+      "vat": "PATH",
+      "quantity_elasticity": 0.25,
+      "flat_hh": true,
+      "corporate": true,
+      "corporate_incentive": true,
+      "pension75": false,
+      "relief": true,
+      "employment": true
+    },
+    {
+      "id": "TAX_AND_PENSION",
+      "flat_hh": true,
+      "pension75": true
+    },
+    {
+      "flat_hh": true,
+      "relief": true,
+      "id": "FLAT_RELIEF_PHASE1_2030",
+      "household_start": 2030,
+      "household_ramp": 3
+    },
+    {
+      "id": "N3_CONNECTED_PHASE1_2030",
+      "medical": true,
+      "interpolation": "RATE",
+      "vat": "PATH",
+      "quantity_elasticity": 0.25,
+      "flat_hh": true,
+      "corporate": true,
+      "corporate_incentive": true,
+      "pension75": true,
+      "relief": true,
+      "employment": true,
+      "household_start": 2030,
+      "household_ramp": 3
+    }
+  ],
+  "candidate_parameters": {
+    "income_scale": 1.04,
+    "profit_GDP_share": 0.1,
+    "profit_margin": 0.1,
+    "corporate_baseline_rate": 0.3,
+    "corporate_investment_response": 0.3,
+    "dividend_response": 0.4,
+    "inheritance_base_trn": null,
+    "eitc_per_household_yen": null,
+    "relief_maximum": 0.35,
+    "in_kind_yen": 30000,
+    "fund_return": 0.02,
+    "pension_coverage": 0.85,
+    "fund_diversion_share": 0.25,
+    "pension_contribution_rate": 0.183,
+    "working_employment_share": 0.7,
+    "annual_worker_wage_yen": 4000000,
+    "payout_years": 20,
+    "public_job_target": 100000,
+    "public_old_wage_yen": 3000000,
+    "public_new_wage_yen": 4000000,
+    "coop_blocks": 12,
+    "foreign_requested": 10000,
+    "N4_qualified_share": 0.8,
+    "regional_weights": [
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ],
+    "firm_cells": [
+      {
+        "weight": 0.4,
+        "payout": 0.4,
+        "investment_profit_ratio": 0.1
+      },
+      {
+        "weight": 0.35,
+        "payout": 0.6,
+        "investment_profit_ratio": 0.25
+      },
+      {
+        "weight": 0.25,
+        "payout": 0.8,
+        "investment_profit_ratio": 0.4
+      }
+    ],
+    "regions": [
+      {
+        "id": "A",
+        "density": 1000,
+        "productivity": 1.0,
+        "cost": 10
+      },
+      {
+        "id": "B",
+        "density": 500,
+        "productivity": 1.5,
+        "cost": 5
+      },
+      {
+        "id": "C",
+        "density": 100,
+        "productivity": 1.0,
+        "cost": 2
+      }
+    ]
+  },
+  "parameter_provenance": {
+    "policy_text": [
+      "tax20/30/40",
+      "retire75",
+      "corporate16 AND60%/20%",
+      "income threshold5million",
+      "coop10-15",
+      "N4",
+      "GDP ratio5% unresolved"
+    ],
+    "existing_data": [
+      "household survey weights and2024 income/premium/tax means",
+      "public pension contribution18.3% and benefit strata",
+      "fixed age population",
+      "fixed SQ nominal reference path;corporate profit share is hypothetical"
+    ],
+    "all_other_values": "EXPLICIT_UNCALIBRATED_OWNER_UNDECIDED_SCENARIO;not external estimates",
+    "foreign_population": "OPEN no additional population admitted;F/SQ shared inflow unchanged",
+    "national_budget": "OPEN",
+    "income_source_allocation": "SYNTHETIC_SHARED_SURVEY_GROSS_NOT_MICRODATA",
+    "household_timing": "Original phase1=2026-2032. PHASE1_2030 cases start2030/ramp3 within phase1 (candidate year); original44 cases start2033/ramp6 retained as delayed sensitivity, not faithful phase1 implementation."
+  }
+}

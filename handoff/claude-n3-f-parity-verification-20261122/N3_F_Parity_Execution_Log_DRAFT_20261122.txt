@@ -1,0 +1,147 @@
+== START 2026-11-22T08:21:07Z python=Python 3.13.17
+== 0. target Manifest.json: size / SHA-256 / git blob SHA-1 of every listed original vs the actual bytes of the fixed Commit
+manifest files 67 sha ok 67 blob ok 67 size ok 67 files in directory not in Manifest ['handoff/chatgpt-n3-f-parity-implementation-20261122/Manifest.json', 'handoff/chatgpt-n3-f-parity-implementation-20261122/Delivery_Verification.json'] listed total bytes 32787458
+== 1. Model.py re-execution (4 attribution modes x 103 cases x 30 years)
+   DOMESTIC_TRANSFER rc=0 2026-11-22T08:22:28Z
+   LEGACY rc=0 2026-11-22T08:22:28Z
+   FOREIGN_INCOME rc=0 2026-11-22T08:23:42Z
+   ADDITIONAL_VA rc=0 2026-11-22T08:23:45Z
+== 2. Fiscal_Adapter.py / Results.py / Package.py (re-run for byte comparison only)
+{"fiscal_rows": 31110, "annual79_rows": 3090, "source_channel_rows": 12390}
+RESULTS 12360 old79 changes 0
+PACKAGED 12360 annual rows 31110 fiscal rows
+== 3. byte comparison of re-run packaged results vs delivered results/
+delivered files 52 data files 41 data files byte-identical 41
+  differs: ADDITIONAL_VA_Corrected_Execution.log LOG_OR_ENV_FILE None 619
+  differs: ADDITIONAL_VA_Execution.log LOG_OR_ENV_FILE 2589 2558
+  differs: DOMESTIC_TRANSFER_Corrected_Execution.log LOG_OR_ENV_FILE None 619
+  differs: DOMESTIC_TRANSFER_Execution.log LOG_OR_ENV_FILE 2589 2558
+  differs: Execution_Metadata.json LOG_OR_ENV_FILE 548 548
+  differs: FOREIGN_INCOME_Corrected_Execution.log LOG_OR_ENV_FILE None 619
+  differs: FOREIGN_INCOME_Execution.log LOG_OR_ENV_FILE 2589 2558
+  differs: LEGACY_Corrected_Execution.log LOG_OR_ENV_FILE None 619
+  differs: LEGACY_Execution.log LOG_OR_ENV_FILE 2589 2558
+== 4. independent macro verification (own code; no import of Work code)
+{
+ "checks": 164,
+ "passed": 164,
+ "failed": 0,
+ "failed_ids": [],
+ "items_checked": 8551921,
+ "by_area": {
+  "A": {
+   "total": 6,
+   "fail": 0
+  },
+  "B": {
+   "total": 56,
+   "fail": 0
+  },
+  "C": {
+   "total": 29,
+   "fail": 0
+  },
+  "D": {
+   "total": 26,
+   "fail": 0
+  },
+  "E": {
+   "total": 20,
+   "fail": 0
+  },
+  "F": {
+   "total": 18,
+   "fail": 0
+  },
+  "G": {
+   "total": 3,
+   "fail": 0
+  },
+  "H": {
+   "total": 4,
+   "fail": 0
+  },
+  "I": {
+   "total": 1,
+   "fail": 0
+  },
+  "J": {
+   "total": 1,
+   "fail": 0
+  }
+ }
+}
+OBS quake tax factor in 2031 derived from SQ_COMMON_ON: 0.9000000000005486
+OBS corporate-base denominator is the fixed core nominal path, not SQ_COMMON_ON actual nominal GDP: max relative difference between the two = 6.086e-07
+OBS first year real GDP differs from PARITY_CONNECTED_CANDIDATE (DOMESTIC_TRANSFER): {"PARITY_CONNECTED_CANDIDATE": null, "PARITY_FIXED_BASES": 2031, "PARITY_NO_CORPORATE": 2033, "PARITY_NO_PENSION": 2033, "PARITY_NO_FLAT": 2030, "PARITY_NO_MEDICAL": 2033, "PARITY_NO_RELIEF": 2030, "PARITY_NO_ESTATE": 2030, "PARITY_NO_KPI": null, "PARITY_MPC_LOW": 2027, "PARITY_MPC_HIGH": 2027, "PARITY_DEPRECIATION_LOW": 2031, "PARITY_DEPRECIATION_HIGH": 2031, "PARITY_INVESTMENT_START2038": 2033, "PARITY_INVESTMENT_RESPONSE0": 2033, "PARITY_INVESTMENT_RESPONSE60": 2033, "PARITY_LABOR_ADD100K": 2030, "PARITY_LABOR_ZERO": 2030, "PARITY_NO_CARRY": 2031, "PARITY_KPI_LOW_THRESHOLD": null, "PARITY_GINI_SIGNAL": 2035, "PARITY_INSURANCE_STRESS": 2034, "PARITY_SEMI_RESERVE": 2033, "PARITY_KPI_HIGH_THRESHOLD": 2038}
+OBS policy_tax_delta (connected vs fixed bases) 2035/2045/2055: 2035: 85.784 vs 87.276 (wage factor 0.9788); 2045: 94.182 vs 96.077 (wage factor 0.9705); 2055: 108.138 vs 110.097 (wage factor 0.9726)
+OBS macro investment line minus corporate-induced policy investment vs PARITY_NO_CORPORATE line: max gap 0.00000 trn; the remainder is NEGATIVE (2045: -1.871 trn) because employer-cost channels (pension employer premium etc., x firm_investment_response 0.3) reduce investment in the inherited old-79 mechanism; net investment of the base candidate in 2045 = 0.968 trn
+OBS firm funding account deflates with the fixed SQ deflator; the macro engine deflates investment with each case's own deflator: max relative gap over parity cases = 1.595e-05
+OBS PARITY_CONNECTED_CANDIDATE firm cash stock at end-2055 (DOMESTIC_TRANSFER) = 60.7487 trn (negative = external funding need, diagnostic only; not fed back to GDP)
+OBS 2035 KPI input (income-per-person growth between 2033 and 2034, %): connected=0.175154; this is only 0.175 percentage points above the 0% candidate threshold (knife-edge: a small change of level can flip the freeze)
+OBS PARITY_INSURANCE_STRESS vs CONNECTED real GDP difference 2035/2045/2055 = 0.0489/1.1397/2.1213 trn; pension fund return difference -0.1615/-3.3064/-7.4204 trn. The GDP difference is a pension-return/fund-balance effect (fund_return -1% instead of +2%); no separate competition-productivity effect exists in the code path (label STRUCTURE_ONLY). The case therefore does not isolate the signal.
+OBS 2055 real GDP of PARITY_CONNECTED_CANDIDATE by pension ownership: DOMESTIC_TRANSFER=481.330871, LEGACY=482.927703, FOREIGN_INCOME=482.927703, ADDITIONAL_VA=485.797554
+OBS household cash change of the base candidate in 2055 = -153.778 trn (negative: N3 is a net household burden, so a higher MPC LOWERS GDP); PARITY_LABOR_ZERO > base by payroll demand only (base candidate has no added jobs; ZERO adds payroll but 0 effective labour); LABOR_ADD100K - LABOR_ZERO = +0.427
+OBS sensitivity 2055 real GDP deltas vs base candidate (DOMESTIC_TRANSFER): PARITY_MPC_LOW=+14.325, PARITY_MPC_HIGH=-11.921, PARITY_DEPRECIATION_LOW=+0.126, PARITY_DEPRECIATION_HIGH=-0.170, PARITY_NO_CARRY=-0.386, PARITY_LABOR_ADD100K=+0.576, PARITY_INVESTMENT_START2038=-0.093, PARITY_INVESTMENT_RESPONSE0=-2.920, PARITY_INVESTMENT_RESPONSE60=+2.949, PARITY_FIXED_BASES=-0.584, PARITY_NO_FLAT=+33.919, PARITY_NO_CORPORATE=-4.039, PARITY_NO_PENSION=+11.870, PARITY_NO_MEDICAL=+0.554, PARITY_NO_RELIEF=-0.289, PARITY_NO_ESTATE=+0.489, PARITY_NO_KPI=+0.000
+== 5. independent fiscal recomputation (own code)
+{
+ "total": 52,
+ "pass_": 52,
+ "fail": 0,
+ "failed_ids": [],
+ "by_area": {
+  "S": {
+   "total": 21,
+   "fail": 0
+  },
+  "F": {
+   "total": 6,
+   "fail": 0
+  },
+  "A": {
+   "total": 13,
+   "fail": 0
+  },
+  "T": {
+   "total": 8,
+   "fail": 0
+  },
+  "N": {
+   "total": 4,
+   "fail": 0
+  }
+ },
+ "recomputed_nonnull_rows": 29550,
+ "fiscal_rows": 31110,
+ "observations": [
+  "Baseline SFA 2026-2040 (trn): 2026:20.7, 2027:9.2, 2028:11.7, 2029:13.2, 2030:13.9, 2031:13.4, 2032:13.8, 2033:14.1, 2034:14.4, 2035:14.4, 2036:14.3, 2037:14.2, 2038:14.0, 2039:13.6, 2040:13.4; sum=208.3; assumed 0 from 2041 in tail",
+  "Official nominal GDP FY2026 = 689.3 vs SPE common SQ 2026 nominal GDP (see D)",
+  "GFS FY2024 GG PB(SNA)=-8.192 net lending=-8.912; central+local PB candidate (this model) is a different boundary (excludes social security funds) -> not comparable with GG.",
+  "Statistical_Cell_Map central_GA_* and local_ordinary_* rows (rows 28-48 of the detail sheet) belong to the general-account / ordinary-account tables whose basis (excluding vs including recon/GX/AI) is not stated; they are carried in Official_Fiscal_Baseline but NOT used by the fiscal runtime.",
+  "old-vs-new fiscal CSV columns that differ (count of rows): {\"macro_source\": 23700} ; label-only columns excluded from N01: macro_source",
+  "first year of zero candidate debt (DOMESTIC_TRANSFER, reference scenario): {\"SQ_COMMON_ON\": null, \"F_FIXED_REFERENCE\": null, \"N3_CONNECTED_COMPONENTS_A\": 2052, \"CONNECTED_Q_ESTATE_SEMI\": 2047, \"PARITY_CONNECTED_CANDIDATE\": 2047, \"PARITY_FIXED_BASES\": 2047, \"PARITY_NO_FLAT\": null, \"PARITY_NO_CORPORATE\": 2046}"
+ ]
+}
+{'case': 'PARITY_CONNECTED_CANDIDATE', 'policy_primary_delta_scale': 1.0, 'debt_end_2055': 0.0}
+{'case': 'PARITY_CONNECTED_CANDIDATE', 'policy_primary_delta_scale': 0.9, 'debt_end_2055': 0.0}
+{'case': 'PARITY_CONNECTED_CANDIDATE', 'policy_primary_delta_scale': 0.8, 'debt_end_2055': 0.0}
+{'case': 'PARITY_CONNECTED_CANDIDATE', 'policy_primary_delta_scale': 0.5, 'debt_end_2055': 539.418497203256}
+{'case': 'PARITY_CONNECTED_CANDIDATE', 'policy_primary_delta_scale': 0.0, 'debt_end_2055': 2337.5999999999985}
+{'case': 'PARITY_CONNECTED_CANDIDATE', 'policy_primary_delta_scale': 'BREAK_EVEN_SCALE_FOR_ZERO_DEBT_2055', 'debt_end_2055': 0.64999}
+{'case': 'N3_CONNECTED_COMPONENTS_A', 'policy_primary_delta_scale': 1.0, 'debt_end_2055': 0.0}
+{'case': 'N3_CONNECTED_COMPONENTS_A', 'policy_primary_delta_scale': 0.9, 'debt_end_2055': 0.0}
+{'case': 'N3_CONNECTED_COMPONENTS_A', 'policy_primary_delta_scale': 0.8, 'debt_end_2055': 50.73818753376182}
+{'case': 'N3_CONNECTED_COMPONENTS_A', 'policy_primary_delta_scale': 0.5, 'debt_end_2055': 908.311367208602}
+{'case': 'N3_CONNECTED_COMPONENTS_A', 'policy_primary_delta_scale': 0.0, 'debt_end_2055': 2337.5999999999985}
+{'case': 'N3_CONNECTED_COMPONENTS_A', 'policy_primary_delta_scale': 'BREAK_EVEN_SCALE_FOR_ZERO_DEBT_2055', 'debt_end_2055': 0.817749}
+{'case': 'CONNECTED_Q_ESTATE_SEMI', 'policy_primary_delta_scale': 1.0, 'debt_end_2055': 0.0}
+{'case': 'CONNECTED_Q_ESTATE_SEMI', 'policy_primary_delta_scale': 0.9, 'debt_end_2055': 0.0}
+{'case': 'CONNECTED_Q_ESTATE_SEMI', 'policy_primary_delta_scale': 0.8, 'debt_end_2055': 0.0}
+{'case': 'CONNECTED_Q_ESTATE_SEMI', 'policy_primary_delta_scale': 0.5, 'debt_end_2055': 519.2378025519859}
+{'case': 'CONNECTED_Q_ESTATE_SEMI', 'policy_primary_delta_scale': 0.0, 'debt_end_2055': 2337.5999999999985}
+{'case': 'CONNECTED_Q_ESTATE_SEMI', 'policy_primary_delta_scale': 'BREAK_EVEN_SCALE_FOR_ZERO_DEBT_2055', 'debt_end_2055': 0.642776}
+== END 2026-11-22T08:24:01Z
+
+real	2m54.507s
+user	5m23.956s
+sys	0m3.058s

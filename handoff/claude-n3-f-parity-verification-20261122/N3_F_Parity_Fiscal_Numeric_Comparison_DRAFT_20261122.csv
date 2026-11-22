@@ -1,0 +1,53 @@
+id,area,description,expected,actual,abs_diff,tol,verdict
+S01,S,4 official workbooks: size and SHA-256 equal Statistical_Source_Receipts.json,True,True,0,0,PASS
+S02,S,"rows 53/59/65 are PB / fiscal balance / public-debt in the block explicitly labelled ""including reconstruction, GX, AI/semiconductor"" (row 51 header)",True,True,0,0,PASS
+S03,S,"the ""excluding"" block (row 4, rows 6-) is NOT used: 2026 PB there is -1.2 vs -4.4 used",True,True,0,0,PASS
+S04,S,GDP row 50 of sheet 計数表(長期) is labelled 名目GDP and sits in the current-projection block (rows 46-61),True,True,0,0,PASS
+S05,S,"Official_Fiscal_Baseline_2025_2040.csv (PB, balance, debt, GDP; 16 years) equals own extraction from workbook",0.0,0.0,0.0,1e-12,PASS
+S06,S,workbook GDP cells are not in Statistical_Cell_Map.csv (traceability gap; value verified here directly),True,True,0,0,PASS
+S07,S,Statistical_Cell_Map.csv: 400 cells equal workbook values,0,0,0,0,PASS
+S08,S,FY2026 stock-flow residual = 1304.3 - 1270.2 + (-13.4) = 20.7,20.7,20.69999999999991,8.881784197001252e-14,1e-09,PASS
+S09,S,FY2026 net interest = PB - balance = -4.4 - (-13.4) = 9.0,9.0,9.0,0.0,1e-09,PASS
+S10,S,FY2025 end debt 1270.2 and FY2026 end 1304.3,2574.5,2574.5,0.0,1e-09,PASS
+S11,S,GFS sheet sector headers at columns 152-156 = central/local/social security/adjustment/general government,True,True,0,0,PASS
+S12,S,SNA2024_Sector_Snapshot.csv values equal own read of GFS workbook (5 sectors x 6 items),0.0,0.0,0.0,1e-09,PASS
+S13,S,"GFS identity revenue - expense - net nonfinancial asset acquisition = net lending (5 rows, rounding in 10-bn yen)",0.0,9.999999999266151e-05,9.999999999266151e-05,0.002,PASS
+S14_revenue_trn,S,general government revenue_trn = central + local + social security + consolidation adjustment,235.73160000000001,235.73160000000001,0.0,0.002,PASS
+S14_expense_trn,S,general government expense_trn = central + local + social security + consolidation adjustment,241.4684,241.4685,0.00010000000000331966,0.002,PASS
+S14_net_lending_trn,S,general government net_lending_trn = central + local + social security + consolidation adjustment,-8.911899999999997,-8.9119,1.7763568394002505e-15,0.002,PASS
+S14_tax_trn,S,general government tax_trn = central + local + social security + consolidation adjustment,130.0736,130.0736,0.0,0.002,PASS
+S15,S,consolidation adjustment nets inter-sector grants: grants received (sum of 3 sectors) - grants paid (sum) = adjustment,-83.3225,-83.3225,0.0,1e-09,PASS
+S16,S,inter-sector grants received minus paid across central/local/social security ~ -(adjustment on revenue)?: GG internal grants = 0,0.0,0.0,0.0,1e-09,PASS
+S17,S,Snapshot SNA net lending / PB / pre-FISIM interest equal own read of SNA2024_Sector_Accounts.xlsx (4 sectors),0.0,0.0,0.0,1e-09,PASS
+S18,S,PB = net lending + interest paid - interest received (pre-FISIM) for 4 sectors,0.0,0.00010000000000021103,0.00010000000000021103,0.0002,PASS
+F01,F,"total fiscal rows across all candidate/scenario CSVs = 31,110",31110,31110,0,0,PASS
+F02,F,"independent re-implementation vs Work CSV: 29550 non-null rows x 16 columns (PB, interest, balance, need, debt, assets, borrowing, redemption, draw, addition, gross issue/redemption, known primary, primary); max abs diff",0.0,5.002220859751105e-11,5.002220859751105e-11,5e-09,PASS
+F03,F,"STRICT_SOURCE_ONLY rows after 2040 are null in the CSV exactly where the specification says null (1,560 rows = 104 cases x 15 years)",0,0,0,0,PASS
+F04,F,"null rows after 2040 under STRICT: count 1,560",True,True,0,0,PASS
+F05,F,rows where the end-of-year debt would be negative before the max(0) clip (silent clipping would break the roll identity),0,0,0,0,PASS
+F06,F,rows with negative debt or negative cash assets,0,0,0,0,PASS
+A01,A,PB - net interest = fiscal balance (29550 rows),0.0,1.0032863428932615e-11,1.0032863428932615e-11,5e-09,PASS
+A02,A,end debt = begin debt + new borrowing - redemption + stock-flow residual,0.0,1.000444171950221e-10,1.000444171950221e-10,5e-09,PASS
+A03,A,cash asset roll: begin - draw + addition = end,0.0,9.00399754755199e-11,9.00399754755199e-11,5e-09,PASS
+A04,A,cash financing identity: borrowing + asset draw - redemption - asset addition = need (= -balance),0.0,9.00968188943807e-12,9.00968188943807e-12,5e-09,PASS
+A05,A,gross issue/redemption = net flow + the same assumed refinancing amount on both sides,0.0,1.0061285138363019e-11,1.0061285138363019e-11,5e-09,PASS
+A06,A,borrowing and redemption never occur together; asset draw and addition never occur together,True,True,0,0,PASS
+A07,A,"candidate PB/interest/debt/bond-issue for general government stay null in all 31,110 rows; actual bond issue/redemption null",True,True,0,0,PASS
+A08,A,FY2025-end debt carried as non-zero start: 2026 begin debt = 1270.2 in all rows,True,True,0,0,PASS
+A09,A,"SQ_COMMON_ON equals the official baseline exactly (PB, debt, no assets) 2026-2040",True,True,0,0,PASS
+A10,A,"government balance delta = tax delta (counted once) - expenditure delta; VAT/corporate/estate/medical-tax diagnostics are not added (9,510 channel rows incl. F)",0.0,1.6000072378119512e-09,1.6000072378119512e-09,5e-07,PASS
+A11,A,"primary delta = balance delta + existing medical/education policy interest removed (replaced by the new candidate interest, not added)",0.0,4.945377440890297e-12,4.945377440890297e-12,5e-09,PASS
+A12,A,VAT / policy direct-tax columns are labelled diagnostic-only in channel file (not summed into primary),True,True,0,0,PASS
+A13,A,"Transfer_Audit: government payment = insurer receipt, consolidated 0 (all rows)",0.0,0.0,0.0,1e-12,PASS
+T01,T,"insurer backfill 0->100%: consolidated known primary delta unchanged (government PB moves, insurer offsets), 955 rows with backfill>0",0.0,0.0,0.0,5e-09,PASS
+T02,T,with 100% backfill no insurer deficit remains,0,0.0,0.0,0,PASS
+T03,T,backfill > 0 occurs only where insurer balance delta < 0 and the government PB falls by exactly that amount (before debt feedback),True,True,0,0,PASS
+T04,T,"refinancing share 10%->20%: PB, interest, net debt, assets, borrowing, redemption unchanged",0.0,0.0,0.0,5e-09,PASS
+T05,T,refinancing 10%->20% changes gross issue/redemption only (rows changed >0) | 2854 rows,True,True,0,0,PASS
+T06,T,"interest sensitivity: where a case holds excess debt (candidate > baseline), net interest ordered 0% < 2% < 4% in 2035 for F fixed",True,True,0,0,PASS
+T07,T,MACRO_TAX_HALF: mapping adjustment = (0.5-1) x macro-feedback tax delta; statutory tax delta unchanged,0.0,1.0103029524088925e-14,1.0103029524088925e-14,5e-09,PASS
+T08,T,fiscal scenarios do not feed back to GDP (real GDP identical across all scenarios),0.0,0.0,0.0,0.0,PASS
+N01,N,"old 79 macro cases (+F ref): 1,817,160 fiscal cells in old fixed fiscal CSVs equal the new fiscal CSVs string-for-string (shared columns)",0,0,0,0,PASS
+N02,N,old fiscal rows missing in the new fiscal CSVs,0,0,0,0,PASS
+N03,N,24 new PARITY_* cases are present in the fiscal output for all 4 modes and 6+ scenarios | 24,True,True,0,0,PASS
+N04,N,the F fixed reference is unchanged (not re-executed): identical rows in old and new fiscal CSVs,True,True,0,0,PASS

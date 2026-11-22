@@ -1,0 +1,165 @@
+id,area,description,items,failures,max_abs_residual,example_failure,note,verdict
+A01_DOMESTIC_TRANSFER,A,DOMESTIC_TRANSFER: 103 cases x 30 years present in Gap_Annual / Engine / Policy accounts (no duplicate keys),1,0,0.0,,cases=103,PASS
+A01_LEGACY,A,LEGACY: 103 cases x 30 years present in Gap_Annual / Engine / Policy accounts (no duplicate keys),1,0,0.0,,cases=103,PASS
+A01_FOREIGN_INCOME,A,FOREIGN_INCOME: 103 cases x 30 years present in Gap_Annual / Engine / Policy accounts (no duplicate keys),1,0,0.0,,cases=103,PASS
+A01_ADDITIONAL_VA,A,ADDITIONAL_VA: 103 cases x 30 years present in Gap_Annual / Engine / Policy accounts (no duplicate keys),1,0,0.0,,cases=103,PASS
+A02,A,case partition = 14 original + 65 existing extensions + 24 PARITY cases = 103; 24 parity ids all present,1,0,0.0,,,PASS
+A03,A,"4 modes x 103 cases x 30 years = 12,360 case-years",1,0,0.0,,,PASS
+B01_DOMESTIC_TRANSFER,B,"DOMESTIC_TRANSFER: real GDP = core + absorption*supply + C + I + education/deflator + services - unmet (own identity, all 3,090 case-years)",3090,0,9.748291063260695e-10,,,PASS
+B02_DOMESTIC_TRANSFER,B,"DOMESTIC_TRANSFER: C_t = (1-lamC)*C_(t-1) + lamC*Ctarget_t, with C_(t-1) taken from the PRIOR ROW (not from the logged previous column)",2987,0,8.000711204658728e-11,,,PASS
+B03_DOMESTIC_TRANSFER,B,"DOMESTIC_TRANSFER: I_t = (1-lamI)*I_(t-1) + lamI*nominal_investment_t/deflator_t, I_(t-1) from the prior row",2987,0,1.1219913886861832e-11,,,PASS
+B04_DOMESTIC_TRANSFER,B,DOMESTIC_TRANSFER: capital stock K_t = (1-dep)*K_(t-1) + I_t (carry cases); NO_CARRY: K_t = I_t,2987,0,9.50013401279648e-11,,,PASS
+B05_DOMESTIC_TRANSFER,B,DOMESTIC_TRANSFER: next-year supply = yield*(1-dep)*K_(t-1) + education supply; K_(t-1) from the prior row,2987,0,8.499867476530198e-12,,,PASS
+B06_DOMESTIC_TRANSFER,B,DOMESTIC_TRANSFER: total capital - delta capital = capital_ratio(3.0) * core real GDP (one core capital line; no second addition),3090,0,6.269601726671681e-09,,,PASS
+B07_DOMESTIC_TRANSFER,B,DOMESTIC_TRANSFER: income feedback = 0.08 * (prior-year real GDP - prior core real GDP) * deflator; household disposable = 0.6*core nominal + cash + feedback,6077,0,1.5900809557933826e-09,,,PASS
+B08_DOMESTIC_TRANSFER,B,DOMESTIC_TRANSFER: prior-gap column equals prior-row (real GDP - core real GDP),2987,0,9.99982319171977e-10,,,PASS
+B09_DOMESTIC_TRANSFER,B,DOMESTIC_TRANSFER: first year (2026) is the observed anchor: C=I=K=0 and real GDP = core = 580 for every case,103,0,0.0,,,PASS
+B10_DOMESTIC_TRANSFER,B,"DOMESTIC_TRANSFER: macro tax follows nominal GDP only: tax_t = min(tax_(t-1)*(1+1.5*(N_t/N_(t-1)-1))*quake_t, 0.3*N_t); quake factor derived from SQ and required equal in every case",2987,0,2.2225776774575934e-09,,,PASS
+B11_DOMESTIC_TRANSFER,B,"DOMESTIC_TRANSFER: tax_diagnostic = tax_macro + VAT_delta + engine_direct_tax_delta (policy tax counted once, outside the macro base)",3090,0,1.200021415570518e-09,,,PASS
+B12_DOMESTIC_TRANSFER,B,DOMESTIC_TRANSFER: engine_direct_tax_delta = medical_financing_direct_tax + policy_tax_delta,3090,0,9.050040716829244e-10,,,PASS
+B13_DOMESTIC_TRANSFER,B,DOMESTIC_TRANSFER: partial government balance = tax_diagnostic - expenditure_diagnostic,3090,0,1.0000107408814074e-09,,,PASS
+B14_DOMESTIC_TRANSFER,B,DOMESTIC_TRANSFER: household_cash_delta = medical_only_household_cash_delta + policy_household_cash_delta (policy cash once),3090,0,9.464002914683078e-10,,,PASS
+B01_LEGACY,B,"LEGACY: real GDP = core + absorption*supply + C + I + education/deflator + services - unmet (own identity, all 3,090 case-years)",3090,0,9.643823517535566e-10,,,PASS
+B02_LEGACY,B,"LEGACY: C_t = (1-lamC)*C_(t-1) + lamC*Ctarget_t, with C_(t-1) taken from the PRIOR ROW (not from the logged previous column)",2987,0,8.000711204658728e-11,,,PASS
+B03_LEGACY,B,"LEGACY: I_t = (1-lamI)*I_(t-1) + lamI*nominal_investment_t/deflator_t, I_(t-1) from the prior row",2987,0,9.383605004131823e-12,,,PASS
+B04_LEGACY,B,LEGACY: capital stock K_t = (1-dep)*K_(t-1) + I_t (carry cases); NO_CARRY: K_t = I_t,2987,0,9.50013401279648e-11,,,PASS
+B05_LEGACY,B,LEGACY: next-year supply = yield*(1-dep)*K_(t-1) + education supply; K_(t-1) from the prior row,2987,0,8.499867476530198e-12,,,PASS
+B06_LEGACY,B,LEGACY: total capital - delta capital = capital_ratio(3.0) * core real GDP (one core capital line; no second addition),3090,0,6.269601726671681e-09,,,PASS
+B07_LEGACY,B,LEGACY: income feedback = 0.08 * (prior-year real GDP - prior core real GDP) * deflator; household disposable = 0.6*core nominal + cash + feedback,6077,0,1.380044523102697e-09,,,PASS
+B08_LEGACY,B,LEGACY: prior-gap column equals prior-row (real GDP - core real GDP),2987,0,9.641781971349989e-10,,,PASS
+B09_LEGACY,B,LEGACY: first year (2026) is the observed anchor: C=I=K=0 and real GDP = core = 580 for every case,103,0,0.0,,,PASS
+B10_LEGACY,B,"LEGACY: macro tax follows nominal GDP only: tax_t = min(tax_(t-1)*(1+1.5*(N_t/N_(t-1)-1))*quake_t, 0.3*N_t); quake factor derived from SQ and required equal in every case",2987,0,2.2225776774575934e-09,,,PASS
+B11_LEGACY,B,"LEGACY: tax_diagnostic = tax_macro + VAT_delta + engine_direct_tax_delta (policy tax counted once, outside the macro base)",3090,0,1.3000658327655401e-09,,,PASS
+B12_LEGACY,B,LEGACY: engine_direct_tax_delta = medical_financing_direct_tax + policy_tax_delta,3090,0,9.050040716829244e-10,,,PASS
+B13_LEGACY,B,LEGACY: partial government balance = tax_diagnostic - expenditure_diagnostic,3090,0,1.000017846308765e-09,,,PASS
+B14_LEGACY,B,LEGACY: household_cash_delta = medical_only_household_cash_delta + policy_household_cash_delta (policy cash once),3090,0,9.899991937345476e-10,,,PASS
+B01_FOREIGN_INCOME,B,"FOREIGN_INCOME: real GDP = core + absorption*supply + C + I + education/deflator + services - unmet (own identity, all 3,090 case-years)",3090,0,9.643823517535566e-10,,,PASS
+B02_FOREIGN_INCOME,B,"FOREIGN_INCOME: C_t = (1-lamC)*C_(t-1) + lamC*Ctarget_t, with C_(t-1) taken from the PRIOR ROW (not from the logged previous column)",2987,0,8.000711204658728e-11,,,PASS
+B03_FOREIGN_INCOME,B,"FOREIGN_INCOME: I_t = (1-lamI)*I_(t-1) + lamI*nominal_investment_t/deflator_t, I_(t-1) from the prior row",2987,0,9.383605004131823e-12,,,PASS
+B04_FOREIGN_INCOME,B,FOREIGN_INCOME: capital stock K_t = (1-dep)*K_(t-1) + I_t (carry cases); NO_CARRY: K_t = I_t,2987,0,9.50013401279648e-11,,,PASS
+B05_FOREIGN_INCOME,B,FOREIGN_INCOME: next-year supply = yield*(1-dep)*K_(t-1) + education supply; K_(t-1) from the prior row,2987,0,8.499867476530198e-12,,,PASS
+B06_FOREIGN_INCOME,B,FOREIGN_INCOME: total capital - delta capital = capital_ratio(3.0) * core real GDP (one core capital line; no second addition),3090,0,6.269601726671681e-09,,,PASS
+B07_FOREIGN_INCOME,B,FOREIGN_INCOME: income feedback = 0.08 * (prior-year real GDP - prior core real GDP) * deflator; household disposable = 0.6*core nominal + cash + feedback,6077,0,1.380044523102697e-09,,,PASS
+B08_FOREIGN_INCOME,B,FOREIGN_INCOME: prior-gap column equals prior-row (real GDP - core real GDP),2987,0,9.641781971349989e-10,,,PASS
+B09_FOREIGN_INCOME,B,FOREIGN_INCOME: first year (2026) is the observed anchor: C=I=K=0 and real GDP = core = 580 for every case,103,0,0.0,,,PASS
+B10_FOREIGN_INCOME,B,"FOREIGN_INCOME: macro tax follows nominal GDP only: tax_t = min(tax_(t-1)*(1+1.5*(N_t/N_(t-1)-1))*quake_t, 0.3*N_t); quake factor derived from SQ and required equal in every case",2987,0,2.2225776774575934e-09,,,PASS
+B11_FOREIGN_INCOME,B,"FOREIGN_INCOME: tax_diagnostic = tax_macro + VAT_delta + engine_direct_tax_delta (policy tax counted once, outside the macro base)",3090,0,1.3000658327655401e-09,,,PASS
+B12_FOREIGN_INCOME,B,FOREIGN_INCOME: engine_direct_tax_delta = medical_financing_direct_tax + policy_tax_delta,3090,0,9.050040716829244e-10,,,PASS
+B13_FOREIGN_INCOME,B,FOREIGN_INCOME: partial government balance = tax_diagnostic - expenditure_diagnostic,3090,0,1.000017846308765e-09,,,PASS
+B14_FOREIGN_INCOME,B,FOREIGN_INCOME: household_cash_delta = medical_only_household_cash_delta + policy_household_cash_delta (policy cash once),3090,0,9.899991937345476e-10,,,PASS
+B01_ADDITIONAL_VA,B,"ADDITIONAL_VA: real GDP = core + absorption*supply + C + I + education/deflator + services - unmet (own identity, all 3,090 case-years)",3090,0,9.711484949548321e-10,,,PASS
+B02_ADDITIONAL_VA,B,"ADDITIONAL_VA: C_t = (1-lamC)*C_(t-1) + lamC*Ctarget_t, with C_(t-1) taken from the PRIOR ROW (not from the logged previous column)",2987,0,8.000711204658728e-11,,,PASS
+B03_ADDITIONAL_VA,B,"ADDITIONAL_VA: I_t = (1-lamI)*I_(t-1) + lamI*nominal_investment_t/deflator_t, I_(t-1) from the prior row",2987,0,8.186784583585904e-12,,,PASS
+B04_ADDITIONAL_VA,B,ADDITIONAL_VA: capital stock K_t = (1-dep)*K_(t-1) + I_t (carry cases); NO_CARRY: K_t = I_t,2987,0,9.50013401279648e-11,,,PASS
+B05_ADDITIONAL_VA,B,ADDITIONAL_VA: next-year supply = yield*(1-dep)*K_(t-1) + education supply; K_(t-1) from the prior row,2987,0,8.499867476530198e-12,,,PASS
+B06_ADDITIONAL_VA,B,ADDITIONAL_VA: total capital - delta capital = capital_ratio(3.0) * core real GDP (one core capital line; no second addition),3090,0,6.275968189584091e-09,,,PASS
+B07_ADDITIONAL_VA,B,ADDITIONAL_VA: income feedback = 0.08 * (prior-year real GDP - prior core real GDP) * deflator; household disposable = 0.6*core nominal + cash + feedback,6077,0,1.5299974620575085e-09,,,PASS
+B08_ADDITIONAL_VA,B,ADDITIONAL_VA: prior-gap column equals prior-row (real GDP - core real GDP),2987,0,9.641781971349989e-10,,,PASS
+B09_ADDITIONAL_VA,B,ADDITIONAL_VA: first year (2026) is the observed anchor: C=I=K=0 and real GDP = core = 580 for every case,103,0,0.0,,,PASS
+B10_ADDITIONAL_VA,B,"ADDITIONAL_VA: macro tax follows nominal GDP only: tax_t = min(tax_(t-1)*(1+1.5*(N_t/N_(t-1)-1))*quake_t, 0.3*N_t); quake factor derived from SQ and required equal in every case",2987,0,2.2225776774575934e-09,,,PASS
+B11_ADDITIONAL_VA,B,"ADDITIONAL_VA: tax_diagnostic = tax_macro + VAT_delta + engine_direct_tax_delta (policy tax counted once, outside the macro base)",3090,0,1.3000089893466793e-09,,,PASS
+B12_ADDITIONAL_VA,B,ADDITIONAL_VA: engine_direct_tax_delta = medical_financing_direct_tax + policy_tax_delta,3090,0,8.909353255148744e-10,,,PASS
+B13_ADDITIONAL_VA,B,ADDITIONAL_VA: partial government balance = tax_diagnostic - expenditure_diagnostic,3090,0,1.0000107408814074e-09,,,PASS
+B14_ADDITIONAL_VA,B,ADDITIONAL_VA: household_cash_delta = medical_only_household_cash_delta + policy_household_cash_delta (policy cash once),3090,0,8.899974091036711e-10,,,PASS
+C01_DOMESTIC_TRANSFER,C,"DOMESTIC_TRANSFER: wage_base_factor_t = nominal wage proxy(case,t-1) / nominal wage proxy(SQ_COMMON_ON,t-1) for every dynamic case-year after 2026",667,0,4.051647906067046e-12,,,PASS
+C02_DOMESTIC_TRANSFER,C,"DOMESTIC_TRANSFER: corporate_profit_base_factor_t = nominal GDP(case,t-1) / core nominal GDP path(t-1)  (denominator = the fixed SQ core nominal path, not each case own core path)",667,0,3.638200851696638e-12,,,PASS
+C03_DOMESTIC_TRANSFER,C,"DOMESTIC_TRANSFER: factors are exactly 1 in 2026, in 2027 (prior year = common anchor/SQ) wage factor, and in all years of non-dynamic cases",2423,0,0.0,,,PASS
+C04_DOMESTIC_TRANSFER,C,"DOMESTIC_TRANSFER: factors finite and positive; the two bases are replaced, no new income/profit is added (audit columns = 0)",3090,0,0.0,,,PASS
+C05_DOMESTIC_TRANSFER,C,DOMESTIC_TRANSFER: dynamic flag in audit equals Inputs.json dynamic_bases (True only for PARITY_* cases with dynamic_bases),3090,0,0.0,,,PASS
+C01_LEGACY,C,"LEGACY: wage_base_factor_t = nominal wage proxy(case,t-1) / nominal wage proxy(SQ_COMMON_ON,t-1) for every dynamic case-year after 2026",667,0,4.051647906067046e-12,,,PASS
+C02_LEGACY,C,"LEGACY: corporate_profit_base_factor_t = nominal GDP(case,t-1) / core nominal GDP path(t-1)  (denominator = the fixed SQ core nominal path, not each case own core path)",667,0,3.638200851696638e-12,,,PASS
+C03_LEGACY,C,"LEGACY: factors are exactly 1 in 2026, in 2027 (prior year = common anchor/SQ) wage factor, and in all years of non-dynamic cases",2423,0,0.0,,,PASS
+C04_LEGACY,C,"LEGACY: factors finite and positive; the two bases are replaced, no new income/profit is added (audit columns = 0)",3090,0,0.0,,,PASS
+C05_LEGACY,C,LEGACY: dynamic flag in audit equals Inputs.json dynamic_bases (True only for PARITY_* cases with dynamic_bases),3090,0,0.0,,,PASS
+C01_FOREIGN_INCOME,C,"FOREIGN_INCOME: wage_base_factor_t = nominal wage proxy(case,t-1) / nominal wage proxy(SQ_COMMON_ON,t-1) for every dynamic case-year after 2026",667,0,4.051647906067046e-12,,,PASS
+C02_FOREIGN_INCOME,C,"FOREIGN_INCOME: corporate_profit_base_factor_t = nominal GDP(case,t-1) / core nominal GDP path(t-1)  (denominator = the fixed SQ core nominal path, not each case own core path)",667,0,3.638200851696638e-12,,,PASS
+C03_FOREIGN_INCOME,C,"FOREIGN_INCOME: factors are exactly 1 in 2026, in 2027 (prior year = common anchor/SQ) wage factor, and in all years of non-dynamic cases",2423,0,0.0,,,PASS
+C04_FOREIGN_INCOME,C,"FOREIGN_INCOME: factors finite and positive; the two bases are replaced, no new income/profit is added (audit columns = 0)",3090,0,0.0,,,PASS
+C05_FOREIGN_INCOME,C,FOREIGN_INCOME: dynamic flag in audit equals Inputs.json dynamic_bases (True only for PARITY_* cases with dynamic_bases),3090,0,0.0,,,PASS
+C01_ADDITIONAL_VA,C,"ADDITIONAL_VA: wage_base_factor_t = nominal wage proxy(case,t-1) / nominal wage proxy(SQ_COMMON_ON,t-1) for every dynamic case-year after 2026",667,0,4.051647906067046e-12,,,PASS
+C02_ADDITIONAL_VA,C,"ADDITIONAL_VA: corporate_profit_base_factor_t = nominal GDP(case,t-1) / core nominal GDP path(t-1)  (denominator = the fixed SQ core nominal path, not each case own core path)",667,0,3.638200851696638e-12,,,PASS
+C03_ADDITIONAL_VA,C,"ADDITIONAL_VA: factors are exactly 1 in 2026, in 2027 (prior year = common anchor/SQ) wage factor, and in all years of non-dynamic cases",2423,0,0.0,,,PASS
+C04_ADDITIONAL_VA,C,"ADDITIONAL_VA: factors finite and positive; the two bases are replaced, no new income/profit is added (audit columns = 0)",3090,0,0.0,,,PASS
+C05_ADDITIONAL_VA,C,ADDITIONAL_VA: dynamic flag in audit equals Inputs.json dynamic_bases (True only for PARITY_* cases with dynamic_bases),3090,0,0.0,,,PASS
+C07_DOMESTIC_TRANSFER,C,DOMESTIC_TRANSFER: labour/business flat-30 and household financial-20 tax delta (dynamic case) / same delta (PARITY_FIXED_BASES) = wage_base_factor for every dynamic parity case with the flat tax on and years after 2030,1100,0,9.161880143437884e-10,,,PASS
+C08_DOMESTIC_TRANSFER,C,"DOMESTIC_TRANSFER: corporate tax delta (dynamic) / (fixed bases) = corporate_profit_base_factor; and pension contribution (dynamic) / (fixed) = wage_base_factor, for the cases that keep those policies",506,0,7.853806494040327e-11,,,PASS
+C07_LEGACY,C,LEGACY: labour/business flat-30 and household financial-20 tax delta (dynamic case) / same delta (PARITY_FIXED_BASES) = wage_base_factor for every dynamic parity case with the flat tax on and years after 2030,1100,0,8.342198043465032e-10,,,PASS
+C08_LEGACY,C,"LEGACY: corporate tax delta (dynamic) / (fixed bases) = corporate_profit_base_factor; and pension contribution (dynamic) / (fixed) = wage_base_factor, for the cases that keep those policies",506,0,8.15294498579533e-11,,,PASS
+C07_FOREIGN_INCOME,C,FOREIGN_INCOME: labour/business flat-30 and household financial-20 tax delta (dynamic case) / same delta (PARITY_FIXED_BASES) = wage_base_factor for every dynamic parity case with the flat tax on and years after 2030,1100,0,8.342198043465032e-10,,,PASS
+C08_FOREIGN_INCOME,C,"FOREIGN_INCOME: corporate tax delta (dynamic) / (fixed bases) = corporate_profit_base_factor; and pension contribution (dynamic) / (fixed) = wage_base_factor, for the cases that keep those policies",506,0,8.15294498579533e-11,,,PASS
+C07_ADDITIONAL_VA,C,ADDITIONAL_VA: labour/business flat-30 and household financial-20 tax delta (dynamic case) / same delta (PARITY_FIXED_BASES) = wage_base_factor for every dynamic parity case with the flat tax on and years after 2030,1100,0,8.262759365607053e-10,,,PASS
+C08_ADDITIONAL_VA,C,"ADDITIONAL_VA: corporate tax delta (dynamic) / (fixed bases) = corporate_profit_base_factor; and pension contribution (dynamic) / (fixed) = wage_base_factor, for the cases that keep those policies",506,0,8.029665821140952e-11,,,PASS
+C06,C,PARITY_FIXED_BASES (dynamic bases off) equals PARITY_CONNECTED_CANDIDATE through 2029 and diverges only after the base factors depart from 1,1,0,0.0,,first GDP divergence year = 2031,PASS
+D01_DOMESTIC_TRANSFER,D,DOMESTIC_TRANSFER: firm cash end = begin + tax saving - dividend - realized nominal investment; begin = prior-year end,1416,0,4.5000092541158665e-10,,,PASS
+D02_DOMESTIC_TRANSFER,D,DOMESTIC_TRANSFER: tax saving = -corporate_tax_delta; dividend = dividend_delta; target investment = policy_investment_delta (policy account),2160,0,0.0,,,PASS
+D03_DOMESTIC_TRANSFER,D,DOMESTIC_TRANSFER: firm realized real investment_t = (1-lamI)*prior + lamI*target/deflator (first year 2026 = 0); nominal = real*deflator,1440,0,1.3923973085638863e-11,,,PASS
+D04_DOMESTIC_TRANSFER,D,"DOMESTIC_TRANSFER: residual column equals recomputed residual and is 0; external funding need = max(0,-cash)",1440,0,7.1054273576e-15,,,PASS
+D05_DOMESTIC_TRANSFER,D,DOMESTIC_TRANSFER: investment start-year gate: no realized/target corporate investment before corporate_investment_start (PARITY_INVESTMENT_START2038 / RESPONSE0 cases),12,0,0.0,,,PASS
+D06_DOMESTIC_TRANSFER,D,DOMESTIC_TRANSFER: GDP adds investment once: macro investment line minus the policy (corporate-induced) investment equals the whole line of PARITY_NO_CORPORATE within 0.2% (the firm funding stock itself never enters the GDP identity: B01/B03),210,0,0.0,,,PASS
+D01_LEGACY,D,LEGACY: firm cash end = begin + tax saving - dividend - realized nominal investment; begin = prior-year end,1416,0,6.499902838186244e-10,,,PASS
+D02_LEGACY,D,LEGACY: tax saving = -corporate_tax_delta; dividend = dividend_delta; target investment = policy_investment_delta (policy account),2160,0,0.0,,,PASS
+D03_LEGACY,D,LEGACY: firm realized real investment_t = (1-lamI)*prior + lamI*target/deflator (first year 2026 = 0); nominal = real*deflator,1440,0,1.3923973085638863e-11,,,PASS
+D04_LEGACY,D,"LEGACY: residual column equals recomputed residual and is 0; external funding need = max(0,-cash)",1440,0,7.1054273576e-15,,,PASS
+D05_LEGACY,D,LEGACY: investment start-year gate: no realized/target corporate investment before corporate_investment_start (PARITY_INVESTMENT_START2038 / RESPONSE0 cases),12,0,0.0,,,PASS
+D06_LEGACY,D,LEGACY: GDP adds investment once: macro investment line minus the policy (corporate-induced) investment equals the whole line of PARITY_NO_CORPORATE within 0.2% (the firm funding stock itself never enters the GDP identity: B01/B03),210,0,0.0,,,PASS
+D01_FOREIGN_INCOME,D,FOREIGN_INCOME: firm cash end = begin + tax saving - dividend - realized nominal investment; begin = prior-year end,1416,0,6.499902838186244e-10,,,PASS
+D02_FOREIGN_INCOME,D,FOREIGN_INCOME: tax saving = -corporate_tax_delta; dividend = dividend_delta; target investment = policy_investment_delta (policy account),2160,0,0.0,,,PASS
+D03_FOREIGN_INCOME,D,FOREIGN_INCOME: firm realized real investment_t = (1-lamI)*prior + lamI*target/deflator (first year 2026 = 0); nominal = real*deflator,1440,0,1.3923973085638863e-11,,,PASS
+D04_FOREIGN_INCOME,D,"FOREIGN_INCOME: residual column equals recomputed residual and is 0; external funding need = max(0,-cash)",1440,0,7.1054273576e-15,,,PASS
+D05_FOREIGN_INCOME,D,FOREIGN_INCOME: investment start-year gate: no realized/target corporate investment before corporate_investment_start (PARITY_INVESTMENT_START2038 / RESPONSE0 cases),12,0,0.0,,,PASS
+D06_FOREIGN_INCOME,D,FOREIGN_INCOME: GDP adds investment once: macro investment line minus the policy (corporate-induced) investment equals the whole line of PARITY_NO_CORPORATE within 0.2% (the firm funding stock itself never enters the GDP identity: B01/B03),210,0,0.0,,,PASS
+D01_ADDITIONAL_VA,D,ADDITIONAL_VA: firm cash end = begin + tax saving - dividend - realized nominal investment; begin = prior-year end,1416,0,7.100027232809225e-10,,,PASS
+D02_ADDITIONAL_VA,D,ADDITIONAL_VA: tax saving = -corporate_tax_delta; dividend = dividend_delta; target investment = policy_investment_delta (policy account),2160,0,0.0,,,PASS
+D03_ADDITIONAL_VA,D,ADDITIONAL_VA: firm realized real investment_t = (1-lamI)*prior + lamI*target/deflator (first year 2026 = 0); nominal = real*deflator,1440,0,1.3923973085638863e-11,,,PASS
+D04_ADDITIONAL_VA,D,"ADDITIONAL_VA: residual column equals recomputed residual and is 0; external funding need = max(0,-cash)",1440,0,6.2172489379e-15,,,PASS
+D05_ADDITIONAL_VA,D,ADDITIONAL_VA: investment start-year gate: no realized/target corporate investment before corporate_investment_start (PARITY_INVESTMENT_START2038 / RESPONSE0 cases),12,0,0.0,,,PASS
+D06_ADDITIONAL_VA,D,ADDITIONAL_VA: GDP adds investment once: macro investment line minus the policy (corporate-induced) investment equals the whole line of PARITY_NO_CORPORATE within 0.2% (the firm funding stock itself never enters the GDP identity: B01/B03),210,0,0.0,,,PASS
+D07,D,start-year sensitivity: PARITY_INVESTMENT_START2038 has zero corporate investment before 2038 and a positive target from 2038 on (DOMESTIC_TRANSFER),1,0,0.0,,,PASS
+D08,D,PARITY_INVESTMENT_RESPONSE0: zero corporate investment target in all years; tax saving still goes to dividend/cash (cash > 0 by 2055),1,0,0.0,,,PASS
+E01_DOMESTIC_TRANSFER,E,DOMESTIC_TRANSFER: logged previous_income_growth_pct = 100*(income per person(t-1)/(t-2) - 1) from the actual rows; income = (disposable - VAT household effect)/deflator/population,672,0,1.4698809391866519e-09,,,PASS
+E02_DOMESTIC_TRANSFER,E,DOMESTIC_TRANSFER: freeze decision in 2035 = (growth < threshold) for kpi cases; sticky afterwards; KPI-off cases never frozen,672,0,0.0,,,PASS
+E03_DOMESTIC_TRANSFER,E,DOMESTIC_TRANSFER: frozen cases keep the standard VAT rate at the 2035 level for all later years; unfrozen cases follow the unfrozen path (NO_KPI),681,0,0.0,,,PASS
+E04_DOMESTIC_TRANSFER,E,DOMESTIC_TRANSFER: growth used in the 2035 decision does not depend on 2035 or later values (it equals the 2034/2033 computation),24,0,0.0,,,PASS
+E01_LEGACY,E,LEGACY: logged previous_income_growth_pct = 100*(income per person(t-1)/(t-2) - 1) from the actual rows; income = (disposable - VAT household effect)/deflator/population,672,0,1.519514070125183e-09,,,PASS
+E02_LEGACY,E,LEGACY: freeze decision in 2035 = (growth < threshold) for kpi cases; sticky afterwards; KPI-off cases never frozen,672,0,0.0,,,PASS
+E03_LEGACY,E,LEGACY: frozen cases keep the standard VAT rate at the 2035 level for all later years; unfrozen cases follow the unfrozen path (NO_KPI),681,0,0.0,,,PASS
+E04_LEGACY,E,LEGACY: growth used in the 2035 decision does not depend on 2035 or later values (it equals the 2034/2033 computation),24,0,0.0,,,PASS
+E01_FOREIGN_INCOME,E,FOREIGN_INCOME: logged previous_income_growth_pct = 100*(income per person(t-1)/(t-2) - 1) from the actual rows; income = (disposable - VAT household effect)/deflator/population,672,0,1.519514070125183e-09,,,PASS
+E02_FOREIGN_INCOME,E,FOREIGN_INCOME: freeze decision in 2035 = (growth < threshold) for kpi cases; sticky afterwards; KPI-off cases never frozen,672,0,0.0,,,PASS
+E03_FOREIGN_INCOME,E,FOREIGN_INCOME: frozen cases keep the standard VAT rate at the 2035 level for all later years; unfrozen cases follow the unfrozen path (NO_KPI),681,0,0.0,,,PASS
+E04_FOREIGN_INCOME,E,FOREIGN_INCOME: growth used in the 2035 decision does not depend on 2035 or later values (it equals the 2034/2033 computation),24,0,0.0,,,PASS
+E01_ADDITIONAL_VA,E,ADDITIONAL_VA: logged previous_income_growth_pct = 100*(income per person(t-1)/(t-2) - 1) from the actual rows; income = (disposable - VAT household effect)/deflator/population,672,0,1.4873015041771964e-09,,,PASS
+E02_ADDITIONAL_VA,E,ADDITIONAL_VA: freeze decision in 2035 = (growth < threshold) for kpi cases; sticky afterwards; KPI-off cases never frozen,672,0,0.0,,,PASS
+E03_ADDITIONAL_VA,E,ADDITIONAL_VA: frozen cases keep the standard VAT rate at the 2035 level for all later years; unfrozen cases follow the unfrozen path (NO_KPI),681,0,0.0,,,PASS
+E04_ADDITIONAL_VA,E,ADDITIONAL_VA: growth used in the 2035 decision does not depend on 2035 or later values (it equals the 2034/2033 computation),24,0,0.0,,,PASS
+E05,E,high-threshold (100%) freezes VAT at 15% from 2035; low-threshold (-100%) and base (0%) do not fire; NO_KPI never fires (2040 standard rate: 15 / 20 / 20 / 20%),1,0,0.0,,,PASS
+E06,E,"external Gini candidate: only PARITY_GINI_SIGNAL has an observation; trigger 2035 (0.40 > 0.38), active in 2035 only, observation is labelled 2034 (lag); no other case triggers",1,0,0.0,,,PASS
+E07,E,"Gini relief increment changes relief/in-kind support only in the trigger year window (2035) and never before; later differences, if any, enter only through lagged macro states",1,0,0.0,,2034:0.000e+00 2035:0.210535/0.000000 2036:-4.409e-05/0.000e+00,PASS
+E08,E,insurance under-performance: signal true only in 2035 of PARITY_INSURANCE_STRESS (return -1% < floor 0%); competition effect is STRUCTURE_ONLY (no productivity coefficient),1,0,0.0,,,PASS
+F01_DOMESTIC_TRANSFER,F,"DOMESTIC_TRANSFER: fund end = begin + contribution + return - payout, begin = prior-year end, for every case with a pension account",2360,0,9.610232609702507e-10,,,PASS
+F02_DOMESTIC_TRANSFER,F,"DOMESTIC_TRANSFER: ownership counterpart: LEGACY none; DOMESTIC debit = return, external 0; FOREIGN external = return, debit 0; ADDITIONAL_VA VA added = return nominal; second contribution charge and direct GDP subtraction = 0",2400,0,0.0,,,PASS
+F03_DOMESTIC_TRANSFER,F,DOMESTIC_TRANSFER: semi-public medical: public net delta 0 and new public saving 0; reserve fund end = begin + return + reserve premium,1440,0,8.099299009245442e-12,,,PASS
+F01_LEGACY,F,"LEGACY: fund end = begin + contribution + return - payout, begin = prior-year end, for every case with a pension account",2360,0,9.37973254622193e-10,,,PASS
+F02_LEGACY,F,"LEGACY: ownership counterpart: LEGACY none; DOMESTIC debit = return, external 0; FOREIGN external = return, debit 0; ADDITIONAL_VA VA added = return nominal; second contribution charge and direct GDP subtraction = 0",2400,0,0.0,,,PASS
+F03_LEGACY,F,LEGACY: semi-public medical: public net delta 0 and new public saving 0; reserve fund end = begin + return + reserve premium,1440,0,8.099299009245442e-12,,,PASS
+F01_FOREIGN_INCOME,F,"FOREIGN_INCOME: fund end = begin + contribution + return - payout, begin = prior-year end, for every case with a pension account",2360,0,9.37973254622193e-10,,,PASS
+F02_FOREIGN_INCOME,F,"FOREIGN_INCOME: ownership counterpart: LEGACY none; DOMESTIC debit = return, external 0; FOREIGN external = return, debit 0; ADDITIONAL_VA VA added = return nominal; second contribution charge and direct GDP subtraction = 0",2400,0,0.0,,,PASS
+F03_FOREIGN_INCOME,F,FOREIGN_INCOME: semi-public medical: public net delta 0 and new public saving 0; reserve fund end = begin + return + reserve premium,1440,0,8.099299009245442e-12,,,PASS
+F01_ADDITIONAL_VA,F,"ADDITIONAL_VA: fund end = begin + contribution + return - payout, begin = prior-year end, for every case with a pension account",2360,0,1.0050200671685161e-09,,,PASS
+F02_ADDITIONAL_VA,F,"ADDITIONAL_VA: ownership counterpart: LEGACY none; DOMESTIC debit = return, external 0; FOREIGN external = return, debit 0; ADDITIONAL_VA VA added = return nominal; second contribution charge and direct GDP subtraction = 0",2400,0,0.0,,,PASS
+F03_ADDITIONAL_VA,F,ADDITIONAL_VA: semi-public medical: public net delta 0 and new public saving 0; reserve fund end = begin + return + reserve premium,1440,0,8.099299009245442e-12,,,PASS
+F04,F,"across the 4 candidates: pension fund stock/contribution/payout/return are identical for every NON-dynamic-base case that has a pension account (dynamic-base cases are expected to differ, see F04b)",6480,0,0.0,,,PASS
+F04b,F,"dynamic-base cases: pension fund contribution uses the previous-year wage of the case itself, so fund stock now differs by attribution candidate (expected consequence of the lagged wage base; first-year 2026-2028 equal)",1,0,0.0,,max fund-stock gap across candidates = 0.370955 trn (2055: 0.370955),PASS
+F05,F,FOREIGN_INCOME real/nominal GDP equals LEGACY exactly for all 103 cases (overseas income has no domestic GDP effect and no household debit),3090,0,0.0,,,PASS
+F06,F,"2055 ordering for the 24 parity cases: positive-return cases DOMESTIC_TRANSFER <= LEGACY = FOREIGN_INCOME <= ADDITIONAL_VA; the negative-return stress case reverses (debit becomes a credit, VA a loss)",24,0,0.0,,,PASS
+F07,F,government <-> insurer transfers cancel in the consolidated partial balance: consolidated = government + insurer lines for all cases (4 modes),12360,0,0.0,,,PASS
+F08,F,"national general-government PB, debt and actual bond issue stay null in all 12,360 macro rows",12360,0,0.0,,,PASS
+G01,G,"reported 2026/2035/2045/2055 real GDP (SQ, F fixed, old composite, new candidate; DOMESTIC_TRANSFER) re-derived from the rows and equal after rounding to 3 decimals",1,0,0.0,,,PASS
+G02,G,quoted differences: new 2055 vs initial 580 = -98.669; vs SQ = -47.631; vs F fixed = -58.944 (trn),1,0,0.0,,-98.669129 -47.631465 -58.943683,PASS
+G03,G,"delivered SQ_F_N3_Annual_Comparison.csv (DOMESTIC_TRANSFER, 3,090 rows): real GDP, minus-SQ and minus-F_FIXED re-derived from the macro rows and the fixed F reference",3090,0,0.0,,,PASS
+H01,H,parameter-change cases first diverge from the base candidate at or after the first year the parameter can act (MPC 2027; depreciation 2028 (lagged capital); corporate start/response 2030 (household_start); NO_CARRY 2028),1,0,0.0,,"[{""case"": ""PARITY_MPC_LOW"", ""expected_first_year_at_or_after"": 2027, ""observed_first_divergence"": 2027, ""ok"": true}, {""case"": ""PARITY_MPC_HIGH"", ""expected_first_year_at_or_after"": 2027, ""observed_first_divergence"": 2027, ""ok"": true}, {""case"": ""PARITY_DEPRECIATION_LOW"", ""expected_first_year_at_or_after"": 2028, ""observed_first_divergence"": 2031, ""ok"": true}, {""case"": ""PARITY_DEPRECIATION_HIGH"", ""expected_first_year_at_or_after"": 2028, ""observed_first_divergence"": 2031, ""ok"": true}, {""case"": ""PARITY_INVESTMENT_START2038"", ""expected_first_year_at_or_after"": 2030, ""observed_first_divergence"": 2033, ""ok"": true}, {""case"": ""PARITY_INVESTMENT_RESPONSE0"", ""expected_first_year_at_or_after"": 2030, ""observed_first_divergence"": 2033, ""ok"": true}, {""case"": ""PARITY_NO_CARRY"", ""expected_first_year_at_or_after"": 2028, ""observed_first_divergence"": 2031, ""ok"": true}]",PASS
+H02,H,"2055 real GDP moves in the expected direction: MPC effect follows the sign of the household cash change (negative cash in 2055 => lower MPC raises GDP, higher MPC lowers it); higher depreciation and no-carry reduce, lower depreciation and +100k effective labour raise",1,0,0.0,,"[{""case"": ""PARITY_MPC_LOW"", ""delta_2055"": 14.324632801999996, ""expected_sign"": 1, ""ok"": true}, {""case"": ""PARITY_MPC_HIGH"", ""delta_2055"": -11.920747023000047, ""expected_sign"": -1, ""ok"": true}, {""case"": ""PARITY_DEPRECIATION_LOW"", ""delta_2055"": 0.12558734499998536, ""expected_sign"": 1, ""ok"": true}, {""case"": ""PARITY_DEPRECIATION_HIGH"", ""delta_2055"": -0.1702321710000092, ""expected_sign"": -1, ""ok"": true}, {""case"": ""PARITY_NO_CARRY"", ""delta_2055"": -0.38607709600000817, ""expected_sign"": -1, ""ok"": true}, {""case"": ""PARITY_LABOR_ADD100K"", ""delta_2055"": 0.5757697409999878, ""expected_sign"": 1, ""ok"": true}]",PASS
+H02b,H,labour: ADD_JOBS with zero effectiveness differs from the base only by payroll demand; with effectiveness 0.8 GDP is higher than with 0 effectiveness in 2055,1,0,0.0,,,PASS
+H03,H,"ablation cases zero exactly the policy channel they name (flat tax, corporate, pension contribution, estate, relief) while the base candidate has a non-zero value",1,0,0.0,,,PASS
+I01,I,"old 79-case macro outputs (fixed pension-correction model, Claude re-run) vs the new model for the 79 old cases, all 4 attribution modes, 60 CSV files: string-for-string cell comparison",8238048,0,0.0,,"cells=8,238,048; different=0; old rows missing in new=0",PASS
+J01,J,"Policy_Implementation_Map.csv: 18 rows; no row is labelled complete/calibrated; STRUCTURE_ONLY/OPEN rows remain for invoice, co-op, smart-shrink and insurance competition",1,0,0.0,,rows=18 structure_only=4,PASS

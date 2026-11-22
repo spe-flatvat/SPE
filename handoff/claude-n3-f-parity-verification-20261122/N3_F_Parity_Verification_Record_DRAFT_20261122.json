@@ -1,0 +1,106 @@
+{
+ "status": "DRAFT / NON-CANONICAL",
+ "date": "2026-11-22",
+ "author": "Claude",
+ "verdict": "PASS_WITH_LIMITATIONS",
+ "request_commit": "cdf4b60a30a7178698566e642c1d6c9bef4bd45d",
+ "target_commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+ "target_dir": "handoff/chatgpt-n3-f-parity-implementation-20261122/",
+ "policy_file_sha256": "2f5806addb870863961d9b6a6722d9c1e38bc2b097e1a6cd0e07b39f56b77830",
+ "base_tip_before_push": "fffea93870e2e04a0f750ed8352c1bdcdee28afe",
+ "results": {
+  "main_checks": "164/164",
+  "fiscal_checks": "52/52",
+  "target_manifest_files": "67/67 sha,size,blob match",
+  "rerun_data_files_identical": "41/41",
+  "old79_regression": "8,238,048 cells, 0 differences, 4 modes"
+ },
+ "note": "Records inputs/outputs before push; this file excludes itself. Post-push byte check is reported separately.",
+ "files": [
+  {
+   "file": "Fixed_Request_Copy_cdf4b60a_DRAFT_20261122.md",
+   "size": 8937,
+   "sha256": "bddd6a4d1615c095d03c6e6221515270de0136553a6a8cf966a6dc7b8740a882"
+  },
+  {
+   "file": "N3_F_Parity_Execution_Log_DRAFT_20261122.txt",
+   "size": 9542,
+   "sha256": "57be7b6ca73c90f0183bcc6425c134a392790247d44f4945aa2857a428fddbbc"
+  },
+  {
+   "file": "N3_F_Parity_Fiscal_Key_Years_DRAFT_20261122.csv",
+   "size": 2605,
+   "sha256": "a23a7ab8cd493acd22360dfb903ca6f67538c964786b0fedb1fdf2149793b5ff"
+  },
+  {
+   "file": "N3_F_Parity_Fiscal_Numeric_Comparison_DRAFT_20261122.csv",
+   "size": 7082,
+   "sha256": "16bc0c50da44b0690e8e32b1f2f77378bfbc3f95ff12d0213c0d157dc1d57dc9"
+  },
+  {
+   "file": "N3_F_Parity_Fiscal_Stress_Tests_DRAFT_20261122.csv",
+   "size": 861,
+   "sha256": "515228a205dd2a3e3337643e9678424d726f39d9854dda1ca7824cf293714832"
+  },
+  {
+   "file": "N3_F_Parity_Fiscal_Summary_DRAFT_20261122.json",
+   "size": 3866,
+   "sha256": "a294976c6c9e467fe5e7f78aab2565fa50c7af5181af34c26bd581b1c9441474"
+  },
+  {
+   "file": "N3_F_Parity_Independent_Numeric_Comparison_DRAFT_20261122.csv",
+   "size": 32457,
+   "sha256": "b6dba3a53164173ecc0cf046f24f752c4011d0f9b087d31c62519c5555713261"
+  },
+  {
+   "file": "N3_F_Parity_Independent_Summary_DRAFT_20261122.json",
+   "size": 4204,
+   "sha256": "b22174ed943cb3c48ae543f598b709bc8db74f487c94ddcff5cbf7dcea642548"
+  },
+  {
+   "file": "N3_F_Parity_Key_Years_Independent_DRAFT_20261122.csv",
+   "size": 1000,
+   "sha256": "218c0e8b208de49d7c6737c28943a13d7a27cee4643d49c05337b26f67d43268"
+  },
+  {
+   "file": "N3_F_Parity_Old79_Regression_By_File_DRAFT_20261122.csv",
+   "size": 3824,
+   "sha256": "46ef96b20f0b8f6ca11d4fc7a845ec89acbcb2ecf8f1f772fc79205975487562"
+  },
+  {
+   "file": "N3_F_Parity_Results_Byte_Comparison_DRAFT_20261122.csv",
+   "size": 9798,
+   "sha256": "bb1508496b50f08f064acd69a41cd5c98c3691fc961ff2fe9a908ee42652cfb0"
+  },
+  {
+   "file": "N3_F_Parity_Sensitivity_Timing_Independent_DRAFT_20261122.csv",
+   "size": 323,
+   "sha256": "dc612c63cf4917a9eac0fcf20452ced419643532fb585edf198c467d6607efc1"
+  },
+  {
+   "file": "N3_F_Parity_Target_Manifest_Byte_Check_DRAFT_20261122.csv",
+   "size": 12076,
+   "sha256": "93da7af4171f960480daede7feb41b5a15ea331850bdddef378ca36b885406a8"
+  },
+  {
+   "file": "SPE_N3_F_Parity_Independent_Fiscal_Check_DRAFT_20261122.py",
+   "size": 30354,
+   "sha256": "2971b44d0fcfb81085cb71d6aaad117b90fc91583aa0149f145ab8b420403fe0"
+  },
+  {
+   "file": "SPE_N3_F_Parity_Independent_Recalc_DRAFT_20261122.py",
+   "size": 48766,
+   "sha256": "dc92e65a906a118d0336df1d6709fbcd2f9f5f64fb03027edf8d69516255403b"
+  },
+  {
+   "file": "SPE_N3_F_Parity_Limited_Independent_Verification_Report_DRAFT_20261122.md",
+   "size": 22581,
+   "sha256": "13127d17bb8e3dfd6fec93c6b0c6a471130de02333e0dca43e1c8063214473d7"
+  },
+  {
+   "file": "SPE_N3_F_Parity_Run_Verification_DRAFT_20261122.sh",
+   "size": 4766,
+   "sha256": "4840e6bcf2850fd41595f51c3c370ea4748c31750fc152001e648a5ba1837ad5"
+  }
+ ]
+}

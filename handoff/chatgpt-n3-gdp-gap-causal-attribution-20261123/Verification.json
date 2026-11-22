@@ -1,0 +1,28 @@
+{
+  "status": "PASS_GDP_GRAPH_AND_LIMITED_COUNTERFACTUAL_ATTRIBUTION",
+  "executed_cases": 11,
+  "executed_annual_rows": 330,
+  "checks": 13928,
+  "failed": 0,
+  "failures": [],
+  "baseline_anchor2030": -7.595361130529454,
+  "baseline_anchor2055": -44.97084476326535,
+  "SQ_below_years": 26,
+  "decomposition_rows": 30,
+  "transmission_rows": 600,
+  "independent_cause_axis_rows": 22,
+  "max_GDP_identity_residual": 1.7053025658242404e-13,
+  "max_other_cash_unidentified": 5.684341886080802e-14,
+  "prior_PASS_reused": [
+    32439,
+    1754,
+    5990
+  ],
+  "direct_source_files_checked": 41,
+  "strict_spec_structure_calibration_partition_identified": false,
+  "SQ_shocks_modified": false,
+  "SQ_original_or_common_engine_modified": false,
+  "additional_GI": false,
+  "policy_adopted": false,
+  "remaining_empirical_policy_effects": "unknown"
+}

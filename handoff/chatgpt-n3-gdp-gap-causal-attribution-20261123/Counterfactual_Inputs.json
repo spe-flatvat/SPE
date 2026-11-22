@@ -1,0 +1,21 @@
+{
+ "status":"ISOLATED_MODEL_COUNTERFACTUALS_NOT_ADOPTED_POLICY_OR_EMPIRICAL_CAUSAL_ESTIMATES",
+ "baseline_commit":"2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+ "request_commit":"3cf17fdbbbb44f92899d2897c9e98870d57f8e96",
+ "SQ":"FIXED_UNCHANGED_SQ_COMMON_ON",
+ "GI":"OFF_ALL_CASES",
+ "cases":[
+  {"case":"BASE_REPLAY","type":"BASELINE","purpose":"reproduce current native implementation and instrument exact GDP graph"},
+  {"case":"NO_HH_FLAT_TAX","type":"POLICY_BLOCK_OFF","component_spec":{"flat_hh":false},"purpose":"remove existing labor/business30 and financial20 household reform wedge together; estate stays ON; rates in source unchanged"},
+  {"case":"NO_PENSION_BLOCK","type":"POLICY_BLOCK_OFF","component_spec":{"pension75":false},"purpose":"remove modeled75-age cohort delay, contribution diversion and pension fund with domestic return counterpart together"},
+  {"case":"NO_HH_TAX_OR_PENSION","type":"MATCHED_FACTORIAL_CONTROL","component_spec":{"flat_hh":false,"pension75":false},"purpose":"neither modeled household flat-tax wedge nor pension block; other N3 policies remain, NOT an SQ replacement"},
+  {"case":"NO_CORPORATE_BLOCK","type":"POLICY_BLOCK_OFF","component_spec":{"corporate":false},"purpose":"remove corporate reform tax saving, related dividends, original investment and residual-flow private investment together; not isolate20% eligibility alone"},
+  {"case":"NO_ESTATE_BLOCK","type":"POLICY_BLOCK_OFF","component_spec":{"estate_reported":false},"runtime":{"estate_dynamic":false},"purpose":"remove reported-estate40 delta AND dependent lagged-price revaluation; gift remains OFF; source rate unchanged"},
+  {"case":"NO_RELIEF_INKIND_BLOCK","type":"POLICY_BLOCK_OFF","component_spec":{"relief":false},"purpose":"remove premium relief and in-kind together via existing shared switch; cannot call these independently identified"},
+  {"case":"NO_EMPLOYMENT_BLOCK","type":"POLICY_BLOCK_OFF","component_spec":{"employment":false},"purpose":"remove existing REGULARIZE wage differential only; existing net-new jobs0"},
+  {"case":"STRUCT_NO_INCOME_FEEDBACK","type":"STRUCTURE_DIAGNOSTIC","macro_override":{"income_feedback":0.0},"purpose":"mute lagged GDP-gap-to-household-income feedback on N3 only; unchanged fixed SQ; not policy choice or recalibration"},
+  {"case":"STRUCT_FIXED_POLICY_BASES","type":"STRUCTURE_DIAGNOSTIC","component_spec":{"dynamic_bases":false},"purpose":"remove native component lagged wage/profit replacement together; VAT and medical interfaces remain dynamic; isolated structure diagnostic"},
+  {"case":"STRUCT_NO_RESIDUAL_INVESTMENT","type":"STRUCTURE_DIAGNOSTIC","runtime":{"firm_rate":0.0},"purpose":"mute additional residual-flow private investment; keep original corporate investment; not original policy threshold20%"}
+ ],
+ "limits":"No VAT-rate/SQ-shock counterfactual, no missing-policy effects imputed. OFF effects conditional on remaining implemented model and feedback. Factorial interaction explicit. Other one-block OFF effects are not additive."
+}

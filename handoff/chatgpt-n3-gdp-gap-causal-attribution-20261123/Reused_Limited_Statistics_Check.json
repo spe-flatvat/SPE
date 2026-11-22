@@ -1,0 +1,38 @@
+{
+  "status": "LIMITED_PRIMARY_SOURCE_CHECK_NOT_CALIBRATION",
+  "sources": [
+    {
+      "url": "https://www.mhlw.go.jp/wp/hakusyo/kousei/26-2/dl/01.pdf",
+      "page": 10,
+      "table": "Income, survey2025/income2024",
+      "official_mean_household_income_yen": 5752000,
+      "official_labor_income_yen": 4262000,
+      "official_property_income_yen": 160000,
+      "official_public_pension_income_yen": 1116000,
+      "match_model_mean_input": true
+    },
+    {
+      "url": "https://www.mof.go.jp/policy/budget/budger_workflow/account/fy2024/ke0711b.pdf",
+      "page": 0,
+      "scope": "FY2024 general-account receipts, rounded trillion yen",
+      "income_tax_trn": 21.2,
+      "corporate_tax_trn": 17.9,
+      "VAT_trn": 25.0,
+      "total_tax_trn": 75.2,
+      "scope_not_equal_to_future_synthetic_household_tax": true
+    }
+  ],
+  "synthetic_cell_mean_income_yen": 5741758.241758241,
+  "mean_input_yen": 5752000,
+  "synthetic_labor_income_yen": 4596631.289719605,
+  "synthetic_financial_income_yen": 344290.5147512937,
+  "synthetic_financial_share": 0.059962558549986084,
+  "official_property_share": 0.027816411682892908,
+  "comparison_limit": "Survey property income excludes some financial-tax bases; midpoint/tail cells and age/source allocation synthetic, not national tax microdata",
+  "not_verified": [
+    "Official joint taxpayer microdata",
+    "Future household size/distribution",
+    "Full gross financial capital-gains base",
+    "FY2026+ actual income/corporate tax projections"
+  ]
+}

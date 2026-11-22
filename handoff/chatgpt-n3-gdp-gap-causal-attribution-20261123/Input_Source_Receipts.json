@@ -1,0 +1,330 @@
+[
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-assumptions-specification-calibration-separation-20261123/Artifact_Manifest.json",
+    "size_bytes": 6144,
+    "sha256": "94207c6d63fe74e35f8948d9d6dbd437795453dfb868fb80dac803419e6e260c",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-assumptions-specification-calibration-separation-20261123/Assumptions_Inventory.py",
+    "size_bytes": 27337,
+    "sha256": "838efb4af71aaea21f0bb2599b77ab3fd0c274b6fad2f1ffe192b9fb37772444",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-assumptions-specification-calibration-separation-20261123/Custody_Verification.json",
+    "size_bytes": 7197,
+    "sha256": "491f5d4cadbee7368433e136ea231e685489ba6a9fd24a36e295bc670348ebb9",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-assumptions-specification-calibration-separation-20261123/Execution.log",
+    "size_bytes": 3841,
+    "sha256": "1d91be7f7799ab6346da9c1ab8041a18ad3aec9962693e63bde5362a3e30e162",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-assumptions-specification-calibration-separation-20261123/Input_Source_Receipts.json",
+    "size_bytes": 15924,
+    "sha256": "b44a5b581293b3d4fdf7341a381ff044803f173fb641ffe79e3dad1f068e9f0c",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-assumptions-specification-calibration-separation-20261123/N3_22_Policy_Assumptions_And_Gaps.csv",
+    "size_bytes": 38192,
+    "sha256": "f44f5d1bb9a7e5a5ed2969b96e53e65fc3b0ac46831f2b8566976b2b89af6fea",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-assumptions-specification-calibration-separation-20261123/N3_Active_Parameter_Provenance_And_Usage.csv",
+    "size_bytes": 58357,
+    "sha256": "b0a612c93e029c547212d565ea7e9223a28102d8bd24c49d9d09a024cf785b98",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-assumptions-specification-calibration-separation-20261123/N3_Actual_Runtime_Input_Trace.csv",
+    "size_bytes": 168334,
+    "sha256": "782c39b6ffe46f28dd7f7a3a9028d45eec1c6f8fc9bf62a7a7bd66c76978318a",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-assumptions-specification-calibration-separation-20261123/N3_Assumptions_Sensitivity_Reproduce.py",
+    "size_bytes": 28874,
+    "sha256": "91995ed590bff0fa226bf14e31358f041997ed06c4ece5a8a276a3e7b91c0ca3",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-assumptions-specification-calibration-separation-20261123/N3_Gap_Resolution_And_Execution_Priority.csv",
+    "size_bytes": 10441,
+    "sha256": "d1a17389ffa058daa7471d8cdd6d02619f736cadb3bea31fd2cb4794c95d1941",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-assumptions-specification-calibration-separation-20261123/N3_Sensitivity_Annual_Comparison_2026_2055.csv",
+    "size_bytes": 586230,
+    "sha256": "2761e16752471c165fdbe2e96808f9e4057139f5a96f7693f1e9187a5e2cea98",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-assumptions-specification-calibration-separation-20261123/N3_Sensitivity_Case_Definitions.csv",
+    "size_bytes": 4530,
+    "sha256": "95d14225b898df599a10d2df621aefb46ad3a1e529dc23ace7d87b0f6b57dcc4",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-assumptions-specification-calibration-separation-20261123/N3_Sensitivity_Case_Summary.csv",
+    "size_bytes": 68840,
+    "sha256": "0886edc01848fd72bd3bc7976a3d4b8c5f976eaf789a9c9006157678bc90fea9",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-assumptions-specification-calibration-separation-20261123/N3_Sensitivity_Fiscal_Cash_Debt_Ledger.csv",
+    "size_bytes": 391096,
+    "sha256": "d0dddea0c22bfbeefdae828eacdf07e218ff093ed4fbabfbe5303a3b8d990a0d",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-assumptions-specification-calibration-separation-20261123/N3_Sensitivity_Impact_Ranking.csv",
+    "size_bytes": 5658,
+    "sha256": "2aa7797f0800b1b5821fc208aba3c05de7b390e521857194a2af7529a7d5700c",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-assumptions-specification-calibration-separation-20261123/N3_Sensitivity_Medical_Accounts.csv",
+    "size_bytes": 883614,
+    "sha256": "56f7e8dc521efb9bf00d3232ca7ba63028c47db21da454f97fceb4cb1bb64db4",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-assumptions-specification-calibration-separation-20261123/N3_Sensitivity_Pension_Accounts.csv",
+    "size_bytes": 306148,
+    "sha256": "c678052f06dea977a37763f806d0a861f6ce89f97fcb1c64a5dad50ea5e2125e",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-assumptions-specification-calibration-separation-20261123/N3_Sensitivity_Policy_Accounts.csv",
+    "size_bytes": 507442,
+    "sha256": "cd0cfaf8e5c6d2d7739a88599f9431b8ae8e436ee7b37ff1e368699f37f9a855",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-assumptions-specification-calibration-separation-20261123/Reproduction_Verification.json",
+    "size_bytes": 3989,
+    "sha256": "a62b28a99873cdd9d755915c9ba569c2c780352f663be0632d47fe7972ae33ec",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-assumptions-specification-calibration-separation-20261123/Resolved_Case_Contracts.json",
+    "size_bytes": 216185,
+    "sha256": "d26909e2900d1b18bcdcb73e32b0e875179e537cc98341d26be4cebb7e9b52ae",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-assumptions-specification-calibration-separation-20261123/Resolved_Isolated_Component_Source.py.txt",
+    "size_bytes": 12818,
+    "sha256": "55a9e2cecef433c5059f2ada4857b8f5834c32a0cf2f97f9024dbac45a4ece7b",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-assumptions-specification-calibration-separation-20261123/Reused_Fixed_Annual_References.csv",
+    "size_bytes": 125670,
+    "sha256": "517f8bf042de9325dc26c1355b1f1810e239e249707e5666d3c971457ac515a8",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-assumptions-specification-calibration-separation-20261123/SPE_N3_Assumptions_Specification_Calibration_Report_DRAFT_20261123.md",
+    "size_bytes": 11434,
+    "sha256": "55e37d4b4aea95580905a6724c9a62cf81da4ea930956b35584ba6ec625b122d",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-assumptions-specification-calibration-separation-20261123/Sensitivity_Inputs.json",
+    "size_bytes": 4874,
+    "sha256": "45af248c9f774528d04846b55b0039025ccb018b593e587528075d5db34bbd8d",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-assumptions-specification-calibration-separation-20261123/Sensitivity_Runtime.py",
+    "size_bytes": 3204,
+    "sha256": "ab2d84a1138d3359aa387baa60e12fa3ca8fc615db50fa74de9a16f21bcac6f2",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-assumptions-specification-calibration-separation-20261123/Verification.json",
+    "size_bytes": 704,
+    "sha256": "2aa379276f7c0c36056187ca3520331b0410837cb5278384c8822a24ffa6c5df",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Components.py",
+    "size_bytes": 5528,
+    "sha256": "ec5640f9512486274122e32aacd7ca548273b23b94035710fd56949b8ea37588",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Resolved_Macro_Source.py.txt",
+    "size_bytes": 65453,
+    "sha256": "d7e71f75c3c19d4ea283308b40af5894e62e24db696f4ca8ce40a4bf609f395d",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-gdp-robustness-fiscal-dynamics-20261122/Component_Initialization.json",
+    "size_bytes": 63605,
+    "sha256": "5cef89b278560d6c33fc416d2067f72ac00fe6fcfce28f58f197e2a424482d80",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_Components.py",
+    "size_bytes": 12416,
+    "sha256": "3da949845436180fb2038e109afe9d01c66c5c9ca064dad548326777ea4a9519",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-native-policy-completion-20261123/N3_Native_Completion_Annual_Comparison_2026_2055.csv",
+    "size_bytes": 161498,
+    "sha256": "7dbad134939e328a754436b243cfcbb248c84f413cd3d00f55e88433962b7682",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-native-policy-completion-20261123/Verification.json",
+    "size_bytes": 583,
+    "sha256": "e8643d50982005b191a793978447c9d7ca2345af6ee6c278ba0437c1ac39a020",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-native-vs-diagnostic-separation-20261123/Resolved_Separation_Runtime.py.txt",
+    "size_bytes": 16403,
+    "sha256": "2d11d730317055bf1af4d35e8b268ef1cfc3be0936fb9511238b316510b39ac5",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Gap_Components.py",
+    "size_bytes": 9411,
+    "sha256": "a0f0b4fe7f7ced6a8a9546e7b68a458ad8c6aaf888a7e57412a746a2090760dd",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-policy-burden-diagnosis-20261122/N3_Policy_Burden_Diagnosis_Reproduce.py",
+    "size_bytes": 55522,
+    "sha256": "e3ce22ed630365ff745973c979b21ac6092699cc7d0ade96a14b45e1dbefbc49",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-policy-burden-diagnosis-20261122/N3_Unchanged_Execution_Trace.json",
+    "size_bytes": 5795176,
+    "sha256": "0ecbfab6db206e6cf77e2f1bfd6b3c2f07969a576727fdc7eebd1cebec4e94b5",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-policy-burden-diagnosis-20261122/Official_Statistics_Limited_Check.json",
+    "size_bytes": 1512,
+    "sha256": "4471ca02a15e80a7e35c1b990a6c5e953e9274e39a20ca2e64e2d859990b2c4d",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-transition-financing-full-dynamics-20261122/Medical_Initialization.json",
+    "size_bytes": 124011,
+    "sha256": "3e97b56c0d3dd4b83b6c8545d369f15e20ac8d519b698d0bddaf3b743068b1ea",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "handoff/chatgpt-n3-transition-financing-full-dynamics-20261122/N3_Transition_Reproduce.py",
+    "size_bytes": 43852,
+    "sha256": "73529bcfc5bb57b4fb5f47a9c69e36829d74b200f04bbe4725ab4ee11b0bcfb4",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "2e2670bacdeb83ff12de13add733d9fb7a4f8b54",
+    "path": "policies/New3linesPolicies.md",
+    "size_bytes": 7039,
+    "sha256": "2f5806addb870863961d9b6a6722d9c1e38bc2b097e1a6cd0e07b39f56b77830",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show; earlier receipt for transitive originals reused"
+  },
+  {
+    "commit": "3cf17fdbbbb44f92899d2897c9e98870d57f8e96",
+    "path": "handoff/chatgpt-n3-gdp-gap-causal-attribution-request-20261123/SPE_Work_N3_GDP_Gap_Attribution_Specification_Structure_Calibration_Request_20261123.md",
+    "size_bytes": 11275,
+    "sha256": "e65075b1e1d399226dace913e6e78de9a9f6abcfb9d1f24ca2826a7cb3cd1709",
+    "match": true,
+    "retrieval": "connected GitHub fetch_file then git fixed commit bytes"
+  }
+]

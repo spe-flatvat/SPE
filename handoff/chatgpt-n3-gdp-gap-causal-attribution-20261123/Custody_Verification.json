@@ -1,0 +1,160 @@
+{
+  "status": "CUSTODY_PASS_FOR_LISTED_25_ORIGINALS",
+  "fixed_commit": "dc654b39e9aaacdd9e5eb9c2bdbcbeac6c9de971",
+  "branch": "work/chatgpt-handoff",
+  "retrieval": "GitHub connector write; postwrite git fetch fixed commit and git show",
+  "files": [
+    {
+      "path": "handoff/chatgpt-n3-gdp-gap-causal-attribution-20261123/Artifact_Manifest.json",
+      "size_bytes": 5638,
+      "sha256": "7cb1f304d13798f71506efc0004ad0191df56c410fec6152ccdbca24a2e3043a",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-gdp-gap-causal-attribution-20261123/Attribution_Runtime.py",
+      "size_bytes": 7058,
+      "sha256": "52712ce0254d143c59694631fb09b5020ab8dd88f76644798022f5f1fe6677d1",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-gdp-gap-causal-attribution-20261123/Counterfactual_Inputs.json",
+      "size_bytes": 3008,
+      "sha256": "d0326e60fbbfbcf9c6364738526e37e66a361ad8a306551d263a756e31942254",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-gdp-gap-causal-attribution-20261123/Execution.log",
+      "size_bytes": 2347,
+      "sha256": "fddc346ef67fdb7342c4c8e533d9df7a401f4185c46dcff91d7ed01a1b8a2f2a",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-gdp-gap-causal-attribution-20261123/Input_Source_Receipts.json",
+      "size_bytes": 16838,
+      "sha256": "bd91eb12666fbc98b048b74d25e10948866785afd062f12a45547954e4809c54",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-gdp-gap-causal-attribution-20261123/N3_Baseline_Tax_Cells.csv",
+      "size_bytes": 255923,
+      "sha256": "a6b76dc84abc20f2224d19fdf912877c7a9792bce9ede7e9cfaae27dd897a765",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-gdp-gap-causal-attribution-20261123/N3_GDP_Gap_All_Case_C_Target_And_State.csv",
+      "size_bytes": 1029612,
+      "sha256": "a3b78ef52503a032813783a4e8b340ea6ed80a2693797ac78b6adf67f68a97dd",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-gdp-gap-causal-attribution-20261123/N3_GDP_Gap_All_Case_Intermediate_Accounts.csv",
+      "size_bytes": 272397,
+      "sha256": "525f7d20459e77e4b1d14b5f70191848443f6838ecb3adc45fc2e38cfade3723",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-gdp-gap-causal-attribution-20261123/N3_GDP_Gap_Attribution_Reproduce.py",
+      "size_bytes": 35685,
+      "sha256": "cafc6a58c16c416c604c417e16d64db3825b14e72a1fe279d4f50968e5a03529",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-gdp-gap-causal-attribution-20261123/N3_GDP_Gap_Calibration_Diagnostics.csv",
+      "size_bytes": 18688,
+      "sha256": "5d32e53d9e57ae74f5da35827342231af980c68b06f831d27258cd1d23a88870",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-gdp-gap-causal-attribution-20261123/N3_GDP_Gap_Cause_Classification.csv",
+      "size_bytes": 25733,
+      "sha256": "13578d2bd023692c7253f9310fd41fb1ff04bb1f4e0d8e2b6a37d185ec3e2166",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-gdp-gap-causal-attribution-20261123/N3_GDP_Gap_Counterfactual_Annual_2026_2055.csv",
+      "size_bytes": 385837,
+      "sha256": "49c051d8601d6c147cf0d3154285cb2eb88c4003257f5cf33c44cbdad2aafe50",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-gdp-gap-causal-attribution-20261123/N3_GDP_Gap_Counterfactual_Cases.csv",
+      "size_bytes": 2620,
+      "sha256": "fd9369c17b144924e16311e40314be4e623ad8eeef52bda546b263edeae02edf",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-gdp-gap-causal-attribution-20261123/N3_GDP_Gap_Counterfactual_Summary.csv",
+      "size_bytes": 22220,
+      "sha256": "899a972635829ca28b6342ab16af85946049ba57bd469e2861b6d430ad38b245",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-gdp-gap-causal-attribution-20261123/N3_GDP_Gap_Fiscal_Cash_Debt_Ledger.csv",
+      "size_bytes": 166290,
+      "sha256": "d21e8fe33023992c0d0fe5e2bd685e98bce0c8a6de47c007a89d79708cf0c86e",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-gdp-gap-causal-attribution-20261123/N3_GDP_Gap_Matched_Interaction_And_Order.csv",
+      "size_bytes": 79009,
+      "sha256": "c9cd8aad9d9d8dee439e56b5ea6e2b75507188e207595b71f1bd19a0005cba51",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-gdp-gap-causal-attribution-20261123/N3_GDP_Gap_Transmission_Trace.csv",
+      "size_bytes": 402136,
+      "sha256": "7053b640bba78fa74e4b95097d03459db3e127bf4ce3e72f787aa7ae64b0143b",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-gdp-gap-causal-attribution-20261123/N3_GDP_Gap_Unidentified_And_Executable_Next.csv",
+      "size_bytes": 8058,
+      "sha256": "873997c383db6a48e89e34b5b73a641d6cea0e058966d6444362ec95df7bc482",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-gdp-gap-causal-attribution-20261123/N3_SQ_Annual_GDP_Gap_Decomposition_2026_2055.csv",
+      "size_bytes": 13678,
+      "sha256": "66518274f1b74a39b796ac4023ea1cc62f71785fe531e64a849e53b058fec433",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-gdp-gap-causal-attribution-20261123/N3_SQ_Shared_Events_And_Core_Check.csv",
+      "size_bytes": 13519,
+      "sha256": "eaaea4d4ecf59ebbc2c1806f41d707c72b41ba971e80c1894e2f264f9ba7564d",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-gdp-gap-causal-attribution-20261123/Reproduction_Verification.json",
+      "size_bytes": 4070,
+      "sha256": "f5012d11856dd36fe6bb869c1fe3ab84a1eeef6271057ae21a320520de2ab9d7",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-gdp-gap-causal-attribution-20261123/Resolved_Instrumented_Runtime.py.txt",
+      "size_bytes": 16605,
+      "sha256": "7fcec87430a53a9fb7908bcefa8aa573596042366c5830f30f4385df26b5f7c5",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-gdp-gap-causal-attribution-20261123/Reused_Limited_Statistics_Check.json",
+      "size_bytes": 1512,
+      "sha256": "4471ca02a15e80a7e35c1b990a6c5e953e9274e39a20ca2e64e2d859990b2c4d",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-gdp-gap-causal-attribution-20261123/SPE_N3_GDP_Gap_Attribution_Report_DRAFT_20261123.md",
+      "size_bytes": 12051,
+      "sha256": "44be8ff1d848d6fdebe6a91c59c4cca25c902fa3783a887ca3f95073c9d27a44",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-gdp-gap-causal-attribution-20261123/Verification.json",
+      "size_bytes": 846,
+      "sha256": "21dc847cfc8d1c929f6140436ac759a0052fb684a28aead176dc214f80c61702",
+      "match": true
+    }
+  ],
+  "receipt_self_excluded": true,
+  "only_new_directory_changed": true
+}

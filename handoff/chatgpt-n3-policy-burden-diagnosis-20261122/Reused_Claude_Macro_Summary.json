@@ -1,0 +1,63 @@
+{
+ "checks": 164,
+ "passed": 164,
+ "failed": 0,
+ "failed_ids": [],
+ "items_checked": 8551921,
+ "by_area": {
+  "A": {
+   "total": 6,
+   "fail": 0
+  },
+  "B": {
+   "total": 56,
+   "fail": 0
+  },
+  "C": {
+   "total": 29,
+   "fail": 0
+  },
+  "D": {
+   "total": 26,
+   "fail": 0
+  },
+  "E": {
+   "total": 20,
+   "fail": 0
+  },
+  "F": {
+   "total": 18,
+   "fail": 0
+  },
+  "G": {
+   "total": 3,
+   "fail": 0
+  },
+  "H": {
+   "total": 4,
+   "fail": 0
+  },
+  "I": {
+   "total": 1,
+   "fail": 0
+  },
+  "J": {
+   "total": 1,
+   "fail": 0
+  }
+ },
+ "observations": [
+  "quake tax factor in 2031 derived from SQ_COMMON_ON: 0.9000000000005486",
+  "corporate-base denominator is the fixed core nominal path, not SQ_COMMON_ON actual nominal GDP: max relative difference between the two = 6.086e-07",
+  "first year real GDP differs from PARITY_CONNECTED_CANDIDATE (DOMESTIC_TRANSFER): {\"PARITY_CONNECTED_CANDIDATE\": null, \"PARITY_FIXED_BASES\": 2031, \"PARITY_NO_CORPORATE\": 2033, \"PARITY_NO_PENSION\": 2033, \"PARITY_NO_FLAT\": 2030, \"PARITY_NO_MEDICAL\": 2033, \"PARITY_NO_RELIEF\": 2030, \"PARITY_NO_ESTATE\": 2030, \"PARITY_NO_KPI\": null, \"PARITY_MPC_LOW\": 2027, \"PARITY_MPC_HIGH\": 2027, \"PARITY_DEPRECIATION_LOW\": 2031, \"PARITY_DEPRECIATION_HIGH\": 2031, \"PARITY_INVESTMENT_START2038\": 2033, \"PARITY_INVESTMENT_RESPONSE0\": 2033, \"PARITY_INVESTMENT_RESPONSE60\": 2033, \"PARITY_LABOR_ADD100K\": 2030, \"PARITY_LABOR_ZERO\": 2030, \"PARITY_NO_CARRY\": 2031, \"PARITY_KPI_LOW_THRESHOLD\": null, \"PARITY_GINI_SIGNAL\": 2035, \"PARITY_INSURANCE_STRESS\": 2034, \"PARITY_SEMI_RESERVE\": 2033, \"PARITY_KPI_HIGH_THRESHOLD\": 2038}",
+  "policy_tax_delta (connected vs fixed bases) 2035/2045/2055: 2035: 85.784 vs 87.276 (wage factor 0.9788); 2045: 94.182 vs 96.077 (wage factor 0.9705); 2055: 108.138 vs 110.097 (wage factor 0.9726)",
+  "macro investment line minus corporate-induced policy investment vs PARITY_NO_CORPORATE line: max gap 0.00000 trn; the remainder is NEGATIVE (2045: -1.871 trn) because employer-cost channels (pension employer premium etc., x firm_investment_response 0.3) reduce investment in the inherited old-79 mechanism; net investment of the base candidate in 2045 = 0.968 trn",
+  "firm funding account deflates with the fixed SQ deflator; the macro engine deflates investment with each case's own deflator: max relative gap over parity cases = 1.595e-05",
+  "PARITY_CONNECTED_CANDIDATE firm cash stock at end-2055 (DOMESTIC_TRANSFER) = 60.7487 trn (negative = external funding need, diagnostic only; not fed back to GDP)",
+  "2035 KPI input (income-per-person growth between 2033 and 2034, %): connected=0.175154; this is only 0.175 percentage points above the 0% candidate threshold (knife-edge: a small change of level can flip the freeze)",
+  "PARITY_INSURANCE_STRESS vs CONNECTED real GDP difference 2035/2045/2055 = 0.0489/1.1397/2.1213 trn; pension fund return difference -0.1615/-3.3064/-7.4204 trn. The GDP difference is a pension-return/fund-balance effect (fund_return -1% instead of +2%); no separate competition-productivity effect exists in the code path (label STRUCTURE_ONLY). The case therefore does not isolate the signal.",
+  "2055 real GDP of PARITY_CONNECTED_CANDIDATE by pension ownership: DOMESTIC_TRANSFER=481.330871, LEGACY=482.927703, FOREIGN_INCOME=482.927703, ADDITIONAL_VA=485.797554",
+  "household cash change of the base candidate in 2055 = -153.778 trn (negative: N3 is a net household burden, so a higher MPC LOWERS GDP); PARITY_LABOR_ZERO > base by payroll demand only (base candidate has no added jobs; ZERO adds payroll but 0 effective labour); LABOR_ADD100K - LABOR_ZERO = +0.427",
+  "sensitivity 2055 real GDP deltas vs base candidate (DOMESTIC_TRANSFER): PARITY_MPC_LOW=+14.325, PARITY_MPC_HIGH=-11.921, PARITY_DEPRECIATION_LOW=+0.126, PARITY_DEPRECIATION_HIGH=-0.170, PARITY_NO_CARRY=-0.386, PARITY_LABOR_ADD100K=+0.576, PARITY_INVESTMENT_START2038=-0.093, PARITY_INVESTMENT_RESPONSE0=-2.920, PARITY_INVESTMENT_RESPONSE60=+2.949, PARITY_FIXED_BASES=-0.584, PARITY_NO_FLAT=+33.919, PARITY_NO_CORPORATE=-4.039, PARITY_NO_PENSION=+11.870, PARITY_NO_MEDICAL=+0.554, PARITY_NO_RELIEF=-0.289, PARITY_NO_ESTATE=+0.489, PARITY_NO_KPI=+0.000"
+ ]
+}

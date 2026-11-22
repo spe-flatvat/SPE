@@ -1,0 +1,7486 @@
+{
+  "status": "PASS_DIAGNOSTIC_RECONSTRUCTION",
+  "checks": 1221,
+  "failed": 0,
+  "failures": [],
+  "checks_detail": [
+    {
+      "check": "household_cell_weights_2026",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "pass_": true
+    },
+    {
+      "check": "labor_tax_recomputed_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "financial_tax_recomputed_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "corporate_tax_recomputed_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "estate_delta_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "policy_tax_sum_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_policy_macro_once_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_full_components_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_medical_components_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "DI_level_bridge_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_SQ_COMMON_ON_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_SQ_COMMON_ON_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_SQ_COMMON_ON_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_SQ_COMMON_ON_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_SQ_COMMON_ON_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_SQ_COMMON_ON_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_PARITY_CONNECTED_CANDIDATE_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_PARITY_CONNECTED_CANDIDATE_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_PARITY_CONNECTED_CANDIDATE_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_PARITY_CONNECTED_CANDIDATE_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_PARITY_CONNECTED_CANDIDATE_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_PARITY_CONNECTED_CANDIDATE_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "GDP_gap_identity_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_labor_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_core_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "no_second_pension_charge_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "household_cell_weights_2027",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "pass_": true
+    },
+    {
+      "check": "labor_tax_recomputed_2027",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "financial_tax_recomputed_2027",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "corporate_tax_recomputed_2027",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "estate_delta_2027",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "policy_tax_sum_2027",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_policy_macro_once_2027",
+      "error": 1.4210854715202004e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_full_components_2027",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_medical_components_2027",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "DI_level_bridge_2027",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_SQ_COMMON_ON_2027",
+      "error": 2.710505431213761e-20,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_SQ_COMMON_ON_2027",
+      "error": 2.710505431213761e-20,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_SQ_COMMON_ON_2027",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_SQ_COMMON_ON_2027",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_SQ_COMMON_ON_2027",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_SQ_COMMON_ON_2027",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_PARITY_CONNECTED_CANDIDATE_2027",
+      "error": 2.710505431213761e-20,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_PARITY_CONNECTED_CANDIDATE_2027",
+      "error": 2.710505431213761e-20,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_PARITY_CONNECTED_CANDIDATE_2027",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_PARITY_CONNECTED_CANDIDATE_2027",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_PARITY_CONNECTED_CANDIDATE_2027",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_PARITY_CONNECTED_CANDIDATE_2027",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "GDP_gap_identity_2027",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_labor_2027",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_core_2027",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "no_second_pension_charge_2027",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "household_cell_weights_2028",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "pass_": true
+    },
+    {
+      "check": "labor_tax_recomputed_2028",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "financial_tax_recomputed_2028",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "corporate_tax_recomputed_2028",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "estate_delta_2028",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "policy_tax_sum_2028",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_policy_macro_once_2028",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_full_components_2028",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_medical_components_2028",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "DI_level_bridge_2028",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_SQ_COMMON_ON_2028",
+      "error": 5.421010862427522e-20,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_SQ_COMMON_ON_2028",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_SQ_COMMON_ON_2028",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_SQ_COMMON_ON_2028",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_SQ_COMMON_ON_2028",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_SQ_COMMON_ON_2028",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_PARITY_CONNECTED_CANDIDATE_2028",
+      "error": 5.421010862427522e-20,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_PARITY_CONNECTED_CANDIDATE_2028",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_PARITY_CONNECTED_CANDIDATE_2028",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_PARITY_CONNECTED_CANDIDATE_2028",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_PARITY_CONNECTED_CANDIDATE_2028",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_PARITY_CONNECTED_CANDIDATE_2028",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "GDP_gap_identity_2028",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_labor_2028",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_core_2028",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "no_second_pension_charge_2028",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "household_cell_weights_2029",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "pass_": true
+    },
+    {
+      "check": "labor_tax_recomputed_2029",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "financial_tax_recomputed_2029",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "corporate_tax_recomputed_2029",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "estate_delta_2029",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "policy_tax_sum_2029",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_policy_macro_once_2029",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_full_components_2029",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_medical_components_2029",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "DI_level_bridge_2029",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_SQ_COMMON_ON_2029",
+      "error": 1.0842021724855044e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_SQ_COMMON_ON_2029",
+      "error": 5.421010862427522e-20,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_SQ_COMMON_ON_2029",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_SQ_COMMON_ON_2029",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_SQ_COMMON_ON_2029",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_SQ_COMMON_ON_2029",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_PARITY_CONNECTED_CANDIDATE_2029",
+      "error": 1.0842021724855044e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_PARITY_CONNECTED_CANDIDATE_2029",
+      "error": 5.421010862427522e-20,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_PARITY_CONNECTED_CANDIDATE_2029",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_PARITY_CONNECTED_CANDIDATE_2029",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_PARITY_CONNECTED_CANDIDATE_2029",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_PARITY_CONNECTED_CANDIDATE_2029",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "GDP_gap_identity_2029",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_labor_2029",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_core_2029",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "no_second_pension_charge_2029",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "household_cell_weights_2030",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "pass_": true
+    },
+    {
+      "check": "labor_tax_recomputed_2030",
+      "error": 6.52242704290984e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "financial_tax_recomputed_2030",
+      "error": 3.0673241724343825e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "corporate_tax_recomputed_2030",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "estate_delta_2030",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "policy_tax_sum_2030",
+      "error": 6.829026233390323e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_policy_macro_once_2030",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_full_components_2030",
+      "error": -3.552713678800501e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_medical_components_2030",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "DI_level_bridge_2030",
+      "error": 4.263256414560601e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_SQ_COMMON_ON_2030",
+      "error": 1.0842021724855044e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_SQ_COMMON_ON_2030",
+      "error": 1.0842021724855044e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_SQ_COMMON_ON_2030",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_SQ_COMMON_ON_2030",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_SQ_COMMON_ON_2030",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_SQ_COMMON_ON_2030",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_PARITY_CONNECTED_CANDIDATE_2030",
+      "error": 3.552713678800501e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_PARITY_CONNECTED_CANDIDATE_2030",
+      "error": 1.7763568394002505e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_PARITY_CONNECTED_CANDIDATE_2030",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_PARITY_CONNECTED_CANDIDATE_2030",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_PARITY_CONNECTED_CANDIDATE_2030",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_PARITY_CONNECTED_CANDIDATE_2030",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "GDP_gap_identity_2030",
+      "error": 7.993605777301127e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_labor_2030",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_core_2030",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "no_second_pension_charge_2030",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "household_cell_weights_2031",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "pass_": true
+    },
+    {
+      "check": "labor_tax_recomputed_2031",
+      "error": 1.581526021254831e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "financial_tax_recomputed_2031",
+      "error": 7.436717908149149e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "corporate_tax_recomputed_2031",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "estate_delta_2031",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "policy_tax_sum_2031",
+      "error": 1.6558487914153375e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_policy_macro_once_2031",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_full_components_2031",
+      "error": 7.105427357601002e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_medical_components_2031",
+      "error": 7.105427357601002e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "DI_level_bridge_2031",
+      "error": 2.1316282072803006e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_SQ_COMMON_ON_2031",
+      "error": 2.168404344971009e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_SQ_COMMON_ON_2031",
+      "error": 1.0842021724855044e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_SQ_COMMON_ON_2031",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_SQ_COMMON_ON_2031",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_SQ_COMMON_ON_2031",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_SQ_COMMON_ON_2031",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_PARITY_CONNECTED_CANDIDATE_2031",
+      "error": 7.105427357601002e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_PARITY_CONNECTED_CANDIDATE_2031",
+      "error": 3.552713678800501e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_PARITY_CONNECTED_CANDIDATE_2031",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_PARITY_CONNECTED_CANDIDATE_2031",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_PARITY_CONNECTED_CANDIDATE_2031",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_PARITY_CONNECTED_CANDIDATE_2031",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "GDP_gap_identity_2031",
+      "error": 3.552713678800501e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_labor_2031",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_core_2031",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "no_second_pension_charge_2031",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "household_cell_weights_2032",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "pass_": true
+    },
+    {
+      "check": "labor_tax_recomputed_2032",
+      "error": 2.0962431790394476e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "financial_tax_recomputed_2032",
+      "error": 9.85611592341229e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "corporate_tax_recomputed_2032",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "estate_delta_2032",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "policy_tax_sum_2032",
+      "error": 2.1948665107629495e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_policy_macro_once_2032",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_full_components_2032",
+      "error": -1.4210854715202004e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_medical_components_2032",
+      "error": -1.4210854715202004e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "DI_level_bridge_2032",
+      "error": 2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_SQ_COMMON_ON_2032",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_SQ_COMMON_ON_2032",
+      "error": 2.168404344971009e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_SQ_COMMON_ON_2032",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_SQ_COMMON_ON_2032",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_SQ_COMMON_ON_2032",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_SQ_COMMON_ON_2032",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_PARITY_CONNECTED_CANDIDATE_2032",
+      "error": -7.105427357601002e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_PARITY_CONNECTED_CANDIDATE_2032",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_PARITY_CONNECTED_CANDIDATE_2032",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_PARITY_CONNECTED_CANDIDATE_2032",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_PARITY_CONNECTED_CANDIDATE_2032",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_PARITY_CONNECTED_CANDIDATE_2032",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "GDP_gap_identity_2032",
+      "error": -2.1316282072803006e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_labor_2032",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_core_2032",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "no_second_pension_charge_2032",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "household_cell_weights_2033",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "pass_": true
+    },
+    {
+      "check": "labor_tax_recomputed_2033",
+      "error": -2.411155719528324e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "financial_tax_recomputed_2033",
+      "error": -1.1337597527472099e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "corporate_tax_recomputed_2033",
+      "error": 5.700773186845254e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "estate_delta_2033",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "policy_tax_sum_2033",
+      "error": -2.467572812747676e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_policy_macro_once_2033",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_full_components_2033",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_medical_components_2033",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "DI_level_bridge_2033",
+      "error": -2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_SQ_COMMON_ON_2033",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_SQ_COMMON_ON_2033",
+      "error": 4.336808689942018e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_SQ_COMMON_ON_2033",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_SQ_COMMON_ON_2033",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_SQ_COMMON_ON_2033",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_SQ_COMMON_ON_2033",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_PARITY_CONNECTED_CANDIDATE_2033",
+      "error": 7.105427357601002e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_PARITY_CONNECTED_CANDIDATE_2033",
+      "error": 1.4210854715202004e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_PARITY_CONNECTED_CANDIDATE_2033",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_PARITY_CONNECTED_CANDIDATE_2033",
+      "error": -2.0816681711721685e-17,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_PARITY_CONNECTED_CANDIDATE_2033",
+      "error": -5.551115123125783e-17,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_PARITY_CONNECTED_CANDIDATE_2033",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "GDP_gap_identity_2033",
+      "error": 9.947598300641403e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_labor_2033",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_core_2033",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "no_second_pension_charge_2033",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "household_cell_weights_2034",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "pass_": true
+    },
+    {
+      "check": "labor_tax_recomputed_2034",
+      "error": -9.669065548223443e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "financial_tax_recomputed_2034",
+      "error": -4.546141241235091e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "corporate_tax_recomputed_2034",
+      "error": -5.1096904485348205e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "estate_delta_2034",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "policy_tax_sum_2034",
+      "error": -1.063398258338566e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_policy_macro_once_2034",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_full_components_2034",
+      "error": -2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_medical_components_2034",
+      "error": -2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "DI_level_bridge_2034",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_SQ_COMMON_ON_2034",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_SQ_COMMON_ON_2034",
+      "error": 4.336808689942018e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_SQ_COMMON_ON_2034",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_SQ_COMMON_ON_2034",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_SQ_COMMON_ON_2034",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_SQ_COMMON_ON_2034",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_PARITY_CONNECTED_CANDIDATE_2034",
+      "error": -1.4210854715202004e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_PARITY_CONNECTED_CANDIDATE_2034",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_PARITY_CONNECTED_CANDIDATE_2034",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_PARITY_CONNECTED_CANDIDATE_2034",
+      "error": -1.0408340855860843e-17,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_PARITY_CONNECTED_CANDIDATE_2034",
+      "error": -2.7755575615628914e-17,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_PARITY_CONNECTED_CANDIDATE_2034",
+      "error": -6.938893903907228e-18,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "GDP_gap_identity_2034",
+      "error": 2.1316282072803006e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_labor_2034",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_core_2034",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "no_second_pension_charge_2034",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "household_cell_weights_2035",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "pass_": true
+    },
+    {
+      "check": "labor_tax_recomputed_2035",
+      "error": 9.708855941426009e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "financial_tax_recomputed_2035",
+      "error": 4.565237077258644e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "corporate_tax_recomputed_2035",
+      "error": 1.573852159708622e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "estate_delta_2035",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "policy_tax_sum_2035",
+      "error": 1.0321343779651215e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_policy_macro_once_2035",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_full_components_2035",
+      "error": -1.4210854715202004e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_medical_components_2035",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "DI_level_bridge_2035",
+      "error": -8.526512829121202e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_SQ_COMMON_ON_2035",
+      "error": -4.336808689942018e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_SQ_COMMON_ON_2035",
+      "error": -4.336808689942018e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_SQ_COMMON_ON_2035",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_SQ_COMMON_ON_2035",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_SQ_COMMON_ON_2035",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_SQ_COMMON_ON_2035",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_PARITY_CONNECTED_CANDIDATE_2035",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_PARITY_CONNECTED_CANDIDATE_2035",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_PARITY_CONNECTED_CANDIDATE_2035",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_PARITY_CONNECTED_CANDIDATE_2035",
+      "error": -8.326672684688674e-17,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_PARITY_CONNECTED_CANDIDATE_2035",
+      "error": -1.6653345369377348e-16,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_PARITY_CONNECTED_CANDIDATE_2035",
+      "error": -6.938893903907228e-18,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "GDP_gap_identity_2035",
+      "error": -1.1368683772161603e-13,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_labor_2035",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_core_2035",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "no_second_pension_charge_2035",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "household_cell_weights_2036",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "pass_": true
+    },
+    {
+      "check": "labor_tax_recomputed_2036",
+      "error": 2.440287971694488e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "financial_tax_recomputed_2036",
+      "error": 1.1475709271735468e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "corporate_tax_recomputed_2036",
+      "error": 3.5456082514429e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "estate_delta_2036",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "policy_tax_sum_2036",
+      "error": 2.590496706034173e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_policy_macro_once_2036",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_full_components_2036",
+      "error": 4.263256414560601e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_medical_components_2036",
+      "error": 4.263256414560601e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "DI_level_bridge_2036",
+      "error": 1.4210854715202004e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_SQ_COMMON_ON_2036",
+      "error": 4.336808689942018e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_SQ_COMMON_ON_2036",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_SQ_COMMON_ON_2036",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_SQ_COMMON_ON_2036",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_SQ_COMMON_ON_2036",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_SQ_COMMON_ON_2036",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_PARITY_CONNECTED_CANDIDATE_2036",
+      "error": 2.1316282072803006e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_PARITY_CONNECTED_CANDIDATE_2036",
+      "error": 1.4210854715202004e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_PARITY_CONNECTED_CANDIDATE_2036",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_PARITY_CONNECTED_CANDIDATE_2036",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_PARITY_CONNECTED_CANDIDATE_2036",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_PARITY_CONNECTED_CANDIDATE_2036",
+      "error": -1.9949319973733282e-17,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "GDP_gap_identity_2036",
+      "error": -7.105427357601002e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_labor_2036",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_core_2036",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "no_second_pension_charge_2036",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "household_cell_weights_2037",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "pass_": true
+    },
+    {
+      "check": "labor_tax_recomputed_2037",
+      "error": 2.1472601474670228e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "financial_tax_recomputed_2037",
+      "error": 1.0097256364360874e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "corporate_tax_recomputed_2037",
+      "error": -9.483080987138237e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "estate_delta_2037",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "policy_tax_sum_2037",
+      "error": 2.1535129235417116e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_policy_macro_once_2037",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_full_components_2037",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_medical_components_2037",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "DI_level_bridge_2037",
+      "error": -8.526512829121202e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_SQ_COMMON_ON_2037",
+      "error": -4.336808689942018e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_SQ_COMMON_ON_2037",
+      "error": -4.336808689942018e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_SQ_COMMON_ON_2037",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_SQ_COMMON_ON_2037",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_SQ_COMMON_ON_2037",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_SQ_COMMON_ON_2037",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_PARITY_CONNECTED_CANDIDATE_2037",
+      "error": 7.105427357601002e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_PARITY_CONNECTED_CANDIDATE_2037",
+      "error": 7.105427357601002e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_PARITY_CONNECTED_CANDIDATE_2037",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_PARITY_CONNECTED_CANDIDATE_2037",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_PARITY_CONNECTED_CANDIDATE_2037",
+      "error": -2.220446049250313e-16,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_PARITY_CONNECTED_CANDIDATE_2037",
+      "error": -1.3877787807814457e-17,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "GDP_gap_identity_2037",
+      "error": 9.237055564881302e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_labor_2037",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_core_2037",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "no_second_pension_charge_2037",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "household_cell_weights_2038",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "pass_": true
+    },
+    {
+      "check": "labor_tax_recomputed_2038",
+      "error": 6.754419246135512e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "financial_tax_recomputed_2038",
+      "error": 3.1756819396377978e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "corporate_tax_recomputed_2038",
+      "error": 2.2222224060897133e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "estate_delta_2038",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "policy_tax_sum_2038",
+      "error": 7.291589554370148e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_policy_macro_once_2038",
+      "error": -2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_full_components_2038",
+      "error": -2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_medical_components_2038",
+      "error": -2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "DI_level_bridge_2038",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_SQ_COMMON_ON_2038",
+      "error": 4.336808689942018e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_SQ_COMMON_ON_2038",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_SQ_COMMON_ON_2038",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_SQ_COMMON_ON_2038",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_SQ_COMMON_ON_2038",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_SQ_COMMON_ON_2038",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_PARITY_CONNECTED_CANDIDATE_2038",
+      "error": -7.105427357601002e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_PARITY_CONNECTED_CANDIDATE_2038",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_PARITY_CONNECTED_CANDIDATE_2038",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_PARITY_CONNECTED_CANDIDATE_2038",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_PARITY_CONNECTED_CANDIDATE_2038",
+      "error": -1.3322676295501878e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_PARITY_CONNECTED_CANDIDATE_2038",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "GDP_gap_identity_2038",
+      "error": -4.973799150320701e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_labor_2038",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_core_2038",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "no_second_pension_charge_2038",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "household_cell_weights_2039",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "pass_": true
+    },
+    {
+      "check": "labor_tax_recomputed_2039",
+      "error": 6.549782938236604e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "financial_tax_recomputed_2039",
+      "error": 3.0802027595200343e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "corporate_tax_recomputed_2039",
+      "error": 1.1816325695690466e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "estate_delta_2039",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "policy_tax_sum_2039",
+      "error": 8.039080512389774e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_policy_macro_once_2039",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_full_components_2039",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_medical_components_2039",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "DI_level_bridge_2039",
+      "error": 8.526512829121202e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_SQ_COMMON_ON_2039",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_SQ_COMMON_ON_2039",
+      "error": 4.336808689942018e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_SQ_COMMON_ON_2039",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_SQ_COMMON_ON_2039",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_SQ_COMMON_ON_2039",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_SQ_COMMON_ON_2039",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_PARITY_CONNECTED_CANDIDATE_2039",
+      "error": 1.4210854715202004e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_PARITY_CONNECTED_CANDIDATE_2039",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_PARITY_CONNECTED_CANDIDATE_2039",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_PARITY_CONNECTED_CANDIDATE_2039",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_PARITY_CONNECTED_CANDIDATE_2039",
+      "error": -1.7763568394002505e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_PARITY_CONNECTED_CANDIDATE_2039",
+      "error": -1.6653345369377348e-16,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "GDP_gap_identity_2039",
+      "error": 2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_labor_2039",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_core_2039",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "no_second_pension_charge_2039",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "household_cell_weights_2040",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "pass_": true
+    },
+    {
+      "check": "labor_tax_recomputed_2040",
+      "error": -2.991384917550022e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "financial_tax_recomputed_2040",
+      "error": -1.4063861186741633e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "corporate_tax_recomputed_2040",
+      "error": -1.4939161019356106e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "estate_delta_2040",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "policy_tax_sum_2040",
+      "error": -3.1469937766814837e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_policy_macro_once_2040",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_full_components_2040",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_medical_components_2040",
+      "error": -1.4210854715202004e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "DI_level_bridge_2040",
+      "error": -8.526512829121202e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_SQ_COMMON_ON_2040",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_SQ_COMMON_ON_2040",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_SQ_COMMON_ON_2040",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_SQ_COMMON_ON_2040",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_SQ_COMMON_ON_2040",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_SQ_COMMON_ON_2040",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_PARITY_CONNECTED_CANDIDATE_2040",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_PARITY_CONNECTED_CANDIDATE_2040",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_PARITY_CONNECTED_CANDIDATE_2040",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_PARITY_CONNECTED_CANDIDATE_2040",
+      "error": -2.220446049250313e-16,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_PARITY_CONNECTED_CANDIDATE_2040",
+      "error": -1.7763568394002505e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_PARITY_CONNECTED_CANDIDATE_2040",
+      "error": -1.3877787807814457e-16,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "GDP_gap_identity_2040",
+      "error": -9.237055564881302e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_labor_2040",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_core_2040",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "no_second_pension_charge_2040",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "household_cell_weights_2041",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "pass_": true
+    },
+    {
+      "check": "labor_tax_recomputed_2041",
+      "error": -7.415223990392406e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "financial_tax_recomputed_2041",
+      "error": -3.4865443865328416e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "corporate_tax_recomputed_2041",
+      "error": 1.0803802297232323e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "estate_delta_2041",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "policy_tax_sum_2041",
+      "error": -6.684786058031023e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_policy_macro_once_2041",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_full_components_2041",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_medical_components_2041",
+      "error": 1.4210854715202004e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "DI_level_bridge_2041",
+      "error": 2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_SQ_COMMON_ON_2041",
+      "error": 4.336808689942018e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_SQ_COMMON_ON_2041",
+      "error": 8.673617379884035e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_SQ_COMMON_ON_2041",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_SQ_COMMON_ON_2041",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_SQ_COMMON_ON_2041",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_SQ_COMMON_ON_2041",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_PARITY_CONNECTED_CANDIDATE_2041",
+      "error": 7.105427357601002e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_PARITY_CONNECTED_CANDIDATE_2041",
+      "error": 7.105427357601002e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_PARITY_CONNECTED_CANDIDATE_2041",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_PARITY_CONNECTED_CANDIDATE_2041",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_PARITY_CONNECTED_CANDIDATE_2041",
+      "error": -1.7763568394002505e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_PARITY_CONNECTED_CANDIDATE_2041",
+      "error": -2.220446049250313e-16,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "GDP_gap_identity_2041",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_labor_2041",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_core_2041",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "no_second_pension_charge_2041",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "household_cell_weights_2042",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "pass_": true
+    },
+    {
+      "check": "labor_tax_recomputed_2042",
+      "error": -9.71311919784057e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "financial_tax_recomputed_2042",
+      "error": -4.566125255678344e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "corporate_tax_recomputed_2042",
+      "error": -8.311573651553772e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "estate_delta_2042",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "policy_tax_sum_2042",
+      "error": -1.1000622635037871e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_policy_macro_once_2042",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_full_components_2042",
+      "error": -2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_medical_components_2042",
+      "error": -2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "DI_level_bridge_2042",
+      "error": -8.526512829121202e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_SQ_COMMON_ON_2042",
+      "error": 8.673617379884035e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_SQ_COMMON_ON_2042",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_SQ_COMMON_ON_2042",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_SQ_COMMON_ON_2042",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_SQ_COMMON_ON_2042",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_SQ_COMMON_ON_2042",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_PARITY_CONNECTED_CANDIDATE_2042",
+      "error": -7.105427357601002e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_PARITY_CONNECTED_CANDIDATE_2042",
+      "error": 7.105427357601002e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_PARITY_CONNECTED_CANDIDATE_2042",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_PARITY_CONNECTED_CANDIDATE_2042",
+      "error": -2.220446049250313e-16,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_PARITY_CONNECTED_CANDIDATE_2042",
+      "error": -1.7763568394002505e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_PARITY_CONNECTED_CANDIDATE_2042",
+      "error": -5.551115123125783e-17,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "GDP_gap_identity_2042",
+      "error": 1.1368683772161603e-13,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_labor_2042",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_core_2042",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "no_second_pension_charge_2042",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "household_cell_weights_2043",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "pass_": true
+    },
+    {
+      "check": "labor_tax_recomputed_2043",
+      "error": -2.3779023194947513e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "financial_tax_recomputed_2043",
+      "error": -1.1179501768765476e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "corporate_tax_recomputed_2043",
+      "error": -5.435651928564766e-13,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "estate_delta_2043",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "policy_tax_sum_2043",
+      "error": -2.495141870895168e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_policy_macro_once_2043",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_full_components_2043",
+      "error": -2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_medical_components_2043",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "DI_level_bridge_2043",
+      "error": 1.1368683772161603e-13,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_SQ_COMMON_ON_2043",
+      "error": 8.673617379884035e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_SQ_COMMON_ON_2043",
+      "error": 8.673617379884035e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_SQ_COMMON_ON_2043",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_SQ_COMMON_ON_2043",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_SQ_COMMON_ON_2043",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_SQ_COMMON_ON_2043",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_PARITY_CONNECTED_CANDIDATE_2043",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_PARITY_CONNECTED_CANDIDATE_2043",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_PARITY_CONNECTED_CANDIDATE_2043",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_PARITY_CONNECTED_CANDIDATE_2043",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_PARITY_CONNECTED_CANDIDATE_2043",
+      "error": -8.881784197001252e-16,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_PARITY_CONNECTED_CANDIDATE_2043",
+      "error": -5.551115123125783e-17,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "GDP_gap_identity_2043",
+      "error": -6.394884621840902e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_labor_2043",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_core_2043",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "no_second_pension_charge_2043",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "household_cell_weights_2044",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "pass_": true
+    },
+    {
+      "check": "labor_tax_recomputed_2044",
+      "error": -1.1813483524747426e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "financial_tax_recomputed_2044",
+      "error": -5.554667836804583e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "corporate_tax_recomputed_2044",
+      "error": 1.0487610779819079e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "estate_delta_2044",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "policy_tax_sum_2044",
+      "error": -1.1321787951601436e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_policy_macro_once_2044",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_full_components_2044",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_medical_components_2044",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "DI_level_bridge_2044",
+      "error": -5.684341886080802e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_SQ_COMMON_ON_2044",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_SQ_COMMON_ON_2044",
+      "error": 8.673617379884035e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_SQ_COMMON_ON_2044",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_SQ_COMMON_ON_2044",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_SQ_COMMON_ON_2044",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_SQ_COMMON_ON_2044",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_PARITY_CONNECTED_CANDIDATE_2044",
+      "error": 1.4210854715202004e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_PARITY_CONNECTED_CANDIDATE_2044",
+      "error": 7.105427357601002e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_PARITY_CONNECTED_CANDIDATE_2044",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_PARITY_CONNECTED_CANDIDATE_2044",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_PARITY_CONNECTED_CANDIDATE_2044",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_PARITY_CONNECTED_CANDIDATE_2044",
+      "error": -5.551115123125783e-17,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "GDP_gap_identity_2044",
+      "error": 7.105427357601002e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_labor_2044",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_core_2044",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "no_second_pension_charge_2044",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "household_cell_weights_2045",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "pass_": true
+    },
+    {
+      "check": "labor_tax_recomputed_2045",
+      "error": -2.412718913546996e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "financial_tax_recomputed_2045",
+      "error": -1.134381477641e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "corporate_tax_recomputed_2045",
+      "error": 1.0668799177437904e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "estate_delta_2045",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "policy_tax_sum_2045",
+      "error": -2.419682232357445e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_policy_macro_once_2045",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_full_components_2045",
+      "error": -2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_medical_components_2045",
+      "error": -2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "DI_level_bridge_2045",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_SQ_COMMON_ON_2045",
+      "error": 8.673617379884035e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_SQ_COMMON_ON_2045",
+      "error": 8.673617379884035e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_SQ_COMMON_ON_2045",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_SQ_COMMON_ON_2045",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_SQ_COMMON_ON_2045",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_SQ_COMMON_ON_2045",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_PARITY_CONNECTED_CANDIDATE_2045",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_PARITY_CONNECTED_CANDIDATE_2045",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_PARITY_CONNECTED_CANDIDATE_2045",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_PARITY_CONNECTED_CANDIDATE_2045",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_PARITY_CONNECTED_CANDIDATE_2045",
+      "error": -8.881784197001252e-16,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_PARITY_CONNECTED_CANDIDATE_2045",
+      "error": 5.551115123125783e-17,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "GDP_gap_identity_2045",
+      "error": -1.2079226507921703e-13,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_labor_2045",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_core_2045",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "no_second_pension_charge_2045",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "household_cell_weights_2046",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "pass_": true
+    },
+    {
+      "check": "labor_tax_recomputed_2046",
+      "error": -2.6759039428725373e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "financial_tax_recomputed_2046",
+      "error": -1.2585488207150775e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "corporate_tax_recomputed_2046",
+      "error": 6.901146321069973e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "estate_delta_2046",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "policy_tax_sum_2046",
+      "error": -2.1117330106790178e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_policy_macro_once_2046",
+      "error": -2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_full_components_2046",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_medical_components_2046",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "DI_level_bridge_2046",
+      "error": 5.684341886080802e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_SQ_COMMON_ON_2046",
+      "error": 8.673617379884035e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_SQ_COMMON_ON_2046",
+      "error": 8.673617379884035e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_SQ_COMMON_ON_2046",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_SQ_COMMON_ON_2046",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_SQ_COMMON_ON_2046",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_SQ_COMMON_ON_2046",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_PARITY_CONNECTED_CANDIDATE_2046",
+      "error": 7.105427357601002e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_PARITY_CONNECTED_CANDIDATE_2046",
+      "error": 7.105427357601002e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_PARITY_CONNECTED_CANDIDATE_2046",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_PARITY_CONNECTED_CANDIDATE_2046",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_PARITY_CONNECTED_CANDIDATE_2046",
+      "error": -1.7763568394002505e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_PARITY_CONNECTED_CANDIDATE_2046",
+      "error": -2.220446049250313e-16,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "GDP_gap_identity_2046",
+      "error": 1.4210854715202004e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_labor_2046",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_core_2046",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "no_second_pension_charge_2046",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "household_cell_weights_2047",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "pass_": true
+    },
+    {
+      "check": "labor_tax_recomputed_2047",
+      "error": 1.6484591469634324e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "financial_tax_recomputed_2047",
+      "error": 7.72715225139109e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "corporate_tax_recomputed_2047",
+      "error": -1.91491267287347e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "estate_delta_2047",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "policy_tax_sum_2047",
+      "error": -1.9895196601282805e-13,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_policy_macro_once_2047",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_full_components_2047",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_medical_components_2047",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "DI_level_bridge_2047",
+      "error": -8.526512829121202e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_SQ_COMMON_ON_2047",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_SQ_COMMON_ON_2047",
+      "error": 8.673617379884035e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_SQ_COMMON_ON_2047",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_SQ_COMMON_ON_2047",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_SQ_COMMON_ON_2047",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_SQ_COMMON_ON_2047",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_PARITY_CONNECTED_CANDIDATE_2047",
+      "error": 7.105427357601002e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_PARITY_CONNECTED_CANDIDATE_2047",
+      "error": 7.105427357601002e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_PARITY_CONNECTED_CANDIDATE_2047",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_PARITY_CONNECTED_CANDIDATE_2047",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_PARITY_CONNECTED_CANDIDATE_2047",
+      "error": -4.440892098500626e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_PARITY_CONNECTED_CANDIDATE_2047",
+      "error": -2.220446049250313e-16,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "GDP_gap_identity_2047",
+      "error": 7.105427357601002e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_labor_2047",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_core_2047",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "no_second_pension_charge_2047",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "household_cell_weights_2048",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "pass_": true
+    },
+    {
+      "check": "labor_tax_recomputed_2048",
+      "error": -3.0020430585864233e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "financial_tax_recomputed_2048",
+      "error": -1.411581962429409e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "corporate_tax_recomputed_2048",
+      "error": -7.499778575947857e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "estate_delta_2048",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "policy_tax_sum_2048",
+      "error": -3.21847437589895e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_policy_macro_once_2048",
+      "error": 5.684341886080802e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_full_components_2048",
+      "error": 2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_medical_components_2048",
+      "error": 2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "DI_level_bridge_2048",
+      "error": 5.684341886080802e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_SQ_COMMON_ON_2048",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_SQ_COMMON_ON_2048",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_SQ_COMMON_ON_2048",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_SQ_COMMON_ON_2048",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_SQ_COMMON_ON_2048",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_SQ_COMMON_ON_2048",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_PARITY_CONNECTED_CANDIDATE_2048",
+      "error": 7.105427357601002e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_PARITY_CONNECTED_CANDIDATE_2048",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_PARITY_CONNECTED_CANDIDATE_2048",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_PARITY_CONNECTED_CANDIDATE_2048",
+      "error": -3.3306690738754696e-16,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_PARITY_CONNECTED_CANDIDATE_2048",
+      "error": -6.217248937900877e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_PARITY_CONNECTED_CANDIDATE_2048",
+      "error": -3.3306690738754696e-16,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "GDP_gap_identity_2048",
+      "error": -5.684341886080802e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_labor_2048",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_core_2048",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "no_second_pension_charge_2048",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "household_cell_weights_2049",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "pass_": true
+    },
+    {
+      "check": "labor_tax_recomputed_2049",
+      "error": -1.8602008822199423e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "financial_tax_recomputed_2049",
+      "error": -8.748557434046234e-13,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "corporate_tax_recomputed_2049",
+      "error": 4.973799150320701e-13,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "estate_delta_2049",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "policy_tax_sum_2049",
+      "error": -1.8971491044794675e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_policy_macro_once_2049",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_full_components_2049",
+      "error": 5.684341886080802e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_medical_components_2049",
+      "error": 5.684341886080802e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "DI_level_bridge_2049",
+      "error": -2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_SQ_COMMON_ON_2049",
+      "error": 8.673617379884035e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_SQ_COMMON_ON_2049",
+      "error": 8.673617379884035e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_SQ_COMMON_ON_2049",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_SQ_COMMON_ON_2049",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_SQ_COMMON_ON_2049",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_SQ_COMMON_ON_2049",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_PARITY_CONNECTED_CANDIDATE_2049",
+      "error": 2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_PARITY_CONNECTED_CANDIDATE_2049",
+      "error": 2.1316282072803006e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_PARITY_CONNECTED_CANDIDATE_2049",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_PARITY_CONNECTED_CANDIDATE_2049",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_PARITY_CONNECTED_CANDIDATE_2049",
+      "error": -7.105427357601002e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_PARITY_CONNECTED_CANDIDATE_2049",
+      "error": -4.440892098500626e-16,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "GDP_gap_identity_2049",
+      "error": -8.526512829121202e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_labor_2049",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_core_2049",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "no_second_pension_charge_2049",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "household_cell_weights_2050",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "pass_": true
+    },
+    {
+      "check": "labor_tax_recomputed_2050",
+      "error": 2.0600054995156825e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "financial_tax_recomputed_2050",
+      "error": 9.685585666829866e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "corporate_tax_recomputed_2050",
+      "error": -3.927524971913954e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "estate_delta_2050",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "policy_tax_sum_2050",
+      "error": 2.1174173525650986e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_policy_macro_once_2050",
+      "error": 5.684341886080802e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_full_components_2050",
+      "error": -2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_medical_components_2050",
+      "error": -2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "DI_level_bridge_2050",
+      "error": 2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_SQ_COMMON_ON_2050",
+      "error": 4.336808689942018e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_SQ_COMMON_ON_2050",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_SQ_COMMON_ON_2050",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_SQ_COMMON_ON_2050",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_SQ_COMMON_ON_2050",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_SQ_COMMON_ON_2050",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_PARITY_CONNECTED_CANDIDATE_2050",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_PARITY_CONNECTED_CANDIDATE_2050",
+      "error": 1.4210854715202004e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_PARITY_CONNECTED_CANDIDATE_2050",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_PARITY_CONNECTED_CANDIDATE_2050",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_PARITY_CONNECTED_CANDIDATE_2050",
+      "error": -7.105427357601002e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_PARITY_CONNECTED_CANDIDATE_2050",
+      "error": -7.771561172376096e-16,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "GDP_gap_identity_2050",
+      "error": -2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_labor_2050",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_core_2050",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "no_second_pension_charge_2050",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "household_cell_weights_2051",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "pass_": true
+    },
+    {
+      "check": "labor_tax_recomputed_2051",
+      "error": -3.239364332330297e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "financial_tax_recomputed_2051",
+      "error": -1.5233148076276848e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "corporate_tax_recomputed_2051",
+      "error": -2.4158453015843406e-13,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "estate_delta_2051",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "policy_tax_sum_2051",
+      "error": -3.3942626487259986e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_policy_macro_once_2051",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_full_components_2051",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_medical_components_2051",
+      "error": 2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "DI_level_bridge_2051",
+      "error": -8.526512829121202e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_SQ_COMMON_ON_2051",
+      "error": -4.336808689942018e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_SQ_COMMON_ON_2051",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_SQ_COMMON_ON_2051",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_SQ_COMMON_ON_2051",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_SQ_COMMON_ON_2051",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_SQ_COMMON_ON_2051",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_PARITY_CONNECTED_CANDIDATE_2051",
+      "error": 1.4210854715202004e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_PARITY_CONNECTED_CANDIDATE_2051",
+      "error": 1.4210854715202004e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_PARITY_CONNECTED_CANDIDATE_2051",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_PARITY_CONNECTED_CANDIDATE_2051",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_PARITY_CONNECTED_CANDIDATE_2051",
+      "error": -3.552713678800501e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_PARITY_CONNECTED_CANDIDATE_2051",
+      "error": -7.771561172376096e-16,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "GDP_gap_identity_2051",
+      "error": 9.237055564881302e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_labor_2051",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_core_2051",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "no_second_pension_charge_2051",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "household_cell_weights_2052",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "pass_": true
+    },
+    {
+      "check": "labor_tax_recomputed_2052",
+      "error": 1.2082068678864744e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "financial_tax_recomputed_2052",
+      "error": 5.681677350821701e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "corporate_tax_recomputed_2052",
+      "error": -6.133760166449065e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "estate_delta_2052",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "policy_tax_sum_2052",
+      "error": 1.2036593943776097e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_policy_macro_once_2052",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_full_components_2052",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_medical_components_2052",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "DI_level_bridge_2052",
+      "error": 8.526512829121202e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_SQ_COMMON_ON_2052",
+      "error": 4.336808689942018e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_SQ_COMMON_ON_2052",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_SQ_COMMON_ON_2052",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_SQ_COMMON_ON_2052",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_SQ_COMMON_ON_2052",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_SQ_COMMON_ON_2052",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_PARITY_CONNECTED_CANDIDATE_2052",
+      "error": 1.4210854715202004e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_PARITY_CONNECTED_CANDIDATE_2052",
+      "error": 1.4210854715202004e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_PARITY_CONNECTED_CANDIDATE_2052",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_PARITY_CONNECTED_CANDIDATE_2052",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_PARITY_CONNECTED_CANDIDATE_2052",
+      "error": -8.881784197001252e-16,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_PARITY_CONNECTED_CANDIDATE_2052",
+      "error": -4.440892098500626e-16,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "GDP_gap_identity_2052",
+      "error": 1.4210854715202004e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_labor_2052",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_core_2052",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "no_second_pension_charge_2052",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "household_cell_weights_2053",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "pass_": true
+    },
+    {
+      "check": "labor_tax_recomputed_2053",
+      "error": 6.0680349633912556e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "financial_tax_recomputed_2053",
+      "error": 2.8332891588433995e-13,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "corporate_tax_recomputed_2053",
+      "error": -1.3923084907219163e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "estate_delta_2053",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "policy_tax_sum_2053",
+      "error": -7.574385563202668e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_policy_macro_once_2053",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_full_components_2053",
+      "error": -5.684341886080802e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_medical_components_2053",
+      "error": -5.684341886080802e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "DI_level_bridge_2053",
+      "error": 8.526512829121202e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_SQ_COMMON_ON_2053",
+      "error": 4.336808689942018e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_SQ_COMMON_ON_2053",
+      "error": 8.673617379884035e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_SQ_COMMON_ON_2053",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_SQ_COMMON_ON_2053",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_SQ_COMMON_ON_2053",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_SQ_COMMON_ON_2053",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_PARITY_CONNECTED_CANDIDATE_2053",
+      "error": -7.105427357601002e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_PARITY_CONNECTED_CANDIDATE_2053",
+      "error": 7.105427357601002e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_PARITY_CONNECTED_CANDIDATE_2053",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_PARITY_CONNECTED_CANDIDATE_2053",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_PARITY_CONNECTED_CANDIDATE_2053",
+      "error": 8.881784197001252e-16,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_PARITY_CONNECTED_CANDIDATE_2053",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "GDP_gap_identity_2053",
+      "error": 9.237055564881302e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_labor_2053",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_core_2053",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "no_second_pension_charge_2053",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "household_cell_weights_2054",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "pass_": true
+    },
+    {
+      "check": "labor_tax_recomputed_2054",
+      "error": -2.830802259268239e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "financial_tax_recomputed_2054",
+      "error": -1.3313794511304877e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "corporate_tax_recomputed_2054",
+      "error": 2.263078613395919e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "estate_delta_2054",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "policy_tax_sum_2054",
+      "error": -2.9413627089525107e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_policy_macro_once_2054",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_full_components_2054",
+      "error": 5.684341886080802e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_medical_components_2054",
+      "error": 5.684341886080802e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "DI_level_bridge_2054",
+      "error": 5.684341886080802e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_SQ_COMMON_ON_2054",
+      "error": 4.336808689942018e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_SQ_COMMON_ON_2054",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_SQ_COMMON_ON_2054",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_SQ_COMMON_ON_2054",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_SQ_COMMON_ON_2054",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_SQ_COMMON_ON_2054",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_PARITY_CONNECTED_CANDIDATE_2054",
+      "error": 3.552713678800501e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_PARITY_CONNECTED_CANDIDATE_2054",
+      "error": 2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_PARITY_CONNECTED_CANDIDATE_2054",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_PARITY_CONNECTED_CANDIDATE_2054",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_PARITY_CONNECTED_CANDIDATE_2054",
+      "error": 2.6645352591003757e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_PARITY_CONNECTED_CANDIDATE_2054",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "GDP_gap_identity_2054",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_labor_2054",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_core_2054",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "no_second_pension_charge_2054",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "household_cell_weights_2055",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "pass_": true
+    },
+    {
+      "check": "labor_tax_recomputed_2055",
+      "error": 2.028741619142238e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "financial_tax_recomputed_2055",
+      "error": 9.539924405999045e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "corporate_tax_recomputed_2055",
+      "error": -3.3999469906120794e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "estate_delta_2055",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "policy_tax_sum_2055",
+      "error": 2.0901325115119107e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_policy_macro_once_2055",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_full_components_2055",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "cash_medical_components_2055",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "DI_level_bridge_2055",
+      "error": 2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_SQ_COMMON_ON_2055",
+      "error": 4.336808689942018e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_SQ_COMMON_ON_2055",
+      "error": 8.673617379884035e-19,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_SQ_COMMON_ON_2055",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_SQ_COMMON_ON_2055",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_SQ_COMMON_ON_2055",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_SQ_COMMON_ON_2055",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_target_PARITY_CONNECTED_CANDIDATE_2055",
+      "error": 7.105427357601002e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "consumption_channel_convolution_PARITY_CONNECTED_CANDIDATE_2055",
+      "error": 1.4210854715202004e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_sources_PARITY_CONNECTED_CANDIDATE_2055",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "investment_state_PARITY_CONNECTED_CANDIDATE_2055",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_state_PARITY_CONNECTED_CANDIDATE_2055",
+      "error": 5.329070518200751e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "supply_state_PARITY_CONNECTED_CANDIDATE_2055",
+      "error": 3.3306690738754696e-16,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "GDP_gap_identity_2055",
+      "error": -1.0658141036401503e-13,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_labor_2055",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "same_common_core_2055",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "no_second_pension_charge_2055",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_SQ_COMMON_ON_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_SQ_COMMON_ON_2027",
+      "error": -1.4790657587582245e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_SQ_COMMON_ON_2028",
+      "error": -3.312834451207891e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_SQ_COMMON_ON_2029",
+      "error": -3.738023224286735e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_SQ_COMMON_ON_2030",
+      "error": -4.149569576838985e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_SQ_COMMON_ON_2031",
+      "error": 1.3426415534922853e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_SQ_COMMON_ON_2032",
+      "error": -3.6709479900309816e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_SQ_COMMON_ON_2033",
+      "error": -3.362856659805402e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_SQ_COMMON_ON_2034",
+      "error": -2.3078428057488054e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_SQ_COMMON_ON_2035",
+      "error": -3.8562575355172157e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_SQ_COMMON_ON_2036",
+      "error": 2.056594894384034e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_SQ_COMMON_ON_2037",
+      "error": -4.083631210960448e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_SQ_COMMON_ON_2038",
+      "error": 4.9681148084346205e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_SQ_COMMON_ON_2039",
+      "error": 1.0936673788819462e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_SQ_COMMON_ON_2040",
+      "error": 4.375806383905001e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_SQ_COMMON_ON_2041",
+      "error": 1.106172931031324e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_SQ_COMMON_ON_2042",
+      "error": 2.418119038338773e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_SQ_COMMON_ON_2043",
+      "error": -3.3094238460762426e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_SQ_COMMON_ON_2044",
+      "error": -3.631157596828416e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_SQ_COMMON_ON_2045",
+      "error": -3.147988536511548e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_SQ_COMMON_ON_2046",
+      "error": 1.0186340659856796e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_SQ_COMMON_ON_2047",
+      "error": -4.786215868080035e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_SQ_COMMON_ON_2048",
+      "error": -3.275317794759758e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_SQ_COMMON_ON_2049",
+      "error": -6.582467904081568e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_SQ_COMMON_ON_2050",
+      "error": -1.999751475523226e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_SQ_COMMON_ON_2051",
+      "error": -3.369677870068699e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_SQ_COMMON_ON_2052",
+      "error": -4.800995156983845e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_SQ_COMMON_ON_2053",
+      "error": 3.523155100992881e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_SQ_COMMON_ON_2054",
+      "error": 1.659827830735594e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_SQ_COMMON_ON_2055",
+      "error": 1.807620719773695e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_CONNECTED_CANDIDATE_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_CONNECTED_CANDIDATE_2027",
+      "error": -1.4790657587582245e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_CONNECTED_CANDIDATE_2028",
+      "error": -3.312834451207891e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_CONNECTED_CANDIDATE_2029",
+      "error": -3.738023224286735e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_CONNECTED_CANDIDATE_2030",
+      "error": -2.6409452402731404e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_CONNECTED_CANDIDATE_2031",
+      "error": 4.774847184307873e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_CONNECTED_CANDIDATE_2032",
+      "error": -4.770299710799009e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_CONNECTED_CANDIDATE_2033",
+      "error": 5.070432962384075e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_CONNECTED_CANDIDATE_2034",
+      "error": -4.3968384488835e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_CONNECTED_CANDIDATE_2035",
+      "error": -3.182663022016641e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_CONNECTED_CANDIDATE_2036",
+      "error": -4.1455905375187285e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_CONNECTED_CANDIDATE_2037",
+      "error": 3.7130121199879795e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_CONNECTED_CANDIDATE_2038",
+      "error": -4.829985300602857e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_CONNECTED_CANDIDATE_2039",
+      "error": -4.4070702642784454e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_CONNECTED_CANDIDATE_2040",
+      "error": 3.9460701373172924e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_CONNECTED_CANDIDATE_2041",
+      "error": 9.890754881780595e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_CONNECTED_CANDIDATE_2042",
+      "error": 4.263256414560601e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_CONNECTED_CANDIDATE_2043",
+      "error": 1.7570300769875757e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_CONNECTED_CANDIDATE_2044",
+      "error": -2.1088908397359774e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_CONNECTED_CANDIDATE_2045",
+      "error": -4.454250301932916e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_CONNECTED_CANDIDATE_2046",
+      "error": -7.747757990728132e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_CONNECTED_CANDIDATE_2047",
+      "error": 1.4625811672885902e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_CONNECTED_CANDIDATE_2048",
+      "error": -3.133777681796346e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_CONNECTED_CANDIDATE_2049",
+      "error": -8.37303559819702e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_CONNECTED_CANDIDATE_2050",
+      "error": 3.823288352577947e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_CONNECTED_CANDIDATE_2051",
+      "error": -2.743263394222595e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_CONNECTED_CANDIDATE_2052",
+      "error": 4.940261533192825e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_CONNECTED_CANDIDATE_2053",
+      "error": 9.777068044058979e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_CONNECTED_CANDIDATE_2054",
+      "error": -4.5696424422203563e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_CONNECTED_CANDIDATE_2055",
+      "error": -3.668105819087941e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_CORPORATE_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_CORPORATE_2027",
+      "error": -1.4790657587582245e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_CORPORATE_2028",
+      "error": -3.312834451207891e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_CORPORATE_2029",
+      "error": -3.738023224286735e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_CORPORATE_2030",
+      "error": -2.6409452402731404e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_CORPORATE_2031",
+      "error": 4.774847184307873e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_CORPORATE_2032",
+      "error": -4.770299710799009e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_CORPORATE_2033",
+      "error": -4.305320544517599e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_CORPORATE_2034",
+      "error": 2.0412471712916158e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_CORPORATE_2035",
+      "error": -4.644107320928015e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_CORPORATE_2036",
+      "error": 9.936229616869241e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_CORPORATE_2037",
+      "error": 5.326228347257711e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_CORPORATE_2038",
+      "error": -3.8340886021615006e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_CORPORATE_2039",
+      "error": -7.685230229981244e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_CORPORATE_2040",
+      "error": 2.9461943995556794e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_CORPORATE_2041",
+      "error": 3.228706191293895e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_CORPORATE_2042",
+      "error": -2.205524651799351e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_CORPORATE_2043",
+      "error": 3.581135388230905e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_CORPORATE_2044",
+      "error": -3.695959094329737e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_CORPORATE_2045",
+      "error": -4.978915058018174e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_CORPORATE_2046",
+      "error": 1.822400008677505e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_CORPORATE_2047",
+      "error": 3.148556970700156e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_CORPORATE_2048",
+      "error": 4.762341632158495e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_CORPORATE_2049",
+      "error": 4.56850557384314e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_CORPORATE_2050",
+      "error": 2.1725554688600823e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_CORPORATE_2051",
+      "error": -2.141860022675246e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_CORPORATE_2052",
+      "error": -7.577227734145708e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_CORPORATE_2053",
+      "error": -7.548806024715304e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_CORPORATE_2054",
+      "error": 3.7772451833006926e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_CORPORATE_2055",
+      "error": 3.9693759390502237e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_PENSION_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_PENSION_2027",
+      "error": -1.4790657587582245e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_PENSION_2028",
+      "error": -3.312834451207891e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_PENSION_2029",
+      "error": -3.738023224286735e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_PENSION_2030",
+      "error": -2.6409452402731404e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_PENSION_2031",
+      "error": 4.774847184307873e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_PENSION_2032",
+      "error": -4.770299710799009e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_PENSION_2033",
+      "error": -2.1032064978498966e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_PENSION_2034",
+      "error": 1.7956836018129252e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_PENSION_2035",
+      "error": -4.022240318590775e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_PENSION_2036",
+      "error": -3.5635139283840545e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_PENSION_2037",
+      "error": 8.230927051045e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_PENSION_2038",
+      "error": 3.6067149267182685e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_PENSION_2039",
+      "error": 3.6357050703372806e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_PENSION_2040",
+      "error": 2.1759660739917308e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_PENSION_2041",
+      "error": 4.841353984375019e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_PENSION_2042",
+      "error": 3.5839775591739453e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_PENSION_2043",
+      "error": -3.6334313335828483e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_PENSION_2044",
+      "error": 3.724380803760141e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_PENSION_2045",
+      "error": -4.552020982373506e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_PENSION_2046",
+      "error": -1.170974428532645e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_PENSION_2047",
+      "error": -3.2798652682686225e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_PENSION_2048",
+      "error": -4.275761966709979e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_PENSION_2049",
+      "error": 4.31100488640368e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_PENSION_2050",
+      "error": -1.7291768017457798e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_PENSION_2051",
+      "error": 1.1431211532908492e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_PENSION_2052",
+      "error": -4.978346623829566e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_PENSION_2053",
+      "error": -2.4442670110147446e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_PENSION_2054",
+      "error": -1.800799509510398e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_PENSION_2055",
+      "error": 4.430944500199985e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_FLAT_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_FLAT_2027",
+      "error": -1.4790657587582245e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_FLAT_2028",
+      "error": -3.312834451207891e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_FLAT_2029",
+      "error": -3.738023224286735e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_FLAT_2030",
+      "error": -2.7625901566352695e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_FLAT_2031",
+      "error": 3.3310243452433497e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_FLAT_2032",
+      "error": -1.6063950170064345e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_FLAT_2033",
+      "error": 3.9199221646413207e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_FLAT_2034",
+      "error": 2.8273916541365907e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_FLAT_2035",
+      "error": 1.3744738680543378e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_FLAT_2036",
+      "error": 2.73871592071373e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_FLAT_2037",
+      "error": -3.3082869776990265e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_FLAT_2038",
+      "error": 1.8746959540294483e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_FLAT_2039",
+      "error": -4.3405634642113e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_FLAT_2040",
+      "error": -3.625473254942335e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_FLAT_2041",
+      "error": -2.751221472863108e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_FLAT_2042",
+      "error": -4.748699211631902e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_FLAT_2043",
+      "error": -1.8849277694243938e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_FLAT_2044",
+      "error": -3.573177309590392e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_FLAT_2045",
+      "error": -3.494733391562477e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_FLAT_2046",
+      "error": 2.085016603814438e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_FLAT_2047",
+      "error": 2.2077983885537833e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_FLAT_2048",
+      "error": 4.798721420229413e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_FLAT_2049",
+      "error": 2.29761099035386e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_FLAT_2050",
+      "error": -2.951310307253152e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_FLAT_2051",
+      "error": -3.7687186704715714e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_FLAT_2052",
+      "error": -1.368789526168257e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_FLAT_2053",
+      "error": 8.01492205937393e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_FLAT_2054",
+      "error": -4.916955731459893e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_NO_FLAT_2055",
+      "error": 6.139089236967266e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_LOW_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_LOW_2027",
+      "error": -5.115907697472721e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_LOW_2028",
+      "error": 1.6893864085432142e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_LOW_2029",
+      "error": 4.782805262948386e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_LOW_2030",
+      "error": 2.502247298252769e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_LOW_2031",
+      "error": -2.0395418687257916e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_LOW_2032",
+      "error": 2.795559339574538e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_LOW_2033",
+      "error": -4.022240318590775e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_LOW_2034",
+      "error": -4.4371972762746736e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_LOW_2035",
+      "error": -2.2532731236424297e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_LOW_2036",
+      "error": 1.5688783605583012e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_LOW_2037",
+      "error": 3.411742000025697e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_LOW_2038",
+      "error": 2.892193151637912e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_LOW_2039",
+      "error": -2.516458152967971e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_LOW_2040",
+      "error": 1.646185410209e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_LOW_2041",
+      "error": 4.863522917730734e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_LOW_2042",
+      "error": -1.2454393072403036e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_LOW_2043",
+      "error": -1.9258550310041755e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_LOW_2044",
+      "error": -8.37303559819702e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_LOW_2045",
+      "error": -2.511910679459106e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_LOW_2046",
+      "error": -7.270273272297345e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_LOW_2047",
+      "error": -4.297930900065694e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_LOW_2048",
+      "error": 4.1814018914010376e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_LOW_2049",
+      "error": -1.5910472939140163e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_LOW_2050",
+      "error": 2.0224888430675492e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_LOW_2051",
+      "error": -4.6128434405545704e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_LOW_2052",
+      "error": 4.0517988963983953e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_LOW_2053",
+      "error": -3.481090971035883e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_LOW_2054",
+      "error": 1.3352519090403803e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_LOW_2055",
+      "error": 3.459490471868776e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_HIGH_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_HIGH_2027",
+      "error": 2.8057911549694836e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_HIGH_2028",
+      "error": 2.744400262599811e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_HIGH_2029",
+      "error": 1.311946107307449e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_HIGH_2030",
+      "error": 2.681872501852922e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_HIGH_2031",
+      "error": 2.717115421546623e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_HIGH_2032",
+      "error": -5.6843418860808015e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_HIGH_2033",
+      "error": 4.361595529189799e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_HIGH_2034",
+      "error": 4.846469892072491e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_HIGH_2035",
+      "error": -2.8131807994213887e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_HIGH_2036",
+      "error": -1.4927081792848185e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_HIGH_2037",
+      "error": -2.864908310584724e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_HIGH_2038",
+      "error": 1.9235812942497432e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_HIGH_2039",
+      "error": 1.6768808563938364e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_HIGH_2040",
+      "error": 3.4913227864308283e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_HIGH_2041",
+      "error": -1.4790657587582245e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_HIGH_2042",
+      "error": 6.38351593806874e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_HIGH_2043",
+      "error": -2.715978553169407e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_HIGH_2044",
+      "error": -3.97051280742744e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_HIGH_2045",
+      "error": 2.6130919650313444e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_HIGH_2046",
+      "error": -2.091837814077735e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_HIGH_2047",
+      "error": 6.087930159992538e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_HIGH_2048",
+      "error": -1.212470124301035e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_HIGH_2049",
+      "error": 2.59660737356171e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_HIGH_2050",
+      "error": -2.6921043172478676e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_HIGH_2051",
+      "error": 1.3744738680543378e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_HIGH_2052",
+      "error": -3.8534153645741753e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_HIGH_2053",
+      "error": 1.4995293895481154e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_HIGH_2054",
+      "error": 1.0038547770818695e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_MPC_HIGH_2055",
+      "error": -6.576783562195487e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_KPI_HIGH_THRESHOLD_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_KPI_HIGH_THRESHOLD_2027",
+      "error": -1.4790657587582245e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_KPI_HIGH_THRESHOLD_2028",
+      "error": -3.312834451207891e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_KPI_HIGH_THRESHOLD_2029",
+      "error": -3.738023224286735e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_KPI_HIGH_THRESHOLD_2030",
+      "error": -2.6409452402731404e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_KPI_HIGH_THRESHOLD_2031",
+      "error": 4.774847184307873e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_KPI_HIGH_THRESHOLD_2032",
+      "error": -4.770299710799009e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_KPI_HIGH_THRESHOLD_2033",
+      "error": 5.070432962384075e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_KPI_HIGH_THRESHOLD_2034",
+      "error": -4.3968384488835e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_KPI_HIGH_THRESHOLD_2035",
+      "error": -3.182663022016641e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_KPI_HIGH_THRESHOLD_2036",
+      "error": -4.1455905375187285e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_KPI_HIGH_THRESHOLD_2037",
+      "error": 3.7130121199879795e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_KPI_HIGH_THRESHOLD_2038",
+      "error": 2.518731889722403e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_KPI_HIGH_THRESHOLD_2039",
+      "error": 4.588400770444423e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_KPI_HIGH_THRESHOLD_2040",
+      "error": 4.172306944383308e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_KPI_HIGH_THRESHOLD_2041",
+      "error": -4.282583176973276e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_KPI_HIGH_THRESHOLD_2042",
+      "error": 3.204831955372356e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_KPI_HIGH_THRESHOLD_2043",
+      "error": -3.482227839413099e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_KPI_HIGH_THRESHOLD_2044",
+      "error": 1.0436451702844352e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_KPI_HIGH_THRESHOLD_2045",
+      "error": 2.7114310796605423e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_KPI_HIGH_THRESHOLD_2046",
+      "error": 4.738467396236956e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_KPI_HIGH_THRESHOLD_2047",
+      "error": -1.4767920220037922e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_KPI_HIGH_THRESHOLD_2048",
+      "error": -1.0948042472591624e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_KPI_HIGH_THRESHOLD_2049",
+      "error": 1.3494627637555823e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_KPI_HIGH_THRESHOLD_2050",
+      "error": 2.7853275241795927e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_KPI_HIGH_THRESHOLD_2051",
+      "error": 2.7347368813934736e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_KPI_HIGH_THRESHOLD_2052",
+      "error": 4.904450179310516e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_KPI_HIGH_THRESHOLD_2053",
+      "error": -1.0390976967755705e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_KPI_HIGH_THRESHOLD_2054",
+      "error": 2.5841018214123324e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fixed_GDP_reexecution_PARITY_KPI_HIGH_THRESHOLD_2055",
+      "error": 1.1971224012086168e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_investment_sector_sum_2026",
+      "error": -3.5527136788e-16,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "employer_cost_zero_main_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_investment_sector_sum_2027",
+      "error": 5.009266748153425e-29,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "employer_cost_zero_main_2027",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_investment_sector_sum_2028",
+      "error": 1.001853349630685e-28,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "employer_cost_zero_main_2028",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_investment_sector_sum_2029",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "employer_cost_zero_main_2029",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_investment_sector_sum_2030",
+      "error": -3.2654434711787417e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "employer_cost_zero_main_2030",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_investment_sector_sum_2031",
+      "error": 1.8283985436795547e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "employer_cost_zero_main_2031",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_investment_sector_sum_2032",
+      "error": 6.743494651573201e-13,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "employer_cost_zero_main_2032",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_investment_sector_sum_2033",
+      "error": -6.298850330210826e-13,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "employer_cost_zero_main_2033",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_investment_sector_sum_2034",
+      "error": -4.4020342926387457e-13,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "employer_cost_zero_main_2034",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_investment_sector_sum_2035",
+      "error": 3.8680170177940454e-13,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "employer_cost_zero_main_2035",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_investment_sector_sum_2036",
+      "error": 2.1038726316646716e-13,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "employer_cost_zero_main_2036",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_investment_sector_sum_2037",
+      "error": 7.926992395823618e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "employer_cost_zero_main_2037",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_investment_sector_sum_2038",
+      "error": -2.1804780203638074e-13,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "employer_cost_zero_main_2038",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_investment_sector_sum_2039",
+      "error": 1.0502709812953981e-13,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "employer_cost_zero_main_2039",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_investment_sector_sum_2040",
+      "error": 1.156186257844638e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "employer_cost_zero_main_2040",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_investment_sector_sum_2041",
+      "error": -8.482103908136196e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "employer_cost_zero_main_2041",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_investment_sector_sum_2042",
+      "error": -5.415667914121514e-13,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "employer_cost_zero_main_2042",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_investment_sector_sum_2043",
+      "error": -1.716404796070492e-13,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "employer_cost_zero_main_2043",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_investment_sector_sum_2044",
+      "error": 5.198064201294983e-13,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "employer_cost_zero_main_2044",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_investment_sector_sum_2045",
+      "error": -1.9051427102567686e-13,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "employer_cost_zero_main_2045",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_investment_sector_sum_2046",
+      "error": 2.0272672429655358e-13,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "employer_cost_zero_main_2046",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_investment_sector_sum_2047",
+      "error": 1.2434497875801753e-13,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "employer_cost_zero_main_2047",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_investment_sector_sum_2048",
+      "error": 2.90656387846866e-13,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "employer_cost_zero_main_2048",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_investment_sector_sum_2049",
+      "error": 8.286704655802168e-13,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "employer_cost_zero_main_2049",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_investment_sector_sum_2050",
+      "error": 1.4370726830748026e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "employer_cost_zero_main_2050",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_investment_sector_sum_2051",
+      "error": -3.7925218521195347e-13,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "employer_cost_zero_main_2051",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_investment_sector_sum_2052",
+      "error": -7.975842208907125e-13,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "employer_cost_zero_main_2052",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_investment_sector_sum_2053",
+      "error": 3.1086244689504383e-15,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "employer_cost_zero_main_2053",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_investment_sector_sum_2054",
+      "error": 3.0730973321624333e-13,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "employer_cost_zero_main_2054",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "VAT_investment_sector_sum_2055",
+      "error": -1.106226221736506e-12,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "employer_cost_zero_main_2055",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_primary_from_macro_2026",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_tax_channel_once_2026",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_primary_from_macro_2027",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_tax_channel_once_2027",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_primary_from_macro_2028",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_tax_channel_once_2028",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_primary_from_macro_2029",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_tax_channel_once_2029",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_primary_from_macro_2030",
+      "error": 5.538680625249981e-12,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_tax_channel_once_2030",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_primary_from_macro_2031",
+      "error": 6.140510322438786e-11,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_tax_channel_once_2031",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_primary_from_macro_2032",
+      "error": 6.784262041037437e-11,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_tax_channel_once_2032",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_primary_from_macro_2033",
+      "error": 5.788081125501776e-11,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_tax_channel_once_2033",
+      "error": 1.4210854715202004e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_primary_from_macro_2034",
+      "error": 9.57527390710311e-11,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_tax_channel_once_2034",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_primary_from_macro_2035",
+      "error": 4.334310688136611e-12,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_tax_channel_once_2035",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_primary_from_macro_2036",
+      "error": 8.918732419260778e-11,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_tax_channel_once_2036",
+      "error": 2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_primary_from_macro_2037",
+      "error": -1.2533973858808167e-11,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_tax_channel_once_2037",
+      "error": -2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_primary_from_macro_2038",
+      "error": -3.453237695794087e-11,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_tax_channel_once_2038",
+      "error": -2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_primary_from_macro_2039",
+      "error": 3.737454790098127e-12,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_tax_channel_once_2039",
+      "error": 1.4210854715202004e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_primary_from_macro_2040",
+      "error": -3.2585489861958195e-11,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_tax_channel_once_2040",
+      "error": 1.4210854715202004e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_primary_from_macro_2041",
+      "error": -3.915090474038152e-11,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_tax_channel_once_2041",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_primary_from_macro_2042",
+      "error": -8.01492205937393e-12,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_tax_channel_once_2042",
+      "error": -1.4210854715202004e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_primary_from_macro_2043",
+      "error": -5.1102233555866405e-11,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_tax_channel_once_2043",
+      "error": -1.4210854715202004e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_primary_from_macro_2044",
+      "error": 1.8829382497642655e-11,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_tax_channel_once_2044",
+      "error": -1.4210854715202004e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_primary_from_macro_2045",
+      "error": -6.414779818442184e-11,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_tax_channel_once_2045",
+      "error": -1.4210854715202004e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_primary_from_macro_2046",
+      "error": -6.767209015379194e-11,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_tax_channel_once_2046",
+      "error": -2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_primary_from_macro_2047",
+      "error": 3.177547114319168e-11,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_tax_channel_once_2047",
+      "error": -1.4210854715202004e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_primary_from_macro_2048",
+      "error": 1.963940121640917e-11,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_tax_channel_once_2048",
+      "error": 2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_primary_from_macro_2049",
+      "error": -1.5063505998114124e-11,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_tax_channel_once_2049",
+      "error": -2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_primary_from_macro_2050",
+      "error": 1.3244516594568267e-11,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_tax_channel_once_2050",
+      "error": 5.684341886080802e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_primary_from_macro_2051",
+      "error": 2.2112089936854318e-11,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_tax_channel_once_2051",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_primary_from_macro_2052",
+      "error": 4.439471013029106e-11,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_tax_channel_once_2052",
+      "error": -2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_primary_from_macro_2053",
+      "error": 1.3216094885137863e-11,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_tax_channel_once_2053",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_primary_from_macro_2054",
+      "error": -5.8179239204037e-11,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_tax_channel_once_2054",
+      "error": 5.684341886080802e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_primary_from_macro_2055",
+      "error": 1.432454155292362e-11,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_tax_channel_once_2055",
+      "error": -2.842170943040401e-14,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2026",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2027",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2028",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2029",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2030",
+      "error": 3.433342499192804e-11,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2031",
+      "error": -9.5042196335271e-11,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2032",
+      "error": -8.617462299298495e-11,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2033",
+      "error": -1.5234036254696548e-10,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2034",
+      "error": -3.121840563835576e-10,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2035",
+      "error": -2.708020474528894e-10,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2036",
+      "error": -4.163211997365579e-10,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2037",
+      "error": -4.162075128988363e-10,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2038",
+      "error": -3.6482106224866584e-10,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2039",
+      "error": -3.764171196962707e-10,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2040",
+      "error": -3.425384420552291e-10,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2041",
+      "error": -3.141167326248251e-10,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2042",
+      "error": -3.1388935894938186e-10,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2043",
+      "error": -2.715410118980799e-10,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2044",
+      "error": -2.872866389225237e-10,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2045",
+      "error": -2.36724417845835e-10,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2046",
+      "error": -1.7316637013209402e-10,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2047",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2048",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2049",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2050",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2051",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2052",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2053",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2054",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2055",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2026",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2027",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2028",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2029",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2030",
+      "error": 3.433342499192804e-11,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2031",
+      "error": -9.5042196335271e-11,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2032",
+      "error": -8.617462299298495e-11,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2033",
+      "error": -1.5234036254696548e-10,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2034",
+      "error": -3.121840563835576e-10,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2035",
+      "error": -2.708020474528894e-10,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2036",
+      "error": -4.163211997365579e-10,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2037",
+      "error": -4.162075128988363e-10,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2038",
+      "error": -3.6482106224866584e-10,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2039",
+      "error": -3.764171196962707e-10,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2040",
+      "error": -3.425384420552291e-10,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2041",
+      "error": -3.141167326248251e-10,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2042",
+      "error": -3.1388935894938186e-10,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2043",
+      "error": -2.715410118980799e-10,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2044",
+      "error": -2.872866389225237e-10,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2045",
+      "error": -2.36724417845835e-10,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2046",
+      "error": -1.7316637013209402e-10,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2047",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2048",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2049",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2050",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2051",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2052",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2053",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2054",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "fiscal_debt_reconstructed_2055",
+      "error": 0.0,
+      "tolerance": 3e-06,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:handoff/chatgpt-n3-f-parity-implementation-20261122/Inputs.json",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:handoff/chatgpt-n3-f-parity-implementation-20261122/Model.py",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:handoff/chatgpt-n3-f-parity-implementation-20261122/Components.py",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:handoff/chatgpt-n3-f-parity-implementation-20261122/Macro_Adapter.py",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:handoff/chatgpt-n3-f-parity-implementation-20261122/Resolved_Macro_Source.py.txt",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:handoff/chatgpt-n3-f-parity-implementation-20261122/results/Annual_DOMESTIC_TRANSFER.csv",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:handoff/chatgpt-n3-f-parity-implementation-20261122/results/Annual_LEGACY.csv",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:handoff/chatgpt-n3-f-parity-implementation-20261122/results/Annual_FOREIGN_INCOME.csv",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:handoff/chatgpt-n3-f-parity-implementation-20261122/results/Annual_ADDITIONAL_VA.csv",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:handoff/chatgpt-n3-f-parity-implementation-20261122/results/DOMESTIC_TRANSFER_N3_Policy_Accounts.csv",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:handoff/chatgpt-n3-f-parity-implementation-20261122/results/DOMESTIC_TRANSFER_N3_Pension_Accounts.csv",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:handoff/chatgpt-n3-f-parity-implementation-20261122/results/Conditional_National_Local_Fiscal.csv",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:handoff/chatgpt-n3-f-parity-implementation-20261122/results/Verification.json",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:policies/New3linesPolicies.md",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:handoff/chatgpt-n3-model-expansion-20261121/N3_Components.py",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:handoff/chatgpt-n3-pension-counterpart-20261121/Gap_Components.py",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:handoff/f-household-social-20261120/Inputs.json",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:handoff/chatgpt-national-fiscal-closure-20261121/National_Fiscal.py",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:handoff/f-common-endoflife-finalization-20261121/Model.py",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:handoff/f-vat-core-20261120/Model.py",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:handoff/chatgpt-sq-growth-diagnosis-20261122/SQ_Growth_Contribution_Summary.csv",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    }
+  ],
+  "input_commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+  "request_commit": "83c93be124877bf3cda21ae56dad33e597dcddf5",
+  "independent_AI_review": false,
+  "scope": "Arithmetic reconstruction and classification, not calibration or policy adoption",
+  "limits": [
+    "Taxpayer microdata missing",
+    "Pension return incidence undecided",
+    "Survey households and macro household income are nonidentical proxies",
+    "No full general-government closure or fiscal-to-GDP feedback",
+    "Official statistics check limited to mean and aggregates; no micro calibration"
+  ],
+  "artifacts": [
+    {
+      "path": "Isolated_Diagnostic_Input.json",
+      "size": 40058,
+      "sha256": "5ebcd765e04f0b08b4a0e07f7e843426902e0ce07642c9295c6a9eedc0fa7996"
+    },
+    {
+      "path": "N3_Annual_Tax_Bridge_2026_2055.csv",
+      "size": 23206,
+      "sha256": "22c476ad68cdffe896dc0d245fe9865e0f3fb327e3154cf790c3f419dea31d18"
+    },
+    {
+      "path": "N3_Annual_Tax_Household_Bridge_2026_2055.csv",
+      "size": 15207,
+      "sha256": "91b644f896d1d0c592b12a3c88a54b6e343a6314d0a44419702c941a15da5f32"
+    },
+    {
+      "path": "N3_Conditional_Fiscal_Primary_Bridge.csv",
+      "size": 5730,
+      "sha256": "cf932ddda081614869e02b3db018e319ee92abd28eaa87beaef9cb8b1e8080ca"
+    },
+    {
+      "path": "N3_Diagnostic_Issue_Classification.csv",
+      "size": 2110,
+      "sha256": "122558d0f4db472a6bd9d7bfb65c6427358d3cde1ba1538fe2d14e0df9d2c395"
+    },
+    {
+      "path": "N3_Fiscal_Realization_Sensitivity.csv",
+      "size": 22456,
+      "sha256": "b8c8ec20d04006d06d91718787939a4c6e422ebdc1ebdb7b8593c9f1c792bd67"
+    },
+    {
+      "path": "N3_GDP_Gap_Decomposition_2026_2055.csv",
+      "size": 17894,
+      "sha256": "9764ab8af72a3632e56c746cf8e42bbced97ac00d8acb8881e3d01a293e102e0"
+    },
+    {
+      "path": "N3_Household_Counterpart_Ledger.csv",
+      "size": 45443,
+      "sha256": "78b293bc1a5dbc719a9937ae3ddd41b6ad5da20417b38a56a2d258780f544506"
+    },
+    {
+      "path": "N3_Investment_Source_Decomposition.csv",
+      "size": 15467,
+      "sha256": "c1a48cfcaee6b479467122e48ef906792671b2897ac085a0d19e078d7d7fe981"
+    },
+    {
+      "path": "N3_KPI_Threshold_Band.csv",
+      "size": 1542,
+      "sha256": "412c48eb2e66c918eec21762ccfb0f5dcf4b41228b2248c37cbeae39e03ee13c"
+    },
+    {
+      "path": "N3_Pension_Four_Mode_Bridge.csv",
+      "size": 16377,
+      "sha256": "fe5be2356c7d890862faa19904c15114b2ce5ad14b2fe02fe52bc35bd8c752d4"
+    },
+    {
+      "path": "N3_Policy_Burden_Diagnosis_Reproduce.py",
+      "size": 55522,
+      "sha256": "e3ce22ed630365ff745973c979b21ac6092699cc7d0ade96a14b45e1dbefbc49"
+    },
+    {
+      "path": "N3_Policy_Burden_Sensitivity.csv",
+      "size": 633243,
+      "sha256": "686db910fd1a2baa54f55e8009a91f770f450365f25fe02e7d0a3c7c823a391e"
+    },
+    {
+      "path": "N3_Tax_Base_Cell_Reconstruction.csv",
+      "size": 307742,
+      "sha256": "c91956e3f2198d07d2c954847b8e8e4b371d35e3e3d5890e0bbe8c2e7c316645"
+    },
+    {
+      "path": "N3_Unchanged_Execution_Trace.json",
+      "size": 5795176,
+      "sha256": "0ecbfab6db206e6cf77e2f1bfd6b3c2f07969a576727fdc7eebd1cebec4e94b5"
+    },
+    {
+      "path": "N3_Unconnected_Health_Labor_Diagnostic.csv",
+      "size": 3243,
+      "sha256": "25e2894b74247f47311fd629f731174748ce6df7abe8c9a8d8ef4861272bc027"
+    },
+    {
+      "path": "N3_VAT_Negative_Investment_Sources.csv",
+      "size": 19373,
+      "sha256": "b85c926fbccb6571952da6a36b6b7d6a697dd5e80bf4f5a93439e2afca1513dd"
+    },
+    {
+      "path": "Official_Statistics_Limited_Check.json",
+      "size": 1512,
+      "sha256": "4471ca02a15e80a7e35c1b990a6c5e953e9274e39a20ca2e64e2d859990b2c4d"
+    },
+    {
+      "path": "Reused_Claude_Fiscal_Summary.json",
+      "size": 3866,
+      "sha256": "a294976c6c9e467fe5e7f78aab2565fa50c7af5181af34c26bd581b1c9441474"
+    },
+    {
+      "path": "Reused_Claude_Macro_Summary.json",
+      "size": 4204,
+      "sha256": "b22174ed943cb3c48ae543f598b709bc8db74f487c94ddcff5cbf7dcea642548"
+    },
+    {
+      "path": "SPE_N3_Policy_Burden_Diagnosis_Report_DRAFT_20261122.md",
+      "size": 18822,
+      "sha256": "b54cd6f5ff0dc31fdb43db997274371e3aa23ab84f93dc6e97d4ab1b16cb2efa"
+    },
+    {
+      "path": "Source_Receipts.json",
+      "size": 6975,
+      "sha256": "81cd090691654407f239a24f2624eef9608c48397b9b726abd17599a10498175"
+    },
+    {
+      "path": "Execution.log",
+      "size": 240,
+      "sha256": "d8e3a6d0c486758335d771966356035a067931232e2700d6e88dfb01174b024e"
+    }
+  ],
+  "reexecution_check": {
+    "status": "PASS",
+    "cases": 8,
+    "years": 30,
+    "CSV_files_byte_equal": [
+      "N3_Conditional_Fiscal_Primary_Bridge.csv",
+      "N3_Pension_Four_Mode_Bridge.csv",
+      "N3_Fiscal_Realization_Sensitivity.csv",
+      "N3_Annual_Tax_Bridge_2026_2055.csv",
+      "N3_Policy_Burden_Sensitivity.csv",
+      "N3_Unconnected_Health_Labor_Diagnostic.csv",
+      "N3_KPI_Threshold_Band.csv",
+      "N3_Household_Counterpart_Ledger.csv",
+      "N3_Annual_Tax_Household_Bridge_2026_2055.csv",
+      "N3_VAT_Negative_Investment_Sources.csv",
+      "N3_GDP_Gap_Decomposition_2026_2055.csv",
+      "N3_Diagnostic_Issue_Classification.csv",
+      "N3_Investment_Source_Decomposition.csv",
+      "N3_Tax_Base_Cell_Reconstruction.csv"
+    ],
+    "trace_byte_equal": true,
+    "report_byte_equal": true,
+    "scope": "second unchanged fixed-model execution and diagnostic reconstruction; not a new AI review"
+  }
+}

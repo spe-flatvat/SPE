@@ -1,0 +1,170 @@
+[
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Inputs.json",
+    "size": 39819,
+    "sha256": "d036bc65580805f9f4080b354412fc3d6ab3bc4deeb9ae8409f6ab24e625635e",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Model.py",
+    "size": 3903,
+    "sha256": "df0d7912f22f6aad4c266d7d256263d792214d1c7ac13122b1906dc3a4c2c4d5",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Components.py",
+    "size": 5528,
+    "sha256": "ec5640f9512486274122e32aacd7ca548273b23b94035710fd56949b8ea37588",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Macro_Adapter.py",
+    "size": 2117,
+    "sha256": "189d43082853db0b007462ce3110991641065df1905c23329ee17f2b5e6cbd72",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Resolved_Macro_Source.py.txt",
+    "size": 65453,
+    "sha256": "d7e71f75c3c19d4ea283308b40af5894e62e24db696f4ca8ce40a4bf609f395d",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/results/Annual_DOMESTIC_TRANSFER.csv",
+    "size": 2099159,
+    "sha256": "26517daddcaf66ebaffd1ae54382d87321e8cf2dacc435344d6415c7dc7f1a6a",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/results/Annual_LEGACY.csv",
+    "size": 2054881,
+    "sha256": "07ff40816bdaf0913ed2f0eb6fbf63f1dd0b27dcd3d8777b4b64101c696a8910",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/results/Annual_FOREIGN_INCOME.csv",
+    "size": 2089798,
+    "sha256": "f73b672d0769579853b98e8906744333d73a6234e8cc67b8958fbcd459675c71",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/results/Annual_ADDITIONAL_VA.csv",
+    "size": 2085177,
+    "sha256": "9c0829163931530edfa5810d2e40cd53c7b1d9b47461a86ad5f3c96a397cd503",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/results/DOMESTIC_TRANSFER_N3_Policy_Accounts.csv",
+    "size": 366470,
+    "sha256": "67c54f41d45f53633e7fa07a0ccc386cd47f03bc61aacaa3408b83ccb06c0a19",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/results/DOMESTIC_TRANSFER_N3_Pension_Accounts.csv",
+    "size": 207009,
+    "sha256": "f7f8cf30eb6a8f6468943bc5d890fe0429ba326f1fa55337787b065d9ccf4a98",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/results/Conditional_National_Local_Fiscal.csv",
+    "size": 9458004,
+    "sha256": "db7c24ba77bc36c313612dcaf1c7882bace91cb15917020989af906053a1e7db",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/results/Verification.json",
+    "size": 8929,
+    "sha256": "5ce42640e739420c8add44bc77ec1124fcb66cab6311881059a16d4b8f11540b",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "policies/New3linesPolicies.md",
+    "size": 7039,
+    "sha256": "2f5806addb870863961d9b6a6722d9c1e38bc2b097e1a6cd0e07b39f56b77830",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_Components.py",
+    "size": 12416,
+    "sha256": "3da949845436180fb2038e109afe9d01c66c5c9ca064dad548326777ea4a9519",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Gap_Components.py",
+    "size": 9411,
+    "sha256": "a0f0b4fe7f7ced6a8a9546e7b68a458ad8c6aaf888a7e57412a746a2090760dd",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/f-household-social-20261120/Inputs.json",
+    "size": 1746742,
+    "sha256": "8a7df2e6b7228177b28346386437b3b7dc6a5f1b8547507a114daf1fc5472766",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/chatgpt-national-fiscal-closure-20261121/National_Fiscal.py",
+    "size": 12677,
+    "sha256": "cf92a903f028c31ea8e8c62fb5d9cd906d7075d77420513af6b1ff8527237b9b",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/f-common-endoflife-finalization-20261121/Model.py",
+    "size": 15152,
+    "sha256": "e45b234545e17cfc486a488a4c06f68e49b03234d2847142ded3ce6c2998d4fd",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/f-vat-core-20261120/Model.py",
+    "size": 27668,
+    "sha256": "8c55442439d20b750ba6576ce8efa8a98e3f37b92df070a6a99dc498cd173837",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "ba08c45d4ecb99defecb8416c8d63e0cbfde8cb4",
+    "path": "handoff/claude-n3-f-parity-verification-20261122/N3_F_Parity_Independent_Summary_DRAFT_20261122.json",
+    "size": 4204,
+    "sha256": "b22174ed943cb3c48ae543f598b709bc8db74f487c94ddcff5cbf7dcea642548",
+    "local_matches_fixed": false
+  },
+  {
+    "commit": "ba08c45d4ecb99defecb8416c8d63e0cbfde8cb4",
+    "path": "handoff/claude-n3-f-parity-verification-20261122/N3_F_Parity_Fiscal_Summary_DRAFT_20261122.json",
+    "size": 3866,
+    "sha256": "a294976c6c9e467fe5e7f78aab2565fa50c7af5181af34c26bd581b1c9441474",
+    "local_matches_fixed": false
+  },
+  {
+    "commit": "004bcb217c81879c2b13e2c11fab85376a1a8893",
+    "path": "handoff/claude-n3-f-statusquo-report-20261122/SPE_N3_F_StatusQuo_Comparison_Report_DRAFT_20261122.md",
+    "size": 10285,
+    "sha256": "9acd39bacf90e63387dd912bfa57cc92415b9559a44465ff7a722c29206d2137",
+    "local_matches_fixed": false
+  },
+  {
+    "commit": "4453f5300e1a6e2320b45c30d4e3767ed9e8b74e",
+    "path": "handoff/chatgpt-sq-growth-diagnosis-20261122/SQ_Growth_Contribution_Summary.csv",
+    "size": 3200,
+    "sha256": "8d307d35e7ddb84c535497d9bb04e777e0e150635b9d318bf836d8099df529df",
+    "local_matches_fixed": true
+  }
+]

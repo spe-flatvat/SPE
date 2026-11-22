@@ -1,0 +1,13 @@
+id,classification,priority,evidence,numerical_value
+TAX_GROSS_BASE,UNCALIBRATED_ASSUMPTION,HIGH,30% of synthetic gross labor/business income vs allocated observed effective old tax ~5%; household/source joint distribution not microdata,78.14289175968858
+TAX_POPULATION,UNCALIBRATED_ASSUMPTION,HIGH,"population/2.22, 2024 cell distribution, 1.04 initial uplift and common inflation reused through2055",
+MACRO_TAX_COVERAGE,STRUCTURAL_LIMITATION,HIGH,80trn macro tax proxy plus statutory deltas not a fully calibrated national tax system; 30% cap applies before direct deltas,24.51445791286767
+VAT_NEGATIVE_I_EXPLANATION,EXPLANATION_MISMATCH,HIGH,Prior Claude employer-cost explanation not supported in main case: admin/employer=0; VAT regular/sector costs generate remainder,-1.8707690427222294
+HEALTH_LABOR,IMPLEMENTATION_MISMATCH,MEDIUM,"Computed health labor is not added in N3 trajectory; F adapter does connect health labor. Diagnose only, do not repair",-0.02123707146563447
+RETURN_OWNERSHIP,UNDECIDED_POLICY_INTERPRETATION,HIGH,four unadopted source allocations; dynamic wage basis makes assets mode dependent,0.37095516599998746
+KPI_THRESHOLD,UNDECIDED_POLICY_INTERPRETATION,HIGH,0% threshold not specified; income proxy not observed median; freeze vs pace-relaxation alternatives,0.175153984606
+FINANCIAL_BASE,NOT_IDENTIFIED,HIGH,Synthetic financial-income allocation cannot be treated as actual full financial tax base,
+FISCAL_RECYCLE,STRUCTURAL_LIMITATION,HIGH,Additional receipts retire conditional debt/save; no automatic household recycling or fiscal-to-GDP loop,
+HOUSEHOLD_CASH_LABEL,STRUCTURAL_LIMITATION,MEDIUM,"HH cash contains 70% in-kind expense substitution, and -153.8 excludes VAT/lagged feedback; DI comparison uses other definition",-9.634863010918593
+MEDICAL_CAP_TIMING,UNDECIDED_POLICY_INTERPRETATION,MEDIUM,"N3 base50 copay/cap-same and protected pension cohorts are candidates, not complete original policy adoption",
+GDP_ARITHMETIC,ARITHMETIC_CHECK_PASS,INFO,Exact annual tax/cash/C/I/K/GDP identities checked; no arithmetic error found in these tested paths,1.2079226507921703e-13

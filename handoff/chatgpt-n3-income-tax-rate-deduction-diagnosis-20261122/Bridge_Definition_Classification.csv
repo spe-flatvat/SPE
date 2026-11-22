@@ -1,0 +1,8 @@
+component,status,meaning
+old_delta,REPRODUCED,old0.30*gross minus allocated survey national tax
+new_D_minus_A_policy,CONDITIONAL_IDENTIFIED,"statutory 2x2 for imposed personal/household profile, common supplement scope"
+A_minus_old_allocated,NOT_IDENTIFIED_CAUSAL_SPLIT,"joint effect of method, deduction data, household-to-individual split, other income, taxpayer coverage; not all calibration error"
+gross_vs_income_definition,CONDITIONAL_IDENTIFIED,salary/blue income calculation preserved under PERSONAL_ONLY versus old gross taxable basis
+supplement_scope,IDENTIFIED_SCOPE_DIFFERENCE_UNDECIDED_POLICY,old N3 30% vs ordinary30% plus current2.1% surcharge; N3 treatment not adopted
+taxable_rounding,IDENTIFIED,per-person taxable floor1000 yen vs continuous SPE bases
+method/deductions/earner shares/time,NOT_IDENTIFIED_SEPARATELY,no observed joint taxpayer data; no fabricated causal allocation of baseline gap

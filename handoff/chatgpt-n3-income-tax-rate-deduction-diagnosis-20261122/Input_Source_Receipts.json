@@ -1,0 +1,90 @@
+[
+  {
+    "commit": "b552d93d325c3d128b9d8c472b087feda6efe721",
+    "path": "handoff/chatgpt-n3-policy-burden-diagnosis-20261122/N3_Annual_Tax_Bridge_2026_2055.csv",
+    "size": 23206,
+    "sha256": "22c476ad68cdffe896dc0d245fe9865e0f3fb327e3154cf790c3f419dea31d18",
+    "local_matches_fixed": true,
+    "route": "git show fixedcommit:path"
+  },
+  {
+    "commit": "b552d93d325c3d128b9d8c472b087feda6efe721",
+    "path": "handoff/chatgpt-n3-policy-burden-diagnosis-20261122/N3_Tax_Base_Cell_Reconstruction.csv",
+    "size": 307742,
+    "sha256": "c91956e3f2198d07d2c954847b8e8e4b371d35e3e3d5890e0bbe8c2e7c316645",
+    "local_matches_fixed": true,
+    "route": "git show fixedcommit:path"
+  },
+  {
+    "commit": "b552d93d325c3d128b9d8c472b087feda6efe721",
+    "path": "handoff/chatgpt-n3-policy-burden-diagnosis-20261122/N3_Unchanged_Execution_Trace.json",
+    "size": 5795176,
+    "sha256": "0ecbfab6db206e6cf77e2f1bfd6b3c2f07969a576727fdc7eebd1cebec4e94b5",
+    "local_matches_fixed": true,
+    "route": "git show fixedcommit:path"
+  },
+  {
+    "commit": "b552d93d325c3d128b9d8c472b087feda6efe721",
+    "path": "handoff/chatgpt-n3-policy-burden-diagnosis-20261122/N3_Policy_Burden_Diagnosis_Verification.json",
+    "size": 181042,
+    "sha256": "0887f592c4ecc5f9e6fc419edacde02f5772b9f12b595834579dab013a81cace",
+    "local_matches_fixed": true,
+    "route": "git show fixedcommit:path"
+  },
+  {
+    "commit": "b552d93d325c3d128b9d8c472b087feda6efe721",
+    "path": "handoff/chatgpt-n3-policy-burden-diagnosis-20261122/SPE_N3_Policy_Burden_Diagnosis_Report_DRAFT_20261122.md",
+    "size": 18822,
+    "sha256": "b54cd6f5ff0dc31fdb43db997274371e3aa23ab84f93dc6e97d4ab1b16cb2efa",
+    "local_matches_fixed": true,
+    "route": "git show fixedcommit:path"
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "policies/New3linesPolicies.md",
+    "size": 7039,
+    "sha256": "2f5806addb870863961d9b6a6722d9c1e38bc2b097e1a6cd0e07b39f56b77830",
+    "local_matches_fixed": true,
+    "route": "git show fixedcommit:path"
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Inputs.json",
+    "size": 39819,
+    "sha256": "d036bc65580805f9f4080b354412fc3d6ab3bc4deeb9ae8409f6ab24e625635e",
+    "local_matches_fixed": true,
+    "route": "git show fixedcommit:path"
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Components.py",
+    "size": 5528,
+    "sha256": "ec5640f9512486274122e32aacd7ca548273b23b94035710fd56949b8ea37588",
+    "local_matches_fixed": true,
+    "route": "git show fixedcommit:path"
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Resolved_Macro_Source.py.txt",
+    "size": 65453,
+    "sha256": "d7e71f75c3c19d4ea283308b40af5894e62e24db696f4ca8ce40a4bf609f395d",
+    "local_matches_fixed": true,
+    "route": "git show fixedcommit:path"
+  },
+  {
+    "commit": "ba08c45d4ecb99defecb8416c8d63e0cbfde8cb4",
+    "path": "handoff/claude-n3-f-parity-verification-20261122/N3_F_Parity_Independent_Summary_DRAFT_20261122.json",
+    "size": 4204,
+    "sha256": "b22174ed943cb3c48ae543f598b709bc8db74f487c94ddcff5cbf7dcea642548",
+    "local_matches_fixed": null,
+    "route": "git show fixedcommit:path"
+  },
+  {
+    "commit": "4453f5300e1a6e2320b45c30d4e3767ed9e8b74e",
+    "path": "handoff/chatgpt-sq-growth-diagnosis-20261122/SQ_Growth_Contribution_Summary.csv",
+    "size": 3200,
+    "sha256": "8d307d35e7ddb84c535497d9bb04e777e0e150635b9d318bf836d8099df529df",
+    "local_matches_fixed": true,
+    "route": "git show fixedcommit:path"
+  }
+]

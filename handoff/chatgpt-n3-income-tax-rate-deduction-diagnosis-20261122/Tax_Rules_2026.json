@@ -1,0 +1,23 @@
+{
+  "status": "DIAGNOSTIC_2026_ANNUAL_NATIONAL_TAX_RULES_NOT_POLICY_ADOPTION",
+  "reference_date_jst": "2026-11-22",
+  "annual_rules_effective": "2026-12-01; enacted rules applying to 2026 annual income; monthly withholding through November unchanged",
+  "progressive_brackets_yen": [[1950000,0.05,0],[3300000,0.10,97500],[6950000,0.20,427500],[9000000,0.23,636000],[18000000,0.33,1536000],[40000000,0.40,2796000],[null,0.45,4796000]],
+  "basic_deduction_by_total_income": [[4890000,1040000],[6550000,670000],[23500000,620000],[24000000,480000],[24500000,320000],[25000000,160000],[null,0]],
+  "reconstruction_surtax_rate_2026": 0.021,
+  "future_rule_basis": "2026 law nominally frozen for the 2026-2055 diagnostic; not a forecast of enacted sunset or future CPI tax reforms",
+  "national_only": true,
+  "resident_tax_computed": false,
+  "N3_30_including_or_excluding_surtax": "UNDECIDED; common-scope 2x2 retains surcharge for A/B/C/D; ordinary-only columns bridge to SPE's 30% gross amount",
+  "deduction_boundaries": {
+    "PERSONAL_ONLY_KEEP_CREDITS": "Remove income deductions; preserve salary income deduction/income adjustment or blue-return income calculation; preserve tax credit",
+    "PERSONAL_ONLY_DROP_CREDITS": "Same, and remove tax credits",
+    "INCLUDING_EARNED_INCOME_KEEP_CREDITS": "Also remove salary income deduction, income adjustment, blue-return special deduction; preserve actual business expenses and tax credits",
+    "INCLUDING_EARNED_INCOME_DROP_CREDITS": "Same, and remove tax credits; income tax 30% plus common surcharge is a diagnostic not adopted N3 all-in rate"
+  },
+  "profiles_aggregate": ["SALARY_SINGLE_SI0","SALARY_SINGLE_SI15","SALARY_SPOUSE_COLLEGE_SI15","SALARY_DUAL_EQUAL_SI15","BUSINESS_SINGLE_BLUE65_SI15","BUSINESS_SINGLE_NO_BLUE_SI15"],
+  "profile_assumptions": "All households are set to each profile in turn; not an observed joint distribution or national tax estimate. Social insurance 15% is supplied deductible-payment sensitivity, not statutory universal contribution rate. Other income=0. Credit100k is a representative conditional stress only.",
+  "rounding": "salary table as 2026 NTA annual table; taxable income floor1000yen; surcharge floor1yen; liability before withholding settlement, optional annual floor100yen column",
+  "business_expenses": "Never abolished. Business input=profit after actual necessary expenses, before blue special deduction.",
+  "omitted_or_zero_by_condition": ["other income deductions not applicable or supplied zero","spouse special deduction when spouse has income","special relative deduction when relative has income","capital-gains high-income minimum tax above330million yen (outside tested range)","residence tax and business tax","foreign-tax-credit special order","employer social premium"]
+}

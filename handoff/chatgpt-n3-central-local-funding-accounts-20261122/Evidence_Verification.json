@@ -1,0 +1,9 @@
+{
+  "source_byte_hashes_checked": 17,
+  "official_fund_plan_rows": 10,
+  "official_plan_source_use_checks": 20,
+  "local_fund_total_and_scope_verified": true,
+  "transfer_cancellation_symbolic_checks": 2,
+  "sector_N3_cash_closure": false,
+  "source_receipts_sha256": "8a29f8e316a37bd53596f1d91bdaa49a18e4bffe69e4dc7d2aaf8306dc41655d"
+}

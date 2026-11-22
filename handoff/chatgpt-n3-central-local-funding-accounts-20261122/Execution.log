@@ -1,0 +1,5 @@
+From https://github.com/spe-flatvat/SPE
+ * branch            3c77eafc2073fdaba4c129164817d2f57c9421b9 -> FETCH_HEAD
+{"status": "PASS_LIMITED_ARITHMETIC_ONLY", "new_cases": 9, "new_annual_rows": 270, "reused_cases": 7, "reused_annual_rows": 210, "checks": 6972, "failures": [], "failed": 0, "prior_PASS_reused": [30925, 25478, 35281], "sector_cash_identity": "NOT_TESTABLE_UNKNOWN_INPUTS", "sector_official_stock_residual_identity": "TESTED_2026_2040", "integrated_cash_and_debt_identity": "TESTED", "actual_2030_usable_cash": "unknown", "actual_SFA_cash_need": "unknown", "actual_2030_funding_gap": "unknown", "real_world_all_years_SQ": "NOT_ESTABLISHED", "general_government_closed": false, "calibration_robustness": false, "original_policy_and_engine_modified": false, "policy_adopted": false}
+
+Evidence_Accounts_Build.py: source hashes checked; official future funding-plan arithmetic 20 checks; symbolic transfer cancellation 2 checks. Sector N3 cash identities remain NOT_TESTABLE.

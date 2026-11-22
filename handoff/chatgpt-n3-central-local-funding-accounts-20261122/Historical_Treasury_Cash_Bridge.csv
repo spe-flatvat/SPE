@@ -1,0 +1,2 @@
+sector,period,cash_begin_trn,private_cash_net_receipt_trn,BOJ_cash_net_receipt_trn,cash_end_trn,source_id,source_url,unit,status,bridge_to_SNA_central
+CENTRAL_TREASURY,2026Q1_calendar_FY2025Q4,5.1342,27.0527,-30.0294,2.1575,MOF_DEPOSITS_2025Q4,https://www.mof.go.jp/policy/exchequer/reference/exchequer_report/fy2025_4th_quarter/index.html,TRILLION_YEN,OFFICIAL_OBSERVED_ROUNDED_DIFFERENT_BOUNDARY_FROM_SNA,unknown

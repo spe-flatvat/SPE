@@ -1,0 +1,149 @@
+[
+  {
+    "commit": "ccadca9f5435be5db4cbda1c9f5170c13ee0bf0b",
+    "path": "handoff/chatgpt-n3-sfa-cash-reconciliation-20261122/Artifact_SHA256.json",
+    "size": 3482,
+    "sha256": "f06a43fe49d3a0c7e48bda4a7d83f6a42d1d78f63ef9b985fe3aeef187188dcb",
+    "match": true
+  },
+  {
+    "commit": "ccadca9f5435be5db4cbda1c9f5170c13ee0bf0b",
+    "path": "handoff/chatgpt-n3-sfa-cash-reconciliation-20261122/Boundary_Monotonicity_Probes.csv",
+    "size": 1399,
+    "sha256": "6b0248ed0c94ec9f4310b16dc27f89543430322815ccd154ea132ac8bea37825",
+    "match": true
+  },
+  {
+    "commit": "ccadca9f5435be5db4cbda1c9f5170c13ee0bf0b",
+    "path": "handoff/chatgpt-n3-sfa-cash-reconciliation-20261122/Detail_2029_2032.csv",
+    "size": 117703,
+    "sha256": "e312cec64192609363a82183bc44ee5fa45e2e1349984444cb6e6a6498851922",
+    "match": true
+  },
+  {
+    "commit": "ccadca9f5435be5db4cbda1c9f5170c13ee0bf0b",
+    "path": "handoff/chatgpt-n3-sfa-cash-reconciliation-20261122/Execution.log",
+    "size": 596,
+    "sha256": "96669e004778dc9b38ee56e503da2bd531444268eba9702c37c5ce3e24edd422",
+    "match": true
+  },
+  {
+    "commit": "ccadca9f5435be5db4cbda1c9f5170c13ee0bf0b",
+    "path": "handoff/chatgpt-n3-sfa-cash-reconciliation-20261122/Extract_Historical_Stocks.py",
+    "size": 1259,
+    "sha256": "2c9cf39dad8929dc6f290de407a0285fdd7b3d9e4aed8b6a29e4010b21a561dc",
+    "match": true
+  },
+  {
+    "commit": "ccadca9f5435be5db4cbda1c9f5170c13ee0bf0b",
+    "path": "handoff/chatgpt-n3-sfa-cash-reconciliation-20261122/Historical_Currency_Deposits_2024.csv",
+    "size": 945,
+    "sha256": "31c605f45b5a708d6cde57eeae094c0e4e87f948150eee91dd7b5b7e3308147c",
+    "match": true
+  },
+  {
+    "commit": "ccadca9f5435be5db4cbda1c9f5170c13ee0bf0b",
+    "path": "handoff/chatgpt-n3-sfa-cash-reconciliation-20261122/Input_Source_Receipts.json",
+    "size": 7394,
+    "sha256": "43e140dbf9001a8b3e51a8b2050f6b30e475d97e706f6fa2cbdaabe041bc17dc",
+    "match": true
+  },
+  {
+    "commit": "ccadca9f5435be5db4cbda1c9f5170c13ee0bf0b",
+    "path": "handoff/chatgpt-n3-sfa-cash-reconciliation-20261122/N3_SFA_Case_Definitions.csv",
+    "size": 9266,
+    "sha256": "9801c438350612408b2620563251d35cba2809c3986335de81f68ef196ae1e5c",
+    "match": true
+  },
+  {
+    "commit": "ccadca9f5435be5db4cbda1c9f5170c13ee0bf0b",
+    "path": "handoff/chatgpt-n3-sfa-cash-reconciliation-20261122/N3_SFA_Case_Summary.csv",
+    "size": 11185,
+    "sha256": "ec515921953a35704c488aa44dd17182ed1763766289fe31050cb7a3d58dc8c0",
+    "match": true
+  },
+  {
+    "commit": "ccadca9f5435be5db4cbda1c9f5170c13ee0bf0b",
+    "path": "handoff/chatgpt-n3-sfa-cash-reconciliation-20261122/N3_SFA_Cash_Debt_Bridge_2026_2055.csv",
+    "size": 881591,
+    "sha256": "09d8162ce40fcb45ffc5e04263e3ba1e47003a320bf1019b7da57bb31d19f34a",
+    "match": true
+  },
+  {
+    "commit": "ccadca9f5435be5db4cbda1c9f5170c13ee0bf0b",
+    "path": "handoff/chatgpt-n3-sfa-cash-reconciliation-20261122/N3_SFA_Cash_Sensitivity_Boundaries.csv",
+    "size": 771,
+    "sha256": "64a414199540ed91ba086df2fb9a5375293beb7e517b7a35a0a77ff30065239a",
+    "match": true
+  },
+  {
+    "commit": "ccadca9f5435be5db4cbda1c9f5170c13ee0bf0b",
+    "path": "handoff/chatgpt-n3-sfa-cash-reconciliation-20261122/N3_SFA_Classification_and_Evidence.csv",
+    "size": 74168,
+    "sha256": "1e39c203d4be688f5b37a6a6ae160eaa20eb37d6c0d351a30cbff4c5ce0bfce4",
+    "match": true
+  },
+  {
+    "commit": "ccadca9f5435be5db4cbda1c9f5170c13ee0bf0b",
+    "path": "handoff/chatgpt-n3-sfa-cash-reconciliation-20261122/N3_SFA_GDP_Annual_Comparison_2026_2055.csv",
+    "size": 663822,
+    "sha256": "9241d821f4a37a8ac5ef101d28728ead80881d4a6984ed3be91d853c844f3edb",
+    "match": true
+  },
+  {
+    "commit": "ccadca9f5435be5db4cbda1c9f5170c13ee0bf0b",
+    "path": "handoff/chatgpt-n3-sfa-cash-reconciliation-20261122/N3_SFA_Reproduce.py",
+    "size": 29578,
+    "sha256": "78849adc0db82ae5b925d547ccd9b828c2508705f3fc448203b78cdaf3ad8918",
+    "match": true
+  },
+  {
+    "commit": "ccadca9f5435be5db4cbda1c9f5170c13ee0bf0b",
+    "path": "handoff/chatgpt-n3-sfa-cash-reconciliation-20261122/N3_SFA_Verification.json",
+    "size": 670,
+    "sha256": "2d20013c456c5a0621ebf9c2f35f25cd3c93753360a2e276edfa96b6c0cfba65",
+    "match": true
+  },
+  {
+    "commit": "ccadca9f5435be5db4cbda1c9f5170c13ee0bf0b",
+    "path": "handoff/chatgpt-n3-sfa-cash-reconciliation-20261122/Official_SFA_Reconstruction_2026_2040.csv",
+    "size": 2563,
+    "sha256": "262891ff197dac19ffe80b0d6bda3799394a1a99a8b17ee6ae1a257398d143f3",
+    "match": true
+  },
+  {
+    "commit": "ccadca9f5435be5db4cbda1c9f5170c13ee0bf0b",
+    "path": "handoff/chatgpt-n3-sfa-cash-reconciliation-20261122/Public_Source_Receipts.json",
+    "size": 1874,
+    "sha256": "21dc0054f3401245684999e85f2cab9587e126ab288bf2c3866fbb4122a45330",
+    "match": true
+  },
+  {
+    "commit": "ccadca9f5435be5db4cbda1c9f5170c13ee0bf0b",
+    "path": "handoff/chatgpt-n3-sfa-cash-reconciliation-20261122/Public_Source_References.md",
+    "size": 4336,
+    "sha256": "93f5c4eb3b55eafef74c041bf795bc4f5f59df68637ffe84c1eb3857de104384",
+    "match": true
+  },
+  {
+    "commit": "ccadca9f5435be5db4cbda1c9f5170c13ee0bf0b",
+    "path": "handoff/chatgpt-n3-sfa-cash-reconciliation-20261122/Resolved_SFA_Simulate.py.txt",
+    "size": 15812,
+    "sha256": "779d374b15be61c84b6c2d2e8540ef9750e86c32f45181d53b9d32dfb424a598",
+    "match": true
+  },
+  {
+    "commit": "ccadca9f5435be5db4cbda1c9f5170c13ee0bf0b",
+    "path": "handoff/chatgpt-n3-sfa-cash-reconciliation-20261122/Resolved_Transition_Simulate.py.txt",
+    "size": 14741,
+    "sha256": "1dc9f97418f3fb14f678897d57fe5580606c603d1d15d90531e2daa677760923",
+    "match": true
+  },
+  {
+    "commit": "ccadca9f5435be5db4cbda1c9f5170c13ee0bf0b",
+    "path": "handoff/chatgpt-n3-sfa-cash-reconciliation-20261122/SPE_N3_SFA_Cash_Reconciliation_Report_DRAFT_20261122.md",
+    "size": 11337,
+    "sha256": "a6698e0b48697ace3ddb4d4170106aefa910215df28e6d64032fc2cb0581689d",
+    "match": true
+  }
+]

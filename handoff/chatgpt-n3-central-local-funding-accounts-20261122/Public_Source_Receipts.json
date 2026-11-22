@@ -1,0 +1,172 @@
+[
+  {
+    "id": "LOCAL_WHITEPAPER",
+    "url": "https://www.soumu.go.jp/menu_seisaku/hakusyo/chihou/r08data/2026data/r08czb01-02.html",
+    "retrieved_date": "2026-11-23",
+    "size": 36445,
+    "sha256": "80ed6fc5d5afd0256d7d716a754307efb99229fb911d887e284af8b44167a193",
+    "scratch_path": "/tmp/n3-official/LOCAL_WHITEPAPER.html",
+    "status": "BYTES_RETRIEVED",
+    "not_certification_of_future_cash": true
+  },
+  {
+    "id": "LOCAL_FUNDS_TABLE",
+    "url": "https://www.soumu.go.jp/menu_seisaku/hakusyo/chihou/r08data/2026data/csv/h-014.csv",
+    "retrieved_date": "2026-11-23",
+    "size": 764,
+    "sha256": "28e46eabce6c397dac8fcd27a81adb1efca1a719dbc6c9da389ddbd6e298ae7a",
+    "scratch_path": "/tmp/n3-official/LOCAL_FUNDS_TABLE.csv",
+    "status": "BYTES_RETRIEVED",
+    "not_certification_of_future_cash": true
+  },
+  {
+    "id": "LOCAL_DEBT_TABLE",
+    "url": "https://www.soumu.go.jp/menu_seisaku/hakusyo/chihou/r08data/2026data/csv/h-012.csv",
+    "retrieved_date": "2026-11-23",
+    "size": 323,
+    "sha256": "d4c149ae8a838f5dccf4d4424c307fca1bcda3fb67e1d8beef3573d1d481baa2",
+    "scratch_path": "/tmp/n3-official/LOCAL_DEBT_TABLE.csv",
+    "status": "BYTES_RETRIEVED",
+    "not_certification_of_future_cash": true
+  },
+  {
+    "id": "LOCAL_REVENUE_TABLE",
+    "url": "https://www.soumu.go.jp/menu_seisaku/hakusyo/chihou/r08data/2026data/csv/h-005.csv",
+    "retrieved_date": "2026-11-23",
+    "size": 983,
+    "sha256": "5737766e816d2c231f73a9bd322899eab654ebb098b245b515a8daae9d4dd436",
+    "scratch_path": "/tmp/n3-official/LOCAL_REVENUE_TABLE.csv",
+    "status": "BYTES_RETRIEVED",
+    "not_certification_of_future_cash": true
+  },
+  {
+    "id": "MOF_ACCOUNT_ASSETS",
+    "url": "https://www.mof.go.jp/policy/budget/report/public_finance_fact_sheet/fy2024/20260130sagaku02.html",
+    "retrieved_date": "2026-11-23",
+    "size": 26034,
+    "sha256": "57b295b27498af3d96016c322b6e5da049caa2022dc4767f3ed4f4532caed6ec",
+    "scratch_path": "/tmp/n3-official/MOF_ACCOUNT_ASSETS.html",
+    "status": "BYTES_RETRIEVED",
+    "not_certification_of_future_cash": true
+  },
+  {
+    "id": "MOF_TREASURY",
+    "url": "https://www.mof.go.jp/policy/exchequer/summary/index.htm",
+    "retrieved_date": "2026-11-23",
+    "size": 49044,
+    "sha256": "1198d5fd99b207ffa017ad88ddb897dd4f23ae14357d8b596e69d20d4554d791",
+    "scratch_path": "/tmp/n3-official/MOF_TREASURY.html",
+    "status": "BYTES_RETRIEVED",
+    "not_certification_of_future_cash": true
+  },
+  {
+    "id": "MOF_CASH_MANAGEMENT",
+    "url": "https://www.mof.go.jp/policy/exchequer/exchequer_cash_management/index.htm",
+    "retrieved_date": "2026-11-23",
+    "size": 39922,
+    "sha256": "937ec53f0c0d5cfdde26667e7884adf248049d9636294587a968d9af5411df4d",
+    "scratch_path": "/tmp/n3-official/MOF_CASH_MANAGEMENT.html",
+    "status": "BYTES_RETRIEVED",
+    "not_certification_of_future_cash": true
+  },
+  {
+    "id": "DEBT_FUND_FY2024",
+    "url": "https://www.mof.go.jp/about_mof/mof_budget/special_account/kokusaiseiri/kokusaiseiri_zaimu2024.pdf",
+    "retrieved_date": "2026-11-23",
+    "size": 555217,
+    "sha256": "308b67e7c3a85b8671b31cc924a8de3034467172b1ca538bd0462309f6cf1174",
+    "scratch_path": "/tmp/n3-official/DEBT_FUND_FY2024.pdf",
+    "status": "BYTES_RETRIEVED",
+    "not_certification_of_future_cash": true
+  },
+  {
+    "id": "ISSUANCE_FY2026_REVISED",
+    "url": "https://www.mof.go.jp/jgbs/issuance_plan/fy2026/issuanceplan260603.pdf",
+    "retrieved_date": "2026-11-23",
+    "size": 128844,
+    "sha256": "5deb8624ce6d04490be3d0e18094402ac821530ff0ab3c8b4055ba635fc0a53b",
+    "scratch_path": "/tmp/n3-official/ISSUANCE_FY2026_REVISED.pdf",
+    "status": "BYTES_RETRIEVED",
+    "not_certification_of_future_cash": true
+  },
+  {
+    "id": "LOCAL_AUTONOMY_LAW",
+    "url": "https://laws.e-gov.go.jp/api/1/lawdata/322AC0000000067",
+    "retrieved_date": "2026-11-23",
+    "size": 2654252,
+    "sha256": "cf2c7268e9cecc717521d5dfd90800ddf23c4aebbed21dd4bbd136a1de050a61",
+    "scratch_path": "/tmp/n3-official/LOCAL_AUTONOMY_LAW.xml",
+    "status": "BYTES_RETRIEVED",
+    "not_certification_of_future_cash": true
+  },
+  {
+    "id": "LOCAL_FINANCE_LAW",
+    "url": "https://laws.e-gov.go.jp/api/1/lawdata/323AC0000000109",
+    "retrieved_date": "2026-11-23",
+    "size": 441546,
+    "sha256": "472fdf26c985b218d0b8d87c187ef5f91691425669add02995a04d01cfbca385",
+    "scratch_path": "/tmp/n3-official/LOCAL_FINANCE_LAW.xml",
+    "status": "BYTES_RETRIEVED",
+    "not_certification_of_future_cash": true
+  },
+  {
+    "id": "FINANCE_LAW",
+    "url": "https://laws.e-gov.go.jp/api/1/lawdata/322AC0000000034",
+    "retrieved_date": "2026-11-23",
+    "size": 103820,
+    "sha256": "d937421d173e2256a4912eb43f06a2874c385a5a0aa02454e99189a513081357",
+    "scratch_path": "/tmp/n3-official/FINANCE_LAW.xml",
+    "status": "BYTES_RETRIEVED",
+    "not_certification_of_future_cash": true
+  },
+  {
+    "id": "SPECIAL_ACCOUNTS_LAW",
+    "url": "https://laws.e-gov.go.jp/api/1/lawdata/419AC0000000023",
+    "retrieved_date": "2026-11-23",
+    "size": 1635826,
+    "sha256": "363db9119e777de7cd30e9e08ff13e55039ab898f417bf5d183d88a6845e096d",
+    "scratch_path": "/tmp/n3-official/SPECIAL_ACCOUNTS_LAW.xml",
+    "status": "BYTES_RETRIEVED",
+    "not_certification_of_future_cash": true
+  },
+  {
+    "id": "MOF_BALANCE_SHEET",
+    "url": "https://www.mof.go.jp/policy/budget/fiscal_condition/related_data/202610_05.pdf",
+    "retrieved_date": "2026-11-23",
+    "size": 1956603,
+    "sha256": "c67f4667af8d5f63acb9a1df35dc663f9d53c77ecfc89b53f3c18ad8f365f99a",
+    "scratch_path": "/tmp/n3-official/MOF_BALANCE_SHEET.pdf",
+    "status": "BYTES_RETRIEVED",
+    "not_certification_of_future_cash": true
+  },
+  {
+    "id": "MOF_FUND_FORECAST_2026",
+    "url": "https://www.mof.go.jp/policy/budget/topics/outlook/sy2026b.htm",
+    "retrieved_date": "2026-11-23",
+    "size": 27406,
+    "sha256": "cb07f313eb445d2765e66cc8732337765a1e5e86b644d92e2ba949b6db786244",
+    "scratch_path": "/tmp/n3-official/MOF_FUND_FORECAST_2026.html",
+    "status": "BYTES_RETRIEVED",
+    "not_certification_of_future_cash": true
+  },
+  {
+    "id": "MOF_DEPOSITS_2025Q4",
+    "url": "https://www.mof.go.jp/policy/exchequer/reference/exchequer_report/fy2025_4th_quarter/index.html",
+    "retrieved_date": "2026-11-23",
+    "size": 40021,
+    "sha256": "ef163189876ecf71e3ba8400c5f7297c62ae8a57c2726fe3442f63fda9103ce8",
+    "scratch_path": "/tmp/n3-official/MOF_DEPOSITS_2025Q4.html",
+    "status": "BYTES_RETRIEVED",
+    "not_certification_of_future_cash": true
+  },
+  {
+    "id": "MOF_FUND_PURPOSE",
+    "url": "https://www.mof.go.jp/about_mof/mof_budget/special_account/kokusaiseiri/kokusaiseiri.htm",
+    "retrieved_date": "2026-11-23",
+    "size": 23511,
+    "sha256": "bc1bf7dc9de185818ab78e6edcf4000b780ba44b029e26ff1464049a2f90a44e",
+    "scratch_path": "/tmp/n3-official/MOF_FUND_PURPOSE.html",
+    "status": "BYTES_RETRIEVED",
+    "not_certification_of_future_cash": true
+  }
+]

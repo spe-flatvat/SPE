@@ -1,0 +1,8 @@
+option,sector,confirmed_2030_amount_trn,legal_accounting_condition,limitation,certified_credit_lower_trn,conditional_upper_trn
+CENTRAL_NEW_BOND,central,unknown,年度予算・財政法/特例法の発行及び支出権限,新規発行候補。借換債を一般支出へ流用しない,0,unknown
+LOCAL_INVESTMENT_BOND,local,unknown,地方財政法5条対象・協議等・自治体予算,G購入全般に使えるわけではない,0,unknown
+REDUCE_NET_CASH_REDEMPTION,each_sector,unknown,純償還余力と法定繰入・満期元本支払を区別,モデルの償還候補は満期返済停止ではない,0,unknown
+LOCAL_FUND_DRAWDOWN,local,unknown,条例目的適合・既存償還予約・流動性・予算,国への無条件移用不可,0,unknown
+CENTRAL_TO_LOCAL_TRANSFER,central_and_local,unknown,財源と移転根拠・双方予算を確認,連結相殺、地方への交付だけで全体資源は増えない,0,unknown
+TEMPORARY_TREASURY_CASH,central,unknown,繰替限度・返還期限,一時資金繰りのみ。恒久財源として計上しない,0,unknown
+ASSET_SALE,asset_owner,unknown,所有・処分権限・非重複・年度流動性・連結,財投/基金/外為残高だけで売却額創作しない,0,unknown

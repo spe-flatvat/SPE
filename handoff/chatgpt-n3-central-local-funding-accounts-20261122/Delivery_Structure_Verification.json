@@ -1,0 +1,10 @@
+{
+  "annual_rows": 480,
+  "new_annual_rows": 270,
+  "reused_annual_rows": 210,
+  "sector_ledger_rows": 540,
+  "unique_cases_years": true,
+  "unknown_cash_retained": true,
+  "only_authorized_new_path": true,
+  "checks": "PASS_STRUCTURE_NOT_REAL_WORLD_FEASIBILITY"
+}

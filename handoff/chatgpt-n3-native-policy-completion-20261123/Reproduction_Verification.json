@@ -1,0 +1,107 @@
+{
+  "status": "PASS",
+  "matched_files": [
+    {
+      "file": "Completion_Inputs_And_Case_Definitions.json",
+      "size_bytes": 3752,
+      "sha256": "6c825d0e7eac30b09ed53e4cbfdf5bd8ddb848af90dede9f37615de04fe282f0",
+      "match": true
+    },
+    {
+      "file": "Function_Test_Results.csv",
+      "size_bytes": 968,
+      "sha256": "d2061f795684a577673d44a2e8b58fd5af897341cde742db0eed61b60e11ab75",
+      "match": true
+    },
+    {
+      "file": "Input_Source_Receipts.json",
+      "size_bytes": 325199,
+      "sha256": "1f00d693caa840bc40edcc1dc31c41399e717718b1d40a22202b2517f39d63bd",
+      "match": true
+    },
+    {
+      "file": "N3_22_Policy_Coverage_Before_After.csv",
+      "size_bytes": 10453,
+      "sha256": "545f88c5290b1ecce4130c7c5ecc772e34397870fef84493bb40af4bef3195a6",
+      "match": true
+    },
+    {
+      "file": "N3_Annual_Executable_Functions.csv",
+      "size_bytes": 13613,
+      "sha256": "6d694d922b3f753a7d76a4080c5426a822f526580018b3426954d44696d5a467",
+      "match": true
+    },
+    {
+      "file": "N3_Completion_Fiscal_Cash_Debt_Ledger.csv",
+      "size_bytes": 32128,
+      "sha256": "aaae15762de3d6e3c94fbc785b961641336bb212b6575e771ee74c29dee2ab44",
+      "match": true
+    },
+    {
+      "file": "N3_Completion_Numeric_Differences.csv",
+      "size_bytes": 92915,
+      "sha256": "cd91afab43144c46ade16a9fd694f8801ef1727a8e3f08579490dbaeed8fcd57",
+      "match": true
+    },
+    {
+      "file": "N3_Completion_Tax_And_Medical_Connections.csv",
+      "size_bytes": 22514,
+      "sha256": "3d6137aa414bea996fb0cab7d3d94239cd5f3482bdb1452210ee1ce9773cecfd",
+      "match": true
+    },
+    {
+      "file": "N3_Completion_Tax_Bridge.csv",
+      "size_bytes": 27879,
+      "sha256": "2bffd93159905f2d5d856c114204e2124ad3cb87a4828b508fc829881b4f7136",
+      "match": true
+    },
+    {
+      "file": "N3_Implemented_Functions_And_Residual_Unknowns.csv",
+      "size_bytes": 11685,
+      "sha256": "7662829f800b3416ed6a84c7f8a1c49366f51393f29de96053736afed06c2727",
+      "match": true
+    },
+    {
+      "file": "N3_Native_Completion_Annual_Comparison_2026_2055.csv",
+      "size_bytes": 161498,
+      "sha256": "7dbad134939e328a754436b243cfcbb248c84f413cd3d00f55e88433962b7682",
+      "match": true
+    },
+    {
+      "file": "N3_Native_Completion_Case_Summary.csv",
+      "size_bytes": 5044,
+      "sha256": "9212a1ac335a3457221c57d2c02b9e71595ce487b8fe83ed60a6c7bc0d214feb",
+      "match": true
+    },
+    {
+      "file": "N3_Pension_Annual_Accounts.csv",
+      "size_bytes": 22797,
+      "sha256": "be2f21fb18d985ea95fe12dab9751823a8308b3494ebdc9b98f24177e7e8629c",
+      "match": true
+    },
+    {
+      "file": "N3_Policy_Annual_Accounts.csv",
+      "size_bytes": 41282,
+      "sha256": "d6b1299c7b684b54445016ee827d97b3c212b068397578c4acf0823536cbb4c9",
+      "match": true
+    },
+    {
+      "file": "SPE_N3_Native_Policy_Implementation_Completion_Report_DRAFT_20261123.md",
+      "size_bytes": 5970,
+      "sha256": "8676cf4515191bd1fc478c497babb4f39d54145784f032b2faa19b9b56640530",
+      "match": true
+    },
+    {
+      "file": "Smart_Compact_Partial_Order.csv",
+      "size_bytes": 248,
+      "sha256": "0b006aa9e5c33628f51f2d793c1ee07095e16855ed61251df6cc8bc1294b41a4",
+      "match": true
+    },
+    {
+      "file": "Verification.json",
+      "size_bytes": 583,
+      "sha256": "e8643d50982005b191a793978447c9d7ca2345af6ee6c278ba0437c1ac39a020",
+      "match": true
+    }
+  ]
+}

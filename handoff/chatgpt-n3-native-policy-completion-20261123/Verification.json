@@ -1,0 +1,19 @@
+{
+  "status": "PASS_LIMITED_IMPLEMENTATION_AND_ANNUAL_EXECUTION",
+  "checks": 1754,
+  "failed": 0,
+  "failures": [],
+  "annual_executed_paths": 2,
+  "annual_executed_rows": 60,
+  "reused_comparison_paths": 3,
+  "reused_comparison_rows": 90,
+  "delivered_annual_rows": 150,
+  "prior_PASS_reused": 5990,
+  "original_items": 22,
+  "full_native_implementation": false,
+  "new_supported_monetary_effect": false,
+  "conditional_timing_effect_separate": true,
+  "unchanged_fixed_source_files": 951,
+  "source_policy_or_common_engine_modified": false,
+  "real_world_fiscal_closure": false
+}

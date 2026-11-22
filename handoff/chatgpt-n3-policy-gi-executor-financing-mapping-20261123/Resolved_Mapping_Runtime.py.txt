@@ -1,0 +1,93 @@
+def simulate(self,s,record=True):
+ par=self.par;C=I=K=privI=privK=pubI=pubK=0.;firmcash=0.;debt=self.initdebt;assets=0.;tax=self.base[2026]['tax'];prevN=self.base[2026]['N'];gap=0.;prior=[];pubhistory=[];pubflows=[];annual=[];closure=[];bridge=[]
+ co,md=self.component();self.channel_start(s)
+ if s['kpi']=='FIXED':md.s['kpi']=False # pinned baseline has no freeze; no endogenous switch leaks
+ ssqdebt=self.initdebt;ssqassets=0.
+ for y in range(2026,2056):
+  t=self.base[y];old=t['medical'];w=copy.deepcopy(old);d=t['coreD'];initial=y==2026;native={};policyshift=govshift=insshift=cashshift=investshift=0.
+  if s['dynamic']:
+   md.rows.append(self.medical_row(s,y,prior,old));native=co.step(y,md,prior)
+   policyshift=native['policy_tax_delta_trn']-old['policy_tax_delta_trn'];govshift=native['policy_government_cost_delta_trn']-old['policy_government_cost_delta_trn'];insshift=native['policy_insurer_cash_delta_trn']-old['policy_insurer_cash_delta_trn'];cashshift=native['policy_household_cash_delta_trn']-old['policy_household_cash_delta_trn'];investshift=native['policy_investment_delta_trn']-old['policy_investment_delta_trn']
+   w.update(native);w['household_cash_delta_trn']=old['medical_only_household_cash_delta_trn']+native['policy_household_cash_delta_trn'];w['government_cost_delta_trn']=old['medical_only_government_cost_delta_trn']+native['policy_government_cost_delta_trn'];w['service_production_nominal_delta_trn']=old['service_production_nominal_delta_trn']+native['policy_service_VA_delta_trn']-old['policy_service_VA_delta_trn']
+  channel=self.channels(s,y,t,w,co,md,prior);w=channel['w'];policyshift+=channel['direct'];govshift+=channel['government'];insshift+=channel['insurer'];cashshift+=channel['cash'];investshift+=channel['investment']
+  f=self.funding[y];saving=-w['corporate_tax_delta_trn'];dividend=w['dividend_delta_trn'];origI=co.funding_rows[-1]['realized_investment_nominal_trn'] if s['dynamic'] else n(f,'realized_investment_nominal_trn')
+  flow=saving-dividend-origI;firmbegin=firmcash;available=firmcash+flow
+  privI=min(max(available,0.)/d,(1-par['lambda_I'])*privI+par['lambda_I']*s['firm_rate']*max(flow,0.)/d) if not initial else 0.;privatepaid=privI*d;firmcash=available-privatepaid
+  b=self.fb[y];baselinepb,sfa,ssextra,tailshift,scale=self.fiscal_base(s,y)
+  sqpb=baselinepb+n(self.sf[y],'CL_primary_delta_after_mapping_trn')
+  sqinterest=self.interest(s,ssqdebt,ssqassets,b);cash_cost=self.cash_part(s,y,sfa);remaining_sfa=sfa-cash_cost
+  sqz=self.fp.finance(ssqdebt,ssqassets,sqpb-cash_cost,sqinterest,remaining_sfa,s['rollover']);ssqdebt=sqz['CL_debt_end_candidate_trn'];ssqassets=sqz['CL_cash_assets_end_candidate_trn']
+  inslevel=n(self.fiscal[y],'model_insurer_balance_delta_trn')+insshift;backfill=max(0.,-inslevel) if s['backfill'] else 0.
+  primarychange=policyshift-govshift-backfill
+  feedback=par['income_feedback']*gap*d
+  cash=t['cash']+cashshift;ss=t['social'];pen=t['pension_ledger'];mpc=par['generic_mpc']
+  Ctarget=par['domestic_share']*(mpc*(cash+feedback-ss['household'])+ss['weighted_demand']+pen['consumption_impulse_trn']-mpc*pen['household_cash_delta_trn']+w['quantity_nominal_volume_delta_trn']-mpc*w['quantity_replaced_price_benefit_trn']+(mpc-w['estate_mpc_candidate'])*w['wealth_tax_delta_trn'])/d
+  if not initial:C=(1-par['lambda_C'])*C+par['lambda_C']*Ctarget;I=(1-par['lambda_I'])*I+par['lambda_I']*(t['invest_nom']+investshift)/d
+  mature=pubhistory[-s['lag']]*(1-par['depreciation'])**(s['lag']-1) if len(pubhistory)>=s['lag'] else 0.
+  supply=par['capital_yield']*(1-par['depreciation'])*(K+privK)+s['yield_public']*(1-par['depreciation'])*mature+(t['supply']-par['capital_yield']*(1-par['depreciation'])*t['Kprev'])
+  capacity=t['coreY']+supply+s['cap_scale']*par['slack']*t['coreY']+t['education_level']
+  basewant=t['coreY']+par['capacity_absorption']*supply+C+I+privI+t['education_nom']/d+t['education_level']+t['finite']+w['service_production_nominal_delta_trn']/d
+  interest=self.interest(s,debt,assets,b)
+  # Within-year fiscal resource constraint solved with bisection; tax map evaluated
+  # from previous-year tax and nominal GDP, not repeatedly compounded per iteration.
+  def evalroom(room):
+   g=min(s['g_share']*room,self.authority_cap(s,y,'G'));pibudget=s['pi_share']*room
+   pi=min(pibudget*s['domestic']/d,(1-par['lambda_I'])*pubI+par['lambda_I']*pibudget*s['domestic']/d) if not initial else 0.;pi=min(pi,self.authority_cap(s,y,'I')*s['domestic']/d);pipay=pi*d/s['domestic'];spend=g+pipay
+   desired=basewant+pi+g*s['domestic']/d;Y=min(desired,capacity);unmet=max(0.,desired-Y);nom=Y*d*(1+par['price_pressure_coefficient']*unmet/t['coreY'])
+   tx=min(tax*(1+(nom/prevN-1)*par['elasticity'])*(.9 if y==2031 else 1.),nom*par['tax_cap_ratio']) if not initial else tax
+   pbpre=n(self.fiscal[y],'CL_PB_candidate_trn')+(baselinepb-b['CL_PB_trn'])+primarychange+(tx-t['tax'])
+   policyroom=max(0.,self.primary[y]+primarychange+tx-t['tax'])
+   budget=self.cash_budget(s,y,pbpre,interest,sfa,assets)
+   return dict(g=g,pi=pi,pipay=pipay,spend=spend,Y=Y,nom=nom,tax=tx,pbpre=pbpre,desired=desired,unmet=unmet,policyroom=policyroom,budget=budget)
+  room=max(0.,self.primary[y])
+  if s['room_mode']!='FIXED_PRIMARY':
+   caproom=max(0.,self.primary[y]+max(primarychange,0.)+1000.)
+   def residual(r):
+    z=evalroom(r)
+    return r-z['policyroom'] if s['room_mode']=='CURRENT_PRIMARY' else max(r-z['policyroom'],z['spend']-z['budget'])
+   lo=0.;hi=caproom
+   if s['g_share']+s['pi_share']:
+    assert residual(lo)<=1e-7 and residual(hi)>=0
+    for _ in range(55):
+     mid=(lo+hi)/2
+     if residual(mid)>0:hi=mid
+     else:lo=mid
+    room=(lo+hi)/2
+   else:room=0.
+  z=evalroom(room);z,room=self.finalize_room(s,y,z,room,evalroom,interest,sfa,assets);g=z['g'];pubI=z['pi'];spend=z['spend'];Y=z['Y'];nom=z['nom'];tax=z['tax'];pb=z['pbpre']-spend
+  dbegin=debt;abegin=assets;fin=self.fp.finance(debt,assets,pb-cash_cost+self.other_sale,interest,remaining_sfa,s['rollover']);debt=fin['CL_debt_end_candidate_trn'];assets=fin['CL_cash_assets_end_candidate_trn']
+  pkbegin=privK;pubbegin=pubK;Kbegin=K
+  if not initial:K=(1-par['depreciation'])*K+I;privK=(1-par['depreciation'])*privK+privI;pubK=(1-par['depreciation'])*pubK+pubI
+  pubhistory.append(pubK);pubflows.append((y,pubI))
+  gap=Y-t['coreY'];prevN=nom
+  wage0=self.base[2026]['nominalwage_proxy'];shock=.99 if par['wage_shock_start']<=y<par['wage_shock_start']+2 else 1.
+  wage=wage0*(d/self.base[2026]['coreD'])*shock*(1+par['wage_gap_elasticity']*gap/t['coreY'])
+  resource=par['household_income_share']*t['coreN']+cash+feedback
+  r=copy.deepcopy(t['macro_row']);r.update(real_gdp_trn=Y,nominal_gdp_trn=nom,nominal_wage_proxy_man=wage,real_growth_pct=(Y/prior[-1]['real_gdp_trn']-1)*100 if prior else 0.,household_disposable_nominal_trn=resource,parity_real_cash_income_per_person=(resource-t['vat']['household'])/d/t['demography']['population']);prior.append(r)
+  row=dict(case=s['case'],year=y,dynamic=s['dynamic'],room_mode=s['room_mode'],domestic=s['domestic'],public_yield=s['yield_public'],public_lag=s['lag'],SQ_real_GDP_trn=self.sq[y]['Y'],real_GDP_trn=Y,GDP_minus_SQ_trn=Y-self.sq[y]['Y'],GDP_change_vs_BASE_N3_trn=Y-t['Y'],nominal_GDP_trn=nom,consumption_real_trn=n(t['macro_row'],'household_consumption_real_proxy_trn')+C-t['C'],SQ_consumption_real_trn=n(self.sq[y]['macro_row'],'household_consumption_real_proxy_trn'),private_investment_real_trn=n(t['macro_row'],'capital_replacement_investment_real_trn')+I+privI,extra_private_investment_real_trn=privI,extra_public_investment_real_trn=pubI,SQ_private_investment_real_trn=n(self.sq[y]['macro_row'],'capital_replacement_investment_real_trn')+self.sq[y]['I'],capital_total_real_proxy_trn=n(t['macro_row'],'capital_total_real_trn')-t['K']+K+privK+pubK,government_purchase_nominal_trn=g,public_investment_nominal_trn=z['pipay'],policy_tax_delta_trn=w['policy_tax_delta_trn'],macro_tax_proxy_trn=tax,total_tax_diagnostic_proxy_trn=tax+t['direct']+policyshift,SQ_tax_diagnostic_proxy_trn=self.sq[y]['tax']+self.sq[y]['direct'],household_policy_cash_nominal_trn=cash,household_resource_DI_proxy_trn=resource,N3_firm_cash_trn=firmcash,pension_fund_end_trn=w['pension_fund_stock_trn'],pension_contribution_trn=w['pension_fund_contribution_trn'],pension_benefit_delta_trn=w['pension_benefit_delta_trn'],CL_PB_candidate_trn=pb,SQ_CL_PB_same_fiscal_scenario_trn=sqpb,CL_debt_candidate_trn=debt,SQ_CL_debt_same_fiscal_scenario_trn=ssqdebt,CL_assets_candidate_trn=assets,CL_interest_candidate_trn=interest,CL_new_borrowing_trn=fin['CL_new_cash_borrowing_candidate_trn'],CL_gross_issue_assumed_trn=fin['CL_gross_issue_with_assumed_refinancing_trn'],supply_real_trn=supply,supply_ceiling_real_trn=capacity,unmet_demand_real_trn=z['unmet'],lagged_wage_base_factor=co.dynamic_rows[-1]['wage_base_factor'] if s['dynamic'] else None,lagged_profit_base_factor=co.dynamic_rows[-1]['corporate_profit_base_factor'] if s['dynamic'] else None,GG_PB=None,GG_debt=None,actual_gross_bond_issue=None,full_calibration=False,VAT_standard_rate=self.vatrate[y],VAT_schedule_fixed=s['kpi']=='FIXED',VAT_base_endogenous=False,medical_base_endogenous=False)
+  row.update(GDP_core_difference_trn=t['coreY']-self.sq[y]['coreY'],GDP_C_difference_trn=C-self.sq[y]['C'],GDP_I_difference_trn=I-self.sq[y]['I']+privI+pubI,GDP_G_domestic_trn=g*s['domestic']/d,GDP_supply_difference_trn=par['capacity_absorption']*(supply-self.sq[y]['supply']),GDP_other_difference_trn=t['education_nom']/d-self.sq[y]['education_nom']/self.sq[y]['coreD']+t['education_level']-self.sq[y]['education_level']+t['finite']-self.sq[y]['finite']+w['service_production_nominal_delta_trn']/d-self.sq[y]['medical']['service_production_nominal_delta_trn']/self.sq[y]['coreD'],GDP_unmet_difference_trn=-z['unmet']+self.sq[y]['unmet'],desired_real_GDP_trn=z['desired'],policy_labor_rate=.3,policy_financial_rate=.2,policy_estate_rate=.4,labor_gross_base_trn=sum(x['labour_business_30_gross_base_trn'] for x in co.households if x['year']==y),financial_gross_base_trn=sum(x['financial20_gross_base_trn'] for x in co.households if x['year']==y),corporate_profit_base_trn=sum(x['profit_base_trn'] for x in co.firms if x['year']==y))
+  if record:self.ck(s['case']+str(y)+':GDP_component_sum',row['GDP_minus_SQ_trn']-sum(row[k] for k in ['GDP_core_difference_trn','GDP_C_difference_trn','GDP_I_difference_trn','GDP_G_domestic_trn','GDP_supply_difference_trn','GDP_other_difference_trn','GDP_unmet_difference_trn']))
+  row.update(existing_public_payroll_delta_trn=w.get('public_payroll_delta_trn'),existing_public_added_jobs=w.get('public_added_jobs'),existing_in_kind_trn=w.get('in_kind_trn'),existing_premium_relief_trn=w.get('premium_relief_trn'),existing_policy_government_cost_delta_trn=w.get('policy_government_cost_delta_trn'),existing_policy_investment_delta_trn=w.get('policy_investment_delta_trn'),native_smart_priority=';'.join(co.structures[-1]['smart_priority'].split(';')) if co.structures else 'unknown')
+  annual.append(row)
+  c=dict(case=s['case'],year=y,baseline_PB_trn=baselinepb,post2040_flow_scale=scale,post2040_PB_shift_trn=tailshift,central_GA_social_security_extra_trn=ssextra,insurer_balance_delta_trn=inslevel,insurer_backfill_trn=backfill,policy_primary_change_trn=primarychange,available_primary_delta_trn=z['policyroom'],fixed_primary_delta_trn=self.primary[y],nominal_allocation_room_trn=room,cash_budget_after_interest_SFA_trn=z['budget'],government_spend_trn=spend,government_import_leak_trn=spend*(1-s['domestic']),public_capital_domestic_formation_trn=pubI*d,primary_balance_before_additional_spend_trn=z['pbpre'],PB_trn=pb,interest_trn=interest,SFA_trn=sfa,debt_begin_trn=dbegin,debt_end_trn=debt,assets_begin_trn=abegin,assets_end_trn=assets,new_cash_borrowing_trn=fin['CL_new_cash_borrowing_candidate_trn'],cash_debt_redemption_trn=fin['CL_cash_surplus_debt_redemption_candidate_trn'],asset_draw_trn=fin['CL_cash_asset_draw_candidate_trn'],asset_addition_trn=fin['CL_cash_asset_addition_candidate_trn'],rollover_share=s['rollover'],assumed_gross_issue_trn=fin['CL_gross_issue_with_assumed_refinancing_trn'],assumed_gross_redemption_trn=fin['CL_gross_redemption_with_assumed_refinancing_trn'],firm_begin_trn=firmbegin,firm_source_tax_saving_trn=saving,firm_dividend_trn=dividend,firm_original_investment_paid_trn=origI,firm_additional_investment_paid_trn=privatepaid,firm_end_trn=firmcash,unallocated_SFA=True,SS_baseline_complete=False,GA_local_to_SNA_reconciliation_complete=False)
+  c.update(SFA_cash_need_trn=cash_cost,SFA_remaining_adjustment_trn=remaining_sfa,cash_after_SFA_before_financing_trn=pb-interest-cash_cost+self.other_sale,other_asset_sale_trn=self.other_sale,other_financial_assets_hypothetical_trn=self.other_assets,net_debt_cash_only_trn=debt-assets,net_debt_including_hypothetical_assets_trn=debt-assets-self.other_assets,PB_excludes_below_line_SFA_cash=True,actual_total_bond_issue=None)
+  if record:
+   self.ck(s['case']+str(y)+':treasury_cash',pb-interest-cash_cost+self.other_sale+fin['CL_new_cash_borrowing_candidate_trn']-fin['CL_cash_surplus_debt_redemption_candidate_trn']-(assets-abegin))
+   self.ck(s['case']+str(y)+':SFA_single_classification',cash_cost+remaining_sfa-sfa)
+   self.ck(s['case']+str(y)+':debt_stock',debt-dbegin-fin['CL_new_cash_borrowing_candidate_trn']+fin['CL_cash_surplus_debt_redemption_candidate_trn']-remaining_sfa)
+  closure.append(c)
+  bridge.append(dict(case=s['case'],year=y,dynamic=s['dynamic'],policy_tax_fixed_reference_trn=old['policy_tax_delta_trn'],policy_tax_recomputed_trn=w['policy_tax_delta_trn'],policy_tax_change_trn=w['policy_tax_delta_trn']-old['policy_tax_delta_trn'],all_direct_tax_change_trn=policyshift,labor_tax_recomputed_trn=w['labour_business_flat30_tax_delta_trn'],financial_tax_recomputed_trn=w['household_financial20_tax_delta_trn'],corporate_tax_recomputed_trn=w['corporate_tax_delta_trn'],household_cash_fixed_reference_trn=t['cash'],household_cash_recomputed_trn=cash,household_cash_change_trn=cashshift,policy_government_cost_change_trn=govshift,policy_insurer_change_trn=insshift,original_investment_target_change_trn=investshift,pension_fund_fixed_trn=old['pension_fund_stock_trn'],pension_fund_recomputed_trn=w['pension_fund_stock_trn'],pension_contribution_recomputed_trn=w['pension_fund_contribution_trn'],lagged_wage_factor=row['lagged_wage_base_factor'],lagged_profit_factor=row['lagged_profit_base_factor'],labor_rate=.3,financial_rate=.2,estate_rate=.4,corporate_rates='0.20/0.16_qualified',VAT_standard_rate=self.vatrate[y],scope='NATIVE_POLICY_COMPONENT_PARTIAL_DYNAMIC_VAT_MEDICAL_CORE_FROZEN',KPI_frozen=s['kpi']=='FIXED'))
+  if record:
+   pre=s['case']+':'+str(y)+':'
+   self.ck(pre+'firm_funding',firmcash-firmbegin-saving+dividend+origI+privatepaid);self.ck(pre+'firm_nonnegative',min(0.,firmcash));self.ck(pre+'budget_identity',debt-assets-dbegin+abegin+pb-interest-sfa+self.other_sale);self.ck(pre+'gross_stock',debt-dbegin-fin['CL_gross_issue_with_assumed_refinancing_trn']+fin['CL_gross_redemption_with_assumed_refinancing_trn']-remaining_sfa);self.ck(pre+'PB',pb-z['pbpre']+spend);self.ck(pre+'GDP_cap',Y-min(z['desired'],capacity));self.ck(pre+'tax_sum',w['policy_tax_delta_trn']-w['labour_business_flat30_tax_delta_trn']-w['household_financial20_tax_delta_trn']-w['corporate_tax_delta_trn']-.2*w['dividend_delta_trn']-w['wealth_tax_delta_trn'])
+   if not initial:self.ck(pre+'private_K',privK-.95*pkbegin-privI);self.ck(pre+'public_K',pubK-.95*pubbegin-pubI)
+   if s['room_mode']=='CASH_NEUTRAL':
+    self.ck(pre+'cash_constraint',max(0.,spend-z['budget']),1e-6);self.ck(pre+'allocation_envelope',max(0.,room-z['policyroom']),1e-6) if not s['pre_tax_budget'] else None
+   independent_public_supply=s['yield_public']*sum(v*(1-par['depreciation'])**(y-j) for j,v in pubflows if j<=y-s['lag'])
+   self.ck(pre+'mature_public_supply',s['yield_public']*(1-par['depreciation'])*mature-independent_public_supply)
+   if s['dynamic']:
+    penrow=co.pension[-1];self.ck(pre+'pension_stock',penrow['fund_end_trn']-penrow['fund_begin_trn']-penrow['fund_return_trn']-penrow['fund_contribution_trn']+penrow['fund_payout_trn']);self.ck(pre+'lag_wage',co.dynamic_rows[-1]['wage_base_factor']-(prior[-2]['nominal_wage_proxy_man']/co.cfg['sq_wage_nominal_man'][y-2027] if y>2026 else 1.))
+ self.sfa_bridge.extend(self.sfa_rows)
+ self.connections.extend(self.local_connection)
+ self.extra_ledger.extend(self.extra_map.values())
+ return annual,closure,bridge

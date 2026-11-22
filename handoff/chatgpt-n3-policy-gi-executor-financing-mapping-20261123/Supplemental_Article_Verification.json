@@ -1,0 +1,16 @@
+[
+  {
+    "id": "LOCAL_CIVIL_SERVICE",
+    "article": "\u7b2c\u4e8c\u5341\u56db\u6761",
+    "main_provision": true,
+    "sha256": "407a0e96eb89335d43c637c277784640bbe7c85073c95dcf8cdf6a405ef1c303",
+    "status": "VERIFIED_OPERATOR_OR_SALARY_RULE_NOT_N3_AMOUNT"
+  },
+  {
+    "id": "URBAN_RENAISSANCE",
+    "article": "\u7b2c\u516b\u5341\u4e00\u6761",
+    "main_provision": true,
+    "sha256": "2ef79c74ebfd16d16bad10d637d644efe70135bca332090e5df07d9099f061b1",
+    "status": "VERIFIED_OPERATOR_OR_SALARY_RULE_NOT_N3_AMOUNT"
+  }
+]

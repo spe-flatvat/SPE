@@ -1,0 +1,12 @@
+{
+  "status": "PASS_STRUCTURE_AND_UNRESOLVED_MONETARY_SPLIT",
+  "new_annual_rows": 120,
+  "reused_annual_rows": 90,
+  "sector_partial_rows": 240,
+  "allocation_rows": 8,
+  "original_policy_quantified_extra_GI_assignment": "unknown",
+  "full_reference_envelope_unassigned": true,
+  "existing_payroll_and_benefits_not_readded": true,
+  "actual_sector_cash_and_debt_unknown_retained": true,
+  "only_authorized_new_path": true
+}

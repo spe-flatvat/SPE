@@ -1,0 +1,17 @@
+{
+  "policy_trace_rows": 22,
+  "executor_finance_links": 23,
+  "cross_route_macro_neutrality_checks": 120,
+  "existing_payroll_and_in_kind_cost2030_sum_verified": true,
+  "new_jobs_in_existing_REGULARIZE_branch": 0,
+  "extra_GI_evidence_monetary_assignment": "unknown",
+  "monetary_assignment_credit_lower_trn": 0.0,
+  "supplemental_source_bytes_verified": [
+    "ESRI_GOVERNMENT_GFCF",
+    "LOCAL_CIVIL_SERVICE",
+    "URBAN_RENAISSANCE",
+    "MLIT_COMPACT_PORTAL"
+  ],
+  "previous_legal_map_reused_commit": "c087a1a5af12b86cdb140d934754d75e5ee9c4ef",
+  "sector_cash_closure": false
+}

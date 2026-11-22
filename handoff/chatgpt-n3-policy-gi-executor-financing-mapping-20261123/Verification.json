@@ -1,0 +1,21 @@
+{
+  "status": "PASS_LIMITED_TRACE_ROUTING_AND_ARITHMETIC",
+  "new_cases": 4,
+  "new_annual_rows": 120,
+  "reused_cases": 3,
+  "reused_annual_rows": 90,
+  "checks": 3580,
+  "failed": 0,
+  "failures": [],
+  "prior_checks_reused": [
+    3190,
+    6972
+  ],
+  "extra_payroll_and_benefit_readdition": false,
+  "actual_2030_GI_assignment": "unknown",
+  "confirmed_additional_monetary_assignment_credit_trn": 0.0,
+  "sector_cash_closed": false,
+  "real_world_all_years_SQ": false,
+  "policy_adopted": false,
+  "common_engine_modified": false
+}

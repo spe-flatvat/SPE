@@ -1,0 +1,122 @@
+[
+  {
+    "path": "handoff/chatgpt-n3-policy-gi-executor-financing-mapping-20261123/Build_Policy_Executor_Trace.py",
+    "size": 18854,
+    "sha256": "60d358bc4f463444a72c92ba99691f9f564dcd8b04f8e581b1827e90ff47cd02"
+  },
+  {
+    "path": "handoff/chatgpt-n3-policy-gi-executor-financing-mapping-20261123/Conditional_Executor_Routing_Inputs.json",
+    "size": 5160,
+    "sha256": "096497abd852748aa39ada5ae6fb3738324939a09223520864bb3dbeb6b417c6"
+  },
+  {
+    "path": "handoff/chatgpt-n3-policy-gi-executor-financing-mapping-20261123/Delivery_Verification.json",
+    "size": 425,
+    "sha256": "5c0be09debe82fbf1226b30b8c89090d34ce8f48547e263db09e177f36dc1761"
+  },
+  {
+    "path": "handoff/chatgpt-n3-policy-gi-executor-financing-mapping-20261123/Detail_2029_2032.csv",
+    "size": 19080,
+    "sha256": "9e0efe0bf3c73e7d178bfe6056eb7658a6f5639cfabd2aab74b1e8eafb1b4b4b"
+  },
+  {
+    "path": "handoff/chatgpt-n3-policy-gi-executor-financing-mapping-20261123/Execution.log",
+    "size": 4399,
+    "sha256": "3229f04a672ef1a93229104a9e078e7ff27b265e6d230b3ddb8d37f52ab56764"
+  },
+  {
+    "path": "handoff/chatgpt-n3-policy-gi-executor-financing-mapping-20261123/Input_Source_Receipts.json",
+    "size": 9471,
+    "sha256": "e72d71eb35643befe5dab6386fcb68115ce36cb3a400f71bf471e7a94b72a347"
+  },
+  {
+    "path": "handoff/chatgpt-n3-policy-gi-executor-financing-mapping-20261123/Mapping_Verification.json",
+    "size": 585,
+    "sha256": "1009e6b23f271294311258a575c055d7add1bb5690b0fb8c17ed265182580327"
+  },
+  {
+    "path": "handoff/chatgpt-n3-policy-gi-executor-financing-mapping-20261123/N3_2030_GI_Allocation_And_Unresolved_Shares.csv",
+    "size": 1996,
+    "sha256": "97e7783441d5879c8f0b98b8b63d43b0941ca56e7cc5d7453e797fa989f04af4"
+  },
+  {
+    "path": "handoff/chatgpt-n3-policy-gi-executor-financing-mapping-20261123/N3_Case_Definitions.csv",
+    "size": 2200,
+    "sha256": "95dce43087ba68bedd193d802ffb08f631da7b136a5547ab851319af52827f0f"
+  },
+  {
+    "path": "handoff/chatgpt-n3-policy-gi-executor-financing-mapping-20261123/N3_Case_Summary.csv",
+    "size": 1926,
+    "sha256": "5b2cdb840a785961fd3b08ecd2a8aa15be45f415e040a01a6202c6920e7bc05f"
+  },
+  {
+    "path": "handoff/chatgpt-n3-policy-gi-executor-financing-mapping-20261123/N3_Compact_Project_Type_Eligibility_And_Overlap.csv",
+    "size": 2098,
+    "sha256": "87457934e17fc32f37cf6187b53c4f567d1b4fa97e63dbc74faa5351f5fe5927"
+  },
+  {
+    "path": "handoff/chatgpt-n3-policy-gi-executor-financing-mapping-20261123/N3_Conditional_Sector_Policy_Use_Ledger_2026_2055.csv",
+    "size": 52024,
+    "sha256": "d16a6008d458e446bde0c7cc11c3c26af403321abcd8d395bf40ab31743c9bca"
+  },
+  {
+    "path": "handoff/chatgpt-n3-policy-gi-executor-financing-mapping-20261123/N3_Existing_Native_Payroll_Benefits_And_Priority.csv",
+    "size": 33590,
+    "sha256": "b31c3bb45655c4fc43a9681a4ac802408d7916e50ec3993c427165900dca3469"
+  },
+  {
+    "path": "handoff/chatgpt-n3-policy-gi-executor-financing-mapping-20261123/N3_GI_Executor_Financing_Eligibility_Map.csv",
+    "size": 13647,
+    "sha256": "f372803cdffd0e6f3fc35ed2b94cf7879f2570ed8402cd0bfed5c25c60ecf43b"
+  },
+  {
+    "path": "handoff/chatgpt-n3-policy-gi-executor-financing-mapping-20261123/N3_Integrated_Cash_Debt_Ledger_2026_2055.csv",
+    "size": 69783,
+    "sha256": "2e7710f23f518b7d2a18cebae288e9a2bb5f21c5480e2b20ac3724f97342e429"
+  },
+  {
+    "path": "handoff/chatgpt-n3-policy-gi-executor-financing-mapping-20261123/N3_Policy_GI_Annual_Comparison_2026_2055.csv",
+    "size": 234138,
+    "sha256": "bf082c2cef117fccad7d9aee18d736ded204f89db0b3abbfb2f16c35974e6b38"
+  },
+  {
+    "path": "handoff/chatgpt-n3-policy-gi-executor-financing-mapping-20261123/N3_Policy_GI_Mapping_Reproduce.py",
+    "size": 12053,
+    "sha256": "60e2476b4a7a23220ac0e02b1ae75d2bc569409dda2d31b1a4fcbbad92d70ba1"
+  },
+  {
+    "path": "handoff/chatgpt-n3-policy-gi-executor-financing-mapping-20261123/N3_Policy_Implementation_Expenditure_Trace.csv",
+    "size": 14956,
+    "sha256": "62890f930f34490abcece29660d2ead593fc122044d244d4411fe2d79c8c1b9a"
+  },
+  {
+    "path": "handoff/chatgpt-n3-policy-gi-executor-financing-mapping-20261123/Public_Source_Receipts.json",
+    "size": 1600,
+    "sha256": "a94a412ca449f05eb43236fe03e53094000675110ca007de7372fa89600b7315"
+  },
+  {
+    "path": "handoff/chatgpt-n3-policy-gi-executor-financing-mapping-20261123/Public_Source_References.md",
+    "size": 2507,
+    "sha256": "64f351912df8baf915cd795d12b743937fc7e70e270786ab6e4c5e37816b070f"
+  },
+  {
+    "path": "handoff/chatgpt-n3-policy-gi-executor-financing-mapping-20261123/Resolved_Mapping_Runtime.py.txt",
+    "size": 16403,
+    "sha256": "2d11d730317055bf1af4d35e8b268ef1cfc3be0936fb9511238b316510b39ac5"
+  },
+  {
+    "path": "handoff/chatgpt-n3-policy-gi-executor-financing-mapping-20261123/SPE_N3_Policy_GI_Executor_Financing_Mapping_Report_DRAFT_20261123.md",
+    "size": 21774,
+    "sha256": "fb6109e51d91a3b799ec5c0837ed37aa3ff1be79a4e002c799b90d3de7a26104"
+  },
+  {
+    "path": "handoff/chatgpt-n3-policy-gi-executor-financing-mapping-20261123/Supplemental_Article_Verification.json",
+    "size": 529,
+    "sha256": "e8b87298efadd6e34f014fd09389c8a7640896b4d036e84abd5690934ede98d0"
+  },
+  {
+    "path": "handoff/chatgpt-n3-policy-gi-executor-financing-mapping-20261123/Verification.json",
+    "size": 537,
+    "sha256": "c7e9fbe0f2a49592402d4b3f8d97c9ef3834ffbbcbb69621f41b116aaff559c9"
+  }
+]

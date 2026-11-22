@@ -1,0 +1,44 @@
+[
+  {
+    "id": "MLIT_COMPACT_QA",
+    "url": "https://www.mlit.go.jp/toshi/city_plan/content/001738454.pdf",
+    "status": "FETCH_FAILED",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "id": "ESRI_GOVERNMENT_GFCF",
+    "url": "https://www.esri.cao.go.jp/jp/esri/esr/data/esr_047.pdf",
+    "size": 2269946,
+    "sha256": "263f38cb3da09e5b4c7d11ccabb01b1ed6134efa0706981083babc512c221ed0",
+    "local_path": "/tmp/n3-mapping-sources/ESRI_GOVERNMENT_GFCF.pdf",
+    "retrieved_date": "2026-11-23",
+    "status": "BYTES_RETRIEVED"
+  },
+  {
+    "id": "LOCAL_CIVIL_SERVICE",
+    "url": "https://laws.e-gov.go.jp/api/1/lawdata/325AC0000000261",
+    "size": 500977,
+    "sha256": "b35edbf7d0678a9381cec9e4d03577a381882881889b8c7c8689b5fa1c0f49fd",
+    "local_path": "/tmp/n3-mapping-sources/LOCAL_CIVIL_SERVICE.xml",
+    "retrieved_date": "2026-11-23",
+    "status": "BYTES_RETRIEVED"
+  },
+  {
+    "id": "URBAN_RENAISSANCE",
+    "url": "https://laws.e-gov.go.jp/api/1/lawdata/414AC0000000022",
+    "size": 755248,
+    "sha256": "30eea06294817100411a83a79ddbf370c87dadcdb4c939bea121f7327a1b7a3e",
+    "local_path": "/tmp/n3-mapping-sources/URBAN_RENAISSANCE.xml",
+    "retrieved_date": "2026-11-23",
+    "status": "BYTES_RETRIEVED"
+  },
+  {
+    "id": "MLIT_COMPACT_PORTAL",
+    "url": "https://www.mlit.go.jp/en/toshi/city_plan/compactcity_network.html",
+    "size": 106685,
+    "sha256": "9ac3026a8f3fd42d1c15573ac2254c1f54d126a7cd5c912a2f685a049b722b4e",
+    "local_path": "/tmp/n3-mapping-sources/MLIT_COMPACT_PORTAL.html",
+    "retrieved_date": "2026-11-23",
+    "status": "BYTES_RETRIEVED"
+  }
+]

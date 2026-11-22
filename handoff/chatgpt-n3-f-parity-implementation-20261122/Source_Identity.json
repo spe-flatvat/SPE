@@ -1,0 +1,59 @@
+{
+  "instruction_commit": "92b72ed0a4ea743aca477d7f6d0006e733c9969c",
+  "receipts": [
+    {
+      "path": "policies/New3linesPolicies.md",
+      "commit": "92b72ed0a4ea743aca477d7f6d0006e733c9969c",
+      "size": 7039,
+      "sha256": "2f5806addb870863961d9b6a6722d9c1e38bc2b097e1a6cd0e07b39f56b77830",
+      "route": "local git clone from github.com then git show fixed object",
+      "byte_match": true
+    },
+    {
+      "path": "handoff/n3-f-parity-work-20261122/SPE_Work_N3_F_Parity_Implementation_Execution_Instruction_20261122.md",
+      "commit": "92b72ed0a4ea743aca477d7f6d0006e733c9969c",
+      "size": 9261,
+      "sha256": "0fe79e02a7d1bdfe72239dbc3c5b82937c679b5f448a4e1ec85351dc4cf9767c",
+      "route": "local git clone from github.com then git show fixed object",
+      "byte_match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Gap_Model.py",
+      "commit": "92b72ed0a4ea743aca477d7f6d0006e733c9969c",
+      "size": 12587,
+      "sha256": "9a33fb0946a9fe3087574f5d5cff1bf1e7f7e8b99570173169a31e0ac25b1cef",
+      "route": "local git clone from github.com then git show fixed object",
+      "byte_match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Gap_Components.py",
+      "commit": "92b72ed0a4ea743aca477d7f6d0006e733c9969c",
+      "size": 9411,
+      "sha256": "a0f0b4fe7f7ced6a8a9546e7b68a458ad8c6aaf888a7e57412a746a2090760dd",
+      "route": "local git clone from github.com then git show fixed object",
+      "byte_match": true
+    },
+    {
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/National_Fiscal.py",
+      "commit": "92b72ed0a4ea743aca477d7f6d0006e733c9969c",
+      "size": 12677,
+      "sha256": "cf92a903f028c31ea8e8c62fb5d9cd906d7075d77420513af6b1ff8527237b9b",
+      "route": "local git clone from github.com then git show fixed object",
+      "byte_match": true
+    }
+  ],
+  "source_draft_commit": "3c77eafc2073fdaba4c129164817d2f57c9421b9",
+  "F_reference_commit": "ff6210061615105de9a0d64767c256796be80ed2",
+  "old79_commit": "556953292e24615cee47d92bb27e85badf12329c",
+  "pension_commit": "76176ae118ee073677e990c0d8c4cfa498e3563d",
+  "fiscal_commit": "747273674daed0d648c58aa8fdc07ebe203e6046",
+  "Claude_previous": {
+    "commit": "fffea93870e2e04a0f750ed8352c1bdcdee28afe",
+    "path": "handoff/claude-national-fiscal-verification-20261121/Independent_Fiscal_Summary.json",
+    "sha256": "e1270ff83d6fae42c4b92422885771228ff69dab1a8ff82d1f8295cf2c4f900e",
+    "size": 5357,
+    "pass_count": 62,
+    "total": 62,
+    "scope": "OLD_FIXED_FISCAL_ONLY_NOT_NEW_MODEL_PASS"
+  }
+}

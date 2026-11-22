@@ -19,5 +19,6 @@ def run(out,source=None):
  subprocess.run([sys.executable,str(P/'Fiscal_Adapter.py'),'--macro',str(out/'macro'),'--outdir',str(out/'fiscal')],check=True)
  subprocess.run([sys.executable,str(P/'Results.py'),'--outdir',str(out)],check=True)
  subprocess.run([sys.executable,str(P/'Verify.py'),'--outdir',str(out)],check=True)
+ subprocess.run([sys.executable,str(P/'Package.py'),'--source',str(out),'--outdir',str(out/'results')],check=True)
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--outdir',type=Path,required=True);p.add_argument('--source',type=Path);a=p.parse_args();run(a.outdir,a.source)

@@ -1123,6 +1123,31 @@
       "kpi_once": true,
       "semi_med_reserve_rate": 0.02,
       "semi_med_return": 0.02
+    },
+    {
+      "id": "PARITY_KPI_HIGH_THRESHOLD",
+      "medical": true,
+      "interpolation": "RATE",
+      "vat": "PATH",
+      "quantity_elasticity": 0.25,
+      "flat_hh": true,
+      "corporate": true,
+      "corporate_incentive": true,
+      "pension75": true,
+      "relief": true,
+      "employment": true,
+      "household_start": 2030,
+      "household_ramp": 3,
+      "quantity_link": true,
+      "estate_reported": true,
+      "estate_mpc": 0.1,
+      "semi_med_share": 0.5,
+      "dynamic_bases": true,
+      "kpi": true,
+      "kpi_signal": "LAGGED_REAL_CASH_INCOME_GROWTH",
+      "kpi_growth_threshold_pct": 100.0,
+      "kpi_evaluation_year": 2035,
+      "kpi_once": true
     }
   ],
   "candidate_parameters": {
@@ -1425,7 +1450,8 @@
     "PARITY_KPI_LOW_THRESHOLD",
     "PARITY_GINI_SIGNAL",
     "PARITY_INSURANCE_STRESS",
-    "PARITY_SEMI_RESERVE"
+    "PARITY_SEMI_RESERVE",
+    "PARITY_KPI_HIGH_THRESHOLD"
   ],
   "parity_status": "DRAFT_NON_CANONICAL_CANDIDATE_TRANSMISSION_NOT_ADOPTED",
   "dynamic_base_definition": {

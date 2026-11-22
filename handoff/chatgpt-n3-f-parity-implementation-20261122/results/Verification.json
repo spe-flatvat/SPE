@@ -1,0 +1,334 @@
+{
+  "status": "PASS_IMPLEMENTER_CHECKS",
+  "independent_verification": false,
+  "checks": 280883,
+  "checks_by_family": {
+    "annual_count": 4,
+    "GDP_decomposition": 12360,
+    "tax_VAT_direct_once": 12360,
+    "government_balance_identity": 12360,
+    "policy_direct_once": 12360,
+    "household_cash_once": 12360,
+    "pension_no_second_premium_or_direct_GDP_debit": 12360,
+    "national_values_remain_null": 12360,
+    "incremental_capital_identity": 11948,
+    "C_persistence_identity": 11948,
+    "I_persistence_identity": 11948,
+    "lagged_supply_identity": 11948,
+    "prior_capital_carried": 11832,
+    "total_capital_identity": 11832,
+    "pension_stock_flow": 4800,
+    "corporate_funding_stock": 2880,
+    "semi_medical_internal_transfer_neutral": 3360,
+    "semi_medical_reserve_stock": 3360,
+    "replace_base_no_duplicate_income": 12360,
+    "dynamic_base_lagged_wage": 2668,
+    "KPI_uses_actual_lagged_income_without_future_data": 8,
+    "external_Gini_candidate_duration": 4,
+    "insurance_signal_without_invented_productivity": 4,
+    "income_KPI_positive_trigger_freezes_VAT": 4,
+    "income_KPI_no_false_trigger": 4,
+    "KPI_no_early_freeze": 72,
+    "actual_sensitivity_MPC_LOW": 4,
+    "actual_sensitivity_MPC_HIGH": 4,
+    "actual_sensitivity_DEPRECIATION_LOW": 4,
+    "actual_sensitivity_DEPRECIATION_HIGH": 4,
+    "actual_sensitivity_INVESTMENT_START2038": 4,
+    "actual_sensitivity_INVESTMENT_RESPONSE0": 4,
+    "actual_sensitivity_INVESTMENT_RESPONSE60": 4,
+    "actual_sensitivity_LABOR_ADD100K": 4,
+    "actual_sensitivity_NO_CARRY": 4,
+    "actual_sensitivity_FIXED_BASES": 4,
+    "new_jobs_labor_not_regularization": 4,
+    "shared_SQ_unchanged": 4,
+    "old79_no_unintended_changes": 1,
+    "fiscal_PB_interest_balance": 29550,
+    "fiscal_debt_identity": 29550,
+    "fiscal_general_government_null": 31110,
+    "government_insurer_internal_transfer_neutral": 3120
+  },
+  "failed": 0,
+  "failures": [],
+  "sensitivity_examples": [
+    {
+      "mode": "DOMESTIC_TRANSFER",
+      "case": "PARITY_MPC_LOW",
+      "metric": "real_gdp_trn",
+      "year": 2055,
+      "delta": 14.324632801999996
+    },
+    {
+      "mode": "DOMESTIC_TRANSFER",
+      "case": "PARITY_MPC_HIGH",
+      "metric": "real_gdp_trn",
+      "year": 2055,
+      "delta": -11.920747023000047
+    },
+    {
+      "mode": "DOMESTIC_TRANSFER",
+      "case": "PARITY_DEPRECIATION_LOW",
+      "metric": "capital_total_real_trn",
+      "year": 2055,
+      "delta": 2.440085229999795
+    },
+    {
+      "mode": "DOMESTIC_TRANSFER",
+      "case": "PARITY_DEPRECIATION_HIGH",
+      "metric": "capital_total_real_trn",
+      "year": 2055,
+      "delta": -3.3033565000000635
+    },
+    {
+      "mode": "DOMESTIC_TRANSFER",
+      "case": "PARITY_INVESTMENT_START2038",
+      "metric": "capital_total_real_trn",
+      "year": 2055,
+      "delta": -1.8073609900000065
+    },
+    {
+      "mode": "DOMESTIC_TRANSFER",
+      "case": "PARITY_INVESTMENT_RESPONSE0",
+      "metric": "capital_total_real_trn",
+      "year": 2055,
+      "delta": -22.862324320000198
+    },
+    {
+      "mode": "DOMESTIC_TRANSFER",
+      "case": "PARITY_INVESTMENT_RESPONSE60",
+      "metric": "capital_total_real_trn",
+      "year": 2055,
+      "delta": 23.08804784999984
+    },
+    {
+      "mode": "DOMESTIC_TRANSFER",
+      "case": "PARITY_LABOR_ADD100K",
+      "metric": "real_gdp_trn",
+      "year": 2055,
+      "delta": 0.5757697409999878
+    },
+    {
+      "mode": "DOMESTIC_TRANSFER",
+      "case": "PARITY_NO_CARRY",
+      "metric": "real_gdp_trn",
+      "year": 2055,
+      "delta": -0.38607709600000817
+    },
+    {
+      "mode": "DOMESTIC_TRANSFER",
+      "case": "PARITY_FIXED_BASES",
+      "metric": "real_gdp_trn",
+      "year": 2055,
+      "delta": -0.5839471020000246
+    },
+    {
+      "mode": "LEGACY",
+      "case": "PARITY_MPC_LOW",
+      "metric": "real_gdp_trn",
+      "year": 2055,
+      "delta": 13.839173360000018
+    },
+    {
+      "mode": "LEGACY",
+      "case": "PARITY_MPC_HIGH",
+      "metric": "real_gdp_trn",
+      "year": 2055,
+      "delta": -11.516547145999994
+    },
+    {
+      "mode": "LEGACY",
+      "case": "PARITY_DEPRECIATION_LOW",
+      "metric": "capital_total_real_trn",
+      "year": 2055,
+      "delta": 2.44685542000002
+    },
+    {
+      "mode": "LEGACY",
+      "case": "PARITY_DEPRECIATION_HIGH",
+      "metric": "capital_total_real_trn",
+      "year": 2055,
+      "delta": -3.3143375599997853
+    },
+    {
+      "mode": "LEGACY",
+      "case": "PARITY_INVESTMENT_START2038",
+      "metric": "capital_total_real_trn",
+      "year": 2055,
+      "delta": -1.8075020100000074
+    },
+    {
+      "mode": "LEGACY",
+      "case": "PARITY_INVESTMENT_RESPONSE0",
+      "metric": "capital_total_real_trn",
+      "year": 2055,
+      "delta": -22.902270799999997
+    },
+    {
+      "mode": "LEGACY",
+      "case": "PARITY_INVESTMENT_RESPONSE60",
+      "metric": "capital_total_real_trn",
+      "year": 2055,
+      "delta": 23.128605289999996
+    },
+    {
+      "mode": "LEGACY",
+      "case": "PARITY_LABOR_ADD100K",
+      "metric": "real_gdp_trn",
+      "year": 2055,
+      "delta": 0.5759714939999867
+    },
+    {
+      "mode": "LEGACY",
+      "case": "PARITY_NO_CARRY",
+      "metric": "real_gdp_trn",
+      "year": 2055,
+      "delta": -0.388025583000001
+    },
+    {
+      "mode": "LEGACY",
+      "case": "PARITY_FIXED_BASES",
+      "metric": "real_gdp_trn",
+      "year": 2055,
+      "delta": -0.5171525470000233
+    },
+    {
+      "mode": "FOREIGN_INCOME",
+      "case": "PARITY_MPC_LOW",
+      "metric": "real_gdp_trn",
+      "year": 2055,
+      "delta": 13.839173360000018
+    },
+    {
+      "mode": "FOREIGN_INCOME",
+      "case": "PARITY_MPC_HIGH",
+      "metric": "real_gdp_trn",
+      "year": 2055,
+      "delta": -11.516547145999994
+    },
+    {
+      "mode": "FOREIGN_INCOME",
+      "case": "PARITY_DEPRECIATION_LOW",
+      "metric": "capital_total_real_trn",
+      "year": 2055,
+      "delta": 2.44685542000002
+    },
+    {
+      "mode": "FOREIGN_INCOME",
+      "case": "PARITY_DEPRECIATION_HIGH",
+      "metric": "capital_total_real_trn",
+      "year": 2055,
+      "delta": -3.3143375599997853
+    },
+    {
+      "mode": "FOREIGN_INCOME",
+      "case": "PARITY_INVESTMENT_START2038",
+      "metric": "capital_total_real_trn",
+      "year": 2055,
+      "delta": -1.8075020100000074
+    },
+    {
+      "mode": "FOREIGN_INCOME",
+      "case": "PARITY_INVESTMENT_RESPONSE0",
+      "metric": "capital_total_real_trn",
+      "year": 2055,
+      "delta": -22.902270799999997
+    },
+    {
+      "mode": "FOREIGN_INCOME",
+      "case": "PARITY_INVESTMENT_RESPONSE60",
+      "metric": "capital_total_real_trn",
+      "year": 2055,
+      "delta": 23.128605289999996
+    },
+    {
+      "mode": "FOREIGN_INCOME",
+      "case": "PARITY_LABOR_ADD100K",
+      "metric": "real_gdp_trn",
+      "year": 2055,
+      "delta": 0.5759714939999867
+    },
+    {
+      "mode": "FOREIGN_INCOME",
+      "case": "PARITY_NO_CARRY",
+      "metric": "real_gdp_trn",
+      "year": 2055,
+      "delta": -0.388025583000001
+    },
+    {
+      "mode": "FOREIGN_INCOME",
+      "case": "PARITY_FIXED_BASES",
+      "metric": "real_gdp_trn",
+      "year": 2055,
+      "delta": -0.5171525470000233
+    },
+    {
+      "mode": "ADDITIONAL_VA",
+      "case": "PARITY_MPC_LOW",
+      "metric": "real_gdp_trn",
+      "year": 2055,
+      "delta": 13.838120010000011
+    },
+    {
+      "mode": "ADDITIONAL_VA",
+      "case": "PARITY_MPC_HIGH",
+      "metric": "real_gdp_trn",
+      "year": 2055,
+      "delta": -11.51601746
+    },
+    {
+      "mode": "ADDITIONAL_VA",
+      "case": "PARITY_DEPRECIATION_LOW",
+      "metric": "capital_total_real_trn",
+      "year": 2055,
+      "delta": 2.4597241399999348
+    },
+    {
+      "mode": "ADDITIONAL_VA",
+      "case": "PARITY_DEPRECIATION_HIGH",
+      "metric": "capital_total_real_trn",
+      "year": 2055,
+      "delta": -3.33501109000008
+    },
+    {
+      "mode": "ADDITIONAL_VA",
+      "case": "PARITY_INVESTMENT_START2038",
+      "metric": "capital_total_real_trn",
+      "year": 2055,
+      "delta": -1.8078378499999417
+    },
+    {
+      "mode": "ADDITIONAL_VA",
+      "case": "PARITY_INVESTMENT_RESPONSE0",
+      "metric": "capital_total_real_trn",
+      "year": 2055,
+      "delta": -22.976047710000103
+    },
+    {
+      "mode": "ADDITIONAL_VA",
+      "case": "PARITY_INVESTMENT_RESPONSE60",
+      "metric": "capital_total_real_trn",
+      "year": 2055,
+      "delta": 23.203133879999996
+    },
+    {
+      "mode": "ADDITIONAL_VA",
+      "case": "PARITY_LABOR_ADD100K",
+      "metric": "real_gdp_trn",
+      "year": 2055,
+      "delta": 0.5763274380000212
+    },
+    {
+      "mode": "ADDITIONAL_VA",
+      "case": "PARITY_NO_CARRY",
+      "metric": "real_gdp_trn",
+      "year": 2055,
+      "delta": -0.3916279210000084
+    },
+    {
+      "mode": "ADDITIONAL_VA",
+      "case": "PARITY_FIXED_BASES",
+      "metric": "real_gdp_trn",
+      "year": 2055,
+      "delta": -0.40763886799999227
+    }
+  ]
+}

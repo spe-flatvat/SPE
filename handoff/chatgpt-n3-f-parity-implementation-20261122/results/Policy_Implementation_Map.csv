@@ -1,0 +1,19 @@
+policy,existing,connection,status,boundary
+4A VAT,existing statutory path + price/quantity replacement,VAT rates and household C,EXISTING_CONNECTED,2035 income KPI candidate now connected; threshold unspecified
+4A income30 finance20,survey weighted synthetic bases,HH cash -> smoothed C -> GDP/income/tax,EXTENDED_LAGGED_BASE_CANDIDATE,lag actual wage adjusts policy base; survey allocation not actual nationwide microdata
+4A corporate20/16 AND60/20,firm cells eligibility preserved,tax saving -> dividend/I -> K -> next capacity,EXISTING_CARRY_PLUS_NEW_FIRM_STOCK_AND_LAGGED_PROFIT_BASE,profit/revenue denominator alternatives retained; no coefficient targeting
+4A estate/gift40,reported taxpaying bases only,wealth burden -> candidate MPC -> C,EXISTING_PARTIAL_CONNECTED,full deduction abolition and overlap unestimated
+4A invoice simplification,existing cost interface,transaction cost,STRUCTURE_ONLY,hours/compliance baseline absent; no fabricated saving
+4B pension75,protected cohorts + contribution diversion + reserve,fund -> payout -> HH C; four source candidates,EXTENDED_LAGGED_WAGE_CONTRIBUTION_BASE,four ownership modes unadopted; no second premium charge
+4B medical50/cap,amount and rate interpolation candidates,patient/public/insurer -> HH C/VA/labor,EXISTING_CONNECTED,patient cap down/up interpretation alternatives retained
+4B common palliative,unchanged fixed common module,clinical resource and cash -> macro,EXISTING_CONNECTED,autonomy and beneficiary protection preserved
+4B semi medical,claim/premium reclassification + optional reserve,fund stock -> matching payer accounts,EXISTING_PARTIAL_CONNECTED,no assumed efficiency or nonexistent public saving
+4B EITC/relief/in-kind,income<=5m threshold; relief candidate,HH expense substitution + government/insurer,EXTENDED_INCOME_BASE_AND_EXTERNAL_GINI_TRIGGER,EITC baseline null; increment/duration candidate only
+4B co-op 10-15 blocks,existing 12-block candidate interface,institutional partition,STRUCTURE_ONLY,regional claims and cost input unavailable
+4C employment anchor,regularization/additional jobs separate,payroll -> HH/expense; additional effective labor,EXISTING_CONNECTED_PLUS_LABOR_SENSITIVITY,regularization never additional jobs
+4C foreign5% N4 regional,wagebill/VA cap candidates and retention,additional service VA once; population/labor bridge,EXISTING_PARTIAL_CONNECTED,ratio definition and medical/housing/social/family cost OPEN; no second wage/GDP
+4D smart shrink,density productivity cost ranking,investment priority interface,STRUCTURE_ONLY,no national investment envelope/return assumption
+6/7 income KPI,lagged real cash income per capita 2034/2033,2035 evaluation -> sticky VAT freeze,NEW_CONNECTED_CANDIDATE,old GDP signal case retained; no future observation
+7 Gini KPI,lagged external observation,candidate relief increment in 2035,NEW_CONDITIONAL_EXECUTION,national Gini remains null; no inferred distribution metric
+7 insurance KPI,explicit candidate return floor,underperformance -> competition signal,STRUCTURE_ONLY_SIGNAL_EXECUTED,no invented competition productivity gain
+9 simulation conditions,common initial/risk baseline unchanged,shared annual risk/labor engine,REUSED_NOT_POLICY_MECHANISM,no SQ growth diagnosis or common engine redesign

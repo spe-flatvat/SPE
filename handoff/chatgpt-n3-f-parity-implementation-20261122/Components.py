@@ -28,9 +28,16 @@ class Components(old.Components):
   self.gini_relief=gini_trigger if y==2035 else self.gini_relief and y<=spec.get('gini_relief_end_candidate',2035)
   if self.gini_relief and spec.get('gini_relief_increment_candidate') is not None:
    cfg['relief_maximum']=min(1.,cfg.get('relief_maximum',.35)+spec['gini_relief_increment_candidate'])
+  # Generic macro taxes already respond to income. Scale BOTH the reform tax
+  # and its SQ comparison tax: only the policy tax wedge is passed again.
+  hh_before=self.hh
+  if dynamic:
+   self.hh=copy.deepcopy(hh_before)
+   for key in ['income_tax_mean_paid_yen','local_tax_mean_paid_yen']:
+    self.hh['stats'][key]=[v*wage for v in hh_before['stats'][key]]
   self.cfg=cfg
   try:r=super().step(y,md,prior)
-  finally:self.cfg=before
+  finally:self.cfg=before;self.hh=hh_before
   if active:
    r['n3_effective_labor_delta']=r['public_added_jobs']*spec.get('labor_effectiveness',.8)
    # Policy's 2035 evaluation uses lagged income, not GDP growth or future GDP.

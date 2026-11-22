@@ -9,5 +9,6 @@ def run(macro,out):
  s=s.replace(needle,"for mode in MODES:assert len(annual[mode])==30*(14+len(json.loads((PARITY/'Inputs.json').read_text())['cases']))")
  s=s.replace("'REEXECUTED_PINNED_79_CASE_MACRO'","'N3_PARITY_ANNUAL_BASE_ADAPTER_CANDIDATES'")
  ns={'__file__':str(old),'__name__':'pinned_national_fiscal_parity','PARITY':P};exec(compile(s,str(old),'exec'),ns);ns['main'](macro,out)
+ summary=out/'Execution_Summary.json';meta=json.loads(summary.read_text());count=14+len(json.loads((P/'Inputs.json').read_text())['cases']);meta.update(macro_cases_per_mode=count,macro_case_years=count*30*4,basic_annual_rows=count*30);summary.write_text(json.dumps(meta,indent=2)+'\n')
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--macro',type=Path,required=True);p.add_argument('--outdir',type=Path,required=True);a=p.parse_args();run(a.macro,a.outdir)

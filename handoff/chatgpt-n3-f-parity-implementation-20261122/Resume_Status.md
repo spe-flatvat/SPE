@@ -1,7 +1,3 @@
-# N3 F-parity implementation checkpoint
+# Resume status
 
-DRAFT / NON-CANONICAL. Owner execution instruction: 92b72ed0a4ea743aca477d7f6d0006e733c9969c.
-
-Code and candidate inputs created. Smoke execution completed for SQ_COMMON_ON and PARITY_CONNECTED_CANDIDATE (2 cases x 30 years). Full four pension ownership candidate runs are in progress; no final validation or completion claim yet.
-
-Resume from this directory's Model.py / Inputs.json. Reproduce.py runs the four modes, fiscal adapter, results and verification; Results.py and Verify.py are still to be completed at this checkpoint. Existing 79 cases and source fiscal assumptions retained. Source draft fixed at 3c77eafc2073fdaba4c129164817d2f57c9421b9; source engine at 92b72ed0a4ea743aca477d7f6d0006e733c9969c, dependency byte pins retained. Read current files and logs before re-running. No policy adoption, Acceptance, Close, HOLD/PENDING change.
+DRAFT / NON-CANONICAL。103 cases x30 years x4 pension ownership modes executed; conditional fiscal recalculated. Final implementation checks PASS and old79 regression exact. See Report.md, results/Verification.json, Replay_Verification.json. Pending only final GitHub delivery / fixed-object postfetch SHA256 verification at the time this file was generated. Resume from existing GitHub commit and files; do not repeat completed calculations unless code/input changes or verification requires it. Source/raw local work remains under run/; selected individual originals are under results/. No policy adoption or gate state change.

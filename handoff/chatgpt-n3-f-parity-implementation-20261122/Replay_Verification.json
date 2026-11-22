@@ -1,0 +1,105 @@
+{
+  "status": "PASS_LOCAL_REEXECUTION",
+  "cases": [
+    "SQ_COMMON_ON",
+    "PARITY_CONNECTED_CANDIDATE"
+  ],
+  "years": [
+    2026,
+    2055
+  ],
+  "csv_files": 18,
+  "comparisons": [
+    {
+      "file": "Gap_Foreign_Bridge.csv",
+      "rows": 0,
+      "exact_cell_records_equal": true
+    },
+    {
+      "file": "Gap_Annual.csv",
+      "rows": 60,
+      "exact_cell_records_equal": true
+    },
+    {
+      "file": "Gap_Semi_Medical.csv",
+      "rows": 30,
+      "exact_cell_records_equal": true
+    },
+    {
+      "file": "Dynamic_Base_Audit.csv",
+      "rows": 60,
+      "exact_cell_records_equal": true
+    },
+    {
+      "file": "Gap_Common.csv",
+      "rows": 60,
+      "exact_cell_records_equal": true
+    },
+    {
+      "file": "Gap_Additional_Accounts.csv",
+      "rows": 60,
+      "exact_cell_records_equal": true
+    },
+    {
+      "file": "Gap_vs_SQ.csv",
+      "rows": 60,
+      "exact_cell_records_equal": true
+    },
+    {
+      "file": "N3_Policy_Accounts.csv",
+      "rows": 60,
+      "exact_cell_records_equal": true
+    },
+    {
+      "file": "N3_Engine_Accounts.csv",
+      "rows": 60,
+      "exact_cell_records_equal": true
+    },
+    {
+      "file": "N3_VAT_Sectors.csv",
+      "rows": 300,
+      "exact_cell_records_equal": true
+    },
+    {
+      "file": "Corporate_Funding_Stock.csv",
+      "rows": 30,
+      "exact_cell_records_equal": true
+    },
+    {
+      "file": "N3_Claim_Candidate_Audit.csv",
+      "rows": 0,
+      "exact_cell_records_equal": true
+    },
+    {
+      "file": "N3_Structural_Interfaces.csv",
+      "rows": 60,
+      "exact_cell_records_equal": true
+    },
+    {
+      "file": "N3_Pension_Accounts.csv",
+      "rows": 30,
+      "exact_cell_records_equal": true
+    },
+    {
+      "file": "N3_Corporate_Accounts.csv",
+      "rows": 90,
+      "exact_cell_records_equal": true
+    },
+    {
+      "file": "KPI_Events.csv",
+      "rows": 30,
+      "exact_cell_records_equal": true
+    },
+    {
+      "file": "N3_VAT_Regular_Quantity.csv",
+      "rows": 180,
+      "exact_cell_records_equal": true
+    },
+    {
+      "file": "N3_Income_Distribution.csv",
+      "rows": 870,
+      "exact_cell_records_equal": true
+    }
+  ],
+  "independent_review": false
+}

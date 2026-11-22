@@ -30,5 +30,8 @@ def run(inputs,engine,source,out):
  ns={'__file__':str(old),'__name__':'n3_parity_runtime'}
  exec(compile(text,str(P/'Model.py'), 'exec'),ns)
  ns['run'](inputs,engine,source,out)
+ meta_path=Path(out)/'Execution_Metadata.json';meta=json.loads(meta_path.read_text());cfg=json.loads(Path(inputs).read_text())
+ meta.update(scope='N3_F_PARITY_FUNCTIONAL_CANDIDATE_CONNECTIONS',case_partition='14 original + 65 existing extensions + 24 parity candidates = 103; execution filter may select a subset',selected_run=__import__('os').environ.get('SPE_PENSION_MODE','DOMESTIC_TRANSFER')+'_CANDIDATE_NOT_ADOPTED')
+ meta_path.write_text(json.dumps(meta,indent=2)+'\n')
 if __name__=='__main__':
  a=argparse.ArgumentParser();a.add_argument('inputs');a.add_argument('--engine',required=True);a.add_argument('--source',required=True);a.add_argument('--outdir',required=True);x=a.parse_args();run(x.inputs,x.engine,x.source,x.outdir)

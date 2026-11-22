@@ -8,7 +8,6 @@ def patch(source,s):
   assert source.count(a)==1,a
   source=source.replace(a,b)
  # Emit same runtime source for inspection before any annual execution.
- if s['id']=='PARITY_CONNECTED_CANDIDATE':(P/'Resolved_Macro_Source.py.txt').write_text(source)
  active=s['id'].startswith('PARITY_')
  if active:
   sub("p,bprof,mig,enabled,omit=configure(c,spec);", "p,bprof,mig,enabled,omit=configure(c,spec);p.update(_parity_spec.get('macro_overrides',{}));")

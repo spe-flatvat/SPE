@@ -1,0 +1,22 @@
+{
+  "status": "EXECUTED_ANNUAL_CANDIDATES",
+  "cases_per_mode": 103,
+  "modes": [
+    "DOMESTIC_TRANSFER",
+    "LEGACY",
+    "FOREIGN_INCOME",
+    "ADDITIONAL_VA"
+  ],
+  "annual_rows": 12360,
+  "years": [
+    2026,
+    2055
+  ],
+  "legacy79_changed_cells": 0,
+  "python": "3.12.14",
+  "source_fixed_commit": "3c77eafc2073fdaba4c129164817d2f57c9421b9",
+  "input_engine_commit": "92b72ed0a4ea743aca477d7f6d0006e733c9969c",
+  "F_fixed_commit": "ff6210061615105de9a0d64767c256796be80ed2",
+  "F_reexecuted": false,
+  "independent_verification": false
+}

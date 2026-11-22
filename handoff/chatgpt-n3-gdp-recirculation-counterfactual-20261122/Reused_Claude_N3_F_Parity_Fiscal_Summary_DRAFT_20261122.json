@@ -1,0 +1,130 @@
+{
+ "total": 52,
+ "pass_": 52,
+ "fail": 0,
+ "failed_ids": [],
+ "by_area": {
+  "S": {
+   "total": 21,
+   "fail": 0
+  },
+  "F": {
+   "total": 6,
+   "fail": 0
+  },
+  "A": {
+   "total": 13,
+   "fail": 0
+  },
+  "T": {
+   "total": 8,
+   "fail": 0
+  },
+  "N": {
+   "total": 4,
+   "fail": 0
+  }
+ },
+ "recomputed_nonnull_rows": 29550,
+ "fiscal_rows": 31110,
+ "observations": [
+  "Baseline SFA 2026-2040 (trn): 2026:20.7, 2027:9.2, 2028:11.7, 2029:13.2, 2030:13.9, 2031:13.4, 2032:13.8, 2033:14.1, 2034:14.4, 2035:14.4, 2036:14.3, 2037:14.2, 2038:14.0, 2039:13.6, 2040:13.4; sum=208.3; assumed 0 from 2041 in tail",
+  "Official nominal GDP FY2026 = 689.3 vs SPE common SQ 2026 nominal GDP (see D)",
+  "GFS FY2024 GG PB(SNA)=-8.192 net lending=-8.912; central+local PB candidate (this model) is a different boundary (excludes social security funds) -> not comparable with GG.",
+  "Statistical_Cell_Map central_GA_* and local_ordinary_* rows (rows 28-48 of the detail sheet) belong to the general-account / ordinary-account tables whose basis (excluding vs including recon/GX/AI) is not stated; they are carried in Official_Fiscal_Baseline but NOT used by the fiscal runtime.",
+  "old-vs-new fiscal CSV columns that differ (count of rows): {\"macro_source\": 23700} ; label-only columns excluded from N01: macro_source",
+  "first year of zero candidate debt (DOMESTIC_TRANSFER, reference scenario): {\"SQ_COMMON_ON\": null, \"F_FIXED_REFERENCE\": null, \"N3_CONNECTED_COMPONENTS_A\": 2052, \"CONNECTED_Q_ESTATE_SEMI\": 2047, \"PARITY_CONNECTED_CANDIDATE\": 2047, \"PARITY_FIXED_BASES\": 2047, \"PARITY_NO_FLAT\": null, \"PARITY_NO_CORPORATE\": 2046}"
+ ],
+ "stress": [
+  {
+   "case": "PARITY_CONNECTED_CANDIDATE",
+   "policy_primary_delta_scale": 1.0,
+   "debt_end_2055": 0.0
+  },
+  {
+   "case": "PARITY_CONNECTED_CANDIDATE",
+   "policy_primary_delta_scale": 0.9,
+   "debt_end_2055": 0.0
+  },
+  {
+   "case": "PARITY_CONNECTED_CANDIDATE",
+   "policy_primary_delta_scale": 0.8,
+   "debt_end_2055": 0.0
+  },
+  {
+   "case": "PARITY_CONNECTED_CANDIDATE",
+   "policy_primary_delta_scale": 0.5,
+   "debt_end_2055": 539.418497203256
+  },
+  {
+   "case": "PARITY_CONNECTED_CANDIDATE",
+   "policy_primary_delta_scale": 0.0,
+   "debt_end_2055": 2337.5999999999985
+  },
+  {
+   "case": "PARITY_CONNECTED_CANDIDATE",
+   "policy_primary_delta_scale": "BREAK_EVEN_SCALE_FOR_ZERO_DEBT_2055",
+   "debt_end_2055": 0.64999
+  },
+  {
+   "case": "N3_CONNECTED_COMPONENTS_A",
+   "policy_primary_delta_scale": 1.0,
+   "debt_end_2055": 0.0
+  },
+  {
+   "case": "N3_CONNECTED_COMPONENTS_A",
+   "policy_primary_delta_scale": 0.9,
+   "debt_end_2055": 0.0
+  },
+  {
+   "case": "N3_CONNECTED_COMPONENTS_A",
+   "policy_primary_delta_scale": 0.8,
+   "debt_end_2055": 50.73818753376182
+  },
+  {
+   "case": "N3_CONNECTED_COMPONENTS_A",
+   "policy_primary_delta_scale": 0.5,
+   "debt_end_2055": 908.311367208602
+  },
+  {
+   "case": "N3_CONNECTED_COMPONENTS_A",
+   "policy_primary_delta_scale": 0.0,
+   "debt_end_2055": 2337.5999999999985
+  },
+  {
+   "case": "N3_CONNECTED_COMPONENTS_A",
+   "policy_primary_delta_scale": "BREAK_EVEN_SCALE_FOR_ZERO_DEBT_2055",
+   "debt_end_2055": 0.817749
+  },
+  {
+   "case": "CONNECTED_Q_ESTATE_SEMI",
+   "policy_primary_delta_scale": 1.0,
+   "debt_end_2055": 0.0
+  },
+  {
+   "case": "CONNECTED_Q_ESTATE_SEMI",
+   "policy_primary_delta_scale": 0.9,
+   "debt_end_2055": 0.0
+  },
+  {
+   "case": "CONNECTED_Q_ESTATE_SEMI",
+   "policy_primary_delta_scale": 0.8,
+   "debt_end_2055": 0.0
+  },
+  {
+   "case": "CONNECTED_Q_ESTATE_SEMI",
+   "policy_primary_delta_scale": 0.5,
+   "debt_end_2055": 519.2378025519859
+  },
+  {
+   "case": "CONNECTED_Q_ESTATE_SEMI",
+   "policy_primary_delta_scale": 0.0,
+   "debt_end_2055": 2337.5999999999985
+  },
+  {
+   "case": "CONNECTED_Q_ESTATE_SEMI",
+   "policy_primary_delta_scale": "BREAK_EVEN_SCALE_FOR_ZERO_DEBT_2055",
+   "debt_end_2055": 0.642776
+  }
+ ]
+}

@@ -1,0 +1,10 @@
+done SQ_COMMON_ON
+done PARITY_CONNECTED_CANDIDATE
+done SQ_COMMON_ON
+done PARITY_DIAG_KPI_LOW
+done PARITY_DIAG_KPI_REPORTED_EQUAL
+done PARITY_DIAG_KPI_HIGH
+COMPLETE 120
+COMPLETE 60
+RECIRCULATION_PASS 12311 checks 29 cases 870 annual rows
+CONTINUATION_FRESH_EXECUTION: 11 inherited CSV/Markdown artifacts byte-identical; original tracked files unchanged.

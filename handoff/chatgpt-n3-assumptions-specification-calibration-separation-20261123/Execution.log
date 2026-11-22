@@ -1,0 +1,27 @@
+{"case": "BASE_REPLAY", "checks": 1738, "failed": 0, "GDPgap2030": -7.595361130529454, "GDPgap2055": -44.97084476326535}
+{"case": "FIRM_050", "checks": 1078, "failed": 0, "GDPgap2030": -7.595361130529454, "GDPgap2055": -45.71092316200878}
+{"case": "FIRM_100", "checks": 1078, "failed": 0, "GDPgap2030": -7.595361130529454, "GDPgap2055": -44.22866458227878}
+{"case": "JOBS_050K", "checks": 1078, "failed": 0, "GDPgap2030": -7.598100018588752, "GDPgap2055": -44.99546374431742}
+{"case": "JOBS_150K", "checks": 1078, "failed": 0, "GDPgap2030": -7.592622242470156, "GDPgap2055": -44.946225782315196}
+{"case": "WAGE_GAP_050M", "checks": 1078, "failed": 0, "GDPgap2030": -7.598100018588752, "GDPgap2055": -44.99546374431742}
+{"case": "WAGE_GAP_150M", "checks": 1078, "failed": 0, "GDPgap2030": -7.592622242470156, "GDPgap2055": -44.946225782315196}
+{"case": "EMP_RAMP3", "checks": 1198, "failed": 0, "GDPgap2030": -7.589883354410858, "GDPgap2055": -44.97084379389497}
+{"case": "EMP_RAMP9", "checks": 1078, "failed": 0, "GDPgap2030": -7.5971870559023955, "GDPgap2055": -44.97084784014521}
+{"case": "INKIND_15K", "checks": 1078, "failed": 0, "GDPgap2030": -7.63117251959784, "GDPgap2055": -45.05502070197366}
+{"case": "INKIND_45K", "checks": 1078, "failed": 0, "GDPgap2030": -7.559549741461296, "GDPgap2055": -44.886668825976585}
+{"case": "INKIND_SUB050", "checks": 1078, "failed": 0, "GDPgap2030": -7.601413759667821, "GDPgap2055": -44.9971645636781}
+{"case": "INKIND_SUB090", "checks": 1078, "failed": 0, "GDPgap2030": -7.589308501391315, "GDPgap2055": -44.944524962995956}
+{"case": "PENSION_PUBLIC025", "checks": 1078, "failed": 0, "GDPgap2030": -7.595361130529454, "GDPgap2055": -44.97084476326535}
+{"case": "PENSION_PUBLIC075", "checks": 1078, "failed": 0, "GDPgap2030": -7.595361130529454, "GDPgap2055": -44.97084476326535}
+{"case": "PENSION_RETURN001", "checks": 1078, "failed": 0, "GDPgap2030": -7.595361130529454, "GDPgap2055": -44.1401530150826}
+{"case": "PENSION_RETURN003", "checks": 1078, "failed": 0, "GDPgap2030": -7.595361130529454, "GDPgap2055": -45.95673247128468}
+{"case": "RELIEF0175", "checks": 1078, "failed": 0, "GDPgap2030": -7.636517962501216, "GDPgap2055": -45.028380559891275}
+{"case": "RELIEF0525", "checks": 1078, "failed": 0, "GDPgap2030": -7.554204298557806, "GDPgap2055": -44.913313717381584}
+{"case": "MED_PUBLIC025", "checks": 1078, "failed": 0, "GDPgap2030": -7.595361130529454, "GDPgap2055": -44.824230366231234}
+{"case": "MED_PUBLIC075", "checks": 1078, "failed": 0, "GDPgap2030": -7.595361130529454, "GDPgap2055": -45.11745916384916}
+{"case": "INSURER_BACKFILL_ON", "checks": 1078, "failed": 0, "GDPgap2030": -7.595361130529454, "GDPgap2055": -44.97084476326535}
+{"case": "INTEREST001", "checks": 1078, "failed": 0, "GDPgap2030": -7.595361130529454, "GDPgap2055": -44.97084476326535}
+{"case": "INTEREST003", "checks": 1078, "failed": 0, "GDPgap2030": -7.595361130529454, "GDPgap2055": -44.97084476326535}
+{"case": "GI_INACTIVE_CONTROL", "checks": 1738, "failed": 0, "GDPgap2030": -7.595361130529454, "GDPgap2055": -44.97084476326535}
+{"case": "ROLLOVER020", "checks": 1709, "failed": 0, "GDPgap2030": -7.595361130529454, "GDPgap2055": -44.97084476326535}
+{"status": "PASS_ISOLATED_MECHANICAL_SENSITIVITIES", "executed_cases": 26, "sensitivity_cases": 25, "executed_annual_rows": 780, "checks": 32439, "failed": 0, "failures": [], "reused_prior_checks": [1754, 5990], "reused_fixed_reference_rows": 120, "parameter_inventory_rows": 97, "policy_coverage_rows": 22, "source_files_rechecked": 46, "policy_text_tax_rates_deductions_or_common_engine_modified": false, "additional_GI_in_sensitivity": false, "policy_adopted": false, "national_calibration_completed": false, "note": "individual scenario sensitivities, no probability weights or confidence intervals; negatives controls not independent policy effects"}

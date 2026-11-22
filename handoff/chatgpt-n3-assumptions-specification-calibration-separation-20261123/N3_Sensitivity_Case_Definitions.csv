@@ -1,0 +1,27 @@
+case,group,change,config,runtime,medical_spec,adoption_status,GI_mode,original_rates_unchanged
+BASE_REPLAY,BASE,none,{},{},{},MECHANICAL_TEST_UNADOPTED,OFF,True
+FIRM_050,FIRM,0.75 minus0.25 of residual flow; not corporate eligibility20%,{},"{""firm_rate"": 0.5}",{},MECHANICAL_TEST_UNADOPTED,OFF,True
+FIRM_100,FIRM,0.75 plus0.25 within funded residual; not corporate eligibility20%,{},"{""firm_rate"": 1.0}",{},MECHANICAL_TEST_UNADOPTED,OFF,True
+JOBS_050K,JOBS,100000 minus50%; REGULARIZE only; net new jobs0,"{""public_job_target"": 50000}",{},{},MECHANICAL_TEST_UNADOPTED,OFF,True
+JOBS_150K,JOBS,100000 plus50%; REGULARIZE only; net new jobs0,"{""public_job_target"": 150000}",{},{},MECHANICAL_TEST_UNADOPTED,OFF,True
+WAGE_GAP_050M,WAGE_GAP,old3m unchanged; gap1m minus50%; nominal reference yen,"{""public_new_wage_yen"": 3500000}",{},{},MECHANICAL_TEST_UNADOPTED,OFF,True
+WAGE_GAP_150M,WAGE_GAP,old3m unchanged; gap1m plus50%; nominal reference yen,"{""public_new_wage_yen"": 4500000}",{},{},MECHANICAL_TEST_UNADOPTED,OFF,True
+EMP_RAMP3,EMP_RAMP,"legacy ramp6 minus3; existing previous conditional option, not adopted annual allocation","{""employment_ramp"": 3}",{},{},MECHANICAL_TEST_UNADOPTED,OFF,True
+EMP_RAMP9,EMP_RAMP,legacy ramp6 plus3; crosses phase1; test only,"{""employment_ramp"": 9}",{},{},MECHANICAL_TEST_UNADOPTED,OFF,True
+INKIND_15K,INKIND_AMOUNT,30000 minus50%; government cost and HH/service both vary once,"{""in_kind_yen"": 15000}",{},{},MECHANICAL_TEST_UNADOPTED,OFF,True
+INKIND_45K,INKIND_AMOUNT,30000 plus50%; government cost and HH/service both vary once,"{""in_kind_yen"": 45000}",{},{},MECHANICAL_TEST_UNADOPTED,OFF,True
+INKIND_SUB050,INKIND_SUBSTITUTION,0.7 minus0.2; service fraction simultaneously0.5 instead of0.3; linked allocation,"{""in_kind_substitution"": 0.5}",{},{},MECHANICAL_TEST_UNADOPTED,OFF,True
+INKIND_SUB090,INKIND_SUBSTITUTION,0.7 plus0.2; service fraction simultaneously0.1 instead of0.3; linked allocation,"{""in_kind_substitution"": 0.9}",{},{},MECHANICAL_TEST_UNADOPTED,OFF,True
+PENSION_PUBLIC025,PENSION_PAYER,government0.5 minus0.25; insurer share complementary0.75; NOT central/local split,"{""pension_public_share"": 0.25}",{},{},MECHANICAL_TEST_UNADOPTED,OFF,True
+PENSION_PUBLIC075,PENSION_PAYER,government0.5 plus0.25; insurer share complementary0.25; NOT central/local split,"{""pension_public_share"": 0.75}",{},{},MECHANICAL_TEST_UNADOPTED,OFF,True
+PENSION_RETURN001,PENSION_RETURN,0.02 minus0.01; matching domestic HH property-income debit retained,"{""fund_return"": 0.01}",{},{},MECHANICAL_TEST_UNADOPTED,OFF,True
+PENSION_RETURN003,PENSION_RETURN,0.02 plus0.01; matching domestic HH property-income debit retained,"{""fund_return"": 0.03}",{},{},MECHANICAL_TEST_UNADOPTED,OFF,True
+RELIEF0175,RELIEF,0.35 minus50%; existing insured household/insurer counterpart,"{""relief_maximum"": 0.175}",{},{},MECHANICAL_TEST_UNADOPTED,OFF,True
+RELIEF0525,RELIEF,0.35 plus50%; existing insured household/insurer counterpart,"{""relief_maximum"": 0.525}",{},{},MECHANICAL_TEST_UNADOPTED,OFF,True
+MED_PUBLIC025,MEDICAL_PAYER,0.5 minus0.25; insurer complement and premium/financing feedback linked; original patient50% unchanged,{},{},"{""clinical_public_fraction"": 0.25}",MECHANICAL_TEST_UNADOPTED,OFF,True
+MED_PUBLIC075,MEDICAL_PAYER,0.5 plus0.25; insurer complement and premium/financing feedback linked; original patient50% unchanged,{},{},"{""clinical_public_fraction"": 0.75}",MECHANICAL_TEST_UNADOPTED,OFF,True
+INSURER_BACKFILL_ON,INSURER_BACKFILL,False to True boundary; whole negative insurer ledger financed by government; ownership choice unadopted,{},"{""backfill"": true}",{},MECHANICAL_TEST_UNADOPTED,OFF,True
+INTEREST001,INTEREST,"0.02 minus0.01; LEGACY_EXCESS_ONLY debt excess and asset interest, not policy rate",{},"{""rate"": 0.01}",{},MECHANICAL_TEST_UNADOPTED,OFF,True
+INTEREST003,INTEREST,"0.02 plus0.01; LEGACY_EXCESS_ONLY debt excess and asset interest, not policy rate",{},"{""rate"": 0.03}",{},MECHANICAL_TEST_UNADOPTED,OFF,True
+GI_INACTIVE_CONTROL,INACTIVE_CONTROL,"bundle changes allocation parameters while authority G/I0 and cash_part override remain; negative control, not independent effects",{},"{""cash_basis"": ""DEBT_NONINCREASE"", ""domestic"": 0.4, ""g_share"": 0.25, ""lag"": 2, ""pi_share"": 0.125, ""yield_public"": 0.05}",{},MECHANICAL_TEST_UNADOPTED,OFF,True
+ROLLOVER020,GROSS_FLOW_ONLY,gross refinancing0.1 to0.2; economic/net-debt neutrality expected; gross issue changes,{},"{""rollover"": 0.2}",{},MECHANICAL_TEST_UNADOPTED,OFF,True

@@ -1,0 +1,22 @@
+{
+  "status": "PASS_ISOLATED_MECHANICAL_SENSITIVITIES",
+  "executed_cases": 26,
+  "sensitivity_cases": 25,
+  "executed_annual_rows": 780,
+  "checks": 32439,
+  "failed": 0,
+  "failures": [],
+  "reused_prior_checks": [
+    1754,
+    5990
+  ],
+  "reused_fixed_reference_rows": 120,
+  "parameter_inventory_rows": 97,
+  "policy_coverage_rows": 22,
+  "source_files_rechecked": 46,
+  "policy_text_tax_rates_deductions_or_common_engine_modified": false,
+  "additional_GI_in_sensitivity": false,
+  "policy_adopted": false,
+  "national_calibration_completed": false,
+  "note": "individual scenario sensitivities, no probability weights or confidence intervals; negatives controls not independent policy effects"
+}

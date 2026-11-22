@@ -1,0 +1,370 @@
+[
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Components.py",
+    "size_bytes": 5528,
+    "sha256": "ec5640f9512486274122e32aacd7ca548273b23b94035710fd56949b8ea37588",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/results/Conditional_National_Local_Fiscal.csv",
+    "size_bytes": 9458004,
+    "sha256": "db7c24ba77bc36c313612dcaf1c7882bace91cb15917020989af906053a1e7db",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/results/DOMESTIC_TRANSFER_Corporate_Funding_Stock.csv",
+    "size_bytes": 130330,
+    "sha256": "a5baccddcca220a6e045926c6e00fe30e59232c255a0d724c78818b1f1c542a0",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-gdp-recirculation-counterfactual-20261122/N3_GDP_Recirculation_Annual_Comparison_2026_2055.csv",
+    "size_bytes": 838241,
+    "sha256": "f5bfe6590354c0c625489dd40b4708b5d018a71e224dd3294977d074796dd9c7",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-gdp-recirculation-counterfactual-20261122/N3_GDP_Recirculation_Reproduce.py",
+    "size_bytes": 45477,
+    "sha256": "e1ffcadb5409f2d796c72a43ebdff7bd5ac0eec672d00969ce1aef6b5a2ef583",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-gdp-robustness-fiscal-dynamics-20261122/Component_Initialization.json",
+    "size_bytes": 63605,
+    "sha256": "5cef89b278560d6c33fc416d2067f72ac00fe6fcfce28f58f197e2a424482d80",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-gdp-robustness-fiscal-dynamics-20261122/N3_GDP_Robustness_Reproduce.py",
+    "size_bytes": 42183,
+    "sha256": "9bc03585bd23f4eebf06ae98f191c92785ec85f8f67e6a2124ab6637bed3c866",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_Components.py",
+    "size_bytes": 12416,
+    "sha256": "3da949845436180fb2038e109afe9d01c66c5c9ca064dad548326777ea4a9519",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-native-policy-completion-20261123/Artifact_Manifest.json",
+    "size_bytes": 4856,
+    "sha256": "f40da9e3dac9ddc2aaca66862f54acf026becef1739de92b6582f0f254238ef2",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-native-policy-completion-20261123/Completion_Inputs_And_Case_Definitions.json",
+    "size_bytes": 3752,
+    "sha256": "6c825d0e7eac30b09ed53e4cbfdf5bd8ddb848af90dede9f37615de04fe282f0",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-native-policy-completion-20261123/Custody_Verification.json",
+    "size_bytes": 5809,
+    "sha256": "19713838f7a3a53c0ff6ee67bfda3283d06dbf8b7de976871d4ebb394cc6d086",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-native-policy-completion-20261123/Execution.log",
+    "size_bytes": 547,
+    "sha256": "0d50ec0fdfd23c398f0ca8530757fb177773f6f284e7bc0694c00563290880af",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-native-policy-completion-20261123/Function_Test_Results.csv",
+    "size_bytes": 968,
+    "sha256": "d2061f795684a577673d44a2e8b58fd5af897341cde742db0eed61b60e11ab75",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-native-policy-completion-20261123/Input_Source_Receipts.json",
+    "size_bytes": 325199,
+    "sha256": "1f00d693caa840bc40edcc1dc31c41399e717718b1d40a22202b2517f39d63bd",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-native-policy-completion-20261123/N3_22_Policy_Coverage_Before_After.csv",
+    "size_bytes": 10453,
+    "sha256": "545f88c5290b1ecce4130c7c5ecc772e34397870fef84493bb40af4bef3195a6",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-native-policy-completion-20261123/N3_Annual_Executable_Functions.csv",
+    "size_bytes": 13613,
+    "sha256": "6d694d922b3f753a7d76a4080c5426a822f526580018b3426954d44696d5a467",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-native-policy-completion-20261123/N3_Completion_Fiscal_Cash_Debt_Ledger.csv",
+    "size_bytes": 32128,
+    "sha256": "aaae15762de3d6e3c94fbc785b961641336bb212b6575e771ee74c29dee2ab44",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-native-policy-completion-20261123/N3_Completion_Numeric_Differences.csv",
+    "size_bytes": 92915,
+    "sha256": "cd91afab43144c46ade16a9fd694f8801ef1727a8e3f08579490dbaeed8fcd57",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-native-policy-completion-20261123/N3_Completion_Tax_And_Medical_Connections.csv",
+    "size_bytes": 22514,
+    "sha256": "3d6137aa414bea996fb0cab7d3d94239cd5f3482bdb1452210ee1ce9773cecfd",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-native-policy-completion-20261123/N3_Completion_Tax_Bridge.csv",
+    "size_bytes": 27879,
+    "sha256": "2bffd93159905f2d5d856c114204e2124ad3cb87a4828b508fc829881b4f7136",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-native-policy-completion-20261123/N3_Implemented_Functions_And_Residual_Unknowns.csv",
+    "size_bytes": 11685,
+    "sha256": "7662829f800b3416ed6a84c7f8a1c49366f51393f29de96053736afed06c2727",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-native-policy-completion-20261123/N3_Native_Completion_Annual_Comparison_2026_2055.csv",
+    "size_bytes": 161498,
+    "sha256": "7dbad134939e328a754436b243cfcbb248c84f413cd3d00f55e88433962b7682",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-native-policy-completion-20261123/N3_Native_Completion_Case_Summary.csv",
+    "size_bytes": 5044,
+    "sha256": "9212a1ac335a3457221c57d2c02b9e71595ce487b8fe83ed60a6c7bc0d214feb",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-native-policy-completion-20261123/N3_Native_Completion_Reproduce.py",
+    "size_bytes": 21036,
+    "sha256": "489d81e8be3dd60865ce17f77a425a0ff64e22c95bace27a2e53b397f26673f7",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-native-policy-completion-20261123/N3_Pension_Annual_Accounts.csv",
+    "size_bytes": 22797,
+    "sha256": "be2f21fb18d985ea95fe12dab9751823a8308b3494ebdc9b98f24177e7e8629c",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-native-policy-completion-20261123/N3_Policy_Annual_Accounts.csv",
+    "size_bytes": 41282,
+    "sha256": "d6b1299c7b684b54445016ee827d97b3c212b068397578c4acf0823536cbb4c9",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-native-policy-completion-20261123/Native_Supported_Functions.py",
+    "size_bytes": 3762,
+    "sha256": "8903198713664f7ad81be89c18b01d551848ff890b3158217359f8df3aaaa091",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-native-policy-completion-20261123/Reproduction_Verification.json",
+    "size_bytes": 3429,
+    "sha256": "a95f22f24051cf01b5c17acf2ee08454af567c6d304670ae3f992a1a9897ad15",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-native-policy-completion-20261123/SPE_N3_Native_Policy_Implementation_Completion_Report_DRAFT_20261123.md",
+    "size_bytes": 5970,
+    "sha256": "8676cf4515191bd1fc478c497babb4f39d54145784f032b2faa19b9b56640530",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-native-policy-completion-20261123/Smart_Compact_Partial_Order.csv",
+    "size_bytes": 248,
+    "sha256": "0b006aa9e5c33628f51f2d793c1ee07095e16855ed61251df6cc8bc1294b41a4",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-native-policy-completion-20261123/Verification.json",
+    "size_bytes": 583,
+    "sha256": "e8643d50982005b191a793978447c9d7ca2345af6ee6c278ba0437c1ac39a020",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-native-vs-diagnostic-separation-20261123/Resolved_Separation_Runtime.py.txt",
+    "size_bytes": 16403,
+    "sha256": "2d11d730317055bf1af4d35e8b268ef1cfc3be0936fb9511238b316510b39ac5",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Gap_Components.py",
+    "size_bytes": 9411,
+    "sha256": "a0f0b4fe7f7ced6a8a9546e7b68a458ad8c6aaf888a7e57412a746a2090760dd",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Gap_Inputs.json",
+    "size_bytes": 16622,
+    "sha256": "181af41fc4145e097bed4514be3d49f9f85561827e3f54223de11196d110f868",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-policy-burden-diagnosis-20261122/N3_Conditional_Fiscal_Primary_Bridge.csv",
+    "size_bytes": 5730,
+    "sha256": "cf932ddda081614869e02b3db018e319ee92abd28eaa87beaef9cb8b1e8080ca",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-policy-burden-diagnosis-20261122/N3_Unchanged_Execution_Trace.json",
+    "size_bytes": 5795176,
+    "sha256": "0ecbfab6db206e6cf77e2f1bfd6b3c2f07969a576727fdc7eebd1cebec4e94b5",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-sfa-cash-reconciliation-20261122/N3_SFA_Reproduce.py",
+    "size_bytes": 29578,
+    "sha256": "78849adc0db82ae5b925d547ccd9b828c2508705f3fc448203b78cdaf3ad8918",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-transition-financing-full-dynamics-20261122/Medical_Initialization.json",
+    "size_bytes": 124011,
+    "sha256": "3e97b56c0d3dd4b83b6c8545d369f15e20ac8d519b698d0bddaf3b743068b1ea",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-n3-transition-financing-full-dynamics-20261122/N3_Transition_Reproduce.py",
+    "size_bytes": 43852,
+    "sha256": "73529bcfc5bb57b4fb5f47a9c69e36829d74b200f04bbe4725ab4ee11b0bcfb4",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-national-fiscal-closure-20261121/National_Fiscal.py",
+    "size_bytes": 12677,
+    "sha256": "cf92a903f028c31ea8e8c62fb5d9cd906d7075d77420513af6b1ff8527237b9b",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/chatgpt-national-fiscal-closure-20261121/Official_Fiscal_Baseline_2025_2040.csv",
+    "size_bytes": 6181,
+    "sha256": "14a0fb9de6f47e92f36d549a7ded572928fc91f8a43702fc5fe42a5d8c4286f6",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/f-common-endoflife-finalization-20261121/FMedical.py",
+    "size_bytes": 17478,
+    "sha256": "b36a21bead583b13c338f31dcd42e90c1e24a2814024024e872e993a9754dd80",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/f-vat-core-20261120/Inputs.json",
+    "size_bytes": 2559157,
+    "sha256": "f9de79d09488aa26cefc27a6a43c8d0d0b165b054b04839a4bace97ecf6cd2a9",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "handoff/f-vat-core-20261120/Model.py",
+    "size_bytes": 27668,
+    "sha256": "8c55442439d20b750ba6576ce8efa8a98e3f37b92df070a6a99dc498cd173837",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "e8bea03671225189c6af5ccc7a4ec5cbb27817f0",
+    "path": "policies/New3linesPolicies.md",
+    "size_bytes": 7039,
+    "sha256": "2f5806addb870863961d9b6a6722d9c1e38bc2b097e1a6cd0e07b39f56b77830",
+    "match": true,
+    "retrieval": "git fetch fixed commit / git show"
+  },
+  {
+    "commit": "89371098c127e5ff7b44e10fa4d891bec73b2ebe",
+    "path": "handoff/chatgpt-n3-assumptions-specification-calibration-separation-request-20261123/SPE_Work_N3_Assumptions_Specification_Calibration_Separation_Request_20261123.md",
+    "size_bytes": 10792,
+    "sha256": "3469739bd20a2de244564cbbf1904f3c04f9f78b24be5adb0916287628a3314c",
+    "match": true,
+    "retrieval": "connected GitHub fetch_file; local git fetch/show fixed request"
+  }
+]

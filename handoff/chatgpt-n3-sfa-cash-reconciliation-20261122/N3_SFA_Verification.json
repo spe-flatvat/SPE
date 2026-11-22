@@ -1,0 +1,26 @@
+{
+  "status": "PASS_CONDITIONAL_SFA_MAPPING",
+  "checks": 30925,
+  "failed": 0,
+  "failures": [],
+  "cases": 26,
+  "annual_rows": 780,
+  "prior_checks_reused": 25478,
+  "earlier_checks_reused": [
+    35281,
+    12311
+  ],
+  "prior_full_audit": false,
+  "SFA_cash_q_identified": false,
+  "geographic_residual_identified": true,
+  "official_future_SFA_cash_breakdown_unallocated": true,
+  "double_counting_excluded": true,
+  "native_dynamics_preserved": true,
+  "general_government_closed": false,
+  "policy_adopted": false,
+  "source_originals_modified": false,
+  "deterministic_reexecution": {
+    "byte_identical_files": 14,
+    "separate_output_directory": true
+  }
+}

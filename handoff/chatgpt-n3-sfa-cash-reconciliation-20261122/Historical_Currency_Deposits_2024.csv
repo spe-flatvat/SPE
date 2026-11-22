@@ -1,0 +1,5 @@
+year,time_basis,sector,currency_deposits_trn,source_sheet,source_cell,source_raw_billion_yen,source_url,usable_cash_2026_verified,legal_transfer_or_liquidity_verified,initial_cash_in_simulation_not_replaced
+2024,CALENDAR_YEAR_END,中央政府,43.308,資産・負債残高,DR16,43308,https://www.esri.cao.go.jp/jp/sna/data/data_list/kakuhou/files/2024/tables/2024ss3_jp.xlsx,False,False,True
+2024,CALENDAR_YEAR_END,地方政府,49.974,資産・負債残高,DS16,49974,https://www.esri.cao.go.jp/jp/sna/data/data_list/kakuhou/files/2024/tables/2024ss3_jp.xlsx,False,False,True
+2024,CALENDAR_YEAR_END,社会保障基金,16.312,資産・負債残高,DT16,16312,https://www.esri.cao.go.jp/jp/sna/data/data_list/kakuhou/files/2024/tables/2024ss3_jp.xlsx,False,False,True
+2024,CALENDAR_YEAR_END,合計,109.594,資産・負債残高,DU16,109594,https://www.esri.cao.go.jp/jp/sna/data/data_list/kakuhou/files/2024/tables/2024ss3_jp.xlsx,False,False,True

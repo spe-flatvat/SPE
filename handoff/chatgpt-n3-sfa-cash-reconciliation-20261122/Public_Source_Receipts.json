@@ -1,0 +1,55 @@
+[
+  {
+    "file": "CAO_2607hontai.pdf",
+    "url": "https://www5.cao.go.jp/keizai2/keizai-syakai/shisan/2607hontai.pdf",
+    "size": 1142324,
+    "sha256": "7ed2aac791cb650c7ba975955bc562a84936fa0adf0927bb862baeb575e67cbe",
+    "retrieved_date": "2026-11-22",
+    "status": "RETRIEVED",
+    "raw_snapshot_in_this_handoff": false
+  },
+  {
+    "file": "CAO_keisuuhyo.pdf",
+    "url": "https://www5.cao.go.jp/keizai2/keizai-syakai/shisan/keisuuhyo.pdf",
+    "size": 384957,
+    "sha256": "d82f39053afdff53fc9ef0080f3173f01d7d00c522e4c0efc5bf0a2d118f85c3",
+    "retrieved_date": "2026-11-22",
+    "status": "RETRIEVED",
+    "raw_snapshot_in_this_handoff": false
+  },
+  {
+    "file": "BOJ_FAQ.html",
+    "url": "https://www.boj.or.jp/statistics/outline/exp/faqsj.htm",
+    "size": 135403,
+    "sha256": "f5ea8f979965f6ed038290c4a820d49a7077f1172f03624a789fb3e6207124c9",
+    "retrieved_date": "2026-11-22",
+    "status": "RETRIEVED",
+    "raw_snapshot_in_this_handoff": false
+  },
+  {
+    "file": "Model_Equations.pdf",
+    "url": "https://www5.cao.go.jp/keizai3/econome/ef2rrrrrr-equ.pdf",
+    "size": 554053,
+    "sha256": "1db84d82bf7121521258ab0379b377db94aa58c2e8569d1685074372844c7676",
+    "retrieved_date": "2026-11-22",
+    "status": "RETRIEVED",
+    "raw_snapshot_in_this_handoff": false
+  },
+  {
+    "file": "Model_Variables.pdf",
+    "url": "https://www5.cao.go.jp/keizai3/econome/ef2rrrrrr-var.pdf",
+    "size": 633450,
+    "sha256": "119bf07488ee8eead411bebf572ea597152711ea1ad09a3a5d657790d6e581a5",
+    "retrieved_date": "2026-11-22",
+    "status": "RETRIEVED",
+    "raw_snapshot_in_this_handoff": false
+  },
+  {
+    "url": "https://www.mof.go.jp/policy/budget/fiscal_condition/related_data/202610_01.pdf",
+    "retrieval": "WEB_TEXT_OPEN",
+    "sha256": null,
+    "size": null,
+    "raw_snapshot_in_this_handoff": false,
+    "retrieved_date": "2026-11-22"
+  }
+]

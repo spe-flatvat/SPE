@@ -1,0 +1,177 @@
+[
+  {
+    "commit": "423924065a4bb2a0d2e745a3489a3dbae936de2f",
+    "path": "handoff/chatgpt-n3-transition-financing-full-dynamics-20261122/Artifact_SHA256.json",
+    "size": 3205,
+    "sha256": "5530eded37178ea56f67c9ae83e4af1c3f8cf9eeb474656f19884122c043f79a",
+    "match": true
+  },
+  {
+    "commit": "423924065a4bb2a0d2e745a3489a3dbae936de2f",
+    "path": "handoff/chatgpt-n3-transition-financing-full-dynamics-20261122/Capture_Medical_Initialization.py",
+    "size": 1449,
+    "sha256": "2add203e06af725cce37d6f33e73870efbead4ca950129d331c1f3a48f747b06",
+    "match": true
+  },
+  {
+    "commit": "423924065a4bb2a0d2e745a3489a3dbae936de2f",
+    "path": "handoff/chatgpt-n3-transition-financing-full-dynamics-20261122/Cause_2026_2035.csv",
+    "size": 73962,
+    "sha256": "9468a3e4af5fcafc373dc1595ba1313bbc285268052ae276d6d8c07d0bc7db1c",
+    "match": true
+  },
+  {
+    "commit": "423924065a4bb2a0d2e745a3489a3dbae936de2f",
+    "path": "handoff/chatgpt-n3-transition-financing-full-dynamics-20261122/Connection_Status.csv",
+    "size": 1887,
+    "sha256": "8dd633948cf1612f5a28a58be09d4cb59c3776f275f713ef460ec7fbf8f97fed",
+    "match": true
+  },
+  {
+    "commit": "423924065a4bb2a0d2e745a3489a3dbae936de2f",
+    "path": "handoff/chatgpt-n3-transition-financing-full-dynamics-20261122/Execution.log",
+    "size": 686,
+    "sha256": "e9c41c419ffccc453df5a42f481c1eb0ca55bb04b9bf6b2b070ef0368130afce",
+    "match": true
+  },
+  {
+    "commit": "423924065a4bb2a0d2e745a3489a3dbae936de2f",
+    "path": "handoff/chatgpt-n3-transition-financing-full-dynamics-20261122/Input_Source_Receipts.json",
+    "size": 9682,
+    "sha256": "d2bb9860fb82cbcb0cb6c6fd533553cd5704238ec36c210e413f0fe2450544e3",
+    "match": true
+  },
+  {
+    "commit": "423924065a4bb2a0d2e745a3489a3dbae936de2f",
+    "path": "handoff/chatgpt-n3-transition-financing-full-dynamics-20261122/Medical_Initialization.json",
+    "size": 124011,
+    "sha256": "3e97b56c0d3dd4b83b6c8545d369f15e20ac8d519b698d0bddaf3b743068b1ea",
+    "match": true
+  },
+  {
+    "commit": "423924065a4bb2a0d2e745a3489a3dbae936de2f",
+    "path": "handoff/chatgpt-n3-transition-financing-full-dynamics-20261122/N3_Full_Dynamics_Connection_Deltas.csv",
+    "size": 53190,
+    "sha256": "42b5ddb0700dad24052ff406a75c0053ac69aac7b2a0db88a1a3ebc96157c99d",
+    "match": true
+  },
+  {
+    "commit": "423924065a4bb2a0d2e745a3489a3dbae936de2f",
+    "path": "handoff/chatgpt-n3-transition-financing-full-dynamics-20261122/N3_Native_Channel_Accounts.csv",
+    "size": 343224,
+    "sha256": "873b1282d0be882cfea8ac2c0db52464dad5ba977b8e96a905f0f5cc8f877b03",
+    "match": true
+  },
+  {
+    "commit": "423924065a4bb2a0d2e745a3489a3dbae936de2f",
+    "path": "handoff/chatgpt-n3-transition-financing-full-dynamics-20261122/N3_Transition_Case_Definitions.csv",
+    "size": 11727,
+    "sha256": "d8e70c35122a59c5bbedcd5e7dadd2b69c708e0e5126aa2e5d133b76419445e6",
+    "match": true
+  },
+  {
+    "commit": "423924065a4bb2a0d2e745a3489a3dbae936de2f",
+    "path": "handoff/chatgpt-n3-transition-financing-full-dynamics-20261122/N3_Transition_Case_Summary.csv",
+    "size": 13468,
+    "sha256": "3a4423c17e831973af27f750f2597c838bf9108af43980e8dcc77217571bee83",
+    "match": true
+  },
+  {
+    "commit": "423924065a4bb2a0d2e745a3489a3dbae936de2f",
+    "path": "handoff/chatgpt-n3-transition-financing-full-dynamics-20261122/N3_Transition_Financing_Annual_Ledger_2026_2055.csv",
+    "size": 1439556,
+    "sha256": "6a53bd6ef89eaed32e8665a51a0c4b7691dc5cbea847d2c11f0dd61b247513f3",
+    "match": true
+  },
+  {
+    "commit": "423924065a4bb2a0d2e745a3489a3dbae936de2f",
+    "path": "handoff/chatgpt-n3-transition-financing-full-dynamics-20261122/N3_Transition_Financing_Boundaries.csv",
+    "size": 741,
+    "sha256": "9c13c82bcb7ea8b263c04f48581969ae9147a701dc343dd045432d6423516df4",
+    "match": true
+  },
+  {
+    "commit": "423924065a4bb2a0d2e745a3489a3dbae936de2f",
+    "path": "handoff/chatgpt-n3-transition-financing-full-dynamics-20261122/N3_Transition_Financing_Case_Comparison.csv",
+    "size": 1024469,
+    "sha256": "c3c7d897fd5de52ef8da80038beccf1ddac3b0499d4c46a20686bcc430d95c21",
+    "match": true
+  },
+  {
+    "commit": "423924065a4bb2a0d2e745a3489a3dbae936de2f",
+    "path": "handoff/chatgpt-n3-transition-financing-full-dynamics-20261122/N3_Transition_Native_Tax_Household_Bridge.csv",
+    "size": 504968,
+    "sha256": "80e3165a8375e796bc77a6d0b60d1877af8391222f9d8d7512669f79fcedec2f",
+    "match": true
+  },
+  {
+    "commit": "423924065a4bb2a0d2e745a3489a3dbae936de2f",
+    "path": "handoff/chatgpt-n3-transition-financing-full-dynamics-20261122/N3_Transition_Reproduce.py",
+    "size": 43852,
+    "sha256": "73529bcfc5bb57b4fb5f47a9c69e36829d74b200f04bbe4725ab4ee11b0bcfb4",
+    "match": true
+  },
+  {
+    "commit": "423924065a4bb2a0d2e745a3489a3dbae936de2f",
+    "path": "handoff/chatgpt-n3-transition-financing-full-dynamics-20261122/N3_Transition_Verification.json",
+    "size": 730,
+    "sha256": "c99eee86bae2ed984f4ec534e9640f7bc82190c4f8cf060731f5edcf8da2e1eb",
+    "match": true
+  },
+  {
+    "commit": "423924065a4bb2a0d2e745a3489a3dbae936de2f",
+    "path": "handoff/chatgpt-n3-transition-financing-full-dynamics-20261122/Resolved_Transition_Simulate.py.txt",
+    "size": 14741,
+    "sha256": "1dc9f97418f3fb14f678897d57fe5580606c603d1d15d90531e2daa677760923",
+    "match": true
+  },
+  {
+    "commit": "423924065a4bb2a0d2e745a3489a3dbae936de2f",
+    "path": "handoff/chatgpt-n3-transition-financing-full-dynamics-20261122/SPE_N3_Transition_Financing_Full_Dynamics_Report_DRAFT_20261122.md",
+    "size": 11269,
+    "sha256": "283183baeaa9c3ed833c38b9fd7f40160f80c1f53bc8951b040caf069589ab60",
+    "match": true
+  },
+  {
+    "commit": "82525955b57dc1166fa17bfb4e3157a30b7b1133",
+    "path": "handoff/chatgpt-national-fiscal-closure-20261121/Official_Fiscal_Baseline_2025_2040.csv",
+    "size": 6181,
+    "sha256": "14a0fb9de6f47e92f36d549a7ded572928fc91f8a43702fc5fe42a5d8c4286f6",
+    "match": true
+  },
+  {
+    "commit": "82525955b57dc1166fa17bfb4e3157a30b7b1133",
+    "path": "handoff/chatgpt-national-fiscal-closure-20261121/Statistical_Cell_Map.csv",
+    "size": 51386,
+    "sha256": "34451637af86fd6f2a9fd82a90652bfeea3011b34d4bbd2f9d563256ae9aea31",
+    "match": true
+  },
+  {
+    "commit": "82525955b57dc1166fa17bfb4e3157a30b7b1133",
+    "path": "handoff/chatgpt-national-fiscal-closure-20261121/CAO_202607_Projections.xlsx",
+    "size": 84842,
+    "sha256": "eb45004885411574edc94b5ac5b7dabe127a63b73bbb63a4a130e64b7e01e4c5",
+    "match": true
+  },
+  {
+    "commit": "82525955b57dc1166fa17bfb4e3157a30b7b1133",
+    "path": "handoff/chatgpt-national-fiscal-closure-20261121/National_Fiscal.py",
+    "size": 12677,
+    "sha256": "cf92a903f028c31ea8e8c62fb5d9cd906d7075d77420513af6b1ff8527237b9b",
+    "match": true
+  },
+  {
+    "commit": "82525955b57dc1166fa17bfb4e3157a30b7b1133",
+    "path": "handoff/chatgpt-n3-gdp-robustness-fiscal-dynamics-20261122/Fiscal_Official_Baseline_Boundary_Map.csv",
+    "size": 4334,
+    "sha256": "cef1bd71c3fcd46d8197b02a0c4dad4aa9fca5e0dea5df398193cc9596be250f",
+    "match": true
+  },
+  {
+    "commit": "82525955b57dc1166fa17bfb4e3157a30b7b1133",
+    "path": "handoff/chatgpt-n3-sfa-cash-reconciliation-request-20261122/SPE_Work_N3_SFA_Cash_Needs_Reconciliation_Request_20261122.md",
+    "size": 8966,
+    "sha256": "26c929abc9c1c6d12f8540ae2e4d3a90c77e506e123d01fc71260faa0a981021",
+    "match": true
+  }
+]

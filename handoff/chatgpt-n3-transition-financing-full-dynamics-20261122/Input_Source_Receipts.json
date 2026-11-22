@@ -1,0 +1,240 @@
+[
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "handoff/chatgpt-n3-gdp-robustness-fiscal-dynamics-20261122/Artifact_SHA256.json",
+    "size": 2810,
+    "sha256": "803d220cde2361c8c6ecc053a1c23ba87595cc241ed3f0419c7a0a63fb6d75e6",
+    "match": true
+  },
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "handoff/chatgpt-n3-gdp-robustness-fiscal-dynamics-20261122/Capture_Initialization.py",
+    "size": 1948,
+    "sha256": "921d4c2b9e3f37f4a75ae8917d2fd57d2608a87383b40575bf0b01da4b98d264",
+    "match": true
+  },
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "handoff/chatgpt-n3-gdp-robustness-fiscal-dynamics-20261122/Component_Initialization.json",
+    "size": 63605,
+    "sha256": "5cef89b278560d6c33fc416d2067f72ac00fe6fcfce28f58f197e2a424482d80",
+    "match": true
+  },
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "handoff/chatgpt-n3-gdp-robustness-fiscal-dynamics-20261122/Execution.log",
+    "size": 741,
+    "sha256": "88636f81c8a7f5040172188b1232adca9dedadcd7f99354bc15941dec9ac31fe",
+    "match": true
+  },
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "handoff/chatgpt-n3-gdp-robustness-fiscal-dynamics-20261122/Fiscal_Official_Baseline_Boundary_Map.csv",
+    "size": 4334,
+    "sha256": "cef1bd71c3fcd46d8197b02a0c4dad4aa9fca5e0dea5df398193cc9596be250f",
+    "match": true
+  },
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "handoff/chatgpt-n3-gdp-robustness-fiscal-dynamics-20261122/Input_Source_Receipts.json",
+    "size": 10005,
+    "sha256": "d305dd543ab8288ca5b4f268e2f8656f5f01410dcf8ad8493d893d056f8bc9f0",
+    "match": true
+  },
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "handoff/chatgpt-n3-gdp-robustness-fiscal-dynamics-20261122/N3_GDP_Robustness_Annual_Comparison_2026_2055.csv",
+    "size": 2038239,
+    "sha256": "5b9c3cdd220bd254a4c2c9809901643f62cafe7502d4bc57dd4089ab3a6f72e7",
+    "match": true
+  },
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "handoff/chatgpt-n3-gdp-robustness-fiscal-dynamics-20261122/N3_GDP_Robustness_Boundary_Cases.csv",
+    "size": 10767,
+    "sha256": "0854e3f77ade4fef638f30bc0038504830c9824c151aee38793c8fc3d6d1c0ea",
+    "match": true
+  },
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "handoff/chatgpt-n3-gdp-robustness-fiscal-dynamics-20261122/N3_GDP_Robustness_Case_Definitions.csv",
+    "size": 15004,
+    "sha256": "b5ee27878fa145d36983ebf8b98473ffd4591b261ee755afafb2d2672e3fc0f7",
+    "match": true
+  },
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "handoff/chatgpt-n3-gdp-robustness-fiscal-dynamics-20261122/N3_GDP_Robustness_Case_Summary.csv",
+    "size": 30041,
+    "sha256": "240e2d61876563d8937f65fd22e4adca726a536cc5c0f4fe052bb02440e656da",
+    "match": true
+  },
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "handoff/chatgpt-n3-gdp-robustness-fiscal-dynamics-20261122/N3_GDP_Robustness_Dynamic_Tax_Household_Bridge.csv",
+    "size": 1118119,
+    "sha256": "1330a9fe339d8d611d859fcd03c5d6e8070dc17615e78b8d6a97b39ec4b0120f",
+    "match": true
+  },
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "handoff/chatgpt-n3-gdp-robustness-fiscal-dynamics-20261122/N3_GDP_Robustness_Fiscal_Closure.csv",
+    "size": 1434774,
+    "sha256": "d717bfa911ba07f77ea3628d7fbc49ba628f59c8676e9d40a706dd2ee50a8d4a",
+    "match": true
+  },
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "handoff/chatgpt-n3-gdp-robustness-fiscal-dynamics-20261122/N3_GDP_Robustness_Reproduce.py",
+    "size": 42183,
+    "sha256": "9bc03585bd23f4eebf06ae98f191c92785ec85f8f67e6a2124ab6637bed3c866",
+    "match": true
+  },
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "handoff/chatgpt-n3-gdp-robustness-fiscal-dynamics-20261122/N3_GDP_Robustness_Verification.json",
+    "size": 869,
+    "sha256": "0b907d6110add69049661d863e04d3d028e4b0dd07baec6354ea53eb407dabd2",
+    "match": true
+  },
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "handoff/chatgpt-n3-gdp-robustness-fiscal-dynamics-20261122/Public_Sources.md",
+    "size": 3848,
+    "sha256": "cfb304fcf201fb173c90375473f67697a63dd06b9d15f91bdef2d442b3d6365a",
+    "match": true
+  },
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "handoff/chatgpt-n3-gdp-robustness-fiscal-dynamics-20261122/SPE_N3_GDP_Robustness_Fiscal_Dynamics_Report_DRAFT_20261122.md",
+    "size": 13112,
+    "sha256": "8f87725f6103450dee0ccc3ef8d5b5f67dbe646c3597327b0359492d1c901b98",
+    "match": true
+  },
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "handoff/chatgpt-n3-gdp-robustness-fiscal-dynamics-20261122/Scope_and_Unresolved.md",
+    "size": 1868,
+    "sha256": "a0cbce56f76e884a3beb5d4892760160094b7074b1dcf71642a202c1d0b9cca5",
+    "match": true
+  },
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "handoff/chatgpt-n3-gdp-recirculation-counterfactual-20261122/N3_GDP_Recirculation_Reproduce.py",
+    "size": 45477,
+    "sha256": "e1ffcadb5409f2d796c72a43ebdff7bd5ac0eec672d00969ce1aef6b5a2ef583",
+    "match": true
+  },
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "handoff/chatgpt-n3-policy-burden-diagnosis-20261122/N3_Unchanged_Execution_Trace.json",
+    "size": 5795176,
+    "sha256": "0ecbfab6db206e6cf77e2f1bfd6b3c2f07969a576727fdc7eebd1cebec4e94b5",
+    "match": true
+  },
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "handoff/chatgpt-n3-policy-burden-diagnosis-20261122/N3_Conditional_Fiscal_Primary_Bridge.csv",
+    "size": 5730,
+    "sha256": "cf932ddda081614869e02b3db018e319ee92abd28eaa87beaef9cb8b1e8080ca",
+    "match": true
+  },
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Components.py",
+    "size": 5528,
+    "sha256": "ec5640f9512486274122e32aacd7ca548273b23b94035710fd56949b8ea37588",
+    "match": true
+  },
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Inputs.json",
+    "size": 39819,
+    "sha256": "d036bc65580805f9f4080b354412fc3d6ab3bc4deeb9ae8409f6ab24e625635e",
+    "match": true
+  },
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/results/DOMESTIC_TRANSFER_Corporate_Funding_Stock.csv",
+    "size": 130330,
+    "sha256": "a5baccddcca220a6e045926c6e00fe30e59232c255a0d724c78818b1f1c542a0",
+    "match": true
+  },
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/results/Conditional_National_Local_Fiscal.csv",
+    "size": 9458004,
+    "sha256": "db7c24ba77bc36c313612dcaf1c7882bace91cb15917020989af906053a1e7db",
+    "match": true
+  },
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "handoff/f-vat-core-20261120/Model.py",
+    "size": 27668,
+    "sha256": "8c55442439d20b750ba6576ce8efa8a98e3f37b92df070a6a99dc498cd173837",
+    "match": true
+  },
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "handoff/f-vat-core-20261120/Inputs.json",
+    "size": 2559157,
+    "sha256": "f9de79d09488aa26cefc27a6a43c8d0d0b165b054b04839a4bace97ecf6cd2a9",
+    "match": true
+  },
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "handoff/f-common-endoflife-finalization-20261121/FMedical.py",
+    "size": 17478,
+    "sha256": "b36a21bead583b13c338f31dcd42e90c1e24a2814024024e872e993a9754dd80",
+    "match": true
+  },
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "handoff/f-common-endoflife-finalization-20261121/CommonInterface.py",
+    "size": 420,
+    "sha256": "4b56a30806da8bd5f39566a622fac1119e93f0842d40983deafb6dca4c88f4e2",
+    "match": true
+  },
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "handoff/f-common-endoflife-finalization-20261121/CommonEndOfLife.py",
+    "size": 10956,
+    "sha256": "c930a8df539ff676e55180b75cfe899084caa656f738c371aac44ce1f7693fae",
+    "match": true
+  },
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "handoff/f-common-endoflife-finalization-20261121/Demand.py",
+    "size": 2544,
+    "sha256": "fab0a6c505c9bb5041bfb38ec199617b6c4171891ec4fc49ba90eec2ae05f30d",
+    "match": true
+  },
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "handoff/chatgpt-national-fiscal-closure-20261121/National_Fiscal.py",
+    "size": 12677,
+    "sha256": "cf92a903f028c31ea8e8c62fb5d9cd906d7075d77420513af6b1ff8527237b9b",
+    "match": true
+  },
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "handoff/chatgpt-national-fiscal-closure-20261121/Official_Fiscal_Baseline_2025_2040.csv",
+    "size": 6181,
+    "sha256": "14a0fb9de6f47e92f36d549a7ded572928fc91f8a43702fc5fe42a5d8c4286f6",
+    "match": true
+  },
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "policies/New3linesPolicies.md",
+    "size": 7039,
+    "sha256": "2f5806addb870863961d9b6a6722d9c1e38bc2b097e1a6cd0e07b39f56b77830",
+    "match": true
+  },
+  {
+    "commit": "bf0f051116f82a91302244d41fbdd3d5a9bfd9bc",
+    "path": "handoff/chatgpt-n3-transition-financing-full-dynamics-request-20261122/SPE_Work_N3_Transition_Financing_Full_Dynamics_Request_20261122.md",
+    "size": 9191,
+    "sha256": "d122d9e7162c247d70a61c47bd584bb966323dbd92a24e7b0b9a69cb7aa6d547",
+    "match": true
+  }
+]

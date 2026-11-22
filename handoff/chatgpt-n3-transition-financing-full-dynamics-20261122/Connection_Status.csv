@@ -1,0 +1,9 @@
+channel,previous,current,formula,unresolved,policy_adopted
+VAT,FIXED_CORE_BASE,NATIVE_LAGGED_GDP_BASE_PRICE_QUANTITY_REVENUE,existing tax_account with lag actual nominal GDP/core nominal ratio; replace quantity correction once,GDP proxy rather than separately calibrated HH consumption and private investment transaction bases; residual nonHH revenue-equivalent base,False
+MEDICAL,FIXED_CLAIM_LEDGER,NATIVE_CLAIM_PAYER_LOOP_WITH_LAGGED_REALIZED_PRICE,same N3 rate interpolation and nominal caps; fixed age trajectory; lag N/Y price interface,no supported income-to-utilisation function; full clinical and fiscal calibration absent,False
+MEDICAL_VAT_SCOPE,NO_CURRENT_NATIVE_SCOPE_UPDATE,EXISTING_VAT_HOOK_FORMULA_CONNECTED,existing medical turnover*(1+medical VAT scope nominal flow/old turnover),scope and production VA bridge remain uncalibrated,False
+N3_PENSION,NATIVE_DYNAMIC,NATIVE_DYNAMIC_PRESERVED,contribution+fund returns-payout; DOMESTIC_TRANSFER retained,national pension and social fund complete consolidation absent,False
+LEGACY_PENSION_SATELLITE,FIXED_ZERO_ON_SQ_ENGINE,30_YEARS_ZERO_CONFIRMED_NO_SECOND_BENEFIT,all five existing old satellite flows zero,not a separate missing funded pension path,False
+ESTATE,REPORTED_BASE_TIMES_COMMON_PRICE,LAGGED_REALIZED_PRICE_INTERFACE,old reported transaction base and 40% wedge scale by prior realised/common price ratio,"separate asset prices, transaction count, national tax-base calibration absent",False
+POPULATION_LABOR_CORE_COMMON_DEFLATOR,FIXED_EXTERNAL_COMMON,FIXED_EXTERNAL_COMMON,unchanged source trajectory,no supported new response function; full macro dynamics incomplete,False
+GENERAL_GOVERNMENT,INCOMPLETE,INCOMPLETE_CL_CANDIDATE_ONLY,"cash PB, national-local interest, SFA, debt/assets and assumed refinancing","social contributions, benefits, internal transfers, SFA attribution and actual maturities absent",False

@@ -1,0 +1,11 @@
+{
+  "status": "PASS_STRUCTURE_AND_FINITE_MODEL_CAPS_ONLY",
+  "new_annual_rows": 120,
+  "reused_annual_rows": 240,
+  "source_fingerprints": 21,
+  "unknown_sector_allocations_retained": true,
+  "only_new_authorized_path": true,
+  "actual_2030_appropriation": "unknown",
+  "sector_closure": false,
+  "real_world_feasibility": false
+}

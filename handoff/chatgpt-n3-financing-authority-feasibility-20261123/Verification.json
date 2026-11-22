@@ -1,0 +1,20 @@
+{
+  "status": "PASS_LIMITED_ARITHMETIC_AND_CAP_ENFORCEMENT",
+  "new_cases": 4,
+  "new_annual_rows": 120,
+  "reused_cases": 8,
+  "reused_annual_rows": 240,
+  "checks": 3190,
+  "failed": 0,
+  "failures": [],
+  "prior_checks_reused": [
+    6972,
+    30925
+  ],
+  "official_budget_cap_2030": "unknown",
+  "G_and_I_finite_caps_enforced": true,
+  "sector_cash_closure": false,
+  "real_world_SQ_feasibility": false,
+  "policy_adopted": false,
+  "common_engine_modified": false
+}

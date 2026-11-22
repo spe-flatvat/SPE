@@ -1,0 +1,127 @@
+[
+  {
+    "path": "handoff/chatgpt-n3-financing-authority-feasibility-20261123/Build_Authority_Evidence.py",
+    "size": 16302,
+    "sha256": "a5894a36f070c9923ee7cfe9ecf33be98829ac1650cbf8c94fbe4aa06e34258d"
+  },
+  {
+    "path": "handoff/chatgpt-n3-financing-authority-feasibility-20261123/Conditional_Finite_Authority_Inputs.json",
+    "size": 3615,
+    "sha256": "d28db3fca8bbe113252e279c03ef4e172f950b2e0c572db16e5b65215d15ebfa"
+  },
+  {
+    "path": "handoff/chatgpt-n3-financing-authority-feasibility-20261123/Delivery_Verification.json",
+    "size": 331,
+    "sha256": "62cfaa8697d883cab057688f544dc173d0e34caa39c1d6f5cda3220f320bd0dc"
+  },
+  {
+    "path": "handoff/chatgpt-n3-financing-authority-feasibility-20261123/Execution.log",
+    "size": 4063,
+    "sha256": "0e3bee4120d7c00b2c6823151466de6defa74452cdfa8968341115dfa7e7743b"
+  },
+  {
+    "path": "handoff/chatgpt-n3-financing-authority-feasibility-20261123/Input_Source_Receipts.json",
+    "size": 8717,
+    "sha256": "be0e887840e7fa378a2b7d5714a393eb78ec7a8a6315c59e264a6a021adf51d2"
+  },
+  {
+    "path": "handoff/chatgpt-n3-financing-authority-feasibility-20261123/Legal_Article_Evidence_Checks.csv",
+    "size": 3838,
+    "sha256": "9d32aa3212ffbe85f764b5027b15c84c6a7a94442e695ab8205ae08f00f2a049"
+  },
+  {
+    "path": "handoff/chatgpt-n3-financing-authority-feasibility-20261123/Legal_Evidence_Verification.json",
+    "size": 365,
+    "sha256": "f9f16974a69fe49681426a0872b006e2d85a454cc6850ebd05ae6db51980d91e"
+  },
+  {
+    "path": "handoff/chatgpt-n3-financing-authority-feasibility-20261123/N3_2030_Authorized_Funding_Capacity_and_Gap.csv",
+    "size": 6678,
+    "sha256": "74a02ff0ae2f610078f40d4e2713da264a007ea38f8e2985d5c3db8e633e75bf"
+  },
+  {
+    "path": "handoff/chatgpt-n3-financing-authority-feasibility-20261123/N3_Annual_Authority_Cap_And_Execution.csv",
+    "size": 22865,
+    "sha256": "6e9a0d2508b9002faeabe17e51a5e6f4af5a934ede557b45a18d8f4a2ef02788"
+  },
+  {
+    "path": "handoff/chatgpt-n3-financing-authority-feasibility-20261123/N3_Authority_Cash_Debt_Ledger_2026_2055.csv",
+    "size": 70345,
+    "sha256": "f071579967af167f535bd5795884821c7d609f873a4ca5490a25f442daac3cf8"
+  },
+  {
+    "path": "handoff/chatgpt-n3-financing-authority-feasibility-20261123/N3_Case_Definitions.csv",
+    "size": 1997,
+    "sha256": "feb47b8b0a08bc053880fc39e2fc1f6df927b57f454e4efd05efd284fa814681"
+  },
+  {
+    "path": "handoff/chatgpt-n3-financing-authority-feasibility-20261123/N3_Case_Summary.csv",
+    "size": 1858,
+    "sha256": "e19ba3a32b53e71e5490f0cd1fd574b52609fabecec15594bf534d5489d4ce8a"
+  },
+  {
+    "path": "handoff/chatgpt-n3-financing-authority-feasibility-20261123/N3_Central_Local_Financing_Legal_Authority_Map.csv",
+    "size": 13804,
+    "sha256": "f5e3927c7989d8cf9563cf35add5172367741c4de20c616768948c96da6c3120"
+  },
+  {
+    "path": "handoff/chatgpt-n3-financing-authority-feasibility-20261123/N3_Financing_Authority_Annual_Comparison_2026_2055.csv",
+    "size": 340007,
+    "sha256": "443a4d173846f6d6f7451819b6c697123fd73f1bca4c96170b1a7f53da029cee"
+  },
+  {
+    "path": "handoff/chatgpt-n3-financing-authority-feasibility-20261123/N3_Financing_Authority_Reproduce.py",
+    "size": 8885,
+    "sha256": "a4891cf111ad7cbbedff8e9bab22d16889be6260cd04c9bb8896386e2afcc679"
+  },
+  {
+    "path": "handoff/chatgpt-n3-financing-authority-feasibility-20261123/N3_GI_Expenditure_Financing_Eligibility.csv",
+    "size": 14074,
+    "sha256": "5ca794c899d2657359de65b71625b1816b98a0d5509ac4dfc49c99fdb628eaf0"
+  },
+  {
+    "path": "handoff/chatgpt-n3-financing-authority-feasibility-20261123/Official_Annual_Plan_References.csv",
+    "size": 1063,
+    "sha256": "a89cab8e209a6c485edb9a9ad25b0a71d5d0bb9b22108874d1ee2816b11e5b5a"
+  },
+  {
+    "path": "handoff/chatgpt-n3-financing-authority-feasibility-20261123/Policy_Use_And_Implementation_Trace.csv",
+    "size": 946,
+    "sha256": "b404b72d7951b7d457293eb258417d66ccee556df1422a284bb3a29be494cdb2"
+  },
+  {
+    "path": "handoff/chatgpt-n3-financing-authority-feasibility-20261123/Public_Source_Receipts.json",
+    "size": 9281,
+    "sha256": "9420d05d974c3928f93bf37e4982102d79807514b5dcda22eb67155dae46e26a"
+  },
+  {
+    "path": "handoff/chatgpt-n3-financing-authority-feasibility-20261123/Public_Source_References.md",
+    "size": 5751,
+    "sha256": "9b8b9adb2e386e4bc4acc6567d68bc73b80e130bd9b5394db3c98c2c7ba42198"
+  },
+  {
+    "path": "handoff/chatgpt-n3-financing-authority-feasibility-20261123/Resolved_Authority_Runtime.py.txt",
+    "size": 15900,
+    "sha256": "26713bbcd85c746f3e919b4c5b5934078013ea0591cb1954e8f5dcefeef54696"
+  },
+  {
+    "path": "handoff/chatgpt-n3-financing-authority-feasibility-20261123/Resolved_SFA_Simulate.py.txt",
+    "size": 15812,
+    "sha256": "779d374b15be61c84b6c2d2e8540ef9750e86c32f45181d53b9d32dfb424a598"
+  },
+  {
+    "path": "handoff/chatgpt-n3-financing-authority-feasibility-20261123/Resolved_Transition_Simulate.py.txt",
+    "size": 14741,
+    "sha256": "1dc9f97418f3fb14f678897d57fe5580606c603d1d15d90531e2daa677760923"
+  },
+  {
+    "path": "handoff/chatgpt-n3-financing-authority-feasibility-20261123/SPE_N3_Financing_Authority_Feasibility_Report_DRAFT_20261123.md",
+    "size": 20250,
+    "sha256": "ca0f5a9f48b03c0b63752f482639483c8d6bc75862135b9108a9d2c23c349bdc"
+  },
+  {
+    "path": "handoff/chatgpt-n3-financing-authority-feasibility-20261123/Verification.json",
+    "size": 472,
+    "sha256": "cddb04e1d6ee6444dd6ac6ef4aab7fc59b6bf34a92d97aa2b9f2a020531c5c9c"
+  }
+]

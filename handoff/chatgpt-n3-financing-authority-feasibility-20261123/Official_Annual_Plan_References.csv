@@ -1,0 +1,5 @@
+source_id,year,location,metric,amount_trn,original_unit,N3_2030_amount,source_url,classification
+LOCAL_PLAN_FY2026,2026,p1 normal-account plan total; p3 combined normal+earthquake total,local_bond_plan_normal,9.4738,OKU_YEN /10000,unknown,https://www.pref.okinawa.lg.jp/_res/projects/default_project/_page_/001/016/718/02.pdf,OFFICIAL_FY2026_REFERENCE_NOT_N3_FY2030_AUTHORIZATION
+LOCAL_PLAN_FY2026,2026,p3 normal+earthquake,local_bond_plan_combined,9.4754,OKU_YEN /10000,unknown,https://www.pref.okinawa.lg.jp/_res/projects/default_project/_page_/001/016/718/02.pdf,OFFICIAL_FY2026_REFERENCE_NOT_N3_FY2030_AUTHORIZATION
+LOCAL_FISCAL_PLAN_FY2026,2026,p1 visual verification,local_fiscal_plan_normal_expenditure,102.4427,OKU_YEN /10000,unknown,https://www.soumu.go.jp/main_content/001056960.pdf,OFFICIAL_FY2026_REFERENCE_NOT_N3_FY2030_AUTHORIZATION
+LOCAL_FISCAL_PLAN_FY2026,2026,p1 visual verification,local_allocation_tax_total,20.1848,OKU_YEN /10000,unknown,https://www.soumu.go.jp/main_content/001056960.pdf,OFFICIAL_FY2026_REFERENCE_NOT_N3_FY2030_AUTHORIZATION

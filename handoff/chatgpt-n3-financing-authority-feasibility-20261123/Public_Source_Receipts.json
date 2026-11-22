@@ -1,0 +1,215 @@
+[
+  {
+    "id": "SPECIAL_DEFICIT",
+    "url": "https://laws.e-gov.go.jp/api/1/lawdata/424AC0000000101",
+    "size": 15382,
+    "sha256": "c4e0afddefa9fece0c87daa389e2e4922e145d276055c2204a3f2bbce7d9c149",
+    "local_path": "/tmp/n3-authority-sources/SPECIAL_DEFICIT.xml",
+    "retrieved_date": "2026-11-23",
+    "status": "BYTES_RETRIEVED"
+  },
+  {
+    "id": "LOCAL_ALLOCATION",
+    "url": "https://laws.e-gov.go.jp/api/1/lawdata/325AC0000000211",
+    "size": 1367279,
+    "sha256": "3a6c5aedb6f5341c0fc337c25ca1bab8fa9f72e96446c07c985b7f5b1627c6d7",
+    "local_path": "/tmp/n3-authority-sources/LOCAL_ALLOCATION.xml",
+    "retrieved_date": "2026-11-23",
+    "status": "BYTES_RETRIEVED"
+  },
+  {
+    "id": "SUBSIDY_LAW",
+    "url": "https://laws.e-gov.go.jp/api/1/lawdata/330AC0000000179",
+    "size": 82297,
+    "sha256": "5e52c7d284eff1a5c1603f445510f2b2911caa2856271f7693e017f95b92c20f",
+    "local_path": "/tmp/n3-authority-sources/SUBSIDY_LAW.xml",
+    "retrieved_date": "2026-11-23",
+    "status": "BYTES_RETRIEVED"
+  },
+  {
+    "id": "DEFICIT_AMENDMENT",
+    "url": "https://www.shugiin.go.jp/internet/itdb_housei.nsf/html/housei/22120260331013.htm",
+    "size": 7909,
+    "sha256": "29bd075a10f61732cdef74a57cb5ca388e6401f5f1375821c1ba1d97b7b32468",
+    "local_path": "/tmp/n3-authority-sources/DEFICIT_AMENDMENT.html",
+    "retrieved_date": "2026-11-23",
+    "status": "BYTES_RETRIEVED"
+  },
+  {
+    "id": "LOCAL_PLAN_FY2026",
+    "url": "https://www.pref.okinawa.lg.jp/_res/projects/default_project/_page_/001/016/718/02.pdf",
+    "size": 493492,
+    "sha256": "ee25d13ed5c4f681e6b0c703a6c59da9b09740fde2c7261f5a1bef1514102064",
+    "local_path": "/tmp/n3-authority-sources/LOCAL_PLAN_FY2026.pdf",
+    "retrieved_date": "2026-11-23",
+    "status": "BYTES_RETRIEVED"
+  },
+  {
+    "id": "LOCAL_CONSENT_FY2026",
+    "url": "https://www.pref.okinawa.lg.jp/_res/projects/default_project/_page_/001/016/718/01.pdf",
+    "size": 385829,
+    "sha256": "227352802da7c615b698ff631df87f43614c94603fbc9fcba3451ae7abc606f4",
+    "local_path": "/tmp/n3-authority-sources/LOCAL_CONSENT_FY2026.pdf",
+    "retrieved_date": "2026-11-23",
+    "status": "BYTES_RETRIEVED"
+  },
+  {
+    "id": "MOF_LOCAL_DEBT",
+    "url": "https://www.mof.go.jp/policy/filp/summary/filp_local/tihousaiseidonogaiyou.htm",
+    "size": 27777,
+    "sha256": "73099ba030b8d8b8426e627dfd3a0e9a408424bdf8ce3d544275df0c34777fba",
+    "local_path": "/tmp/n3-authority-sources/MOF_LOCAL_DEBT.html",
+    "retrieved_date": "2026-11-23",
+    "status": "BYTES_RETRIEVED"
+  },
+  {
+    "id": "LOCAL_PLAN_INDEX",
+    "url": "https://www.soumu.go.jp/iken/zaisei.html",
+    "size": 46583,
+    "sha256": "ccd1ffce2492e6eaa9cf6f2fa8c20644332a2123186ecdd0b41d2aa886eb4ec2",
+    "local_path": "/tmp/n3-authority-sources/LOCAL_PLAN_INDEX.html",
+    "retrieved_date": "2026-11-23",
+    "status": "BYTES_RETRIEVED"
+  },
+  {
+    "id": "YOKOHAMA_FISCAL_FUND",
+    "url": "https://cgi.city.yokohama.lg.jp/somu/reiki/reiki_honbun/g202RG00000549.html",
+    "size": 16589,
+    "sha256": "79f964277c82eb0be7365bdfdc36aaaf0a78487d8117bd499201fbc851002164",
+    "local_path": "/tmp/n3-authority-sources/YOKOHAMA_FISCAL_FUND.html",
+    "retrieved_date": "2026-11-23",
+    "status": "BYTES_RETRIEVED"
+  },
+  {
+    "id": "YOKOHAMA_REDEMPTION_FUND",
+    "url": "https://cgi.city.yokohama.lg.jp/somu/reiki/reiki_honbun/g202RG00000550.html",
+    "size": 14667,
+    "sha256": "da1475b53cd82b04ab3b4273f2da7e1e5469e69bfd9712a639bd57e57e1ba4c4",
+    "local_path": "/tmp/n3-authority-sources/YOKOHAMA_REDEMPTION_FUND.html",
+    "retrieved_date": "2026-11-23",
+    "status": "BYTES_RETRIEVED"
+  },
+  {
+    "id": "YOKOHAMA_NHI_FUND",
+    "url": "https://cgi.city.yokohama.lg.jp/somu/reiki/reiki_honbun/g202RG00001939.html",
+    "size": 13098,
+    "sha256": "61d629bc8ff5cd0ee24cb2d2723ba2fa1d8ed932043621da84218a4844a03b67",
+    "local_path": "/tmp/n3-authority-sources/YOKOHAMA_NHI_FUND.html",
+    "retrieved_date": "2026-11-23",
+    "status": "BYTES_RETRIEVED"
+  },
+  {
+    "id": "NATIONAL_BUDGET_FY2026",
+    "url": "https://www.mof.go.jp/policy/budget/fiscal_condition/basic_data/202604/sy202604a.pdf",
+    "size": 53105,
+    "sha256": "2f72117f711d9b09973b6440d2635af21904b73689aa428c1607d95ed34e1a6e",
+    "local_path": "/tmp/n3-authority-sources/NATIONAL_BUDGET_FY2026.pdf",
+    "retrieved_date": "2026-11-23",
+    "status": "BYTES_RETRIEVED"
+  },
+  {
+    "id": "LOCAL_FISCAL_PLAN_FY2026",
+    "url": "https://www.soumu.go.jp/main_content/001056960.pdf",
+    "size": 1942874,
+    "sha256": "c5ecdb5b3c144dc9d173170a7b20bd19ac95181898a2a9fc048059419cb9a848",
+    "local_path": "/tmp/n3-authority-sources/LOCAL_FISCAL_PLAN_FY2026.pdf",
+    "retrieved_date": "2026-11-23",
+    "status": "BYTES_RETRIEVED"
+  },
+  {
+    "id": "REUSED_MOF_CASH_MANAGEMENT",
+    "url": "https://www.mof.go.jp/policy/exchequer/exchequer_cash_management/index.htm",
+    "retrieved_date": "2026-11-23",
+    "size": 39922,
+    "sha256": "937ec53f0c0d5cfdde26667e7884adf248049d9636294587a968d9af5411df4d",
+    "scratch_path": "/tmp/n3-official/MOF_CASH_MANAGEMENT.html",
+    "status": "BYTES_RETRIEVED",
+    "not_certification_of_future_cash": true,
+    "reuse_commit": "5c2cdad05119d453e2c0bf002cca4795e5de26b5",
+    "reuse_status": "PRIOR_FIXED_RECEIPT_BYTES_CHECKED_FROM_CACHE_NO_NEW_AVAILABILITY_INFERENCE"
+  },
+  {
+    "id": "REUSED_ISSUANCE_FY2026_REVISED",
+    "url": "https://www.mof.go.jp/jgbs/issuance_plan/fy2026/issuanceplan260603.pdf",
+    "retrieved_date": "2026-11-23",
+    "size": 128844,
+    "sha256": "5deb8624ce6d04490be3d0e18094402ac821530ff0ab3c8b4055ba635fc0a53b",
+    "scratch_path": "/tmp/n3-official/ISSUANCE_FY2026_REVISED.pdf",
+    "status": "BYTES_RETRIEVED",
+    "not_certification_of_future_cash": true,
+    "reuse_commit": "5c2cdad05119d453e2c0bf002cca4795e5de26b5",
+    "reuse_status": "PRIOR_FIXED_RECEIPT_BYTES_CHECKED_FROM_CACHE_NO_NEW_AVAILABILITY_INFERENCE"
+  },
+  {
+    "id": "REUSED_LOCAL_AUTONOMY_LAW",
+    "url": "https://laws.e-gov.go.jp/api/1/lawdata/322AC0000000067",
+    "retrieved_date": "2026-11-23",
+    "size": 2654252,
+    "sha256": "cf2c7268e9cecc717521d5dfd90800ddf23c4aebbed21dd4bbd136a1de050a61",
+    "scratch_path": "/tmp/n3-official/LOCAL_AUTONOMY_LAW.xml",
+    "status": "BYTES_RETRIEVED",
+    "not_certification_of_future_cash": true,
+    "reuse_commit": "5c2cdad05119d453e2c0bf002cca4795e5de26b5",
+    "reuse_status": "PRIOR_FIXED_RECEIPT_BYTES_CHECKED_FROM_CACHE_NO_NEW_AVAILABILITY_INFERENCE"
+  },
+  {
+    "id": "REUSED_LOCAL_FINANCE_LAW",
+    "url": "https://laws.e-gov.go.jp/api/1/lawdata/323AC0000000109",
+    "retrieved_date": "2026-11-23",
+    "size": 441546,
+    "sha256": "472fdf26c985b218d0b8d87c187ef5f91691425669add02995a04d01cfbca385",
+    "scratch_path": "/tmp/n3-official/LOCAL_FINANCE_LAW.xml",
+    "status": "BYTES_RETRIEVED",
+    "not_certification_of_future_cash": true,
+    "reuse_commit": "5c2cdad05119d453e2c0bf002cca4795e5de26b5",
+    "reuse_status": "PRIOR_FIXED_RECEIPT_BYTES_CHECKED_FROM_CACHE_NO_NEW_AVAILABILITY_INFERENCE"
+  },
+  {
+    "id": "REUSED_FINANCE_LAW",
+    "url": "https://laws.e-gov.go.jp/api/1/lawdata/322AC0000000034",
+    "retrieved_date": "2026-11-23",
+    "size": 103820,
+    "sha256": "d937421d173e2256a4912eb43f06a2874c385a5a0aa02454e99189a513081357",
+    "scratch_path": "/tmp/n3-official/FINANCE_LAW.xml",
+    "status": "BYTES_RETRIEVED",
+    "not_certification_of_future_cash": true,
+    "reuse_commit": "5c2cdad05119d453e2c0bf002cca4795e5de26b5",
+    "reuse_status": "PRIOR_FIXED_RECEIPT_BYTES_CHECKED_FROM_CACHE_NO_NEW_AVAILABILITY_INFERENCE"
+  },
+  {
+    "id": "REUSED_SPECIAL_ACCOUNTS_LAW",
+    "url": "https://laws.e-gov.go.jp/api/1/lawdata/419AC0000000023",
+    "retrieved_date": "2026-11-23",
+    "size": 1635826,
+    "sha256": "363db9119e777de7cd30e9e08ff13e55039ab898f417bf5d183d88a6845e096d",
+    "scratch_path": "/tmp/n3-official/SPECIAL_ACCOUNTS_LAW.xml",
+    "status": "BYTES_RETRIEVED",
+    "not_certification_of_future_cash": true,
+    "reuse_commit": "5c2cdad05119d453e2c0bf002cca4795e5de26b5",
+    "reuse_status": "PRIOR_FIXED_RECEIPT_BYTES_CHECKED_FROM_CACHE_NO_NEW_AVAILABILITY_INFERENCE"
+  },
+  {
+    "id": "REUSED_MOF_BALANCE_SHEET",
+    "url": "https://www.mof.go.jp/policy/budget/fiscal_condition/related_data/202610_05.pdf",
+    "retrieved_date": "2026-11-23",
+    "size": 1956603,
+    "sha256": "c67f4667af8d5f63acb9a1df35dc663f9d53c77ecfc89b53f3c18ad8f365f99a",
+    "scratch_path": "/tmp/n3-official/MOF_BALANCE_SHEET.pdf",
+    "status": "BYTES_RETRIEVED",
+    "not_certification_of_future_cash": true,
+    "reuse_commit": "5c2cdad05119d453e2c0bf002cca4795e5de26b5",
+    "reuse_status": "PRIOR_FIXED_RECEIPT_BYTES_CHECKED_FROM_CACHE_NO_NEW_AVAILABILITY_INFERENCE"
+  },
+  {
+    "id": "REUSED_MOF_FUND_FORECAST_2026",
+    "url": "https://www.mof.go.jp/policy/budget/topics/outlook/sy2026b.htm",
+    "retrieved_date": "2026-11-23",
+    "size": 27406,
+    "sha256": "cb07f313eb445d2765e66cc8732337765a1e5e86b644d92e2ba949b6db786244",
+    "scratch_path": "/tmp/n3-official/MOF_FUND_FORECAST_2026.html",
+    "status": "BYTES_RETRIEVED",
+    "not_certification_of_future_cash": true,
+    "reuse_commit": "5c2cdad05119d453e2c0bf002cca4795e5de26b5",
+    "reuse_status": "PRIOR_FIXED_RECEIPT_BYTES_CHECKED_FROM_CACHE_NO_NEW_AVAILABILITY_INFERENCE"
+  }
+]

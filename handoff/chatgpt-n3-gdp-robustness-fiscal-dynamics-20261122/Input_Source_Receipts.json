@@ -1,0 +1,240 @@
+[
+  {
+    "commit": "293039bf1875d1910073e1b8c14543c57d76c173",
+    "path": "handoff/chatgpt-n3-gdp-recirculation-counterfactual-20261122/SPE_N3_GDP_Recirculation_Counterfactual_Report_DRAFT_20261122.md",
+    "size": 12143,
+    "sha256": "4678642c6040a52aa22e8357451a76547dca0678e57cb5daf11d02153c77dd1c",
+    "match": true
+  },
+  {
+    "commit": "293039bf1875d1910073e1b8c14543c57d76c173",
+    "path": "handoff/chatgpt-n3-gdp-recirculation-counterfactual-20261122/N3_Health_Labor_Limited_Sensitivity.csv",
+    "size": 1624,
+    "sha256": "84832cbc31e08480303bbbb67e1925abde6a95b464585769231cbfc4a0deb935",
+    "match": true
+  },
+  {
+    "commit": "293039bf1875d1910073e1b8c14543c57d76c173",
+    "path": "handoff/chatgpt-n3-gdp-recirculation-counterfactual-20261122/N3_GDP_Recirculation_Reproduce.py",
+    "size": 45477,
+    "sha256": "e1ffcadb5409f2d796c72a43ebdff7bd5ac0eec672d00969ce1aef6b5a2ef583",
+    "match": true
+  },
+  {
+    "commit": "293039bf1875d1910073e1b8c14543c57d76c173",
+    "path": "handoff/chatgpt-n3-gdp-recirculation-counterfactual-20261122/Input_Source_Receipts.json",
+    "size": 9420,
+    "sha256": "0c08dba80d8f3cd6d32e2208bff54fcecf61db34001a5f31ce8b127b6cedf436",
+    "match": true
+  },
+  {
+    "commit": "293039bf1875d1910073e1b8c14543c57d76c173",
+    "path": "handoff/chatgpt-n3-gdp-recirculation-counterfactual-20261122/Reused_Claude_N3_F_Parity_Independent_Summary_DRAFT_20261122.json",
+    "size": 4204,
+    "sha256": "b22174ed943cb3c48ae543f598b709bc8db74f487c94ddcff5cbf7dcea642548",
+    "match": true
+  },
+  {
+    "commit": "293039bf1875d1910073e1b8c14543c57d76c173",
+    "path": "handoff/chatgpt-n3-gdp-recirculation-counterfactual-20261122/Reused_Claude_N3_F_Parity_Fiscal_Summary_DRAFT_20261122.json",
+    "size": 3866,
+    "sha256": "a294976c6c9e467fe5e7f78aab2565fa50c7af5181af34c26bd581b1c9441474",
+    "match": true
+  },
+  {
+    "commit": "293039bf1875d1910073e1b8c14543c57d76c173",
+    "path": "handoff/chatgpt-n3-gdp-recirculation-counterfactual-20261122/N3_GDP_Recirculation_Interactions.csv",
+    "size": 3692,
+    "sha256": "f95b1fc7b8c781d7c05e895c24aabf439d0959834118f8c0a706ffef5efd1641",
+    "match": true
+  },
+  {
+    "commit": "293039bf1875d1910073e1b8c14543c57d76c173",
+    "path": "handoff/chatgpt-n3-gdp-recirculation-counterfactual-20261122/Followup_Measures.json",
+    "size": 5297,
+    "sha256": "57120c7b6e95f2433ef6128c5fdff193f80fb0834c8739bfc1640ee366c76ff2",
+    "match": true
+  },
+  {
+    "commit": "293039bf1875d1910073e1b8c14543c57d76c173",
+    "path": "handoff/chatgpt-n3-gdp-recirculation-counterfactual-20261122/N3_GDP_Recirculation_Case_Definitions.csv",
+    "size": 4975,
+    "sha256": "ca0272ce097084e949c328a27d44e79f415d3060e73d9897a768ecc79485b685",
+    "match": true
+  },
+  {
+    "commit": "293039bf1875d1910073e1b8c14543c57d76c173",
+    "path": "handoff/chatgpt-n3-gdp-recirculation-counterfactual-20261122/Counterfactual_Assumptions.json",
+    "size": 1250,
+    "sha256": "ee855ae798ad2df18b7a9142d99c5d6ced0dff6433244e8152004519fb27ea06",
+    "match": true
+  },
+  {
+    "commit": "293039bf1875d1910073e1b8c14543c57d76c173",
+    "path": "handoff/chatgpt-n3-gdp-recirculation-counterfactual-20261122/N3_Existing_Investment_Source_Decomposition.csv",
+    "size": 8732,
+    "sha256": "313a38cbf3b1762ffe39ba70cf4f7b22f4e0739e645eaeba920ac7bb2b15d79f",
+    "match": true
+  },
+  {
+    "commit": "293039bf1875d1910073e1b8c14543c57d76c173",
+    "path": "handoff/chatgpt-n3-gdp-recirculation-counterfactual-20261122/N3_GDP_Recirculation_Case_Summary.csv",
+    "size": 8585,
+    "sha256": "94d52433b0c8f0ada4942dfef18e99e1a5cf6a5993700df5d55321a0095e2d9b",
+    "match": true
+  },
+  {
+    "commit": "293039bf1875d1910073e1b8c14543c57d76c173",
+    "path": "handoff/chatgpt-n3-gdp-recirculation-counterfactual-20261122/N3_GDP_Recirculation_Claude_Followup.md",
+    "size": 2945,
+    "sha256": "15bf6add1352a74ecd9018a4f8229796db1f88f37ddfc47d0bb7dfd0fdb6138e",
+    "match": true
+  },
+  {
+    "commit": "293039bf1875d1910073e1b8c14543c57d76c173",
+    "path": "handoff/chatgpt-n3-gdp-recirculation-counterfactual-20261122/N3_Pension_Attribution_Annual_Comparison.csv",
+    "size": 29528,
+    "sha256": "826e5d206e928836e36a5803a5bd4bf766f8673a723737e15b4d7a82f1740f9f",
+    "match": true
+  },
+  {
+    "commit": "293039bf1875d1910073e1b8c14543c57d76c173",
+    "path": "handoff/chatgpt-n3-gdp-recirculation-counterfactual-20261122/Execution.log",
+    "size": 353,
+    "sha256": "826e5551570a6b6025f08810d374c01ecf1b05c168afd742bb3dca03ec98040c",
+    "match": true
+  },
+  {
+    "commit": "293039bf1875d1910073e1b8c14543c57d76c173",
+    "path": "handoff/chatgpt-n3-gdp-recirculation-counterfactual-20261122/N3_GDP_Recirculation_Annual_Comparison_2026_2055.csv",
+    "size": 838241,
+    "sha256": "f5bfe6590354c0c625489dd40b4708b5d018a71e224dd3294977d074796dd9c7",
+    "match": true
+  },
+  {
+    "commit": "293039bf1875d1910073e1b8c14543c57d76c173",
+    "path": "handoff/chatgpt-n3-gdp-recirculation-counterfactual-20261122/N3_GDP_Recirculation_Verification.json",
+    "size": 1712735,
+    "sha256": "b7e15637469fe24ccafa9c5b84e0e7c8b5dc9ceeeb93af7804299c3f7e980218",
+    "match": true
+  },
+  {
+    "commit": "293039bf1875d1910073e1b8c14543c57d76c173",
+    "path": "handoff/chatgpt-n3-gdp-recirculation-counterfactual-20261122/N3_KPI_Threshold_Boundary_Annual.csv",
+    "size": 25227,
+    "sha256": "2bdb0010398258976f3299034774d317b35b0daf7d23e16faf2c22b19a4c1c1d",
+    "match": true
+  },
+  {
+    "commit": "293039bf1875d1910073e1b8c14543c57d76c173",
+    "path": "handoff/chatgpt-n3-gdp-recirculation-counterfactual-20261122/N3_GDP_Recirculation_Fiscal_Investment_Ledger.csv",
+    "size": 499709,
+    "sha256": "cf629c4d675ddb29a422635cd533cf41c9925a12317181877c78ecb6c31e1a8d",
+    "match": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Inputs.json",
+    "size": 39819,
+    "sha256": "d036bc65580805f9f4080b354412fc3d6ab3bc4deeb9ae8409f6ab24e625635e",
+    "match": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Components.py",
+    "size": 5528,
+    "sha256": "ec5640f9512486274122e32aacd7ca548273b23b94035710fd56949b8ea37588",
+    "match": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Model.py",
+    "size": 3903,
+    "sha256": "df0d7912f22f6aad4c266d7d256263d792214d1c7ac13122b1906dc3a4c2c4d5",
+    "match": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Macro_Adapter.py",
+    "size": 2117,
+    "sha256": "189d43082853db0b007462ce3110991641065df1905c23329ee17f2b5e6cbd72",
+    "match": true
+  },
+  {
+    "commit": "9155b22d4ba4aef6cdf91b8ff3d0f521e7080f72",
+    "path": "handoff/chatgpt-n3-policy-burden-diagnosis-20261122/N3_Unchanged_Execution_Trace.json",
+    "size": 5795176,
+    "sha256": "0ecbfab6db206e6cf77e2f1bfd6b3c2f07969a576727fdc7eebd1cebec4e94b5",
+    "match": true
+  },
+  {
+    "commit": "9155b22d4ba4aef6cdf91b8ff3d0f521e7080f72",
+    "path": "handoff/chatgpt-n3-policy-burden-diagnosis-20261122/N3_Conditional_Fiscal_Primary_Bridge.csv",
+    "size": 5730,
+    "sha256": "cf932ddda081614869e02b3db018e319ee92abd28eaa87beaef9cb8b1e8080ca",
+    "match": true
+  },
+  {
+    "commit": "9155b22d4ba4aef6cdf91b8ff3d0f521e7080f72",
+    "path": "handoff/chatgpt-national-fiscal-closure-20261121/National_Fiscal.py",
+    "size": 12677,
+    "sha256": "cf92a903f028c31ea8e8c62fb5d9cd906d7075d77420513af6b1ff8527237b9b",
+    "match": true
+  },
+  {
+    "commit": "9155b22d4ba4aef6cdf91b8ff3d0f521e7080f72",
+    "path": "handoff/chatgpt-national-fiscal-closure-20261121/Fiscal_Inputs.json",
+    "size": 2124,
+    "sha256": "d79ad4d2ba7c5748beb727d7d0586d1367061c6cc69e17012d7afd7c73ce22b9",
+    "match": true
+  },
+  {
+    "commit": "9155b22d4ba4aef6cdf91b8ff3d0f521e7080f72",
+    "path": "handoff/chatgpt-national-fiscal-closure-20261121/Official_Fiscal_Baseline_2025_2040.csv",
+    "size": 6181,
+    "sha256": "14a0fb9de6f47e92f36d549a7ded572928fc91f8a43702fc5fe42a5d8c4286f6",
+    "match": true
+  },
+  {
+    "commit": "9155b22d4ba4aef6cdf91b8ff3d0f521e7080f72",
+    "path": "handoff/chatgpt-national-fiscal-closure-20261121/SNA2024_Sector_Snapshot.csv",
+    "size": 1487,
+    "sha256": "a2ad71f585e41001cc1ecf64b9f5b3cff7b5f1ccc7ca37ab4512ad490040a711",
+    "match": true
+  },
+  {
+    "commit": "9155b22d4ba4aef6cdf91b8ff3d0f521e7080f72",
+    "path": "handoff/chatgpt-national-fiscal-closure-20261121/Statistical_Source_Receipts.json",
+    "size": 1681,
+    "sha256": "2de0b66b345a3461abb1f91ce612349504736ee8a674fd32d1be4434699fa6f2",
+    "match": true
+  },
+  {
+    "commit": "9155b22d4ba4aef6cdf91b8ff3d0f521e7080f72",
+    "path": "handoff/chatgpt-national-fiscal-closure-20261121/Statistical_Cell_Map.csv",
+    "size": 51386,
+    "sha256": "34451637af86fd6f2a9fd82a90652bfeea3011b34d4bbd2f9d563256ae9aea31",
+    "match": true
+  },
+  {
+    "commit": "9155b22d4ba4aef6cdf91b8ff3d0f521e7080f72",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/results/DOMESTIC_TRANSFER_Corporate_Funding_Stock.csv",
+    "size": 130330,
+    "sha256": "a5baccddcca220a6e045926c6e00fe30e59232c255a0d724c78818b1f1c542a0",
+    "match": true
+  },
+  {
+    "commit": "9155b22d4ba4aef6cdf91b8ff3d0f521e7080f72",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/results/Conditional_National_Local_Fiscal.csv",
+    "size": 9458004,
+    "sha256": "db7c24ba77bc36c313612dcaf1c7882bace91cb15917020989af906053a1e7db",
+    "match": true
+  },
+  {
+    "commit": "9155b22d4ba4aef6cdf91b8ff3d0f521e7080f72",
+    "path": "handoff/chatgpt-n3-gdp-robustness-fiscal-dynamics-request-20261122/SPE_Work_N3_GDP_Robustness_Fiscal_Dynamics_Request_20261122.md",
+    "size": 7426,
+    "sha256": "66fd13e12665a7ec8f7c861705967c5b98dee7eada8328c27fe8b7a1baaa7b1f",
+    "match": true
+  }
+]

@@ -1,0 +1,86 @@
+{
+  "source_commit": "9155b22d4ba4aef6cdf91b8ff3d0f521e7080f72",
+  "files": [
+    {
+      "path": "Capture_Initialization.py",
+      "size": 1948,
+      "sha256": "921d4c2b9e3f37f4a75ae8917d2fd57d2608a87383b40575bf0b01da4b98d264"
+    },
+    {
+      "path": "Component_Initialization.json",
+      "size": 63605,
+      "sha256": "5cef89b278560d6c33fc416d2067f72ac00fe6fcfce28f58f197e2a424482d80"
+    },
+    {
+      "path": "Execution.log",
+      "size": 741,
+      "sha256": "88636f81c8a7f5040172188b1232adca9dedadcd7f99354bc15941dec9ac31fe"
+    },
+    {
+      "path": "Fiscal_Official_Baseline_Boundary_Map.csv",
+      "size": 4334,
+      "sha256": "cef1bd71c3fcd46d8197b02a0c4dad4aa9fca5e0dea5df398193cc9596be250f"
+    },
+    {
+      "path": "Input_Source_Receipts.json",
+      "size": 10005,
+      "sha256": "d305dd543ab8288ca5b4f268e2f8656f5f01410dcf8ad8493d893d056f8bc9f0"
+    },
+    {
+      "path": "N3_GDP_Robustness_Annual_Comparison_2026_2055.csv",
+      "size": 2038239,
+      "sha256": "5b9c3cdd220bd254a4c2c9809901643f62cafe7502d4bc57dd4089ab3a6f72e7"
+    },
+    {
+      "path": "N3_GDP_Robustness_Boundary_Cases.csv",
+      "size": 10767,
+      "sha256": "0854e3f77ade4fef638f30bc0038504830c9824c151aee38793c8fc3d6d1c0ea"
+    },
+    {
+      "path": "N3_GDP_Robustness_Case_Definitions.csv",
+      "size": 15004,
+      "sha256": "b5ee27878fa145d36983ebf8b98473ffd4591b261ee755afafb2d2672e3fc0f7"
+    },
+    {
+      "path": "N3_GDP_Robustness_Case_Summary.csv",
+      "size": 30041,
+      "sha256": "240e2d61876563d8937f65fd22e4adca726a536cc5c0f4fe052bb02440e656da"
+    },
+    {
+      "path": "N3_GDP_Robustness_Dynamic_Tax_Household_Bridge.csv",
+      "size": 1118119,
+      "sha256": "1330a9fe339d8d611d859fcd03c5d6e8070dc17615e78b8d6a97b39ec4b0120f"
+    },
+    {
+      "path": "N3_GDP_Robustness_Fiscal_Closure.csv",
+      "size": 1434774,
+      "sha256": "d717bfa911ba07f77ea3628d7fbc49ba628f59c8676e9d40a706dd2ee50a8d4a"
+    },
+    {
+      "path": "N3_GDP_Robustness_Reproduce.py",
+      "size": 42183,
+      "sha256": "9bc03585bd23f4eebf06ae98f191c92785ec85f8f67e6a2124ab6637bed3c866"
+    },
+    {
+      "path": "N3_GDP_Robustness_Verification.json",
+      "size": 869,
+      "sha256": "0b907d6110add69049661d863e04d3d028e4b0dd07baec6354ea53eb407dabd2"
+    },
+    {
+      "path": "Public_Sources.md",
+      "size": 3848,
+      "sha256": "cfb304fcf201fb173c90375473f67697a63dd06b9d15f91bdef2d442b3d6365a"
+    },
+    {
+      "path": "SPE_N3_GDP_Robustness_Fiscal_Dynamics_Report_DRAFT_20261122.md",
+      "size": 13112,
+      "sha256": "8f87725f6103450dee0ccc3ef8d5b5f67dbe646c3597327b0359492d1c901b98"
+    },
+    {
+      "path": "Scope_and_Unresolved.md",
+      "size": 1868,
+      "sha256": "a0cbce56f76e884a3beb5d4892760160094b7074b1dcf71642a202c1d0b9cca5"
+    }
+  ],
+  "self_excluded": true
+}

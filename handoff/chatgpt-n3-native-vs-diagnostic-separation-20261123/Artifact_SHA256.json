@@ -1,0 +1,97 @@
+[
+  {
+    "path": "handoff/chatgpt-n3-native-vs-diagnostic-separation-20261123/Build_Native_Coverage.py",
+    "size": 7782,
+    "sha256": "a07ee0c2745349a95264039ea6ede205d94785f513a2284bec0973c4845d2e56"
+  },
+  {
+    "path": "handoff/chatgpt-n3-native-vs-diagnostic-separation-20261123/Comparison_Contract_And_Inputs.json",
+    "size": 14004,
+    "sha256": "8fe6166b4224c6202855c496512da01953d93d3042dc36ff582dc98cd8f653fa"
+  },
+  {
+    "path": "handoff/chatgpt-n3-native-vs-diagnostic-separation-20261123/Coverage_Verification.json",
+    "size": 318,
+    "sha256": "1fb674382921fcd64582b9d7267873b175693445b4ef9358fec11116fabe4581"
+  },
+  {
+    "path": "handoff/chatgpt-n3-native-vs-diagnostic-separation-20261123/Delivery_Verification.json",
+    "size": 383,
+    "sha256": "76667d2610af3bcad649d2b8ea3f703d74461609c5b82e82d1af7b34c8f7a212"
+  },
+  {
+    "path": "handoff/chatgpt-n3-native-vs-diagnostic-separation-20261123/Detail_2029_2032_2055.csv",
+    "size": 43479,
+    "sha256": "1f22e204a0bb1111528c93b1683e9c8c4316cdf59e9a42f03190819adacf1931"
+  },
+  {
+    "path": "handoff/chatgpt-n3-native-vs-diagnostic-separation-20261123/Executed_Case_Definitions.csv",
+    "size": 2292,
+    "sha256": "e6121f9e7b9b08688ea54a1c373ca454e3d8c8e717460ed922281878bd8103a9"
+  },
+  {
+    "path": "handoff/chatgpt-n3-native-vs-diagnostic-separation-20261123/Execution.log",
+    "size": 4579,
+    "sha256": "b7724fc6d898fab7f2650c6e5d10d47d6a470cd1dc8ac0a98507beadb1682eab"
+  },
+  {
+    "path": "handoff/chatgpt-n3-native-vs-diagnostic-separation-20261123/Input_Source_Receipts.json",
+    "size": 8908,
+    "sha256": "f7bc5ca56d8a9b2531db327aaf415854e16a59ae5b3f2a27740f0a13a4353917"
+  },
+  {
+    "path": "handoff/chatgpt-n3-native-vs-diagnostic-separation-20261123/N3_Diagnostic_Increment_And_Funding_Attribution.csv",
+    "size": 113454,
+    "sha256": "9d6514f2dd7a473f43e7d0e6a2e3cf6a700d66313ed71dd555018ecf03935b35"
+  },
+  {
+    "path": "handoff/chatgpt-n3-native-vs-diagnostic-separation-20261123/N3_Fiscal_Cash_Debt_Ledger_2026_2055.csv",
+    "size": 101960,
+    "sha256": "1567bc66231b78f28cb18e10974e50410714cdb1bc810b977d868da645b3fdec"
+  },
+  {
+    "path": "handoff/chatgpt-n3-native-vs-diagnostic-separation-20261123/N3_Native_Diagnostic_Reproduce.py",
+    "size": 15567,
+    "sha256": "ad7a73fa2c9ea2361824c11fe207b582c4e8465d91406f68c72ff38de641c291"
+  },
+  {
+    "path": "handoff/chatgpt-n3-native-vs-diagnostic-separation-20261123/N3_Native_Policy_Implementation_Coverage.csv",
+    "size": 23186,
+    "sha256": "fb9d13d5cf5b11b04d1ec074c5af7182d67c02022a8fadc1197df9ce4d84d1e3"
+  },
+  {
+    "path": "handoff/chatgpt-n3-native-vs-diagnostic-separation-20261123/N3_Native_vs_Diagnostic_Annual_Comparison_2026_2055.csv",
+    "size": 250643,
+    "sha256": "8f4b78638c691d7da21c33c858a831b91ac9e4d53e054a7c23adf1bee76b1545"
+  },
+  {
+    "path": "handoff/chatgpt-n3-native-vs-diagnostic-separation-20261123/N3_Native_vs_Diagnostic_Case_Summary.csv",
+    "size": 1668,
+    "sha256": "946eb358e4c392c921610f12fce8776725fd96264b4c515ac8b86ee60f6bd0f5"
+  },
+  {
+    "path": "handoff/chatgpt-n3-native-vs-diagnostic-separation-20261123/Public_Source_References.md",
+    "size": 1736,
+    "sha256": "bb908876e7074abc9b989e402d3c23c2d01fdf6a10aeaca7c905700b6ebec29a"
+  },
+  {
+    "path": "handoff/chatgpt-n3-native-vs-diagnostic-separation-20261123/Resolved_Separation_Runtime.py.txt",
+    "size": 16403,
+    "sha256": "2d11d730317055bf1af4d35e8b268ef1cfc3be0936fb9511238b316510b39ac5"
+  },
+  {
+    "path": "handoff/chatgpt-n3-native-vs-diagnostic-separation-20261123/SPE_N3_Native_vs_Diagnostic_Separation_Report_DRAFT_20261123.md",
+    "size": 17086,
+    "sha256": "7a2cf7029a6de52741cd5da3fb786a791b86da0dfbe85db5df809aaf36a3d01e"
+  },
+  {
+    "path": "handoff/chatgpt-n3-native-vs-diagnostic-separation-20261123/Shared_Exogenous_Inputs_2026_2055.csv",
+    "size": 6161,
+    "sha256": "12e817f6eb3cba3e155abf6d17f4eecf83adc560451bce58ef8012f7dc2f6064"
+  },
+  {
+    "path": "handoff/chatgpt-n3-native-vs-diagnostic-separation-20261123/Verification.json",
+    "size": 697,
+    "sha256": "42aa33f340c2f6daac97c56497d44c3cc8f4588ce84f4fba95c4d140b009b157"
+  }
+]

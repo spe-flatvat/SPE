@@ -1,0 +1,493 @@
+{
+  "fixed_source_commit": "65227a9b86f198df62430f541fbee41e3e788b80",
+  "period": [
+    2026,
+    2055
+  ],
+  "SQ": "EXACT_FIXED_SQ_COMMON_ON_MACRO_SERIES",
+  "native_existing_equivalent": "NO_UNAPPROVED_ASSIGNMENT",
+  "diagnostic_equivalent": "CONDITIONAL_CENTRAL_EXECUTOR",
+  "shared_parameters": {
+    "elasticity": 1.5,
+    "household_income_share": 0.6,
+    "taxable_share": 0.5,
+    "food_share_of_tax_base": 0.2,
+    "lambda_C": 0.6,
+    "lambda_I": 0.6,
+    "domestic_share": 0.8,
+    "income_feedback": 0.08,
+    "depreciation": 0.05,
+    "capital_yield": 0.1,
+    "capital_ratio": 3.0,
+    "education_decay": 0.03,
+    "education_yield": 0.06,
+    "capacity_absorption": 0.5,
+    "slack": 0.02,
+    "medical_mode": "UNALLOCATED_COMPAT",
+    "patient_share": 0.1,
+    "insurer_share": 0.25,
+    "public_share": 0.65,
+    "initial_premium_pass": 0.5,
+    "insurer_initial_resources": null,
+    "internal_resource_return": null,
+    "public_funding_mode": null,
+    "cohorts": [
+      {
+        "income_man": 250.0,
+        "persons": 30000000.0,
+        "contribution_rate": 0.15,
+        "mpc": 0.9
+      },
+      {
+        "income_man": 450.0,
+        "persons": 30000000.0,
+        "contribution_rate": 0.15,
+        "mpc": 0.7
+      },
+      {
+        "income_man": 800.0,
+        "persons": 20000000.0,
+        "contribution_rate": 0.15,
+        "mpc": 0.4
+      }
+    ],
+    "corp_profit_base": 60.0,
+    "corp_reference_rate": 0.232,
+    "hyper_eligible_investment": 20.0,
+    "training_eligible_spend": 2.0,
+    "firm_investment_response": 0.3,
+    "governance_eligible_retained": 300.0,
+    "governance_allocation": {
+      "equipment": 0.4,
+      "research": 0.3,
+      "human": 0.3
+    },
+    "payout_ratio": 0.35,
+    "foreign_value_added_per_person_trn": 8e-06,
+    "foreign_labor_participation": 0.8,
+    "labor_initial_ratio": 0.55,
+    "labor_response": 0.65,
+    "gini_observations": {
+      "2035": 0.38
+    },
+    "vat_expected_revenue": {
+      "2034": 25.0
+    },
+    "vat_observed_revenue": {
+      "2034": 26.0
+    },
+    "medical_total_bill_base": 40.0,
+    "current_patient_share": 0.25,
+    "high_cost_eligible_amount": 1.0,
+    "high_cost_relief_fraction": 0.1,
+    "preventive_eligible_fee": 5.0,
+    "equipment_eligible_fee": 4.0,
+    "palliative_saving_base": 0.2,
+    "hub_unit_cost": 0.001,
+    "extra_bases": {
+      "land": 20.0,
+      "property_nonrental": 15.0,
+      "other_nonfinancial": 10.0,
+      "new_small_business": 2.0
+    },
+    "extra_input_ratios": {
+      "land": 0.0,
+      "property_nonrental": 0.3,
+      "other_nonfinancial": 0.2,
+      "new_small_business": 0.1
+    },
+    "extra_base_private_share": 0.7,
+    "extra_base_public_share": 0.3,
+    "invoice_cost_saving": 0.0,
+    "stamp_tax_removed": 0.0,
+    "digital_system_cost": 0.0,
+    "growth_hypothesis_mode": "STRUCTURAL_ONLY",
+    "consumption_hypothesis_pp": 0.005,
+    "investment_hypothesis_pp": 0.004,
+    "education_level_effect": 0.003,
+    "education_wage_level_effect": 0.002,
+    "wage_growth_response": null,
+    "medical_public_payer_fraction": 0.5,
+    "tax_incentive_eligible": true,
+    "governance_compliance": true,
+    "annex_incremental_debt": null,
+    "annex_incremental_tax": null,
+    "generic_mpc": 0.72,
+    "extra_credit_price_share": 0.3,
+    "extra_business_investment_share": 0.2,
+    "sector_nominal_growth": 0.015,
+    "price_pressure_coefficient": 0.5,
+    "promotion_fiscal_cost_share": 0.25,
+    "education_public_payer_share": 0.2,
+    "wage_gap_elasticity": 0.3,
+    "base_growth": 0.01,
+    "base_inflation": 0.02,
+    "death_growth": 0.015,
+    "birth_decline": 0.025,
+    "tax_cap_ratio": 0.3,
+    "medical_residual_funding_mode": "UNALLOCATED_COMPAT",
+    "migration": {
+      "F_flow_interpretation": "TOTAL_TARGET",
+      "F_total_flow_reference": 400000.0,
+      "F_additional_flow_reference": 400000.0,
+      "enforcement_mode": "NONE_REFERENCE",
+      "gdp_share_interpretation_fraction": 0.05,
+      "source_conditions": {
+        "start_year": 2030,
+        "japanese_minimum": "N4",
+        "screening": [
+          "conduct",
+          "health",
+          "job_readiness"
+        ],
+        "integration": [
+          "Japanese",
+          "social-understanding",
+          "regional-dispersion"
+        ],
+        "population_share_target": [
+          0.03,
+          0.05
+        ],
+        "gdp_share_wording": 0.05,
+        "definition_status": "population denominator and GDP contribution cap are distinct;no automatic population-quota enforcement"
+      },
+      "target_stock_definition_code": null
+    },
+    "year8": 2030,
+    "year5": 2035,
+    "food_zero_start": 2027,
+    "food_eight_start": 2030,
+    "base_start": 2035,
+    "investment_start": 2028,
+    "education_start": 2028,
+    "insurance_start": 2028,
+    "governance_start": 2028,
+    "medical_start": 2028,
+    "investment_flow_share": 0.0,
+    "education_flow_share": 0.0,
+    "insurance_reduction": 0.35,
+    "in_kind_per_eligible_man": 2.0,
+    "vat_relief_social_return_fraction": 0.5,
+    "corp_start": 2028,
+    "defense_surcharge_schedule": {
+      "2028": 0.01,
+      "2032": 0.02
+    },
+    "hyper_extra_deduction": 0.2,
+    "training_credit_rate": 0.2,
+    "governance_release_fraction": 0.002,
+    "payout_interpretation": "BODY_OVER40_DISCLOSURE",
+    "elderly_additional_workers": 0.0,
+    "elderly_subsidy_per_worker_man": 0.0,
+    "pension_relief_per_worker_man": 0.0,
+    "education_trigger_multiplier": 1.2,
+    "gini_relief_increment": 0.05,
+    "gini_increment_mode": "PERCENTAGE_POINTS",
+    "circuit_growth_floor": null,
+    "circuit_gini_ceiling": null,
+    "circuit_action": "STOP_NEW_MODULES",
+    "circuit_evaluation_start": 2035,
+    "preventive_award": 0.02,
+    "equipment_award": 0.015,
+    "palliative_subsidy": 0.05,
+    "palliative_start": 2028,
+    "hub_target": 1000,
+    "transition_fee_support": 0.1,
+    "scholarship_spend": 0.0,
+    "education_bond_share": 0.0,
+    "annex4_patient_thirty": false,
+    "vat_return_interpretation": "ADDITIONAL_TRANSFER",
+    "education_program_budget": 0.0,
+    "admin_start": 2028,
+    "apply_oil_to_initial": false,
+    "disaster_anchor": 2029,
+    "climate_anchor": 2028,
+    "wage_shock_start": 2027,
+    "oil_gdp_loss": 0.03,
+    "conflict_gdp_loss": 0.05,
+    "quake_gdp_loss": 0.03,
+    "disaster_gdp_loss": 0.01,
+    "climate_gdp_loss": 0.005,
+    "oil_inflation_extra": 0.02,
+    "conflict_inflation_extra": 0.05,
+    "quake_tax_factor": 0.9
+  },
+  "shared_component_spec": {
+    "common": true,
+    "copay": true,
+    "provider": false,
+    "keep_legacy": false,
+    "uniform_thirty": true,
+    "cap_mode": "PATIENT_CAP_DOWN",
+    "cap_change": 0.0,
+    "demand_elasticity": 0.1,
+    "necessary_care_share": 0.2,
+    "harm_worker_equivalent_per_trn": 10000,
+    "preventive_spend_trn": 0.15,
+    "prevention_discovery_trn": 0.05,
+    "prevention_saving_trn": 0.1,
+    "health_lag": 5,
+    "health_worker_equivalent": 10000,
+    "eligible_preventive_fee_trn": 5.0,
+    "preventive_award": 0.02,
+    "eligible_equipment_fee_trn": 4.0,
+    "equipment_award": 0.015,
+    "equipment_spend_trn": 0.1,
+    "provider_capacity": 0.8,
+    "hub_target": 1000,
+    "hub_capital_yen": 200000000,
+    "hub_operation_yen": 50000000,
+    "hub_staff_share": 0.7,
+    "transition_support_trn": 0.1,
+    "palliative_provider_support_trn": 0.05,
+    "clinical_public_fraction": 0.5,
+    "premium_pass": 0.5,
+    "government_insurer_backfill_share": 0.0,
+    "domestic_service_share": 0.9,
+    "domestic_capital_share": 0.9,
+    "start_year": 2033,
+    "ramp_years": 6,
+    "C": true,
+    "C_mode": "ADDITIONAL_BUDGET",
+    "common_overrides": {},
+    "demand_mode": "AGE",
+    "payer_mode": "CLAIMS",
+    "universal_palliative": true,
+    "capacity_multiplier": 1.0,
+    "episode_months": 3,
+    "medical_import_share": 0.1,
+    "medical_intermediate_share": 0.4,
+    "medical_VA_scale": 0.5,
+    "medical_displacement_share": 0.2,
+    "capital_VA_ratio": 0.6,
+    "other_spending_VA_ratio": 0.6,
+    "finance_fraction": 0.5,
+    "finance_mix": {
+      "TAX": 0.25,
+      "PREMIUM": 0.25,
+      "DEBT": 0.25,
+      "OTHER_SPENDING": 0.25
+    },
+    "medical_debt_rate": 0.02,
+    "legacy_GDP": false,
+    "vat_response": true,
+    "edu_E": true,
+    "edu_S": true,
+    "edu_T": true,
+    "id": "PARITY_CONNECTED_CANDIDATE",
+    "medical": true,
+    "interpolation": "RATE",
+    "vat": "PATH",
+    "quantity_elasticity": 0.25,
+    "flat_hh": true,
+    "corporate": true,
+    "corporate_incentive": true,
+    "pension75": true,
+    "relief": true,
+    "employment": true,
+    "household_start": 2030,
+    "household_ramp": 3,
+    "quantity_link": true,
+    "estate_reported": true,
+    "estate_mpc": 0.1,
+    "semi_med_share": 0.5,
+    "dynamic_bases": true,
+    "kpi": true,
+    "kpi_signal": "LAGGED_REAL_CASH_INCOME_GROWTH",
+    "kpi_growth_threshold_pct": 0.0,
+    "kpi_evaluation_year": 2035,
+    "kpi_once": true
+  },
+  "shared_finance_specs": {
+    "tail": "HOLD",
+    "interest_mode": "LEGACY_EXCESS_ONLY",
+    "rate": 0.02,
+    "rollover": 0.1,
+    "sfa_tail": "ZERO",
+    "backfill": false,
+    "ss_growth": 0.0,
+    "kpi": "FIXED",
+    "firm_rate": 0.75,
+    "g_share": 0.5,
+    "pi_share": 0.25,
+    "domestic": 0.8,
+    "yield_public": 0.1
+  },
+  "SFA_cash_mapping_note": "native q_c=q_l=0; matched factorial q_c=q_l=1; underlying residual series unchanged",
+  "finite_GI_authority_inputs": {
+    "conditional_expenditure_authority_2030_trn": 11.184747,
+    "annual_caps": {
+      "2026": {
+        "G": 6.938893903907228e-15,
+        "I": 0.0,
+        "borrowing": 34.099999999999916
+      },
+      "2027": {
+        "G": 6.938893903907228e-15,
+        "I": 2.0816681711721685e-15,
+        "borrowing": 19.700000000000138
+      },
+      "2028": {
+        "G": 6.938893903907228e-15,
+        "I": 2.9309538761770654e-15,
+        "borrowing": 22.49999999999988
+      },
+      "2029": {
+        "G": 6.938893903907228e-15,
+        "I": 3.2775749567569546e-15,
+        "borrowing": 25.30000000000003
+      },
+      "2030": {
+        "G": 8.603651217987832,
+        "I": 2.581095365396351,
+        "borrowing": 11.185303
+      },
+      "2031": {
+        "G": 20.218079486204587,
+        "I": 7.118964393751194,
+        "borrowing": 0.0
+      },
+      "2032": {
+        "G": 46.69739324263858,
+        "I": 16.914262888238405,
+        "borrowing": 1.4210854715202004e-14
+      },
+      "2033": {
+        "G": 42.55544007385621,
+        "I": 19.666857444545176,
+        "borrowing": 7.105427357601002e-15
+      },
+      "2034": {
+        "G": 47.953418940518496,
+        "I": 22.410050853952985,
+        "borrowing": 1.4210854715202004e-14
+      },
+      "2035": {
+        "G": 44.5720917545219,
+        "I": 22.28604587726095,
+        "borrowing": 0.0
+      },
+      "2036": {
+        "G": 44.570782248399006,
+        "I": 22.285391124199503,
+        "borrowing": 0.0
+      },
+      "2037": {
+        "G": 45.02838429075275,
+        "I": 22.51419214537637,
+        "borrowing": 0.0
+      },
+      "2038": {
+        "G": 55.05711462360534,
+        "I": 25.704871006202666,
+        "borrowing": 0.0
+      },
+      "2039": {
+        "G": 56.72986919287532,
+        "I": 27.505643819210235,
+        "borrowing": 0.0
+      },
+      "2040": {
+        "G": 65.09766520811965,
+        "I": 30.751609395284238,
+        "borrowing": 0.0
+      },
+      "2041": {
+        "G": 72.29488529640847,
+        "I": 34.23670386852958,
+        "borrowing": 0.0
+      },
+      "2042": {
+        "G": 74.63988587502936,
+        "I": 36.36082789189327,
+        "borrowing": 0.0
+      },
+      "2043": {
+        "G": 76.16083534234406,
+        "I": 37.682271432858684,
+        "borrowing": 0.0
+      },
+      "2044": {
+        "G": 77.37645646460777,
+        "I": 38.590490240657836,
+        "borrowing": 0.0
+      },
+      "2045": {
+        "G": 78.87464445581253,
+        "I": 39.405885163950884,
+        "borrowing": 0.0
+      },
+      "2046": {
+        "G": 80.12335596406237,
+        "I": 40.06167798203118,
+        "borrowing": 0.0
+      },
+      "2047": {
+        "G": 81.31157554704214,
+        "I": 40.65578777352107,
+        "borrowing": 0.0
+      },
+      "2048": {
+        "G": 82.61863269714328,
+        "I": 41.30931634857164,
+        "borrowing": 0.0
+      },
+      "2049": {
+        "G": 84.04046756174986,
+        "I": 42.02023378087493,
+        "borrowing": 0.0
+      },
+      "2050": {
+        "G": 85.17492028172593,
+        "I": 42.587460140862966,
+        "borrowing": 0.0
+      },
+      "2051": {
+        "G": 86.80675159322766,
+        "I": 43.40337579661382,
+        "borrowing": 0.0
+      },
+      "2052": {
+        "G": 88.25591704137094,
+        "I": 44.12795852068547,
+        "borrowing": 0.0
+      },
+      "2053": {
+        "G": 89.60530151023596,
+        "I": 44.80265075511797,
+        "borrowing": 0.0
+      },
+      "2054": {
+        "G": 91.07226753905306,
+        "I": 45.53613376952653,
+        "borrowing": 0.0
+      },
+      "2055": {
+        "G": 92.66357572508309,
+        "I": 46.331787862541546,
+        "borrowing": 0.0
+      }
+    },
+    "source_commit": "5c2cdad05119d453e2c0bf002cca4795e5de26b5",
+    "source_case": "MIN_SQ_BOTH",
+    "actual_budget_authorized": false,
+    "post2030_deficit_law_extension_assumed": false,
+    "scope": "CONSOLIDATED_HYPOTHETICAL_FINITE_BUDGETS_NOT_SECTOR_AUTHORITY"
+  },
+  "I_only_reuse": {
+    "commit": "65227a9b86f198df62430f541fbee41e3e788b80",
+    "case": "CONDITIONAL_LOCAL_ELIGIBLE_I",
+    "exact_all_years_G_off": true
+  },
+  "native_private_investment75_note": "Shared retained preexisting diagnostic assumption; native-existing is not a fully text-derived implementation",
+  "SQ_fiscal_fields": "unknown in fixed macro reference; do not synthesize national balances",
+  "units": {
+    "GDP": "TRILLION_YEN_REAL",
+    "cash_tax_debt_GI": "TRILLION_YEN_NOMINAL",
+    "population": "PERSONS",
+    "rates": "AS_IN_FIXED_ENGINE",
+    "scope": "PARTIAL_PROXY_NOT_OFFICIAL_GENERAL_GOVERNMENT"
+  },
+  "formal_policy_adopted": false
+}

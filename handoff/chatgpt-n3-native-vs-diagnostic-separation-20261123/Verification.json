@@ -1,0 +1,27 @@
+{
+  "status": "PASS_SEPARATED_COMPARISON_AND_ATTRIBUTION",
+  "executed_paths": 5,
+  "executed_annual_rows": 150,
+  "new_matched_counterfactual_paths": 3,
+  "new_matched_annual_rows": 90,
+  "limited_reproduction_paths": 2,
+  "limited_reproduction_rows": 60,
+  "reused_I_only_rows": 30,
+  "reused_SQ_rows": 30,
+  "delivered_paths": 7,
+  "delivered_rows": 210,
+  "checks": 5990,
+  "failed": 0,
+  "failures": [],
+  "prior_checks_reused": [
+    3580,
+    3190,
+    6972
+  ],
+  "prior_macro_neutrality_comparisons_reused": 120,
+  "SQ_definition_changed": false,
+  "common_engine_changed": false,
+  "policy_adopted": false,
+  "full_native_implementation": false,
+  "real_world_2030_funding": "unknown"
+}

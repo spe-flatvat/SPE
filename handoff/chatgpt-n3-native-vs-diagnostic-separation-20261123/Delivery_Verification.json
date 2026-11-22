@@ -1,0 +1,12 @@
+{
+  "status": "PASS_DELIVERED_INDEPENDENT_PATHS_AND_ATTRIBUTION",
+  "delivered_paths": 7,
+  "annual_rows": 210,
+  "attribution_rows": 360,
+  "policy_coverage_rows": 22,
+  "only_authorized_new_directory": true,
+  "prior_native_and_diagnostic_reproduced": true,
+  "full_native_implementation": false,
+  "real_2030_funding": "unknown",
+  "main_requested_deliverables_generated": true
+}

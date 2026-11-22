@@ -1,0 +1,13 @@
+{
+  "rows": 22,
+  "counts": {
+    "IMPLEMENTED_IN_NATIVE": 1,
+    "PARTIAL_OR_PROXY": 15,
+    "STRUCTURAL_ONLY": 3,
+    "NOT_QUANTIFIED": 1,
+    "UNRESOLVED": 2
+  },
+  "source_commit": "65227a9b86f198df62430f541fbee41e3e788b80",
+  "full_policy_implementation": false,
+  "diagnostic_GI_reclassified_as_native": false
+}

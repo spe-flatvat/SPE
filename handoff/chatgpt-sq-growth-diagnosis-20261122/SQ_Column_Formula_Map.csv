@@ -1,0 +1,16 @@
+column,source,formula,unit_or_status
+real_GDP_trn,SQ macro_row.real_gdp_trn / fixed real_gdp_trn,"Ycore + demand wedge, subject to supply ceiling",TRN_REAL
+population,trace.demography.population,births-deaths+netmigration+referencebridge recurrence,PERSONS
+effective_labor,trace.labor / fixed macro_labor_force_population_proxy,"SQ domestic_employed + foreign_employed, verified",EFFECTIVE_PERSONS_PROXY
+core_real_GDP_trn,trace.coreY,580*product(1+g-risk)*(L/L0)^0.65,TRN_REAL
+nonlabor_factor,trace.nonlabor_factor,"product(1+base_growth-risk), once in LEVEL branch",DIMENSIONLESS
+contrib_*,annual mathematical decomposition,previous_core*g/risk/labor/cross + delta demand wedge,TRN_ADDITIVE
+nested_*,nested labor/population decomposition,"alternatives/internal splits, NOT additional contributions",TRN_NESTED_DO_NOT_DOUBLE_ADD
+baseline_capital_real_trn,3*trace.coreY,capital is constructed from GDP; not observed input,TRN_REAL_PROXY
+replacement_investment_real_trn,trace.replacement,coreK_t-0.95*coreK_previous,TRN_IMPUTED_NOT_OBSERVED
+policy_investment_real_trn,trace.I,0.4*Iprev+0.6*invest_nom/coreD,TRN_REAL_ADDITIONAL
+supply_gain_real_trn,trace.supply,0.1*0.95*Kprev + education yield term,TRN_REAL_ADDITIONAL
+household_consumption_real_proxy_trn,macro_row.household_consumption_real_proxy_trn,0.6*Ycore+C,TRN_REAL_PROXY
+macro_tax_trn,trace.tax,"min(prevTax*(1+nominalGrowth*1.5)*quakefactor,0.3*N)",TRN_NOMINAL_PROXY
+observed_TFP,ABSENT,NOT_IDENTIFIED: base_growth not measured TFP,NULL
+identified_causal_immigration_effect,ABSENT,NOT_IDENTIFIED: fixed paths/stock algebra only,NULL

@@ -1,0 +1,107 @@
+[
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Inputs.json",
+    "size": 39819,
+    "sha256": "d036bc65580805f9f4080b354412fc3d6ab3bc4deeb9ae8409f6ab24e625635e",
+    "local_matches_fixed_git_object": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Model.py",
+    "size": 3903,
+    "sha256": "df0d7912f22f6aad4c266d7d256263d792214d1c7ac13122b1906dc3a4c2c4d5",
+    "local_matches_fixed_git_object": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Components.py",
+    "size": 5528,
+    "sha256": "ec5640f9512486274122e32aacd7ca548273b23b94035710fd56949b8ea37588",
+    "local_matches_fixed_git_object": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Macro_Adapter.py",
+    "size": 2117,
+    "sha256": "189d43082853db0b007462ce3110991641065df1905c23329ee17f2b5e6cbd72",
+    "local_matches_fixed_git_object": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Resolved_Macro_Source.py.txt",
+    "size": 65453,
+    "sha256": "d7e71f75c3c19d4ea283308b40af5894e62e24db696f4ca8ce40a4bf609f395d",
+    "local_matches_fixed_git_object": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Source_Identity.json",
+    "size": 2609,
+    "sha256": "0f5f525b51dc798c9249e022614d7a95ca981f8f6070e2b8dce85eddd92138f4",
+    "local_matches_fixed_git_object": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Manifest.json",
+    "size": 19457,
+    "sha256": "e5a73325d6b1f3fb2c1e3f5e529de9c28c0244574c03edeba28184a8b3a8bbb3",
+    "local_matches_fixed_git_object": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/results/Annual_DOMESTIC_TRANSFER.csv",
+    "size": 2099159,
+    "sha256": "26517daddcaf66ebaffd1ae54382d87321e8cf2dacc435344d6415c7dc7f1a6a",
+    "local_matches_fixed_git_object": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/results/SQ_F_N3_Annual_Comparison.csv",
+    "size": 5964386,
+    "sha256": "0dc6875787728cf71bf5f0f9d2f35ff96ff62d6d62a2e72029275f1713902ae4",
+    "local_matches_fixed_git_object": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/results/Verification.json",
+    "size": 8929,
+    "sha256": "5ce42640e739420c8add44bc77ec1124fcb66cab6311881059a16d4b8f11540b",
+    "local_matches_fixed_git_object": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/f-foreign-quantity-20261120/Model.py",
+    "size": 32941,
+    "sha256": "b27e4471b885b76d55fac6024e9de3ecb1707d4a78f9a05e916bc49bf1afb0d2",
+    "local_matches_fixed_git_object": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/f-common-endoflife-finalization-20261121/Annual.csv",
+    "size": 6775129,
+    "sha256": "1754500818d58de9b075106cb1185322dc5c961a3438dbcfa0a2883917d8ba79",
+    "local_matches_fixed_git_object": true
+  },
+  {
+    "commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+    "path": "handoff/f-tx01-tx03-20261118/SPE_F_TX_Inputs_DRAFT_20261118.json",
+    "size": 442065,
+    "sha256": "d35501a0ac9beba3bf40e941fe691d31078371a1ce4964f390403d66e86b8aa5",
+    "local_matches_fixed_git_object": true
+  },
+  {
+    "commit": "ba08c45d4ecb99defecb8416c8d63e0cbfde8cb4",
+    "path": "handoff/claude-n3-f-parity-verification-20261122/N3_F_Parity_Independent_Summary_DRAFT_20261122.json",
+    "size": 4204,
+    "sha256": "b22174ed943cb3c48ae543f598b709bc8db74f487c94ddcff5cbf7dcea642548",
+    "local_matches_fixed_git_object": null
+  },
+  {
+    "commit": "ba08c45d4ecb99defecb8416c8d63e0cbfde8cb4",
+    "path": "handoff/claude-n3-f-parity-verification-20261122/SPE_N3_F_Parity_Limited_Independent_Verification_Report_DRAFT_20261122.md",
+    "size": 22581,
+    "sha256": "13127d17bb8e3dfd6fec93c6b0c6a471130de02333e0dca43e1c8063214473d7",
+    "local_matches_fixed_git_object": null
+  }
+]

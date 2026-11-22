@@ -1,0 +1,2720 @@
+{
+  "status": "PASS_NUMERICAL_DIAGNOSIS",
+  "independent_model_review": false,
+  "checks": 436,
+  "failed": 0,
+  "failures": [],
+  "checks_detail": [
+    {
+      "check": "labor_nested_2026",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_reconstructed_2026",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "additive_decomposition_2026",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_reconstructed_2026",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "year_on_year_growth_2026",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_output_proxy_2026",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_output_2026",
+      "error": -3.0994415283203125e-05,
+      "tolerance": 0.0001,
+      "pass_": true
+    },
+    {
+      "check": "base_risk_trace_2026",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_nested_2027",
+      "error": -7.527312106958561e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "population_account_2027",
+      "error": 5.820766091346741e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "SQ_employment_components_2027",
+      "error": -9.313225746154785e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_stock_identity_2027",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_nominal_formula_2027",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "actual_nominal_formula_2027",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "tax_reconstruction_2027",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_reconstructed_2027",
+      "error": -1.4790657587582245e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "additive_decomposition_2027",
+      "error": -1.7763568394002505e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_reconstructed_2027",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "year_on_year_growth_2027",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_output_proxy_2027",
+      "error": -1.4790657587582245e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_output_2027",
+      "error": -2.1383166313171387e-05,
+      "tolerance": 0.0001,
+      "pass_": true
+    },
+    {
+      "check": "base_risk_trace_2027",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_nested_2028",
+      "error": -4.263256414560601e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "population_account_2028",
+      "error": 5.820766091346741e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "SQ_employment_components_2028",
+      "error": 1.30385160446167e-08,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_stock_identity_2028",
+      "error": -9.860761315262648e-32,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_nominal_formula_2028",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "actual_nominal_formula_2028",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "tax_reconstruction_2028",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_reconstructed_2028",
+      "error": -3.312834451207891e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "additive_decomposition_2028",
+      "error": -3.597122599785507e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_reconstructed_2028",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "year_on_year_growth_2028",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_output_proxy_2028",
+      "error": -3.312834451207891e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_output_2028",
+      "error": 3.045797348022461e-05,
+      "tolerance": 0.0001,
+      "pass_": true
+    },
+    {
+      "check": "base_risk_trace_2028",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_nested_2029",
+      "error": 5.684341886080802e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "population_account_2029",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "SQ_employment_components_2029",
+      "error": -4.6566128730773926e-09,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_stock_identity_2029",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_nominal_formula_2029",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "actual_nominal_formula_2029",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "tax_reconstruction_2029",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_reconstructed_2029",
+      "error": -3.738023224286735e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "additive_decomposition_2029",
+      "error": 2.842170943040401e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_reconstructed_2029",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "year_on_year_growth_2029",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_output_proxy_2029",
+      "error": -3.738023224286735e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_output_2029",
+      "error": 4.412233829498291e-05,
+      "tolerance": 0.0001,
+      "pass_": true
+    },
+    {
+      "check": "base_risk_trace_2029",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_nested_2030",
+      "error": 1.5987211554602254e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "population_account_2030",
+      "error": 5.820766091346741e-11,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "SQ_employment_components_2030",
+      "error": 4.656612873077393e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_stock_identity_2030",
+      "error": 3.697785493223493e-32,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_nominal_formula_2030",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "actual_nominal_formula_2030",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "tax_reconstruction_2030",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_reconstructed_2030",
+      "error": -4.150706445216201e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "additive_decomposition_2030",
+      "error": 1.4155343563970746e-13,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_reconstructed_2030",
+      "error": -1.1368683772161603e-13,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "year_on_year_growth_2030",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_output_proxy_2030",
+      "error": -4.149569576838985e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_output_2030",
+      "error": -4.1872262954711914e-05,
+      "tolerance": 0.0001,
+      "pass_": true
+    },
+    {
+      "check": "base_risk_trace_2030",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_nested_2031",
+      "error": -1.1002310174035301e-13,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "population_account_2031",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "SQ_employment_components_2031",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_stock_identity_2031",
+      "error": -4.622231866529366e-33,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_nominal_formula_2031",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "actual_nominal_formula_2031",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "tax_reconstruction_2031",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_reconstructed_2031",
+      "error": 1.3415046851150692e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "additive_decomposition_2031",
+      "error": 3.019806626980426e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_reconstructed_2031",
+      "error": -1.1368683772161603e-13,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "year_on_year_growth_2031",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_output_proxy_2031",
+      "error": 1.3426415534922853e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_output_2031",
+      "error": 2.3692846298217773e-06,
+      "tolerance": 0.0001,
+      "pass_": true
+    },
+    {
+      "check": "base_risk_trace_2031",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_nested_2032",
+      "error": 3.108624468950438e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "population_account_2032",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "SQ_employment_components_2032",
+      "error": -4.656612873077393e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_stock_identity_2032",
+      "error": 1.8488927466117464e-32,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_nominal_formula_2032",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "actual_nominal_formula_2032",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "tax_reconstruction_2032",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_reconstructed_2032",
+      "error": -3.672084858408198e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "additive_decomposition_2032",
+      "error": -5.417888360170764e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_reconstructed_2032",
+      "error": -1.1368683772161603e-13,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "year_on_year_growth_2032",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_output_proxy_2032",
+      "error": -3.6709479900309816e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_output_2032",
+      "error": -4.606693983078003e-05,
+      "tolerance": 0.0001,
+      "pass_": true
+    },
+    {
+      "check": "base_risk_trace_2032",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_nested_2033",
+      "error": -7.460698725481052e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "population_account_2033",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "SQ_employment_components_2033",
+      "error": 9.313225746154785e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_stock_identity_2033",
+      "error": -9.860761315262648e-32,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_nominal_formula_2033",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "actual_nominal_formula_2033",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "tax_reconstruction_2033",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_reconstructed_2033",
+      "error": -3.362856659805402e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "additive_decomposition_2033",
+      "error": -1.056932319443149e-13,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_reconstructed_2033",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "year_on_year_growth_2033",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_output_proxy_2033",
+      "error": -3.362856659805402e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_output_2033",
+      "error": -3.672391176223755e-05,
+      "tolerance": 0.0001,
+      "pass_": true
+    },
+    {
+      "check": "base_risk_trace_2033",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_nested_2034",
+      "error": 4.973799150320701e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "population_account_2034",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "SQ_employment_components_2034",
+      "error": 9.313225746154785e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_stock_identity_2034",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_nominal_formula_2034",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "actual_nominal_formula_2034",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "tax_reconstruction_2034",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_reconstructed_2034",
+      "error": -2.3078428057488054e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "additive_decomposition_2034",
+      "error": 9.872658246479205e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_reconstructed_2034",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "year_on_year_growth_2034",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_output_proxy_2034",
+      "error": -2.3078428057488054e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_output_2034",
+      "error": -4.5672059059143066e-05,
+      "tolerance": 0.0001,
+      "pass_": true
+    },
+    {
+      "check": "base_risk_trace_2034",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_nested_2035",
+      "error": 5.639932965095795e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "population_account_2035",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "SQ_employment_components_2035",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_stock_identity_2035",
+      "error": 2.465190328815662e-32,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_nominal_formula_2035",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "actual_nominal_formula_2035",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "tax_reconstruction_2035",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_reconstructed_2035",
+      "error": -3.857394403894432e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "additive_decomposition_2035",
+      "error": 8.260059303211165e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_reconstructed_2035",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "year_on_year_growth_2035",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_output_proxy_2035",
+      "error": -3.8562575355172157e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_output_2035",
+      "error": 1.6033649444580078e-05,
+      "tolerance": 0.0001,
+      "pass_": true
+    },
+    {
+      "check": "base_risk_trace_2035",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_nested_2036",
+      "error": -2.353672812205332e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "population_account_2036",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "SQ_employment_components_2036",
+      "error": -5.587935447692871e-09,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_stock_identity_2036",
+      "error": 4.930380657631324e-32,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_nominal_formula_2036",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "actual_nominal_formula_2036",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "tax_reconstruction_2036",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_reconstructed_2036",
+      "error": 2.0554580260068178e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "additive_decomposition_2036",
+      "error": 1.3541945342865347e-13,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_reconstructed_2036",
+      "error": -1.1368683772161603e-13,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "year_on_year_growth_2036",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_output_proxy_2036",
+      "error": 2.056594894384034e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_output_2036",
+      "error": 1.776963472366333e-05,
+      "tolerance": 0.0001,
+      "pass_": true
+    },
+    {
+      "check": "base_risk_trace_2036",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_nested_2037",
+      "error": -2.3092638912203256e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "population_account_2037",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "SQ_employment_components_2037",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_stock_identity_2037",
+      "error": 4.930380657631324e-32,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_nominal_formula_2037",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "actual_nominal_formula_2037",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "tax_reconstruction_2037",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_reconstructed_2037",
+      "error": -4.084768079337664e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "additive_decomposition_2037",
+      "error": -2.398081733190338e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_reconstructed_2037",
+      "error": -1.1368683772161603e-13,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "year_on_year_growth_2037",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_output_proxy_2037",
+      "error": -4.083631210960448e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_output_2037",
+      "error": 1.2867152690887451e-05,
+      "tolerance": 0.0001,
+      "pass_": true
+    },
+    {
+      "check": "base_risk_trace_2037",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_nested_2038",
+      "error": -4.440892098500626e-16,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "population_account_2038",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "SQ_employment_components_2038",
+      "error": 2.7939677238464355e-09,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_stock_identity_2038",
+      "error": 9.860761315262648e-32,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_nominal_formula_2038",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "actual_nominal_formula_2038",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "tax_reconstruction_2038",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_reconstructed_2038",
+      "error": 4.956746124662459e-11,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "additive_decomposition_2038",
+      "error": 2.6645352591003757e-15,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_reconstructed_2038",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "year_on_year_growth_2038",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_output_proxy_2038",
+      "error": 4.9681148084346205e-11,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_output_2038",
+      "error": 3.574788570404053e-05,
+      "tolerance": 0.0001,
+      "pass_": true
+    },
+    {
+      "check": "base_risk_trace_2038",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_nested_2039",
+      "error": 2.842170943040401e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "population_account_2039",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "SQ_employment_components_2039",
+      "error": 1.862645149230957e-09,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_stock_identity_2039",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_nominal_formula_2039",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "actual_nominal_formula_2039",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "tax_reconstruction_2039",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_reconstructed_2039",
+      "error": 1.0936673788819462e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "additive_decomposition_2039",
+      "error": -1.4832579608992091e-13,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_reconstructed_2039",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "year_on_year_growth_2039",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_output_proxy_2039",
+      "error": 1.0936673788819462e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_output_2039",
+      "error": 2.5816261768341064e-05,
+      "tolerance": 0.0001,
+      "pass_": true
+    },
+    {
+      "check": "base_risk_trace_2039",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_nested_2040",
+      "error": 1.0036416142611415e-13,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "population_account_2040",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "SQ_employment_components_2040",
+      "error": -1.862645149230957e-09,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_stock_identity_2040",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_nominal_formula_2040",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "actual_nominal_formula_2040",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "tax_reconstruction_2040",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_reconstructed_2040",
+      "error": 4.375806383905001e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "additive_decomposition_2040",
+      "error": 1.7967918819472573e-13,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_reconstructed_2040",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "year_on_year_growth_2040",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_output_proxy_2040",
+      "error": 4.375806383905001e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_output_2040",
+      "error": 8.910894393920898e-06,
+      "tolerance": 0.0001,
+      "pass_": true
+    },
+    {
+      "check": "base_risk_trace_2040",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_nested_2041",
+      "error": -2.6645352591003757e-15,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "population_account_2041",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "SQ_employment_components_2041",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_stock_identity_2041",
+      "error": -1.7256332301709633e-31,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_nominal_formula_2041",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "actual_nominal_formula_2041",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "tax_reconstruction_2041",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_reconstructed_2041",
+      "error": 1.106172931031324e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "additive_decomposition_2041",
+      "error": -9.592326932761353e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_reconstructed_2041",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "year_on_year_growth_2041",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_output_proxy_2041",
+      "error": 1.106172931031324e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_output_2041",
+      "error": -2.372264862060547e-05,
+      "tolerance": 0.0001,
+      "pass_": true
+    },
+    {
+      "check": "base_risk_trace_2041",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_nested_2042",
+      "error": -1.9095836023552692e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "population_account_2042",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "SQ_employment_components_2042",
+      "error": 1.862645149230957e-09,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_stock_identity_2042",
+      "error": 9.244463733058732e-32,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_nominal_formula_2042",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "actual_nominal_formula_2042",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "tax_reconstruction_2042",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_reconstructed_2042",
+      "error": 2.419255906715989e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "additive_decomposition_2042",
+      "error": 3.0531133177191805e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_reconstructed_2042",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "year_on_year_growth_2042",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_output_proxy_2042",
+      "error": 2.418119038338773e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_output_2042",
+      "error": -1.936405897140503e-05,
+      "tolerance": 0.0001,
+      "pass_": true
+    },
+    {
+      "check": "base_risk_trace_2042",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_nested_2043",
+      "error": -5.3734794391857577e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "population_account_2043",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "SQ_employment_components_2043",
+      "error": -4.6566128730773926e-09,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_stock_identity_2043",
+      "error": -4.930380657631324e-32,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_nominal_formula_2043",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "actual_nominal_formula_2043",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "tax_reconstruction_2043",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_reconstructed_2043",
+      "error": -3.3094238460762426e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "additive_decomposition_2043",
+      "error": 1.4299672557172016e-13,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_reconstructed_2043",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "year_on_year_growth_2043",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_output_proxy_2043",
+      "error": -3.3094238460762426e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_output_2043",
+      "error": -3.828853368759155e-05,
+      "tolerance": 0.0001,
+      "pass_": true
+    },
+    {
+      "check": "base_risk_trace_2043",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_nested_2044",
+      "error": -9.769962616701378e-15,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "population_account_2044",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "SQ_employment_components_2044",
+      "error": 5.587935447692871e-09,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_stock_identity_2044",
+      "error": -9.860761315262648e-32,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_nominal_formula_2044",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "actual_nominal_formula_2044",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "tax_reconstruction_2044",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_reconstructed_2044",
+      "error": -3.632294465205632e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "additive_decomposition_2044",
+      "error": 9.769962616701378e-15,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_reconstructed_2044",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "year_on_year_growth_2044",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_output_proxy_2044",
+      "error": -3.631157596828416e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_output_2044",
+      "error": 9.12696123123169e-06,
+      "tolerance": 0.0001,
+      "pass_": true
+    },
+    {
+      "check": "base_risk_trace_2044",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_nested_2045",
+      "error": -1.3322676295501878e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "population_account_2045",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "SQ_employment_components_2045",
+      "error": -9.313225746154785e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_stock_identity_2045",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_nominal_formula_2045",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "actual_nominal_formula_2045",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "tax_reconstruction_2045",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_reconstructed_2045",
+      "error": -3.15026227326598e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "additive_decomposition_2045",
+      "error": 7.549516567451064e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_reconstructed_2045",
+      "error": -1.1368683772161603e-13,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "year_on_year_growth_2045",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_output_proxy_2045",
+      "error": -3.147988536511548e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_output_2045",
+      "error": -4.035979509353638e-05,
+      "tolerance": 0.0001,
+      "pass_": true
+    },
+    {
+      "check": "base_risk_trace_2045",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_nested_2046",
+      "error": -4.085620730620576e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "population_account_2046",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "SQ_employment_components_2046",
+      "error": -2.7939677238464355e-09,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_stock_identity_2046",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_nominal_formula_2046",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "actual_nominal_formula_2046",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "tax_reconstruction_2046",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_reconstructed_2046",
+      "error": 1.0174971976084635e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "additive_decomposition_2046",
+      "error": 9.992007221626409e-16,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_reconstructed_2046",
+      "error": -1.1368683772161603e-13,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "year_on_year_growth_2046",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_output_proxy_2046",
+      "error": 1.0186340659856796e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_output_2046",
+      "error": -3.262609243392944e-05,
+      "tolerance": 0.0001,
+      "pass_": true
+    },
+    {
+      "check": "base_risk_trace_2046",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_nested_2047",
+      "error": -2.9753977059954195e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "population_account_2047",
+      "error": 2.3283064365386963e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "SQ_employment_components_2047",
+      "error": -9.313225746154785e-10,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_stock_identity_2047",
+      "error": -4.930380657631324e-32,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_nominal_formula_2047",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "actual_nominal_formula_2047",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "tax_reconstruction_2047",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_reconstructed_2047",
+      "error": -4.7975845518521965e-11,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "additive_decomposition_2047",
+      "error": 3.108624468950438e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_reconstructed_2047",
+      "error": -1.1368683772161603e-13,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "year_on_year_growth_2047",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_output_proxy_2047",
+      "error": -4.786215868080035e-11,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_output_2047",
+      "error": 1.9252300262451172e-05,
+      "tolerance": 0.0001,
+      "pass_": true
+    },
+    {
+      "check": "base_risk_trace_2047",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_nested_2048",
+      "error": -1.3766765505351941e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "population_account_2048",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "SQ_employment_components_2048",
+      "error": 2.7939677238464355e-09,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_stock_identity_2048",
+      "error": -9.860761315262648e-32,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_nominal_formula_2048",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "actual_nominal_formula_2048",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "tax_reconstruction_2048",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_reconstructed_2048",
+      "error": -3.276454663136974e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "additive_decomposition_2048",
+      "error": 4.551914400963142e-15,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_reconstructed_2048",
+      "error": -1.1368683772161603e-13,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "year_on_year_growth_2048",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_output_proxy_2048",
+      "error": -3.275317794759758e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_output_2048",
+      "error": -1.911073923110962e-05,
+      "tolerance": 0.0001,
+      "pass_": true
+    },
+    {
+      "check": "base_risk_trace_2048",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_nested_2049",
+      "error": 5.950795411990839e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "population_account_2049",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "SQ_employment_components_2049",
+      "error": 2.7939677238464355e-09,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_stock_identity_2049",
+      "error": 8.628166150854817e-32,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_nominal_formula_2049",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "actual_nominal_formula_2049",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "tax_reconstruction_2049",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_reconstructed_2049",
+      "error": -6.605205271625891e-11,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "additive_decomposition_2049",
+      "error": 7.016609515630989e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_reconstructed_2049",
+      "error": -1.1368683772161603e-13,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "year_on_year_growth_2049",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_output_proxy_2049",
+      "error": -6.582467904081568e-11,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_output_2049",
+      "error": 4.166364669799805e-05,
+      "tolerance": 0.0001,
+      "pass_": true
+    },
+    {
+      "check": "base_risk_trace_2049",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_nested_2050",
+      "error": -2.6645352591003757e-15,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "population_account_2050",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "SQ_employment_components_2050",
+      "error": -7.450580596923828e-09,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_stock_identity_2050",
+      "error": -3.697785493223493e-32,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_nominal_formula_2050",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "actual_nominal_formula_2050",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "tax_reconstruction_2050",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_reconstructed_2050",
+      "error": -2.000888343900442e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "additive_decomposition_2050",
+      "error": -8.881784197001252e-15,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_reconstructed_2050",
+      "error": -1.1368683772161603e-13,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "year_on_year_growth_2050",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_output_proxy_2050",
+      "error": -1.999751475523226e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_output_2050",
+      "error": 2.8818845748901367e-05,
+      "tolerance": 0.0001,
+      "pass_": true
+    },
+    {
+      "check": "base_risk_trace_2050",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_nested_2051",
+      "error": 4.884981308350689e-15,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "population_account_2051",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "SQ_employment_components_2051",
+      "error": 1.862645149230957e-09,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_stock_identity_2051",
+      "error": -4.930380657631324e-32,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_nominal_formula_2051",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "actual_nominal_formula_2051",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "tax_reconstruction_2051",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_reconstructed_2051",
+      "error": -3.369677870068699e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "additive_decomposition_2051",
+      "error": -2.1049828546892968e-13,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_reconstructed_2051",
+      "error": -1.1368683772161603e-13,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "year_on_year_growth_2051",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_output_proxy_2051",
+      "error": -3.369677870068699e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_output_2051",
+      "error": -1.1391937732696533e-05,
+      "tolerance": 0.0001,
+      "pass_": true
+    },
+    {
+      "check": "base_risk_trace_2051",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_nested_2052",
+      "error": 8.881784197001252e-15,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "population_account_2052",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "SQ_employment_components_2052",
+      "error": 4.6566128730773926e-09,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_stock_identity_2052",
+      "error": -2.465190328815662e-32,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_nominal_formula_2052",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "actual_nominal_formula_2052",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "tax_reconstruction_2052",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_reconstructed_2052",
+      "error": -4.803268893738277e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "additive_decomposition_2052",
+      "error": 2.576792945685469e-13,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_reconstructed_2052",
+      "error": -2.2737367544323206e-13,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "year_on_year_growth_2052",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_output_proxy_2052",
+      "error": -4.800995156983845e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_output_2052",
+      "error": -2.787262201309204e-05,
+      "tolerance": 0.0001,
+      "pass_": true
+    },
+    {
+      "check": "base_risk_trace_2052",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_nested_2053",
+      "error": -1.865174681370263e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "population_account_2053",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "SQ_employment_components_2053",
+      "error": -6.51925802230835e-09,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_stock_identity_2053",
+      "error": 2.465190328815662e-32,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_nominal_formula_2053",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "actual_nominal_formula_2053",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "tax_reconstruction_2053",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_reconstructed_2053",
+      "error": 3.5208813642384484e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "additive_decomposition_2053",
+      "error": -1.1324274851176597e-13,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_reconstructed_2053",
+      "error": -2.2737367544323206e-13,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "year_on_year_growth_2053",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_output_proxy_2053",
+      "error": 3.523155100992881e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_output_2053",
+      "error": -3.1657516956329346e-05,
+      "tolerance": 0.0001,
+      "pass_": true
+    },
+    {
+      "check": "base_risk_trace_2053",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_nested_2054",
+      "error": -1.6431300764452317e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "population_account_2054",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "SQ_employment_components_2054",
+      "error": 3.725290298461914e-09,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_stock_identity_2054",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_nominal_formula_2054",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "actual_nominal_formula_2054",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "tax_reconstruction_2054",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_reconstructed_2054",
+      "error": 1.6370904631912708e-11,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "additive_decomposition_2054",
+      "error": 1.053046538856961e-13,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_reconstructed_2054",
+      "error": -2.2737367544323206e-13,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "year_on_year_growth_2054",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_output_proxy_2054",
+      "error": 1.659827830735594e-11,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_output_2054",
+      "error": -3.5412609577178955e-05,
+      "tolerance": 0.0001,
+      "pass_": true
+    },
+    {
+      "check": "base_risk_trace_2054",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_nested_2055",
+      "error": 5.329070518200751e-15,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "population_account_2055",
+      "error": 0.0,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "SQ_employment_components_2055",
+      "error": 3.725290298461914e-09,
+      "tolerance": 2e-07,
+      "pass_": true
+    },
+    {
+      "check": "capital_stock_identity_2055",
+      "error": 1.8488927466117464e-32,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_nominal_formula_2055",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "actual_nominal_formula_2055",
+      "error": 0.0,
+      "tolerance": 1e-07,
+      "pass_": true
+    },
+    {
+      "check": "tax_reconstruction_2055",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_reconstructed_2055",
+      "error": 1.8053469830192626e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "additive_decomposition_2055",
+      "error": 3.3306690738754696e-14,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "core_reconstructed_2055",
+      "error": -1.1368683772161603e-13,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "year_on_year_growth_2055",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "GDP_output_proxy_2055",
+      "error": 1.807620719773695e-10,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "labor_output_2055",
+      "error": 1.9669532775878906e-05,
+      "tolerance": 0.0001,
+      "pass_": true
+    },
+    {
+      "check": "base_risk_trace_2055",
+      "error": 0.0,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "interval_2026_2035",
+      "error": 1.7053025658242404e-13,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "interval_2035_2045",
+      "error": 3.0730973321624333e-13,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "interval_2045_2055",
+      "error": 1.7408297026122455e-13,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "interval_2026_2055",
+      "error": 6.679101716144942e-13,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "independent_log_level_2055",
+      "error": -1.1368683772161603e-13,
+      "tolerance": 2e-08,
+      "pass_": true
+    },
+    {
+      "check": "single_nonlabor_multiplication",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "SQ_new_policy_tax_zero",
+      "error": 0.0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "SQ_new_policy_cash_zero",
+      "error": 0.0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "SQ_supply_not_binding",
+      "error": 0.0,
+      "tolerance": 1e-10,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:handoff/chatgpt-n3-f-parity-implementation-20261122/Inputs.json",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:handoff/chatgpt-n3-f-parity-implementation-20261122/Model.py",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:handoff/chatgpt-n3-f-parity-implementation-20261122/Components.py",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:handoff/chatgpt-n3-f-parity-implementation-20261122/Macro_Adapter.py",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:handoff/chatgpt-n3-f-parity-implementation-20261122/Resolved_Macro_Source.py.txt",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:handoff/chatgpt-n3-f-parity-implementation-20261122/Source_Identity.json",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:handoff/chatgpt-n3-f-parity-implementation-20261122/Manifest.json",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:handoff/chatgpt-n3-f-parity-implementation-20261122/results/Annual_DOMESTIC_TRANSFER.csv",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:handoff/chatgpt-n3-f-parity-implementation-20261122/results/SQ_F_N3_Annual_Comparison.csv",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:handoff/chatgpt-n3-f-parity-implementation-20261122/results/Verification.json",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:handoff/f-foreign-quantity-20261120/Model.py",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:handoff/f-common-endoflife-finalization-20261121/Annual.csv",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    },
+    {
+      "check": "source_unchanged:handoff/f-tx01-tx03-20261118/SPE_F_TX_Inputs_DRAFT_20261118.json",
+      "error": 0,
+      "tolerance": 0,
+      "pass_": true
+    }
+  ],
+  "target_commit": "37c3399f9c553673a79ba1298fc68d758a77055e",
+  "request_commit": "3f6f3eb47a7b094b3b6a8b4e51554fbb71b0cfc7",
+  "Claude_reused_commit": "ba08c45d4ecb99defecb8416c8d63e0cbfde8cb4",
+  "known_observations_reproduced": true,
+  "hypothesis": {
+    "common_exogenous_positive_growth": "SUPPORTED_AS_EXPLICIT_SPECIFICATION",
+    "SQ_specific_extra_growth_or_duplicate_base": "NOT_SUPPORTED",
+    "empirical_adequacy": "NOT_IDENTIFIED"
+  },
+  "limits": [
+    "No nationwide empirical TFP or observed gross investment inferred",
+    "Population accounting allocations are algebraic; immigration causal effect not identified",
+    "Fixed-input ablations do not rerun endogenous demographics/demand/tax",
+    "F fixed not rerun; N3 issues separate; old PASS reused not reissued"
+  ],
+  "artifacts": [
+    {
+      "path": "SQ_Growth_Diagnosis_Reproduce.py",
+      "size": 33643,
+      "sha256": "8764d222e5c3780c4a884edfe6fa8d7c59db76ad6e48e2409777bd3f4764c9d0"
+    },
+    {
+      "path": "SPE_SQ_Growth_Path_Diagnosis_Report_DRAFT_20261122.md",
+      "size": 11575,
+      "sha256": "b092c5c064bc57cff639b73d21da0b5f426db5c5d3c1d1e15042a217513216b7"
+    },
+    {
+      "path": "SQ_Annual_Growth_Decomposition_2026_2055.csv",
+      "size": 34191,
+      "sha256": "5fc18207aa636f56297a5a0b725f4db3b4b66fe46212958845e0c5346d4de4ff"
+    },
+    {
+      "path": "SQ_Growth_Contribution_Summary.csv",
+      "size": 3200,
+      "sha256": "8d307d35e7ddb84c535497d9bb04e777e0e150635b9d318bf836d8099df529df"
+    },
+    {
+      "path": "SQ_Fixed_Input_Ablations.csv",
+      "size": 45386,
+      "sha256": "1f1c580507f609638a8cc56c1066ae91947431b1e36523cf63c1ff5cd11f8ee0"
+    },
+    {
+      "path": "SQ_Demography_Labor_Accounting.csv",
+      "size": 11180,
+      "sha256": "60ff2f567d31321d3120917f9a8084a1652877cb2a60595d12cc7dfe3382cf39"
+    },
+    {
+      "path": "SQ_F_N3_Diagnostic_Comparison.csv",
+      "size": 6022,
+      "sha256": "939a36041098a472ec8ed95c0efb15d83a0e3b0d55a58bea0451a3ca4e03d920"
+    },
+    {
+      "path": "SQ_Column_Formula_Map.csv",
+      "size": 1591,
+      "sha256": "a24b535603a7c5b7bba97923a1f1bced336f511cd8d15281cbaeba3bb42249ba"
+    },
+    {
+      "path": "SQ_Unchanged_Engine_Trace.json",
+      "size": 702920,
+      "sha256": "81530c535accb92b543177a2ed470469b8edc54e20efad875978ee170434478e"
+    },
+    {
+      "path": "SQ_Isolated_Execution_Input.json",
+      "size": 39872,
+      "sha256": "c5857ae744ac79b4e9356c1cfe185d70faf043887dbce40b3f27226180637b12"
+    },
+    {
+      "path": "Reused_Claude_Summary.json",
+      "size": 4204,
+      "sha256": "b22174ed943cb3c48ae543f598b709bc8db74f487c94ddcff5cbf7dcea642548"
+    },
+    {
+      "path": "Source_Receipts.json",
+      "size": 4525,
+      "sha256": "3efaac7032a3407ed8920ec71b56765493e3f0ac1831aaa873054fe7cfa40b11"
+    },
+    {
+      "path": "SQ_Execution.log",
+      "size": 65,
+      "sha256": "4e61a3755d813a4c8bcfb5afb39577deefbbc7bf47ce3b0642ffd1d14002441c"
+    }
+  ],
+  "reexecution_check": {
+    "status": "PASS",
+    "byte_equal_CSV_files": [
+      "SQ_Column_Formula_Map.csv",
+      "SQ_F_N3_Diagnostic_Comparison.csv",
+      "SQ_Growth_Contribution_Summary.csv",
+      "SQ_Demography_Labor_Accounting.csv",
+      "SQ_Fixed_Input_Ablations.csv",
+      "SQ_Annual_Growth_Decomposition_2026_2055.csv"
+    ],
+    "trace_byte_equal": true,
+    "scope": "same fixed SQ independently executed again; not a new AI review"
+  }
+}

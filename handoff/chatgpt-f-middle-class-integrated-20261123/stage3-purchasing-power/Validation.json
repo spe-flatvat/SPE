@@ -1,0 +1,11 @@
+{
+  "checks": 53760,
+  "failures": 0,
+  "groups": {
+    "VAT_household_price_allocation": 210,
+    "VAT_flow_excludes_wage": 210,
+    "cash_in_kind_separation": 24360,
+    "B_no_added_utilization": 24360,
+    "group_in_kind_bridge": 4620
+  }
+}

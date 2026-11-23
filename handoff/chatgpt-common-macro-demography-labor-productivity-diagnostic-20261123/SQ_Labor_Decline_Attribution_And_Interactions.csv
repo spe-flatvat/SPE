@@ -1,0 +1,481 @@
+year,factor,Shapley_core_change_trn,method,identified
+2026,A,0.0,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2026,population_scale,0.0,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2026,nationality_mix,0.0,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2026,broad_age_mix,0.0,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2026,within_age_sex_mix,0.0,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2026,A_standalone,0.0,IDENTIFIED,True
+2026,L_standalone,0.0,IDENTIFIED,True
+2026,A_x_L,0.0,IDENTIFIED,True
+2026,A_then_L_first,0.0,ORDERED,True
+2026,A_then_L_second,0.0,ORDERED,True
+2026,L_then_A_first,0.0,ORDERED,True
+2026,L_then_A_second,0.0,ORDERED,True
+2026,employment_rate_time_change,0.0,RATES_FIXED_NOT_OBSERVED_FUTURE,True
+2026,relative_VA_time_change,0.0,UNITY_FIXED_NOT_PRODUCTIVITY_FORECAST,True
+2026,hours_change,,NOT_CONNECTED,False
+2026,TFP_or_capital_substitution,,NOT_IDENTIFIABLE,False
+2027,A,-23.16970935856874,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2027,population_scale,-1.4396064497858825,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2027,nationality_mix,0.25927758792054767,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2027,broad_age_mix,-0.010922159647594755,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2027,within_age_sex_mix,-0.29358454806618584,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2027,A_standalone,-23.20000000000002,IDENTIFIED,True
+2027,L_standalone,-1.5151509668207686,IDENTIFIED,True
+2027,A_x_L,0.0606060386728308,IDENTIFIED,True
+2027,A_then_L_first,-23.20000000000002,ORDERED,True
+2027,A_then_L_second,-1.4545449281479377,ORDERED,True
+2027,L_then_A_first,-1.5151509668207686,ORDERED,True
+2027,L_then_A_second,-23.13939396132719,ORDERED,True
+2027,employment_rate_time_change,0.0,RATES_FIXED_NOT_OBSERVED_FUTURE,True
+2027,relative_VA_time_change,0.0,UNITY_FIXED_NOT_PRODUCTIVITY_FORECAST,True
+2027,hours_change,,NOT_CONNECTED,False
+2027,TFP_or_capital_substitution,,NOT_IDENTIFIABLE,False
+2028,A,-20.359995956908037,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2028,population_scale,-2.927218958170211,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2028,nationality_mix,0.5218833717021065,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2028,broad_age_mix,-0.13261725468209418,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2028,within_age_sex_mix,-0.5900326029068177,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2028,A_standalone,-20.41599999999994,IDENTIFIED,True
+2028,L_standalone,-3.184060324383482,IDENTIFIED,True
+2028,A_x_L,0.11207892341829824,IDENTIFIED,True
+2028,A_then_L_first,-20.41599999999994,ORDERED,True
+2028,A_then_L_second,-3.071981400965184,ORDERED,True
+2028,L_then_A_first,-3.184060324383482,ORDERED,True
+2028,L_then_A_second,-20.30392107658164,ORDERED,True
+2028,employment_rate_time_change,0.0,RATES_FIXED_NOT_OBSERVED_FUTURE,True
+2028,relative_VA_time_change,0.0,UNITY_FIXED_NOT_PRODUCTIVITY_FORECAST,True
+2028,hours_change,,NOT_CONNECTED,False
+2028,TFP_or_capital_substitution,,NOT_IDENTIFIABLE,False
+2029,A,-20.326524414107457,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2029,population_scale,-4.451683046978266,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2029,nationality_mix,0.7862391472694317,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2029,broad_age_mix,-0.44452536505929174,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2029,within_age_sex_mix,-0.887287307588688,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2029,A_standalone,-20.41599999999994,IDENTIFIED,True
+2029,L_standalone,-5.08683767253773,IDENTIFIED,True
+2029,A_x_L,0.17905668607332756,IDENTIFIED,True
+2029,A_then_L_first,-20.41599999999994,ORDERED,True
+2029,A_then_L_second,-4.907780986464402,ORDERED,True
+2029,L_then_A_first,-5.08683767253773,ORDERED,True
+2029,L_then_A_second,-20.236943313926613,ORDERED,True
+2029,employment_rate_time_change,0.0,RATES_FIXED_NOT_OBSERVED_FUTURE,True
+2029,relative_VA_time_change,0.0,UNITY_FIXED_NOT_PRODUCTIVITY_FORECAST,True
+2029,hours_change,,NOT_CONNECTED,False
+2029,TFP_or_capital_substitution,,NOT_IDENTIFIABLE,False
+2030,A,-17.50730438061211,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2030,population_scale,-6.0272294248441165,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2030,nationality_mix,1.0571169499276345,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2030,broad_age_mix,-1.025248538700953,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2030,within_age_sex_mix,-1.1894984096172798,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2030,A_standalone,-17.618079999999846,IDENTIFIED,True
+2030,L_standalone,-7.2956979239860935,IDENTIFIED,True
+2030,A_x_L,0.22161412013899964,IDENTIFIED,True
+2030,A_then_L_first,-17.618079999999846,ORDERED,True
+2030,A_then_L_second,-7.074083803847094,ORDERED,True
+2030,L_then_A_first,-7.2956979239860935,ORDERED,True
+2030,L_then_A_second,-17.39646587986085,ORDERED,True
+2030,employment_rate_time_change,0.0,RATES_FIXED_NOT_OBSERVED_FUTURE,True
+2030,relative_VA_time_change,0.0,UNITY_FIXED_NOT_PRODUCTIVITY_FORECAST,True
+2030,hours_change,,NOT_CONNECTED,False
+2030,TFP_or_capital_substitution,,NOT_IDENTIFIABLE,False
+2031,A,-28.662509240252888,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2031,population_scale,-7.565991745902269,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2031,nationality_mix,1.308592182635122,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2031,broad_age_mix,-0.7517255541405936,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2031,within_age_sex_mix,-0.9579945817929664,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2031,A_standalone,-28.865718399999874,IDENTIFIED,True
+2031,L_standalone,-8.170546204838455,IDENTIFIED,True
+2031,A_x_L,0.40663566538457685,IDENTIFIED,True
+2031,A_then_L_first,-28.865718399999874,ORDERED,True
+2031,A_then_L_second,-7.763910539453878,ORDERED,True
+2031,L_then_A_first,-8.170546204838455,ORDERED,True
+2031,L_then_A_second,-28.459082734615297,ORDERED,True
+2031,employment_rate_time_change,0.0,RATES_FIXED_NOT_OBSERVED_FUTURE,True
+2031,relative_VA_time_change,0.0,UNITY_FIXED_NOT_PRODUCTIVITY_FORECAST,True
+2031,hours_change,,NOT_CONNECTED,False
+2031,TFP_or_capital_substitution,,NOT_IDENTIFIABLE,False
+2032,A,-31.33844873293021,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2032,population_scale,-9.178297260353062,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2032,nationality_mix,1.5775571110989082,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2032,broad_age_mix,-1.7492202441964686,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2032,within_age_sex_mix,-0.7399218893641868,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2032,A_standalone,-31.621389807999872,IDENTIFIED,True
+2032,L_standalone,-10.372443043503734,IDENTIFIED,True
+2032,A_x_L,0.5655018357584624,IDENTIFIED,True
+2032,A_then_L_first,-31.621389807999872,ORDERED,True
+2032,A_then_L_second,-9.806941207745272,ORDERED,True
+2032,L_then_A_first,-10.372443043503734,ORDERED,True
+2032,L_then_A_second,-31.05588797224141,ORDERED,True
+2032,employment_rate_time_change,0.0,RATES_FIXED_NOT_OBSERVED_FUTURE,True
+2032,relative_VA_time_change,0.0,UNITY_FIXED_NOT_PRODUCTIVITY_FORECAST,True
+2032,hours_change,,NOT_CONNECTED,False
+2032,TFP_or_capital_substitution,,NOT_IDENTIFIABLE,False
+2033,A,-25.851242243776575,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2033,population_scale,-10.901354222420068,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2033,nationality_mix,1.8646158667649768,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2033,broad_age_mix,-2.834129182287685,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2033,within_age_sex_mix,-0.5279820315852648,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2033,A_standalone,-26.137603706079886,IDENTIFIED,True
+2033,L_standalone,-12.684094730385665,IDENTIFIED,True
+2033,A_x_L,0.571606623160684,IDENTIFIED,True
+2033,A_then_L_first,-26.137603706079886,ORDERED,True
+2033,A_then_L_second,-12.11248810722498,ORDERED,True
+2033,L_then_A_first,-12.684094730385665,ORDERED,True
+2033,L_then_A_second,-25.565997082919203,ORDERED,True
+2033,employment_rate_time_change,0.0,RATES_FIXED_NOT_OBSERVED_FUTURE,True
+2033,relative_VA_time_change,0.0,UNITY_FIXED_NOT_PRODUCTIVITY_FORECAST,True
+2033,hours_change,,NOT_CONNECTED,False
+2033,TFP_or_capital_substitution,,NOT_IDENTIFIABLE,False
+2034,A,-23.058641852010663,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2034,population_scale,-12.650933003542805,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2034,nationality_mix,2.1584088385522286,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2034,broad_age_mix,-4.203638548728473,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2034,within_age_sex_mix,-0.31388355032256265,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2034,A_standalone,-23.368291724610202,IDENTIFIED,True
+2034,L_standalone,-15.317542605420728,IDENTIFIED,True
+2034,A_x_L,0.6171462139786507,IDENTIFIED,True
+2034,A_then_L_first,-23.368291724610202,ORDERED,True
+2034,A_then_L_second,-14.700396391442078,ORDERED,True
+2034,L_then_A_first,-15.317542605420728,ORDERED,True
+2034,L_then_A_second,-22.751145510631552,ORDERED,True
+2034,employment_rate_time_change,0.0,RATES_FIXED_NOT_OBSERVED_FUTURE,True
+2034,relative_VA_time_change,0.0,UNITY_FIXED_NOT_PRODUCTIVITY_FORECAST,True
+2034,hours_change,,NOT_CONNECTED,False
+2034,TFP_or_capital_substitution,,NOT_IDENTIFIABLE,False
+2035,A,-22.99990040677026,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2035,population_scale,-14.414099319020293,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2035,nationality_mix,2.455636744955722,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2035,broad_age_mix,-5.771103975712434,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2035,within_age_sex_mix,-0.09890993818775275,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2035,A_standalone,-23.368291724610202,IDENTIFIED,True
+2035,L_standalone,-18.19308754445269,IDENTIFIED,True
+2035,A_x_L,0.7330023743278323,IDENTIFIED,True
+2035,A_then_L_first,-23.368291724610202,ORDERED,True
+2035,A_then_L_second,-17.46008517012486,ORDERED,True
+2035,L_then_A_first,-18.19308754445269,ORDERED,True
+2035,L_then_A_second,-22.63528935028237,ORDERED,True
+2035,employment_rate_time_change,0.0,RATES_FIXED_NOT_OBSERVED_FUTURE,True
+2035,relative_VA_time_change,0.0,UNITY_FIXED_NOT_PRODUCTIVITY_FORECAST,True
+2035,hours_change,,NOT_CONNECTED,False
+2035,TFP_or_capital_substitution,,NOT_IDENTIFIABLE,False
+2036,A,-20.21399235733716,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2036,population_scale,-16.263961556621425,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2036,nationality_mix,2.7590542231448905,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2036,broad_age_mix,-7.495219392331305,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2036,within_age_sex_mix,0.5887780165822145,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2036,A_standalone,-20.5851331832332,IDENTIFIED,True
+2036,L_standalone,-20.777639747887374,IDENTIFIED,True
+2036,A_x_L,0.7374318645577612,IDENTIFIED,True
+2036,A_then_L_first,-20.5851331832332,ORDERED,True
+2036,A_then_L_second,-20.040207883329614,ORDERED,True
+2036,L_then_A_first,-20.777639747887374,ORDERED,True
+2036,L_then_A_second,-19.84770131867544,ORDERED,True
+2036,employment_rate_time_change,0.0,RATES_FIXED_NOT_OBSERVED_FUTURE,True
+2036,relative_VA_time_change,0.0,UNITY_FIXED_NOT_PRODUCTIVITY_FORECAST,True
+2036,hours_change,,NOT_CONNECTED,False
+2036,TFP_or_capital_substitution,,NOT_IDENTIFIABLE,False
+2037,A,-14.681934821863738,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2037,population_scale,-18.202629814419712,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2037,nationality_mix,3.0821087820702795,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2037,broad_age_mix,-9.583214248963007,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2037,within_age_sex_mix,1.2887777648737955,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2037,A_standalone,-14.990984515065538,IDENTIFIED,True
+2037,L_standalone,-23.71896053017005,IDENTIFIED,True
+2037,A_x_L,0.6130527069331551,IDENTIFIED,True
+2037,A_then_L_first,-14.990984515065538,ORDERED,True
+2037,A_then_L_second,-23.105907823236898,ORDERED,True
+2037,L_then_A_first,-23.71896053017005,ORDERED,True
+2037,L_then_A_second,-14.377931808132383,ORDERED,True
+2037,employment_rate_time_change,0.0,RATES_FIXED_NOT_OBSERVED_FUTURE,True
+2037,relative_VA_time_change,0.0,UNITY_FIXED_NOT_PRODUCTIVITY_FORECAST,True
+2037,hours_change,,NOT_CONNECTED,False
+2037,TFP_or_capital_substitution,,NOT_IDENTIFIABLE,False
+2038,A,-17.39874545530876,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2038,population_scale,-20.04176137527965,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2038,nationality_mix,3.3961190546543727,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2038,broad_age_mix,-11.832036212070125,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2038,within_age_sex_mix,1.9865726571781712,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2038,A_standalone,-17.816029592490214,IDENTIFIED,True
+2038,L_standalone,-26.900120608691047,IDENTIFIED,True
+2038,A_x_L,0.8262988703551648,IDENTIFIED,True
+2038,A_then_L_first,-17.816029592490214,ORDERED,True
+2038,A_then_L_second,-26.073821738335884,ORDERED,True
+2038,L_then_A_first,-26.900120608691047,ORDERED,True
+2038,L_then_A_second,-16.98973072213505,ORDERED,True
+2038,employment_rate_time_change,0.0,RATES_FIXED_NOT_OBSERVED_FUTURE,True
+2038,relative_VA_time_change,0.0,UNITY_FIXED_NOT_PRODUCTIVITY_FORECAST,True
+2038,hours_change,,NOT_CONNECTED,False
+2038,TFP_or_capital_substitution,,NOT_IDENTIFIABLE,False
+2039,A,-11.875609043598187,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2039,population_scale,-22.06941288766754,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2039,nationality_mix,3.7392946885192777,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2039,broad_age_mix,-14.02129807642191,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2039,within_age_sex_mix,2.705162550954168,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2039,A_standalone,-12.194189888415142,IDENTIFIED,True
+2039,L_standalone,-29.957513585394082,IDENTIFIED,True
+2039,A_x_L,0.6298407055949513,IDENTIFIED,True
+2039,A_then_L_first,-12.194189888415142,ORDERED,True
+2039,A_then_L_second,-29.32767287979913,ORDERED,True
+2039,L_then_A_first,-29.957513585394082,ORDERED,True
+2039,L_then_A_second,-11.564349182820191,ORDERED,True
+2039,employment_rate_time_change,0.0,RATES_FIXED_NOT_OBSERVED_FUTURE,True
+2039,relative_VA_time_change,0.0,UNITY_FIXED_NOT_PRODUCTIVITY_FORECAST,True
+2039,hours_change,,NOT_CONNECTED,False
+2039,TFP_or_capital_substitution,,NOT_IDENTIFIABLE,False
+2040,A,-9.087932067166376,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2040,population_scale,-24.095704638300653,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2040,nationality_mix,4.073980297148809,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2040,broad_age_mix,-15.852971201667579,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2040,within_age_sex_mix,3.423257179822468,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2040,A_standalone,-9.355160837857166,IDENTIFIED,True
+2040,L_standalone,-32.71183805139721,IDENTIFIED,True
+2040,A_x_L,0.5276284590909603,IDENTIFIED,True
+2040,A_then_L_first,-9.355160837857166,ORDERED,True
+2040,A_then_L_second,-32.184209592306246,ORDERED,True
+2040,L_then_A_first,-32.71183805139721,ORDERED,True
+2040,L_then_A_second,-8.827532378766206,ORDERED,True
+2040,employment_rate_time_change,0.0,RATES_FIXED_NOT_OBSERVED_FUTURE,True
+2040,relative_VA_time_change,0.0,UNITY_FIXED_NOT_PRODUCTIVITY_FORECAST,True
+2040,hours_change,,NOT_CONNECTED,False
+2040,TFP_or_capital_substitution,,NOT_IDENTIFIABLE,False
+2041,A,-9.059267438619779,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2041,population_scale,-26.079670403952466,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2041,nationality_mix,4.422824324618651,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2041,broad_age_mix,-17.48682758321435,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2041,within_age_sex_mix,3.2238569243054958,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2041,A_standalone,-9.355160837857166,IDENTIFIED,True
+2041,L_standalone,-36.20794252158695,IDENTIFIED,True
+2041,A_x_L,0.5840191825816095,IDENTIFIED,True
+2041,A_then_L_first,-9.355160837857166,ORDERED,True
+2041,A_then_L_second,-35.623923339005344,ORDERED,True
+2041,L_then_A_first,-36.20794252158695,ORDERED,True
+2041,L_then_A_second,-8.771141655275557,ORDERED,True
+2041,employment_rate_time_change,0.0,RATES_FIXED_NOT_OBSERVED_FUTURE,True
+2041,relative_VA_time_change,0.0,UNITY_FIXED_NOT_PRODUCTIVITY_FORECAST,True
+2041,hours_change,,NOT_CONNECTED,False
+2041,TFP_or_capital_substitution,,NOT_IDENTIFIABLE,False
+2042,A,-6.277657683495928,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2042,population_scale,-28.16543385545007,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2042,nationality_mix,4.7816936429214385,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2042,broad_age_mix,-18.907152829955937,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2042,within_age_sex_mix,3.0295260939595083,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2042,A_standalone,-6.501936642046362,IDENTIFIED,True
+2042,L_standalone,-39.47966432809633,IDENTIFIED,True
+2042,A_x_L,0.44257633812162095,IDENTIFIED,True
+2042,A_then_L_first,-6.501936642046362,ORDERED,True
+2042,A_then_L_second,-39.03708798997471,ORDERED,True
+2042,L_then_A_first,-39.47966432809633,ORDERED,True
+2042,L_then_A_second,-6.05936030392474,ORDERED,True
+2042,employment_rate_time_change,0.0,RATES_FIXED_NOT_OBSERVED_FUTURE,True
+2042,relative_VA_time_change,0.0,UNITY_FIXED_NOT_PRODUCTIVITY_FORECAST,True
+2042,hours_change,,NOT_CONNECTED,False
+2042,TFP_or_capital_substitution,,NOT_IDENTIFIABLE,False
+2043,A,-0.7383913612897082,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2043,population_scale,-30.358089486021388,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2043,nationality_mix,5.157758394051335,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2043,broad_age_mix,-20.233219326924882,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2043,within_age_sex_mix,2.841221353119429,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2043,A_standalone,-0.7669560084667992,IDENTIFIED,True
+2043,L_standalone,-42.62012262399186,IDENTIFIED,True
+2043,A_x_L,0.0563582053932109,IDENTIFIED,True
+2043,A_then_L_first,-0.7669560084667992,ORDERED,True
+2043,A_then_L_second,-42.56376441859865,ORDERED,True
+2043,L_then_A_first,-42.62012262399186,ORDERED,True
+2043,L_then_A_second,-0.7105978030735883,ORDERED,True
+2043,employment_rate_time_change,0.0,RATES_FIXED_NOT_OBSERVED_FUTURE,True
+2043,relative_VA_time_change,0.0,UNITY_FIXED_NOT_PRODUCTIVITY_FORECAST,True
+2043,hours_change,,NOT_CONNECTED,False
+2043,TFP_or_capital_substitution,,NOT_IDENTIFIABLE,False
+2044,A,-3.517240549771761,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2044,population_scale,-32.34866735457871,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2044,nationality_mix,5.4955337553618335,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2044,broad_age_mix,-21.205085875943478,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2044,within_age_sex_mix,2.631226826967918,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2044,A_standalone,-3.663121228424473,IDENTIFIED,True
+2044,L_standalone,-45.568912748236855,IDENTIFIED,True
+2044,A_x_L,0.28780077869705,IDENTIFIED,True
+2044,A_then_L_first,-3.663121228424473,ORDERED,True
+2044,A_then_L_second,-45.28111196953981,ORDERED,True
+2044,L_then_A_first,-45.568912748236855,ORDERED,True
+2044,L_then_A_second,-3.3753204497274227,ORDERED,True
+2044,employment_rate_time_change,0.0,RATES_FIXED_NOT_OBSERVED_FUTURE,True
+2044,relative_VA_time_change,0.0,UNITY_FIXED_NOT_PRODUCTIVITY_FORECAST,True
+2044,hours_change,,NOT_CONNECTED,False
+2044,TFP_or_capital_substitution,,NOT_IDENTIFIABLE,False
+2045,A,2.0114052132091254,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2045,population_scale,-34.60270903049432,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2045,nationality_mix,5.875326113608556,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2045,broad_age_mix,-22.20273145242504,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2045,within_age_sex_mix,2.442616515666894,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2045,A_standalone,2.100247559291306,IDENTIFIED,True
+2045,L_standalone,-48.401074271955935,IDENTIFIED,True
+2045,A_x_L,-0.17526592777026326,IDENTIFIED,True
+2045,A_then_L_first,2.100247559291306,ORDERED,True
+2045,A_then_L_second,-48.5763401997262,ORDERED,True
+2045,L_then_A_first,-48.401074271955935,ORDERED,True
+2045,L_then_A_second,1.9249816315210428,ORDERED,True
+2045,employment_rate_time_change,0.0,RATES_FIXED_NOT_OBSERVED_FUTURE,True
+2045,relative_VA_time_change,0.0,UNITY_FIXED_NOT_PRODUCTIVITY_FORECAST,True
+2045,hours_change,,NOT_CONNECTED,False
+2045,TFP_or_capital_substitution,,NOT_IDENTIFIABLE,False
+2046,A,4.785024299152531,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2046,population_scale,-36.778028789483706,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2046,nationality_mix,6.253799826510891,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2046,broad_age_mix,-22.95925566125641,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2046,within_age_sex_mix,1.7147230836789293,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2046,A_standalone,5.010748797087885,IDENTIFIED,True
+2046,L_standalone,-51.54914155736599,IDENTIFIED,True
+2046,A_x_L,-0.4453444811198013,IDENTIFIED,True
+2046,A_then_L_first,5.010748797087885,ORDERED,True
+2046,A_then_L_second,-51.994486038485796,ORDERED,True
+2046,L_then_A_first,-51.54914155736599,ORDERED,True
+2046,L_then_A_second,4.565404315968084,ORDERED,True
+2046,employment_rate_time_change,0.0,RATES_FIXED_NOT_OBSERVED_FUTURE,True
+2046,relative_VA_time_change,0.0,UNITY_FIXED_NOT_PRODUCTIVITY_FORECAST,True
+2046,hours_change,,NOT_CONNECTED,False
+2046,TFP_or_capital_substitution,,NOT_IDENTIFIABLE,False
+2047,A,4.771458509094928,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2047,population_scale,-38.871621662567,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2047,nationality_mix,6.622338130733857,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2047,broad_age_mix,-23.60735133518653,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2047,within_age_sex_mix,0.9740238550572219,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2047,A_standalone,5.010748797087885,IDENTIFIED,True
+2047,L_standalone,-54.649769802884975,IDENTIFIED,True
+2047,A_x_L,-0.47213149707057883,IDENTIFIED,True
+2047,A_then_L_first,5.010748797087885,ORDERED,True
+2047,A_then_L_second,-55.12190129995555,ORDERED,True
+2047,L_then_A_first,-54.649769802884975,ORDERED,True
+2047,L_then_A_second,4.5386173000173065,ORDERED,True
+2047,employment_rate_time_change,0.0,RATES_FIXED_NOT_OBSERVED_FUTURE,True
+2047,relative_VA_time_change,0.0,UNITY_FIXED_NOT_PRODUCTIVITY_FORECAST,True
+2047,hours_change,,NOT_CONNECTED,False
+2047,TFP_or_capital_substitution,,NOT_IDENTIFIABLE,False
+2048,A,7.535195747646588,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2048,population_scale,-41.066619062783396,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2048,nationality_mix,7.015372162313085,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2048,broad_age_mix,-24.332892043891178,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2048,within_age_sex_mix,0.22709649605360102,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2048,A_standalone,7.935802541073422,IDENTIFIED,True
+2048,L_standalone,-57.76725352226445,IDENTIFIED,True
+2048,A_x_L,-0.7903957194703773,IDENTIFIED,True
+2048,A_then_L_first,7.935802541073422,ORDERED,True
+2048,A_then_L_second,-58.55764924173482,ORDERED,True
+2048,L_then_A_first,-57.76725352226445,ORDERED,True
+2048,L_then_A_second,7.145406821603045,ORDERED,True
+2048,employment_rate_time_change,0.0,RATES_FIXED_NOT_OBSERVED_FUTURE,True
+2048,relative_VA_time_change,0.0,UNITY_FIXED_NOT_PRODUCTIVITY_FORECAST,True
+2048,hours_change,,NOT_CONNECTED,False
+2048,TFP_or_capital_substitution,,NOT_IDENTIFIABLE,False
+2049,A,13.080534748828077,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2049,population_scale,-43.38184155797039,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2049,nationality_mix,7.434007502771278,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2049,broad_age_mix,-25.082140841680246,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2049,within_age_sex_mix,-0.5317920003095633,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2049,A_standalone,13.815160566484103,IDENTIFIED,True
+2049,L_standalone,-60.84706180310582,IDENTIFIED,True
+2049,A_x_L,-1.4493309117391182,IDENTIFIED,True
+2049,A_then_L_first,13.815160566484103,ORDERED,True
+2049,A_then_L_second,-62.296392714844934,ORDERED,True
+2049,L_then_A_first,-60.84706180310582,ORDERED,True
+2049,L_then_A_second,12.365829654744985,ORDERED,True
+2049,employment_rate_time_change,0.0,RATES_FIXED_NOT_OBSERVED_FUTURE,True
+2049,relative_VA_time_change,0.0,UNITY_FIXED_NOT_PRODUCTIVITY_FORECAST,True
+2049,hours_change,,NOT_CONNECTED,False
+2049,TFP_or_capital_substitution,,NOT_IDENTIFIABLE,False
+2050,A,10.241404525401878,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2050,population_scale,-45.38604428641863,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2050,nationality_mix,7.797326309229328,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2050,broad_age_mix,-25.497913658850745,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2050,within_age_sex_mix,-1.2944070322582302,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2050,A_standalone,10.84608476365172,IDENTIFIED,True
+2050,L_standalone,-63.79278451320403,IDENTIFIED,True
+2050,A_x_L,-1.192934393344103,IDENTIFIED,True
+2050,A_then_L_first,10.84608476365172,ORDERED,True
+2050,A_then_L_second,-64.98571890654813,ORDERED,True
+2050,L_then_A_first,-63.79278451320403,ORDERED,True
+2050,L_then_A_second,9.653150370307618,ORDERED,True
+2050,employment_rate_time_change,0.0,RATES_FIXED_NOT_OBSERVED_FUTURE,True
+2050,relative_VA_time_change,0.0,UNITY_FIXED_NOT_PRODUCTIVITY_FORECAST,True
+2050,hours_change,,NOT_CONNECTED,False
+2050,TFP_or_capital_substitution,,NOT_IDENTIFIABLE,False
+2051,A,15.782653167261321,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2051,population_scale,-47.75471919136423,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2051,nationality_mix,8.202128433376274,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2051,broad_age_mix,-25.933017812372267,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2051,within_age_sex_mix,-1.831059723504211,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2051,A_standalone,16.754545611288222,IDENTIFIED,True
+2051,L_standalone,-66.37128366974572,IDENTIFIED,True
+2051,A_x_L,-1.917277068145696,IDENTIFIED,True
+2051,A_then_L_first,16.754545611288222,ORDERED,True
+2051,A_then_L_second,-68.28856073789142,ORDERED,True
+2051,L_then_A_first,-66.37128366974572,ORDERED,True
+2051,L_then_A_second,14.837268543142526,ORDERED,True
+2051,employment_rate_time_change,0.0,RATES_FIXED_NOT_OBSERVED_FUTURE,True
+2051,relative_VA_time_change,0.0,UNITY_FIXED_NOT_PRODUCTIVITY_FORECAST,True
+2051,hours_change,,NOT_CONNECTED,False
+2051,TFP_or_capital_substitution,,NOT_IDENTIFIABLE,False
+2052,A,18.549561774918757,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2052,population_scale,-50.032419102351014,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2052,nationality_mix,8.591108607254807,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2052,broad_age_mix,-26.247548037298053,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2052,within_age_sex_mix,-2.3731513509697537,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2052,A_standalone,19.738318339344673,IDENTIFIED,True
+2052,L_standalone,-68.90579320352089,IDENTIFIED,True
+2052,A_x_L,-2.3449732442692204,IDENTIFIED,True
+2052,A_then_L_first,19.738318339344673,ORDERED,True
+2052,A_then_L_second,-71.25076644779011,ORDERED,True
+2052,L_then_A_first,-68.90579320352089,ORDERED,True
+2052,L_then_A_second,17.393345095075453,ORDERED,True
+2052,employment_rate_time_change,0.0,RATES_FIXED_NOT_OBSERVED_FUTURE,True
+2052,relative_VA_time_change,0.0,UNITY_FIXED_NOT_PRODUCTIVITY_FORECAST,True
+2052,hours_change,,NOT_CONNECTED,False
+2052,TFP_or_capital_substitution,,NOT_IDENTIFIABLE,False
+2053,A,18.507167587069716,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2053,population_scale,-52.20631205390839,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2053,nationality_mix,8.958931529311737,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2053,broad_age_mix,-26.396089856670507,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2053,within_age_sex_mix,-2.9156759010048168,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2053,A_standalone,19.738318339344673,IDENTIFIED,True
+2053,L_standalone,-71.36174389948022,IDENTIFIED,True
+2053,A_x_L,-2.428553135066773,IDENTIFIED,True
+2053,A_then_L_first,19.738318339344673,ORDERED,True
+2053,A_then_L_second,-73.790297034547,ORDERED,True
+2053,L_then_A_first,-71.36174389948022,ORDERED,True
+2053,L_then_A_second,17.3097652042779,ORDERED,True
+2053,employment_rate_time_change,0.0,RATES_FIXED_NOT_OBSERVED_FUTURE,True
+2053,relative_VA_time_change,0.0,UNITY_FIXED_NOT_PRODUCTIVITY_FORECAST,True
+2053,hours_change,,NOT_CONNECTED,False
+2053,TFP_or_capital_substitution,,NOT_IDENTIFIABLE,False
+2054,A,21.272042666043475,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2054,population_scale,-54.542896209181,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2054,nationality_mix,9.348257416408915,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2054,broad_age_mix,-26.477075196107798,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2054,within_age_sex_mix,-3.4709683392410433,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2054,A_standalone,22.737009931041527,IDENTIFIED,True
+2054,L_standalone,-73.71778409474561,IDENTIFIED,True
+2054,A_x_L,-2.889865498373459,IDENTIFIED,True
+2054,A_then_L_first,22.737009931041527,ORDERED,True
+2054,A_then_L_second,-76.60764959311906,ORDERED,True
+2054,L_then_A_first,-73.71778409474561,ORDERED,True
+2054,L_then_A_second,19.847144432668067,ORDERED,True
+2054,employment_rate_time_change,0.0,RATES_FIXED_NOT_OBSERVED_FUTURE,True
+2054,relative_VA_time_change,0.0,UNITY_FIXED_NOT_PRODUCTIVITY_FORECAST,True
+2054,hours_change,,NOT_CONNECTED,False
+2054,TFP_or_capital_substitution,,NOT_IDENTIFIABLE,False
+2055,A,26.852997234430163,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2055,population_scale,-57.06157029586212,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2055,nationality_mix,9.765845027025025,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2055,broad_age_mix,-26.551056654300556,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2055,within_age_sex_mix,-4.043756926634613,exact 32 coalitions; age shares mechanical identification; fixed observed-reference rates,True
+2055,A_standalone,28.764380030351965,IDENTIFIED,True
+2055,L_standalone,-76.03124636200788,IDENTIFIED,True
+2055,A_x_L,-3.7706752836863964,IDENTIFIED,True
+2055,A_then_L_first,28.764380030351965,ORDERED,True
+2055,A_then_L_second,-79.80192164569428,ORDERED,True
+2055,L_then_A_first,-76.03124636200788,ORDERED,True
+2055,L_then_A_second,24.993704746665568,ORDERED,True
+2055,employment_rate_time_change,0.0,RATES_FIXED_NOT_OBSERVED_FUTURE,True
+2055,relative_VA_time_change,0.0,UNITY_FIXED_NOT_PRODUCTIVITY_FORECAST,True
+2055,hours_change,,NOT_CONNECTED,False
+2055,TFP_or_capital_substitution,,NOT_IDENTIFIABLE,False

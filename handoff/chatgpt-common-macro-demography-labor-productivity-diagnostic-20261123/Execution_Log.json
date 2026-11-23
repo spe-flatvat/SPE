@@ -1,0 +1,72 @@
+[
+  {
+    "case": "BASE_SQ_REPLAY",
+    "command": "python Diagnostic_Worker.py --root <fixed-root> --out <out>/BASE_SQ_REPLAY --case BASE_SQ_REPLAY --inputs <out>/Fixed_Diagnostic_Inputs.json",
+    "exit_code": 0,
+    "stdout": "done SQ_COMMON_ON\nCOMPLETE 30\n{\"mode\": \"BASE_SQ_REPLAY\", \"rows\": 30, \"real2055\": 528.9623363331808, \"nominal2055\": 1023.3299808906729}\n",
+    "stderr": ""
+  },
+  {
+    "case": "L_FIXED",
+    "command": "python Diagnostic_Worker.py --root <fixed-root> --out <out>/L_FIXED --case L_FIXED --inputs <out>/Fixed_Diagnostic_Inputs.json",
+    "exit_code": 0,
+    "stdout": "done SQ_COMMON_ON\nCOMPLETE 30\n{\"mode\": \"L_FIXED\", \"rows\": 30, \"real2055\": 608.7642578758954, \"nominal2055\": 1174.3292201403908}\n",
+    "stderr": ""
+  },
+  {
+    "case": "A_FIXED",
+    "command": "python Diagnostic_Worker.py --root <fixed-root> --out <out>/A_FIXED --case A_FIXED --inputs <out>/Fixed_Diagnostic_Inputs.json",
+    "exit_code": 0,
+    "stdout": "done SQ_COMMON_ON\nCOMPLETE 30\n{\"mode\": \"A_FIXED\", \"rows\": 30, \"real2055\": 503.96863107360326, \"nominal2055\": 974.0180709201704}\n",
+    "stderr": ""
+  },
+  {
+    "case": "POPULATION_ONLY",
+    "command": "python Diagnostic_Worker.py --root <fixed-root> --out <out>/POPULATION_ONLY --case POPULATION_ONLY --inputs <out>/Fixed_Diagnostic_Inputs.json",
+    "exit_code": 0,
+    "stdout": "done SQ_COMMON_ON\nCOMPLETE 30\n{\"mode\": \"POPULATION_ONLY\", \"rows\": 30, \"real2055\": 549.1966972976174, \"nominal2055\": 1061.689511542377}\n",
+    "stderr": ""
+  },
+  {
+    "case": "AGE_SEX_FIXED",
+    "command": "python Diagnostic_Worker.py --root <fixed-root> --out <out>/AGE_SEX_FIXED --case AGE_SEX_FIXED --inputs <out>/Fixed_Diagnostic_Inputs.json",
+    "exit_code": 0,
+    "stdout": "done SQ_COMMON_ON\nCOMPLETE 30\n{\"mode\": \"AGE_SEX_FIXED\", \"rows\": 30, \"real2055\": 557.5444645038633, \"nominal2055\": 1077.484451194117}\n",
+    "stderr": ""
+  },
+  {
+    "case": "NATIONALITY_SHARE_FIXED",
+    "command": "python Diagnostic_Worker.py --root <fixed-root> --out <out>/NATIONALITY_SHARE_FIXED --case NATIONALITY_SHARE_FIXED --inputs <out>/Fixed_Diagnostic_Inputs.json",
+    "exit_code": 0,
+    "stdout": "done SQ_COMMON_ON\nCOMPLETE 30\n{\"mode\": \"NATIONALITY_SHARE_FIXED\", \"rows\": 30, \"real2055\": 518.2823751695385, \"nominal2055\": 1003.0925693925841}\n",
+    "stderr": ""
+  },
+  {
+    "case": "BROAD_AGE_FIXED",
+    "command": "python Diagnostic_Worker.py --root <fixed-root> --out <out>/BROAD_AGE_FIXED --case BROAD_AGE_FIXED --inputs <out>/Fixed_Diagnostic_Inputs.json",
+    "exit_code": 0,
+    "stdout": "done SQ_COMMON_ON\nCOMPLETE 30\n{\"mode\": \"BROAD_AGE_FIXED\", \"rows\": 30, \"real2055\": 554.7307812949007, \"nominal2055\": 1072.1800548547653}\n",
+    "stderr": ""
+  },
+  {
+    "case": "WITHIN_AGE_SEX_FIXED",
+    "command": "python Diagnostic_Worker.py --root <fixed-root> --out <out>/WITHIN_AGE_SEX_FIXED --case WITHIN_AGE_SEX_FIXED --inputs <out>/Fixed_Diagnostic_Inputs.json",
+    "exit_code": 0,
+    "stdout": "done SQ_COMMON_ON\nCOMPLETE 30\n{\"mode\": \"WITHIN_AGE_SEX_FIXED\", \"rows\": 30, \"real2055\": 533.017346878402, \"nominal2055\": 1030.9947356772984}\n",
+    "stderr": ""
+  },
+  {
+    "case": "F_BASE",
+    "command": "python Diagnostic_Worker.py --root <fixed-root> --out <out>/F_BASE --case F_BASE --inputs <out>/Fixed_Diagnostic_Inputs.json",
+    "exit_code": 0,
+    "stdout": "{\"case\": \"F_LATEST_IMPLEMENTED\", \"rows\": 30, \"real2055\": 540.2745449827269}\n",
+    "stderr": ""
+  },
+  {
+    "case": "F_COMMON_L_FIXED",
+    "command": "python Diagnostic_Worker.py --root <fixed-root> --out <out>/F_COMMON_L_FIXED --case F_COMMON_L_FIXED --inputs <out>/Fixed_Diagnostic_Inputs.json",
+    "exit_code": 0,
+    "stdout": "{\"case\": \"F_LATEST_IMPLEMENTED\", \"rows\": 30, \"real2055\": 620.959751795452}\n",
+    "stderr": ""
+  }
+]

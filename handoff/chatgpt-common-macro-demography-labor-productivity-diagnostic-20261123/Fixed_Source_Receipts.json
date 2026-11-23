@@ -1,0 +1,1041 @@
+[
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/BASE_REPLAY/Common_Trace_BASE_REPLAY.json",
+    "size": 60423,
+    "sha256": "f571c808cdecb1e6c3ab9ae38e7fbab5fc5e564b1399ce4ca00d46c21b7e5d75",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/BASE_REPLAY/Resolved_Common_Runtime_BASE_REPLAY.py.txt",
+    "size": 65347,
+    "sha256": "1760b01c5f4d65db5a10233413e2191d9f387a604c08a19c51badbc324465ed6",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/BASE_REPLAY/Source_Receipts_BASE_REPLAY.json",
+    "size": 6140,
+    "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/Custody_Verification.json",
+    "size": 23271,
+    "sha256": "273519343d8f5a5bbff0d81537ab446369aad816facb4bc732e6d772b3164b7c",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/Execution_Log.json",
+    "size": 3870,
+    "sha256": "c822b3adb232696e1de257842010e17d91d8ce34d2e5e37ef2c53df380c4cf58",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F/F_Actual_Annual.json",
+    "size": 522949,
+    "sha256": "cf13d4c267f30a361ed0f4aa3083893721413283247c846fdce477357c2f7e43",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F/F_Common_Clinical_Accounts.json",
+    "size": 137652,
+    "sha256": "59ed84a212717960207931618b978bc974293177b5af83a8a79212aaa9546c91",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F/F_Medical_Accounts.json",
+    "size": 148558,
+    "sha256": "8b324b0516f366c310e8e85daa6c05c1c46abd2c872e6b4cf10fd8e7b213fbba",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F/F_Medical_Reference_Inputs.json",
+    "size": 1791,
+    "sha256": "3afd44c02680757d419eea68d8cf52715ac092d030377675f3e369995c75ef76",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F/F_Runtime_Trace.json",
+    "size": 27133,
+    "sha256": "7e777c2fb9e999f15ded82705a4dba2df0a0e358d0a233d2f2ebfdd9862dbff3",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F/Source_Receipts_F.json",
+    "size": 3557,
+    "sha256": "6bc8cea4275249b8922ee16c6a437a9cedd43554d1a50313e7095bafceb57781",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F_N3_SQ_Common_Condition_Compatibility.csv",
+    "size": 2580,
+    "sha256": "ccc688ecece0e4f12b7d3c65a304364f57b54725984f960c4ad8d13b40807dcb",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F_OLD/F_Actual_Annual.json",
+    "size": 523036,
+    "sha256": "c8d67d94b60a0ce3021a11ddd67ea826136812f16d1e79d3a85ea898e2788066",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F_OLD/F_Common_Clinical_Accounts.json",
+    "size": 137649,
+    "sha256": "746d8cb7cfa29a1b9483ca081459d4e6d599fbbd92bb55916d13ae1e081bf18d",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F_OLD/F_Medical_Accounts.json",
+    "size": 148573,
+    "sha256": "5a1d125c691a764df7968fc07392cfa0d825615da5bd562b1601eabf2732c87c",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F_OLD/F_Medical_Reference_Inputs.json",
+    "size": 1800,
+    "sha256": "81ce1454d70f189f3efacfeff66deaf8770dba1b66ab65d746adcb3f06a7513d",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F_OLD/F_Runtime_Trace.json",
+    "size": 27134,
+    "sha256": "744505d4fc586c2dcc1d49df7816079ff076a5770e7fc2720511f3adcb268747",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F_OLD/Source_Receipts_F_OLD.json",
+    "size": 3557,
+    "sha256": "6bc8cea4275249b8922ee16c6a437a9cedd43554d1a50313e7095bafceb57781",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/Finalize_Packet.py",
+    "size": 13690,
+    "sha256": "d9af2ea68f42c02d54ab7317a496dac39a1456e836a19f2709bffee38421782f",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/Fixed_Original_Policy_Receipts.json",
+    "size": 1527,
+    "sha256": "7d69a6566d15293c65f16bc4896e1fc83c7ca3fafc17cf9bde801e6a064856e5",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/Fixed_Originals/FreedomPolicies.md",
+    "size": 9241,
+    "sha256": "0dedd2c1126613c30a7d96732d226cc787f6597437137424845d64d041db0204",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/Fixed_Originals/FreedomPolicies_Annex.md",
+    "size": 12319,
+    "sha256": "ee62de32582a0f6d559029e7e9810b161c6a975ff22b498493d9ca960ca29e83",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/Fixed_Originals/New3linesPolicies.md",
+    "size": 7039,
+    "sha256": "2f5806addb870863961d9b6a6722d9c1e38bc2b097e1a6cd0e07b39f56b77830",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/Fixed_Originals/SPE_Work_SQ_Baseline_Contract_Integration_Three_Scenario_Recalculation_Request_20261123.md",
+    "size": 12142,
+    "sha256": "af204c75886ba54c2eb04b7b300703b2173a8d99c0ce9c83c1c8de50ddc2558e",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/Fixed_Originals/StatusQuo.md",
+    "size": 8686,
+    "sha256": "eb5a95df122292465fc79c68a12b9e7c6f8c0e0f97f367eb28ed0b27f6264e30",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/Fixed_Source_Receipts.json",
+    "size": 10627,
+    "sha256": "c6303fa0dde18192edf3ae3cf1c7d111695b4c2213112ab309255b1828f2cc5c",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/KEYS_DEFAULT/Common_Trace_KEYS_DEFAULT.json",
+    "size": 60424,
+    "sha256": "91841ddd6f267fba48cfd195d825646b59be1dab0d1a8ef0704ae3fb31f46285",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/KEYS_DEFAULT/Resolved_Common_Runtime_KEYS_DEFAULT.py.txt",
+    "size": 65371,
+    "sha256": "7a9df66ea095bed2e0af42b35f82d5f3e9e50c6b5daca8ef48c493b1408c7674",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/KEYS_DEFAULT/Source_Receipts_KEYS_DEFAULT.json",
+    "size": 6140,
+    "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/KEY_BASE_NONDEFAULT/Common_Trace_KEY_BASE_NONDEFAULT.json",
+    "size": 60440,
+    "sha256": "45a8ea4b168287eb7461f09f52a9716a3dcd417b634a61259476e8cde03d0539",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/KEY_BASE_NONDEFAULT/Resolved_Common_Runtime_KEY_BASE_NONDEFAULT.py.txt",
+    "size": 65395,
+    "sha256": "17742b8d3c1d36aaa0f8391382769291fd03935d6f0e1f64e40ddc2fb8483d52",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/KEY_BASE_NONDEFAULT/Source_Receipts_KEY_BASE_NONDEFAULT.json",
+    "size": 6140,
+    "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/KEY_CONFLICT_NONDEFAULT/Common_Trace_KEY_CONFLICT_NONDEFAULT.json",
+    "size": 60315,
+    "sha256": "ddc59d02745ab7fee221b19141ef02d91fbd2311099af6f43f04e407cf66ae93",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/KEY_CONFLICT_NONDEFAULT/Resolved_Common_Runtime_KEY_CONFLICT_NONDEFAULT.py.txt",
+    "size": 65405,
+    "sha256": "4295338ff4b1b61d5e0739ca6816d89e253b36c002d8ba2b77f66152b535fdf6",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/KEY_CONFLICT_NONDEFAULT/Source_Receipts_KEY_CONFLICT_NONDEFAULT.json",
+    "size": 6140,
+    "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/LEGACY_BASE_NONDEFAULT/Common_Trace_LEGACY_BASE_NONDEFAULT.json",
+    "size": 60434,
+    "sha256": "be2dd6f9981576e2b93b426a57e003d912a05c7fe224d1db2a23bee86a9ebf5b",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/LEGACY_BASE_NONDEFAULT/Resolved_Common_Runtime_LEGACY_BASE_NONDEFAULT.py.txt",
+    "size": 65371,
+    "sha256": "82362a47412a242451b8f9bc27c5101ce205513d7ddb9176a5269d972e354233",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/LEGACY_BASE_NONDEFAULT/Source_Receipts_LEGACY_BASE_NONDEFAULT.json",
+    "size": 6140,
+    "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/LEGACY_CONFLICT_NONDEFAULT/Common_Trace_LEGACY_CONFLICT_NONDEFAULT.json",
+    "size": 60438,
+    "sha256": "debea873eb6fcc68ad49d6b87997f29c02c6d9301c52c0384353e197341e6b49",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/LEGACY_CONFLICT_NONDEFAULT/Resolved_Common_Runtime_LEGACY_CONFLICT_NONDEFAULT.py.txt",
+    "size": 65381,
+    "sha256": "2f2c4d26767e7959609028e206cd629e6f7bec4544a6a0ab4ad07d2eafbb3316",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/LEGACY_CONFLICT_NONDEFAULT/Source_Receipts_LEGACY_CONFLICT_NONDEFAULT.json",
+    "size": 6140,
+    "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/N3/N3_Actual_Annual.json",
+    "size": 94007,
+    "sha256": "7728c506a33d302fb2f6512defcda42008c980257db19fbb0a7507860d2f2e4a",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/N3/N3_Actual_Fiscal.json",
+    "size": 61546,
+    "sha256": "ef9485d8acab9746748f8a57042b71b2e84761bd36f252e5852920d0cb74376a",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/N3/N3_Common_Input_Contract.json",
+    "size": 139656,
+    "sha256": "a3ac335acfc40cc24ea37a5d628a3b46e872c34c465f61e69125d62cd86e1d2f",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/N3/N3_Runtime_Checks.json",
+    "size": 38,
+    "sha256": "8be45753b6fbc70882ab996237942357f98ac32e4643161a9e09c24de7155b79",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/N3/N3_Runtime_Midpoints.json",
+    "size": 64749,
+    "sha256": "1fd4697d40f599a18823751bbf2a8bf60bb839e0ea669714a745324dbec877d3",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/N3/N3_SQ_Denominator_States.json",
+    "size": 673563,
+    "sha256": "1ce949509472382859f2019347998b89e33364509ce7f9cee2d991800077fdfa",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/N3/Source_Receipts_N3.json",
+    "size": 5270,
+    "sha256": "ac2525409dd37ebea0df708b8da38c3c0fb8b95729ae2fdfef8fae27d7964f53",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/Reproduction_Verification.json",
+    "size": 11803,
+    "sha256": "e2898e294cd66d48e3cadabe6350eea30b9cd34d4ef4a0009772625159283c51",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/SPE_Claude_Independent_Recalculation_Request_DRAFT_20261123.md",
+    "size": 1866,
+    "sha256": "6232d3e6654afe2be581952f32ed759f94b77f6df7ccbc24ce9ea3fb06e912a7",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/SPE_Claude_Verification_Packet_Manifest.json",
+    "size": 11241,
+    "sha256": "d570f173012e04063d65086076d03aa17a806d33c076ab34a329dda5c2e68087",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/SPE_SQ_Baseline_And_Three_Scenario_Recalculation_Report_DRAFT_20261123.md",
+    "size": 10182,
+    "sha256": "390154f1e5c7b1d26a3ac13e3bba68cd97e556f7abe6fdb2ac1c456ff79cc696",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/SPE_Three_Scenario_Annual_Comparison_2026_2055.csv",
+    "size": 46387,
+    "sha256": "8bd352398aac6820740d2325fa3eb911a15f936b4ccd5120e9354ba16a1c9815",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/SPE_Three_Scenario_Case_Definitions.json",
+    "size": 2759,
+    "sha256": "4224de79ea1b8a95045888834ae1533b31d5c92587bb7b1b5dc510331820697d",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/SPE_Three_Scenario_Change_Attribution.csv",
+    "size": 6477,
+    "sha256": "5704dfd0988808c0a0374b735860f907a834522d270fa4f4655e72e4237075e5",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/SPE_Three_Scenario_Key_Years_And_Gaps.csv",
+    "size": 7919,
+    "sha256": "a1745421eafcf9f39c880772e1870f8a207c85eb7ed4fd4bb8fa3caa660c117e",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/SQ_Baseline_2026_2055.csv",
+    "size": 14839,
+    "sha256": "be60cb1984779249e6103a21c0b0345d36574b0ffc02c0090c669e77c1da6bed",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/SQ_Change_Candidates_And_Impact.csv",
+    "size": 33389,
+    "sha256": "fe6c6cf8e630e3ab2765d3222948b067e86291a1fc2470b42d430612516ff4db",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/SQ_Common_Macro_Contract_And_Variant_Provenance.csv",
+    "size": 6276,
+    "sha256": "3e5bdd30ac38807750ca98f58bf13424ecf6554bdbca5a20d62c726eceaddd2a",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/SQ_Price_Event_Parameter_Trace.csv",
+    "size": 8931,
+    "sha256": "f7e47a81e3ee45f52f73d24072f7c3730d45b0b7e262d996d197a4fdfdd36bbe",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/Three_Scenario_Reproduce.py",
+    "size": 15988,
+    "sha256": "4d4307093f3fc8fff87108ffd96a28e86852bc28a89f38cc6e60834bef5b6bb1",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/Three_Scenario_Worker.py",
+    "size": 6545,
+    "sha256": "c7762a3d42cb73d58439ac818f3ed1d2250d2b85810df53ca142bf0b33719f17",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "e981c924adbe9c7ca77b96d2dc94e40378186613",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/Verification.json",
+    "size": 374,
+    "sha256": "80d3aca47006100270185873c3900e244426495dbe5eab95f94809184adcc95b",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": true
+  },
+  {
+    "commit": "3611534d85fb52c976592c96120f7663dbfa63f5",
+    "path": "handoff/claude-three-scenario-verification-20261123/F_Education_Deflator_Alignment_Experiment_DRAFT_20261123.json",
+    "size": 274,
+    "sha256": "422e43258e6c9da52da94b3a0317bac5d5ef823abcfc26282c705a1d8251a156",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": "NOT_MATERIALIZED"
+  },
+  {
+    "commit": "3611534d85fb52c976592c96120f7663dbfa63f5",
+    "path": "handoff/claude-three-scenario-verification-20261123/Independent_Recalc_Run_20261123.log",
+    "size": 406,
+    "sha256": "e9f246400494ca9bb203084ebe0f9dda601273d5c4564270d4e2f3fb46851f10",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": "NOT_MATERIALIZED"
+  },
+  {
+    "commit": "3611534d85fb52c976592c96120f7663dbfa63f5",
+    "path": "handoff/claude-three-scenario-verification-20261123/Rerun_Byte_Comparison_20261123.csv",
+    "size": 3362,
+    "sha256": "7d8bc3c516fc18a02e7dc9875e7d8229871fd67f99c02d08097e60eba6b3a523",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": "NOT_MATERIALIZED"
+  },
+  {
+    "commit": "3611534d85fb52c976592c96120f7663dbfa63f5",
+    "path": "handoff/claude-three-scenario-verification-20261123/Rerun_Stdout_Command1_20261123.log",
+    "size": 1699,
+    "sha256": "5b9eac7f90525b4959da2f596cd67dcb8478494d595f8a496b85dbf9aa9975d7",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": "NOT_MATERIALIZED"
+  },
+  {
+    "commit": "3611534d85fb52c976592c96120f7663dbfa63f5",
+    "path": "handoff/claude-three-scenario-verification-20261123/Rerun_Stdout_Command2_20261123.log",
+    "size": 91,
+    "sha256": "3a9095257b704d9f05ef9e327ed5fd1b56a71063dbd3cb54a6c24ed54ea9f0c2",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": "NOT_MATERIALIZED"
+  },
+  {
+    "commit": "3611534d85fb52c976592c96120f7663dbfa63f5",
+    "path": "handoff/claude-three-scenario-verification-20261123/SPE_SQ_F_N3_Three_Scenario_Independent_Verification_Report_DRAFT_20261123.md",
+    "size": 10709,
+    "sha256": "ea0ee6988539db6a423712806618887dc2ac1bed523d02942903707475020717",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": "NOT_MATERIALIZED"
+  },
+  {
+    "commit": "3611534d85fb52c976592c96120f7663dbfa63f5",
+    "path": "handoff/claude-three-scenario-verification-20261123/SPE_Three_Scenario_Independent_Recalc_DRAFT_20261123.py",
+    "size": 29583,
+    "sha256": "e2c97c04bfd49e41330562256b97843a470db1f84bc99def2a7d8d8a6ed2cc2b",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": "NOT_MATERIALIZED"
+  },
+  {
+    "commit": "3611534d85fb52c976592c96120f7663dbfa63f5",
+    "path": "handoff/claude-three-scenario-verification-20261123/Target_Manifest_Byte_Check_20261123.csv",
+    "size": 12590,
+    "sha256": "90a827c0c9a95a928e579cd8f6accfbcec183ef3000a98b73e2f144cf3db8397",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": "NOT_MATERIALIZED"
+  },
+  {
+    "commit": "3611534d85fb52c976592c96120f7663dbfa63f5",
+    "path": "handoff/claude-three-scenario-verification-20261123/Three_Scenario_Independent_Numeric_Comparison_DRAFT_20261123.csv",
+    "size": 13208,
+    "sha256": "a9715c56fc54b98d7c92892c24df8f158fc03b6ef74d8f1010ec605b24ca4337",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": "NOT_MATERIALIZED"
+  },
+  {
+    "commit": "3611534d85fb52c976592c96120f7663dbfa63f5",
+    "path": "handoff/claude-three-scenario-verification-20261123/Three_Scenario_Independent_Summary_DRAFT_20261123.json",
+    "size": 405,
+    "sha256": "e2abb02925492633aa8ac9e0bd077d47fb9d9e746bd5b4b571a09f218fd8853e",
+    "route": "git show fixed commit after GitHub clone",
+    "local_matches_fixed": "NOT_MATERIALIZED"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Components.py",
+    "size": 5528,
+    "sha256": "ec5640f9512486274122e32aacd7ca548273b23b94035710fd56949b8ea37588"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Inputs.json",
+    "size": 39819,
+    "sha256": "d036bc65580805f9f4080b354412fc3d6ab3bc4deeb9ae8409f6ab24e625635e"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Macro_Adapter.py",
+    "size": 2117,
+    "sha256": "189d43082853db0b007462ce3110991641065df1905c23329ee17f2b5e6cbd72"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Model.py",
+    "size": 3903,
+    "sha256": "df0d7912f22f6aad4c266d7d256263d792214d1c7ac13122b1906dc3a4c2c4d5"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_Components.py",
+    "size": 12416,
+    "sha256": "3da949845436180fb2038e109afe9d01c66c5c9ca064dad548326777ea4a9519"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_Expansion_Annual.csv",
+    "size": 1835282,
+    "sha256": "fcc7783bc11e7d781eaf6470f23ef0da5e93edaae6e6f8570cf862e90f326749"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_Expansion_Inputs.json",
+    "size": 7908,
+    "sha256": "f4382122f3bd0c5fc5ea8adf06832d4d6cdfa5177db40d71da17d57e23ebc422"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_Expansion_Model.py",
+    "size": 10861,
+    "sha256": "bfb46b0f5bb02d628582c3772dd686be7efc94227b128d516899a3ebceb1b54a"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Dependency_Pins.json",
+    "size": 2674,
+    "sha256": "1673cccbca8ae7f2f4fb8b60fc4a77143c3fd51e79a03e3c218818ca3d172f85"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Gap_Components.py",
+    "size": 9411,
+    "sha256": "a0f0b4fe7f7ced6a8a9546e7b68a458ad8c6aaf888a7e57412a746a2090760dd"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Gap_Inputs.json",
+    "size": 16622,
+    "sha256": "181af41fc4145e097bed4514be3d49f9f85561827e3f54223de11196d110f868"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Gap_Model.py",
+    "size": 12587,
+    "sha256": "9a33fb0946a9fe3087574f5d5cff1bf1e7f7e8b99570173169a31e0ac25b1cef"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/chatgpt-n3-policy-burden-diagnosis-20261122/N3_Unchanged_Execution_Trace.json",
+    "size": 5795176,
+    "sha256": "0ecbfab6db206e6cf77e2f1bfd6b3c2f07969a576727fdc7eebd1cebec4e94b5"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/chatgpt-n3-transition-financing-full-dynamics-20261122/Medical_Initialization.json",
+    "size": 124011,
+    "sha256": "3e97b56c0d3dd4b83b6c8545d369f15e20ac8d519b698d0bddaf3b743068b1ea"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/Three_Scenario_Worker.py",
+    "size": 6545,
+    "sha256": "c7762a3d42cb73d58439ac818f3ed1d2250d2b85810df53ca142bf0b33719f17"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/chatgpt-sq-growth-diagnosis-20261122/Reused_Claude_Summary.json",
+    "size": 4204,
+    "sha256": "b22174ed943cb3c48ae543f598b709bc8db74f487c94ddcff5cbf7dcea642548"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/chatgpt-sq-growth-diagnosis-20261122/SPE_SQ_Growth_Path_Diagnosis_Report_DRAFT_20261122.md",
+    "size": 11575,
+    "sha256": "b092c5c064bc57cff639b73d21da0b5f426db5c5d3c1d1e15042a217513216b7"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/chatgpt-sq-growth-diagnosis-20261122/SQ_Annual_Growth_Decomposition_2026_2055.csv",
+    "size": 34191,
+    "sha256": "5fc18207aa636f56297a5a0b725f4db3b4b66fe46212958845e0c5346d4de4ff"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/chatgpt-sq-growth-diagnosis-20261122/SQ_Column_Formula_Map.csv",
+    "size": 1591,
+    "sha256": "a24b535603a7c5b7bba97923a1f1bced336f511cd8d15281cbaeba3bb42249ba"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/chatgpt-sq-growth-diagnosis-20261122/SQ_Demography_Labor_Accounting.csv",
+    "size": 11180,
+    "sha256": "60ff2f567d31321d3120917f9a8084a1652877cb2a60595d12cc7dfe3382cf39"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/chatgpt-sq-growth-diagnosis-20261122/SQ_Execution.log",
+    "size": 65,
+    "sha256": "4e61a3755d813a4c8bcfb5afb39577deefbbc7bf47ce3b0642ffd1d14002441c"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/chatgpt-sq-growth-diagnosis-20261122/SQ_F_N3_Diagnostic_Comparison.csv",
+    "size": 6022,
+    "sha256": "939a36041098a472ec8ed95c0efb15d83a0e3b0d55a58bea0451a3ca4e03d920"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/chatgpt-sq-growth-diagnosis-20261122/SQ_Fixed_Input_Ablations.csv",
+    "size": 45386,
+    "sha256": "1f1c580507f609638a8cc56c1066ae91947431b1e36523cf63c1ff5cd11f8ee0"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/chatgpt-sq-growth-diagnosis-20261122/SQ_Growth_Contribution_Summary.csv",
+    "size": 3200,
+    "sha256": "8d307d35e7ddb84c535497d9bb04e777e0e150635b9d318bf836d8099df529df"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/chatgpt-sq-growth-diagnosis-20261122/SQ_Growth_Diagnosis_Reproduce.py",
+    "size": 33643,
+    "sha256": "8764d222e5c3780c4a884edfe6fa8d7c59db76ad6e48e2409777bd3f4764c9d0"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/chatgpt-sq-growth-diagnosis-20261122/SQ_Growth_Diagnosis_Verification.json",
+    "size": 61256,
+    "sha256": "fb4ca0244b06578e520f0936a2121bae39474523eb057170fe92cfecb2932fdc"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/chatgpt-sq-growth-diagnosis-20261122/SQ_Isolated_Execution_Input.json",
+    "size": 39872,
+    "sha256": "c5857ae744ac79b4e9356c1cfe185d70faf043887dbce40b3f27226180637b12"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/chatgpt-sq-growth-diagnosis-20261122/SQ_Unchanged_Engine_Trace.json",
+    "size": 702920,
+    "sha256": "81530c535accb92b543177a2ed470469b8edc54e20efad875978ee170434478e"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/chatgpt-sq-growth-diagnosis-20261122/Source_Receipts.json",
+    "size": 4525,
+    "sha256": "3efaac7032a3407ed8920ec71b56765493e3f0ac1831aaa873054fe7cfa40b11"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/chatgpt-statusquo-common-macro-limited-diagnostic-20261123/SQ_Common_Runtime.py",
+    "size": 4582,
+    "sha256": "007b2147a6be4bee383711fc9943034f420429860c0f2d9272640a89ddc54605"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/demography-foreign-research-20261118/Analyze.py",
+    "size": 7418,
+    "sha256": "1a9ef010e5d6914b3ce27686cb197694d7ed0f5b07e89fd0fbc05a76d1b36f55"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/demography-foreign-research-20261118/Official_Statistics.csv",
+    "size": 61649,
+    "sha256": "63fcb619f037033fdcb524000b47ef65c0d3d7b1d49a9f12f262e253308c94f7"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/demography-foreign-research-20261118/Research_and_Owner_Decisions.md",
+    "size": 18017,
+    "sha256": "f8c534d662a3f4951d2c37e97a95ef947814ffd6fb18a69bfeb6fb6bafa260d1"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/demography-foreign-research-20261118/Sensitivity_Annual.csv",
+    "size": 857117,
+    "sha256": "07f2b2eefe33d9cfa895ca35cf9879e41c1229b7c41b045a72bbf259aa0a8d00"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/demography-foreign-research-20261118/Sensitivity_Summary.csv",
+    "size": 33492,
+    "sha256": "d17fbd699fafc3374b924be9728b04fc3e7caac960c704f111d0993d3dd33887"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/demography-foreign-research-20261118/Sources_and_Definitions.md",
+    "size": 10320,
+    "sha256": "2b99ac24ceeffa4fa51e3043ea6b06a7759a817cdbd224c028a47f7b02237f06"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/demography-foreign-research-20261118/Stock400_Ledger.csv",
+    "size": 10347,
+    "sha256": "954a7aff34abdd6eebcf4d01602cd90118f7f1304b0c2997527d699d022459d1"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/demography-improved-scenarios-20261118/Annual.csv",
+    "size": 746512,
+    "sha256": "77a98c4054c7c6df2a8fd83b5af94e693d0880a9c2bdd4efc03a5b279be67ef7"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/demography-improved-scenarios-20261118/Data_Sources.md",
+    "size": 6783,
+    "sha256": "37c7e8aa3714983ac907c3d42ec5b9dc60e1eef524e84cde3785878463a61e07"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/demography-improved-scenarios-20261118/Inputs.json",
+    "size": 769658,
+    "sha256": "06a6ceb8c19c1483654448d51464d7fc016bb450bcf525e67ae11dec2e3e39b6"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/demography-improved-scenarios-20261118/Model.py",
+    "size": 29838,
+    "sha256": "c3be171e3a8781e086f0db08c6b42ddb196c02be7ad567df6c1d17c248b6707d"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/demography-improved-scenarios-20261118/Report.md",
+    "size": 15818,
+    "sha256": "809fdb88e59cda12ffdba78c2589de77d3fcde0b02c3138a59443003661d4024"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/demography-improved-scenarios-20261118/Summary.csv",
+    "size": 11206,
+    "sha256": "57cd776c7f1712be0b5c7860efa9b05783ac930023f06ba804810d163fab2cf8"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/f-common-endoflife-finalization-20261121/Annual.csv",
+    "size": 6775129,
+    "sha256": "1754500818d58de9b075106cb1185322dc5c961a3438dbcfa0a2883917d8ba79"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/f-common-endoflife-finalization-20261121/CommonEndOfLife.py",
+    "size": 10956,
+    "sha256": "c930a8df539ff676e55180b75cfe899084caa656f738c371aac44ce1f7693fae"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/f-common-endoflife-finalization-20261121/CommonInterface.py",
+    "size": 420,
+    "sha256": "4b56a30806da8bd5f39566a622fac1119e93f0842d40983deafb6dca4c88f4e2"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/f-common-endoflife-finalization-20261121/Demand.py",
+    "size": 2544,
+    "sha256": "fab0a6c505c9bb5041bfb38ec199617b6c4171891ec4fc49ba90eec2ae05f30d"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/f-common-endoflife-finalization-20261121/FMedical.py",
+    "size": 17478,
+    "sha256": "b36a21bead583b13c338f31dcd42e90c1e24a2814024024e872e993a9754dd80"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/f-common-endoflife-finalization-20261121/Inputs.json",
+    "size": 27093,
+    "sha256": "6da4648a8823c041197e9082d6814b6e19710afdf7bb7c7130dc58d4cabd6095"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/f-common-endoflife-finalization-20261121/Model.py",
+    "size": 15152,
+    "sha256": "e45b234545e17cfc486a488a4c06f68e49b03234d2847142ded3ce6c2998d4fd"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/f-education-20261121/Annual.csv",
+    "size": 1996375,
+    "sha256": "e9cc9c08e5a5529d6da208c49822c144ee2a5a7827dc5e7aa200a62fde541db6"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/f-education-20261121/Inputs.json",
+    "size": 6825,
+    "sha256": "d796d432c1f625784c322bbb330d5da8ab59fbbdfa6043cf3a10538c2901e651"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/f-education-20261121/Model.py",
+    "size": 24178,
+    "sha256": "08d6b409e9e815e6eb34878c69457c77a7a7e7fe9f5b85fa2debeb0f1a8ee88c"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/f-household-social-20261120/Inputs.json",
+    "size": 1746742,
+    "sha256": "8a7df2e6b7228177b28346386437b3b7dc6a5f1b8547507a114daf1fc5472766"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/f-integrated-20261121/Annual.csv",
+    "size": 2082920,
+    "sha256": "eb92953e843dfd7b84a0476b2f41ae310cafbf976cb857895b7363beabdf4772"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/f-integrated-20261121/Inputs.json",
+    "size": 7865,
+    "sha256": "87d454a5205869e58dee2836103499ee1eee89105cf9d14c62724df0561c66f5"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/f-integrated-20261121/Model.py",
+    "size": 21624,
+    "sha256": "42adedbe340a089e126c22987df89894943fcece54b6ac85ffa002fb886bf71c"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/f-medical-common-20261121/Annual.csv",
+    "size": 3077541,
+    "sha256": "fb778157a62bd604c0be3cbf3d3786142719199b4de84b5debfbb6a7674d4cb6"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/f-medical-common-20261121/Common_EndOfLife.csv",
+    "size": 567389,
+    "sha256": "0916d3c3dcf2d027fb0ae557ec9ae21c236250e6868ddb2b4b63349f7c63dd34"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/f-medical-common-20261121/Medical_Accounts.csv",
+    "size": 482348,
+    "sha256": "78b309b3b5a38b4f6168c36c7cad929899baa743114634c6165a84b8b869e605"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/f-pension-policy-20261120/Inputs.json",
+    "size": 1282097,
+    "sha256": "5969792ecb9218dc3668d56ec426076d0359e1e4c403914f535390972f082514"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/f-vat-core-20261120/Annual.csv",
+    "size": 2087811,
+    "sha256": "35c78607be9b171f82201dc4b7ffadf9a6cf85bd19d6185bd37e120f2219364c"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/f-vat-core-20261120/Inputs.json",
+    "size": 2559157,
+    "sha256": "f9de79d09488aa26cefc27a6a43c8d0d0b165b054b04839a4bace97ecf6cd2a9"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "handoff/f-vat-core-20261120/Model.py",
+    "size": 27668,
+    "sha256": "8c55442439d20b750ba6576ce8efa8a98e3f37b92df070a6a99dc498cd173837"
+  },
+  {
+    "commit": "77bbad59356407106ff333582040511590bbd7e4",
+    "route": "runtime open audit and fixed Git object comparison",
+    "path": "policies/StatusQuo.md",
+    "size": 8686,
+    "sha256": "eb5a95df122292465fc79c68a12b9e7c6f8c0e0f97f367eb28ed0b27f6264e30"
+  }
+]

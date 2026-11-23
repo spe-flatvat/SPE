@@ -1,0 +1,8 @@
+component,persons,interpretation
+old_model2025,68031652.825,IPSS2025 raw age-sex population times old rates; not same resident temporal base
+LFS2025,68280000,annual average persons employed
+under65_population_basis_difference,286377.30000000034,different published population bases; timing vs population-estimation causes NOT separately identified
+under65_rate_group_definition_difference,-4179.999999999534,LFS fine-age E/P vs old pooled rates; not future improvement
+elder65plus_unseparated,-23850.125,older-age population/time/rate difference not individually identified from selected table
+published_rounding_residual,-10000.0,total minus sex/fine-age and elderly published subtotals; retained
+total_LFS_minus_benchmark,248347.17499999702,identity only; no national scale fitted

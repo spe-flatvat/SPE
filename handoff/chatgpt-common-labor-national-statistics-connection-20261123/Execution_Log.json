@@ -1,0 +1,72 @@
+[
+  {
+    "case": "BASE_SQ_UNCHANGED",
+    "command": "python Bridge_Worker.py --root <fixed-root> --out <out>/BASE_SQ_UNCHANGED --case BASE_SQ_UNCHANGED --inputs <out>/Fixed_Labor_Bridge_Case_Inputs.json",
+    "exit_code": 0,
+    "stdout": "done SQ_COMMON_ON\nCOMPLETE 30\n{\"mode\": \"BASE_SQ_REPLAY\", \"rows\": 30, \"real2055\": 528.9623363331808, \"nominal2055\": 1023.3299808906729}\n",
+    "stderr": ""
+  },
+  {
+    "case": "HEADCOUNT_DETAIL_2025",
+    "command": "python Bridge_Worker.py --root <fixed-root> --out <out>/HEADCOUNT_DETAIL_2025 --case HEADCOUNT_DETAIL_2025 --inputs <out>/Fixed_Labor_Bridge_Case_Inputs.json",
+    "exit_code": 0,
+    "stdout": "done SQ_COMMON_ON\nCOMPLETE 30\n{\"mode\": \"HEADCOUNT_DETAIL_2025\", \"rows\": 30, \"real2055\": 529.3615698255827, \"nominal2055\": 1024.0843831567122}\n",
+    "stderr": ""
+  },
+  {
+    "case": "UNIFORM_LEVEL_CONTROL",
+    "command": "python Bridge_Worker.py --root <fixed-root> --out <out>/UNIFORM_LEVEL_CONTROL --case UNIFORM_LEVEL_CONTROL --inputs <out>/Fixed_Labor_Bridge_Case_Inputs.json",
+    "exit_code": 0,
+    "stdout": "done SQ_COMMON_ON\nCOMPLETE 30\n{\"mode\": \"UNIFORM_LEVEL_CONTROL\", \"rows\": 30, \"real2055\": 528.9623363331809, \"nominal2055\": 1023.3299808906734}\n",
+    "stderr": ""
+  },
+  {
+    "case": "SNA_HOURS_FIXED_CONTROL",
+    "command": "python Bridge_Worker.py --root <fixed-root> --out <out>/SNA_HOURS_FIXED_CONTROL --case SNA_HOURS_FIXED_CONTROL --inputs <out>/Fixed_Labor_Bridge_Case_Inputs.json",
+    "exit_code": 0,
+    "stdout": "done SQ_COMMON_ON\nCOMPLETE 30\n{\"mode\": \"SNA_HOURS_FIXED_CONTROL\", \"rows\": 30, \"real2055\": 528.9623363331808, \"nominal2055\": 1023.3299808906731}\n",
+    "stderr": ""
+  },
+  {
+    "case": "LFS_HOURS_BASE_RATES",
+    "command": "python Bridge_Worker.py --root <fixed-root> --out <out>/LFS_HOURS_BASE_RATES --case LFS_HOURS_BASE_RATES --inputs <out>/Fixed_Labor_Bridge_Case_Inputs.json",
+    "exit_code": 0,
+    "stdout": "done SQ_COMMON_ON\nCOMPLETE 30\n{\"mode\": \"LFS_HOURS_BASE_RATES\", \"rows\": 30, \"real2055\": 527.290085213334, \"nominal2055\": 1020.1667995308327}\n",
+    "stderr": ""
+  },
+  {
+    "case": "LFS_HOURS_DETAIL_RATES",
+    "command": "python Bridge_Worker.py --root <fixed-root> --out <out>/LFS_HOURS_DETAIL_RATES --case LFS_HOURS_DETAIL_RATES --inputs <out>/Fixed_Labor_Bridge_Case_Inputs.json",
+    "exit_code": 0,
+    "stdout": "done SQ_COMMON_ON\nCOMPLETE 30\n{\"mode\": \"LFS_HOURS_DETAIL_RATES\", \"rows\": 30, \"real2055\": 527.3666210706358, \"nominal2055\": 1020.3102568660298}\n",
+    "stderr": ""
+  },
+  {
+    "case": "F_BASE_UNCHANGED",
+    "command": "python Bridge_Worker.py --root <fixed-root> --out <out>/F_BASE_UNCHANGED --case F_BASE_UNCHANGED --inputs <out>/Fixed_Labor_Bridge_Case_Inputs.json",
+    "exit_code": 0,
+    "stdout": "{\"case\": \"F_LATEST_IMPLEMENTED\", \"rows\": 30, \"real2055\": 540.2745449827269}\n",
+    "stderr": ""
+  },
+  {
+    "case": "F_HEADCOUNT_DETAIL",
+    "command": "python Bridge_Worker.py --root <fixed-root> --out <out>/F_HEADCOUNT_DETAIL --case F_HEADCOUNT_DETAIL --inputs <out>/Fixed_Labor_Bridge_Case_Inputs.json",
+    "exit_code": 0,
+    "stdout": "{\"case\": \"F_LATEST_IMPLEMENTED\", \"rows\": 30, \"real2055\": 540.6779057376889}\n",
+    "stderr": ""
+  },
+  {
+    "case": "F_HOURS_DETAIL",
+    "command": "python Bridge_Worker.py --root <fixed-root> --out <out>/F_HOURS_DETAIL --case F_HOURS_DETAIL --inputs <out>/Fixed_Labor_Bridge_Case_Inputs.json",
+    "exit_code": 0,
+    "stdout": "{\"case\": \"F_LATEST_IMPLEMENTED\", \"rows\": 30, \"real2055\": 538.6586900783849}\n",
+    "stderr": ""
+  },
+  {
+    "case": "N3_BASE_UNCHANGED",
+    "command": "python Bridge_Worker.py --root <fixed-root> --out <out>/N3_BASE_UNCHANGED --case N3_BASE_UNCHANGED --inputs <out>/Fixed_Labor_Bridge_Case_Inputs.json",
+    "exit_code": 0,
+    "stdout": "{\"case\": \"N3_NATIVE_EXISTING\", \"rows\": 30, \"real2055\": 483.99149156991547, \"checks\": 748, \"failed\": 0}\n",
+    "stderr": ""
+  }
+]

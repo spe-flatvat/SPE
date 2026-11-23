@@ -1,0 +1,112 @@
+[
+  {
+    "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/Diagnostic_Worker.py",
+    "size": 3418,
+    "sha256": "911d728c6b958d221acaad4f9387c4a4cd5612456d8783a65ab6e7bbc7c9cc2f"
+  },
+  {
+    "path": "handoff/chatgpt-n3-policy-burden-diagnosis-20261122/N3_Unchanged_Execution_Trace.json",
+    "size": 5795176,
+    "sha256": "0ecbfab6db206e6cf77e2f1bfd6b3c2f07969a576727fdc7eebd1cebec4e94b5"
+  },
+  {
+    "path": "handoff/chatgpt-n3-transition-financing-full-dynamics-20261122/Medical_Initialization.json",
+    "size": 124011,
+    "sha256": "3e97b56c0d3dd4b83b6c8545d369f15e20ac8d519b698d0bddaf3b743068b1ea"
+  },
+  {
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/Three_Scenario_Worker.py",
+    "size": 6545,
+    "sha256": "c7762a3d42cb73d58439ac818f3ed1d2250d2b85810df53ca142bf0b33719f17"
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/CommonEndOfLife.py",
+    "size": 10956,
+    "sha256": "c930a8df539ff676e55180b75cfe899084caa656f738c371aac44ce1f7693fae"
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/CommonInterface.py",
+    "size": 420,
+    "sha256": "4b56a30806da8bd5f39566a622fac1119e93f0842d40983deafb6dca4c88f4e2"
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/Demand.py",
+    "size": 2544,
+    "sha256": "fab0a6c505c9bb5041bfb38ec199617b6c4171891ec4fc49ba90eec2ae05f30d"
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/FMedical.py",
+    "size": 17478,
+    "sha256": "b36a21bead583b13c338f31dcd42e90c1e24a2814024024e872e993a9754dd80"
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/Inputs.json",
+    "size": 27093,
+    "sha256": "6da4648a8823c041197e9082d6814b6e19710afdf7bb7c7130dc58d4cabd6095"
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/Model.py",
+    "size": 15152,
+    "sha256": "e45b234545e17cfc486a488a4c06f68e49b03234d2847142ded3ce6c2998d4fd"
+  },
+  {
+    "path": "handoff/f-education-20261121/Annual.csv",
+    "size": 1996375,
+    "sha256": "e9cc9c08e5a5529d6da208c49822c144ee2a5a7827dc5e7aa200a62fde541db6"
+  },
+  {
+    "path": "handoff/f-education-20261121/Inputs.json",
+    "size": 6825,
+    "sha256": "d796d432c1f625784c322bbb330d5da8ab59fbbdfa6043cf3a10538c2901e651"
+  },
+  {
+    "path": "handoff/f-education-20261121/Model.py",
+    "size": 24178,
+    "sha256": "08d6b409e9e815e6eb34878c69457c77a7a7e7fe9f5b85fa2debeb0f1a8ee88c"
+  },
+  {
+    "path": "handoff/f-integrated-20261121/Annual.csv",
+    "size": 2082920,
+    "sha256": "eb92953e843dfd7b84a0476b2f41ae310cafbf976cb857895b7363beabdf4772"
+  },
+  {
+    "path": "handoff/f-integrated-20261121/Inputs.json",
+    "size": 7865,
+    "sha256": "87d454a5205869e58dee2836103499ee1eee89105cf9d14c62724df0561c66f5"
+  },
+  {
+    "path": "handoff/f-integrated-20261121/Model.py",
+    "size": 21624,
+    "sha256": "42adedbe340a089e126c22987df89894943fcece54b6ac85ffa002fb886bf71c"
+  },
+  {
+    "path": "handoff/f-medical-common-20261121/Annual.csv",
+    "size": 3077541,
+    "sha256": "fb778157a62bd604c0be3cbf3d3786142719199b4de84b5debfbb6a7674d4cb6"
+  },
+  {
+    "path": "handoff/f-medical-common-20261121/Common_EndOfLife.csv",
+    "size": 567389,
+    "sha256": "0916d3c3dcf2d027fb0ae557ec9ae21c236250e6868ddb2b4b63349f7c63dd34"
+  },
+  {
+    "path": "handoff/f-medical-common-20261121/Medical_Accounts.csv",
+    "size": 482348,
+    "sha256": "78b309b3b5a38b4f6168c36c7cad929899baa743114634c6165a84b8b869e605"
+  },
+  {
+    "path": "handoff/f-vat-core-20261120/Annual.csv",
+    "size": 2087811,
+    "sha256": "35c78607be9b171f82201dc4b7ffadf9a6cf85bd19d6185bd37e120f2219364c"
+  },
+  {
+    "path": "handoff/f-vat-core-20261120/Inputs.json",
+    "size": 2559157,
+    "sha256": "f9de79d09488aa26cefc27a6a43c8d0d0b165b054b04839a4bace97ecf6cd2a9"
+  },
+  {
+    "path": "handoff/f-vat-core-20261120/Model.py",
+    "size": 27668,
+    "sha256": "8c55442439d20b750ba6576ce8efa8a98e3f37b92df070a6a99dc498cd173837"
+  }
+]

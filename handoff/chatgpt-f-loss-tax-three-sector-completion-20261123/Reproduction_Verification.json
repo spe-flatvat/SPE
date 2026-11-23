@@ -1,0 +1,18 @@
+{
+  "Integrated_Annual.csv": "d918272204e80d8e7315f4a4e2cfc256b092cb13a42fa4df9ce680b511a4463c",
+  "Integrated_Difference_vs_F.csv": "516ecab97c50f2660857ec3d405d3e9a30968b1ce56096628ac79d4b1a03d72c",
+  "Sector_Annual.csv": "e362792848ef21129c68e4d2e25adeca1d0b5a05e25d900634f57a835cd839fb",
+  "Validation.json": "108fefff6a908bd4942838b94388fdae7eb50d10264607b5bd960335e6bbf1cc",
+  "BASE/F_Actual_Annual.json": "2bd036ef302b6048c018c92862dee243298e1ceaaaa12a916afa6951ddbf4cbd",
+  "MEDICAL/F_Actual_Annual.json": "36c90e56974090441bda51331c79d80ceacdebcff27e4c16fff1baeeb5be18b5",
+  "MEDICAL_REBASE/F_Actual_Annual.json": "6274074e29cccf5224954f50bc9e9b0220f575d0fa853b688931989a72f7ac3b",
+  "MEDICAL_2038/F_Actual_Annual.json": "ae970bc625ec8fa7a1c78e7208f42fc25031b79e55653f24f8bfb70a7245df82",
+  "BASE/Sector.json": "cfc32e3267ad4780bd321e38a9bd2fdece1cd72193c79b7fa05c30ab4884e92e",
+  "MEDICAL/Sector.json": "55031fc4fe1523b532c3c4bcb727251e594a4057eea7d3600730a802dd8f33c0",
+  "MEDICAL_REBASE/Sector.json": "1c1706866e16d5a63c85f62e244469e161a42b626370c2b0ce119e70a8866ba6",
+  "MEDICAL_2038/Sector.json": "ae9da78504f1dfb1e378d1a22c3ccafae11abb3112f08e3ba5af2b9e53348b66",
+  "BASE/F_Runtime_Trace.json": "b658f6d4df65fcbf0d26397c4333d5ca966b2ded2d4b894291a9998234ea29bb",
+  "MEDICAL/F_Runtime_Trace.json": "931e621cae3e846556d189f296ef3bb3e147a411aa6d7d41528318a1961cff87",
+  "MEDICAL_REBASE/F_Runtime_Trace.json": "9b5ab8bd61233802f6d353f7d82c65040f6479faaff41c9edee04d51075abb6c",
+  "MEDICAL_2038/F_Runtime_Trace.json": "b034705ee0289724abef73d7fd556d1f3a9fc950c1af102000b88dede4044af0"
+}

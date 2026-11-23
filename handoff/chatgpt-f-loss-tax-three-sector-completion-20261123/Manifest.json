@@ -1,0 +1,54 @@
+{
+  "Compare.py": {
+    "size": 5750,
+    "sha256": "a19a78fdeb2bbd613d06fdf6ef5fc8735dce6bb911c447a16d5cb65583924e08"
+  },
+  "Diagnostic_Inputs.json": {
+    "size": 2919,
+    "sha256": "6763c04a460aa9592023d5bd946d7e2129b0f382222417d40f450c71e53adbe3"
+  },
+  "Fixed_F_BASE_OFF_Excerpt.csv": {
+    "size": 21571,
+    "sha256": "5a6cf1f77481307f426f0754e89479ab73fa025332afa9f1b0aa12475d6ebe3a"
+  },
+  "Integrated_Annual.csv": {
+    "size": 43966,
+    "sha256": "d918272204e80d8e7315f4a4e2cfc256b092cb13a42fa4df9ce680b511a4463c"
+  },
+  "Integrated_Difference_vs_F.csv": {
+    "size": 32177,
+    "sha256": "516ecab97c50f2660857ec3d405d3e9a30968b1ce56096628ac79d4b1a03d72c"
+  },
+  "Policy_Cleanup_Notes_And_Simulation_Adoptions.md": {
+    "size": 1193,
+    "sha256": "84a182b269107d07e14d486e53019dfa9b8d3a962f276c15a9812af885036683"
+  },
+  "Report.md": {
+    "size": 4431,
+    "sha256": "eb1410c879813a8a94d96e2bac6565edb955d0b24174009e170eb3f5b8793abe"
+  },
+  "Reproduction_Verification.json": {
+    "size": 1597,
+    "sha256": "7b8291fdffff4f2050b403bd3888446904b2a5e09c607dae0d3de6a6acb934ca"
+  },
+  "Run_Integrated.py": {
+    "size": 2757,
+    "sha256": "162a11b1afe20e7851cac9ecbb391eb2ac26ecfd67d5ecbc4a2f8d03fe208f94"
+  },
+  "Runtime_Sources.json": {
+    "size": 9714,
+    "sha256": "de0f98af9f9478a5ac9b33d632948bbe457d11ef3975c853e9970118872bc940"
+  },
+  "Scope_And_Evidence.csv": {
+    "size": 2333,
+    "sha256": "27e39f0a70de6ae4abadf71d577493b9bfdb12c0ecdaac5da0df3b079eaedcb2"
+  },
+  "Sector_Annual.csv": {
+    "size": 92464,
+    "sha256": "e362792848ef21129c68e4d2e25adeca1d0b5a05e25d900634f57a835cd839fb"
+  },
+  "Validation.json": {
+    "size": 88,
+    "sha256": "108fefff6a908bd4942838b94388fdae7eb50d10264607b5bd960335e6bbf1cc"
+  }
+}

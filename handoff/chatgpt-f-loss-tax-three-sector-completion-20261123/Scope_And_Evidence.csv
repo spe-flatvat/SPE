@@ -1,0 +1,9 @@
+sector,scope,identified,conditional_limit_trn,unknown,source
+medical,2024 病院・一般診療所・歯科診療所,5ポイント相当0.565208兆円・報酬補てん0.567251兆円,1.130415298（同一仕入ベース10%換算）,医薬品・特定材料・薬局・母集団補正および全国純損失,https://www.mhlw.go.jp/content/10808000/001600997.pdf
+education,2024 地方公立学校の資本的支出,1.9312兆円,0.19312（税抜全額10%）または0.17556（税込全額10%）,実際の課税仕入・資本と経常・非課税売上対応・既控除・大学私学,https://www.mext.go.jp/content/20260930-mxt_chousa01-000052293_1.pdf
+education,国・自治体特別会計および適用対象法人,特定収入で賄われた仕入を制度要件に沿い調整,NA,法人種別・会計別・補助金等の使途・既調整額と取引用途の交差,https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6495.htm
+residential_rent,2024 住宅リフォーム利用関係が賃貸,表2-7 受注高9243億円（政府統計の表示ID0003360969のミラーで値確認）,0.09243（税抜全額10%）または0.08403（税込全額10%）,対象は調査の元請受注枠のみ・支払／既控除／借主発注／無許可施工等の内訳なし,https://ecitizen.jp/Statdb/StatsData/0003360969
+residential_rent,取得および建築を同一取得で一度計上,高額資産の制限・課税転用／譲渡による調整・経過契約区分を確認,NA,仕入税額と制限調整の実額・貸主の課税免税区分,https://www.nta.go.jp/publication/pamph/shohi/kaisei/yoshiki/pdf/202008_01.pdf
+residential_rent,修繕以外の管理・仲介,課税役務を最終用途に帰属・既課税の事業用は分離,NA,請求額・用途・既控除を同時に満たす集計未取得,https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6401.htm
+real_estate,土地元本と建物を按分・事業外取引を別扱い,土地元本の仕入税なし・既課税建物と関連費用は別,NA,土地関連費用と用途別既控除,https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6225.htm
+total,全国,旧Annex1.70–2.55兆円の算定対象は前回記録を継承,NA,異なる部分枠を足せないため全国置換値は未識別,第1回固定成果7c2ab5641e69c3b2a790cff1183291872a63ee6a

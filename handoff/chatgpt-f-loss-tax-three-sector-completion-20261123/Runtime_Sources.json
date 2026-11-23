@@ -1,0 +1,184 @@
+[
+  {
+    "path": "Prior_Worker.py",
+    "fixed_path": "handoff/chatgpt-f-2035-education-trigger-sensitivity-20261123/sources/Prior_Worker.py",
+    "ref": "020de3d5f2f9568139734e78a9535e1f5993147e",
+    "sha256": "d85050b5aa9eb4c238aa31efdd4dbccf8bd64a16a34f8ba199d6a418410fa9c6",
+    "size": 6855
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/ANNUAL_FINE_WEEK_HOURS/Annual_Comparison_2026_2055.csv",
+    "fixed_path": "handoff/chatgpt-f-2035-education-trigger-sensitivity-20261123/sources/handoff/chatgpt-f-policy-cohort-fte-20261123/ANNUAL_FINE_WEEK_HOURS/Annual_Comparison_2026_2055.csv",
+    "ref": "020de3d5f2f9568139734e78a9535e1f5993147e",
+    "sha256": "6215ce2ba14f6d293afab761a10a9a202d777e3f79675fdbe9c633db580b6ce8",
+    "size": 24781
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/ANNUAL_FINE_WEEK_HOURS/Connection_Inputs.json",
+    "fixed_path": "handoff/chatgpt-f-2035-education-trigger-sensitivity-20261123/sources/handoff/chatgpt-f-policy-cohort-fte-20261123/ANNUAL_FINE_WEEK_HOURS/Connection_Inputs.json",
+    "ref": "020de3d5f2f9568139734e78a9535e1f5993147e",
+    "sha256": "1ca67f17e380531bc28b850f4aca0fbb8f3446f63f07f560fa4d52c0fab136dc",
+    "size": 1631
+  },
+  {
+    "path": "handoff/chatgpt-n3-transition-financing-full-dynamics-20261122/Medical_Initialization.json",
+    "fixed_path": "handoff/chatgpt-f-2035-education-trigger-sensitivity-20261123/sources/handoff/chatgpt-n3-transition-financing-full-dynamics-20261122/Medical_Initialization.json",
+    "ref": "020de3d5f2f9568139734e78a9535e1f5993147e",
+    "sha256": "3e97b56c0d3dd4b83b6c8545d369f15e20ac8d519b698d0bddaf3b743068b1ea",
+    "size": 124011
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/CommonEndOfLife.py",
+    "fixed_path": "handoff/chatgpt-f-2035-education-trigger-sensitivity-20261123/sources/handoff/f-common-endoflife-finalization-20261121/CommonEndOfLife.py",
+    "ref": "020de3d5f2f9568139734e78a9535e1f5993147e",
+    "sha256": "c930a8df539ff676e55180b75cfe899084caa656f738c371aac44ce1f7693fae",
+    "size": 10956
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/CommonInterface.py",
+    "fixed_path": "handoff/chatgpt-f-2035-education-trigger-sensitivity-20261123/sources/handoff/f-common-endoflife-finalization-20261121/CommonInterface.py",
+    "ref": "020de3d5f2f9568139734e78a9535e1f5993147e",
+    "sha256": "4b56a30806da8bd5f39566a622fac1119e93f0842d40983deafb6dca4c88f4e2",
+    "size": 420
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/Demand.py",
+    "fixed_path": "handoff/chatgpt-f-2035-education-trigger-sensitivity-20261123/sources/handoff/f-common-endoflife-finalization-20261121/Demand.py",
+    "ref": "020de3d5f2f9568139734e78a9535e1f5993147e",
+    "sha256": "fab0a6c505c9bb5041bfb38ec199617b6c4171891ec4fc49ba90eec2ae05f30d",
+    "size": 2544
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/FMedical.py",
+    "fixed_path": "handoff/chatgpt-f-2035-education-trigger-sensitivity-20261123/sources/handoff/f-common-endoflife-finalization-20261121/FMedical.py",
+    "ref": "020de3d5f2f9568139734e78a9535e1f5993147e",
+    "sha256": "b36a21bead583b13c338f31dcd42e90c1e24a2814024024e872e993a9754dd80",
+    "size": 17478
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/Inputs.json",
+    "fixed_path": "handoff/chatgpt-f-2035-education-trigger-sensitivity-20261123/sources/handoff/f-common-endoflife-finalization-20261121/Inputs.json",
+    "ref": "020de3d5f2f9568139734e78a9535e1f5993147e",
+    "sha256": "6da4648a8823c041197e9082d6814b6e19710afdf7bb7c7130dc58d4cabd6095",
+    "size": 27093
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/Model.py",
+    "fixed_path": "handoff/chatgpt-f-2035-education-trigger-sensitivity-20261123/sources/handoff/f-common-endoflife-finalization-20261121/Model.py",
+    "ref": "020de3d5f2f9568139734e78a9535e1f5993147e",
+    "sha256": "e45b234545e17cfc486a488a4c06f68e49b03234d2847142ded3ce6c2998d4fd",
+    "size": 15152
+  },
+  {
+    "path": "handoff/f-education-20261121/Annual.csv",
+    "fixed_path": "handoff/chatgpt-f-2035-education-trigger-sensitivity-20261123/sources/handoff/f-education-20261121/Annual.csv",
+    "ref": "020de3d5f2f9568139734e78a9535e1f5993147e",
+    "sha256": "e9cc9c08e5a5529d6da208c49822c144ee2a5a7827dc5e7aa200a62fde541db6",
+    "size": 1996375
+  },
+  {
+    "path": "handoff/f-education-20261121/Inputs.json",
+    "fixed_path": "handoff/chatgpt-f-2035-education-trigger-sensitivity-20261123/sources/handoff/f-education-20261121/Inputs.json",
+    "ref": "020de3d5f2f9568139734e78a9535e1f5993147e",
+    "sha256": "d796d432c1f625784c322bbb330d5da8ab59fbbdfa6043cf3a10538c2901e651",
+    "size": 6825
+  },
+  {
+    "path": "handoff/f-education-20261121/Model.py",
+    "fixed_path": "handoff/chatgpt-f-2035-education-trigger-sensitivity-20261123/sources/handoff/f-education-20261121/Model.py",
+    "ref": "020de3d5f2f9568139734e78a9535e1f5993147e",
+    "sha256": "08d6b409e9e815e6eb34878c69457c77a7a7e7fe9f5b85fa2debeb0f1a8ee88c",
+    "size": 24178
+  },
+  {
+    "path": "handoff/f-household-social-20261120/Inputs.json",
+    "fixed_path": "handoff/chatgpt-f-2035-education-trigger-sensitivity-20261123/sources/handoff/f-household-social-20261120/Inputs.json",
+    "ref": "020de3d5f2f9568139734e78a9535e1f5993147e",
+    "sha256": "8a7df2e6b7228177b28346386437b3b7dc6a5f1b8547507a114daf1fc5472766",
+    "size": 1746742
+  },
+  {
+    "path": "handoff/f-integrated-20261121/Annual.csv",
+    "fixed_path": "handoff/chatgpt-f-2035-education-trigger-sensitivity-20261123/sources/handoff/f-integrated-20261121/Annual.csv",
+    "ref": "020de3d5f2f9568139734e78a9535e1f5993147e",
+    "sha256": "eb92953e843dfd7b84a0476b2f41ae310cafbf976cb857895b7363beabdf4772",
+    "size": 2082920
+  },
+  {
+    "path": "handoff/f-integrated-20261121/Inputs.json",
+    "fixed_path": "handoff/chatgpt-f-2035-education-trigger-sensitivity-20261123/sources/handoff/f-integrated-20261121/Inputs.json",
+    "ref": "020de3d5f2f9568139734e78a9535e1f5993147e",
+    "sha256": "87d454a5205869e58dee2836103499ee1eee89105cf9d14c62724df0561c66f5",
+    "size": 7865
+  },
+  {
+    "path": "handoff/f-integrated-20261121/Model.py",
+    "fixed_path": "handoff/chatgpt-f-2035-education-trigger-sensitivity-20261123/sources/handoff/f-integrated-20261121/Model.py",
+    "ref": "020de3d5f2f9568139734e78a9535e1f5993147e",
+    "sha256": "42adedbe340a089e126c22987df89894943fcece54b6ac85ffa002fb886bf71c",
+    "size": 21624
+  },
+  {
+    "path": "handoff/f-medical-common-20261121/Annual.csv",
+    "fixed_path": "handoff/chatgpt-f-2035-education-trigger-sensitivity-20261123/sources/handoff/f-medical-common-20261121/Annual.csv",
+    "ref": "020de3d5f2f9568139734e78a9535e1f5993147e",
+    "sha256": "fb778157a62bd604c0be3cbf3d3786142719199b4de84b5debfbb6a7674d4cb6",
+    "size": 3077541
+  },
+  {
+    "path": "handoff/f-medical-common-20261121/Common_EndOfLife.csv",
+    "fixed_path": "handoff/chatgpt-f-2035-education-trigger-sensitivity-20261123/sources/handoff/f-medical-common-20261121/Common_EndOfLife.csv",
+    "ref": "020de3d5f2f9568139734e78a9535e1f5993147e",
+    "sha256": "0916d3c3dcf2d027fb0ae557ec9ae21c236250e6868ddb2b4b63349f7c63dd34",
+    "size": 567389
+  },
+  {
+    "path": "handoff/f-medical-common-20261121/Medical_Accounts.csv",
+    "fixed_path": "handoff/chatgpt-f-2035-education-trigger-sensitivity-20261123/sources/handoff/f-medical-common-20261121/Medical_Accounts.csv",
+    "ref": "020de3d5f2f9568139734e78a9535e1f5993147e",
+    "sha256": "78b309b3b5a38b4f6168c36c7cad929899baa743114634c6165a84b8b869e605",
+    "size": 482348
+  },
+  {
+    "path": "handoff/f-pension-policy-20261120/Inputs.json",
+    "fixed_path": "handoff/chatgpt-f-2035-education-trigger-sensitivity-20261123/sources/handoff/f-pension-policy-20261120/Inputs.json",
+    "ref": "020de3d5f2f9568139734e78a9535e1f5993147e",
+    "sha256": "5969792ecb9218dc3668d56ec426076d0359e1e4c403914f535390972f082514",
+    "size": 1282097
+  },
+  {
+    "path": "handoff/f-vat-core-20261120/Annual.csv",
+    "fixed_path": "handoff/chatgpt-f-2035-education-trigger-sensitivity-20261123/sources/handoff/f-vat-core-20261120/Annual.csv",
+    "ref": "020de3d5f2f9568139734e78a9535e1f5993147e",
+    "sha256": "35c78607be9b171f82201dc4b7ffadf9a6cf85bd19d6185bd37e120f2219364c",
+    "size": 2087811
+  },
+  {
+    "path": "handoff/f-vat-core-20261120/Inputs.json",
+    "fixed_path": "handoff/chatgpt-f-2035-education-trigger-sensitivity-20261123/sources/handoff/f-vat-core-20261120/Inputs.json",
+    "ref": "020de3d5f2f9568139734e78a9535e1f5993147e",
+    "sha256": "f9de79d09488aa26cefc27a6a43c8d0d0b165b054b04839a4bace97ecf6cd2a9",
+    "size": 2559157
+  },
+  {
+    "path": "handoff/f-vat-core-20261120/Model.py",
+    "fixed_path": "handoff/chatgpt-f-2035-education-trigger-sensitivity-20261123/sources/handoff/f-vat-core-20261120/Model.py",
+    "ref": "020de3d5f2f9568139734e78a9535e1f5993147e",
+    "sha256": "8c55442439d20b750ba6576ce8efa8a98e3f37b92df070a6a99dc498cd173837",
+    "size": 27668
+  },
+  {
+    "path": "policies/FreedomPolicies.md",
+    "fixed_path": "handoff/chatgpt-f-2035-education-trigger-sensitivity-20261123/sources/policies/FreedomPolicies.md",
+    "ref": "020de3d5f2f9568139734e78a9535e1f5993147e",
+    "sha256": "0dedd2c1126613c30a7d96732d226cc787f6597437137424845d64d041db0204",
+    "size": 9241
+  },
+  {
+    "path": "policies/FreedomPolicies_Annex.md",
+    "fixed_path": "handoff/chatgpt-f-2035-education-trigger-sensitivity-20261123/sources/policies/FreedomPolicies_Annex.md",
+    "ref": "020de3d5f2f9568139734e78a9535e1f5993147e",
+    "sha256": "ee62de32582a0f6d559029e7e9810b161c6a975ff22b498493d9ca960ca29e83",
+    "size": 12319
+  }
+]

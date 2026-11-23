@@ -1,0 +1,50 @@
+{
+  "request_commit": "b62dbe88f3e69f10256f2b12103ab8db4bfd00ff",
+  "files": [
+    {
+      "path": "Assumptions.md",
+      "size": 4134,
+      "sha256": "dfca505b876c25bf9b4ea68cafd0b29c61a3cafea2013fc722274d0a7a308b13"
+    },
+    {
+      "path": "Attribution_Annual.csv",
+      "size": 49872,
+      "sha256": "1c0a91c80753e8bc54c6d8e080f9605b186376cd5cdf442882426a4e56dfe385"
+    },
+    {
+      "path": "Compare.py",
+      "size": 9017,
+      "sha256": "3ab211e55dd1592f22ab9c9b7f7d193d21265c5ed3249148ae16c89979b502cc"
+    },
+    {
+      "path": "Diagnostic_Comparison.csv",
+      "size": 130090,
+      "sha256": "af87bfa555d446b5ddb989beddfdbbafaa564d0e7dc8d052e1188e39b9acf054"
+    },
+    {
+      "path": "Inputs.json",
+      "size": 300,
+      "sha256": "42fea720da9e934a7c32e1870920330b25e7c63e940b7da3d4fe4cb6c76d5c8a"
+    },
+    {
+      "path": "Legacy_Annual.csv",
+      "size": 35685,
+      "sha256": "7d63097327e1c7c4a8c8117ad9862d78e7ba29dfe7708afca2011cbd408b3614"
+    },
+    {
+      "path": "Report.md",
+      "size": 3105,
+      "sha256": "a91793ac47a734fd8596a2938ee33a9b7320cf3d2f150c4d98232f04b5bb5420"
+    },
+    {
+      "path": "Run.py",
+      "size": 2451,
+      "sha256": "2dfd021c23e62eb964d5ca46c07a72a46fae905a914de97da783054dfdf57897"
+    },
+    {
+      "path": "Validation.json",
+      "size": 904,
+      "sha256": "d7e7f5496b34ac4942d718615d799fd5e4f681ac83f80cc68b4475de51fff4ee"
+    }
+  ]
+}

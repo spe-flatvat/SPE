@@ -1,0 +1,30 @@
+{
+  "checks": 8650,
+  "failures": 0,
+  "groups": {
+    "tax_vintage_lifetime_shift": 168,
+    "guideline_pre_2028": 54,
+    "guideline_default_zero_behavior": 60,
+    "annual_continuity": 480,
+    "legacy_switch_and_formula": 960,
+    "firm_cash_once": 480,
+    "macro_tax_once": 240,
+    "economic_capital_identity": 240,
+    "fixed_regression": 1080,
+    "direct_corporate_tax_once": 240,
+    "old_branches_pre_2028": 16,
+    "attribution_identity": 840,
+    "independent_csv_byte_match": 2,
+    "independent_runtime_byte_match": 8,
+    "prior_diagnostic_rows": 1,
+    "prior_diagnostic_keys": 1,
+    "prior_diagnostic_difference": 3240,
+    "fixed_SQ_N3": 540
+  },
+  "legacy_annual_rows": 120,
+  "reused_diagnostic_rows": 270,
+  "replay_csv_sha256": [
+    "7d63097327e1c7c4a8c8117ad9862d78e7ba29dfe7708afca2011cbd408b3614",
+    "1c0a91c80753e8bc54c6d8e080f9605b186376cd5cdf442882426a4e56dfe385"
+  ]
+}

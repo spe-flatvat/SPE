@@ -1,0 +1,9 @@
+{
+  "prior_commit": "d8136f93977a110769529852afb095aff86d0e65",
+  "cases": {
+    "LEGACY_F": {"hyper": true, "release": true},
+    "OLD_HYPER_ONLY": {"hyper": true, "release": false},
+    "OLD_RELEASE_ONLY": {"hyper": false, "release": true},
+    "BOTH_OFF": {"hyper": false, "release": false}
+  }
+}

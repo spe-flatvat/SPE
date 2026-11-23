@@ -1,0 +1,73 @@
+{
+  "cases": [
+    {
+      "case": "BASE_REPLAY",
+      "kind": "PINNED_BASELINE",
+      "component_spec": {}
+    },
+    {
+      "case": "LABOR_WEDGE_OFF",
+      "kind": "MECHANICAL_IDENTIFICATION_NOT_POLICY",
+      "component_spec": {
+        "mute_labor_wedge": true
+      }
+    },
+    {
+      "case": "FINANCIAL_WEDGE_OFF",
+      "kind": "MECHANICAL_IDENTIFICATION_NOT_POLICY",
+      "component_spec": {
+        "mute_financial_wedge": true
+      }
+    },
+    {
+      "case": "PRIOR_FULL_ALLOCATION",
+      "kind": "MECHANICAL_PRIOR_TAX_ALLOCATION_BOUNDARY_NOT_CALIBRATED",
+      "component_spec": {
+        "prior_allocation_full": true
+      }
+    },
+    {
+      "case": "SURVEY_SOURCE_MOMENTS",
+      "kind": "EVIDENCE_LINKED_PARTIAL_SOURCE_MOMENT_CANDIDATE_NOT_NATIONAL_TAX_CALIBRATION",
+      "component_spec": {
+        "income_source_shares": [
+          0.8792723305346523,
+          0.023194817195554246,
+          0.18510996432308469,
+          0.04638963439110849
+        ]
+      }
+    },
+    {
+      "case": "SURVEY_SOURCE_AND_PRIOR_FULL",
+      "kind": "COMBINED_UNADOPTED_DIAGNOSTIC_NOT_INDEPENDENT_EFFECT",
+      "component_spec": {
+        "income_source_shares": [
+          0.8792723305346523,
+          0.023194817195554246,
+          0.18510996432308469,
+          0.04638963439110849
+        ],
+        "prior_allocation_full": true
+      }
+    }
+  ],
+  "derived_source_shares": [
+    0.8792723305346523,
+    0.023194817195554246,
+    0.18510996432308469,
+    0.04638963439110849
+  ],
+  "observed_income_year": 2024,
+  "survey_year": 2025,
+  "property_income_not_full_financial_tax_base": true,
+  "pension": "EXACT_ANNUAL_FLOW_FIXED_TO_PRIOR_BASELINE_BY_COMPENSATING_PENSION_WAGE_DRIVER_ONLY",
+  "tax_rates": [
+    0.3,
+    0.2
+  ],
+  "new_deductions": null,
+  "SQ": "FIXED",
+  "GI": "OFF",
+  "policy_adopted": false
+}

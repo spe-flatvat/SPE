@@ -1,0 +1,7 @@
+{"case": "BASE_REPLAY", "rows": 30, "checks": 1618, "failed": 0, "gap2030": -7.595361130529454, "gap2055": -44.97084476326535}
+{"case": "LABOR_WEDGE_OFF", "rows": 30, "checks": 1288, "failed": 0, "gap2030": -0.3615195195816341, "gap2055": -12.678566044846093}
+{"case": "FINANCIAL_WEDGE_OFF", "rows": 30, "checks": 1288, "failed": 0, "gap2030": -7.255216041489575, "gap2055": -43.47947067186453}
+{"case": "PRIOR_FULL_ALLOCATION", "rows": 30, "checks": 1288, "failed": 0, "gap2030": -7.461022890954723, "gap2055": -44.38214962864686}
+{"case": "SURVEY_SOURCE_MOMENTS", "rows": 30, "checks": 1288, "failed": 0, "gap2030": -6.874447306353659, "gap2055": -41.806863703248325}
+{"case": "SURVEY_SOURCE_AND_PRIOR_FULL", "rows": 30, "checks": 1288, "failed": 0, "gap2030": -6.582616419269243, "gap2055": -40.5226924666689}
+{"status": "PASS_LIMITED_HOUSEHOLD_TAX_REVIEW", "executed_paths": 6, "executed_annual_rows": 180, "reused_rows": 60, "delivered_rows": 240, "checks": 8058, "failed": 0, "failures": [], "prior_PASS_reused": [13928, 32439], "pension_realized_flows_fixed": true, "SQ_modified": false, "GI": false, "tax_rates_or_formal_deductions_changed": false, "national_calibration": false, "source_files_checked": 32}

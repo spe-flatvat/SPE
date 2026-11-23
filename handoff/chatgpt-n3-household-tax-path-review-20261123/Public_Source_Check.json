@@ -1,0 +1,43 @@
+{
+  "sources": [
+    {
+      "url": "https://www.mhlw.go.jp/wp/hakusyo/kousei/26-2/dl/01.pdf",
+      "PDF_page_zero_based": 10,
+      "bytes": 2071850,
+      "sha256": "4a9eaab366d64b06b4ef32629ddbe63011ffa9b5f83e5490a8691a1b2b944931",
+      "retrieved": "2026-11-23",
+      "route": "web connector open/find and executor urllib direct PDF download",
+      "format": "PDF",
+      "availability": "SUCCESS",
+      "scope": "MHLW survey2025 income2024 household aggregate source moments"
+    },
+    {
+      "url": "https://www.mof.go.jp/policy/budget/budger_workflow/account/fy2024/ke0711b.pdf",
+      "PDF_page_zero_based": 0,
+      "bytes": 740248,
+      "sha256": "7f01be425bf9c37c1a1cb24e4342c879d0ba82d88c2c7aca8eab79c12e72e14c",
+      "retrieved": "2026-11-23",
+      "route": "web connector open/find and executor urllib direct PDF download",
+      "format": "PDF",
+      "availability": "SUCCESS",
+      "scope": "MOF FY2024 general-account realized national receipts; not household-specific source tax"
+    }
+  ],
+  "verified_MHLW_values_yen": {
+    "total": 5752000,
+    "operating_income": 4262000,
+    "property_income": 160000,
+    "public_pension": 1116000
+  },
+  "verified_MOF_trn": {
+    "income_tax": 21.2,
+    "total_tax": 75.2
+  },
+  "not_verified": [
+    "joint taxpayer microdata",
+    "all taxable financial income/capital gains",
+    "source-specific prior tax",
+    "future2026-2055 national tax bases"
+  ],
+  "full_national_calibration": false
+}

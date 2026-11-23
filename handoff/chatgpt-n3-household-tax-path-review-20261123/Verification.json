@@ -1,0 +1,20 @@
+{
+  "status": "PASS_LIMITED_HOUSEHOLD_TAX_REVIEW",
+  "executed_paths": 6,
+  "executed_annual_rows": 180,
+  "reused_rows": 60,
+  "delivered_rows": 240,
+  "checks": 8058,
+  "failed": 0,
+  "failures": [],
+  "prior_PASS_reused": [
+    13928,
+    32439
+  ],
+  "pension_realized_flows_fixed": true,
+  "SQ_modified": false,
+  "GI": false,
+  "tax_rates_or_formal_deductions_changed": false,
+  "national_calibration": false,
+  "source_files_checked": 32
+}

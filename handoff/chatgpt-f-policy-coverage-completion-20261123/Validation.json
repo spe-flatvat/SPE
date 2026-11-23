@@ -1,0 +1,27 @@
+{
+  "checks": 7771,
+  "failures": 0,
+  "groups": {
+    "fixed_reference_bytes": 1,
+    "threshold_boundary": 2,
+    "continuity": 360,
+    "activation": 360,
+    "rate": 180,
+    "threshold_ledger": 720,
+    "VAT_once": 1080,
+    "seller_incidence_once": 180,
+    "partial_fiscal_bridge": 180,
+    "capital_identity": 180,
+    "no_new_transfer_or_trigger": 1440,
+    "fixed_F": 600,
+    "zero_effect": 2480,
+    "independent_runtime_replay": 6,
+    "independent_csv_replay": 2
+  },
+  "cases": 3,
+  "annual_rows": 90,
+  "csv_sha256": [
+    "00bdb75f5c369892537cd0005808084b0171a0324629413b314cbbe5e361edba",
+    "204372f6593db11cf4ee1079db83cb5ac3930ac3e3acd3594b24f94fbfe7c489"
+  ]
+}

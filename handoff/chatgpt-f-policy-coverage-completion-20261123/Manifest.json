@@ -1,0 +1,49 @@
+{
+  "files": [
+    {
+      "path": "Annual.csv",
+      "size": 40892,
+      "sha256": "00bdb75f5c369892537cd0005808084b0171a0324629413b314cbbe5e361edba"
+    },
+    {
+      "path": "Compare.py",
+      "size": 7209,
+      "sha256": "e624c80b064d575754876614a5487146b05dbe796861a7d78982254737869165"
+    },
+    {
+      "path": "Comparison.csv",
+      "size": 18581,
+      "sha256": "204372f6593db11cf4ee1079db83cb5ac3930ac3e3acd3594b24f94fbfe7c489"
+    },
+    {
+      "path": "Coverage.md",
+      "size": 7167,
+      "sha256": "6c1e82f2eadd929fcf6fae1fe94cce37b2fe926d071f1e025804fe9e4ac9c235"
+    },
+    {
+      "path": "Dependencies.json",
+      "size": 1136,
+      "sha256": "0312b08798e8faa2aa876e33a55d22e582dd19489a113fb50f117503ce561de4"
+    },
+    {
+      "path": "Inputs.json",
+      "size": 900,
+      "sha256": "57e8f912571a58067c230d27f33287d73844f45bd577dc509679e24a6d9d3e70"
+    },
+    {
+      "path": "Report.md",
+      "size": 3439,
+      "sha256": "859fa23d12de433cb949aec8fefd099d254f2ed01f28c53adfad51b34cbf4808"
+    },
+    {
+      "path": "Run.py",
+      "size": 4676,
+      "sha256": "4de2a698ecf0fb62f5f4415c8ed36c227106b121cdd8430b031e6ec5814f519c"
+    },
+    {
+      "path": "Validation.json",
+      "size": 684,
+      "sha256": "f103ca711e20063dccfc2cd8969df4fc008edb79b5e841c0cb0f6e76950c2d3c"
+    }
+  ]
+}

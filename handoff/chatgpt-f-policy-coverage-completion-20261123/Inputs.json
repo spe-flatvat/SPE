@@ -1,0 +1,39 @@
+{
+  "request_commit": "49475ac84384447e97d4ec5b8995a1d42513adac",
+  "reference_commit": "8659df8c70e3d107941dca768a18a250674554e2",
+  "runtime_manifest_commit": "d8136f93977a110769529852afb095aff86d0e65",
+  "reference_nominal_gdp_trn": 600,
+  "new_threshold_sales_man": 240,
+  "cases": {
+    "OFF": {
+      "enabled": false,
+      "residual_base_scale": 0
+    },
+    "ON_ZERO": {
+      "enabled": true,
+      "residual_base_scale": 0
+    },
+    "ON_SENSITIVITY": {
+      "enabled": true,
+      "residual_base_scale": 1
+    }
+  },
+  "illustrative_residual_bands": [
+    {
+      "sales_man": 239,
+      "net_tax_inclusive_base_2026_trn": 0.2
+    },
+    {
+      "sales_man": 240,
+      "net_tax_inclusive_base_2026_trn": 0.2
+    },
+    {
+      "sales_man": 241,
+      "net_tax_inclusive_base_2026_trn": 0.25
+    },
+    {
+      "sales_man": 500,
+      "net_tax_inclusive_base_2026_trn": 0.75
+    }
+  ]
+}

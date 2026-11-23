@@ -1,0 +1,13 @@
+{
+  "checks": 16,
+  "failures": 0,
+  "wage_shares": [
+    0.8040688309657025,
+    0.876167267448697,
+    0.9148517655149397,
+    0.91553654869606,
+    0.94842518963685
+  ],
+  "independent_process_byte_matches": [],
+  "total_new_checks": 16
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "ref": "8659df8c70e3d107941dca768a18a250674554e2",
+    "path": "policies/FreedomPolicies.md",
+    "size": 9241,
+    "sha256": "0dedd2c1126613c30a7d96732d226cc787f6597437137424845d64d041db0204"
+  },
+  {
+    "ref": "8659df8c70e3d107941dca768a18a250674554e2",
+    "path": "policies/FreedomPolicies_Annex.md",
+    "size": 12319,
+    "sha256": "ee62de32582a0f6d559029e7e9810b161c6a975ff22b498493d9ca960ca29e83"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "wage_share_source": "https://www.stat.go.jp/english/data/nenkan/76nenkan/pdf/22e.pdf",
+  "wage_share_table": "22-3, 2025 annual income quintiles",
+  "income_tax_source": "https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2260.htm",
+  "local_tax_source": "https://www.tax.metro.tokyo.lg.jp/kazei/life/kojin_ju",
+  "pension_source": "https://www.nenkin.go.jp/service/kounen/hokenryo/hoshu/20150515-01.html",
+  "burden_sensitivity": {
+    "illustrative_taxable_share_of_wage_after_pension": 0.7,
+    "illustrative_national_income_tax_rate": 0.1,
+    "illustrative_resident_tax_rate": 0.1,
+    "employee_pension_rate_continuous": 0.0915
+  },
+  "nominal_household_thresholds": {"A": 5000000, "B": 3000000, "C": 5000000},
+  "fixed_prior_commit": "cb27577f359211310202c0af022a617a0b3f047e",
+  "fixed_policy_commit": "8659df8c70e3d107941dca768a18a250674554e2"
+}

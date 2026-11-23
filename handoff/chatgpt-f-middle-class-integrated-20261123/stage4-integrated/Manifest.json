@@ -1,0 +1,34 @@
+{
+  "artifact_files": [
+    {
+      "path": "Comparison.csv",
+      "size": 186546,
+      "sha256": "4e20bd905ee3dc620e63de6fbe26cf26b23d8c9552e291cadd6434d28a0a21da",
+      "git_blob_sha": "b6d6426650ea32f6f3088f4567d87ad2a40e05db"
+    },
+    {
+      "path": "Report.md",
+      "size": 1969,
+      "sha256": "d1d5d61520d0ccad1a41e383d5e5a49f41f61304efabfe27458033a41a5d61be",
+      "git_blob_sha": "3fd568341983de7ffb0ca671b538710b36a5fd22"
+    },
+    {
+      "path": "Run.py",
+      "size": 3157,
+      "sha256": "8cb63be24a7f3b6bc6548a40329d2c1255d89fe3fb029f20a81a23038cb99472",
+      "git_blob_sha": "16b77cb148a9fbd9b83ed8f1c671e956a0f98d07"
+    },
+    {
+      "path": "Validation.json",
+      "size": 162,
+      "sha256": "acfab89a74db558e4c73a666fb4130e8f82e57b96b082c97deb46a6f7d80a10e",
+      "git_blob_sha": "1083d8e1761e6497ccc7fce9e9035a6f2b81575f"
+    }
+  ],
+  "calculation_checks": 721,
+  "failed": 0,
+  "independent_byte_identical": [
+    "Comparison.csv",
+    "Validation.json"
+  ]
+}

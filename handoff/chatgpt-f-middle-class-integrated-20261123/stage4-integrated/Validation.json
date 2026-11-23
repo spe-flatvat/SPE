@@ -1,0 +1,9 @@
+{
+  "checks": 721,
+  "failures": 0,
+  "groups": {
+    "full_case_year_count": 1,
+    "zero_fixed_delta": 90,
+    "same_basket_price_no_macro_feedback": 630
+  }
+}

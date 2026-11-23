@@ -1,0 +1,68 @@
+{
+  "payload_fixed_commit": "4042d15c4ecf731a4712314ef51fe7fcdc434d9a",
+  "matched": 10,
+  "failed": 0,
+  "method": "Re-fetched each path from the published fixed commit using the GitHub connector, fetched the resolved blob, and compared exact bytes, SHA-256 and size with the generated original. The receipt itself is verified from the final commit.",
+  "files": [
+    {
+      "path": "Run.py",
+      "sha256": "2dfd021c23e62eb964d5ca46c07a72a46fae905a914de97da783054dfdf57897",
+      "size": 2451,
+      "git_blob_sha1": "1f541bfa6de5fd5ef50daf99d98412b40cbf552a"
+    },
+    {
+      "path": "Compare.py",
+      "sha256": "3ab211e55dd1592f22ab9c9b7f7d193d21265c5ed3249148ae16c89979b502cc",
+      "size": 9017,
+      "git_blob_sha1": "df038e095f80118b363abaebf056ca048e9c7006"
+    },
+    {
+      "path": "Inputs.json",
+      "sha256": "42fea720da9e934a7c32e1870920330b25e7c63e940b7da3d4fe4cb6c76d5c8a",
+      "size": 300,
+      "git_blob_sha1": "2b70669e8b508be0c80ffe79363113c2d1752b9d"
+    },
+    {
+      "path": "Legacy_Annual.csv",
+      "sha256": "7d63097327e1c7c4a8c8117ad9862d78e7ba29dfe7708afca2011cbd408b3614",
+      "size": 35685,
+      "git_blob_sha1": "9a0fb2e6ba62c7de987b806a4611d6a54ecddc88"
+    },
+    {
+      "path": "Attribution_Annual.csv",
+      "sha256": "1c0a91c80753e8bc54c6d8e080f9605b186376cd5cdf442882426a4e56dfe385",
+      "size": 49872,
+      "git_blob_sha1": "a888e9a7bd37f9e17d99c63c4ca5b63c55ff9303"
+    },
+    {
+      "path": "Diagnostic_Comparison.csv",
+      "sha256": "af87bfa555d446b5ddb989beddfdbbafaa564d0e7dc8d052e1188e39b9acf054",
+      "size": 130090,
+      "git_blob_sha1": "7477a4b88f0645b725884fc866f514d9ac9102ab"
+    },
+    {
+      "path": "Report.md",
+      "sha256": "a91793ac47a734fd8596a2938ee33a9b7320cf3d2f150c4d98232f04b5bb5420",
+      "size": 3105,
+      "git_blob_sha1": "92adc3299959ff13930524ef3143bb5fd45d2477"
+    },
+    {
+      "path": "Assumptions.md",
+      "sha256": "dfca505b876c25bf9b4ea68cafd0b29c61a3cafea2013fc722274d0a7a308b13",
+      "size": 4134,
+      "git_blob_sha1": "025b461c9aec71f0621b63b122497f1eba0bd909"
+    },
+    {
+      "path": "Validation.json",
+      "sha256": "d7e7f5496b34ac4942d718615d799fd5e4f681ac83f80cc68b4475de51fff4ee",
+      "size": 904,
+      "git_blob_sha1": "3f2aa4db1410f7784d2bec0a8a42839f29e6c4fc"
+    },
+    {
+      "path": "Manifest.json",
+      "sha256": "a6df22ca315f996cf7a136f4deda37aded953ec408d2dd67978fc5eaa09300fd",
+      "size": 1421,
+      "git_blob_sha1": "b3d332af0299bff7a17ff0a1d4704595f987c986"
+    }
+  ]
+}

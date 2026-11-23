@@ -1,0 +1,575 @@
+{
+  "status": "CUSTODY_PASS",
+  "repository": "spe-flatvat/SPE",
+  "branch": "work/chatgpt-handoff",
+  "data_commit": "d8f0594df6ad88c555e3c607393fb28ce6bb9ce6",
+  "route": "GitHub connector create_tree/create_commit/update_ref -> git fetch origin work/chatgpt-handoff -> git show fixed commit:path",
+  "files_verified": 56,
+  "files": [
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/AGE_SEX_FIXED/Common_Trace_AGE_SEX_FIXED.json",
+      "size": 358412,
+      "sha256": "cd95593c0a73072c533fbee06ebf7440b9bad9134e17821373803a25a67e0e1e",
+      "retrieved_size": 358412,
+      "retrieved_sha256": "cd95593c0a73072c533fbee06ebf7440b9bad9134e17821373803a25a67e0e1e",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/AGE_SEX_FIXED/Resolved_Common_Runtime_AGE_SEX_FIXED.py.txt",
+      "size": 65875,
+      "sha256": "5b0b1537a9597a525453a7dcc94aed6923c74ccc97a7d9825913188475573cfe",
+      "retrieved_size": 65875,
+      "retrieved_sha256": "5b0b1537a9597a525453a7dcc94aed6923c74ccc97a7d9825913188475573cfe",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/AGE_SEX_FIXED/Runtime_Source_Receipts.json",
+      "size": 6140,
+      "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "retrieved_size": 6140,
+      "retrieved_sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/A_FIXED/Common_Trace_A_FIXED.json",
+      "size": 358626,
+      "sha256": "62b7cc721cbe73590c97d0453222beeeb1c60a015553bdc5d7fc8aea495acaf9",
+      "retrieved_size": 358626,
+      "retrieved_sha256": "62b7cc721cbe73590c97d0453222beeeb1c60a015553bdc5d7fc8aea495acaf9",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/A_FIXED/Resolved_Common_Runtime_A_FIXED.py.txt",
+      "size": 65391,
+      "sha256": "57534f3069394e937439b38e14d681c874f404deb960b318749cf409e7e6ffe9",
+      "retrieved_size": 65391,
+      "retrieved_sha256": "57534f3069394e937439b38e14d681c874f404deb960b318749cf409e7e6ffe9",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/A_FIXED/Runtime_Source_Receipts.json",
+      "size": 6140,
+      "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "retrieved_size": 6140,
+      "retrieved_sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/BASE_SQ_REPLAY/Common_Trace_BASE_SQ_REPLAY.json",
+      "size": 359144,
+      "sha256": "3e58ec77430d3422ed720ca3b5b476aba5de195435eeb13e6930e4ffd39539d1",
+      "retrieved_size": 359144,
+      "retrieved_sha256": "3e58ec77430d3422ed720ca3b5b476aba5de195435eeb13e6930e4ffd39539d1",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/BASE_SQ_REPLAY/Resolved_Common_Runtime_BASE_SQ_REPLAY.py.txt",
+      "size": 65347,
+      "sha256": "1760b01c5f4d65db5a10233413e2191d9f387a604c08a19c51badbc324465ed6",
+      "retrieved_size": 65347,
+      "retrieved_sha256": "1760b01c5f4d65db5a10233413e2191d9f387a604c08a19c51badbc324465ed6",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/BASE_SQ_REPLAY/Runtime_Source_Receipts.json",
+      "size": 6140,
+      "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "retrieved_size": 6140,
+      "retrieved_sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/BROAD_AGE_FIXED/Common_Trace_BROAD_AGE_FIXED.json",
+      "size": 358929,
+      "sha256": "5112b5274c34bb5a67e11a9348878159badea50d0745b5b920d6845fb4a69a7c",
+      "retrieved_size": 358929,
+      "retrieved_sha256": "5112b5274c34bb5a67e11a9348878159badea50d0745b5b920d6845fb4a69a7c",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/BROAD_AGE_FIXED/Resolved_Common_Runtime_BROAD_AGE_FIXED.py.txt",
+      "size": 65871,
+      "sha256": "1178a72336b06b80a8ad8c46862e79e7096bbabdbd943de978aa44af04265476",
+      "retrieved_size": 65871,
+      "retrieved_sha256": "1178a72336b06b80a8ad8c46862e79e7096bbabdbd943de978aa44af04265476",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/BROAD_AGE_FIXED/Runtime_Source_Receipts.json",
+      "size": 6140,
+      "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "retrieved_size": 6140,
+      "retrieved_sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/Diagnostic_Reproduce.py",
+      "size": 17710,
+      "sha256": "77d9e928ba6559ba14a053fa17282758e3f8880ee27b75ab1a45709a0bd28fdb",
+      "retrieved_size": 17710,
+      "retrieved_sha256": "77d9e928ba6559ba14a053fa17282758e3f8880ee27b75ab1a45709a0bd28fdb",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/Diagnostic_Worker.py",
+      "size": 3418,
+      "sha256": "911d728c6b958d221acaad4f9387c4a4cd5612456d8783a65ab6e7bbc7c9cc2f",
+      "retrieved_size": 3418,
+      "retrieved_sha256": "911d728c6b958d221acaad4f9387c4a4cd5612456d8783a65ab6e7bbc7c9cc2f",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/Execution_Log.json",
+      "size": 3873,
+      "sha256": "ea98142b39cb2c43ebe832974d007d0e1efebbc317def46258b538c3bcf4de8e",
+      "retrieved_size": 3873,
+      "retrieved_sha256": "ea98142b39cb2c43ebe832974d007d0e1efebbc317def46258b538c3bcf4de8e",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/F_BASE/F_Actual_Annual.json",
+      "size": 522949,
+      "sha256": "cf13d4c267f30a361ed0f4aa3083893721413283247c846fdce477357c2f7e43",
+      "retrieved_size": 522949,
+      "retrieved_sha256": "cf13d4c267f30a361ed0f4aa3083893721413283247c846fdce477357c2f7e43",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/F_BASE/F_Common_Clinical_Accounts.json",
+      "size": 137652,
+      "sha256": "59ed84a212717960207931618b978bc974293177b5af83a8a79212aaa9546c91",
+      "retrieved_size": 137652,
+      "retrieved_sha256": "59ed84a212717960207931618b978bc974293177b5af83a8a79212aaa9546c91",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/F_BASE/F_Medical_Accounts.json",
+      "size": 148558,
+      "sha256": "8b324b0516f366c310e8e85daa6c05c1c46abd2c872e6b4cf10fd8e7b213fbba",
+      "retrieved_size": 148558,
+      "retrieved_sha256": "8b324b0516f366c310e8e85daa6c05c1c46abd2c872e6b4cf10fd8e7b213fbba",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/F_BASE/F_Medical_Reference_Inputs.json",
+      "size": 1791,
+      "sha256": "3afd44c02680757d419eea68d8cf52715ac092d030377675f3e369995c75ef76",
+      "retrieved_size": 1791,
+      "retrieved_sha256": "3afd44c02680757d419eea68d8cf52715ac092d030377675f3e369995c75ef76",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/F_BASE/F_Runtime_Trace.json",
+      "size": 27133,
+      "sha256": "7e777c2fb9e999f15ded82705a4dba2df0a0e358d0a233d2f2ebfdd9862dbff3",
+      "retrieved_size": 27133,
+      "retrieved_sha256": "7e777c2fb9e999f15ded82705a4dba2df0a0e358d0a233d2f2ebfdd9862dbff3",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/F_BASE/Runtime_Source_Receipts.json",
+      "size": 3780,
+      "sha256": "268d39ea1078332df6afd4f202744b4aa258418517f92f478b85a2f1d540024e",
+      "retrieved_size": 3780,
+      "retrieved_sha256": "268d39ea1078332df6afd4f202744b4aa258418517f92f478b85a2f1d540024e",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/F_COMMON_L_FIXED/F_Actual_Annual.json",
+      "size": 522821,
+      "sha256": "9fd7272063107defc8048750325d3b5981743aa359a8a61c52a80738a1072f59",
+      "retrieved_size": 522821,
+      "retrieved_sha256": "9fd7272063107defc8048750325d3b5981743aa359a8a61c52a80738a1072f59",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/F_COMMON_L_FIXED/F_Common_Clinical_Accounts.json",
+      "size": 137652,
+      "sha256": "59ed84a212717960207931618b978bc974293177b5af83a8a79212aaa9546c91",
+      "retrieved_size": 137652,
+      "retrieved_sha256": "59ed84a212717960207931618b978bc974293177b5af83a8a79212aaa9546c91",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/F_COMMON_L_FIXED/F_Medical_Accounts.json",
+      "size": 148558,
+      "sha256": "8b324b0516f366c310e8e85daa6c05c1c46abd2c872e6b4cf10fd8e7b213fbba",
+      "retrieved_size": 148558,
+      "retrieved_sha256": "8b324b0516f366c310e8e85daa6c05c1c46abd2c872e6b4cf10fd8e7b213fbba",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/F_COMMON_L_FIXED/F_Medical_Reference_Inputs.json",
+      "size": 1791,
+      "sha256": "3afd44c02680757d419eea68d8cf52715ac092d030377675f3e369995c75ef76",
+      "retrieved_size": 1791,
+      "retrieved_sha256": "3afd44c02680757d419eea68d8cf52715ac092d030377675f3e369995c75ef76",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/F_COMMON_L_FIXED/F_Runtime_Trace.json",
+      "size": 27077,
+      "sha256": "70cb651b6d76e87a6e155a55f2c7d2f3835b579544b6e46180b3cdb53fff31a5",
+      "retrieved_size": 27077,
+      "retrieved_sha256": "70cb651b6d76e87a6e155a55f2c7d2f3835b579544b6e46180b3cdb53fff31a5",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/F_COMMON_L_FIXED/Runtime_Source_Receipts.json",
+      "size": 3780,
+      "sha256": "268d39ea1078332df6afd4f202744b4aa258418517f92f478b85a2f1d540024e",
+      "retrieved_size": 3780,
+      "retrieved_sha256": "268d39ea1078332df6afd4f202744b4aa258418517f92f478b85a2f1d540024e",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/F_N3_Common_Labor_Connection_Impact.csv",
+      "size": 24603,
+      "sha256": "3a3bba04a0bdf82a2f1013961adf4974d94aa63acd60e96cd37de98957e9977f",
+      "retrieved_size": 24603,
+      "retrieved_sha256": "3a3bba04a0bdf82a2f1013961adf4974d94aa63acd60e96cd37de98957e9977f",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/Finalize_Diagnostic.py",
+      "size": 20126,
+      "sha256": "b36b338391d6a2a3cdd67e3804634ef794668831768ad2dbb7f6f8c5bf36b050",
+      "retrieved_size": 20126,
+      "retrieved_sha256": "b36b338391d6a2a3cdd67e3804634ef794668831768ad2dbb7f6f8c5bf36b050",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/Fixed_Diagnostic_Inputs.json",
+      "size": 9369,
+      "sha256": "39b8f32e740431591e3cbe36602f96408517dc6d989e39753717857f3815a0cf",
+      "retrieved_size": 9369,
+      "retrieved_sha256": "39b8f32e740431591e3cbe36602f96408517dc6d989e39753717857f3815a0cf",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/Fixed_Source_Receipts.json",
+      "size": 48742,
+      "sha256": "00c36cdc985918f6fe51ff9b1400d8a53efb6d49066ec8b1cb3fc1702d069a4c",
+      "retrieved_size": 48742,
+      "retrieved_sha256": "00c36cdc985918f6fe51ff9b1400d8a53efb6d49066ec8b1cb3fc1702d069a4c",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/L_FIXED/Common_Trace_L_FIXED.json",
+      "size": 357814,
+      "sha256": "5a632e96d421997696449114ff7e70a502b6af3d309d12f6b7c984df413aef79",
+      "retrieved_size": 357814,
+      "retrieved_sha256": "5a632e96d421997696449114ff7e70a502b6af3d309d12f6b7c984df413aef79",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/L_FIXED/Resolved_Common_Runtime_L_FIXED.py.txt",
+      "size": 65873,
+      "sha256": "a6e4b2df5602ddc3eb23e5595e74afda12c6603e1cf34c93c9c957a1c1438d63",
+      "retrieved_size": 65873,
+      "retrieved_sha256": "a6e4b2df5602ddc3eb23e5595e74afda12c6603e1cf34c93c9c957a1c1438d63",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/L_FIXED/Runtime_Source_Receipts.json",
+      "size": 6140,
+      "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "retrieved_size": 6140,
+      "retrieved_sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/Manifest.json",
+      "size": 9956,
+      "sha256": "2d2cd33c2fcc5a7cb74168564a9167db63428c5c0b7e5e81fcd388ad9b78fd2a",
+      "retrieved_size": 9956,
+      "retrieved_sha256": "2d2cd33c2fcc5a7cb74168564a9167db63428c5c0b7e5e81fcd388ad9b78fd2a",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/NATIONALITY_SHARE_FIXED/Common_Trace_NATIONALITY_SHARE_FIXED.json",
+      "size": 358817,
+      "sha256": "6328d5739f19015899cddfbdf6d402ef863313c4901c6c1ae5fe1703e1b8a4a7",
+      "retrieved_size": 358817,
+      "retrieved_sha256": "6328d5739f19015899cddfbdf6d402ef863313c4901c6c1ae5fe1703e1b8a4a7",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/NATIONALITY_SHARE_FIXED/Resolved_Common_Runtime_NATIONALITY_SHARE_FIXED.py.txt",
+      "size": 65876,
+      "sha256": "05f380be5170daf256febd3a1fc5b96e2d6988fad0ec578201d3e5f8e74f865b",
+      "retrieved_size": 65876,
+      "retrieved_sha256": "05f380be5170daf256febd3a1fc5b96e2d6988fad0ec578201d3e5f8e74f865b",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/NATIONALITY_SHARE_FIXED/Runtime_Source_Receipts.json",
+      "size": 6140,
+      "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "retrieved_size": 6140,
+      "retrieved_sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/POPULATION_ONLY/Common_Trace_POPULATION_ONLY.json",
+      "size": 359148,
+      "sha256": "4700488b5b786f9db1b66d984ff8d65bfa0a718dcdf803fa198a978284c58fa2",
+      "retrieved_size": 359148,
+      "retrieved_sha256": "4700488b5b786f9db1b66d984ff8d65bfa0a718dcdf803fa198a978284c58fa2",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/POPULATION_ONLY/Resolved_Common_Runtime_POPULATION_ONLY.py.txt",
+      "size": 65877,
+      "sha256": "4d25b8994e07d125f4791f86fdb0001328506ce3afa86515d4cd4d474ded6684",
+      "retrieved_size": 65877,
+      "retrieved_sha256": "4d25b8994e07d125f4791f86fdb0001328506ce3afa86515d4cd4d474ded6684",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/POPULATION_ONLY/Runtime_Source_Receipts.json",
+      "size": 6140,
+      "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "retrieved_size": 6140,
+      "retrieved_sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/Reproduction_Verification.json",
+      "size": 10459,
+      "sha256": "3419638d0ce6fee825ae3efd04d73878e312432fa166f33966fe38e3bb1379b3",
+      "retrieved_size": 10459,
+      "retrieved_sha256": "3419638d0ce6fee825ae3efd04d73878e312432fa166f33966fe38e3bb1379b3",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/Resolved_Embedded_Age_Sex_Labor.py.txt",
+      "size": 25333,
+      "sha256": "4364610a3f93d651c900e4556d331bd17f976fb507318d78cdcf65d7760f644a",
+      "retrieved_size": 25333,
+      "retrieved_sha256": "4364610a3f93d651c900e4556d331bd17f976fb507318d78cdcf65d7760f644a",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/SPE_Common_Macro_Demography_Labor_Productivity_Diagnostic_Report_DRAFT_20261123.md",
+      "size": 11078,
+      "sha256": "c773ba4b9dea6f57b195bfad0053ceb11c5be0521e850ff2de1536c8c5f293af",
+      "retrieved_size": 11078,
+      "retrieved_sha256": "c773ba4b9dea6f57b195bfad0053ceb11c5be0521e850ff2de1536c8c5f293af",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/SQ_Age_Sex_Employment_Cells_2026_2055.csv",
+      "size": 200169,
+      "sha256": "bb61fb1fd2b29c11d02d4fadf60f64da9c896670890ceaa5fdba5c3476b6131c",
+      "retrieved_size": 200169,
+      "retrieved_sha256": "bb61fb1fd2b29c11d02d4fadf60f64da9c896670890ceaa5fdba5c3476b6131c",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/SQ_Annual_Population_Labor_A_Core_GDP_2026_2055.csv",
+      "size": 20525,
+      "sha256": "f200ad8cca4d48c51cc247c25e7dbf1e454dcc360d16e24585f45bc47db92e37",
+      "retrieved_size": 20525,
+      "retrieved_sha256": "f200ad8cca4d48c51cc247c25e7dbf1e454dcc360d16e24585f45bc47db92e37",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/SQ_Labor_Decline_Attribution_And_Interactions.csv",
+      "size": 38084,
+      "sha256": "f5b33568ec4e4367559fd0123982ecdf11aaae14856018435360f0824c3ec2e5",
+      "retrieved_size": 38084,
+      "retrieved_sha256": "f5b33568ec4e4367559fd0123982ecdf11aaae14856018435360f0824c3ec2e5",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/SQ_Labor_Productivity_Calibration_Gaps_And_Fixes.csv",
+      "size": 3170,
+      "sha256": "b6560ba92b336809f17b4455b0d6580f1899f88146bc40a35599297909e4adf3",
+      "retrieved_size": 3170,
+      "retrieved_sha256": "b6560ba92b336809f17b4455b0d6580f1899f88146bc40a35599297909e4adf3",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/SQ_Limited_Labor_Productivity_Counterfactuals_2026_2055.csv",
+      "size": 70169,
+      "sha256": "4864d8fbe481f3ca1577d6161b8193d10d059a81e41ba2131a1cbd5d0271ddee",
+      "retrieved_size": 70169,
+      "retrieved_sha256": "4864d8fbe481f3ca1577d6161b8193d10d059a81e41ba2131a1cbd5d0271ddee",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/SQ_Nonlabor_Growth_Event_Accumulation.csv",
+      "size": 1587,
+      "sha256": "04ba71760934f9312bf3a2c08b45f80ed30330cb5760e092be12c3f03a4bbcd6",
+      "retrieved_size": 1587,
+      "retrieved_sha256": "04ba71760934f9312bf3a2c08b45f80ed30330cb5760e092be12c3f03a4bbcd6",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/SQ_Population_Labor_Productivity_Source_And_Code_Map.csv",
+      "size": 4378,
+      "sha256": "f7bf2a8ade6c5d8ed3226fe82fbf94873634991f93edb1e6fd147db94b70757a",
+      "retrieved_size": 4378,
+      "retrieved_sha256": "f7bf2a8ade6c5d8ed3226fe82fbf94873634991f93edb1e6fd147db94b70757a",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/Verification.json",
+      "size": 19445,
+      "sha256": "ceb8db1016157f2f3959272834d1752a9a86c0afeddb0eda0ae310b8312a37ae",
+      "retrieved_size": 19445,
+      "retrieved_sha256": "ceb8db1016157f2f3959272834d1752a9a86c0afeddb0eda0ae310b8312a37ae",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/Verification_Checks.csv",
+      "size": 157335,
+      "sha256": "e7e9ed50cb11bb9d80c2a836e9b83b4a6231b351ddca45e978bb45e0eae92f16",
+      "retrieved_size": 157335,
+      "retrieved_sha256": "e7e9ed50cb11bb9d80c2a836e9b83b4a6231b351ddca45e978bb45e0eae92f16",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/WITHIN_AGE_SEX_FIXED/Common_Trace_WITHIN_AGE_SEX_FIXED.json",
+      "size": 358688,
+      "sha256": "8417c4861194b321da8a5112726bab53f80d25896efb82bc0759bdd94b0cd864",
+      "retrieved_size": 358688,
+      "retrieved_sha256": "8417c4861194b321da8a5112726bab53f80d25896efb82bc0759bdd94b0cd864",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/WITHIN_AGE_SEX_FIXED/Resolved_Common_Runtime_WITHIN_AGE_SEX_FIXED.py.txt",
+      "size": 65872,
+      "sha256": "64fb6324b71bc9a1be6e59f4d7209a51b20d31a6db43f3c36a7ede8b50c96bff",
+      "retrieved_size": 65872,
+      "retrieved_sha256": "64fb6324b71bc9a1be6e59f4d7209a51b20d31a6db43f3c36a7ede8b50c96bff",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/WITHIN_AGE_SEX_FIXED/Runtime_Source_Receipts.json",
+      "size": 6140,
+      "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "retrieved_size": 6140,
+      "retrieved_sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "size_match": true,
+      "sha256_match": true,
+      "bytes_match": true
+    }
+  ],
+  "scope": "all 56 individual source/results/reproduction/manifest artifacts; this receipt is added by following commit, not self-hashed",
+  "original_policy_engine_or_existing_files_changed": false,
+  "formal_acceptance": false,
+  "RP023_M1925": "HOLD",
+  "RP024": "PENDING"
+}

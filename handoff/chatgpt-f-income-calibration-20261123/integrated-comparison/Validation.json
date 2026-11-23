@@ -1,0 +1,24 @@
+{
+  "checks": 364,
+  "failures": 0,
+  "groups": {
+    "unique_keys": 3,
+    "complete_income_panel": 1,
+    "read_only_finance_reference": 120,
+    "fixed_income": 120,
+    "prior_income": 120
+  },
+  "independent_process_byte_matches": [
+    {
+      "path": "Annual.csv",
+      "size": 63499,
+      "sha256": "1c51335c904b1381d60af13d05aa5693b8b9246b5440daa68a78d79ae5c37fc2"
+    },
+    {
+      "path": "Comparison.csv",
+      "size": 16631,
+      "sha256": "8d3979f440b680b91cdfac80fa8f180fed95c959c8e696061ee6031ec83261e2"
+    }
+  ],
+  "total_new_checks": 366
+}

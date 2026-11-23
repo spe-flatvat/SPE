@@ -1,0 +1,20 @@
+[
+  {
+    "ref": "cb27577f359211310202c0af022a617a0b3f047e",
+    "path": "handoff/chatgpt-f-middle-income-financing-20261123/integrated/Annual.csv",
+    "size": 45423,
+    "sha256": "d9374bd55efbd6cbd1f3e5522817577595bd32bfca1cede85f75d230542815fd"
+  },
+  {
+    "ref": "cb27577f359211310202c0af022a617a0b3f047e",
+    "path": "handoff/chatgpt-f-middle-income-financing-20261123/financing-sensitivity/Annual.csv",
+    "size": 24193,
+    "sha256": "e2b6852bb2b8fb1b3c67da073f53fe82d4e20e709287ba6b0bd5ddb1dc52841b"
+  },
+  {
+    "ref": "9cd04a855216b87abf60955649c8815e89c14fad",
+    "path": "handoff/chatgpt-f-income-calibration-20261123/implementation/Annual.csv",
+    "size": 84092,
+    "sha256": "0c8cdc955ee6d3e48b6d95cc4909a66cfa3ebda42369207213b980541fecfcda"
+  }
+]

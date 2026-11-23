@@ -1,0 +1,63 @@
+{
+  "files": [
+    {
+      "path": "handoff/chatgpt-f-sq-n3-common-indicators-20261123/Annual_Comparison.csv",
+      "bytes": 54714,
+      "sha256": "2b09d11f30488cc988561f2aeb6d9eb43ad97e486f92e3496237869f36563148"
+    },
+    {
+      "path": "handoff/chatgpt-f-sq-n3-common-indicators-20261123/Claude_Verification_Request.md",
+      "bytes": 1506,
+      "sha256": "363b2e560f197e88b080a9f2c9434de43954578e44a67a59ae01e049654a61ef"
+    },
+    {
+      "path": "handoff/chatgpt-f-sq-n3-common-indicators-20261123/Comparison_Contract.csv",
+      "bytes": 6165,
+      "sha256": "61b3fafe1bf43c6c9670d24462676a681b9a7dc2d55f5d77c147b937234e4996"
+    },
+    {
+      "path": "handoff/chatgpt-f-sq-n3-common-indicators-20261123/Dependencies.json",
+      "bytes": 5053,
+      "sha256": "e5bc82bb8371e80881be7a79000c6cd6b11cd3418a636b303cd89531e638016d"
+    },
+    {
+      "path": "handoff/chatgpt-f-sq-n3-common-indicators-20261123/F_Household_Context.csv",
+      "bytes": 8610,
+      "sha256": "9bc75292269413867788671c7bbb9968bd8e1d509866d466be18101846b475f2"
+    },
+    {
+      "path": "handoff/chatgpt-f-sq-n3-common-indicators-20261123/F_Native_To_Matched_Bridge.csv",
+      "bytes": 1544,
+      "sha256": "a2e7f561b6bac796439051a1693385741d369fe20a19732663485d1eb2229324"
+    },
+    {
+      "path": "handoff/chatgpt-f-sq-n3-common-indicators-20261123/Key_Years.csv",
+      "bytes": 6985,
+      "sha256": "c210bec5d6f579b52f246bc955bdc7a99130ea9249cbba072b7c36aee7446165"
+    },
+    {
+      "path": "handoff/chatgpt-f-sq-n3-common-indicators-20261123/Report.md",
+      "bytes": 5687,
+      "sha256": "ef859568aa8a4b3bc21744507d31fcdaeff10ec1de25e318d8728268006bf060"
+    },
+    {
+      "path": "handoff/chatgpt-f-sq-n3-common-indicators-20261123/Reproduction.json",
+      "bytes": 2903,
+      "sha256": "65baf7a5649ebe745429c32b68da21e2c8464b71f4e1e49bb974159b277e4345"
+    },
+    {
+      "path": "handoff/chatgpt-f-sq-n3-common-indicators-20261123/Run.py",
+      "bytes": 20374,
+      "sha256": "3a413c1bd29b082337fcc99597259dfb792774766403c8feaf66412b729f6ab0"
+    },
+    {
+      "path": "handoff/chatgpt-f-sq-n3-common-indicators-20261123/Validation.json",
+      "bytes": 1082,
+      "sha256": "091e33797f8f9dc818728632b0351f1b25635b0ef1daebf252054acdbbe83a34"
+    }
+  ],
+  "excluded": [
+    "Manifest.json (self)",
+    "Custody.json (post-fetch receipt)"
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "sq": {
+    "commit": "7dd893eeed781af2bb323c424b456fdd907a667f",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/BASE_REPLAY/Common_Trace_BASE_REPLAY.json",
+    "bytes": 60423,
+    "sha256": "f571c808cdecb1e6c3ab9ae38e7fbab5fc5e564b1399ce4ca00d46c21b7e5d75"
+  },
+  "f_trace": {
+    "commit": "7dd893eeed781af2bb323c424b456fdd907a667f",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F/F_Runtime_Trace.json",
+    "bytes": 27133,
+    "sha256": "7e777c2fb9e999f15ded82705a4dba2df0a0e358d0a233d2f2ebfdd9862dbff3"
+  },
+  "n3_parameters": {
+    "commit": "7dd893eeed781af2bb323c424b456fdd907a667f",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/N3/N3_Common_Input_Contract.json",
+    "bytes": 139656,
+    "sha256": "a3ac335acfc40cc24ea37a5d628a3b46e872c34c465f61e69125d62cd86e1d2f"
+  },
+  "n3_denominator": {
+    "commit": "7dd893eeed781af2bb323c424b456fdd907a667f",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/N3/N3_SQ_Denominator_States.json",
+    "bytes": 673563,
+    "sha256": "1ce949509472382859f2019347998b89e33364509ce7f9cee2d991800077fdfa"
+  },
+  "f": {
+    "commit": "7dd893eeed781af2bb323c424b456fdd907a667f",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F/F_Actual_Annual.json",
+    "bytes": 522949,
+    "sha256": "cf13d4c267f30a361ed0f4aa3083893721413283247c846fdce477357c2f7e43"
+  },
+  "n3": {
+    "commit": "7dd893eeed781af2bb323c424b456fdd907a667f",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/N3/N3_Actual_Annual.json",
+    "bytes": 94007,
+    "sha256": "7728c506a33d302fb2f6512defcda42008c980257db19fbb0a7507860d2f2e4a"
+  },
+  "prior_comparison": {
+    "commit": "7dd893eeed781af2bb323c424b456fdd907a667f",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/SPE_Three_Scenario_Annual_Comparison_2026_2055.csv",
+    "bytes": 46387,
+    "sha256": "8bd352398aac6820740d2325fa3eb911a15f936b4ccd5120e9354ba16a1c9815"
+  },
+  "sq_prior": {
+    "commit": "149bbf03675884cb8f3fcea96689ebc9e975fac7",
+    "path": "handoff/chatgpt-statusquo-common-macro-limited-diagnostic-20261123/Common_Trace_BASE_REPLAY.json",
+    "bytes": 60423,
+    "sha256": "f571c808cdecb1e6c3ab9ae38e7fbab5fc5e564b1399ce4ca00d46c21b7e5d75"
+  },
+  "sq_variants": {
+    "commit": "149bbf03675884cb8f3fcea96689ebc9e975fac7",
+    "path": "handoff/chatgpt-statusquo-common-macro-limited-diagnostic-20261123/SQ_Baseline_Variant_Provenance_And_Comparability.csv",
+    "bytes": 5993,
+    "sha256": "6c1b2749dd72f8183ee23b0b496622ba310b802844d6fcd19b5156e9eaff0bae"
+  },
+  "n3_prior": {
+    "commit": "93b8393350eb73dd5ebd803b1ace429aaf4dfe1b",
+    "path": "handoff/chatgpt-n3-gdp-gap-causal-attribution-20261123/N3_SQ_Annual_GDP_Gap_Decomposition_2026_2055.csv",
+    "bytes": 13678,
+    "sha256": "66518274f1b74a39b796ac4023ea1cc62f71785fe531e64a849e53b058fec433"
+  },
+  "f_before_reconnection": {
+    "commit": "7dd893eeed781af2bb323c424b456fdd907a667f",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F_OLD/F_Actual_Annual.json",
+    "bytes": 523036,
+    "sha256": "c8d67d94b60a0ce3021a11ddd67ea826136812f16d1e79d3a85ea898e2788066"
+  },
+  "f_fixed_native": {
+    "commit": "6a9ccc854f7088339d58c9490174cc1463d2a203",
+    "path": "handoff/f-common-endoflife-finalization-20261121/Annual.csv",
+    "bytes": 6775129,
+    "sha256": "1754500818d58de9b075106cb1185322dc5c961a3438dbcfa0a2883917d8ba79"
+  },
+  "f_native_input": {
+    "commit": "6a9ccc854f7088339d58c9490174cc1463d2a203",
+    "path": "handoff/f-common-endoflife-finalization-20261121/Inputs.json",
+    "bytes": 27093,
+    "sha256": "6da4648a8823c041197e9082d6814b6e19710afdf7bb7c7130dc58d4cabd6095"
+  },
+  "f_medical_reference": {
+    "commit": "7dd893eeed781af2bb323c424b456fdd907a667f",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F/F_Medical_Reference_Inputs.json",
+    "bytes": 1791,
+    "sha256": "3afd44c02680757d419eea68d8cf52715ac092d030377675f3e369995c75ef76"
+  },
+  "reused_validation": {
+    "commit": "7dd893eeed781af2bb323c424b456fdd907a667f",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/Verification.json",
+    "bytes": 374,
+    "sha256": "80d3aca47006100270185873c3900e244426495dbe5eab95f94809184adcc95b"
+  },
+  "f_household_validation": {
+    "commit": "89e5ee2eead0f1b846d33ed0c315168fc461ceb9",
+    "path": "handoff/chatgpt-f-middle-class-integrated-20261123/stage4-integrated/Validation.json",
+    "bytes": 162,
+    "sha256": "acfab89a74db558e4c73a666fb4130e8f82e57b96b082c97deb46a6f7d80a10e"
+  },
+  "f_household": {
+    "commit": "89e5ee2eead0f1b846d33ed0c315168fc461ceb9",
+    "path": "handoff/chatgpt-f-middle-class-integrated-20261123/stage4-integrated/Comparison.csv",
+    "bytes": 186546,
+    "sha256": "4e20bd905ee3dc620e63de6fbe26cf26b23d8c9552e291cadd6434d28a0a21da"
+  }
+}

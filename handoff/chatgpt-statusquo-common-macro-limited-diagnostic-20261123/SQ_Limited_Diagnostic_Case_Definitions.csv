@@ -1,0 +1,9 @@
+series,type,family,changes,policy_adoption,one_change_counterfactual,price_medical_satellite_reinitialization
+SQ_V5_CANDIDATE_29,EXACT_PRIOR_VARIANT_REPRODUCTION,OLD_V6_PROVISIONAL,NONE; prior full definition retained,False,False,
+SQ_POLICY9_LOW_29,EXACT_PRIOR_VARIANT_REPRODUCTION,OLD_V6_PROVISIONAL,NONE; prior full definition retained,False,False,
+SQ_POLICY9_HIGH_29,EXACT_PRIOR_VARIANT_REPRODUCTION,OLD_V6_PROVISIONAL,NONE; prior full definition retained,False,False,
+SQ_V5_LEGACY30,EXACT_PRIOR_VARIANT_REPRODUCTION,OLD_V6_PROVISIONAL,NONE; prior full definition retained,False,False,
+CURRENT_COMMON_BASE_REPLAY,BASE_REPLAY,CURRENT_COMMON_LEVEL,none,False,False,unchanged fixed dependency indices; not a fully re-calibrated policy comparison
+CURRENT_COMMON_MULTIPLICATIVE_NOMINAL,ONE_CHANGE_UNADOPTED_DIAGNOSTIC,CURRENT_COMMON_LEVEL,only coreN recurrence (1+g+pi) -> (1+g)*(1+pi),False,True,unchanged fixed dependency indices; not a fully re-calibrated policy comparison
+CURRENT_COMMON_INITIAL_OIL_EXISTING_FLAG,ONE_CHANGE_UNADOPTED_DIAGNOSTIC,CURRENT_COMMON_LEVEL,only apply_oil_to_initial=False ->True using existing engine branch; no initial-anchor fix,False,True,unchanged fixed dependency indices; not a fully re-calibrated policy comparison
+CURRENT_COMMON_NO_PRICE_PRESSURE,ONE_CHANGE_UNADOPTED_DIAGNOSTIC,CURRENT_COMMON_LEVEL,only spec.price_feedback=False; negative control,False,True,unchanged fixed dependency indices; not a fully re-calibrated policy comparison

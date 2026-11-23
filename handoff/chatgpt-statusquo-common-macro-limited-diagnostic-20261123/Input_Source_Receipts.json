@@ -1,0 +1,193 @@
+[
+  {
+    "commit": "71bbfd6a31ceb58d34b1dfcf52eec7baadb16579",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Inputs.json",
+    "size_bytes": 39819,
+    "sha256": "d036bc65580805f9f4080b354412fc3d6ab3bc4deeb9ae8409f6ab24e625635e",
+    "match": true,
+    "retrieval": "git fetch fixed commit/git show"
+  },
+  {
+    "commit": "71bbfd6a31ceb58d34b1dfcf52eec7baadb16579",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Macro_Adapter.py",
+    "size_bytes": 2117,
+    "sha256": "189d43082853db0b007462ce3110991641065df1905c23329ee17f2b5e6cbd72",
+    "match": true,
+    "retrieval": "git fetch fixed commit/git show"
+  },
+  {
+    "commit": "71bbfd6a31ceb58d34b1dfcf52eec7baadb16579",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Model.py",
+    "size_bytes": 3903,
+    "sha256": "df0d7912f22f6aad4c266d7d256263d792214d1c7ac13122b1906dc3a4c2c4d5",
+    "match": true,
+    "retrieval": "git fetch fixed commit/git show"
+  },
+  {
+    "commit": "71bbfd6a31ceb58d34b1dfcf52eec7baadb16579",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Resolved_Macro_Source.py.txt",
+    "size_bytes": 65453,
+    "sha256": "d7e71f75c3c19d4ea283308b40af5894e62e24db696f4ca8ce40a4bf609f395d",
+    "match": true,
+    "retrieval": "git fetch fixed commit/git show"
+  },
+  {
+    "commit": "71bbfd6a31ceb58d34b1dfcf52eec7baadb16579",
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/results/Annual_DOMESTIC_TRANSFER.csv",
+    "size_bytes": 2099159,
+    "sha256": "26517daddcaf66ebaffd1ae54382d87321e8cf2dacc435344d6415c7dc7f1a6a",
+    "match": true,
+    "retrieval": "git fetch fixed commit/git show"
+  },
+  {
+    "commit": "71bbfd6a31ceb58d34b1dfcf52eec7baadb16579",
+    "path": "handoff/chatgpt-n3-gdp-gap-causal-attribution-20261123/Verification.json",
+    "size_bytes": 846,
+    "sha256": "21dc847cfc8d1c929f6140436ac759a0052fb684a28aead176dc214f80c61702",
+    "match": true,
+    "retrieval": "git fetch fixed commit/git show"
+  },
+  {
+    "commit": "71bbfd6a31ceb58d34b1dfcf52eec7baadb16579",
+    "path": "handoff/chatgpt-n3-household-tax-path-review-20261123/Verification.json",
+    "size_bytes": 447,
+    "sha256": "21061bae1413b90f36df2885e2a39427dee6431f2afbd25f38194d250d56bf7d",
+    "match": true,
+    "retrieval": "git fetch fixed commit/git show"
+  },
+  {
+    "commit": "71bbfd6a31ceb58d34b1dfcf52eec7baadb16579",
+    "path": "handoff/chatgpt-n3-pension-path-review-20261123/Verification.json",
+    "size_bytes": 613,
+    "sha256": "1eb9fc64f2e5bcb4ea9315ba6bd41143c1db572953b04ccfa9611db2dd7e4e0d",
+    "match": true,
+    "retrieval": "git fetch fixed commit/git show"
+  },
+  {
+    "commit": "71bbfd6a31ceb58d34b1dfcf52eec7baadb16579",
+    "path": "handoff/chatgpt-sq-growth-diagnosis-20261122/SQ_Growth_Contribution_Summary.csv",
+    "size_bytes": 3200,
+    "sha256": "8d307d35e7ddb84c535497d9bb04e777e0e150635b9d318bf836d8099df529df",
+    "match": true,
+    "retrieval": "git fetch fixed commit/git show"
+  },
+  {
+    "commit": "71bbfd6a31ceb58d34b1dfcf52eec7baadb16579",
+    "path": "handoff/chatgpt-sq-growth-diagnosis-20261122/SQ_Growth_Diagnosis_Reproduce.py",
+    "size_bytes": 33643,
+    "sha256": "8764d222e5c3780c4a884edfe6fa8d7c59db76ad6e48e2409777bd3f4764c9d0",
+    "match": true,
+    "retrieval": "git fetch fixed commit/git show"
+  },
+  {
+    "commit": "71bbfd6a31ceb58d34b1dfcf52eec7baadb16579",
+    "path": "handoff/chatgpt-sq-growth-diagnosis-20261122/SQ_Growth_Diagnosis_Verification.json",
+    "size_bytes": 61256,
+    "sha256": "fb4ca0244b06578e520f0936a2121bae39474523eb057170fe92cfecb2932fdc",
+    "match": true,
+    "retrieval": "git fetch fixed commit/git show"
+  },
+  {
+    "commit": "71bbfd6a31ceb58d34b1dfcf52eec7baadb16579",
+    "path": "handoff/chatgpt-sq-growth-diagnosis-20261122/SQ_Unchanged_Engine_Trace.json",
+    "size_bytes": 702920,
+    "sha256": "81530c535accb92b543177a2ed470469b8edc54e20efad875978ee170434478e",
+    "match": true,
+    "retrieval": "git fetch fixed commit/git show"
+  },
+  {
+    "commit": "71bbfd6a31ceb58d34b1dfcf52eec7baadb16579",
+    "path": "handoff/f-common-endoflife-finalization-20261121/Annual.csv",
+    "size_bytes": 6775129,
+    "sha256": "1754500818d58de9b075106cb1185322dc5c961a3438dbcfa0a2883917d8ba79",
+    "match": true,
+    "retrieval": "git fetch fixed commit/git show"
+  },
+  {
+    "commit": "71bbfd6a31ceb58d34b1dfcf52eec7baadb16579",
+    "path": "handoff/f-common-endoflife-finalization-20261121/Common_ON_F_SQ_Comparison.csv",
+    "size_bytes": 36416,
+    "sha256": "6f60adba4f6eeaabe39996f48086fbea834d1f362cdfb7595cae899bb02e6c58",
+    "match": true,
+    "retrieval": "git fetch fixed commit/git show"
+  },
+  {
+    "commit": "71bbfd6a31ceb58d34b1dfcf52eec7baadb16579",
+    "path": "handoff/f-common-endoflife-finalization-20261121/Comparison.csv",
+    "size_bytes": 1248763,
+    "sha256": "9972f1d7ee3eef037a6da27425a18ee275904c803ad6e713cb845138ef314e8f",
+    "match": true,
+    "retrieval": "git fetch fixed commit/git show"
+  },
+  {
+    "commit": "71bbfd6a31ceb58d34b1dfcf52eec7baadb16579",
+    "path": "handoff/f-common-endoflife-finalization-20261121/SQ_Common_Annual.csv",
+    "size_bytes": 96901,
+    "sha256": "b31b82e455257b178db6b274f87fed614ca6d0ba2dddab536b97296cb902e389",
+    "match": true,
+    "retrieval": "git fetch fixed commit/git show"
+  },
+  {
+    "commit": "71bbfd6a31ceb58d34b1dfcf52eec7baadb16579",
+    "path": "handoff/f-statusquo-provisional-20261115/SPE_F_Sonzei_V02_Fixed_DRAFT_20261115.py",
+    "size_bytes": 31779,
+    "sha256": "5e8f0ede81961301a9dec9274163e231afd4ddd48ed778b89434f6048b83ed95",
+    "match": true,
+    "retrieval": "git fetch fixed commit/git show"
+  },
+  {
+    "commit": "71bbfd6a31ceb58d34b1dfcf52eec7baadb16579",
+    "path": "handoff/f-statusquo-provisional-20261115/SPE_F_StatusQuo_Annual_Comparison_DRAFT_20261115.csv",
+    "size_bytes": 127965,
+    "sha256": "e424d159ce5aa1a586e317c136c89118143203438e972f35d02a17ee544a59ca",
+    "match": true,
+    "retrieval": "git fetch fixed commit/git show"
+  },
+  {
+    "commit": "71bbfd6a31ceb58d34b1dfcf52eec7baadb16579",
+    "path": "handoff/f-statusquo-provisional-20261115/SPE_StatusQuo_Implementation_Run_Report_DRAFT_20261115.md",
+    "size_bytes": 14954,
+    "sha256": "49282fa0cd6d266316875b604f0f77734ac1244f3ac30d9dfc3f57b542fb09a2",
+    "match": true,
+    "retrieval": "git fetch fixed commit/git show"
+  },
+  {
+    "commit": "71bbfd6a31ceb58d34b1dfcf52eec7baadb16579",
+    "path": "handoff/f-statusquo-provisional-20261115/SPE_StatusQuo_Provisional_Inputs_DRAFT_20261115.json",
+    "size_bytes": 259844,
+    "sha256": "caa34a7e177e462213e15d398a629cf11626637d4209a8d248253c69226415f8",
+    "match": true,
+    "retrieval": "git fetch fixed commit/git show"
+  },
+  {
+    "commit": "71bbfd6a31ceb58d34b1dfcf52eec7baadb16579",
+    "path": "handoff/f-statusquo-provisional-20261115/SPE_StatusQuo_Provisional_Model_DRAFT_20261115.py",
+    "size_bytes": 28367,
+    "sha256": "a2ab04e2701900a97feffc681ca434de3bdcc39cc45da82b38017366256c2ee9",
+    "match": true,
+    "retrieval": "git fetch fixed commit/git show"
+  },
+  {
+    "commit": "71bbfd6a31ceb58d34b1dfcf52eec7baadb16579",
+    "path": "policies/StatusQuo.md",
+    "size_bytes": 8686,
+    "sha256": "eb5a95df122292465fc79c68a12b9e7c6f8c0e0f97f367eb28ed0b27f6264e30",
+    "match": true,
+    "retrieval": "git fetch fixed commit/git show"
+  },
+  {
+    "commit": "71bbfd6a31ceb58d34b1dfcf52eec7baadb16579",
+    "path": "handoff/chatgpt-statusquo-common-macro-limited-diagnostic-request-20261123/SPE_Work_StatusQuo_Common_Macro_Deflator_Risk_Baseline_Diagnostic_Request_20261123.md",
+    "size_bytes": 10769,
+    "sha256": "ee0cc7546aaad1923765e41b3d078dd8ae2b1c87c0f4723b03574aadea1cc5de",
+    "match": true
+  },
+  {
+    "commit": "3c77eafc2073fdaba4c129164817d2f57c9421b9",
+    "path": "handoff/claude-n3-model-draft-20261121/SPE_N3_Medical_On_CommonSQ_Draft_DRAFT_20261121.py",
+    "size_bytes": 12405,
+    "sha256": "b6cd8413c68967ac413e43342e44804b0e416137c2a80e579772a54bb41b7387",
+    "match": true,
+    "retrieval": "fixed git object extracted temporarily for unchanged adapter checks"
+  }
+]

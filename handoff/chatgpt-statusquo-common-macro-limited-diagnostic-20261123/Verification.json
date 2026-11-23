@@ -1,0 +1,25 @@
+{
+  "status": "PASS_LIMITED_COMMON_MACRO_DIAGNOSTICS",
+  "executed_paths": 8,
+  "executed_annual_rows": 240,
+  "reused_F_fixed_reference_rows": 30,
+  "delivered_annual_rows": 270,
+  "limited_new_counterfactuals": 3,
+  "checks": 2199,
+  "failed": 0,
+  "failures": [],
+  "source_files_checked": 24,
+  "prior_PASS_reused": [
+    436,
+    13928,
+    8058,
+    15590
+  ],
+  "SQ_originals_or_common_engine_changed": false,
+  "risk_strengths_or_recovery_recalibrated": false,
+  "policy_adopted": false,
+  "canonical_baseline_selected": false,
+  "primary_current_SQ2055_real": 528.9623363331808,
+  "primary_current_SQ2055_nominal": 1023.3299808906729,
+  "full_F_N3_recalculation": false
+}

@@ -1,0 +1,139 @@
+{
+  "status": "PASS",
+  "executed_paths": 8,
+  "executed_rows": 240,
+  "files": [
+    {
+      "path": "Common_Trace_BASE_REPLAY.json",
+      "size_bytes": 60423,
+      "sha256": "f571c808cdecb1e6c3ab9ae38e7fbab5fc5e564b1399ce4ca00d46c21b7e5d75",
+      "match": true
+    },
+    {
+      "path": "Common_Trace_INITIAL_OIL_EXISTING_FLAG.json",
+      "size_bytes": 60386,
+      "sha256": "4fe2a8d90a2737f7e2dfdcf45a68ccc370892c26ada96e6fc72dea9772a87d30",
+      "match": true
+    },
+    {
+      "path": "Common_Trace_MULTIPLICATIVE_NOMINAL.json",
+      "size_bytes": 60450,
+      "sha256": "78423f632f76f64823939a9716eac4a11a9f0aa811f98263406f597435a7bf67",
+      "match": true
+    },
+    {
+      "path": "Common_Trace_NO_PRICE_PRESSURE.json",
+      "size_bytes": 60459,
+      "sha256": "1fe3217bec07bf2db496d9dcfcce629d00227758713d3400c43e4f2653dda5c5",
+      "match": true
+    },
+    {
+      "path": "F_N3_SQ_Denominator_Comparability_Check.csv",
+      "size_bytes": 16666,
+      "sha256": "b89ffab79973b27d1fcf3a5abd68c8fbca196a43929cb337223904fcb0a92268",
+      "match": true
+    },
+    {
+      "path": "Input_Source_Receipts.json",
+      "size_bytes": 8100,
+      "sha256": "71008fd4bde7a32ac911f21480e4d2630194152f451270f4ad6513f461c0be1a",
+      "match": true
+    },
+    {
+      "path": "Resolved_Common_Runtime_BASE_REPLAY.py.txt",
+      "size_bytes": 65347,
+      "sha256": "1760b01c5f4d65db5a10233413e2191d9f387a604c08a19c51badbc324465ed6",
+      "match": true
+    },
+    {
+      "path": "Resolved_Common_Runtime_INITIAL_OIL_EXISTING_FLAG.py.txt",
+      "size_bytes": 65378,
+      "sha256": "8df18d4ad48800e868e77ff74aaffa5267aabd0af9f5779d1045c7cc376cd951",
+      "match": true
+    },
+    {
+      "path": "Resolved_Common_Runtime_MULTIPLICATIVE_NOMINAL.py.txt",
+      "size_bytes": 65353,
+      "sha256": "62f3ff1f8bf59995beb586cfed1f64cb09313421e80a36c33fbb2b542289012d",
+      "match": true
+    },
+    {
+      "path": "Resolved_Common_Runtime_NO_PRICE_PRESSURE.py.txt",
+      "size_bytes": 65376,
+      "sha256": "8b190852260a7990be4fa6bd201f709d6219dee9cbaf8fe28c6e57c529c24ce7",
+      "match": true
+    },
+    {
+      "path": "Reused_SQ_Growth_Contribution_Summary.json",
+      "size_bytes": 7014,
+      "sha256": "4edfe77f86ed4d191077ee2ad95c38d776a642262072921443fdaa7af9aa8242",
+      "match": true
+    },
+    {
+      "path": "SPE_StatusQuo_Common_Macro_Limited_Diagnostic_Report_DRAFT_20261123.md",
+      "size_bytes": 8545,
+      "sha256": "f1bec7dc22d75f4c3b146dfd4a583247878bc5d0e84a2e7bbe084b341b92528f",
+      "match": true
+    },
+    {
+      "path": "SQ_Annual_Real_Nominal_Deflator_2026_2055.csv",
+      "size_bytes": 151539,
+      "sha256": "ecc0670ab3326dbdc3dcc0e0a07b8c781e721c4bd3e9d51a532f2809d4c8b16d",
+      "match": true
+    },
+    {
+      "path": "SQ_Baseline_Variant_Provenance_And_Comparability.csv",
+      "size_bytes": 5993,
+      "sha256": "6c1b2749dd72f8183ee23b0b496622ba310b802844d6fcd19b5156e9eaff0bae",
+      "match": true
+    },
+    {
+      "path": "SQ_Findings_And_Next_Executable_Fixes.csv",
+      "size_bytes": 4518,
+      "sha256": "2aac5290730af312aba4c169728242666e352a4c030a8739add237dea5588272",
+      "match": true
+    },
+    {
+      "path": "SQ_Limited_Diagnostic_Case_Definitions.csv",
+      "size_bytes": 1477,
+      "sha256": "50095a98d11ee1ca7c5246d491d9d5cfbd03e171be952b13b2d658da5c90d1bb",
+      "match": true
+    },
+    {
+      "path": "SQ_Limited_Diagnostic_Counterfactuals_2026_2055.csv",
+      "size_bytes": 34873,
+      "sha256": "55f19cb4f0409a73534a346d81373e5069ac76a2f1e9e0f033b8061f261bee16",
+      "match": true
+    },
+    {
+      "path": "SQ_Real_GDP_Transmission_Decomposition.csv",
+      "size_bytes": 73958,
+      "sha256": "94c2b6adc30f89a502d3677dff5786872cfe1ab004bf6aa37a93dc936887d7ca",
+      "match": true
+    },
+    {
+      "path": "SQ_Risk_Event_Application_And_Overlap.csv",
+      "size_bytes": 66668,
+      "sha256": "188f9205881ba3f69033e652c2fba9de32ee6f7a9bf511a61d1cdd201eb32502",
+      "match": true
+    },
+    {
+      "path": "SQ_Variant_Key_Years.csv",
+      "size_bytes": 6281,
+      "sha256": "f83891aa685d300f470709459786f59f8cf4761c7cbc96db5519fb5a7ddd276e",
+      "match": true
+    },
+    {
+      "path": "Verification.json",
+      "size_bytes": 681,
+      "sha256": "f8370c76a843b21256eefb8b96fd6fd196700980a7afa4adaf113806611140d0",
+      "match": true
+    },
+    {
+      "path": "Execution.log",
+      "size_bytes": 1182,
+      "sha256": "85a336cd04b682a69ef715b38d6c1733d798d2183f9e3e51254275821588ad8a",
+      "match": true
+    }
+  ]
+}

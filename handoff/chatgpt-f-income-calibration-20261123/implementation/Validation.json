@@ -1,0 +1,51 @@
+{
+  "checks": 39510,
+  "failures": 0,
+  "groups": {
+    "year_and_trigger": 30,
+    "cash_benefit_bridge": 17400,
+    "in_kind_bridge": 17400,
+    "wage_pool_conserved": 150,
+    "household_receipt_balance": 150,
+    "program_balance": 450,
+    "cash_incidence_balance": 150,
+    "prior_reproduction": 540,
+    "eligibility_bridge": 450,
+    "income_profile_pool_reconciliation": 150,
+    "observed_wage_component_bounded": 2610,
+    "burden_only_toggle": 30
+  },
+  "independent_process_byte_matches": [
+    {
+      "path": "Annual.csv",
+      "size": 84092,
+      "sha256": "0c8cdc955ee6d3e48b6d95cc4909a66cfa3ebda42369207213b980541fecfcda"
+    },
+    {
+      "path": "Distribution_FIXED_F.csv",
+      "size": 113797,
+      "sha256": "b3022925a5db6719b7a2cbc120cb3886e2628891d5cc4dea6dad8d3eada1595f"
+    },
+    {
+      "path": "Distribution_OBSERVED_SHARE.csv",
+      "size": 125560,
+      "sha256": "882a70e2dbedda4802f479d4dbf0fcae79abad0cfce853ca90f6d2a1c2df5239"
+    },
+    {
+      "path": "Distribution_OBSERVED_SHARE_BURDEN.csv",
+      "size": 138259,
+      "sha256": "5812ab9ac67e392154952f199fff15f9b158fb34b4f1715c36a24c172309eeaa"
+    },
+    {
+      "path": "Distribution_OBSERVED_THRESHOLD.csv",
+      "size": 129382,
+      "sha256": "5cd8de3626de76a5e42c67ff98b1b3b2b84c7a27fea1ebc1c4277a740289068f"
+    },
+    {
+      "path": "Distribution_PRIOR_GROSS.csv",
+      "size": 122666,
+      "sha256": "bd75591e9151bf4491ed2aecac1e453fbf8beb5c07c4587f413d1ca55d9b7859"
+    }
+  ],
+  "total_new_checks": 39516
+}

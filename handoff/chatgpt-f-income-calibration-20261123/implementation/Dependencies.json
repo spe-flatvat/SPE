@@ -1,0 +1,38 @@
+[
+  {
+    "ref": "cb27577f359211310202c0af022a617a0b3f047e",
+    "path": "handoff/chatgpt-f-middle-income-financing-20261123/middle-income/Run.py",
+    "size": 7044,
+    "sha256": "644acb2918cbdc98b7f244b7cd54518bf49c825b2247d00105ed8f8007059a6b"
+  },
+  {
+    "ref": "cb27577f359211310202c0af022a617a0b3f047e",
+    "path": "handoff/chatgpt-f-middle-income-financing-20261123/middle-income/Annual.csv",
+    "size": 40903,
+    "sha256": "5a92f41ce941efbbb980f282324883178d18dd9ae2de08eb49ced3f894113429"
+  },
+  {
+    "ref": "cb27577f359211310202c0af022a617a0b3f047e",
+    "path": "handoff/chatgpt-f-middle-income-financing-20261123/middle-income/Dependencies.json",
+    "size": 1906,
+    "sha256": "c02a163804cde63f271c235fdc56066eb5a345cc6795a533570d77e2d65d5034"
+  },
+  {
+    "ref": "2e91eb895a0a09fa930a74417465ceebcfb1a4dc",
+    "path": "handoff/chatgpt-f-income-calibration-20261123/calibration-evidence/Run.py",
+    "size": 1074,
+    "sha256": "bc89ef1ba3443a79f5d418dfb44ce817d45d8a924d151e4d86b471ee3acab4af"
+  },
+  {
+    "ref": "2e91eb895a0a09fa930a74417465ceebcfb1a4dc",
+    "path": "handoff/chatgpt-f-income-calibration-20261123/calibration-evidence/Wage_Shares.csv",
+    "size": 338,
+    "sha256": "a805b6df78a4b99bfe1e9ca353f5c180a0ac93b61f4e17aaf4a501cd729cfc07"
+  },
+  {
+    "ref": "2e91eb895a0a09fa930a74417465ceebcfb1a4dc",
+    "path": "handoff/chatgpt-f-income-calibration-20261123/calibration-evidence/Inputs.json",
+    "size": 865,
+    "sha256": "be6088ecc337d5bec90d33e13016bf3c1afeb33c393a82a9efe995ad8efdd7f7"
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "checks": 46357,
+  "failures": 0,
+  "groups": {
+    "prior_150_rows_byte_match": 1,
+    "C_no_eligible_capacity": 1,
+    "A_exact_boundary": 5,
+    "year": 30,
+    "fixed_funding_partition": 90,
+    "fixed_f_budget": 30,
+    "fixed_contribution_backfill": 30,
+    "original_A_taper": 3480,
+    "original_deduction_tax": 3480,
+    "original_deduction_local": 3480,
+    "original_B_utilization": 3480,
+    "original_C_consumption_weights": 3480,
+    "prior_case_median": 150,
+    "prior_case_rank": 150,
+    "prior_case_gini": 150,
+    "cash_identity": 6960,
+    "A_cap_and_threshold": 6960,
+    "C_and_B_bounds": 6960,
+    "cell_premium_balance": 6960,
+    "C_budget_closed": 60,
+    "wage_pool_closed": 60,
+    "marginal_payees_closed": 60,
+    "premium_payee_closed": 60,
+    "C_reallocation_closed": 60,
+    "threshold_entry_exit": 180
+  }
+}

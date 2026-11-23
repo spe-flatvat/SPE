@@ -1,0 +1,24 @@
+{
+  "checks": 36309,
+  "failures": 0,
+  "groups": {
+    "runtime_bytes": 2,
+    "year": 60,
+    "fixed_F": 240,
+    "no_gini_trigger": 60,
+    "distinct_cells": 60,
+    "positive_weights": 6960,
+    "baseline_cash": 6960,
+    "cash_policy": 6960,
+    "premium": 6960,
+    "in_kind_separate": 6960,
+    "A_B_C_reconciliation": 240,
+    "gini_range": 180,
+    "same_distribution_gini": 180,
+    "median_lower_weight": 240,
+    "median_upper_weight": 240,
+    "zero_benefit_gini": 2,
+    "zero_benefit_median": 2,
+    "CSV_bytes": 3
+  }
+}

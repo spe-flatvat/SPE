@@ -1,0 +1,30 @@
+[
+  {
+    "local": "prior/Runtime_Sources.json",
+    "ref": "d8136f93977a110769529852afb095aff86d0e65",
+    "path": "handoff/chatgpt-f-hyper-depreciation-retained-earnings-20261123/Runtime_Sources.json",
+    "size": 9714,
+    "sha256": "de0f98af9f9478a5ac9b33d632948bbe457d11ef3975c853e9970118872bc940"
+  },
+  {
+    "local": "retrieved/Legacy_Annual.csv",
+    "ref": "8659df8c70e3d107941dca768a18a250674554e2",
+    "path": "handoff/chatgpt-f-corporate-assumption-boundary-20261123/Legacy_Annual.csv",
+    "size": 35685,
+    "sha256": "7d63097327e1c7c4a8c8117ad9862d78e7ba29dfe7708afca2011cbd408b3614"
+  },
+  {
+    "local": "runtime/policies/FreedomPolicies.md",
+    "ref": "8659df8c70e3d107941dca768a18a250674554e2",
+    "path": "policies/FreedomPolicies.md",
+    "size": 9241,
+    "sha256": "0dedd2c1126613c30a7d96732d226cc787f6597437137424845d64d041db0204"
+  },
+  {
+    "local": "runtime/policies/FreedomPolicies_Annex.md",
+    "ref": "8659df8c70e3d107941dca768a18a250674554e2",
+    "path": "policies/FreedomPolicies_Annex.md",
+    "size": 12319,
+    "sha256": "ee62de32582a0f6d559029e7e9810b161c6a975ff22b498493d9ca960ca29e83"
+  }
+]

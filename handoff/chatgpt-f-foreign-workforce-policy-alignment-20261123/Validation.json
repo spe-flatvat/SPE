@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "new_checks": 6390,
+  "failed": 0,
+  "paths": 12,
+  "annual_rows": 360,
+  "retained_common_cases": 6,
+  "diagnostic_common_case": "ANNUAL_FINE_WEEK_HOURS",
+  "diagnostic_paths": 6,
+  "formal_F_definition_adopted": false,
+  "RP023_M1925": "HOLD",
+  "RP024": "PENDING"
+}

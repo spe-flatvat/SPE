@@ -1,0 +1,86 @@
+[
+  {
+    "branch": "F_RETAINED",
+    "common_case": "BASE_SQ_UNCHANGED",
+    "rows": 30,
+    "first_cap_year": null,
+    "first_relaxation_year": null
+  },
+  {
+    "branch": "F_RETAINED",
+    "common_case": "PREVIOUS_FINE_AGE_HOURS",
+    "rows": 30,
+    "first_cap_year": null,
+    "first_relaxation_year": null
+  },
+  {
+    "branch": "F_RETAINED",
+    "common_case": "ANNUAL_ALIGNED_FULL_RATES",
+    "rows": 30,
+    "first_cap_year": null,
+    "first_relaxation_year": null
+  },
+  {
+    "branch": "F_RETAINED",
+    "common_case": "OCTOBER_NEAR_FULL_RATES",
+    "rows": 30,
+    "first_cap_year": null,
+    "first_relaxation_year": null
+  },
+  {
+    "branch": "F_RETAINED",
+    "common_case": "ANNUAL_FINE_WEEK_HOURS",
+    "rows": 30,
+    "first_cap_year": null,
+    "first_relaxation_year": null
+  },
+  {
+    "branch": "F_RETAINED",
+    "common_case": "ANNUAL_MONTH_HOURS_PROFILE",
+    "rows": 30,
+    "first_cap_year": null,
+    "first_relaxation_year": null
+  },
+  {
+    "branch": "D_GDP_VA_2035",
+    "common_case": "ANNUAL_FINE_WEEK_HOURS",
+    "rows": 30,
+    "first_cap_year": 2030,
+    "first_relaxation_year": null
+  },
+  {
+    "branch": "D_GDP_VA_ANNUAL",
+    "common_case": "ANNUAL_FINE_WEEK_HOURS",
+    "rows": 30,
+    "first_cap_year": 2030,
+    "first_relaxation_year": null
+  },
+  {
+    "branch": "D_GDP_LABOR_2035",
+    "common_case": "ANNUAL_FINE_WEEK_HOURS",
+    "rows": 30,
+    "first_cap_year": 2030,
+    "first_relaxation_year": null
+  },
+  {
+    "branch": "D_GDP_PROGRAM_2035",
+    "common_case": "ANNUAL_FINE_WEEK_HOURS",
+    "rows": 30,
+    "first_cap_year": null,
+    "first_relaxation_year": null
+  },
+  {
+    "branch": "D_POP3_2035",
+    "common_case": "ANNUAL_FINE_WEEK_HOURS",
+    "rows": 30,
+    "first_cap_year": 2030,
+    "first_relaxation_year": null
+  },
+  {
+    "branch": "D_POP5_2035",
+    "common_case": "ANNUAL_FINE_WEEK_HOURS",
+    "rows": 30,
+    "first_cap_year": 2033,
+    "first_relaxation_year": null
+  }
+]

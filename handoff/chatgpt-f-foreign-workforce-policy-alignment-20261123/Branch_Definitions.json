@@ -1,0 +1,34 @@
+{
+  "F_RETAINED": {
+    "mode": "NONE",
+    "timing": "SOURCE_2035",
+    "adopted": false,
+    "status": "UNCHANGED_CANDIDATE; definitions unresolved"
+  },
+  "D_GDP_VA_2035": {
+    "mode": "GDP_VA",
+    "timing": "SOURCE_2035"
+  },
+  "D_GDP_VA_ANNUAL": {
+    "mode": "GDP_VA",
+    "timing": "ANNUAL_LAG"
+  },
+  "D_GDP_LABOR_2035": {
+    "mode": "GDP_LABOR",
+    "timing": "SOURCE_2035"
+  },
+  "D_GDP_PROGRAM_2035": {
+    "mode": "GDP_PROGRAM",
+    "timing": "SOURCE_2035"
+  },
+  "D_POP3_2035": {
+    "mode": "POP_CEILING",
+    "ratio": 0.03,
+    "timing": "SOURCE_2035"
+  },
+  "D_POP5_2035": {
+    "mode": "POP_CEILING",
+    "ratio": 0.05,
+    "timing": "SOURCE_2035"
+  }
+}

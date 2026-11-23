@@ -1,0 +1,29 @@
+{
+  "checks": 1440,
+  "failures": 0,
+  "groups": {
+    "year_join": 30,
+    "fixed_stage3_macro": 150,
+    "fixed_F": 120,
+    "fixed_reference_only": 60,
+    "national_NA": 270,
+    "gates": 30,
+    "fixed_stage3_overlap": 720,
+    "median_closed": 30,
+    "fiscal_closed": 30
+  },
+  "independent_process_byte_checks": 2,
+  "independent_process_matches": [
+    {
+      "path": "Annual.csv",
+      "size": 54394,
+      "sha256": "363b5df451b8d725e910c14601a70dc0de083fbd2ba37ea96a243623c089abda"
+    },
+    {
+      "path": "F_Actual_Annual.json",
+      "size": 525435,
+      "sha256": "2bd036ef302b6048c018c92862dee243298e1ceaaaa12a916afa6951ddbf4cbd"
+    }
+  ],
+  "total_new_checks": 1442
+}

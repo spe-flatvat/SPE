@@ -1,0 +1,182 @@
+[
+  {
+    "path": "handoff/chatgpt-f-distribution-fiscal-integration-20261123/stage1-distribution/Annual.csv",
+    "ref": "0d5fb92edbb3e484c4744efd8f614b4fece8cf10",
+    "size": 9541,
+    "sha256": "129243f532e6f72e6e9d593c85840253bc93173cbcb6f1a194faa70848375397"
+  },
+  {
+    "path": "handoff/chatgpt-f-distribution-fiscal-integration-20261123/stage1-distribution/Common.py",
+    "ref": "0d5fb92edbb3e484c4744efd8f614b4fece8cf10",
+    "size": 1356,
+    "sha256": "b66f9877e3f410e0650512ebe89e0d02039d3bc2f9f0d1868c3b40228fbec310"
+  },
+  {
+    "path": "handoff/chatgpt-f-distribution-fiscal-integration-20261123/stage1-distribution/Comparison.csv",
+    "ref": "0d5fb92edbb3e484c4744efd8f614b4fece8cf10",
+    "size": 1789,
+    "sha256": "a5824fbe234cbef77c32c5696985cf3705983ee82269fb5179f9de3e4e0b4930"
+  },
+  {
+    "path": "handoff/chatgpt-f-distribution-fiscal-integration-20261123/stage1-distribution/Custody.json",
+    "ref": "0d5fb92edbb3e484c4744efd8f614b4fece8cf10",
+    "size": 2383,
+    "sha256": "d12cbd49f3618e9e16a65fe584537576a1544319d0cb008949e582b45427ac78"
+  },
+  {
+    "path": "handoff/chatgpt-f-distribution-fiscal-integration-20261123/stage1-distribution/Dependencies.json",
+    "ref": "0d5fb92edbb3e484c4744efd8f614b4fece8cf10",
+    "size": 1136,
+    "sha256": "0312b08798e8faa2aa876e33a55d22e582dd19489a113fb50f117503ce561de4"
+  },
+  {
+    "path": "handoff/chatgpt-f-distribution-fiscal-integration-20261123/stage1-distribution/Distribution.csv",
+    "ref": "0d5fb92edbb3e484c4744efd8f614b4fece8cf10",
+    "size": 61817,
+    "sha256": "8e88ca12b325db6c179dee7394732dde1ee32b4ef816f785fccb2cc0a5803d74"
+  },
+  {
+    "path": "handoff/chatgpt-f-distribution-fiscal-integration-20261123/stage1-distribution/Manifest.json",
+    "ref": "0d5fb92edbb3e484c4744efd8f614b4fece8cf10",
+    "size": 1331,
+    "sha256": "607ab4af12518a2a6f6e520ce38ce9c14f2cc3e8b896cc7ca20ca0f53397f016"
+  },
+  {
+    "path": "handoff/chatgpt-f-distribution-fiscal-integration-20261123/stage1-distribution/Replay.py",
+    "ref": "0d5fb92edbb3e484c4744efd8f614b4fece8cf10",
+    "size": 2533,
+    "sha256": "f15a77eaad0a2fc4a960dc99750bd045bf150a7731a1753472b8ef8e1d85e2dc"
+  },
+  {
+    "path": "handoff/chatgpt-f-distribution-fiscal-integration-20261123/stage1-distribution/Report.md",
+    "ref": "0d5fb92edbb3e484c4744efd8f614b4fece8cf10",
+    "size": 2061,
+    "sha256": "b183594079fbfd0b7d57ad69f99dfc94bb87d5bb700eaa81b49b59cccaec5f01"
+  },
+  {
+    "path": "handoff/chatgpt-f-distribution-fiscal-integration-20261123/stage1-distribution/Run.py",
+    "ref": "0d5fb92edbb3e484c4744efd8f614b4fece8cf10",
+    "size": 6723,
+    "sha256": "4e2f2e63cf97faa2f9d2b7a67bd369e842f6ac1513fcf5281cd25b98346700b4"
+  },
+  {
+    "path": "handoff/chatgpt-f-distribution-fiscal-integration-20261123/stage1-distribution/Validation.json",
+    "ref": "0d5fb92edbb3e484c4744efd8f614b4fece8cf10",
+    "size": 536,
+    "sha256": "4d2f242f9617221cc668ff749267d965e8d4fabe24403d1c299be993365dc4a0"
+  },
+  {
+    "path": "handoff/chatgpt-f-distribution-fiscal-integration-20261123/stage2-fiscal/Annual.csv",
+    "ref": "9e8267e8ec29bbc559694a434ce61b013f1502a0",
+    "size": 14159,
+    "sha256": "1dd901462a8329912662c3ef68823fdfb13fc3151a7ac7372fe9d17e5cd2c6f2"
+  },
+  {
+    "path": "handoff/chatgpt-f-distribution-fiscal-integration-20261123/stage2-fiscal/Comparison.csv",
+    "ref": "9e8267e8ec29bbc559694a434ce61b013f1502a0",
+    "size": 2376,
+    "sha256": "594226f9238735ca48961e1a129afc1a9447638011378b64a67801238e643d64"
+  },
+  {
+    "path": "handoff/chatgpt-f-distribution-fiscal-integration-20261123/stage2-fiscal/Custody.json",
+    "ref": "9e8267e8ec29bbc559694a434ce61b013f1502a0",
+    "size": 1744,
+    "sha256": "bbd888f801b1ee269e7926fbbf8cce2bb605c0916ab99f403d65ed1505251875"
+  },
+  {
+    "path": "handoff/chatgpt-f-distribution-fiscal-integration-20261123/stage2-fiscal/Dependencies.json",
+    "ref": "9e8267e8ec29bbc559694a434ce61b013f1502a0",
+    "size": 1762,
+    "sha256": "fc47a1c5c82fd0db2c5806b56eb75bfdcbfd13127d4417498cba51ebb7b0021a"
+  },
+  {
+    "path": "handoff/chatgpt-f-distribution-fiscal-integration-20261123/stage2-fiscal/Manifest.json",
+    "ref": "9e8267e8ec29bbc559694a434ce61b013f1502a0",
+    "size": 895,
+    "sha256": "c3dfab6e2d4ed43434278833c8691015e1acc3c13e36ca0c1575c89cd2224790"
+  },
+  {
+    "path": "handoff/chatgpt-f-distribution-fiscal-integration-20261123/stage2-fiscal/Report.md",
+    "ref": "9e8267e8ec29bbc559694a434ce61b013f1502a0",
+    "size": 2405,
+    "sha256": "af28b9bb9955c8bbfde58bb43731fcf949e9276a08d000723739385c6fb5aa00"
+  },
+  {
+    "path": "handoff/chatgpt-f-distribution-fiscal-integration-20261123/stage2-fiscal/Run.py",
+    "ref": "9e8267e8ec29bbc559694a434ce61b013f1502a0",
+    "size": 6768,
+    "sha256": "79de89197f05778c3c658fe1286615b99f101f4218003012ad8888302b2c054d"
+  },
+  {
+    "path": "handoff/chatgpt-f-distribution-fiscal-integration-20261123/stage2-fiscal/Validation.json",
+    "ref": "9e8267e8ec29bbc559694a434ce61b013f1502a0",
+    "size": 593,
+    "sha256": "cf9794bc1bff37928cb84aa6962a75ba5491f2c68452e98e111fc3de9f57ba4f"
+  },
+  {
+    "path": "handoff/chatgpt-f-distribution-fiscal-integration-20261123/stage3-integrated/Annual.csv",
+    "ref": "bbd1b40e8c4c21d9279134cb99385e098ed55d02",
+    "size": 32807,
+    "sha256": "149d6e1be2da32b9bd50c79079bc73b933377b55f459479271fa37d51e74f2f7"
+  },
+  {
+    "path": "handoff/chatgpt-f-distribution-fiscal-integration-20261123/stage3-integrated/Comparison.csv",
+    "ref": "bbd1b40e8c4c21d9279134cb99385e098ed55d02",
+    "size": 3911,
+    "sha256": "b68cf5e52dd253ceb07c8d0650a1579289078e692133ffa88259cf9593627d8e"
+  },
+  {
+    "path": "handoff/chatgpt-f-distribution-fiscal-integration-20261123/stage3-integrated/Custody.json",
+    "ref": "bbd1b40e8c4c21d9279134cb99385e098ed55d02",
+    "size": 1956,
+    "sha256": "9a896d19c66d2e3acbb0c9e748891d1ef63c204187fa9344351e97a03b95c640"
+  },
+  {
+    "path": "handoff/chatgpt-f-distribution-fiscal-integration-20261123/stage3-integrated/Dependencies.json",
+    "ref": "bbd1b40e8c4c21d9279134cb99385e098ed55d02",
+    "size": 2983,
+    "sha256": "c93251fa3ac27adb40f798d9b26ea3286e96d998af3db951b7f5ff1cc98bb3af"
+  },
+  {
+    "path": "handoff/chatgpt-f-distribution-fiscal-integration-20261123/stage3-integrated/Manifest.json",
+    "ref": "bbd1b40e8c4c21d9279134cb99385e098ed55d02",
+    "size": 1039,
+    "sha256": "dfe20063bc6bc9a78f6ef18d9e86495948faab171da4cc24e47f5569d0dc4331"
+  },
+  {
+    "path": "handoff/chatgpt-f-distribution-fiscal-integration-20261123/stage3-integrated/Report.md",
+    "ref": "bbd1b40e8c4c21d9279134cb99385e098ed55d02",
+    "size": 2481,
+    "sha256": "e5b6817c25a08d619e77c5559a7cfa7a5cf91c5ea7efd074fe22e508621c181e"
+  },
+  {
+    "path": "handoff/chatgpt-f-distribution-fiscal-integration-20261123/stage3-integrated/Run.py",
+    "ref": "bbd1b40e8c4c21d9279134cb99385e098ed55d02",
+    "size": 5560,
+    "sha256": "69060a0e1f6744fa1a41a7472389eb35efc8145eb9cbc7627aa5ec47d7f27f46"
+  },
+  {
+    "path": "handoff/chatgpt-f-distribution-fiscal-integration-20261123/stage3-integrated/Targets.csv",
+    "ref": "bbd1b40e8c4c21d9279134cb99385e098ed55d02",
+    "size": 455,
+    "sha256": "b5b56cdc9e47891b1aa120fd3d58a1d459d13c1d2a929641f940d2e5e58611f5"
+  },
+  {
+    "path": "handoff/chatgpt-f-distribution-fiscal-integration-20261123/stage3-integrated/Validation.json",
+    "ref": "bbd1b40e8c4c21d9279134cb99385e098ed55d02",
+    "size": 349,
+    "sha256": "0662d0aec6f8622fdb4149acab83b0357580d2f5e048cf16e80e58829a870984"
+  },
+  {
+    "path": "handoff/chatgpt-f-median-fiscal-residual-20261123/median-attribution/Annual.csv",
+    "ref": "06b4fcb095f2a5041c8ec83c4cc9bd1476dade63",
+    "size": 12965,
+    "sha256": "dabfdfa8595e292ecda27161d403fc8cb49fa3786eab409d0a30510e6ece0f70"
+  },
+  {
+    "path": "handoff/chatgpt-f-median-fiscal-residual-20261123/fiscal-residual/Annual.csv",
+    "ref": "cc375dcc165642e128724dab2d5dbfaf082d2544",
+    "size": 17467,
+    "sha256": "dc6eb402cef1fae32a0e420be919a9c4a29e76776efd8d6df30d92e784e25d54"
+  }
+]

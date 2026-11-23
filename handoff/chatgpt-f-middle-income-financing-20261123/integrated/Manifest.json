@@ -1,0 +1,34 @@
+{
+  "files": [
+    {
+      "path": "Annual.csv",
+      "size": 45423,
+      "sha256": "d9374bd55efbd6cbd1f3e5522817577595bd32bfca1cede85f75d230542815fd"
+    },
+    {
+      "path": "Comparison.csv",
+      "size": 19187,
+      "sha256": "a9ac61f11ec12e2751fff31ad40e44bd1336f5f759b5f43ee3257c9ace55c829"
+    },
+    {
+      "path": "Dependencies.json",
+      "size": 783,
+      "sha256": "1fc0359ed3c43a7cdf8228a5e65737609f3e3f474ca803a14b6fc14c45dab8d2"
+    },
+    {
+      "path": "Report.md",
+      "size": 1986,
+      "sha256": "7859ddf56d37d9b1d732d890f0c6ae3774ad03ddaab7906e1b13cba6b4e9c0f9"
+    },
+    {
+      "path": "Run.py",
+      "size": 3848,
+      "sha256": "4327f6466fc5f60e0ee123befd4b81d547ef2fe253d65a2ddc4358c7e398e03c"
+    },
+    {
+      "path": "Validation.json",
+      "size": 739,
+      "sha256": "c073eaeb810c59efa781571f75a2d05f86fcdcb5b335a2d37f860ca77a7ccee6"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "ref": "5f5443d168c9225b33e7d7c85ae6e7d119054f4a",
+    "path": "handoff/chatgpt-f-median-fiscal-residual-20261123/integrated-comparison/Annual.csv",
+    "size": 54394,
+    "sha256": "363b5df451b8d725e910c14601a70dc0de083fbd2ba37ea96a243623c089abda"
+  },
+  {
+    "ref": "8fab1ad1644ecf86417056ab70114b65c10ac4c8",
+    "path": "handoff/chatgpt-f-middle-income-financing-20261123/middle-income/Annual.csv",
+    "size": 40903,
+    "sha256": "5a92f41ce941efbbb980f282324883178d18dd9ae2de08eb49ced3f894113429"
+  },
+  {
+    "ref": "99464a72da039a5fe56062495de35acc459f1b89",
+    "path": "handoff/chatgpt-f-middle-income-financing-20261123/financing-sensitivity/Annual.csv",
+    "size": 24193,
+    "sha256": "e2b6852bb2b8fb1b3c67da073f53fe82d4e20e709287ba6b0bd5ddb1dc52841b"
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "status": "CUSTODY PASS",
+  "source_commit": "0332824844ad3311528541b41fe7e6da4f56e04e",
+  "repository": "spe-flatvat/SPE",
+  "branch": "work/chatgpt-handoff",
+  "retrieval": "GitHub git fetch by commit; git show",
+  "files": [
+    {
+      "path": "handoff/chatgpt-f-median-fiscal-residual-20261123/integrated-comparison/Annual.csv",
+      "size": 54394,
+      "sha256": "363b5df451b8d725e910c14601a70dc0de083fbd2ba37ea96a243623c089abda",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-f-median-fiscal-residual-20261123/integrated-comparison/Dependencies.json",
+      "size": 8007,
+      "sha256": "14afb9097b89b6436012fc9841decce47fd77c8920556f0ab40b778c5214f8fc",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-f-median-fiscal-residual-20261123/integrated-comparison/Manifest.json",
+      "size": 747,
+      "sha256": "eae5fc02e08ada4a6bdba6a2c90ddcd6457e3f6c2a842cfccf9551e7b9502b6a",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-f-median-fiscal-residual-20261123/integrated-comparison/Report.md",
+      "size": 2136,
+      "sha256": "fd518c1ed6dc6bfc30a473b0dca6f283a6ccfe3f7384be17a4bf979eb486fbe1",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-f-median-fiscal-residual-20261123/integrated-comparison/Run.py",
+      "size": 3136,
+      "sha256": "41bdeb7d27338f59b2aa0c74e5746688cb51d9f87980d36c9ce42d6439fba3a0",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-f-median-fiscal-residual-20261123/integrated-comparison/Validation.json",
+      "size": 692,
+      "sha256": "4ac478351a30bd7d1bee66ca1bfed706a21b708f402a041406ceccc25105b2a5",
+      "match": true
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+ "status": "CUSTODY PASS",
+ "payload_commit": "df55a0a3c48d42a2d7aa6e57bd5332e0b0f4f944",
+ "branch": "work/claude-handoff",
+ "route": "fresh empty bare repo, git fetch --depth=1 by fixed SHA, git archive; compared with the verifier's local source files",
+ "files_verified": 11,
+ "files": [
+  {
+   "path": "handoff/claude-f-sq-n3-common-indicators-verification-20261123/Independent_Key_Years_DRAFT_20261123.csv",
+   "bytes": 4070,
+   "sha256": "c8fb4f6bfba51336b146d9e8e21f73e2433557e4d0978a058375968e4052dd68",
+   "identical_to_local_source": true
+  },
+  {
+   "path": "handoff/claude-f-sq-n3-common-indicators-verification-20261123/Independent_Numeric_Comparison_DRAFT_20261123.csv",
+   "bytes": 419776,
+   "sha256": "ce7e8c9a99484ee8b8ffd5de1f1a836d149c50a079e4d7b06e3bb975639bdb3c",
+   "identical_to_local_source": true
+  },
+  {
+   "path": "handoff/claude-f-sq-n3-common-indicators-verification-20261123/Independent_Recalc_Run_20261123.log",
+   "bytes": 1357,
+   "sha256": "143bcfc8dd3740aa19c6d7893ee78568204b13e86749d9d7ad0bc17470e0cc44",
+   "identical_to_local_source": true
+  },
+  {
+   "path": "handoff/claude-f-sq-n3-common-indicators-verification-20261123/Independent_Summary_DRAFT_20261123.json",
+   "bytes": 1661,
+   "sha256": "c75a34c2f238b2f94f61aabc3416743978523ecc2b5bf494db23dccb8fa46106",
+   "identical_to_local_source": true
+  },
+  {
+   "path": "handoff/claude-f-sq-n3-common-indicators-verification-20261123/Mutation_Detection_Test_20261123.json",
+   "bytes": 806,
+   "sha256": "857b6c7beef4e2095b83bfcbddaf5834d256d985b3249364ce50095ed66b74de",
+   "identical_to_local_source": true
+  },
+  {
+   "path": "handoff/claude-f-sq-n3-common-indicators-verification-20261123/Raw_Proxy_2055_Not_Comparable_Info.csv",
+   "bytes": 781,
+   "sha256": "7bce50fc9550c2dca61b03498b1e04565bdf551ef5937669f2dc7853c1f6b9cc",
+   "identical_to_local_source": true
+  },
+  {
+   "path": "handoff/claude-f-sq-n3-common-indicators-verification-20261123/Report.md",
+   "bytes": 11612,
+   "sha256": "4c6144ccba3170f21284c0c47f4a477666ad5157909629eb0941621bb7fabcea",
+   "identical_to_local_source": true
+  },
+  {
+   "path": "handoff/claude-f-sq-n3-common-indicators-verification-20261123/Rerun_Byte_Comparison_20261123.csv",
+   "bytes": 479,
+   "sha256": "7feb79aae781c941b526a1e1def38e1c9b4e8f52f716160e7134e41e86ead796",
+   "identical_to_local_source": true
+  },
+  {
+   "path": "handoff/claude-f-sq-n3-common-indicators-verification-20261123/SPE_Common_Indicators_Independent_Recalc_DRAFT_20261123.py",
+   "bytes": 30183,
+   "sha256": "80e99d76f3f3bbf1bf58342c09e7264c3b7b4af3ceb851061ee73c4c42cac3a3",
+   "identical_to_local_source": true
+  },
+  {
+   "path": "handoff/claude-f-sq-n3-common-indicators-verification-20261123/Source_Identity_DRAFT_20261123.json",
+   "bytes": 9532,
+   "sha256": "54759661d9009d493cb02ddc5af22466515e18882c4bad585624452483e8bc04",
+   "identical_to_local_source": true
+  },
+  {
+   "path": "handoff/claude-f-sq-n3-common-indicators-verification-20261123/Validation.json",
+   "bytes": 1119,
+   "sha256": "235e2bac9e8503e9574da7a942420cad92cae2164b2b1923b3f7b12e21bffa58",
+   "identical_to_local_source": true
+  }
+ ],
+ "excluded": [
+  "Custody_Verification.json (this receipt, added in the following commit)"
+ ],
+ "receipt_self_verification": "The following receipt commit is fetched into a fresh bare repo and compared with the local receipt"
+}

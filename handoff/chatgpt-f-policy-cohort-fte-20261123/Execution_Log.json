@@ -1,0 +1,38 @@
+[
+  {
+    "case": "BASE_SQ_UNCHANGED",
+    "replay_rows": 30,
+    "changed_rows": 30,
+    "SQ_N3_recalculated": false
+  },
+  {
+    "case": "PREVIOUS_FINE_AGE_HOURS",
+    "replay_rows": 30,
+    "changed_rows": 30,
+    "SQ_N3_recalculated": false
+  },
+  {
+    "case": "ANNUAL_ALIGNED_FULL_RATES",
+    "replay_rows": 30,
+    "changed_rows": 30,
+    "SQ_N3_recalculated": false
+  },
+  {
+    "case": "OCTOBER_NEAR_FULL_RATES",
+    "replay_rows": 30,
+    "changed_rows": 30,
+    "SQ_N3_recalculated": false
+  },
+  {
+    "case": "ANNUAL_FINE_WEEK_HOURS",
+    "replay_rows": 30,
+    "changed_rows": 30,
+    "SQ_N3_recalculated": false
+  },
+  {
+    "case": "ANNUAL_MONTH_HOURS_PROFILE",
+    "replay_rows": 30,
+    "changed_rows": 30,
+    "SQ_N3_recalculated": false
+  }
+]

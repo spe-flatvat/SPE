@@ -1,0 +1,12 @@
+{
+  "new_checks": 3180,
+  "failed": 0,
+  "paths": 12,
+  "executed_year_rows": 360,
+  "comparison_rows": 180,
+  "conditional_elder_FTE_only": true,
+  "full_observed_cohort_FTE": false,
+  "RP023_M1925": "HOLD",
+  "RP024": "PENDING",
+  "formal_acceptance": false
+}

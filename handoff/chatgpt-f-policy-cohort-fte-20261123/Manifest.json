@@ -1,0 +1,183 @@
+{
+  "status": "GENERATED_EXECUTED_VALIDATED; custody separately verified",
+  "request_commit": "99e2e92edc344a441030d503297c1ad3d8fc6b2e",
+  "directory": "handoff/chatgpt-f-policy-cohort-fte-20261123",
+  "file_count": 34,
+  "files": [
+    {
+      "path": "ANNUAL_ALIGNED_FULL_RATES/Annual_Comparison_2026_2055.csv",
+      "size": 24921,
+      "sha256": "8d9d2f06664d8a263c60c473652ca77c47470751c901575b8cea65b2074a0321"
+    },
+    {
+      "path": "ANNUAL_ALIGNED_FULL_RATES/Connection_Inputs.json",
+      "size": 1642,
+      "sha256": "a00c63922b64629c14392e23344c3fe25b82f0b7091110c7a92c67bf2e1baa41"
+    },
+    {
+      "path": "ANNUAL_ALIGNED_FULL_RATES/F_Runtime_Trace.json",
+      "size": 33268,
+      "sha256": "a3463ae379a0788ca772d306e0a3fd52bb96711361f8e10527852b124bcfab99"
+    },
+    {
+      "path": "ANNUAL_FINE_WEEK_HOURS/Annual_Comparison_2026_2055.csv",
+      "size": 24781,
+      "sha256": "6215ce2ba14f6d293afab761a10a9a202d777e3f79675fdbe9c633db580b6ce8"
+    },
+    {
+      "path": "ANNUAL_FINE_WEEK_HOURS/Connection_Inputs.json",
+      "size": 1631,
+      "sha256": "1ca67f17e380531bc28b850f4aca0fbb8f3446f63f07f560fa4d52c0fab136dc"
+    },
+    {
+      "path": "ANNUAL_FINE_WEEK_HOURS/F_Runtime_Trace.json",
+      "size": 33280,
+      "sha256": "b658f6d4df65fcbf0d26397c4333d5ca966b2ded2d4b894291a9998234ea29bb"
+    },
+    {
+      "path": "ANNUAL_MONTH_HOURS_PROFILE/Annual_Comparison_2026_2055.csv",
+      "size": 25102,
+      "sha256": "deb5ac778605440dd7a62a7933977fc3293c9ddbb57fff1f597123f8433f0133"
+    },
+    {
+      "path": "ANNUAL_MONTH_HOURS_PROFILE/Connection_Inputs.json",
+      "size": 1653,
+      "sha256": "014ebe6e59d6c7fe30186a04f1a7951863a881f4d90b70935b06b91ce3bda9fc"
+    },
+    {
+      "path": "ANNUAL_MONTH_HOURS_PROFILE/F_Runtime_Trace.json",
+      "size": 33282,
+      "sha256": "c805e359c977723750d6cb81680a1f9ea8e627c5b34dfff85395cf053d189d63"
+    },
+    {
+      "path": "Annual_Comparison_All_Cases.csv",
+      "size": 143366,
+      "sha256": "f250876f8e4f110fb0d71d456bf859bf46f1e0c122e561598135106290d93022"
+    },
+    {
+      "path": "BASE_SQ_UNCHANGED/Annual_Comparison_2026_2055.csv",
+      "size": 24886,
+      "sha256": "6d2a8955c4c71f622a4f76c20d20ed528105e4ddfa68077edd712907c8d9e7d2"
+    },
+    {
+      "path": "BASE_SQ_UNCHANGED/Connection_Inputs.json",
+      "size": 1705,
+      "sha256": "1c7fc34f827627d422e4447f38efe6a4adde9a74b3c2d3e59acac659b6b80eca"
+    },
+    {
+      "path": "BASE_SQ_UNCHANGED/F_Runtime_Trace.json",
+      "size": 33268,
+      "sha256": "4df29db723655d23a9949d2e26bf0a118da3f734efc74a59bc044cade6a8ef3b"
+    },
+    {
+      "path": "Execution_Log.json",
+      "size": 763,
+      "sha256": "827abd590f33ffe778c49a2eb06526b181d5184ae4318fcb94731f1e4199c39f"
+    },
+    {
+      "path": "Fixed_Source_Expected.json",
+      "size": 9306,
+      "sha256": "f1f560165cc601367dc36b90f76b2a934f7b9b85fe3cbf79851d8552f550f549"
+    },
+    {
+      "path": "Fixed_Source_Receipts.json",
+      "size": 16833,
+      "sha256": "cd825570a00521635fa5b4f5b7fd503abae1268beaec160ff04b6fd38ae75b6e"
+    },
+    {
+      "path": "Key_Years.csv",
+      "size": 32433,
+      "sha256": "9e0876f7ec1d83b406ac38087de65dd05907e3c48aec8aee99797ddbf3714e6e"
+    },
+    {
+      "path": "OCTOBER_NEAR_FULL_RATES/Annual_Comparison_2026_2055.csv",
+      "size": 24870,
+      "sha256": "7e718802b86e978155462951eddff094edde540e1e458916a42a306872e24d6b"
+    },
+    {
+      "path": "OCTOBER_NEAR_FULL_RATES/Connection_Inputs.json",
+      "size": 1644,
+      "sha256": "855c3edb4d72bab94c8979360e543a293cdd768caf5df32b676a00ffdf7111d3"
+    },
+    {
+      "path": "OCTOBER_NEAR_FULL_RATES/F_Runtime_Trace.json",
+      "size": 33259,
+      "sha256": "64f0b41df807e33d494d8888de9a8a6f975f24663d4e7b65b055c1ce9bcda081"
+    },
+    {
+      "path": "PREVIOUS_FINE_AGE_HOURS/Annual_Comparison_2026_2055.csv",
+      "size": 24811,
+      "sha256": "e65dd44b746a33f5234b097dff37da7ede1655f8978fdd9740ef768a83e93f0e"
+    },
+    {
+      "path": "PREVIOUS_FINE_AGE_HOURS/Connection_Inputs.json",
+      "size": 1638,
+      "sha256": "603607201c67c837d2a4ea43ed8cd1b1948c6ae4676d32db1acb119bcf670240"
+    },
+    {
+      "path": "PREVIOUS_FINE_AGE_HOURS/F_Runtime_Trace.json",
+      "size": 33260,
+      "sha256": "860e06966b82ff559f9a767da00073a54cae400665a3e7e45f38dd722485f38e"
+    },
+    {
+      "path": "Pinned_F_Adapter.py",
+      "size": 6449,
+      "sha256": "2f3963e104c4c2f14aa374b2b0b9256c90c8a9ba9b3430289c5cc6d1421d8f1c"
+    },
+    {
+      "path": "Policy_Base_Ledgers.json",
+      "size": 412660,
+      "sha256": "62930ca15c2f040b0629aa59f7c476fb23aab30b5901f192cd20bd27ba9edb3a"
+    },
+    {
+      "path": "Policy_Cohort_Headcount_Hours_FTE_Map.csv",
+      "size": 679969,
+      "sha256": "abd10acd405d800b4295e2db572f27eeaca041d4e5ab4377db67624e4bb51e62"
+    },
+    {
+      "path": "Recalculate.py",
+      "size": 10277,
+      "sha256": "93bc6eacea1a7f8967e7530f90966b285e1b81e64f82b6cd99ba79a6e18b3548"
+    },
+    {
+      "path": "Report.md",
+      "size": 6533,
+      "sha256": "90fe375837d2862640cc7ad29a68451d98390a923c149f31ad59c2ebfabb295a"
+    },
+    {
+      "path": "Reproduction.md",
+      "size": 1716,
+      "sha256": "8742068dd1dd73f9e59f1d8faee8a5fb2c8554348ec38ad801a2eeccc5ea1214"
+    },
+    {
+      "path": "Reproduction_Verification.json",
+      "size": 5403,
+      "sha256": "c06c0af8ca70dfe64e25bf3825706d9dfea9548752ccd62fdcd12a5bcbd8da85"
+    },
+    {
+      "path": "Resolved_F_Cohort_Runtime.py.txt",
+      "size": 64929,
+      "sha256": "baebb59447bfa181e37e10e000645bf57f1ebbb16449ab447af4f27ed511a4ca"
+    },
+    {
+      "path": "Validation.json",
+      "size": 262,
+      "sha256": "f090d243856693bd3e42ba9cd17f33ac7ec91a2fdce03bb1890ca24deef29ffa"
+    },
+    {
+      "path": "Validation_Checks.csv",
+      "size": 222576,
+      "sha256": "fae32e201bf0b5922ce7ae7ef5fd8104c0710d0d1dfd71e7a68014a86ff04651"
+    },
+    {
+      "path": "Verify_Reproduction.py",
+      "size": 926,
+      "sha256": "f5f243bd109c383899250116bf36925e9fdabc472e553f5c587a94a6ae5e6b17"
+    }
+  ],
+  "exclusions": [
+    "Manifest self-hash; custody receipt recorded separately to avoid recursive hash/commit"
+  ],
+  "new_checks": 3180,
+  "reproduction_byte_comparisons": 27
+}

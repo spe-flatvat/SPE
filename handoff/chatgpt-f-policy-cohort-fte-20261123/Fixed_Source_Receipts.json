@@ -1,0 +1,353 @@
+[
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/CommonEndOfLife.py",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 10956,
+    "git_blob_sha1": "1456928a795ecb625c5bc257c95d1b19ea998caa",
+    "sha256": "c930a8df539ff676e55180b75cfe899084caa656f738c371aac44ce1f7693fae",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/CommonInterface.py",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 420,
+    "git_blob_sha1": "e7e9bc974cfc133e976377b3849c00af3dae131c",
+    "sha256": "4b56a30806da8bd5f39566a622fac1119e93f0842d40983deafb6dca4c88f4e2",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/Demand.py",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 2544,
+    "git_blob_sha1": "f50c1beb2f9c5ff7a90d0bbd0d83d5930b8a312d",
+    "sha256": "fab0a6c505c9bb5041bfb38ec199617b6c4171891ec4fc49ba90eec2ae05f30d",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/FMedical.py",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 17478,
+    "git_blob_sha1": "86f171044b67cd40a92a294a3b93aeaaeabaceff",
+    "sha256": "b36a21bead583b13c338f31dcd42e90c1e24a2814024024e872e993a9754dd80",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/Inputs.json",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 27093,
+    "git_blob_sha1": "b5e2b373f894117794522eefbc5f7f004bc2b272",
+    "sha256": "6da4648a8823c041197e9082d6814b6e19710afdf7bb7c7130dc58d4cabd6095",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/Model.py",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 15152,
+    "git_blob_sha1": "b03f28d39b6125d1a524a7be69a2b06fd10d9495",
+    "sha256": "e45b234545e17cfc486a488a4c06f68e49b03234d2847142ded3ce6c2998d4fd",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/f-education-20261121/Inputs.json",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 6825,
+    "git_blob_sha1": "c359cee365beb0097104d7244f3dab90db447039",
+    "sha256": "d796d432c1f625784c322bbb330d5da8ab59fbbdfa6043cf3a10538c2901e651",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/f-education-20261121/Model.py",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 24178,
+    "git_blob_sha1": "bb74b89b9e03b2c1416c7ab4e65261412374c631",
+    "sha256": "08d6b409e9e815e6eb34878c69457c77a7a7e7fe9f5b85fa2debeb0f1a8ee88c",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/f-household-social-20261120/Inputs.json",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 1746742,
+    "git_blob_sha1": "31d2ea48839b699d9047ab7039bdf7a1b190e4ed",
+    "sha256": "8a7df2e6b7228177b28346386437b3b7dc6a5f1b8547507a114daf1fc5472766",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/f-integrated-20261121/Inputs.json",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 7865,
+    "git_blob_sha1": "b04f6979bf5e8736da24d6068eaafe43cfd5fd16",
+    "sha256": "87d454a5205869e58dee2836103499ee1eee89105cf9d14c62724df0561c66f5",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/f-integrated-20261121/Model.py",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 21624,
+    "git_blob_sha1": "5005992f4511e1fd9b69b841f7eb774eb845a982",
+    "sha256": "42adedbe340a089e126c22987df89894943fcece54b6ac85ffa002fb886bf71c",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/f-medical-common-20261121/Common_EndOfLife.csv",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 567389,
+    "git_blob_sha1": "9193f70d1f82dd3ad59e77a1452f255bab1cd6a4",
+    "sha256": "0916d3c3dcf2d027fb0ae557ec9ae21c236250e6868ddb2b4b63349f7c63dd34",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/f-medical-common-20261121/Medical_Accounts.csv",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 482348,
+    "git_blob_sha1": "bebb9138b6da9913ad70d3d14fba341ff881be8c",
+    "sha256": "78b309b3b5a38b4f6168c36c7cad929899baa743114634c6165a84b8b869e605",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/f-pension-policy-20261120/Inputs.json",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 1282097,
+    "git_blob_sha1": "39c988f9d2e570e60531baedbb5d454f92045a82",
+    "sha256": "5969792ecb9218dc3668d56ec426076d0359e1e4c403914f535390972f082514",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/f-vat-core-20261120/Inputs.json",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 2559157,
+    "git_blob_sha1": "1c9d0d14e25b5cfbff84fbd257dafacdfc64c0eb",
+    "sha256": "f9de79d09488aa26cefc27a6a43c8d0d0b165b054b04839a4bace97ecf6cd2a9",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/f-vat-core-20261120/Model.py",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 27668,
+    "git_blob_sha1": "01f015e183ff585bbedf4aed8164391815313418",
+    "sha256": "8c55442439d20b750ba6576ce8efa8a98e3f37b92df070a6a99dc498cd173837",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/f-integrated-20261121/Annual.csv",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 2082920,
+    "git_blob_sha1": "b4b399fb2c29906d3fc06d87b61864196dd6a679",
+    "sha256": "eb92953e843dfd7b84a0476b2f41ae310cafbf976cb857895b7363beabdf4772",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-n3-transition-financing-full-dynamics-20261122/Medical_Initialization.json",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 124011,
+    "git_blob_sha1": "07df976fb2080c8c9c307765e3b233a41cd93524",
+    "sha256": "3e97b56c0d3dd4b83b6c8545d369f15e20ac8d519b698d0bddaf3b743068b1ea",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "policies/FreedomPolicies.md",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 9241,
+    "git_blob_sha1": "3deb49dbe70734aa91e75856226e84e4b66db8e9",
+    "sha256": "0dedd2c1126613c30a7d96732d226cc787f6597437137424845d64d041db0204",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "policies/FreedomPolicies_Annex.md",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 12319,
+    "git_blob_sha1": "86df882940aae4b851d4b1d11d488f4d2606bd5e",
+    "sha256": "ee62de32582a0f6d559029e7e9810b161c6a975ff22b498493d9ca960ca29e83",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_ALIGNED_FULL_RATES/F_Actual_Annual.json",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 522525,
+    "git_blob_sha1": "210cefcbd6378378a8141d4b0372e655851381c6",
+    "sha256": "760fd40a50450437b6026392781a6549648c48fb2cd43fb748bbcff967bf8263",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_ALIGNED_FULL_RATES/F_Runtime_Trace.json",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 33262,
+    "git_blob_sha1": "0825d45b6c2fb3b6117f3f78d5028e850061c68a",
+    "sha256": "7be033e84a6badc95664e9434eafab7077237b70e2bc878f9089c43e34d36df5",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_FINE_WEEK_HOURS/F_Actual_Annual.json",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 522569,
+    "git_blob_sha1": "3a8a7bf8180bdcbcdf446ff0b30f350b9eb6937f",
+    "sha256": "ae17a4a2e7d6e3eb177a2fe8912d39c5816fc41ec8dadcc4a6b176e983ac76b8",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_FINE_WEEK_HOURS/F_Runtime_Trace.json",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 33271,
+    "git_blob_sha1": "32ee2f2366d7950848b11dae5729bcd27c38532d",
+    "sha256": "ea42cd81f762467894c1f47e0ff707c0d2b2671f6378426e71bf907c88d87111",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_MONTH_HOURS_PROFILE/F_Actual_Annual.json",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 522535,
+    "git_blob_sha1": "83c903e9297fe73a0fbfcca490122cfda497fa9c",
+    "sha256": "3f51fe141266b4bb9e50923123df2b69c5494591448e6d6a4d57d327ac7bff1c",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_MONTH_HOURS_PROFILE/F_Runtime_Trace.json",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 33266,
+    "git_blob_sha1": "6ff47758f0b9cbf1bde207527e92b246fbde4785",
+    "sha256": "ac6585ad95dc007ea64121341ef3abbdd0938c70a03de2286072456a6e292db2",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_BASE_UNCHANGED/F_Actual_Annual.json",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 522949,
+    "git_blob_sha1": "c546854a7869df2b24a61bba6528e648c4a07834",
+    "sha256": "cf13d4c267f30a361ed0f4aa3083893721413283247c846fdce477357c2f7e43",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_BASE_UNCHANGED/F_Runtime_Trace.json",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 33270,
+    "git_blob_sha1": "7da36de6ff22b452603b4d8616de307fb40c61cf",
+    "sha256": "0171080377eba6eef8bd627e36adc2581e0b5986cc14a52092dd1ae80725de6d",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_OCTOBER_NEAR_FULL_RATES/F_Actual_Annual.json",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 522573,
+    "git_blob_sha1": "5bb04289e83d0daf5aabe60ffa747aa6f75e5915",
+    "sha256": "dbfb45f4088c54136895de4a6b8c209cb308422d43443285e9ff48be2ce54a90",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_OCTOBER_NEAR_FULL_RATES/F_Runtime_Trace.json",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 33278,
+    "git_blob_sha1": "eba95ff6208cbdf3f5347af08053b16dcd400a48",
+    "sha256": "f3336f233356312685964b5da6ee0760b1d36d268a1fc56ad299ab0ba02bcb9e",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_PREVIOUS_FINE_AGE_HOURS/F_Actual_Annual.json",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 522574,
+    "git_blob_sha1": "79b24bf0d85af94511fababa1e288786a4dfadb8",
+    "sha256": "fdac3df151c76d1446d08ef0e34a446783bababae3457b60193210b7ef6971e2",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_PREVIOUS_FINE_AGE_HOURS/F_Runtime_Trace.json",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 33274,
+    "git_blob_sha1": "811a5a8df5edbe9dba3f1acaf7b539e8301af586",
+    "sha256": "372e8e58ce5a813c24ed783870a2bafaed2c4d162877eb0e251e72639b04d91a",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Fixed_Aligned_Case_Inputs.json",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 33708,
+    "git_blob_sha1": "cc75afde05145f7e90138b2f30a65b982e362758",
+    "sha256": "7318b4610938c60587f432498ab0ff4b4503fa89142f7dfb5466e52162ddbff4",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Older_Age_Sex_Annual_Hours_Bridge.csv",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 22828,
+    "git_blob_sha1": "e746b7f22c843fceb92d9430b647ec806727b161",
+    "sha256": "a8d914157fecc6822f2deb59a35db6377380f568e5fd00d3efd25778a6f7e554",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Statistics_Inputs.json",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 658539,
+    "git_blob_sha1": "f6ed74e5fb4bd8c56d303ad75627ead7d77ccc85",
+    "sha256": "e297f734d117c2f99e6d99cb29e99f87928ca5782ec9cda8e10ba20b9449ac79",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/f-vat-core-20261120/Annual.csv",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 2087811,
+    "git_blob_sha1": "db80b57d4bf3250a2f3676b8941c3c93ee2de5ff",
+    "sha256": "35c78607be9b171f82201dc4b7ffadf9a6cf85bd19d6185bd37e120f2219364c",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/f-education-20261121/Annual.csv",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 1996375,
+    "git_blob_sha1": "d3e077b03f42bd3d56cfcceb246a8e0645134c5d",
+    "sha256": "e9cc9c08e5a5529d6da208c49822c144ee2a5a7827dc5e7aa200a62fde541db6",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/f-medical-common-20261121/Annual.csv",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "size": 3077541,
+    "git_blob_sha1": "9d113c335d11641fa2e0ee3572243b149d3b20ba",
+    "sha256": "fb778157a62bd604c0be3cbf3d3786142719199b4de84b5debfbb6a7674d4cb6",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-n3-aligned-labor-baseline-20261123/SQ_F_N3_Aligned_Labor_Annual_2026_2055.csv",
+    "commit": "13a5debb0a291fabbef4d52c9821aa590cfa0a73",
+    "size": 115311,
+    "git_blob_sha1": "f9e47f6e7826611cab87188d56bb62fe7a9a7faf",
+    "sha256": "8b3e073df5798840124372cd59260dcd6cd5e122306437ced61b222910c2d381",
+    "retrieval": "connected GitHub fetch/fetch_file, pinned commit/blob",
+    "comparison": "OWN_BYTES_MATCH"
+  }
+]

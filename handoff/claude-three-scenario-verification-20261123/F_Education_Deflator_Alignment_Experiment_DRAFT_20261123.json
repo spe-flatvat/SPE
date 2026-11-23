@@ -1,0 +1,6 @@
+{
+ "max_abs_real": 5.046524461249646e-05,
+ "real2055": 5.046524461249646e-05,
+ "nominal2055": 9.762151557879406e-05,
+ "note": "education module fed the SQ medical-reference deflators instead of its own f-integrated deflators (isolated experiment, not part of the package)"
+}

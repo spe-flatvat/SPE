@@ -1,0 +1,98 @@
+[
+  {
+    "case": "BASE_SQ_UNCHANGED",
+    "exit_code": 0,
+    "stdout": "done SQ_COMMON_ON\nCOMPLETE 30\n{\"mode\": \"BASE_SQ_REPLAY\", \"rows\": 30, \"real2055\": 528.9623363331808, \"nominal2055\": 1023.3299808906729}\n",
+    "stderr": ""
+  },
+  {
+    "case": "PREVIOUS_FINE_AGE_HOURS",
+    "exit_code": 0,
+    "stdout": "done SQ_COMMON_ON\nCOMPLETE 30\n{\"mode\": \"PREVIOUS_FINE_AGE_HOURS\", \"rows\": 30, \"real2055\": 527.3666210706358, \"nominal2055\": 1020.3102568660296}\n",
+    "stderr": ""
+  },
+  {
+    "case": "ANNUAL_SAME_SURVEY_UNDER65",
+    "exit_code": 0,
+    "stdout": "done SQ_COMMON_ON\nCOMPLETE 30\n{\"mode\": \"ANNUAL_SAME_SURVEY_UNDER65\", \"rows\": 30, \"real2055\": 529.3615698255829, \"nominal2055\": 1024.0843831567122}\n",
+    "stderr": ""
+  },
+  {
+    "case": "OLDER_FINE_RATES_ONLY",
+    "exit_code": 0,
+    "stdout": "done SQ_COMMON_ON\nCOMPLETE 30\n{\"mode\": \"OLDER_FINE_RATES_ONLY\", \"rows\": 30, \"real2055\": 526.3822445612816, \"nominal2055\": 1018.4588347667427}\n",
+    "stderr": ""
+  },
+  {
+    "case": "ANNUAL_ALIGNED_FULL_RATES",
+    "exit_code": 0,
+    "stdout": "done SQ_COMMON_ON\nCOMPLETE 30\n{\"mode\": \"ANNUAL_ALIGNED_FULL_RATES\", \"rows\": 30, \"real2055\": 526.7811469712718, \"nominal2055\": 1019.2127021198376}\n",
+    "stderr": ""
+  },
+  {
+    "case": "OCTOBER_NEAR_FULL_RATES",
+    "exit_code": 0,
+    "stdout": "done SQ_COMMON_ON\nCOMPLETE 30\n{\"mode\": \"OCTOBER_NEAR_FULL_RATES\", \"rows\": 30, \"real2055\": 527.0371710059975, \"nominal2055\": 1019.6963341887428}\n",
+    "stderr": ""
+  },
+  {
+    "case": "ANNUAL_FINE_WEEK_HOURS",
+    "exit_code": 0,
+    "stdout": "done SQ_COMMON_ON\nCOMPLETE 30\n{\"mode\": \"ANNUAL_FINE_WEEK_HOURS\", \"rows\": 30, \"real2055\": 525.1666635390048, \"nominal2055\": 1016.1515764829129}\n",
+    "stderr": ""
+  },
+  {
+    "case": "ANNUAL_MONTH_HOURS_PROFILE",
+    "exit_code": 0,
+    "stdout": "done SQ_COMMON_ON\nCOMPLETE 30\n{\"mode\": \"ANNUAL_MONTH_HOURS_PROFILE\", \"rows\": 30, \"real2055\": 525.4317943957626, \"nominal2055\": 1016.6557916236479}\n",
+    "stderr": ""
+  },
+  {
+    "case": "UNIFORM_LEVEL_CONTROL",
+    "exit_code": 0,
+    "stdout": "done SQ_COMMON_ON\nCOMPLETE 30\n{\"mode\": \"UNIFORM_LEVEL_CONTROL\", \"rows\": 30, \"real2055\": 528.9623363331807, \"nominal2055\": 1023.3299808906729}\n",
+    "stderr": ""
+  },
+  {
+    "case": "F_BASE_UNCHANGED",
+    "exit_code": 0,
+    "stdout": "{\"case\": \"F_LATEST_IMPLEMENTED\", \"rows\": 30, \"real2055\": 540.2745449827269}\n",
+    "stderr": ""
+  },
+  {
+    "case": "F_PREVIOUS_FINE_AGE_HOURS",
+    "exit_code": 0,
+    "stdout": "{\"case\": \"F_LATEST_IMPLEMENTED\", \"rows\": 30, \"real2055\": 538.6586900783849}\n",
+    "stderr": ""
+  },
+  {
+    "case": "F_ANNUAL_ALIGNED_FULL_RATES",
+    "exit_code": 0,
+    "stdout": "{\"case\": \"F_LATEST_IMPLEMENTED\", \"rows\": 30, \"real2055\": 538.0709411048267}\n",
+    "stderr": ""
+  },
+  {
+    "case": "F_OCTOBER_NEAR_FULL_RATES",
+    "exit_code": 0,
+    "stdout": "{\"case\": \"F_LATEST_IMPLEMENTED\", \"rows\": 30, \"real2055\": 538.3294443043056}\n",
+    "stderr": ""
+  },
+  {
+    "case": "F_ANNUAL_FINE_WEEK_HOURS",
+    "exit_code": 0,
+    "stdout": "{\"case\": \"F_LATEST_IMPLEMENTED\", \"rows\": 30, \"real2055\": 536.4363241664986}\n",
+    "stderr": ""
+  },
+  {
+    "case": "F_ANNUAL_MONTH_HOURS_PROFILE",
+    "exit_code": 0,
+    "stdout": "{\"case\": \"F_LATEST_IMPLEMENTED\", \"rows\": 30, \"real2055\": 536.7045037082949}\n",
+    "stderr": ""
+  },
+  {
+    "case": "N3_BASE_UNCHANGED",
+    "exit_code": 0,
+    "stdout": "{\"case\": \"N3_NATIVE_EXISTING\", \"rows\": 30, \"real2055\": 483.99149156991547, \"checks\": 748, \"failed\": 0}\n",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "failed_route": "population2025 statInfId000040526742 fileKind0 HTTP404",
+  "successful_alternative": "officialmetadata href fileKind4;binaryxlsx decoded",
+  "monthly_unavailable_2026": [
+    10,
+    11,
+    12
+  ],
+  "official_annual_hours_age_detail": "not in obtained industry-occupation table",
+  "prior_definitions_reused": {
+    "commit": "78858034a8659fb21d01421168de6be0173ff0c5",
+    "files": [
+      "Source_Originals/yougo_kaisetsu.pdf.json",
+      "Source_Originals/note01-j.pdf.json"
+    ]
+  },
+  "no_missing_future_improvements_inserted": true
+}

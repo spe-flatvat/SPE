@@ -1,0 +1,95 @@
+{
+  "status": "READ_ONLY_DEPENDENCY_ANALYSIS",
+  "changed_branch_executed": false,
+  "reason": "Existing adapters expose common L shift for F, not coherent N3 baseline ledger/cache rebuild. No SQ GDP delta added to N3.",
+  "files": [
+    {
+      "path": "handoff/chatgpt-n3-native-vs-diagnostic-separation-20261123/Resolved_Separation_Runtime.py.txt",
+      "commit": "8a117759906f0d89c8a57e0899c03e3697be70a1",
+      "size": 16403,
+      "sha256": "2d11d730317055bf1af4d35e8b268ef1cfc3be0936fb9511238b316510b39ac5",
+      "read_sites": [
+        {
+          "line": 2,
+          "text": " par=self.par;C=I=K=privI=privK=pubI=pubK=0.;firmcash=0.;debt=self.initdebt;assets=0.;tax=self.base[2026]['tax'];prevN=self.base[2026]['N'];gap=0.;prior=[];pubhistory=[];pubflows=[];annual=[];closure=[];bridge=[]"
+        },
+        {
+          "line": 7,
+          "text": "  t=self.base[y];old=t['medical'];w=copy.deepcopy(old);d=t['coreD'];initial=y==2026;native={};policyshift=govshift=insshift=cashshift=investshift=0."
+        },
+        {
+          "line": 9,
+          "text": "   md.rows.append(self.medical_row(s,y,prior,old));native=co.step(y,md,prior)"
+        },
+        {
+          "line": 11,
+          "text": "   w.update(native);w['household_cash_delta_trn']=old['medical_only_household_cash_delta_trn']+native['policy_household_cash_delta_trn'];w['government_cost_delta_trn']=old['medical_only_government_cost_delta_trn']+native['policy_government_cost_delta_trn'];w['service_production_nominal_delta_trn']=old['service_production_nominal_delta_trn']+native['policy_service_VA_delta_trn']-old['policy_service_VA_delta_trn']"
+        },
+        {
+          "line": 63,
+          "text": "  wage0=self.base[2026]['nominalwage_proxy'];shock=.99 if par['wage_shock_start']<=y<par['wage_shock_start']+2 else 1."
+        },
+        {
+          "line": 64,
+          "text": "  wage=wage0*(d/self.base[2026]['coreD'])*shock*(1+par['wage_gap_elasticity']*gap/t['coreY'])"
+        },
+        {
+          "line": 67,
+          "text": "  row=dict(case=s['case'],year=y,dynamic=s['dynamic'],room_mode=s['room_mode'],domestic=s['domestic'],public_yield=s['yield_public'],public_lag=s['lag'],SQ_real_GDP_trn=self.sq[y]['Y'],real_GDP_trn=Y,GDP_minus_SQ_trn=Y-self.sq[y]['Y'],GDP_change_vs_BASE_N3_trn=Y-t['Y'],nominal_GDP_trn=nom,consumption_real_trn=n(t['macro_row'],'household_consumption_real_proxy_trn')+C-t['C'],SQ_consumption_real_trn=n(self.sq[y]['macro_row'],'household_consumption_real_proxy_trn'),private_investment_real_trn=n(t['macro_row'],'capital_replacement_investment_real_trn')+I+privI,extra_private_investment_real_trn=privI,extra_public_investment_real_trn=pubI,SQ_private_investment_real_trn=n(self.sq[y]['macro_row'],'capital_replacement_investment_real_trn')+self.sq[y]['I'],capital_total_real_proxy_trn=n(t['macro_row'],'capital_total_real_trn')-t['K']+K+privK+pubK,government_purchase_nominal_trn=g,public_investment_nominal_trn=z['pipay'],policy_tax_delta_trn=w['policy_tax_delta_trn'],macro_tax_proxy_trn=tax,total_tax_diagnostic_proxy_trn=tax+t['direct']+policyshift,SQ_tax_diagnostic_proxy_trn=self.sq[y]['tax']+self.sq[y]['direct'],household_policy_cash_nominal_trn=cash,household_resource_DI_proxy_trn=resource,N3_firm_cash_trn=firmcash,pension_fund_end_trn=w['pension_fund_stock_trn'],pension_contribution_trn=w['pension_fund_contribution_trn'],pension_benefit_delta_trn=w['pension_benefit_delta_trn'],CL_PB_candidate_trn=pb,SQ_CL_PB_same_fiscal_scenario_trn=sqpb,CL_debt_candidate_trn=debt,SQ_CL_debt_same_fiscal_scenario_trn=ssqdebt,CL_assets_candidate_trn=assets,CL_interest_candidate_trn=interest,CL_new_borrowing_trn=fin['CL_new_cash_borrowing_candidate_trn'],CL_gross_issue_assumed_trn=fin['CL_gross_issue_with_assumed_refinancing_trn'],supply_real_trn=supply,supply_ceiling_real_trn=capacity,unmet_demand_real_trn=z['unmet'],lagged_wage_base_factor=co.dynamic_rows[-1]['wage_base_factor'] if s['dynamic'] else None,lagged_profit_base_factor=co.dynamic_rows[-1]['corporate_profit_base_factor'] if s['dynamic'] else None,GG_PB=None,GG_debt=None,actual_gross_bond_issue=None,full_calibration=False,VAT_standard_rate=self.vatrate[y],VAT_schedule_fixed=s['kpi']=='FIXED',VAT_base_endogenous=False,medical_base_endogenous=False)"
+        },
+        {
+          "line": 68,
+          "text": "  row.update(GDP_core_difference_trn=t['coreY']-self.sq[y]['coreY'],GDP_C_difference_trn=C-self.sq[y]['C'],GDP_I_difference_trn=I-self.sq[y]['I']+privI+pubI,GDP_G_domestic_trn=g*s['domestic']/d,GDP_supply_difference_trn=par['capacity_absorption']*(supply-self.sq[y]['supply']),GDP_other_difference_trn=t['education_nom']/d-self.sq[y]['education_nom']/self.sq[y]['coreD']+t['education_level']-self.sq[y]['education_level']+t['finite']-self.sq[y]['finite']+w['service_production_nominal_delta_trn']/d-self.sq[y]['medical']['service_production_nominal_delta_trn']/self.sq[y]['coreD'],GDP_unmet_difference_trn=-z['unmet']+self.sq[y]['unmet'],desired_real_GDP_trn=z['desired'],policy_labor_rate=.3,policy_financial_rate=.2,policy_estate_rate=.4,labor_gross_base_trn=sum(x['labour_business_30_gross_base_trn'] for x in co.households if x['year']==y),financial_gross_base_trn=sum(x['financial20_gross_base_trn'] for x in co.households if x['year']==y),corporate_profit_base_trn=sum(x['profit_base_trn'] for x in co.firms if x['year']==y))"
+        }
+      ]
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/Three_Scenario_Worker.py",
+      "commit": "8a117759906f0d89c8a57e0899c03e3697be70a1",
+      "size": 6545,
+      "sha256": "c7762a3d42cb73d58439ac818f3ed1d2250d2b85810df53ca142bf0b33719f17",
+      "read_sites": [
+        {
+          "line": 28,
+          "text": " s={**c['defaults'],**next(x for x in c['cases'] if x['id']=='LATEST_F')};es=next(x for x in ec['cases'] if x['id']=='COMBINED');ed=edu.Education(ec,{**es,'E':s['edu_E'],'S':s['edu_S'],'T':s['edu_T']},defs);shared=json.loads((root/'handoff/chatgpt-n3-transition-financing-full-dynamics-20261122/Medical_Initialization.json').read_text())"
+        },
+        {
+          "line": 30,
+          "text": " medical_defs=shared['deflators'] if aligned else defs"
+        },
+        {
+          "line": 32,
+          "text": " medical_pop=shared['population'] if aligned else pop"
+        },
+        {
+          "line": 33,
+          "text": " md=M.Medical(c,s,medical_defs,medical_pop)"
+        },
+        {
+          "line": 58,
+          "text": " save(out/'F_Actual_Annual.json',rows);save(out/'F_Medical_Reference_Inputs.json',dict(deflators=medical_defs,population=medical_pop,education_deflators=defs,aligned=aligned));save(out/'F_Runtime_Trace.json',dict(parameters=par,years=tr));save(out/'F_Common_Clinical_Accounts.json',md.common);save(out/'F_Medical_Accounts.json',md.rows)"
+        },
+        {
+          "line": 60,
+          "text": "def n3(root,out):"
+        }
+      ]
+    },
+    {
+      "path": "handoff/chatgpt-n3-assumptions-specification-calibration-separation-20261123/Sensitivity_Runtime.py",
+      "commit": "8a117759906f0d89c8a57e0899c03e3697be70a1",
+      "size": 3204,
+      "sha256": "ab2d84a1138d3359aa387baa60e12fa3ca8fc615db50fa74de9a16f21bcac6f2",
+      "read_sites": [
+        {
+          "line": 10,
+          "text": "def build(root,out,definition):"
+        },
+        {
+          "line": 42,
+          "text": " r.medical_input['s'].update(definition.get('medical_spec',{}))"
+        }
+      ]
+    }
+  ]
+}

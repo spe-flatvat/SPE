@@ -1,0 +1,648 @@
+{
+  "commit": "78858034a8659fb21d01421168de6be0173ff0c5",
+  "verified": 107,
+  "files": [
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/BASE_SQ_UNCHANGED/Bridge_Runtime_Source_Receipts.json",
+      "size": 6363,
+      "sha256": "907ddd9d6c569df002b372152fcccb9435b601d12143b949c31009add3ea0f37",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/BASE_SQ_UNCHANGED/Case_Connection.json",
+      "size": 782,
+      "sha256": "ec131e68d2942608b16d181a872bc6593c58633e41a8a919c076278bee3593f9",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/BASE_SQ_UNCHANGED/Common_Trace_BASE_SQ_REPLAY.json",
+      "size": 359144,
+      "sha256": "3e58ec77430d3422ed720ca3b5b476aba5de195435eeb13e6930e4ffd39539d1",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/BASE_SQ_UNCHANGED/Resolved_Common_Runtime_BASE_SQ_REPLAY.py.txt",
+      "size": 65347,
+      "sha256": "1760b01c5f4d65db5a10233413e2191d9f387a604c08a19c51badbc324465ed6",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/BASE_SQ_UNCHANGED/Runtime_Source_Receipts.json",
+      "size": 6140,
+      "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/Bridge_Worker.py",
+      "size": 2992,
+      "sha256": "a121403885cb361ba779163ac06fc772f1424d2390e9b00f3775823fa9f18ee9",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/Custody_Verification.json",
+      "size": 71072,
+      "sha256": "52802f57aad631c0dd778a7feb324c3fdeb2ead76e6c20dcc5ee8fe45ce0a4d5",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/Execution_Log.json",
+      "size": 4005,
+      "sha256": "2e2cb21667604644de86010ca502e2d50b14a11ff200db8b9603cba7e13c1616",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/F_BASE_UNCHANGED/Bridge_Runtime_Source_Receipts.json",
+      "size": 4003,
+      "sha256": "42a66c76cf22eba7e7a0b27d5ab0b5c2dcce8cdd8988864f9c937972357fcd01",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/F_BASE_UNCHANGED/Case_Connection.json",
+      "size": 416,
+      "sha256": "f703c885c7cbeacf25940ff50f131ff384a480b634fdc65f96d5fd2222d5d20c",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/F_BASE_UNCHANGED/F_Actual_Annual.json",
+      "size": 522949,
+      "sha256": "cf13d4c267f30a361ed0f4aa3083893721413283247c846fdce477357c2f7e43",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/F_BASE_UNCHANGED/F_Common_Clinical_Accounts.json",
+      "size": 137652,
+      "sha256": "59ed84a212717960207931618b978bc974293177b5af83a8a79212aaa9546c91",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/F_BASE_UNCHANGED/F_Medical_Accounts.json",
+      "size": 148558,
+      "sha256": "8b324b0516f366c310e8e85daa6c05c1c46abd2c872e6b4cf10fd8e7b213fbba",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/F_BASE_UNCHANGED/F_Medical_Reference_Inputs.json",
+      "size": 1791,
+      "sha256": "3afd44c02680757d419eea68d8cf52715ac092d030377675f3e369995c75ef76",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/F_BASE_UNCHANGED/F_Runtime_Trace.json",
+      "size": 33270,
+      "sha256": "0171080377eba6eef8bd627e36adc2581e0b5986cc14a52092dd1ae80725de6d",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/F_BASE_UNCHANGED/Resolved_F_Labor_Trace_Adapter_Source.py.txt",
+      "size": 6826,
+      "sha256": "c5553c98de45eb23064cbc75218cb195660d61489c57087e5373ea415fe03eb3",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/F_BASE_UNCHANGED/Runtime_Source_Receipts.json",
+      "size": 3780,
+      "sha256": "268d39ea1078332df6afd4f202744b4aa258418517f92f478b85a2f1d540024e",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/F_HEADCOUNT_DETAIL/Bridge_Runtime_Source_Receipts.json",
+      "size": 4003,
+      "sha256": "42a66c76cf22eba7e7a0b27d5ab0b5c2dcce8cdd8988864f9c937972357fcd01",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/F_HEADCOUNT_DETAIL/Case_Connection.json",
+      "size": 590,
+      "sha256": "b59d92451af021de4f6cd8669f7df7dd72b3ec200de1049dc9ff1ce6a44dbac7",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/F_HEADCOUNT_DETAIL/F_Actual_Annual.json",
+      "size": 523040,
+      "sha256": "55e72e1381a96bbd8898aa2f057ac3ac49366b2131a276db2c8297bba8b9d6f6",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/F_HEADCOUNT_DETAIL/F_Common_Clinical_Accounts.json",
+      "size": 137652,
+      "sha256": "59ed84a212717960207931618b978bc974293177b5af83a8a79212aaa9546c91",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/F_HEADCOUNT_DETAIL/F_Medical_Accounts.json",
+      "size": 148558,
+      "sha256": "8b324b0516f366c310e8e85daa6c05c1c46abd2c872e6b4cf10fd8e7b213fbba",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/F_HEADCOUNT_DETAIL/F_Medical_Reference_Inputs.json",
+      "size": 1791,
+      "sha256": "3afd44c02680757d419eea68d8cf52715ac092d030377675f3e369995c75ef76",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/F_HEADCOUNT_DETAIL/F_Runtime_Trace.json",
+      "size": 33261,
+      "sha256": "ef73b4cb54034db1f1bfbfdef2d2bfa064c1035d78e109b6d33f56807fdfa9d1",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/F_HEADCOUNT_DETAIL/Resolved_F_Labor_Trace_Adapter_Source.py.txt",
+      "size": 6826,
+      "sha256": "c5553c98de45eb23064cbc75218cb195660d61489c57087e5373ea415fe03eb3",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/F_HEADCOUNT_DETAIL/Runtime_Source_Receipts.json",
+      "size": 3780,
+      "sha256": "268d39ea1078332df6afd4f202744b4aa258418517f92f478b85a2f1d540024e",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/F_HOURS_DETAIL/Bridge_Runtime_Source_Receipts.json",
+      "size": 4003,
+      "sha256": "42a66c76cf22eba7e7a0b27d5ab0b5c2dcce8cdd8988864f9c937972357fcd01",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/F_HOURS_DETAIL/Case_Connection.json",
+      "size": 612,
+      "sha256": "fc4b226c6796d16e527e612bbbc63202cb16ace568298fed99a6d43a3847b0df",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/F_HOURS_DETAIL/F_Actual_Annual.json",
+      "size": 522564,
+      "sha256": "43b41bbfc2756aa9078932da014568a25a53a98a570414450ae32ab0823c651e",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/F_HOURS_DETAIL/F_Common_Clinical_Accounts.json",
+      "size": 137652,
+      "sha256": "59ed84a212717960207931618b978bc974293177b5af83a8a79212aaa9546c91",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/F_HOURS_DETAIL/F_Medical_Accounts.json",
+      "size": 148558,
+      "sha256": "8b324b0516f366c310e8e85daa6c05c1c46abd2c872e6b4cf10fd8e7b213fbba",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/F_HOURS_DETAIL/F_Medical_Reference_Inputs.json",
+      "size": 1791,
+      "sha256": "3afd44c02680757d419eea68d8cf52715ac092d030377675f3e369995c75ef76",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/F_HOURS_DETAIL/F_Runtime_Trace.json",
+      "size": 33281,
+      "sha256": "dde26675c950156171b60fee23e2c6212e730c89837365f1365187e8fa8b59c6",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/F_HOURS_DETAIL/Resolved_F_Labor_Trace_Adapter_Source.py.txt",
+      "size": 6826,
+      "sha256": "c5553c98de45eb23064cbc75218cb195660d61489c57087e5373ea415fe03eb3",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/F_HOURS_DETAIL/Runtime_Source_Receipts.json",
+      "size": 3780,
+      "sha256": "268d39ea1078332df6afd4f202744b4aa258418517f92f478b85a2f1d540024e",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/F_N3_Labor_Bridge_Impact_And_Compatibility.csv",
+      "size": 63294,
+      "sha256": "772b3b729e985f8ba9e576640e96425afb9a94107c1064e3c8e3c91fc17a1777",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/Finalize_Labor_Bridge.py",
+      "size": 27421,
+      "sha256": "f8589204da0f392ee9ff44ad6e3d7da39d5b3fe976751126600f951a3547ec19",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/Fixed_Labor_Bridge_Case_Inputs.json",
+      "size": 22670,
+      "sha256": "77b79a94d8aa092d06cdce534d66b64eae7e9a50e03b9f84e9271d24ef6331d1",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/Fixed_Source_Receipts.json",
+      "size": 64319,
+      "sha256": "150d4c1c3cdf59d32cca6d12f7b81c0c5d6b3f21ec9dc97059c84f250cb718b1",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/HEADCOUNT_DETAIL_2025/Bridge_Runtime_Source_Receipts.json",
+      "size": 6363,
+      "sha256": "907ddd9d6c569df002b372152fcccb9435b601d12143b949c31009add3ea0f37",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/HEADCOUNT_DETAIL_2025/Case_Connection.json",
+      "size": 787,
+      "sha256": "989b70b31420bb72c8c65394d92fc594ae38134e32bcbccbb5221b3716e8d6ed",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/HEADCOUNT_DETAIL_2025/Common_Trace_HEADCOUNT_DETAIL_2025.json",
+      "size": 359176,
+      "sha256": "0da01b7bc53474add9841fafd56f8275e69d7b775cd17b89637a8b30d088b19b",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/HEADCOUNT_DETAIL_2025/Resolved_Common_Runtime_HEADCOUNT_DETAIL_2025.py.txt",
+      "size": 65880,
+      "sha256": "d7437cb71afbf5595feaa0f91a7532a9652dded4da0e3b3ac232cad1b08676c6",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/HEADCOUNT_DETAIL_2025/Runtime_Source_Receipts.json",
+      "size": 6140,
+      "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/LFS_2025_Age_Sex_Employment.csv",
+      "size": 4239,
+      "sha256": "645328f808db24a045d27951bad56da670a5e92e9f94c8795c66b74cdb292744",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/LFS_2025_Age_Sex_Hours.csv",
+      "size": 8026,
+      "sha256": "fdc6946b65f8f850342353ba28f7de7791b0a3ffa2cb1e55f53d5642077c9c83",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/LFS_2025_Benchmark_Gap_Decomposition.csv",
+      "size": 783,
+      "sha256": "8236b7b48178ea219efdd5bfa084f11d84ec0e508b1fc1557c6de711b3136986",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/LFS_HOURS_BASE_RATES/Bridge_Runtime_Source_Receipts.json",
+      "size": 6363,
+      "sha256": "907ddd9d6c569df002b372152fcccb9435b601d12143b949c31009add3ea0f37",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/LFS_HOURS_BASE_RATES/Case_Connection.json",
+      "size": 782,
+      "sha256": "d40b027bde9eb56a9e92bfe27ff54a228e417242644fb5752c9c9b48debe5b6f",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/LFS_HOURS_BASE_RATES/Common_Trace_LFS_HOURS_BASE_RATES.json",
+      "size": 358988,
+      "sha256": "7f01192f3147b99387951eb19d943e653afd241f13d330c17ce964b08cda1c54",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/LFS_HOURS_BASE_RATES/Resolved_Common_Runtime_LFS_HOURS_BASE_RATES.py.txt",
+      "size": 65876,
+      "sha256": "75f7bfda42b7beeab2950dc47826accaae512012af9af92633b241f6ff9ee21e",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/LFS_HOURS_BASE_RATES/Runtime_Source_Receipts.json",
+      "size": 6140,
+      "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/LFS_HOURS_DETAIL_RATES/Bridge_Runtime_Source_Receipts.json",
+      "size": 6363,
+      "sha256": "907ddd9d6c569df002b372152fcccb9435b601d12143b949c31009add3ea0f37",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/LFS_HOURS_DETAIL_RATES/Case_Connection.json",
+      "size": 781,
+      "sha256": "ca1ab2441f51839171a32fd8f4c651c1f1b7c867e218fb86b84a05f1d9b8a7a2",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/LFS_HOURS_DETAIL_RATES/Common_Trace_LFS_HOURS_DETAIL_RATES.json",
+      "size": 358897,
+      "sha256": "f0b0117afb0901468411ef93fb3d7f367550cdc21e3a4a330896bf89f30edc5a",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/LFS_HOURS_DETAIL_RATES/Resolved_Common_Runtime_LFS_HOURS_DETAIL_RATES.py.txt",
+      "size": 65873,
+      "sha256": "5ed5d65ee6c9999eb4ed6b207e5bfa15d02c9e2d4a3f554388c66fdec8d07a85",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/LFS_HOURS_DETAIL_RATES/Runtime_Source_Receipts.json",
+      "size": 6140,
+      "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/Labor_Bridge_Reproduce.py",
+      "size": 19743,
+      "sha256": "d331a3ddec2e292fbcdfc763cc9018393f2770fd48e86f7dab5743163498f5eb",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/Labor_Employment_Hours_FTE_ValueAdded_Definition_Map.csv",
+      "size": 5314,
+      "sha256": "d794c41f7eb58c6c0e8219682170b8e18995f710d69d663f3bce36c5717732c3",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/Labor_Statistics_Calibration_Gaps_And_Next_Fixes.csv",
+      "size": 3108,
+      "sha256": "454bc6ad044e84e2e878c6a90b8e7daf733ac83f2280236d987e5276be9c5949",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/Manifest.json",
+      "size": 19033,
+      "sha256": "055c8d5bfd88ab46718bcddd0f37c2feeba85a6d7df794bc73a3dce66c618d11",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/N3_BASE_UNCHANGED/Bridge_Runtime_Source_Receipts.json",
+      "size": 5493,
+      "sha256": "fae1a05c9042e9e284741d5ede26bb21ebd24105a634d59a85baf6c714bc8b24",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/N3_BASE_UNCHANGED/N3_Actual_Annual.json",
+      "size": 94007,
+      "sha256": "7728c506a33d302fb2f6512defcda42008c980257db19fbb0a7507860d2f2e4a",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/N3_BASE_UNCHANGED/N3_Actual_Fiscal.json",
+      "size": 61546,
+      "sha256": "ef9485d8acab9746748f8a57042b71b2e84761bd36f252e5852920d0cb74376a",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/N3_BASE_UNCHANGED/N3_Common_Input_Contract.json",
+      "size": 139656,
+      "sha256": "a3ac335acfc40cc24ea37a5d628a3b46e872c34c465f61e69125d62cd86e1d2f",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/N3_BASE_UNCHANGED/N3_Runtime_Checks.json",
+      "size": 38,
+      "sha256": "8be45753b6fbc70882ab996237942357f98ac32e4643161a9e09c24de7155b79",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/N3_BASE_UNCHANGED/N3_Runtime_Midpoints.json",
+      "size": 64749,
+      "sha256": "1fd4697d40f599a18823751bbf2a8bf60bb839e0ea669714a745324dbec877d3",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/N3_BASE_UNCHANGED/N3_SQ_Denominator_States.json",
+      "size": 673563,
+      "sha256": "1ce949509472382859f2019347998b89e33364509ce7f9cee2d991800077fdfa",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/Official_Statistics_Extracted_Cells.csv",
+      "size": 16739,
+      "sha256": "0b8d3fba6f05ad3bd7195820d398333ebe7119da77a0edef5c6631697d6b496a",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/Official_Statistics_Source_Definition_And_Receipts.csv",
+      "size": 6789,
+      "sha256": "8772912881e0ff096c2f9f810ec80f3fb759ac1e0123a38ee6febdbac2f7ad76",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/Prepare_Statistics.py",
+      "size": 8586,
+      "sha256": "179a963454398f1307644d42191e11b8f015a699207f6524fbff84024368de53",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/Prior_SQ_Attribution_Reused_No_New_Factors.csv",
+      "size": 59690,
+      "sha256": "9152f7e6f085b167d2838911d6c52a9b046c4c769f4acf32074db73be7cb99da",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/Reproduction_Verification.json",
+      "size": 20999,
+      "sha256": "01025d27a2d4c62ab516e0990ec1b3e59e554dd6a92d24d060a33fe04a6a5d05",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/SNA_HOURS_FIXED_CONTROL/Bridge_Runtime_Source_Receipts.json",
+      "size": 6363,
+      "sha256": "907ddd9d6c569df002b372152fcccb9435b601d12143b949c31009add3ea0f37",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/SNA_HOURS_FIXED_CONTROL/Case_Connection.json",
+      "size": 788,
+      "sha256": "29c2de10a74c9368babe6cd97e66bf451708ca14f93bbed5c173dcc30dc449dd",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/SNA_HOURS_FIXED_CONTROL/Common_Trace_SNA_HOURS_FIXED_CONTROL.json",
+      "size": 358957,
+      "sha256": "e1eb913cc5ff97a7d7eb98fdefc4a3b8ad6d8ca31edefef0748ecabfdce2dbfc",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/SNA_HOURS_FIXED_CONTROL/Resolved_Common_Runtime_SNA_HOURS_FIXED_CONTROL.py.txt",
+      "size": 65879,
+      "sha256": "27215d6490e6750529c1467eb016b11639b98baea370c1c1be1a0b757ec1e330",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/SNA_HOURS_FIXED_CONTROL/Runtime_Source_Receipts.json",
+      "size": 6140,
+      "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/SNA_Observed_Employment_Hours_Productivity_2005_2024.csv",
+      "size": 4759,
+      "sha256": "2ae06b8fb9b8c2c50dd5bec8fe59baaa07ea12f60e1c7fd736c70deae7f75e47",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/SPE_Common_Labor_Definition_National_Statistics_Connection_Report_DRAFT_20261123.md",
+      "size": 16853,
+      "sha256": "4c55c371753c2551c188fcb99d5d3d3b556d2961c335b579fe20d7e146d67084",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/SQ_Age_Sex_Employment_Hours_Bridge_Cells.csv",
+      "size": 757619,
+      "sha256": "5499fcfbb07e943ec6e5f779500f1a571ddbbd4f53cb5ba425c580e98edbbd8c",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/SQ_Labor_Bridge_Cases_And_GDP_Comparison.csv",
+      "size": 37999,
+      "sha256": "7ddc29fe7a154d13a2e617fa4b38faa948f65338816c29ccfa31c66a378b04a3",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/SQ_Labor_Bridge_Interactions.csv",
+      "size": 5812,
+      "sha256": "21a47a9fc1f275eee0754b4c0eb612ec023466411207e30d1bbb80792fadfce8",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/SQ_Labor_Bridge_Key_Years.csv",
+      "size": 6190,
+      "sha256": "0ad75fe1a93747450da0406a43ecf3e9731bffb954d8ad96c097794795a80ca7",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/SQ_Labor_Statistics_Annual_Bridge_2026_2055.csv",
+      "size": 82284,
+      "sha256": "c98c729763c48839ed2862f3d935b92a363f7df3a607de28e8db773ba0c59fd4",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/Source_Originals/2024fcm1n_jp.xlsx.json",
+      "size": 63781,
+      "sha256": "cbbf50ffab9ed06e6eb9e19c37a2c26fc5603d080407a22e4ca216be5f1c375b",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/Source_Originals/2024fcm1rn_jp.xlsx.json",
+      "size": 52551,
+      "sha256": "2a014718c61c47e7e0c6ef3d6dcdb455cd3cedb8ceb97a31ab440a7dd98e37f3",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/Source_Originals/2024fcm3rn_jp.xlsx.json",
+      "size": 46555,
+      "sha256": "5e724b06e1a3ef8519ed67daa20d7245d611c7136644cd2058d67a4f4ffef3ae",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/Source_Originals/2024hw_jp.xlsx.json",
+      "size": 22461,
+      "sha256": "965ce647e05223b58a0366b54da957a5111c0ace0818d65f67e6e568205b4db0",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/Source_Originals/2024s3_jp.xlsx.json",
+      "size": 85911,
+      "sha256": "68f1d544d27db70672c939e31a987f12a36c7d1676de91b8133de67604535238",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/Source_Originals/202610.pdf.json",
+      "size": 559456,
+      "sha256": "0a479b14e14f827b65b11b1807ad501e1f192d39b50424777caf39719188d258",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/Source_Originals/LFS_000040440941.xlsx.json",
+      "size": 49617,
+      "sha256": "75ce8ba775bc5ebb458a847f833da8325c0d1dbfc7e93c088b099ff3c955ecce",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/Source_Originals/LFS_000040440942.xlsx.json",
+      "size": 49301,
+      "sha256": "e7c14761956d3a295b6c46b09978c03c36a3460b6741c2922ca83b25d87591c7",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/Source_Originals/LFS_000040440943.xlsx.json",
+      "size": 49381,
+      "sha256": "1c17ee3d4f94bede1de9fe40537101a2a2ee0deabbd86436a463267debf76a15",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/Source_Originals/LFS_000040440953.xlsx.json",
+      "size": 43649,
+      "sha256": "d7588dc61c77ee689acfb8423533b70328b134fab32446d4396f74ae106ca2c5",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/Source_Originals/hw_announce.pdf.json",
+      "size": 368813,
+      "sha256": "108cb740d66eb67a351ca16538c00ddcbcc9e78164c1b2aca1058f1d146ef593",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/Source_Originals/note01-j.pdf.json",
+      "size": 180852,
+      "sha256": "fd45d0feb78a79bb3821de7272ca09388060e9857542f7206a5107794aa7687b",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/Source_Originals/pp2023_gaiyou.pdf.json",
+      "size": 1840252,
+      "sha256": "eb0192b11745342fe7349fc10fc9be243a2fb780e193f9e7826ce046b20377ee",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/Source_Originals/yougo_kaisetsu.pdf.json",
+      "size": 255900,
+      "sha256": "e2fd623817dd65bf1f9d6970f8a639d2af9986cb00c81456a1cde530418df590",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/Statistics_Inputs.json",
+      "size": 51102,
+      "sha256": "12cd4cc4fe9c3c2ce88a5035ebf9f037251c2405814839b46588328d94a5dde4",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/UNIFORM_LEVEL_CONTROL/Bridge_Runtime_Source_Receipts.json",
+      "size": 6363,
+      "sha256": "907ddd9d6c569df002b372152fcccb9435b601d12143b949c31009add3ea0f37",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/UNIFORM_LEVEL_CONTROL/Case_Connection.json",
+      "size": 784,
+      "sha256": "f9401e575ea9b06aa40cf55bf999557d2007a13314215d05b9a52613057e0385",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/UNIFORM_LEVEL_CONTROL/Common_Trace_UNIFORM_LEVEL_CONTROL.json",
+      "size": 359098,
+      "sha256": "b055cdec150a6786240e803234153e8c6760912a29ff468ae4373b3f75e2b2bd",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/UNIFORM_LEVEL_CONTROL/Resolved_Common_Runtime_UNIFORM_LEVEL_CONTROL.py.txt",
+      "size": 65877,
+      "sha256": "d93a70ed5859aa3df2552ba71bffc13c19ccb57deeff83191305ef7e9ebcfade",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/UNIFORM_LEVEL_CONTROL/Runtime_Source_Receipts.json",
+      "size": 6140,
+      "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/Verification.json",
+      "size": 26273,
+      "sha256": "7179cada4ff30cf1199dadaf43f5ee495ce5f872b4820c2eb06655782a6dbc71",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-common-labor-national-statistics-connection-20261123/Verification_Checks.csv",
+      "size": 280326,
+      "sha256": "b456f489763e7af18a254eb6b0feb57f07f4bba7f97d91b8471ada1a191726c2",
+      "match": true
+    }
+  ]
+}

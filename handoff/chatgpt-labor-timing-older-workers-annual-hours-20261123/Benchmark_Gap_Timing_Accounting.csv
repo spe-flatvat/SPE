@@ -1,0 +1,8 @@
+component,persons,label
+old_model,68031652.825,proxy reference and definition accounting;notcausal identification of census vs sampling vs timing
+IPSS_to_Oct_population_basis,224666.17500000042,proxy reference and definition accounting;notcausal identification of census vs sampling vs timing
+Oct_to_firstday_monthly_mean_timing_proxy,49067.000000000175,proxy reference and definition accounting;notcausal identification of census vs sampling vs timing
+firstday_mean_to_LFS_population_coverage_residual,-20646.000000000182,proxy reference and definition accounting;notcausal identification of census vs sampling vs timing
+same_LFS_fine_rate_definition,-4739.999999999534,proxy reference and definition accounting;notcausal identification of census vs sampling vs timing
+published_rounding_residual,0,proxy reference and definition accounting;notcausal identification of census vs sampling vs timing
+LFS_minus_old,248347.17499999702,

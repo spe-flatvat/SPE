@@ -1,0 +1,106 @@
+{
+  "payload_fixed_commit": "24fa96b23807a572babcceb17934ba04dbcdf4fa",
+  "method": "Fixed-commit directory via connected GitHub; retrieved each mapped Git blob, rematerialized as UTF-8, and compared original bytes, size, and SHA-256.",
+  "matched": 14,
+  "failed": 0,
+  "files": [
+    {
+      "path": "Annual_F_SQ_N3_Comparison.csv",
+      "sha256": "2e96822d2aa9d14333e95cab8e6f9bbfdc0f6f620078a6c9826f3e0f6c1f23ea",
+      "size": 5210,
+      "git_blob_sha1": "d75935c3da1cdcc3a3f352372c0e32a524deb286",
+      "match": true
+    },
+    {
+      "path": "Annual_VAT_Diagnostic_2026_2055.csv",
+      "sha256": "6dd43720a395eb4fc39cb13ad20b8ee45af3320e362ca07ba80d9c3da7ed73d0",
+      "size": 55349,
+      "git_blob_sha1": "e7745c454b52b138debd57139297a27a5482e455",
+      "match": true
+    },
+    {
+      "path": "Diagnostic_Inputs.json",
+      "sha256": "6763c04a460aa9592023d5bd946d7e2129b0f382222417d40f450c71e53adbe3",
+      "size": 2919,
+      "git_blob_sha1": "48183a92a6a35047db6dbde55094d7e9d56624e3",
+      "match": true
+    },
+    {
+      "path": "Fixed_F_BASE_OFF_Excerpt.csv",
+      "sha256": "5a6cf1f77481307f426f0754e89479ab73fa025332afa9f1b0aa12475d6ebe3a",
+      "size": 21571,
+      "git_blob_sha1": "897d1f36ac06d47090110063c829c55995dca975",
+      "match": true
+    },
+    {
+      "path": "Manifest.json",
+      "sha256": "77fc4849a37ff64c797d3aaf8deab8214ed08d3b20dc8b7bd72ef4557e9fba01",
+      "size": 1794,
+      "git_blob_sha1": "615a24e11b5f08ab51e7a1c3636b0b7763ea580d",
+      "match": true
+    },
+    {
+      "path": "Medical_Historical_2024.csv",
+      "sha256": "c5ffa036d1ccff1335817c79587f968cb0dd6a374705fabffdd826a931a9a9ac",
+      "size": 285,
+      "git_blob_sha1": "7957c0f5978a2cd7dae872e57aa36fc7f15a0450",
+      "match": true
+    },
+    {
+      "path": "Policy_Cleanup_Notes_And_Simulation_Adoptions.md",
+      "sha256": "9f4e8d8a6340b91b3b09a506bbfb2b67118822742f060d80277f854e6aa647af",
+      "size": 1715,
+      "git_blob_sha1": "ff775927a05e152edd9c3b4e6726e807d7542a1d",
+      "match": true
+    },
+    {
+      "path": "Prior_VAT_Model.py",
+      "sha256": "8c55442439d20b750ba6576ce8efa8a98e3f37b92df070a6a99dc498cd173837",
+      "size": 27668,
+      "git_blob_sha1": "01f015e183ff585bbedf4aed8164391815313418",
+      "match": true
+    },
+    {
+      "path": "Recalculate.py",
+      "sha256": "179617b06b6353d2cec54189d1c748672a0feb693552d4279eee51e497026a31",
+      "size": 9176,
+      "git_blob_sha1": "736774fed7d48032596bde2092a156eed3e2ba7c",
+      "match": true
+    },
+    {
+      "path": "Report.md",
+      "sha256": "32bdcf7f1370d65f89c81b2df7d0a5f806bf2eccfb27675d81e1ea256154d3f8",
+      "size": 5930,
+      "git_blob_sha1": "426456dbbe40a7313f2b919fa30ee76937cadf42",
+      "match": true
+    },
+    {
+      "path": "Reproduction_Verification.json",
+      "sha256": "15f61cbf69f80adffdb4de501469cdd1e7617d0451232e05f167ce63e9d1c017",
+      "size": 555,
+      "git_blob_sha1": "05528fb8df17f1ff6d5a71876072d9b1e3969ea1",
+      "match": true
+    },
+    {
+      "path": "Scope_And_Tax_Treatment.csv",
+      "sha256": "b939e7e62f8d5c899340e8f63f40b2c1152e7944e8206608335877ec2337ce56",
+      "size": 4121,
+      "git_blob_sha1": "460b993b005d639fdef80e648b1d217d3603b002",
+      "match": true
+    },
+    {
+      "path": "Source_And_Assumption_Register.csv",
+      "sha256": "432e4ab4fb06a6650e393506ef582f9d8ce82eeaa1c18ac944223b572e3cee3d",
+      "size": 3264,
+      "git_blob_sha1": "8ba69a2189f10814a04f93235afbfeb83ac45bec",
+      "match": true
+    },
+    {
+      "path": "Validation.json",
+      "sha256": "6475e7c6e8ca796e7970f6cea13ca975220c3c8846b0a50574779d5492724082",
+      "size": 96,
+      "git_blob_sha1": "60a73742a49fac304c8ef9e72329696c3616cf52",
+      "match": true
+    }
+  ]
+}

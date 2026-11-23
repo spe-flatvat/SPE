@@ -1,0 +1,445 @@
+{
+  "status": "PASS",
+  "fixed_commit": "7dd893eeed781af2bb323c424b456fdd907a667f",
+  "retrieval_route": "GitHub origin git fetch fixed commit; git show commit:path",
+  "files_verified": 62,
+  "files": [
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/BASE_REPLAY/Common_Trace_BASE_REPLAY.json",
+      "bytes": 60423,
+      "sha256": "f571c808cdecb1e6c3ab9ae38e7fbab5fc5e564b1399ce4ca00d46c21b7e5d75",
+      "retrieved_sha256": "f571c808cdecb1e6c3ab9ae38e7fbab5fc5e564b1399ce4ca00d46c21b7e5d75",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/BASE_REPLAY/Resolved_Common_Runtime_BASE_REPLAY.py.txt",
+      "bytes": 65347,
+      "sha256": "1760b01c5f4d65db5a10233413e2191d9f387a604c08a19c51badbc324465ed6",
+      "retrieved_sha256": "1760b01c5f4d65db5a10233413e2191d9f387a604c08a19c51badbc324465ed6",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/BASE_REPLAY/Source_Receipts_BASE_REPLAY.json",
+      "bytes": 6140,
+      "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "retrieved_sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/Execution_Log.json",
+      "bytes": 3870,
+      "sha256": "c822b3adb232696e1de257842010e17d91d8ce34d2e5e37ef2c53df380c4cf58",
+      "retrieved_sha256": "c822b3adb232696e1de257842010e17d91d8ce34d2e5e37ef2c53df380c4cf58",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F/F_Actual_Annual.json",
+      "bytes": 522949,
+      "sha256": "cf13d4c267f30a361ed0f4aa3083893721413283247c846fdce477357c2f7e43",
+      "retrieved_sha256": "cf13d4c267f30a361ed0f4aa3083893721413283247c846fdce477357c2f7e43",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F/F_Common_Clinical_Accounts.json",
+      "bytes": 137652,
+      "sha256": "59ed84a212717960207931618b978bc974293177b5af83a8a79212aaa9546c91",
+      "retrieved_sha256": "59ed84a212717960207931618b978bc974293177b5af83a8a79212aaa9546c91",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F/F_Medical_Accounts.json",
+      "bytes": 148558,
+      "sha256": "8b324b0516f366c310e8e85daa6c05c1c46abd2c872e6b4cf10fd8e7b213fbba",
+      "retrieved_sha256": "8b324b0516f366c310e8e85daa6c05c1c46abd2c872e6b4cf10fd8e7b213fbba",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F/F_Medical_Reference_Inputs.json",
+      "bytes": 1791,
+      "sha256": "3afd44c02680757d419eea68d8cf52715ac092d030377675f3e369995c75ef76",
+      "retrieved_sha256": "3afd44c02680757d419eea68d8cf52715ac092d030377675f3e369995c75ef76",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F/F_Runtime_Trace.json",
+      "bytes": 27133,
+      "sha256": "7e777c2fb9e999f15ded82705a4dba2df0a0e358d0a233d2f2ebfdd9862dbff3",
+      "retrieved_sha256": "7e777c2fb9e999f15ded82705a4dba2df0a0e358d0a233d2f2ebfdd9862dbff3",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F/Source_Receipts_F.json",
+      "bytes": 3557,
+      "sha256": "6bc8cea4275249b8922ee16c6a437a9cedd43554d1a50313e7095bafceb57781",
+      "retrieved_sha256": "6bc8cea4275249b8922ee16c6a437a9cedd43554d1a50313e7095bafceb57781",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F_N3_SQ_Common_Condition_Compatibility.csv",
+      "bytes": 2580,
+      "sha256": "ccc688ecece0e4f12b7d3c65a304364f57b54725984f960c4ad8d13b40807dcb",
+      "retrieved_sha256": "ccc688ecece0e4f12b7d3c65a304364f57b54725984f960c4ad8d13b40807dcb",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F_OLD/F_Actual_Annual.json",
+      "bytes": 523036,
+      "sha256": "c8d67d94b60a0ce3021a11ddd67ea826136812f16d1e79d3a85ea898e2788066",
+      "retrieved_sha256": "c8d67d94b60a0ce3021a11ddd67ea826136812f16d1e79d3a85ea898e2788066",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F_OLD/F_Common_Clinical_Accounts.json",
+      "bytes": 137649,
+      "sha256": "746d8cb7cfa29a1b9483ca081459d4e6d599fbbd92bb55916d13ae1e081bf18d",
+      "retrieved_sha256": "746d8cb7cfa29a1b9483ca081459d4e6d599fbbd92bb55916d13ae1e081bf18d",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F_OLD/F_Medical_Accounts.json",
+      "bytes": 148573,
+      "sha256": "5a1d125c691a764df7968fc07392cfa0d825615da5bd562b1601eabf2732c87c",
+      "retrieved_sha256": "5a1d125c691a764df7968fc07392cfa0d825615da5bd562b1601eabf2732c87c",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F_OLD/F_Medical_Reference_Inputs.json",
+      "bytes": 1800,
+      "sha256": "81ce1454d70f189f3efacfeff66deaf8770dba1b66ab65d746adcb3f06a7513d",
+      "retrieved_sha256": "81ce1454d70f189f3efacfeff66deaf8770dba1b66ab65d746adcb3f06a7513d",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F_OLD/F_Runtime_Trace.json",
+      "bytes": 27134,
+      "sha256": "744505d4fc586c2dcc1d49df7816079ff076a5770e7fc2720511f3adcb268747",
+      "retrieved_sha256": "744505d4fc586c2dcc1d49df7816079ff076a5770e7fc2720511f3adcb268747",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F_OLD/Source_Receipts_F_OLD.json",
+      "bytes": 3557,
+      "sha256": "6bc8cea4275249b8922ee16c6a437a9cedd43554d1a50313e7095bafceb57781",
+      "retrieved_sha256": "6bc8cea4275249b8922ee16c6a437a9cedd43554d1a50313e7095bafceb57781",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/Finalize_Packet.py",
+      "bytes": 13690,
+      "sha256": "d9af2ea68f42c02d54ab7317a496dac39a1456e836a19f2709bffee38421782f",
+      "retrieved_sha256": "d9af2ea68f42c02d54ab7317a496dac39a1456e836a19f2709bffee38421782f",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/Fixed_Original_Policy_Receipts.json",
+      "bytes": 1527,
+      "sha256": "7d69a6566d15293c65f16bc4896e1fc83c7ca3fafc17cf9bde801e6a064856e5",
+      "retrieved_sha256": "7d69a6566d15293c65f16bc4896e1fc83c7ca3fafc17cf9bde801e6a064856e5",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/Fixed_Originals/FreedomPolicies.md",
+      "bytes": 9241,
+      "sha256": "0dedd2c1126613c30a7d96732d226cc787f6597437137424845d64d041db0204",
+      "retrieved_sha256": "0dedd2c1126613c30a7d96732d226cc787f6597437137424845d64d041db0204",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/Fixed_Originals/FreedomPolicies_Annex.md",
+      "bytes": 12319,
+      "sha256": "ee62de32582a0f6d559029e7e9810b161c6a975ff22b498493d9ca960ca29e83",
+      "retrieved_sha256": "ee62de32582a0f6d559029e7e9810b161c6a975ff22b498493d9ca960ca29e83",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/Fixed_Originals/New3linesPolicies.md",
+      "bytes": 7039,
+      "sha256": "2f5806addb870863961d9b6a6722d9c1e38bc2b097e1a6cd0e07b39f56b77830",
+      "retrieved_sha256": "2f5806addb870863961d9b6a6722d9c1e38bc2b097e1a6cd0e07b39f56b77830",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/Fixed_Originals/SPE_Work_SQ_Baseline_Contract_Integration_Three_Scenario_Recalculation_Request_20261123.md",
+      "bytes": 12142,
+      "sha256": "af204c75886ba54c2eb04b7b300703b2173a8d99c0ce9c83c1c8de50ddc2558e",
+      "retrieved_sha256": "af204c75886ba54c2eb04b7b300703b2173a8d99c0ce9c83c1c8de50ddc2558e",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/Fixed_Originals/StatusQuo.md",
+      "bytes": 8686,
+      "sha256": "eb5a95df122292465fc79c68a12b9e7c6f8c0e0f97f367eb28ed0b27f6264e30",
+      "retrieved_sha256": "eb5a95df122292465fc79c68a12b9e7c6f8c0e0f97f367eb28ed0b27f6264e30",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/Fixed_Source_Receipts.json",
+      "bytes": 10627,
+      "sha256": "c6303fa0dde18192edf3ae3cf1c7d111695b4c2213112ab309255b1828f2cc5c",
+      "retrieved_sha256": "c6303fa0dde18192edf3ae3cf1c7d111695b4c2213112ab309255b1828f2cc5c",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/KEYS_DEFAULT/Common_Trace_KEYS_DEFAULT.json",
+      "bytes": 60424,
+      "sha256": "91841ddd6f267fba48cfd195d825646b59be1dab0d1a8ef0704ae3fb31f46285",
+      "retrieved_sha256": "91841ddd6f267fba48cfd195d825646b59be1dab0d1a8ef0704ae3fb31f46285",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/KEYS_DEFAULT/Resolved_Common_Runtime_KEYS_DEFAULT.py.txt",
+      "bytes": 65371,
+      "sha256": "7a9df66ea095bed2e0af42b35f82d5f3e9e50c6b5daca8ef48c493b1408c7674",
+      "retrieved_sha256": "7a9df66ea095bed2e0af42b35f82d5f3e9e50c6b5daca8ef48c493b1408c7674",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/KEYS_DEFAULT/Source_Receipts_KEYS_DEFAULT.json",
+      "bytes": 6140,
+      "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "retrieved_sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/KEY_BASE_NONDEFAULT/Common_Trace_KEY_BASE_NONDEFAULT.json",
+      "bytes": 60440,
+      "sha256": "45a8ea4b168287eb7461f09f52a9716a3dcd417b634a61259476e8cde03d0539",
+      "retrieved_sha256": "45a8ea4b168287eb7461f09f52a9716a3dcd417b634a61259476e8cde03d0539",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/KEY_BASE_NONDEFAULT/Resolved_Common_Runtime_KEY_BASE_NONDEFAULT.py.txt",
+      "bytes": 65395,
+      "sha256": "17742b8d3c1d36aaa0f8391382769291fd03935d6f0e1f64e40ddc2fb8483d52",
+      "retrieved_sha256": "17742b8d3c1d36aaa0f8391382769291fd03935d6f0e1f64e40ddc2fb8483d52",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/KEY_BASE_NONDEFAULT/Source_Receipts_KEY_BASE_NONDEFAULT.json",
+      "bytes": 6140,
+      "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "retrieved_sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/KEY_CONFLICT_NONDEFAULT/Common_Trace_KEY_CONFLICT_NONDEFAULT.json",
+      "bytes": 60315,
+      "sha256": "ddc59d02745ab7fee221b19141ef02d91fbd2311099af6f43f04e407cf66ae93",
+      "retrieved_sha256": "ddc59d02745ab7fee221b19141ef02d91fbd2311099af6f43f04e407cf66ae93",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/KEY_CONFLICT_NONDEFAULT/Resolved_Common_Runtime_KEY_CONFLICT_NONDEFAULT.py.txt",
+      "bytes": 65405,
+      "sha256": "4295338ff4b1b61d5e0739ca6816d89e253b36c002d8ba2b77f66152b535fdf6",
+      "retrieved_sha256": "4295338ff4b1b61d5e0739ca6816d89e253b36c002d8ba2b77f66152b535fdf6",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/KEY_CONFLICT_NONDEFAULT/Source_Receipts_KEY_CONFLICT_NONDEFAULT.json",
+      "bytes": 6140,
+      "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "retrieved_sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/LEGACY_BASE_NONDEFAULT/Common_Trace_LEGACY_BASE_NONDEFAULT.json",
+      "bytes": 60434,
+      "sha256": "be2dd6f9981576e2b93b426a57e003d912a05c7fe224d1db2a23bee86a9ebf5b",
+      "retrieved_sha256": "be2dd6f9981576e2b93b426a57e003d912a05c7fe224d1db2a23bee86a9ebf5b",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/LEGACY_BASE_NONDEFAULT/Resolved_Common_Runtime_LEGACY_BASE_NONDEFAULT.py.txt",
+      "bytes": 65371,
+      "sha256": "82362a47412a242451b8f9bc27c5101ce205513d7ddb9176a5269d972e354233",
+      "retrieved_sha256": "82362a47412a242451b8f9bc27c5101ce205513d7ddb9176a5269d972e354233",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/LEGACY_BASE_NONDEFAULT/Source_Receipts_LEGACY_BASE_NONDEFAULT.json",
+      "bytes": 6140,
+      "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "retrieved_sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/LEGACY_CONFLICT_NONDEFAULT/Common_Trace_LEGACY_CONFLICT_NONDEFAULT.json",
+      "bytes": 60438,
+      "sha256": "debea873eb6fcc68ad49d6b87997f29c02c6d9301c52c0384353e197341e6b49",
+      "retrieved_sha256": "debea873eb6fcc68ad49d6b87997f29c02c6d9301c52c0384353e197341e6b49",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/LEGACY_CONFLICT_NONDEFAULT/Resolved_Common_Runtime_LEGACY_CONFLICT_NONDEFAULT.py.txt",
+      "bytes": 65381,
+      "sha256": "2f2c4d26767e7959609028e206cd629e6f7bec4544a6a0ab4ad07d2eafbb3316",
+      "retrieved_sha256": "2f2c4d26767e7959609028e206cd629e6f7bec4544a6a0ab4ad07d2eafbb3316",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/LEGACY_CONFLICT_NONDEFAULT/Source_Receipts_LEGACY_CONFLICT_NONDEFAULT.json",
+      "bytes": 6140,
+      "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "retrieved_sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/N3/N3_Actual_Annual.json",
+      "bytes": 94007,
+      "sha256": "7728c506a33d302fb2f6512defcda42008c980257db19fbb0a7507860d2f2e4a",
+      "retrieved_sha256": "7728c506a33d302fb2f6512defcda42008c980257db19fbb0a7507860d2f2e4a",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/N3/N3_Actual_Fiscal.json",
+      "bytes": 61546,
+      "sha256": "ef9485d8acab9746748f8a57042b71b2e84761bd36f252e5852920d0cb74376a",
+      "retrieved_sha256": "ef9485d8acab9746748f8a57042b71b2e84761bd36f252e5852920d0cb74376a",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/N3/N3_Common_Input_Contract.json",
+      "bytes": 139656,
+      "sha256": "a3ac335acfc40cc24ea37a5d628a3b46e872c34c465f61e69125d62cd86e1d2f",
+      "retrieved_sha256": "a3ac335acfc40cc24ea37a5d628a3b46e872c34c465f61e69125d62cd86e1d2f",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/N3/N3_Runtime_Checks.json",
+      "bytes": 38,
+      "sha256": "8be45753b6fbc70882ab996237942357f98ac32e4643161a9e09c24de7155b79",
+      "retrieved_sha256": "8be45753b6fbc70882ab996237942357f98ac32e4643161a9e09c24de7155b79",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/N3/N3_Runtime_Midpoints.json",
+      "bytes": 64749,
+      "sha256": "1fd4697d40f599a18823751bbf2a8bf60bb839e0ea669714a745324dbec877d3",
+      "retrieved_sha256": "1fd4697d40f599a18823751bbf2a8bf60bb839e0ea669714a745324dbec877d3",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/N3/N3_SQ_Denominator_States.json",
+      "bytes": 673563,
+      "sha256": "1ce949509472382859f2019347998b89e33364509ce7f9cee2d991800077fdfa",
+      "retrieved_sha256": "1ce949509472382859f2019347998b89e33364509ce7f9cee2d991800077fdfa",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/N3/Source_Receipts_N3.json",
+      "bytes": 5270,
+      "sha256": "ac2525409dd37ebea0df708b8da38c3c0fb8b95729ae2fdfef8fae27d7964f53",
+      "retrieved_sha256": "ac2525409dd37ebea0df708b8da38c3c0fb8b95729ae2fdfef8fae27d7964f53",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/Reproduction_Verification.json",
+      "bytes": 11803,
+      "sha256": "e2898e294cd66d48e3cadabe6350eea30b9cd34d4ef4a0009772625159283c51",
+      "retrieved_sha256": "e2898e294cd66d48e3cadabe6350eea30b9cd34d4ef4a0009772625159283c51",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/SPE_Claude_Independent_Recalculation_Request_DRAFT_20261123.md",
+      "bytes": 1866,
+      "sha256": "6232d3e6654afe2be581952f32ed759f94b77f6df7ccbc24ce9ea3fb06e912a7",
+      "retrieved_sha256": "6232d3e6654afe2be581952f32ed759f94b77f6df7ccbc24ce9ea3fb06e912a7",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/SPE_Claude_Verification_Packet_Manifest.json",
+      "bytes": 11241,
+      "sha256": "d570f173012e04063d65086076d03aa17a806d33c076ab34a329dda5c2e68087",
+      "retrieved_sha256": "d570f173012e04063d65086076d03aa17a806d33c076ab34a329dda5c2e68087",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/SPE_SQ_Baseline_And_Three_Scenario_Recalculation_Report_DRAFT_20261123.md",
+      "bytes": 10182,
+      "sha256": "390154f1e5c7b1d26a3ac13e3bba68cd97e556f7abe6fdb2ac1c456ff79cc696",
+      "retrieved_sha256": "390154f1e5c7b1d26a3ac13e3bba68cd97e556f7abe6fdb2ac1c456ff79cc696",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/SPE_Three_Scenario_Annual_Comparison_2026_2055.csv",
+      "bytes": 46387,
+      "sha256": "8bd352398aac6820740d2325fa3eb911a15f936b4ccd5120e9354ba16a1c9815",
+      "retrieved_sha256": "8bd352398aac6820740d2325fa3eb911a15f936b4ccd5120e9354ba16a1c9815",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/SPE_Three_Scenario_Case_Definitions.json",
+      "bytes": 2759,
+      "sha256": "4224de79ea1b8a95045888834ae1533b31d5c92587bb7b1b5dc510331820697d",
+      "retrieved_sha256": "4224de79ea1b8a95045888834ae1533b31d5c92587bb7b1b5dc510331820697d",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/SPE_Three_Scenario_Change_Attribution.csv",
+      "bytes": 6477,
+      "sha256": "5704dfd0988808c0a0374b735860f907a834522d270fa4f4655e72e4237075e5",
+      "retrieved_sha256": "5704dfd0988808c0a0374b735860f907a834522d270fa4f4655e72e4237075e5",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/SPE_Three_Scenario_Key_Years_And_Gaps.csv",
+      "bytes": 7919,
+      "sha256": "a1745421eafcf9f39c880772e1870f8a207c85eb7ed4fd4bb8fa3caa660c117e",
+      "retrieved_sha256": "a1745421eafcf9f39c880772e1870f8a207c85eb7ed4fd4bb8fa3caa660c117e",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/SQ_Baseline_2026_2055.csv",
+      "bytes": 14839,
+      "sha256": "be60cb1984779249e6103a21c0b0345d36574b0ffc02c0090c669e77c1da6bed",
+      "retrieved_sha256": "be60cb1984779249e6103a21c0b0345d36574b0ffc02c0090c669e77c1da6bed",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/SQ_Change_Candidates_And_Impact.csv",
+      "bytes": 33389,
+      "sha256": "fe6c6cf8e630e3ab2765d3222948b067e86291a1fc2470b42d430612516ff4db",
+      "retrieved_sha256": "fe6c6cf8e630e3ab2765d3222948b067e86291a1fc2470b42d430612516ff4db",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/SQ_Common_Macro_Contract_And_Variant_Provenance.csv",
+      "bytes": 6276,
+      "sha256": "3e5bdd30ac38807750ca98f58bf13424ecf6554bdbca5a20d62c726eceaddd2a",
+      "retrieved_sha256": "3e5bdd30ac38807750ca98f58bf13424ecf6554bdbca5a20d62c726eceaddd2a",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/SQ_Price_Event_Parameter_Trace.csv",
+      "bytes": 8931,
+      "sha256": "f7e47a81e3ee45f52f73d24072f7c3730d45b0b7e262d996d197a4fdfdd36bbe",
+      "retrieved_sha256": "f7e47a81e3ee45f52f73d24072f7c3730d45b0b7e262d996d197a4fdfdd36bbe",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/Three_Scenario_Reproduce.py",
+      "bytes": 15988,
+      "sha256": "4d4307093f3fc8fff87108ffd96a28e86852bc28a89f38cc6e60834bef5b6bb1",
+      "retrieved_sha256": "4d4307093f3fc8fff87108ffd96a28e86852bc28a89f38cc6e60834bef5b6bb1",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/Three_Scenario_Worker.py",
+      "bytes": 6545,
+      "sha256": "c7762a3d42cb73d58439ac818f3ed1d2250d2b85810df53ca142bf0b33719f17",
+      "retrieved_sha256": "c7762a3d42cb73d58439ac818f3ed1d2250d2b85810df53ca142bf0b33719f17",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/Verification.json",
+      "bytes": 374,
+      "sha256": "80d3aca47006100270185873c3900e244426495dbe5eab95f94809184adcc95b",
+      "retrieved_sha256": "80d3aca47006100270185873c3900e244426495dbe5eab95f94809184adcc95b",
+      "match": true
+    }
+  ],
+  "changed_paths_only_authorized_directory": true,
+  "manifest_self_exclusion": "Manifest excludes itself and this subsequent custody record; final delivery commit verification reported separately",
+  "Claude_verification_performed": false
+}

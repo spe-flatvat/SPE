@@ -1,0 +1,30 @@
+{
+  "checks": 1080,
+  "failures": 0,
+  "groups": {
+    "integrated_year": 30,
+    "fixed_reference": 240,
+    "year": 90,
+    "fixed_cash": 90,
+    "fixed_split": 90,
+    "fixed_education_residual": 90,
+    "vintage_principal": 90,
+    "education_closure": 90,
+    "combined_cash": 90,
+    "combined_stock_flow": 90,
+    "no_medical_transfer": 90
+  },
+  "independent_process_byte_matches": [
+    {
+      "path": "Annual.csv",
+      "size": 24193,
+      "sha256": "e2b6852bb2b8fb1b3c67da073f53fe82d4e20e709287ba6b0bd5ddb1dc52841b"
+    },
+    {
+      "path": "Comparison.csv",
+      "size": 8793,
+      "sha256": "84a0a3bd7c697924cfc84a65dbcd92f332ef8966cd66bd483252528070bfe191"
+    }
+  ],
+  "total_new_checks": 1082
+}

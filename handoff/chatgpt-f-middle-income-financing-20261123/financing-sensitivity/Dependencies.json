@@ -1,0 +1,14 @@
+[
+  {
+    "ref": "5f5443d168c9225b33e7d7c85ae6e7d119054f4a",
+    "path": "handoff/chatgpt-f-median-fiscal-residual-20261123/fiscal-residual/Annual.csv",
+    "size": 17467,
+    "sha256": "dc6eb402cef1fae32a0e420be919a9c4a29e76776efd8d6df30d92e784e25d54"
+  },
+  {
+    "ref": "5f5443d168c9225b33e7d7c85ae6e7d119054f4a",
+    "path": "handoff/chatgpt-f-median-fiscal-residual-20261123/integrated-comparison/Annual.csv",
+    "size": 54394,
+    "sha256": "363b5df451b8d725e910c14601a70dc0de083fbd2ba37ea96a243623c089abda"
+  }
+]

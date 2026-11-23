@@ -1,0 +1,419 @@
+{
+  "status": "CUSTODY PASS",
+  "repository": "spe-flatvat/SPE",
+  "branch": "work/chatgpt-handoff",
+  "directory": "handoff/chatgpt-f-2035-education-trigger-sensitivity-20261123",
+  "payload_fixed_commit": "dcd003e695385f060151123f34fede7c57601b35",
+  "scope": "48 payload originals including 30 reused pinned source/input files; this receipt is excluded from its own hash list",
+  "retrieval": "connected GitHub fixed-commit tree (not truncated) -> each mapped Git blob -> local UTF-8 bytes",
+  "matched": 48,
+  "failed": 0,
+  "files": [
+    {
+      "path": "Annual_2026_2055.csv",
+      "size": 105075,
+      "sha256": "0b0b31c44cd00b804fb42339de5eff0d28e762d42590767f243f9e1e97fc5dea",
+      "match": true,
+      "git_blob_sha1": "4c7f37e0fddd761d193693fb7d7947f88956a67e",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "Annual_Difference_vs_Base.csv",
+      "size": 238787,
+      "sha256": "ccfc6013d142ebdf895a49db5464e226ce477e532387e98a33f3bc3d16665687",
+      "match": true,
+      "git_blob_sha1": "49353bbec129b9d9e3953108bc32d997692175bc",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "Education_Runtime_Bridge.csv",
+      "size": 36694,
+      "sha256": "3fe2afeb26303446080d078971a3d377c2015d98b79567fdf53c1522c2818794",
+      "match": true,
+      "git_blob_sha1": "ebb2989d5d67b4a0f2a4694cc632cc76da320ec9",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "Key_Years.csv",
+      "size": 56079,
+      "sha256": "6cdd24252d8615dad14a70ad4a027da9c06da27e6533a8bbcc2a7a2a7a1af920",
+      "match": true,
+      "git_blob_sha1": "ed45b249c6539a8e26f17b9a12e0516c8c681eaf",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "Manifest.json",
+      "size": 11825,
+      "sha256": "02ca5b9168d0d9d508f58fc392be8ea90468227b80f61aa7c9060a9a613e367d",
+      "match": true,
+      "git_blob_sha1": "99d0fe6802e00b8c18127418da353b0f6dd054ef",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "Policy_Cleanup_Notes_And_Simulation_Adoptions.md",
+      "size": 2458,
+      "sha256": "9aaf8def85c3ee73a5fef3c8b7c7733e7574b4761781b71808123b39ef84379f",
+      "match": true,
+      "git_blob_sha1": "aaf9ca6294ffc2fdb143a4d59d1399e0e68c2e37",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "Recalculate.py",
+      "size": 11389,
+      "sha256": "3c7cde2a2098ee672868edba3ad20d5dd14a19d9f493e6e90205c6fcab830578",
+      "match": true,
+      "git_blob_sha1": "7ae58ad87e3fdbde44fcb562549016e48bee89cd",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "Report.md",
+      "size": 6879,
+      "sha256": "5756d8118411720be1594d021323725c6768abf6fd6e36437c35675bf4e7bee6",
+      "match": true,
+      "git_blob_sha1": "7a3c6b8c1246ed1ff8039129bb669f976851900a",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "Reproduction.md",
+      "size": 1837,
+      "sha256": "a72cc7df6b8cc8baf6893db093dc7d69d428493bc5bf053150270ae49622c36a",
+      "match": true,
+      "git_blob_sha1": "b0aae46d896b5d740f8b8dd484dae1924245a0e4",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "Reproduction_Verification.json",
+      "size": 2916,
+      "sha256": "36ee8bcf9b7d84023c5435c729f8b18a7f3e4ce6bbb7c07b3d6627c823c2bbaf",
+      "match": true,
+      "git_blob_sha1": "9c6607d03917190c6af05793bf5323473dd6bdbe",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "Scenario_Inputs.json",
+      "size": 1025,
+      "sha256": "adc3ecc5183ea5aeb9c89fb91bd6783f176367a2706b36dade2865e1b50d4b0c",
+      "match": true,
+      "git_blob_sha1": "f47ea5fde6cb0d13a55ad14f8710e44404ecb74f",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "Source_Manifest.json",
+      "size": 11705,
+      "sha256": "7fb33795666d562d74d4f09f0f155e9dbd9073c79df5dba2b8b9a59d90b619e5",
+      "match": true,
+      "git_blob_sha1": "0758e38fc20bdb74f827c61f5afd401010572e77",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "Source_Receipts.json",
+      "size": 15485,
+      "sha256": "c49ffb8bfdc0cb3a01f9804ff7bc0429c25803fb3ff23b51eb364f879191679d",
+      "match": true,
+      "git_blob_sha1": "8e7ec5827d2ec143e8e2f03afc41b9cdc203e8fe",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "Trigger_Decision.json",
+      "size": 389,
+      "sha256": "ccf5ac18b4f8ea5d564f7501475e6b49dc02145feb5c7ef9b009274043b52c3a",
+      "match": true,
+      "git_blob_sha1": "0ed5e77dca8f407ccc24c27528503e951ebeb23f",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "Validation.json",
+      "size": 245,
+      "sha256": "cd5dd5678e54b039859f65b83deac10a7195b55350840dbb5f5ae0124712cceb",
+      "match": true,
+      "git_blob_sha1": "2ee3f3d60172e5858e6b2f5db483a73f995bb096",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "Validation_Checks.csv",
+      "size": 2885768,
+      "sha256": "093a4bf9f65cf9cd81b73a16a4d545b36a6c2da1d0a4f619c9791295754ea4d2",
+      "match": true,
+      "git_blob_sha1": "ca7d310bd75f189c7af61cc3d3b62ac69f6975e2",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "Verify_Reproduction.py",
+      "size": 736,
+      "sha256": "a97fe217d70ff877896c1cc658433b9fa6a80ecc254834044ee2c4cfe15df503",
+      "match": true,
+      "git_blob_sha1": "631f72779565dbfd8478230a76c04807bff14312",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "Worker.py",
+      "size": 2018,
+      "sha256": "de9b2d785759965eaf92d0f35abdfe3348894041e16bf06a8a0351213c931112",
+      "match": true,
+      "git_blob_sha1": "ba828abb3fe3c349a440710c83849b536dc4268c",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "sources/Prior_Annual.csv",
+      "size": 972597,
+      "sha256": "1b6337ff8d993a65a751730ac278734fa74de49b8b9baa56c20e7fb733712c16",
+      "match": true,
+      "git_blob_sha1": "60525a370c4d77cf577a6ad46221c8b807426fc6",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "sources/Prior_Bridge.csv",
+      "size": 344487,
+      "sha256": "ad328fdcffb07449fd9de0c9cb4f6b35d8bd442dd938ff0ec07f3cd12a09f087",
+      "match": true,
+      "git_blob_sha1": "58abd14ffea110446cdfeb02a7d2fe8e8705db97",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "sources/Prior_Worker.py",
+      "size": 6855,
+      "sha256": "d85050b5aa9eb4c238aa31efdd4dbccf8bd64a16a34f8ba199d6a418410fa9c6",
+      "match": true,
+      "git_blob_sha1": "2fd93000c4ef53688797d861caa5782e313b55e0",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "sources/handoff/chatgpt-f-policy-cohort-fte-20261123/ANNUAL_FINE_WEEK_HOURS/Annual_Comparison_2026_2055.csv",
+      "size": 24781,
+      "sha256": "6215ce2ba14f6d293afab761a10a9a202d777e3f79675fdbe9c633db580b6ce8",
+      "match": true,
+      "git_blob_sha1": "1f4fe6211674dc4a1276525e4ced24f0a823aeac",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "sources/handoff/chatgpt-f-policy-cohort-fte-20261123/ANNUAL_FINE_WEEK_HOURS/Connection_Inputs.json",
+      "size": 1631,
+      "sha256": "1ca67f17e380531bc28b850f4aca0fbb8f3446f63f07f560fa4d52c0fab136dc",
+      "match": true,
+      "git_blob_sha1": "ce82f01b79f0d52bccf5aa9e8511d7d3fa9969c3",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "sources/handoff/chatgpt-f-policy-cohort-fte-20261123/ANNUAL_FINE_WEEK_HOURS/F_Runtime_Trace.json",
+      "size": 33280,
+      "sha256": "b658f6d4df65fcbf0d26397c4333d5ca966b2ded2d4b894291a9998234ea29bb",
+      "match": true,
+      "git_blob_sha1": "8bb4cd6c3dfaa46c49c165055f53fb7d1ec55100",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "sources/handoff/chatgpt-n3-aligned-labor-baseline-20261123/SQ_F_N3_Aligned_Labor_Annual_2026_2055.csv",
+      "size": 115311,
+      "sha256": "8b3e073df5798840124372cd59260dcd6cd5e122306437ced61b222910c2d381",
+      "match": true,
+      "git_blob_sha1": "f9e47f6e7826611cab87188d56bb62fe7a9a7faf",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "sources/handoff/chatgpt-n3-transition-financing-full-dynamics-20261122/Medical_Initialization.json",
+      "size": 124011,
+      "sha256": "3e97b56c0d3dd4b83b6c8545d369f15e20ac8d519b698d0bddaf3b743068b1ea",
+      "match": true,
+      "git_blob_sha1": "07df976fb2080c8c9c307765e3b233a41cd93524",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "sources/handoff/f-common-endoflife-finalization-20261121/CommonEndOfLife.py",
+      "size": 10956,
+      "sha256": "c930a8df539ff676e55180b75cfe899084caa656f738c371aac44ce1f7693fae",
+      "match": true,
+      "git_blob_sha1": "1456928a795ecb625c5bc257c95d1b19ea998caa",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "sources/handoff/f-common-endoflife-finalization-20261121/CommonInterface.py",
+      "size": 420,
+      "sha256": "4b56a30806da8bd5f39566a622fac1119e93f0842d40983deafb6dca4c88f4e2",
+      "match": true,
+      "git_blob_sha1": "e7e9bc974cfc133e976377b3849c00af3dae131c",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "sources/handoff/f-common-endoflife-finalization-20261121/Demand.py",
+      "size": 2544,
+      "sha256": "fab0a6c505c9bb5041bfb38ec199617b6c4171891ec4fc49ba90eec2ae05f30d",
+      "match": true,
+      "git_blob_sha1": "f50c1beb2f9c5ff7a90d0bbd0d83d5930b8a312d",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "sources/handoff/f-common-endoflife-finalization-20261121/FMedical.py",
+      "size": 17478,
+      "sha256": "b36a21bead583b13c338f31dcd42e90c1e24a2814024024e872e993a9754dd80",
+      "match": true,
+      "git_blob_sha1": "86f171044b67cd40a92a294a3b93aeaaeabaceff",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "sources/handoff/f-common-endoflife-finalization-20261121/Inputs.json",
+      "size": 27093,
+      "sha256": "6da4648a8823c041197e9082d6814b6e19710afdf7bb7c7130dc58d4cabd6095",
+      "match": true,
+      "git_blob_sha1": "b5e2b373f894117794522eefbc5f7f004bc2b272",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "sources/handoff/f-common-endoflife-finalization-20261121/Model.py",
+      "size": 15152,
+      "sha256": "e45b234545e17cfc486a488a4c06f68e49b03234d2847142ded3ce6c2998d4fd",
+      "match": true,
+      "git_blob_sha1": "b03f28d39b6125d1a524a7be69a2b06fd10d9495",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "sources/handoff/f-education-20261121/Annual.csv",
+      "size": 1996375,
+      "sha256": "e9cc9c08e5a5529d6da208c49822c144ee2a5a7827dc5e7aa200a62fde541db6",
+      "match": true,
+      "git_blob_sha1": "d3e077b03f42bd3d56cfcceb246a8e0645134c5d",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "sources/handoff/f-education-20261121/Inputs.json",
+      "size": 6825,
+      "sha256": "d796d432c1f625784c322bbb330d5da8ab59fbbdfa6043cf3a10538c2901e651",
+      "match": true,
+      "git_blob_sha1": "c359cee365beb0097104d7244f3dab90db447039",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "sources/handoff/f-education-20261121/Model.py",
+      "size": 24178,
+      "sha256": "08d6b409e9e815e6eb34878c69457c77a7a7e7fe9f5b85fa2debeb0f1a8ee88c",
+      "match": true,
+      "git_blob_sha1": "bb74b89b9e03b2c1416c7ab4e65261412374c631",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "sources/handoff/f-household-social-20261120/Inputs.json",
+      "size": 1746742,
+      "sha256": "8a7df2e6b7228177b28346386437b3b7dc6a5f1b8547507a114daf1fc5472766",
+      "match": true,
+      "git_blob_sha1": "31d2ea48839b699d9047ab7039bdf7a1b190e4ed",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "sources/handoff/f-integrated-20261121/Annual.csv",
+      "size": 2082920,
+      "sha256": "eb92953e843dfd7b84a0476b2f41ae310cafbf976cb857895b7363beabdf4772",
+      "match": true,
+      "git_blob_sha1": "b4b399fb2c29906d3fc06d87b61864196dd6a679",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "sources/handoff/f-integrated-20261121/Inputs.json",
+      "size": 7865,
+      "sha256": "87d454a5205869e58dee2836103499ee1eee89105cf9d14c62724df0561c66f5",
+      "match": true,
+      "git_blob_sha1": "b04f6979bf5e8736da24d6068eaafe43cfd5fd16",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "sources/handoff/f-integrated-20261121/Model.py",
+      "size": 21624,
+      "sha256": "42adedbe340a089e126c22987df89894943fcece54b6ac85ffa002fb886bf71c",
+      "match": true,
+      "git_blob_sha1": "5005992f4511e1fd9b69b841f7eb774eb845a982",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "sources/handoff/f-medical-common-20261121/Annual.csv",
+      "size": 3077541,
+      "sha256": "fb778157a62bd604c0be3cbf3d3786142719199b4de84b5debfbb6a7674d4cb6",
+      "match": true,
+      "git_blob_sha1": "9d113c335d11641fa2e0ee3572243b149d3b20ba",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "sources/handoff/f-medical-common-20261121/Common_EndOfLife.csv",
+      "size": 567389,
+      "sha256": "0916d3c3dcf2d027fb0ae557ec9ae21c236250e6868ddb2b4b63349f7c63dd34",
+      "match": true,
+      "git_blob_sha1": "9193f70d1f82dd3ad59e77a1452f255bab1cd6a4",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "sources/handoff/f-medical-common-20261121/Medical_Accounts.csv",
+      "size": 482348,
+      "sha256": "78b309b3b5a38b4f6168c36c7cad929899baa743114634c6165a84b8b869e605",
+      "match": true,
+      "git_blob_sha1": "bebb9138b6da9913ad70d3d14fba341ff881be8c",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "sources/handoff/f-pension-policy-20261120/Inputs.json",
+      "size": 1282097,
+      "sha256": "5969792ecb9218dc3668d56ec426076d0359e1e4c403914f535390972f082514",
+      "match": true,
+      "git_blob_sha1": "39c988f9d2e570e60531baedbb5d454f92045a82",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "sources/handoff/f-vat-core-20261120/Annual.csv",
+      "size": 2087811,
+      "sha256": "35c78607be9b171f82201dc4b7ffadf9a6cf85bd19d6185bd37e120f2219364c",
+      "match": true,
+      "git_blob_sha1": "db80b57d4bf3250a2f3676b8941c3c93ee2de5ff",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "sources/handoff/f-vat-core-20261120/Inputs.json",
+      "size": 2559157,
+      "sha256": "f9de79d09488aa26cefc27a6a43c8d0d0b165b054b04839a4bace97ecf6cd2a9",
+      "match": true,
+      "git_blob_sha1": "1c9d0d14e25b5cfbff84fbd257dafacdfc64c0eb",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "sources/handoff/f-vat-core-20261120/Model.py",
+      "size": 27668,
+      "sha256": "8c55442439d20b750ba6576ce8efa8a98e3f37b92df070a6a99dc498cd173837",
+      "match": true,
+      "git_blob_sha1": "01f015e183ff585bbedf4aed8164391815313418",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "sources/policies/FreedomPolicies.md",
+      "size": 9241,
+      "sha256": "0dedd2c1126613c30a7d96732d226cc787f6597437137424845d64d041db0204",
+      "match": true,
+      "git_blob_sha1": "3deb49dbe70734aa91e75856226e84e4b66db8e9",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    },
+    {
+      "path": "sources/policies/FreedomPolicies_Annex.md",
+      "size": 12319,
+      "sha256": "ee62de32582a0f6d559029e7e9810b161c6a975ff22b498493d9ca960ca29e83",
+      "match": true,
+      "git_blob_sha1": "86df882940aae4b851d4b1d11d488f4d2606bd5e",
+      "pinned_commit": "dcd003e695385f060151123f34fede7c57601b35"
+    }
+  ],
+  "execution": {
+    "case": "ANNUAL_FINE_WEEK_HOURS",
+    "paths": 5,
+    "year_rows": 150,
+    "new_checks": 34935,
+    "failed": 0,
+    "separate_process_reproduction": {
+      "paths": 5,
+      "year_rows": 150,
+      "matched_output_files": 9,
+      "failed": 0
+    }
+  },
+  "policy_adopted": false,
+  "boundaries": {
+    "RP023_M1925": "HOLD",
+    "RP024": "PENDING",
+    "PR_merge": false,
+    "formal_acceptance": false,
+    "existing_policy_engine_main_unchanged": true
+  },
+  "receipt_verification": "This receipt and all payload files will be retrieved and byte-compared again using the subsequent final fixed commit; its SHA and result are supplied in the final assistant report."
+}

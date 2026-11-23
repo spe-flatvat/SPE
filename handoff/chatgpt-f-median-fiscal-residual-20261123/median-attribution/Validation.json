@@ -1,0 +1,47 @@
+{
+  "checks": 18031,
+  "failures": 0,
+  "groups": {
+    "2026_deflator": 1,
+    "year": 30,
+    "fixed_F": 90,
+    "same_cell_universe": 30,
+    "income_band_count": 30,
+    "household_weight": 30,
+    "person_weight": 30,
+    "national_trigger": 30,
+    "median_bridge": 30,
+    "fixed_stage1": 210,
+    "indexed_baseline_cell": 30,
+    "positive_weight_and_size": 3480,
+    "cash_components": 3480,
+    "cash_delta": 3480,
+    "premium_relief_once": 3480,
+    "in_kind_outside_cash": 3480,
+    "policy_aggregation": 90
+  },
+  "independent_process_byte_checks": 4,
+  "independent_process_matches": [
+    {
+      "path": "Annual.csv",
+      "size": 12965,
+      "sha256": "dabfdfa8595e292ecda27161d403fc8cb49fa3786eab409d0a30510e6ece0f70"
+    },
+    {
+      "path": "Cell_Detail.csv",
+      "size": 42313,
+      "sha256": "7437c97b97b93f06d570a9a0aa87a119b9bb69bda3034530f4786420aaff709d"
+    },
+    {
+      "path": "F_Actual_Annual.json",
+      "size": 525435,
+      "sha256": "2bd036ef302b6048c018c92862dee243298e1ceaaaa12a916afa6951ddbf4cbd"
+    },
+    {
+      "path": "Household_Cells.json",
+      "size": 6093780,
+      "sha256": "80812dd05b5d9d933534a78f8703bb098f21125857bd96741a257d3352c0d315"
+    }
+  ],
+  "total_new_checks": 18035
+}

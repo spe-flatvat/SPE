@@ -1,0 +1,429 @@
+{
+  "status": "CUSTODY PASS — 51 payload originals",
+  "artifact_fixed_commit": "f22b9b3c31ef831c1112a37baf7953ab5dc73b88",
+  "branch": "work/chatgpt-handoff",
+  "directory": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123",
+  "retrieval": "connected GitHub fetch_file with explicit fixed commit; original CRLF CSV fetched as base64 to preserve actual bytes",
+  "files": [
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/Annual_Comparison_All.csv",
+      "size": 312280,
+      "sha256": "5157024056b6ca68e90937177f9a7d6054cfafd33024c7d36232519367953395",
+      "retrieved_size": 312280,
+      "retrieved_sha256": "5157024056b6ca68e90937177f9a7d6054cfafd33024c7d36232519367953395",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/Branch_Definitions.json",
+      "size": 674,
+      "sha256": "3786dcd40860c6407429550bbb64fc53b5a745e0e52c2a0ed45d15ada19a4559",
+      "retrieved_size": 674,
+      "retrieved_sha256": "3786dcd40860c6407429550bbb64fc53b5a745e0e52c2a0ed45d15ada19a4559",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/Build_Foreign_Source.py",
+      "size": 4228,
+      "sha256": "7a914395caacc4a777bd8c2247881e355a81ef081dce60d988442267c0083511",
+      "retrieved_size": 4228,
+      "retrieved_sha256": "7a914395caacc4a777bd8c2247881e355a81ef081dce60d988442267c0083511",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/D_GDP_LABOR_2035__ANNUAL_FINE_WEEK_HOURS/Annual_2026_2055.csv",
+      "size": 30217,
+      "sha256": "6211edc65148aae989412c61f9a563bb30918b4a5d206cdbdc25b65424b176db",
+      "retrieved_size": 30217,
+      "retrieved_sha256": "6211edc65148aae989412c61f9a563bb30918b4a5d206cdbdc25b65424b176db",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/D_GDP_LABOR_2035__ANNUAL_FINE_WEEK_HOURS/Connection_Inputs.json",
+      "size": 3178,
+      "sha256": "a77e6538da32664dff2e213aa7a712c1555f08e912dc86663728fb37417de8a5",
+      "retrieved_size": 3178,
+      "retrieved_sha256": "a77e6538da32664dff2e213aa7a712c1555f08e912dc86663728fb37417de8a5",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/D_GDP_LABOR_2035__ANNUAL_FINE_WEEK_HOURS/Resolved_Foreign_Overlay.py.txt",
+      "size": 34149,
+      "sha256": "19cb378775467f3b63443c68f41cfd4e93510433311d34a9400bfdbbb90e636c",
+      "retrieved_size": 34149,
+      "retrieved_sha256": "19cb378775467f3b63443c68f41cfd4e93510433311d34a9400bfdbbb90e636c",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/D_GDP_PROGRAM_2035__ANNUAL_FINE_WEEK_HOURS/Annual_2026_2055.csv",
+      "size": 27784,
+      "sha256": "f73492d3127ee43cebd32615fd35a9ab806ff420b928e8bfd8d5a28e15d5f5c5",
+      "retrieved_size": 27784,
+      "retrieved_sha256": "f73492d3127ee43cebd32615fd35a9ab806ff420b928e8bfd8d5a28e15d5f5c5",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/D_GDP_PROGRAM_2035__ANNUAL_FINE_WEEK_HOURS/Connection_Inputs.json",
+      "size": 3180,
+      "sha256": "d14590adc9d9d70ee6d01af95a1072a3a9078fa2110e1a992f885f3d2cd549f1",
+      "retrieved_size": 3180,
+      "retrieved_sha256": "d14590adc9d9d70ee6d01af95a1072a3a9078fa2110e1a992f885f3d2cd549f1",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/D_GDP_PROGRAM_2035__ANNUAL_FINE_WEEK_HOURS/Resolved_Foreign_Overlay.py.txt",
+      "size": 34151,
+      "sha256": "22ffbe24681d9837e1371df23696b5dc1cbaf21594ace0dd9ef73f15e5b95930",
+      "retrieved_size": 34151,
+      "retrieved_sha256": "22ffbe24681d9837e1371df23696b5dc1cbaf21594ace0dd9ef73f15e5b95930",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/D_GDP_VA_2035__ANNUAL_FINE_WEEK_HOURS/Annual_2026_2055.csv",
+      "size": 29734,
+      "sha256": "17dccfa1ca60c220ec625706178a2f500e78493f0397a8ff41c29862ffc1aed3",
+      "retrieved_size": 29734,
+      "retrieved_sha256": "17dccfa1ca60c220ec625706178a2f500e78493f0397a8ff41c29862ffc1aed3",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/D_GDP_VA_2035__ANNUAL_FINE_WEEK_HOURS/Connection_Inputs.json",
+      "size": 3175,
+      "sha256": "2b63e3e5a3fd695ff168fbf3e0cfa76c0dcbcddc5b2f76dd83ce1b7740218e89",
+      "retrieved_size": 3175,
+      "retrieved_sha256": "2b63e3e5a3fd695ff168fbf3e0cfa76c0dcbcddc5b2f76dd83ce1b7740218e89",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/D_GDP_VA_2035__ANNUAL_FINE_WEEK_HOURS/Resolved_Foreign_Overlay.py.txt",
+      "size": 34146,
+      "sha256": "0106d71d50cefcaec48e9fd9fc8ee5c2a730f6dc9820216809877120f62939b7",
+      "retrieved_size": 34146,
+      "retrieved_sha256": "0106d71d50cefcaec48e9fd9fc8ee5c2a730f6dc9820216809877120f62939b7",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/D_GDP_VA_ANNUAL__ANNUAL_FINE_WEEK_HOURS/Annual_2026_2055.csv",
+      "size": 29794,
+      "sha256": "55216512db51cccbf3198c5a1c655c567e3b56fa65d1a78dd1196df85d66f57e",
+      "retrieved_size": 29794,
+      "retrieved_sha256": "55216512db51cccbf3198c5a1c655c567e3b56fa65d1a78dd1196df85d66f57e",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/D_GDP_VA_ANNUAL__ANNUAL_FINE_WEEK_HOURS/Connection_Inputs.json",
+      "size": 3177,
+      "sha256": "5d95a571dc33777eba909a3c688acbda3a845367b2e06c1b2af576b1b08abfd6",
+      "retrieved_size": 3177,
+      "retrieved_sha256": "5d95a571dc33777eba909a3c688acbda3a845367b2e06c1b2af576b1b08abfd6",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/D_GDP_VA_ANNUAL__ANNUAL_FINE_WEEK_HOURS/Resolved_Foreign_Overlay.py.txt",
+      "size": 34145,
+      "sha256": "4bb2750a0e1b2f5e413955f527f600ab3b3653a6d3d486ec4fa2d527e46b4ae1",
+      "retrieved_size": 34145,
+      "retrieved_sha256": "4bb2750a0e1b2f5e413955f527f600ab3b3653a6d3d486ec4fa2d527e46b4ae1",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/D_POP3_2035__ANNUAL_FINE_WEEK_HOURS/Annual_2026_2055.csv",
+      "size": 28617,
+      "sha256": "5e3f3bfeb066ab3a89ea01a16cdf14680fa52b74210e93f9c7d964bd9ab37bc4",
+      "retrieved_size": 28617,
+      "retrieved_sha256": "5e3f3bfeb066ab3a89ea01a16cdf14680fa52b74210e93f9c7d964bd9ab37bc4",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/D_POP3_2035__ANNUAL_FINE_WEEK_HOURS/Connection_Inputs.json",
+      "size": 3173,
+      "sha256": "747c04083b63c8387dce93aa6842dc8010a46b4a521b818a0df0c2aeed4aa2e9",
+      "retrieved_size": 3173,
+      "retrieved_sha256": "747c04083b63c8387dce93aa6842dc8010a46b4a521b818a0df0c2aeed4aa2e9",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/D_POP3_2035__ANNUAL_FINE_WEEK_HOURS/Resolved_Foreign_Overlay.py.txt",
+      "size": 34166,
+      "sha256": "fe955f292e9f60aef832ec8df2112c39ad4fa0707db66e58b70aab9fbd65036e",
+      "retrieved_size": 34166,
+      "retrieved_sha256": "fe955f292e9f60aef832ec8df2112c39ad4fa0707db66e58b70aab9fbd65036e",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/D_POP5_2035__ANNUAL_FINE_WEEK_HOURS/Annual_2026_2055.csv",
+      "size": 28674,
+      "sha256": "5ecdb56be27d9cd0497b5c9676bf91d79ddc2f97c9dd5b38769ad6a091fc11e6",
+      "retrieved_size": 28674,
+      "retrieved_sha256": "5ecdb56be27d9cd0497b5c9676bf91d79ddc2f97c9dd5b38769ad6a091fc11e6",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/D_POP5_2035__ANNUAL_FINE_WEEK_HOURS/Connection_Inputs.json",
+      "size": 3173,
+      "sha256": "012013e92230d70aa69c05726c8c1006b8ffa93ba9b012cc1fd64ed2b37edb9c",
+      "retrieved_size": 3173,
+      "retrieved_sha256": "012013e92230d70aa69c05726c8c1006b8ffa93ba9b012cc1fd64ed2b37edb9c",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/D_POP5_2035__ANNUAL_FINE_WEEK_HOURS/Resolved_Foreign_Overlay.py.txt",
+      "size": 34166,
+      "sha256": "21256abb1bfad61618c4a5cfc37b1a55cf1e60286ec5140b77a4f1cc6834de98",
+      "retrieved_size": 34166,
+      "retrieved_sha256": "21256abb1bfad61618c4a5cfc37b1a55cf1e60286ec5140b77a4f1cc6834de98",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/Definitions_And_Unresolved.md",
+      "size": 4500,
+      "sha256": "e7287e95f32571c9877626bb07d21e1a3f4b2621b3a365962f6e7ddbf9989300",
+      "retrieved_size": 4500,
+      "retrieved_sha256": "e7287e95f32571c9877626bb07d21e1a3f4b2621b3a365962f6e7ddbf9989300",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/Execution_Log.json",
+      "size": 1951,
+      "sha256": "986a16e14ccc03cb77f6a456b54d58a5f754eb0719dd30882875e24322c09a47",
+      "retrieved_size": 1951,
+      "retrieved_sha256": "986a16e14ccc03cb77f6a456b54d58a5f754eb0719dd30882875e24322c09a47",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/F_Alignment_Adapter.py",
+      "size": 6799,
+      "sha256": "f735feb1093abbdb0076d21e91fa7ef0d3ad0c4bacb9c5c71a7b104db44044f3",
+      "retrieved_size": 6799,
+      "retrieved_sha256": "f735feb1093abbdb0076d21e91fa7ef0d3ad0c4bacb9c5c71a7b104db44044f3",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/F_RETAINED__ANNUAL_ALIGNED_FULL_RATES/Annual_2026_2055.csv",
+      "size": 25429,
+      "sha256": "9a28a6edb034e88375c2951ec61db5927e1be7ab4f12f48e680cf7f14b0acfe6",
+      "retrieved_size": 25429,
+      "retrieved_sha256": "9a28a6edb034e88375c2951ec61db5927e1be7ab4f12f48e680cf7f14b0acfe6",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/F_RETAINED__ANNUAL_ALIGNED_FULL_RATES/Connection_Inputs.json",
+      "size": 1814,
+      "sha256": "7a347b58246fe2349922bc8dadedb5d07337b16d850c4534e2d07ecad1f8faa0",
+      "retrieved_size": 1814,
+      "retrieved_sha256": "7a347b58246fe2349922bc8dadedb5d07337b16d850c4534e2d07ecad1f8faa0",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/F_RETAINED__ANNUAL_FINE_WEEK_HOURS/Annual_2026_2055.csv",
+      "size": 25350,
+      "sha256": "d0417598a6473dd2a5f96dd260e91dcc1267c8563e8d6e1cb69a12f244a23e73",
+      "retrieved_size": 25350,
+      "retrieved_sha256": "d0417598a6473dd2a5f96dd260e91dcc1267c8563e8d6e1cb69a12f244a23e73",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/F_RETAINED__ANNUAL_FINE_WEEK_HOURS/Connection_Inputs.json",
+      "size": 1800,
+      "sha256": "923de8d4e1da1cea184b0565570f32979c4da8bc8d53676b42206f356e9bd0c4",
+      "retrieved_size": 1800,
+      "retrieved_sha256": "923de8d4e1da1cea184b0565570f32979c4da8bc8d53676b42206f356e9bd0c4",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/F_RETAINED__ANNUAL_MONTH_HOURS_PROFILE/Annual_2026_2055.csv",
+      "size": 25491,
+      "sha256": "af971782ea00615c2401413c998cddf31af55a3f0deaef509bb3a6cb9fad0e72",
+      "retrieved_size": 25491,
+      "retrieved_sha256": "af971782ea00615c2401413c998cddf31af55a3f0deaef509bb3a6cb9fad0e72",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/F_RETAINED__ANNUAL_MONTH_HOURS_PROFILE/Connection_Inputs.json",
+      "size": 1826,
+      "sha256": "1840d6f318c8dc46e77019ca577ffb3b65acddf26cca752dcac1952fdbc5ea7d",
+      "retrieved_size": 1826,
+      "retrieved_sha256": "1840d6f318c8dc46e77019ca577ffb3b65acddf26cca752dcac1952fdbc5ea7d",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/F_RETAINED__BASE_SQ_UNCHANGED/Annual_2026_2055.csv",
+      "size": 25240,
+      "sha256": "dd7baf3063df3c51414885401f6ee96b4ea5bb53ac66ea23f6fac1553cb7fa8b",
+      "retrieved_size": 25240,
+      "retrieved_sha256": "dd7baf3063df3c51414885401f6ee96b4ea5bb53ac66ea23f6fac1553cb7fa8b",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/F_RETAINED__BASE_SQ_UNCHANGED/Connection_Inputs.json",
+      "size": 1869,
+      "sha256": "e15c52798a3f4b41227b8ad5764682fdd2de4342dcca01c863f847115bd22ee7",
+      "retrieved_size": 1869,
+      "retrieved_sha256": "e15c52798a3f4b41227b8ad5764682fdd2de4342dcca01c863f847115bd22ee7",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/F_RETAINED__OCTOBER_NEAR_FULL_RATES/Annual_2026_2055.csv",
+      "size": 25362,
+      "sha256": "a255f64ee93b76e545e921b7cddd73c5b2b3dba7dd4f330ddd84d2dafb037114",
+      "retrieved_size": 25362,
+      "retrieved_sha256": "a255f64ee93b76e545e921b7cddd73c5b2b3dba7dd4f330ddd84d2dafb037114",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/F_RETAINED__OCTOBER_NEAR_FULL_RATES/Connection_Inputs.json",
+      "size": 1814,
+      "sha256": "0d35114006fc42341935d9110c49e3558131e622f811b48286192e72bca14d4d",
+      "retrieved_size": 1814,
+      "retrieved_sha256": "0d35114006fc42341935d9110c49e3558131e622f811b48286192e72bca14d4d",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/F_RETAINED__PREVIOUS_FINE_AGE_HOURS/Annual_2026_2055.csv",
+      "size": 25383,
+      "sha256": "7ffb84b618e986abb2bbc4d6028a013f77fc32443d500a1630a00c6871f440ab",
+      "retrieved_size": 25383,
+      "retrieved_sha256": "7ffb84b618e986abb2bbc4d6028a013f77fc32443d500a1630a00c6871f440ab",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/F_RETAINED__PREVIOUS_FINE_AGE_HOURS/Connection_Inputs.json",
+      "size": 1808,
+      "sha256": "0d17666c6af51022cbc631c7b27d5d0d94c9d3ffe55b7727baac12c09c9ebf72",
+      "retrieved_size": 1808,
+      "retrieved_sha256": "0d17666c6af51022cbc631c7b27d5d0d94c9d3ffe55b7727baac12c09c9ebf72",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/F_Runtime_Trace.csv",
+      "size": 149471,
+      "sha256": "d7207c332cbfa7e369a960532a603b9d64dc97d2d9f4a6cd9e1457a1e90f4472",
+      "retrieved_size": 149471,
+      "retrieved_sha256": "d7207c332cbfa7e369a960532a603b9d64dc97d2d9f4a6cd9e1457a1e90f4472",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/Fixed_Source_Expected.json",
+      "size": 12840,
+      "sha256": "5eae6d00f2201bdd4e40fc4c5ae04e7f6a4d8b125e591b726bde74030c785b35",
+      "retrieved_size": 12840,
+      "retrieved_sha256": "5eae6d00f2201bdd4e40fc4c5ae04e7f6a4d8b125e591b726bde74030c785b35",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/Fixed_Source_Receipts.json",
+      "size": 18564,
+      "sha256": "3acde3629f94124ec324fc1fbd865eda6a6e8364b5dedb1aa505c8dc167cfb4c",
+      "retrieved_size": 18564,
+      "retrieved_sha256": "3acde3629f94124ec324fc1fbd865eda6a6e8364b5dedb1aa505c8dc167cfb4c",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/Foreign_Stock_Flow_Accounts.csv",
+      "size": 477658,
+      "sha256": "80725d5ea548c13e4abb02dfae2127eea9f497c68864b33592befb2fee46ff7e",
+      "retrieved_size": 477658,
+      "retrieved_sha256": "80725d5ea548c13e4abb02dfae2127eea9f497c68864b33592befb2fee46ff7e",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/Key_Years.csv",
+      "size": 71069,
+      "sha256": "58d7f8bd4cc091c3aaed2b762544b495eb7ef11164b9bf5bc1dd919a80b0c37d",
+      "retrieved_size": 71069,
+      "retrieved_sha256": "58d7f8bd4cc091c3aaed2b762544b495eb7ef11164b9bf5bc1dd919a80b0c37d",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/Manifest.json",
+      "size": 9409,
+      "sha256": "04a92ac87dbea92d08e4db8168f45c4bb4f8ff7c60ee2ed386b7cb7282a5ae3b",
+      "retrieved_size": 9409,
+      "retrieved_sha256": "04a92ac87dbea92d08e4db8168f45c4bb4f8ff7c60ee2ed386b7cb7282a5ae3b",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/Original_Annex_Code_Map.csv",
+      "size": 6580,
+      "sha256": "764aefc6c5e9e62b4b8784e160e63f6d9f3695adaac3fb73e1889e017eb030d1",
+      "retrieved_size": 6580,
+      "retrieved_sha256": "764aefc6c5e9e62b4b8784e160e63f6d9f3695adaac3fb73e1889e017eb030d1",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/Prior_Foreign_Overlay.py.txt",
+      "size": 32941,
+      "sha256": "b27e4471b885b76d55fac6024e9de3ecb1707d4a78f9a05e916bc49bf1afb0d2",
+      "retrieved_size": 32941,
+      "retrieved_sha256": "b27e4471b885b76d55fac6024e9de3ecb1707d4a78f9a05e916bc49bf1afb0d2",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/Recalculate.py",
+      "size": 11151,
+      "sha256": "6ca4980ba333f95480207b90219fc4e6308cf62976d38cef5373855cbf1767a8",
+      "retrieved_size": 11151,
+      "retrieved_sha256": "6ca4980ba333f95480207b90219fc4e6308cf62976d38cef5373855cbf1767a8",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/Report.md",
+      "size": 7272,
+      "sha256": "49585da130268bbd7937a2a1b5d95fe14fa6fa5ba64809927c8ba5e3a724d33b",
+      "retrieved_size": 7272,
+      "retrieved_sha256": "49585da130268bbd7937a2a1b5d95fe14fa6fa5ba64809927c8ba5e3a724d33b",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/Reproduction.md",
+      "size": 1529,
+      "sha256": "80205a41b0c64b47c057b5c56acc44cf1fe9bcfcc38c7c586dabeaba5276bcdc",
+      "retrieved_size": 1529,
+      "retrieved_sha256": "80205a41b0c64b47c057b5c56acc44cf1fe9bcfcc38c7c586dabeaba5276bcdc",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/Reproduction_Verification.json",
+      "size": 8206,
+      "sha256": "6fd5ab6197a97b06a43fe2f90b0f8e6c8458292b631c42c2fc97174ae3fd6fe1",
+      "retrieved_size": 8206,
+      "retrieved_sha256": "6fd5ab6197a97b06a43fe2f90b0f8e6c8458292b631c42c2fc97174ae3fd6fe1",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/Validation.json",
+      "size": 293,
+      "sha256": "6e3be6b81c6833ddb9928cce0f1d8272d9c49ea6985ac2db63ebf7f0c979d6d2",
+      "retrieved_size": 293,
+      "retrieved_sha256": "6e3be6b81c6833ddb9928cce0f1d8272d9c49ea6985ac2db63ebf7f0c979d6d2",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/Validation_Checks.csv",
+      "size": 412609,
+      "sha256": "914be2421cf20c573f705e1fe299d5efff684b9e893ffbd56b5a715c40084507",
+      "retrieved_size": 412609,
+      "retrieved_sha256": "914be2421cf20c573f705e1fe299d5efff684b9e893ffbd56b5a715c40084507",
+      "passed": true
+    },
+    {
+      "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/Verify_Reproduction.py",
+      "size": 900,
+      "sha256": "0969a7b58de332399e76bfae1f9913ac84181e106d93b1f15536a5eb3b75a96f",
+      "retrieved_size": 900,
+      "retrieved_sha256": "0969a7b58de332399e76bfae1f9913ac84181e106d93b1f15536a5eb3b75a96f",
+      "passed": true
+    }
+  ],
+  "passed": 51,
+  "failed": 0,
+  "generation": "COMPLETE",
+  "execution": "12 paths x 30 years COMPLETE",
+  "validation": "6390 new checks; 39 separate-process regeneration byte matches",
+  "handoff": "51 payload originals at fixed commit",
+  "custody": "51/51 actual-byte SHA-256 and size match",
+  "receipt_scope": "Appended in child commit. Receipt self-hash and containing commit cannot be recursively embedded. Final child commit payload preservation and all bytes including receipt are checked after publication, final SHA reported separately.",
+  "unresolved": "Formal GDP cap definition, population target definition and trigger priority/timing remain unresolved; diagnostics not adopted",
+  "RP023_M1925": "HOLD",
+  "RP024": "PENDING",
+  "formal_acceptance": false
+}

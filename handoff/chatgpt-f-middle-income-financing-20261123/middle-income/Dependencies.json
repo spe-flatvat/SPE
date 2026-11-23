@@ -1,0 +1,47 @@
+[
+  {
+    "ref": "5f5443d168c9225b33e7d7c85ae6e7d119054f4a",
+    "path": "handoff/chatgpt-f-median-fiscal-residual-20261123/median-attribution/Annual.csv",
+    "size": 12965,
+    "sha256": "dabfdfa8595e292ecda27161d403fc8cb49fa3786eab409d0a30510e6ece0f70"
+  },
+  {
+    "ref": "5f5443d168c9225b33e7d7c85ae6e7d119054f4a",
+    "path": "handoff/chatgpt-f-distribution-fiscal-integration-20261123/stage1-distribution/Replay.py",
+    "size": 2533,
+    "sha256": "f15a77eaad0a2fc4a960dc99750bd045bf150a7731a1753472b8ef8e1d85e2dc"
+  },
+  {
+    "ref": "5f5443d168c9225b33e7d7c85ae6e7d119054f4a",
+    "path": "handoff/chatgpt-f-distribution-fiscal-integration-20261123/stage1-distribution/Dependencies.json",
+    "size": 1136,
+    "sha256": "0312b08798e8faa2aa876e33a55d22e582dd19489a113fb50f117503ce561de4"
+  },
+  {
+    "ref": "5f5443d168c9225b33e7d7c85ae6e7d119054f4a",
+    "path": "handoff/chatgpt-f-distribution-fiscal-integration-20261123/stage1-distribution/Common.py",
+    "size": 1356,
+    "sha256": "b66f9877e3f410e0650512ebe89e0d02039d3bc2f9f0d1868c3b40228fbec310"
+  },
+  {
+    "local": "prior/Runtime_Sources.json",
+    "ref": "d8136f93977a110769529852afb095aff86d0e65",
+    "path": "handoff/chatgpt-f-hyper-depreciation-retained-earnings-20261123/Runtime_Sources.json",
+    "size": 9714,
+    "sha256": "de0f98af9f9478a5ac9b33d632948bbe457d11ef3975c853e9970118872bc940"
+  },
+  {
+    "local": "runtime/policies/FreedomPolicies.md",
+    "ref": "8659df8c70e3d107941dca768a18a250674554e2",
+    "path": "policies/FreedomPolicies.md",
+    "size": 9241,
+    "sha256": "0dedd2c1126613c30a7d96732d226cc787f6597437137424845d64d041db0204"
+  },
+  {
+    "local": "runtime/policies/FreedomPolicies_Annex.md",
+    "ref": "8659df8c70e3d107941dca768a18a250674554e2",
+    "path": "policies/FreedomPolicies_Annex.md",
+    "size": 12319,
+    "sha256": "ee62de32582a0f6d559029e7e9810b161c6a975ff22b498493d9ca960ca29e83"
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "checks": 11340,
+  "failures": 0,
+  "groups": {
+    "year": 30,
+    "no_gini_trigger": 30,
+    "wage_base_exists": 30,
+    "A_range": 3480,
+    "B_range": 3480,
+    "C_range": 3480,
+    "pool_allocation": 90,
+    "macro_pool_conserved": 90,
+    "no_policy_readdition": 270,
+    "prior_median_and_gini": 240,
+    "group_wage_reconciliation": 90,
+    "zero_on": 30
+  },
+  "independent_process_byte_matches": [
+    {
+      "path": "Annual.csv",
+      "size": 40903,
+      "sha256": "5a92f41ce941efbbb980f282324883178d18dd9ae2de08eb49ced3f894113429"
+    },
+    {
+      "path": "Comparison.csv",
+      "size": 50567,
+      "sha256": "8fab00f0e34efd3525b52c68756fe22bb377325f456e4ef56915268117526dc0"
+    }
+  ],
+  "total_new_checks": 11342
+}

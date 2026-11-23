@@ -1,0 +1,54 @@
+{
+  "Annual_F_SQ_N3_Comparison.csv": {
+    "size": 5210,
+    "sha256": "2e96822d2aa9d14333e95cab8e6f9bbfdc0f6f620078a6c9826f3e0f6c1f23ea"
+  },
+  "Annual_VAT_Diagnostic_2026_2055.csv": {
+    "size": 55349,
+    "sha256": "6dd43720a395eb4fc39cb13ad20b8ee45af3320e362ca07ba80d9c3da7ed73d0"
+  },
+  "Diagnostic_Inputs.json": {
+    "size": 2919,
+    "sha256": "6763c04a460aa9592023d5bd946d7e2129b0f382222417d40f450c71e53adbe3"
+  },
+  "Fixed_F_BASE_OFF_Excerpt.csv": {
+    "size": 21571,
+    "sha256": "5a6cf1f77481307f426f0754e89479ab73fa025332afa9f1b0aa12475d6ebe3a"
+  },
+  "Medical_Historical_2024.csv": {
+    "size": 285,
+    "sha256": "c5ffa036d1ccff1335817c79587f968cb0dd6a374705fabffdd826a931a9a9ac"
+  },
+  "Policy_Cleanup_Notes_And_Simulation_Adoptions.md": {
+    "size": 1715,
+    "sha256": "9f4e8d8a6340b91b3b09a506bbfb2b67118822742f060d80277f854e6aa647af"
+  },
+  "Prior_VAT_Model.py": {
+    "size": 27668,
+    "sha256": "8c55442439d20b750ba6576ce8efa8a98e3f37b92df070a6a99dc498cd173837"
+  },
+  "Recalculate.py": {
+    "size": 9176,
+    "sha256": "179617b06b6353d2cec54189d1c748672a0feb693552d4279eee51e497026a31"
+  },
+  "Report.md": {
+    "size": 5930,
+    "sha256": "32bdcf7f1370d65f89c81b2df7d0a5f806bf2eccfb27675d81e1ea256154d3f8"
+  },
+  "Reproduction_Verification.json": {
+    "size": 555,
+    "sha256": "15f61cbf69f80adffdb4de501469cdd1e7617d0451232e05f167ce63e9d1c017"
+  },
+  "Scope_And_Tax_Treatment.csv": {
+    "size": 4121,
+    "sha256": "b939e7e62f8d5c899340e8f63f40b2c1152e7944e8206608335877ec2337ce56"
+  },
+  "Source_And_Assumption_Register.csv": {
+    "size": 3264,
+    "sha256": "432e4ab4fb06a6650e393506ef582f9d8ce82eeaa1c18ac944223b572e3cee3d"
+  },
+  "Validation.json": {
+    "size": 96,
+    "sha256": "6475e7c6e8ca796e7970f6cea13ca975220c3c8846b0a50574779d5492724082"
+  }
+}

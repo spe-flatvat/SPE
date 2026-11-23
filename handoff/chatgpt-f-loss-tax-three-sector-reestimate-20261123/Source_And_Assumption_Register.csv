@@ -1,0 +1,13 @@
+id,publisher,year,source,cell,units,value,conversion,limitations
+M1,厚生労働省中医協,2024,https://www.mhlw.go.jp/content/10808000/001600997.pdf,p.6 令和6年度 B 病院・一般診療所・歯科診療所,千円/施設,44233 / 1453 / 841,施設数を乗じ10^9で除す,税率5〜10%部分・薬価と特定材料は除く・サンプルを母集団に外挿
+M2,厚生労働省中医協,2024,https://www.mhlw.go.jp/content/10808000/001600997.pdf,p.6 令和6年度 A 同3類型,千円/施設,46397 / 1359 / 758,M1同様,報酬本体の上乗せ・事業者別実額とは異なる
+M3,厚生労働省,2024,https://www.mhlw.go.jp/toukei/saikin/hw/iryosd/24/dl/02sisetu06.pdf,表1 活動中の施設,施設,8060 / 105207 / 66378,M1・M2の類型別母数,保険薬局は別母集団のため除外・各類型内の構成差あり
+E1,文部科学省,2024,https://www.mext.go.jp/content/20260930-mxt_chousa01-000052293_1.pdf,表1 学校教育費の資本的支出,億円,19312,10000で除し10%を乗じる,中間値・地方公立校の支出枠のみ・税抜換算前と置く保守的上限・控除可能割合不明
+E2,文部科学省,2023,https://www.mext.go.jp/content/20231226-mxt_sigakujo-000033159_3.pdf,初年度納付金 令和5年度 総合計のうち授業料・入学料・施設整備費の合計,円/人,1365281,5%なら68264.05円の売上税例,定員加重の表示額例で全国納付金や仕入税額ではない
+R1,総務省統計局,2023,https://www.stat.go.jp/data/nenkan/76nenkan/pdf/21.pdf,表21-12 民営木造・非木造の専用借家,千戸,4133 / 11507,1000倍して家賃を乗じる,家賃標本と戸数の範囲差・免税事業者等の内訳不明
+R2,総務省統計局,2023,https://www.stat.go.jp/data/jyutaku/2023/pdf/kihon_gaiyou.pdf,専用借家の種類別平均月額家賃 民営木造・非木造,円/月,54409 / 68548,戸数を掛け12倍して10^12で除す,実家賃の粗い年率換算・持家帰属家賃は除く
+R3,国土交通省,2024,https://www.mlit.go.jp/policy/shingikai/content/001977843.pdf,リフォーム表2-3-2・3に基づく更新修繕 長屋・共同住宅等,億円,36230,10000で除し10%を乗じる,分譲・持家等込み・受注と支払時点が異なる・当該母集団の上限枠
+R4,国土交通省,2024,https://www.mlit.go.jp/report/press/content/001887250.pdf,資料7 貸家着工戸数,戸,342092,金額に換算せず,工事費・請求書・既取得控除を戸数から推定しない
+P1,SPE,2025,https://github.com/spe-flatvat/SPE/blob/020de3d5f2f9568139734e78a9535e1f5993147e/handoff/f-vat-core-20261120/Sources_and_Map.md,旧市場参照・対象割合・仕入率,兆円および比率,45/6/20 と 90/60/85% と 20/25/20%,各列積×10%,旧損税試算とは別のモデル較正
+P2,SPE,2026–2055,https://github.com/spe-flatvat/SPE/blob/020de3d5f2f9568139734e78a9535e1f5993147e/handoff/chatgpt-f-2035-education-trigger-sensitivity-20261123/Annual_2026_2055.csv,BASE_OFF 各年,兆円,固定CSV,BASE_OFFのみ抽出,元ファイルSHA-256 0b0b31c44cd00b804fb42339de5eff0d28e762d42590767f243f9e1e97fc5dea
+P3,SPE,2026–2055,Diagnostic_Inputs.json,旧参照伸長・転嫁・配分,比率,年率1.5%,観測年から複利,既存便宜値・新規推定なし

@@ -1,0 +1,147 @@
+{
+  "reference": {
+    "VAT_national_budget_2026_trn": 26.688,
+    "national_share": 0.78,
+    "HH_taxexclusive_base_2026_trn": 180,
+    "HH_food_share": 0.2,
+    "base_N_anchor": 600,
+    "sector_growth": 0.015,
+    "annex_gross_range_trn": [
+      1.7,
+      2.55
+    ],
+    "full_all_transaction_base": null,
+    "full_fiscal_effect": null
+  },
+  "defaults": {
+    "rate": true,
+    "expansion": true,
+    "recovery": true,
+    "year8": 2030,
+    "year5": 2035,
+    "food_zero_start": 2027,
+    "food_eight_start": 2030,
+    "base_start": 2035,
+    "base_ramp": 3,
+    "rate_pass": 0.8,
+    "output_pass": 0.8,
+    "input_price_pass_scale": 1,
+    "input_ratio_scale": 1,
+    "coverage_scale": 1,
+    "buyer_credit_scale": 1,
+    "quantity_elasticity": 0,
+    "small_new_share": 0.35,
+    "land_scope": 0.5,
+    "medical_rebase": 0,
+    "medical_compensation_reference": 1,
+    "C": true,
+    "C_mode": "ADDITIONAL_BUDGET",
+    "C_source": "NET_HH_PRICE",
+    "C_fraction": 0.5,
+    "fund_switch": false,
+    "forecast_gap": 0,
+    "gini_switch": false,
+    "sq_food_proposal": false,
+    "proposal_food_rate": 0,
+    "regular_nonHH_government_share": 0.4,
+    "retained_wage_share": 0.2,
+    "retained_investment_share": 0.2,
+    "small_start_year": 2028
+  },
+  "sectors": [
+    {
+      "id": "medical",
+      "kind": "EXEMPT_SERVICE",
+      "R2025": 45,
+      "formerly_exempt_share": 0.9,
+      "input_ratio": 0.2,
+      "input_price_pass": 0.2,
+      "wage_share": 0.2,
+      "investment_share": 0.25,
+      "household": 0.1,
+      "government": 0.65,
+      "insurer": 0.25,
+      "business": 0,
+      "buyer_eligible": 0,
+      "premium_pass": 0.5
+    },
+    {
+      "id": "education",
+      "kind": "EXEMPT_SERVICE",
+      "R2025": 6,
+      "formerly_exempt_share": 0.6,
+      "input_ratio": 0.25,
+      "input_price_pass": 0.4,
+      "wage_share": 0.3,
+      "investment_share": 0.15,
+      "household": 0.8,
+      "government": 0.2,
+      "insurer": 0,
+      "business": 0,
+      "buyer_eligible": 0,
+      "premium_pass": 0
+    },
+    {
+      "id": "residential_rent",
+      "kind": "EXEMPT_SERVICE",
+      "R2025": 20,
+      "formerly_exempt_share": 0.85,
+      "input_ratio": 0.2,
+      "input_price_pass": 0.6,
+      "wage_share": 0.1,
+      "investment_share": 0.12,
+      "household": 0.8,
+      "government": 0,
+      "insurer": 0,
+      "business": 0.2,
+      "buyer_eligible": 0.8,
+      "premium_pass": 0
+    }
+  ],
+  "medical": [
+    [
+      "hospital",
+      8060,
+      44233,
+      46397
+    ],
+    [
+      "clinic",
+      105207,
+      1453,
+      1359
+    ],
+    [
+      "dental",
+      66378,
+      841,
+      758
+    ]
+  ],
+  "edu_capital_oku": 19312,
+  "repair_oku": 36230,
+  "rents": [
+    [
+      4133,
+      54409
+    ],
+    [
+      11507,
+      68548
+    ]
+  ],
+  "annex": [
+    [
+      1.1,
+      1.6
+    ],
+    [
+      0.25,
+      0.4
+    ],
+    [
+      0.35,
+      0.55
+    ]
+  ]
+}

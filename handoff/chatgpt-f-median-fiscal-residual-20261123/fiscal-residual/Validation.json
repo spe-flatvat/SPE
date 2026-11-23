@@ -1,0 +1,31 @@
+{
+  "checks": 1170,
+  "failures": 0,
+  "groups": {
+    "year": 30,
+    "fixed_F": 60,
+    "program_module_bridge": 540,
+    "medical_unassigned_share": 30,
+    "no_new_VAT_fund": 30,
+    "cash_bridge": 30,
+    "cash_bridge_net_issuance": 30,
+    "stock_bridge": 30,
+    "existing_consolidated_program_coverage": 30,
+    "existing_consolidation": 30,
+    "fixed_stage2": 330
+  },
+  "independent_process_byte_checks": 2,
+  "independent_process_matches": [
+    {
+      "path": "Annual.csv",
+      "size": 17467,
+      "sha256": "dc6eb402cef1fae32a0e420be919a9c4a29e76776efd8d6df30d92e784e25d54"
+    },
+    {
+      "path": "F_Actual_Annual.json",
+      "size": 525435,
+      "sha256": "2bd036ef302b6048c018c92862dee243298e1ceaaaa12a916afa6951ddbf4cbd"
+    }
+  ],
+  "total_new_checks": 1172
+}

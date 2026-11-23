@@ -1,0 +1,50 @@
+{
+  "payload_fixed_commit": "1f42dcdc1ae3f90974cd86586c13f82ebec752f2",
+  "matched": 7,
+  "failed": 0,
+  "method": "Retrieve fixed path and Git blob, compare exact bytes, SHA-256 and size. The receipt is verified at the final commit.",
+  "files": [
+    {
+      "path": "Annual.csv",
+      "sha256": "1dd901462a8329912662c3ef68823fdfb13fc3151a7ac7372fe9d17e5cd2c6f2",
+      "size": 14159,
+      "git_blob_sha1": "cd6b47b89b856e14e27f99dda550fb71ed054bf7"
+    },
+    {
+      "path": "Comparison.csv",
+      "sha256": "594226f9238735ca48961e1a129afc1a9447638011378b64a67801238e643d64",
+      "size": 2376,
+      "git_blob_sha1": "956fbc9960d246bef460cd27f242de6666f26e7e"
+    },
+    {
+      "path": "Dependencies.json",
+      "sha256": "fc47a1c5c82fd0db2c5806b56eb75bfdcbfd13127d4417498cba51ebb7b0021a",
+      "size": 1762,
+      "git_blob_sha1": "c2925f7d263a7522ad5185c85b33deccb7ee21fb"
+    },
+    {
+      "path": "Report.md",
+      "sha256": "af28b9bb9955c8bbfde58bb43731fcf949e9276a08d000723739385c6fb5aa00",
+      "size": 2405,
+      "git_blob_sha1": "3c55f5ff71e114acd773627f3b1df07d9612ff78"
+    },
+    {
+      "path": "Run.py",
+      "sha256": "79de89197f05778c3c658fe1286615b99f101f4218003012ad8888302b2c054d",
+      "size": 6768,
+      "git_blob_sha1": "6f63b098d9740e4d3de8f57cd56fb21baeb674b2"
+    },
+    {
+      "path": "Validation.json",
+      "sha256": "cf9794bc1bff37928cb84aa6962a75ba5491f2c68452e98e111fc3de9f57ba4f",
+      "size": 593,
+      "git_blob_sha1": "248d5a0b9c87c8a601f5fbc7b544a34c1ed4b80d"
+    },
+    {
+      "path": "Manifest.json",
+      "sha256": "c3dfab6e2d4ed43434278833c8691015e1acc3c13e36ca0c1575c89cd2224790",
+      "size": 895,
+      "git_blob_sha1": "6f849840c442f8a9d6c53ce17c956811590ace72"
+    }
+  ]
+}

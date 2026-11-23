@@ -1,0 +1,51 @@
+{
+  "status": "CUSTODY PASS",
+  "source_commit": "8fab1ad1644ecf86417056ab70114b65c10ac4c8",
+  "repository": "spe-flatvat/SPE",
+  "branch": "work/chatgpt-handoff",
+  "retrieval": "GitHub git fetch by commit; git show",
+  "files": [
+    {
+      "path": "handoff/chatgpt-f-middle-income-financing-20261123/middle-income/Annual.csv",
+      "size": 40903,
+      "sha256": "5a92f41ce941efbbb980f282324883178d18dd9ae2de08eb49ced3f894113429",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-f-middle-income-financing-20261123/middle-income/Comparison.csv",
+      "size": 50567,
+      "sha256": "8fab00f0e34efd3525b52c68756fe22bb377325f456e4ef56915268117526dc0",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-f-middle-income-financing-20261123/middle-income/Dependencies.json",
+      "size": 1906,
+      "sha256": "c02a163804cde63f271c235fdc56066eb5a345cc6795a533570d77e2d65d5034",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-f-middle-income-financing-20261123/middle-income/Manifest.json",
+      "size": 896,
+      "sha256": "3751f255ca0d6fbb0b73afb43b5199be307c651e96b23f812f7e9e09afdd8d46",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-f-middle-income-financing-20261123/middle-income/Report.md",
+      "size": 2853,
+      "sha256": "71481c4fd114d81836849e94229c2ac3f647f09e91852c1bc8c7d9107a639b4d",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-f-middle-income-financing-20261123/middle-income/Run.py",
+      "size": 7044,
+      "sha256": "644acb2918cbdc98b7f244b7cd54518bf49c825b2247d00105ed8f8007059a6b",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-f-middle-income-financing-20261123/middle-income/Validation.json",
+      "size": 740,
+      "sha256": "941b61aeded882a9d2a91247ae1b5a1ca5e94b2e263eabfa1913a1d67c7e3448",
+      "match": true
+    }
+  ]
+}

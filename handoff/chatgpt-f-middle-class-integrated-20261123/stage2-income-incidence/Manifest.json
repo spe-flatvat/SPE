@@ -1,0 +1,41 @@
+{
+  "artifact_files": [
+    {
+      "path": "Annual.csv",
+      "size": 43372,
+      "sha256": "c1b0ba2c0f65c4eb4731d8c9e55f55856ca01d03d6b0c09d8a671e3830f01eb2",
+      "git_blob_sha": "52c8f99b8cd941397852490d593d4126e5bd22e4"
+    },
+    {
+      "path": "Groups.csv",
+      "size": 1454511,
+      "sha256": "847e5397597958a55e822e676244d9f812035db7b126b1970cf58969d598434c",
+      "git_blob_sha": "de7a64f4baf22a6794a1f8f273d4ba99b6fdebed"
+    },
+    {
+      "path": "Report.md",
+      "size": 1779,
+      "sha256": "01ef0bdf5b7df44aade2cab7763f6483bb023897b4dce8230e3850052a4a1eb6",
+      "git_blob_sha": "af406b4d369772d0d5d896db5c0094c015835b35"
+    },
+    {
+      "path": "Run.py",
+      "size": 3576,
+      "sha256": "27583b38808fa4d3105019da477c49abf93130435b31b030fceba8f139c6e251",
+      "git_blob_sha": "1df3acbcdba42342afc509addb955e5667dd4c93"
+    },
+    {
+      "path": "Validation.json",
+      "size": 173,
+      "sha256": "4e7768b87d910eaf19fe3d9d2ec0ede222848564377fcf2743a07d9f5315e5fd",
+      "git_blob_sha": "fb1b4737462536b6e37842730aa83ded41b38129"
+    }
+  ],
+  "calculation_checks": 7500,
+  "failed": 0,
+  "independent_byte_identical": [
+    "Annual.csv",
+    "Groups.csv",
+    "Validation.json"
+  ]
+}

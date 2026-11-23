@@ -1,0 +1,10 @@
+{
+  "checks": 7500,
+  "failures": 0,
+  "groups": {
+    "household_count": 300,
+    "gini_range": 300,
+    "positive_group_weight": 6600,
+    "quintile_partition": 300
+  }
+}

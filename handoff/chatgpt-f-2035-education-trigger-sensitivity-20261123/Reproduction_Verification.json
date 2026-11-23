@@ -1,0 +1,82 @@
+{
+  "separate_process": true,
+  "matched": 9,
+  "failed": 0,
+  "files": [
+    {
+      "path": "Annual_2026_2055.csv",
+      "size": 105075,
+      "sha256": "0b0b31c44cd00b804fb42339de5eff0d28e762d42590767f243f9e1e97fc5dea",
+      "reproduced_size": 105075,
+      "reproduced_sha256": "0b0b31c44cd00b804fb42339de5eff0d28e762d42590767f243f9e1e97fc5dea",
+      "match": true
+    },
+    {
+      "path": "Annual_Difference_vs_Base.csv",
+      "size": 238787,
+      "sha256": "ccfc6013d142ebdf895a49db5464e226ce477e532387e98a33f3bc3d16665687",
+      "reproduced_size": 238787,
+      "reproduced_sha256": "ccfc6013d142ebdf895a49db5464e226ce477e532387e98a33f3bc3d16665687",
+      "match": true
+    },
+    {
+      "path": "Education_Runtime_Bridge.csv",
+      "size": 36694,
+      "sha256": "3fe2afeb26303446080d078971a3d377c2015d98b79567fdf53c1522c2818794",
+      "reproduced_size": 36694,
+      "reproduced_sha256": "3fe2afeb26303446080d078971a3d377c2015d98b79567fdf53c1522c2818794",
+      "match": true
+    },
+    {
+      "path": "Key_Years.csv",
+      "size": 56079,
+      "sha256": "6cdd24252d8615dad14a70ad4a027da9c06da27e6533a8bbcc2a7a2a7a1af920",
+      "reproduced_size": 56079,
+      "reproduced_sha256": "6cdd24252d8615dad14a70ad4a027da9c06da27e6533a8bbcc2a7a2a7a1af920",
+      "match": true
+    },
+    {
+      "path": "Scenario_Inputs.json",
+      "size": 1025,
+      "sha256": "adc3ecc5183ea5aeb9c89fb91bd6783f176367a2706b36dade2865e1b50d4b0c",
+      "reproduced_size": 1025,
+      "reproduced_sha256": "adc3ecc5183ea5aeb9c89fb91bd6783f176367a2706b36dade2865e1b50d4b0c",
+      "match": true
+    },
+    {
+      "path": "Source_Receipts.json",
+      "size": 15485,
+      "sha256": "c49ffb8bfdc0cb3a01f9804ff7bc0429c25803fb3ff23b51eb364f879191679d",
+      "reproduced_size": 15485,
+      "reproduced_sha256": "c49ffb8bfdc0cb3a01f9804ff7bc0429c25803fb3ff23b51eb364f879191679d",
+      "match": true
+    },
+    {
+      "path": "Trigger_Decision.json",
+      "size": 389,
+      "sha256": "ccf5ac18b4f8ea5d564f7501475e6b49dc02145feb5c7ef9b009274043b52c3a",
+      "reproduced_size": 389,
+      "reproduced_sha256": "ccf5ac18b4f8ea5d564f7501475e6b49dc02145feb5c7ef9b009274043b52c3a",
+      "match": true
+    },
+    {
+      "path": "Validation.json",
+      "size": 245,
+      "sha256": "cd5dd5678e54b039859f65b83deac10a7195b55350840dbb5f5ae0124712cceb",
+      "reproduced_size": 245,
+      "reproduced_sha256": "cd5dd5678e54b039859f65b83deac10a7195b55350840dbb5f5ae0124712cceb",
+      "match": true
+    },
+    {
+      "path": "Validation_Checks.csv",
+      "size": 2885768,
+      "sha256": "093a4bf9f65cf9cd81b73a16a4d545b36a6c2da1d0a4f619c9791295754ea4d2",
+      "reproduced_size": 2885768,
+      "reproduced_sha256": "093a4bf9f65cf9cd81b73a16a4d545b36a6c2da1d0a4f619c9791295754ea4d2",
+      "match": true
+    }
+  ],
+  "primary_execution_paths": 5,
+  "reproduction_execution_paths": 5,
+  "distinct_primary_checks": 34935
+}

@@ -1,0 +1,14 @@
+{
+  "reference": "intervention-free BASE_OFF",
+  "evaluation_year": 2035,
+  "comparison_year": 2034,
+  "formula": "real_GDP_2035 / real_GDP_2034 - 1",
+  "baseline_growth": -0.0011990849712765206,
+  "threshold": 0.012,
+  "strict_less_than": true,
+  "fired": true,
+  "effective_year": 2036,
+  "continuation": "EVERY_YEAR_2036_2055",
+  "scholarship": "UNCHANGED",
+  "policy_adopted": false
+}

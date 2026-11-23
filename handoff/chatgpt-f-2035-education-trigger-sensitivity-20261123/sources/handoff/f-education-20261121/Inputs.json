@@ -1,0 +1,262 @@
+{
+  "status": "DRAFT/NON-CANONICAL",
+  "date_jst": "2026-11-21",
+  "policy_commit": "5804388482864af08204ba0d0e76a46206dacdbd",
+  "parent_commit": "2296a7e13a5adb246b436799ecc509fd19fbad4f",
+  "integration_model": "handoff/f-integrated-20261121/Model.py",
+  "integration_inputs": "handoff/f-integrated-20261121/Inputs.json",
+  "runtime_dependencies": [
+    {
+      "path": "handoff/f-integrated-20261121/Model.py",
+      "commit": "aa0fc6c9de3a6fc33a50e68fb7948940941990dc",
+      "size": 21624,
+      "sha256": "42adedbe340a089e126c22987df89894943fcece54b6ac85ffa002fb886bf71c"
+    },
+    {
+      "path": "handoff/f-integrated-20261121/Inputs.json",
+      "commit": "aa0fc6c9de3a6fc33a50e68fb7948940941990dc",
+      "size": 7865,
+      "sha256": "87d454a5205869e58dee2836103499ee1eee89105cf9d14c62724df0561c66f5"
+    },
+    {
+      "path": "handoff/f-integrated-20261121/Annual.csv",
+      "commit": "aa0fc6c9de3a6fc33a50e68fb7948940941990dc",
+      "size": 2082920,
+      "sha256": "eb92953e843dfd7b84a0476b2f41ae310cafbf976cb857895b7363beabdf4772"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/Model.py",
+      "commit": "76aca9274151139cf0791365f5f9307fcc6f8fa6",
+      "size": 27668,
+      "sha256": "8c55442439d20b750ba6576ce8efa8a98e3f37b92df070a6a99dc498cd173837"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/Inputs.json",
+      "commit": "76aca9274151139cf0791365f5f9307fcc6f8fa6",
+      "size": 2559157,
+      "sha256": "f9de79d09488aa26cefc27a6a43c8d0d0b165b054b04839a4bace97ecf6cd2a9"
+    },
+    {
+      "path": "handoff/f-vat-core-20261120/Annual.csv",
+      "commit": "76aca9274151139cf0791365f5f9307fcc6f8fa6",
+      "size": 2087811,
+      "sha256": "35c78607be9b171f82201dc4b7ffadf9a6cf85bd19d6185bd37e120f2219364c"
+    }
+  ],
+  "observations": {
+    "grant_recipients_2025": 436661,
+    "grant_amount_2025_trn": 0.159062803,
+    "loan_recipients_2025": 1073229,
+    "loan_amount_2025_trn": 0.800428257,
+    "OFFJT_yen_per_worker_2024": 20000,
+    "OFFJT_spending_enterprises_share": 0.501,
+    "university_annual_dropout_2024": 0.02,
+    "student_cost_2024_yen": 2019100,
+    "student_education_cost_2024_yen": 1221800
+  },
+  "defaults": {
+    "E": true,
+    "S": true,
+    "T": true,
+    "C": true,
+    "C_mode": "ADDITIONAL_BUDGET",
+    "legacy_mode": "REPLACE",
+    "start_year": 2028,
+    "ramp_years": 3,
+    "annual_envelope_trn": 2.0,
+    "facility_share": 0.2,
+    "service_share": 0.6,
+    "scholarship_share": 0.2,
+    "supply_capacity": 0.8,
+    "reallocation_share": 0.2,
+    "domestic_share": 0.8,
+    "grant_unit_yen": 600000,
+    "topup_yen": 120000,
+    "topup_budget_share": 0.25,
+    "incumbent_topup_share": 0.5,
+    "new_eligible_pool": 500000,
+    "study_years": 4,
+    "annual_dropout": 0.02,
+    "new_enrolment_share": 0.1,
+    "completion_rate": 0.9,
+    "completion_uplift": 0.01,
+    "graduate_skill_gain": 0.12,
+    "school_service_unit_yen": 1000000,
+    "school_skill_gain": 0.02,
+    "school_lag": 8,
+    "covered_workers": 20000000,
+    "training_eligibility": 0.7,
+    "credit_rate": 0.2,
+    "tax_capacity": 0.8,
+    "training_price_response": 0.3,
+    "existing_support_overlap": 0.0,
+    "training_unit_yen": 80000,
+    "training_hours": 40,
+    "training_completion": 0.8,
+    "training_skill_gain": 0.03,
+    "training_lag": 1,
+    "annual_work_hours": 2000,
+    "student_employment_weight": 0.25,
+    "skill_decay": 0.02,
+    "productivity_cap": 0.05,
+    "wage_pass": 0.7,
+    "new_tuition_share": 0.15,
+    "loan_displacement_share": 0.4,
+    "grant_mpc": 0.8,
+    "bond_share": 1.0,
+    "bond_rate": 0.02,
+    "grace_years": 5,
+    "amortization_years": 20,
+    "facility_depreciation": 0.05,
+    "trigger_mode": "OFF",
+    "trigger_start_year": 2035,
+    "education_expansion": 1.2,
+    "training_expansion": 1.2,
+    "external_growth": 0.01,
+    "income_group_weights": {
+      "LOW": 0.6,
+      "MIDDLE": 0.3,
+      "HIGH": 0.1
+    },
+    "education_cost_yen": 1221800,
+    "trigger_evaluation_year": 2035
+  },
+  "cases": [
+    {
+      "id": "LEGACY",
+      "legacy_mode": "LEGACY"
+    },
+    {
+      "id": "LEGACY_EXTRA_ZERO",
+      "legacy_mode": "LEGACY",
+      "E": false,
+      "S": false,
+      "T": false
+    },
+    {
+      "id": "REPLACED_ZERO",
+      "E": false,
+      "S": false,
+      "T": false
+    },
+    {
+      "id": "EDUCATION_ONLY",
+      "E": true,
+      "S": false,
+      "T": false
+    },
+    {
+      "id": "SCHOLARSHIP_ONLY",
+      "E": false,
+      "S": true,
+      "T": false
+    },
+    {
+      "id": "TRAINING_ONLY",
+      "E": false,
+      "S": false,
+      "T": true
+    },
+    {
+      "id": "COMBINED"
+    },
+    {
+      "id": "COMBINED_DIRECT_C",
+      "C": false
+    },
+    {
+      "id": "COMBINED_POOL_C",
+      "C": true,
+      "C_mode": "VAT_INCREMENT_POOL"
+    },
+    {
+      "id": "ZERO_CAUSAL_RETURNS",
+      "school_skill_gain": 0.0,
+      "graduate_skill_gain": 0.0,
+      "training_skill_gain": 0.0,
+      "new_enrolment_share": 0.0,
+      "completion_uplift": 0.0
+    },
+    {
+      "id": "ZERO_TRAINING_RESPONSE",
+      "E": false,
+      "S": false,
+      "T": true,
+      "training_price_response": 0.0
+    },
+    {
+      "id": "ALL_BORROWING_REPLACEMENT",
+      "E": false,
+      "S": true,
+      "T": false,
+      "new_tuition_share": 0.0,
+      "loan_displacement_share": 1.0,
+      "new_enrolment_share": 0.0,
+      "completion_uplift": 0.0
+    },
+    {
+      "id": "NO_BOND",
+      "bond_share": 0.0
+    },
+    {
+      "id": "BOND_RATE_4",
+      "bond_rate": 0.04
+    },
+    {
+      "id": "NO_REALLOCATION",
+      "reallocation_share": 0.0
+    },
+    {
+      "id": "TRIGGER_AUTO",
+      "trigger_mode": "AUTO"
+    },
+    {
+      "id": "TRIGGER_FORCED",
+      "trigger_mode": "FORCED"
+    },
+    {
+      "id": "TRIGGER_AT_THRESHOLD",
+      "trigger_mode": "EXTERNAL",
+      "external_growth": 0.012
+    },
+    {
+      "id": "TRIGGER_AFTER_2035",
+      "trigger_mode": "AUTO",
+      "trigger_start_year": 2036
+    },
+    {
+      "id": "LOW",
+      "supply_capacity": 0.5,
+      "new_enrolment_share": 0.03,
+      "completion_uplift": 0.0,
+      "school_skill_gain": 0.005,
+      "graduate_skill_gain": 0.05,
+      "training_skill_gain": 0.01,
+      "training_price_response": 0.1,
+      "wage_pass": 0.4,
+      "school_lag": 10
+    },
+    {
+      "id": "HIGH",
+      "supply_capacity": 1.0,
+      "new_enrolment_share": 0.2,
+      "completion_uplift": 0.02,
+      "school_skill_gain": 0.04,
+      "graduate_skill_gain": 0.2,
+      "training_skill_gain": 0.05,
+      "training_price_response": 0.6,
+      "wage_pass": 1.0,
+      "school_lag": 6
+    },
+    {
+      "id": "LEGACY_LEVEL_HYPOTHESIS",
+      "legacy_mode": "LEGACY_LEVEL"
+    },
+    {
+      "id": "TRIGGER_2035_GROWTH_2036",
+      "trigger_mode": "AUTO",
+      "trigger_evaluation_year": 2036,
+      "trigger_start_year": 2036
+    }
+  ]
+}

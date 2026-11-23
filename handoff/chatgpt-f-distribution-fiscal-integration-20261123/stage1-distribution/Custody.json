@@ -1,0 +1,68 @@
+{
+  "payload_fixed_commit": "08b01838a0f59e9aa4584d3fb1dd695ddf696a7c",
+  "matched": 10,
+  "failed": 0,
+  "method": "Retrieve fixed path and Git blob, compare exact bytes, SHA-256 and size. The receipt is verified at the final commit.",
+  "files": [
+    {
+      "path": "Annual.csv",
+      "sha256": "129243f532e6f72e6e9d593c85840253bc93173cbcb6f1a194faa70848375397",
+      "size": 9541,
+      "git_blob_sha1": "96ad4190c8daca02972c64c11749856d3f7d5867"
+    },
+    {
+      "path": "Common.py",
+      "sha256": "b66f9877e3f410e0650512ebe89e0d02039d3bc2f9f0d1868c3b40228fbec310",
+      "size": 1356,
+      "git_blob_sha1": "c0f02d7620c60e445698cfe489f50abdb59254de"
+    },
+    {
+      "path": "Comparison.csv",
+      "sha256": "a5824fbe234cbef77c32c5696985cf3705983ee82269fb5179f9de3e4e0b4930",
+      "size": 1789,
+      "git_blob_sha1": "23d96fa198394e51f1a6216d7b7de8c972f68aab"
+    },
+    {
+      "path": "Dependencies.json",
+      "sha256": "0312b08798e8faa2aa876e33a55d22e582dd19489a113fb50f117503ce561de4",
+      "size": 1136,
+      "git_blob_sha1": "0c1ec9325de221023174d131499986a7b8d6859d"
+    },
+    {
+      "path": "Distribution.csv",
+      "sha256": "8e88ca12b325db6c179dee7394732dde1ee32b4ef816f785fccb2cc0a5803d74",
+      "size": 61817,
+      "git_blob_sha1": "5984e4e515e8d8289189b875195f7cb1d08ce9db"
+    },
+    {
+      "path": "Replay.py",
+      "sha256": "f15a77eaad0a2fc4a960dc99750bd045bf150a7731a1753472b8ef8e1d85e2dc",
+      "size": 2533,
+      "git_blob_sha1": "59c9b4a723adee70ca3158c75521c030f2e990e4"
+    },
+    {
+      "path": "Report.md",
+      "sha256": "b183594079fbfd0b7d57ad69f99dfc94bb87d5bb700eaa81b49b59cccaec5f01",
+      "size": 2061,
+      "git_blob_sha1": "33c22be3349a4097174e3ac27a73e6434e623d5d"
+    },
+    {
+      "path": "Run.py",
+      "sha256": "4e2f2e63cf97faa2f9d2b7a67bd369e842f6ac1513fcf5281cd25b98346700b4",
+      "size": 6723,
+      "git_blob_sha1": "c208eb36c589ea83157f3dbe524e2fec1386c123"
+    },
+    {
+      "path": "Validation.json",
+      "sha256": "4d2f242f9617221cc668ff749267d965e8d4fabe24403d1c299be993365dc4a0",
+      "size": 536,
+      "git_blob_sha1": "58fe08c434e88a9a4ba8a9325de90ccc5ac45438"
+    },
+    {
+      "path": "Manifest.json",
+      "sha256": "607ab4af12518a2a6f6e520ce38ce9c14f2cc3e8b896cc7ca20ca0f53397f016",
+      "size": 1331,
+      "git_blob_sha1": "3521e8147993216265349c417a04fd6680b2c789"
+    }
+  ]
+}

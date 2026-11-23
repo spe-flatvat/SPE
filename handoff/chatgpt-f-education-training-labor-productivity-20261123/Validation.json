@@ -1,0 +1,11 @@
+{
+  "new_checks": 32862,
+  "failed": 0,
+  "executed_paths": 48,
+  "executed_years": 1440,
+  "fixed_F_replays": 6,
+  "SQ_N3": "fixed comparison reused; not rerun",
+  "RP023_M1925": "HOLD",
+  "RP024": "PENDING",
+  "formal_acceptance": false
+}

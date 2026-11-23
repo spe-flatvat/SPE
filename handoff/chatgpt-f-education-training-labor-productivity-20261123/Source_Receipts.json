@@ -1,0 +1,407 @@
+[
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/ANNUAL_ALIGNED_FULL_RATES/Annual_Comparison_2026_2055.csv",
+    "commit": "f3c141d5e49ebf26cf6ef028786b504d945f8913",
+    "git_blob_sha1": "c7ae863e9af5ecafa4e5a32a0b29d1e726ded6f7",
+    "size": 24921,
+    "sha256": "8d9d2f06664d8a263c60c473652ca77c47470751c901575b8cea65b2074a0321",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/ANNUAL_ALIGNED_FULL_RATES/Connection_Inputs.json",
+    "commit": "f3c141d5e49ebf26cf6ef028786b504d945f8913",
+    "git_blob_sha1": "596ee96fa364e6b4ec2834e778ae370985ebabf6",
+    "size": 1642,
+    "sha256": "a00c63922b64629c14392e23344c3fe25b82f0b7091110c7a92c67bf2e1baa41",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/ANNUAL_ALIGNED_FULL_RATES/F_Runtime_Trace.json",
+    "commit": "f3c141d5e49ebf26cf6ef028786b504d945f8913",
+    "git_blob_sha1": "76f1056de7461502df7fa8a42d64c882eac3da30",
+    "size": 33268,
+    "sha256": "a3463ae379a0788ca772d306e0a3fd52bb96711361f8e10527852b124bcfab99",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/ANNUAL_FINE_WEEK_HOURS/Annual_Comparison_2026_2055.csv",
+    "commit": "f3c141d5e49ebf26cf6ef028786b504d945f8913",
+    "git_blob_sha1": "1f4fe6211674dc4a1276525e4ced24f0a823aeac",
+    "size": 24781,
+    "sha256": "6215ce2ba14f6d293afab761a10a9a202d777e3f79675fdbe9c633db580b6ce8",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/ANNUAL_FINE_WEEK_HOURS/Connection_Inputs.json",
+    "commit": "f3c141d5e49ebf26cf6ef028786b504d945f8913",
+    "git_blob_sha1": "ce82f01b79f0d52bccf5aa9e8511d7d3fa9969c3",
+    "size": 1631,
+    "sha256": "1ca67f17e380531bc28b850f4aca0fbb8f3446f63f07f560fa4d52c0fab136dc",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/ANNUAL_FINE_WEEK_HOURS/F_Runtime_Trace.json",
+    "commit": "f3c141d5e49ebf26cf6ef028786b504d945f8913",
+    "git_blob_sha1": "8bb4cd6c3dfaa46c49c165055f53fb7d1ec55100",
+    "size": 33280,
+    "sha256": "b658f6d4df65fcbf0d26397c4333d5ca966b2ded2d4b894291a9998234ea29bb",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/ANNUAL_MONTH_HOURS_PROFILE/Annual_Comparison_2026_2055.csv",
+    "commit": "f3c141d5e49ebf26cf6ef028786b504d945f8913",
+    "git_blob_sha1": "8e9fe76e2c49178baa212a9590f81740d93e3b05",
+    "size": 25102,
+    "sha256": "deb5ac778605440dd7a62a7933977fc3293c9ddbb57fff1f597123f8433f0133",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/ANNUAL_MONTH_HOURS_PROFILE/Connection_Inputs.json",
+    "commit": "f3c141d5e49ebf26cf6ef028786b504d945f8913",
+    "git_blob_sha1": "e4996de6f4f115e5f9097b85d1638793363bd1ab",
+    "size": 1653,
+    "sha256": "014ebe6e59d6c7fe30186a04f1a7951863a881f4d90b70935b06b91ce3bda9fc",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/ANNUAL_MONTH_HOURS_PROFILE/F_Runtime_Trace.json",
+    "commit": "f3c141d5e49ebf26cf6ef028786b504d945f8913",
+    "git_blob_sha1": "6168f1d60bb8a0e5e681de765fbf0f013e1b88e9",
+    "size": 33282,
+    "sha256": "c805e359c977723750d6cb81680a1f9ea8e627c5b34dfff85395cf053d189d63",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/BASE_SQ_UNCHANGED/Annual_Comparison_2026_2055.csv",
+    "commit": "f3c141d5e49ebf26cf6ef028786b504d945f8913",
+    "git_blob_sha1": "83b90740589edd0c3442fa1689d90dda59987085",
+    "size": 24886,
+    "sha256": "6d2a8955c4c71f622a4f76c20d20ed528105e4ddfa68077edd712907c8d9e7d2",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/BASE_SQ_UNCHANGED/Connection_Inputs.json",
+    "commit": "f3c141d5e49ebf26cf6ef028786b504d945f8913",
+    "git_blob_sha1": "c775ee3d846891b257f8dc3cd267ba5c940e2a60",
+    "size": 1705,
+    "sha256": "1c7fc34f827627d422e4447f38efe6a4adde9a74b3c2d3e59acac659b6b80eca",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/BASE_SQ_UNCHANGED/F_Runtime_Trace.json",
+    "commit": "f3c141d5e49ebf26cf6ef028786b504d945f8913",
+    "git_blob_sha1": "451c033b70ccdf8c51e2dba97408c2e345435a34",
+    "size": 33268,
+    "sha256": "4df29db723655d23a9949d2e26bf0a118da3f734efc74a59bc044cade6a8ef3b",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/OCTOBER_NEAR_FULL_RATES/Annual_Comparison_2026_2055.csv",
+    "commit": "f3c141d5e49ebf26cf6ef028786b504d945f8913",
+    "git_blob_sha1": "5c6bdb40e5dd916960628c8a1a09084fa98263b4",
+    "size": 24870,
+    "sha256": "7e718802b86e978155462951eddff094edde540e1e458916a42a306872e24d6b",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/OCTOBER_NEAR_FULL_RATES/Connection_Inputs.json",
+    "commit": "f3c141d5e49ebf26cf6ef028786b504d945f8913",
+    "git_blob_sha1": "5996d5fd81fb40d502c8a0c313da879e378015f7",
+    "size": 1644,
+    "sha256": "855c3edb4d72bab94c8979360e543a293cdd768caf5df32b676a00ffdf7111d3",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/OCTOBER_NEAR_FULL_RATES/F_Runtime_Trace.json",
+    "commit": "f3c141d5e49ebf26cf6ef028786b504d945f8913",
+    "git_blob_sha1": "d3f2cd9a64110a7904e2bc396b911214afa12488",
+    "size": 33259,
+    "sha256": "64f0b41df807e33d494d8888de9a8a6f975f24663d4e7b65b055c1ce9bcda081",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/PREVIOUS_FINE_AGE_HOURS/Annual_Comparison_2026_2055.csv",
+    "commit": "f3c141d5e49ebf26cf6ef028786b504d945f8913",
+    "git_blob_sha1": "e47e8343537138d1fa7626d79ff8bb2d072be367",
+    "size": 24811,
+    "sha256": "e65dd44b746a33f5234b097dff37da7ede1655f8978fdd9740ef768a83e93f0e",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/PREVIOUS_FINE_AGE_HOURS/Connection_Inputs.json",
+    "commit": "f3c141d5e49ebf26cf6ef028786b504d945f8913",
+    "git_blob_sha1": "2c2459480ffce6986dad628f16fc3cc6e881f642",
+    "size": 1638,
+    "sha256": "603607201c67c837d2a4ea43ed8cd1b1948c6ae4676d32db1acb119bcf670240",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/PREVIOUS_FINE_AGE_HOURS/F_Runtime_Trace.json",
+    "commit": "f3c141d5e49ebf26cf6ef028786b504d945f8913",
+    "git_blob_sha1": "27671c54326b4cdaa435257cd646835d5677fa58",
+    "size": 33260,
+    "sha256": "860e06966b82ff559f9a767da00073a54cae400665a3e7e45f38dd722485f38e",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/Pinned_F_Adapter.py",
+    "commit": "f3c141d5e49ebf26cf6ef028786b504d945f8913",
+    "git_blob_sha1": "6feab0bcd87d8557db695cc80492d77996699603",
+    "size": 6449,
+    "sha256": "2f3963e104c4c2f14aa374b2b0b9256c90c8a9ba9b3430289c5cc6d1421d8f1c",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/Recalculate.py",
+    "commit": "f3c141d5e49ebf26cf6ef028786b504d945f8913",
+    "git_blob_sha1": "629b0d6e95748f8f7512103912e43d17ed9a356f",
+    "size": 10277,
+    "sha256": "93bc6eacea1a7f8967e7530f90966b285e1b81e64f82b6cd99ba79a6e18b3548",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/Resolved_F_Cohort_Runtime.py.txt",
+    "commit": "f3c141d5e49ebf26cf6ef028786b504d945f8913",
+    "git_blob_sha1": "87e672bc4d2f48f695402cafd3edb2cab509d3d3",
+    "size": 64929,
+    "sha256": "baebb59447bfa181e37e10e000645bf57f1ebbb16449ab447af4f27ed511a4ca",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-n3-aligned-labor-baseline-20261123/SQ_F_N3_Aligned_Labor_Annual_2026_2055.csv",
+    "commit": "13a5debb0a291fabbef4d52c9821aa590cfa0a73",
+    "git_blob_sha1": "f9e47f6e7826611cab87188d56bb62fe7a9a7faf",
+    "size": 115311,
+    "sha256": "8b3e073df5798840124372cd59260dcd6cd5e122306437ced61b222910c2d381",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/chatgpt-n3-transition-financing-full-dynamics-20261122/Medical_Initialization.json",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "git_blob_sha1": "07df976fb2080c8c9c307765e3b233a41cd93524",
+    "size": 124011,
+    "sha256": "3e97b56c0d3dd4b83b6c8545d369f15e20ac8d519b698d0bddaf3b743068b1ea",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/CommonEndOfLife.py",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "git_blob_sha1": "1456928a795ecb625c5bc257c95d1b19ea998caa",
+    "size": 10956,
+    "sha256": "c930a8df539ff676e55180b75cfe899084caa656f738c371aac44ce1f7693fae",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/CommonInterface.py",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "git_blob_sha1": "e7e9bc974cfc133e976377b3849c00af3dae131c",
+    "size": 420,
+    "sha256": "4b56a30806da8bd5f39566a622fac1119e93f0842d40983deafb6dca4c88f4e2",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/Demand.py",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "git_blob_sha1": "f50c1beb2f9c5ff7a90d0bbd0d83d5930b8a312d",
+    "size": 2544,
+    "sha256": "fab0a6c505c9bb5041bfb38ec199617b6c4171891ec4fc49ba90eec2ae05f30d",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/FMedical.py",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "git_blob_sha1": "86f171044b67cd40a92a294a3b93aeaaeabaceff",
+    "size": 17478,
+    "sha256": "b36a21bead583b13c338f31dcd42e90c1e24a2814024024e872e993a9754dd80",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/Inputs.json",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "git_blob_sha1": "b5e2b373f894117794522eefbc5f7f004bc2b272",
+    "size": 27093,
+    "sha256": "6da4648a8823c041197e9082d6814b6e19710afdf7bb7c7130dc58d4cabd6095",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/Model.py",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "git_blob_sha1": "b03f28d39b6125d1a524a7be69a2b06fd10d9495",
+    "size": 15152,
+    "sha256": "e45b234545e17cfc486a488a4c06f68e49b03234d2847142ded3ce6c2998d4fd",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/f-education-20261121/Annual.csv",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "git_blob_sha1": "d3e077b03f42bd3d56cfcceb246a8e0645134c5d",
+    "size": 1996375,
+    "sha256": "e9cc9c08e5a5529d6da208c49822c144ee2a5a7827dc5e7aa200a62fde541db6",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/f-education-20261121/Inputs.json",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "git_blob_sha1": "c359cee365beb0097104d7244f3dab90db447039",
+    "size": 6825,
+    "sha256": "d796d432c1f625784c322bbb330d5da8ab59fbbdfa6043cf3a10538c2901e651",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/f-education-20261121/Model.py",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "git_blob_sha1": "bb74b89b9e03b2c1416c7ab4e65261412374c631",
+    "size": 24178,
+    "sha256": "08d6b409e9e815e6eb34878c69457c77a7a7e7fe9f5b85fa2debeb0f1a8ee88c",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/f-household-social-20261120/Inputs.json",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "git_blob_sha1": "31d2ea48839b699d9047ab7039bdf7a1b190e4ed",
+    "size": 1746742,
+    "sha256": "8a7df2e6b7228177b28346386437b3b7dc6a5f1b8547507a114daf1fc5472766",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/f-integrated-20261121/Annual.csv",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "git_blob_sha1": "b4b399fb2c29906d3fc06d87b61864196dd6a679",
+    "size": 2082920,
+    "sha256": "eb92953e843dfd7b84a0476b2f41ae310cafbf976cb857895b7363beabdf4772",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/f-integrated-20261121/Inputs.json",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "git_blob_sha1": "b04f6979bf5e8736da24d6068eaafe43cfd5fd16",
+    "size": 7865,
+    "sha256": "87d454a5205869e58dee2836103499ee1eee89105cf9d14c62724df0561c66f5",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/f-integrated-20261121/Model.py",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "git_blob_sha1": "5005992f4511e1fd9b69b841f7eb774eb845a982",
+    "size": 21624,
+    "sha256": "42adedbe340a089e126c22987df89894943fcece54b6ac85ffa002fb886bf71c",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/f-medical-common-20261121/Annual.csv",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "git_blob_sha1": "9d113c335d11641fa2e0ee3572243b149d3b20ba",
+    "size": 3077541,
+    "sha256": "fb778157a62bd604c0be3cbf3d3786142719199b4de84b5debfbb6a7674d4cb6",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/f-medical-common-20261121/Common_EndOfLife.csv",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "git_blob_sha1": "9193f70d1f82dd3ad59e77a1452f255bab1cd6a4",
+    "size": 567389,
+    "sha256": "0916d3c3dcf2d027fb0ae557ec9ae21c236250e6868ddb2b4b63349f7c63dd34",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/f-medical-common-20261121/Medical_Accounts.csv",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "git_blob_sha1": "bebb9138b6da9913ad70d3d14fba341ff881be8c",
+    "size": 482348,
+    "sha256": "78b309b3b5a38b4f6168c36c7cad929899baa743114634c6165a84b8b869e605",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/f-pension-policy-20261120/Inputs.json",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "git_blob_sha1": "39c988f9d2e570e60531baedbb5d454f92045a82",
+    "size": 1282097,
+    "sha256": "5969792ecb9218dc3668d56ec426076d0359e1e4c403914f535390972f082514",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/f-vat-core-20261120/Annual.csv",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "git_blob_sha1": "db80b57d4bf3250a2f3676b8941c3c93ee2de5ff",
+    "size": 2087811,
+    "sha256": "35c78607be9b171f82201dc4b7ffadf9a6cf85bd19d6185bd37e120f2219364c",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/f-vat-core-20261120/Inputs.json",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "git_blob_sha1": "1c9d0d14e25b5cfbff84fbd257dafacdfc64c0eb",
+    "size": 2559157,
+    "sha256": "f9de79d09488aa26cefc27a6a43c8d0d0b165b054b04839a4bace97ecf6cd2a9",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "handoff/f-vat-core-20261120/Model.py",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "git_blob_sha1": "01f015e183ff585bbedf4aed8164391815313418",
+    "size": 27668,
+    "sha256": "8c55442439d20b750ba6576ce8efa8a98e3f37b92df070a6a99dc498cd173837",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "policies/FreedomPolicies.md",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "git_blob_sha1": "3deb49dbe70734aa91e75856226e84e4b66db8e9",
+    "size": 9241,
+    "sha256": "0dedd2c1126613c30a7d96732d226cc787f6597437137424845d64d041db0204",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  },
+  {
+    "path": "policies/FreedomPolicies_Annex.md",
+    "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+    "git_blob_sha1": "86df882940aae4b851d4b1d11d488f4d2606bd5e",
+    "size": 12319,
+    "sha256": "ee62de32582a0f6d559029e7e9810b161c6a975ff22b498493d9ca960ca29e83",
+    "retrieval": "connected GitHub pinned file/blob",
+    "own_byte_verification": "MATCH"
+  }
+]

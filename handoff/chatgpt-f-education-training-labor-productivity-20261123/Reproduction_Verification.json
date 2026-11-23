@@ -1,0 +1,74 @@
+{
+  "separate_process": true,
+  "matched": 8,
+  "failed": 0,
+  "files": [
+    {
+      "path": "2035_Reference_Warnings.csv",
+      "size": 1765,
+      "sha256": "a9532e85aa9fa243106a56ad976119c22974266d46ff580f2565b697dba1d93f",
+      "reproduced_size": 1765,
+      "reproduced_sha256": "a9532e85aa9fa243106a56ad976119c22974266d46ff580f2565b697dba1d93f",
+      "match": true
+    },
+    {
+      "path": "Annual_Comparison_2026_2055.csv",
+      "size": 972597,
+      "sha256": "1b6337ff8d993a65a751730ac278734fa74de49b8b9baa56c20e7fb733712c16",
+      "reproduced_size": 972597,
+      "reproduced_sha256": "1b6337ff8d993a65a751730ac278734fa74de49b8b9baa56c20e7fb733712c16",
+      "match": true
+    },
+    {
+      "path": "Contribution_And_Interactions.csv",
+      "size": 684420,
+      "sha256": "a2e62d9d704555dc8d52735caa2cb9a62c9e9ad363bc1eb4ef04249876593a4d",
+      "reproduced_size": 684420,
+      "reproduced_sha256": "a2e62d9d704555dc8d52735caa2cb9a62c9e9ad363bc1eb4ef04249876593a4d",
+      "match": true
+    },
+    {
+      "path": "Education_Bridge_2026_2055.csv",
+      "size": 344487,
+      "sha256": "ad328fdcffb07449fd9de0c9cb4f6b35d8bd442dd938ff0ec07f3cd12a09f087",
+      "reproduced_size": 344487,
+      "reproduced_sha256": "ad328fdcffb07449fd9de0c9cb4f6b35d8bd442dd938ff0ec07f3cd12a09f087",
+      "match": true
+    },
+    {
+      "path": "Key_Years.csv",
+      "size": 214219,
+      "sha256": "95080123c7e222a511dd54dadecbe1505e0c52ef87ca4b2aaddfa9a1dcf6bb8f",
+      "reproduced_size": 214219,
+      "reproduced_sha256": "95080123c7e222a511dd54dadecbe1505e0c52ef87ca4b2aaddfa9a1dcf6bb8f",
+      "match": true
+    },
+    {
+      "path": "Source_Receipts.json",
+      "size": 18386,
+      "sha256": "37b3be7823a6e4b5a070443e45db47effcba279fbe3d41b1e6dbc62abef3243d",
+      "reproduced_size": 18386,
+      "reproduced_sha256": "37b3be7823a6e4b5a070443e45db47effcba279fbe3d41b1e6dbc62abef3243d",
+      "match": true
+    },
+    {
+      "path": "Validation.json",
+      "size": 241,
+      "sha256": "7334dbf7e43662eb1307091c29a92e6e21aa49e2ed58efe000cab890c0fd01d6",
+      "reproduced_size": 241,
+      "reproduced_sha256": "7334dbf7e43662eb1307091c29a92e6e21aa49e2ed58efe000cab890c0fd01d6",
+      "match": true
+    },
+    {
+      "path": "Validation_Checks.csv",
+      "size": 2217784,
+      "sha256": "e501eb9064fddc53ea2f9e22d5fc3708e7691b2d7d52b5fd12728136f91bebc7",
+      "reproduced_size": 2217784,
+      "reproduced_sha256": "e501eb9064fddc53ea2f9e22d5fc3708e7691b2d7d52b5fd12728136f91bebc7",
+      "match": true
+    }
+  ],
+  "primary_execution_paths": 48,
+  "reproduction_execution_paths": 48,
+  "distinct_primary_checks": 32862
+}

@@ -1,0 +1,51 @@
+{
+  "status": "CUSTODY PASS",
+  "source_commit": "d7208ae9a787b58ad5a9444811692e0da86c1678",
+  "repository": "spe-flatvat/SPE",
+  "branch": "work/chatgpt-handoff",
+  "retrieval": "GitHub git fetch by commit; git show",
+  "files": [
+    {
+      "path": "handoff/chatgpt-f-income-calibration-20261123/integrated-comparison/Annual.csv",
+      "size": 63499,
+      "sha256": "1c51335c904b1381d60af13d05aa5693b8b9246b5440daa68a78d79ae5c37fc2",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-f-income-calibration-20261123/integrated-comparison/Comparison.csv",
+      "size": 16631,
+      "sha256": "8d3979f440b680b91cdfac80fa8f180fed95c959c8e696061ee6031ec83261e2",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-f-income-calibration-20261123/integrated-comparison/Dependencies.json",
+      "size": 769,
+      "sha256": "3dbb53b5e046b26fe2e1ca65eeb06e137957a5210d269ecf5b90c1413cb5992d",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-f-income-calibration-20261123/integrated-comparison/Manifest.json",
+      "size": 895,
+      "sha256": "f691c34810bcd6d883fcb22bdca39eca11c629ae6d5894ddfcc82caa8d5abe45",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-f-income-calibration-20261123/integrated-comparison/Report.md",
+      "size": 2046,
+      "sha256": "69e594a3caba10af218a4f3b6075a271e02a152facd7c857b0ecea8325c78645",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-f-income-calibration-20261123/integrated-comparison/Run.py",
+      "size": 3568,
+      "sha256": "cf315d54ad2eec9901ff2a48dbc5979b2b661696cebf76b42e6f87a0746946c4",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-f-income-calibration-20261123/integrated-comparison/Validation.json",
+      "size": 564,
+      "sha256": "2d422b035dd1bf98d8e20ce413467e70203c9a28bd2d4de805b35017cb565997",
+      "match": true
+    }
+  ]
+}

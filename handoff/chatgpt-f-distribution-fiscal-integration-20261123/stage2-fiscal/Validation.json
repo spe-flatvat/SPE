@@ -1,0 +1,23 @@
+{
+  "checks": 1023,
+  "failures": 0,
+  "groups": {
+    "independent_replay_input": 1,
+    "year": 60,
+    "fixed_F": 180,
+    "education_open": 60,
+    "education_debt": 60,
+    "medical_debt": 60,
+    "medical_assets": 60,
+    "gross_and_net_issuance": 60,
+    "medical_financing_sources": 60,
+    "education_primary_cost": 60,
+    "program_funding_gap": 60,
+    "program_consolidated_balance": 60,
+    "fixed_tax_VAT_bridge": 60,
+    "fixed_government_insurer_consolidation": 60,
+    "fixed_internal_transfer_elimination": 60,
+    "no_new_VAT_fund": 60,
+    "independent_CSV_bytes": 2
+  }
+}

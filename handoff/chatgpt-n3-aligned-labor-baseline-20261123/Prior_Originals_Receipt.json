@@ -1,0 +1,1020 @@
+{
+  "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+  "files": [
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/ANNUAL_ALIGNED_FULL_RATES/Bridge_Runtime_Source_Receipts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 6363,
+      "sha256": "907ddd9d6c569df002b372152fcccb9435b601d12143b949c31009add3ea0f37"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/ANNUAL_ALIGNED_FULL_RATES/Case_Connection.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 791,
+      "sha256": "d345a66f6fa97e8f115bfbd526bece80f1931a7c0b05e51848351b68e9c75e84"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/ANNUAL_ALIGNED_FULL_RATES/Common_Trace_ANNUAL_ALIGNED_FULL_RATES.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 358647,
+      "sha256": "dfb7aa13994f764162fece25ec6ce583878879b8a734ec20658858ae0f7d1c6f"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/ANNUAL_ALIGNED_FULL_RATES/Resolved_Common_Runtime_ANNUAL_ALIGNED_FULL_RATES.py.txt",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 65880,
+      "sha256": "a3801065ca88f50e071715cf763a9ce2554bbb5b2154342cddd259bda3dc5081"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/ANNUAL_ALIGNED_FULL_RATES/Runtime_Source_Receipts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 6140,
+      "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/ANNUAL_FINE_WEEK_HOURS/Bridge_Runtime_Source_Receipts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 6363,
+      "sha256": "907ddd9d6c569df002b372152fcccb9435b601d12143b949c31009add3ea0f37"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/ANNUAL_FINE_WEEK_HOURS/Case_Connection.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 784,
+      "sha256": "6bb0faa4f4153250decbeb1ca6a79d136934deab19f9305291f34dd79b2ee0f7"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/ANNUAL_FINE_WEEK_HOURS/Common_Trace_ANNUAL_FINE_WEEK_HOURS.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 358735,
+      "sha256": "5df51bf9e5d23552736631a9e214e4ebcf3926986430f83f2cbd56a381681112"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/ANNUAL_FINE_WEEK_HOURS/Resolved_Common_Runtime_ANNUAL_FINE_WEEK_HOURS.py.txt",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 65876,
+      "sha256": "b3df5cad4ab650001b81523fda4907d425d316bcd94041a3f8ee881a6f3f7a81"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/ANNUAL_FINE_WEEK_HOURS/Runtime_Source_Receipts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 6140,
+      "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/ANNUAL_MONTH_HOURS_PROFILE/Bridge_Runtime_Source_Receipts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 6363,
+      "sha256": "907ddd9d6c569df002b372152fcccb9435b601d12143b949c31009add3ea0f37"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/ANNUAL_MONTH_HOURS_PROFILE/Case_Connection.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 796,
+      "sha256": "5b1956332151e6d23b488270afc16e82b281a1cb9ef3b167620dee19c68ff4d8"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/ANNUAL_MONTH_HOURS_PROFILE/Common_Trace_ANNUAL_MONTH_HOURS_PROFILE.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 358929,
+      "sha256": "18753be62e3ca1e62f0a6b18ea10927387e0e65ecfd32d8a79caf3143150a4c6"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/ANNUAL_MONTH_HOURS_PROFILE/Resolved_Common_Runtime_ANNUAL_MONTH_HOURS_PROFILE.py.txt",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 65884,
+      "sha256": "f4e020065ecbed815d6629cf0c4ee254b849047301a693046b25acc3f04254f1"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/ANNUAL_MONTH_HOURS_PROFILE/Runtime_Source_Receipts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 6140,
+      "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/ANNUAL_SAME_SURVEY_UNDER65/Bridge_Runtime_Source_Receipts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 6363,
+      "sha256": "907ddd9d6c569df002b372152fcccb9435b601d12143b949c31009add3ea0f37"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/ANNUAL_SAME_SURVEY_UNDER65/Case_Connection.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 789,
+      "sha256": "6b743e3f46fd53a48cd34739ec35a7f65cc10d471f7cb42a202730459ed524ee"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/ANNUAL_SAME_SURVEY_UNDER65/Common_Trace_ANNUAL_SAME_SURVEY_UNDER65.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 358676,
+      "sha256": "30bb9085499062f4033fd2f6221da0058f7d4dfb661cb6a19a6235c182c1bf02"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/ANNUAL_SAME_SURVEY_UNDER65/Resolved_Common_Runtime_ANNUAL_SAME_SURVEY_UNDER65.py.txt",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 65877,
+      "sha256": "94a8edef58e3d60a14eb7ea79b8f49443aa3512e5ebf50bd53492383f6398d0d"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/ANNUAL_SAME_SURVEY_UNDER65/Runtime_Source_Receipts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 6140,
+      "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Acquisition_Route_Notes.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 564,
+      "sha256": "c5993e820182239f0f8b38f8bb4a30ced37207232d40b6d8173b5b52f325c2eb"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Aligned_Age_Sex_Nationality_Cells.csv",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 477932,
+      "sha256": "2c9839cc2852c53c61cbaedca3a914ff5092fb03c81f4c6be0543a0581248338"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Aligned_Worker.py",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 3048,
+      "sha256": "4d02697e9f8c0e4e6ff89ddf46dd7bf120d3901ea21270edb7c1520fea1fd881"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/BASE_SQ_UNCHANGED/Bridge_Runtime_Source_Receipts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 6363,
+      "sha256": "907ddd9d6c569df002b372152fcccb9435b601d12143b949c31009add3ea0f37"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/BASE_SQ_UNCHANGED/Case_Connection.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 780,
+      "sha256": "52c5be62eb4f19b3de8aa397b2051a8b9b8be3e9e8a4d938e0ae501b5ef3a481"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/BASE_SQ_UNCHANGED/Common_Trace_BASE_SQ_REPLAY.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 359144,
+      "sha256": "3e58ec77430d3422ed720ca3b5b476aba5de195435eeb13e6930e4ffd39539d1"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/BASE_SQ_UNCHANGED/Resolved_Common_Runtime_BASE_SQ_REPLAY.py.txt",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 65347,
+      "sha256": "1760b01c5f4d65db5a10233413e2191d9f387a604c08a19c51badbc324465ed6"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/BASE_SQ_UNCHANGED/Runtime_Source_Receipts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 6140,
+      "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Benchmark_Gap_Timing_Accounting.csv",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 933,
+      "sha256": "8a20dcf448a004a8f9035e4f7785e46a93f0276ea3e6c6162708c52676314851"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Execution_Log.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 3682,
+      "sha256": "f7e8b48bbd626fba1010d2668172336f8f78065bc214a76baf12cf8122bbb53d"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_ALIGNED_FULL_RATES/Bridge_Runtime_Source_Receipts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 4003,
+      "sha256": "42a66c76cf22eba7e7a0b27d5ab0b5c2dcce8cdd8988864f9c937972357fcd01"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_ALIGNED_FULL_RATES/Case_Connection.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 622,
+      "sha256": "158cfeda700b1cbe17832871c8ff716b0d9791e292d699e9ec481550f7e9bd4e"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_ALIGNED_FULL_RATES/F_Actual_Annual.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 522525,
+      "sha256": "760fd40a50450437b6026392781a6549648c48fb2cd43fb748bbcff967bf8263"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_ALIGNED_FULL_RATES/F_Common_Clinical_Accounts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 137652,
+      "sha256": "59ed84a212717960207931618b978bc974293177b5af83a8a79212aaa9546c91"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_ALIGNED_FULL_RATES/F_Medical_Accounts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 148558,
+      "sha256": "8b324b0516f366c310e8e85daa6c05c1c46abd2c872e6b4cf10fd8e7b213fbba"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_ALIGNED_FULL_RATES/F_Medical_Reference_Inputs.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 1791,
+      "sha256": "3afd44c02680757d419eea68d8cf52715ac092d030377675f3e369995c75ef76"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_ALIGNED_FULL_RATES/F_Runtime_Trace.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 33262,
+      "sha256": "7be033e84a6badc95664e9434eafab7077237b70e2bc878f9089c43e34d36df5"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_ALIGNED_FULL_RATES/Resolved_F_Labor_Trace_Adapter_Source.py.txt",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 6826,
+      "sha256": "c5553c98de45eb23064cbc75218cb195660d61489c57087e5373ea415fe03eb3"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_ALIGNED_FULL_RATES/Runtime_Source_Receipts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 3780,
+      "sha256": "268d39ea1078332df6afd4f202744b4aa258418517f92f478b85a2f1d540024e"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_FINE_WEEK_HOURS/Bridge_Runtime_Source_Receipts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 4003,
+      "sha256": "42a66c76cf22eba7e7a0b27d5ab0b5c2dcce8cdd8988864f9c937972357fcd01"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_FINE_WEEK_HOURS/Case_Connection.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 611,
+      "sha256": "d1e9b228f36beba67b14fb849bb3a27a7b1e75cb4ae5e888d4748132e4f6ba49"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_FINE_WEEK_HOURS/F_Actual_Annual.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 522569,
+      "sha256": "ae17a4a2e7d6e3eb177a2fe8912d39c5816fc41ec8dadcc4a6b176e983ac76b8"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_FINE_WEEK_HOURS/F_Common_Clinical_Accounts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 137652,
+      "sha256": "59ed84a212717960207931618b978bc974293177b5af83a8a79212aaa9546c91"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_FINE_WEEK_HOURS/F_Medical_Accounts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 148558,
+      "sha256": "8b324b0516f366c310e8e85daa6c05c1c46abd2c872e6b4cf10fd8e7b213fbba"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_FINE_WEEK_HOURS/F_Medical_Reference_Inputs.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 1791,
+      "sha256": "3afd44c02680757d419eea68d8cf52715ac092d030377675f3e369995c75ef76"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_FINE_WEEK_HOURS/F_Runtime_Trace.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 33271,
+      "sha256": "ea42cd81f762467894c1f47e0ff707c0d2b2671f6378426e71bf907c88d87111"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_FINE_WEEK_HOURS/Resolved_F_Labor_Trace_Adapter_Source.py.txt",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 6826,
+      "sha256": "c5553c98de45eb23064cbc75218cb195660d61489c57087e5373ea415fe03eb3"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_FINE_WEEK_HOURS/Runtime_Source_Receipts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 3780,
+      "sha256": "268d39ea1078332df6afd4f202744b4aa258418517f92f478b85a2f1d540024e"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_MONTH_HOURS_PROFILE/Bridge_Runtime_Source_Receipts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 4003,
+      "sha256": "42a66c76cf22eba7e7a0b27d5ab0b5c2dcce8cdd8988864f9c937972357fcd01"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_MONTH_HOURS_PROFILE/Case_Connection.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 610,
+      "sha256": "24ce3c49340f8fa50b9a2bb7ab9e8a5f5532308f3357b4a088c0612a77fef0ae"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_MONTH_HOURS_PROFILE/F_Actual_Annual.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 522535,
+      "sha256": "3f51fe141266b4bb9e50923123df2b69c5494591448e6d6a4d57d327ac7bff1c"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_MONTH_HOURS_PROFILE/F_Common_Clinical_Accounts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 137652,
+      "sha256": "59ed84a212717960207931618b978bc974293177b5af83a8a79212aaa9546c91"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_MONTH_HOURS_PROFILE/F_Medical_Accounts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 148558,
+      "sha256": "8b324b0516f366c310e8e85daa6c05c1c46abd2c872e6b4cf10fd8e7b213fbba"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_MONTH_HOURS_PROFILE/F_Medical_Reference_Inputs.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 1791,
+      "sha256": "3afd44c02680757d419eea68d8cf52715ac092d030377675f3e369995c75ef76"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_MONTH_HOURS_PROFILE/F_Runtime_Trace.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 33266,
+      "sha256": "ac6585ad95dc007ea64121341ef3abbdd0938c70a03de2286072456a6e292db2"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_MONTH_HOURS_PROFILE/Resolved_F_Labor_Trace_Adapter_Source.py.txt",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 6826,
+      "sha256": "c5553c98de45eb23064cbc75218cb195660d61489c57087e5373ea415fe03eb3"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_MONTH_HOURS_PROFILE/Runtime_Source_Receipts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 3780,
+      "sha256": "268d39ea1078332df6afd4f202744b4aa258418517f92f478b85a2f1d540024e"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_BASE_UNCHANGED/Bridge_Runtime_Source_Receipts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 4003,
+      "sha256": "42a66c76cf22eba7e7a0b27d5ab0b5c2dcce8cdd8988864f9c937972357fcd01"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_BASE_UNCHANGED/Case_Connection.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 685,
+      "sha256": "4305e01faeac37db2f6ee1c0e30870fabd5c14c9edc3e00713c0394bfa5c9c47"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_BASE_UNCHANGED/F_Actual_Annual.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 522949,
+      "sha256": "cf13d4c267f30a361ed0f4aa3083893721413283247c846fdce477357c2f7e43"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_BASE_UNCHANGED/F_Common_Clinical_Accounts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 137652,
+      "sha256": "59ed84a212717960207931618b978bc974293177b5af83a8a79212aaa9546c91"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_BASE_UNCHANGED/F_Medical_Accounts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 148558,
+      "sha256": "8b324b0516f366c310e8e85daa6c05c1c46abd2c872e6b4cf10fd8e7b213fbba"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_BASE_UNCHANGED/F_Medical_Reference_Inputs.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 1791,
+      "sha256": "3afd44c02680757d419eea68d8cf52715ac092d030377675f3e369995c75ef76"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_BASE_UNCHANGED/F_Runtime_Trace.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 33270,
+      "sha256": "0171080377eba6eef8bd627e36adc2581e0b5986cc14a52092dd1ae80725de6d"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_BASE_UNCHANGED/Resolved_F_Labor_Trace_Adapter_Source.py.txt",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 6826,
+      "sha256": "c5553c98de45eb23064cbc75218cb195660d61489c57087e5373ea415fe03eb3"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_BASE_UNCHANGED/Runtime_Source_Receipts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 3780,
+      "sha256": "268d39ea1078332df6afd4f202744b4aa258418517f92f478b85a2f1d540024e"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_N3_Aligned_Labor_Impact_And_Compatibility.csv",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 54652,
+      "sha256": "18191863b45522c0b3f79a6622a3083f2073fa44c716d77bc058c9598be74b0b"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_OCTOBER_NEAR_FULL_RATES/Bridge_Runtime_Source_Receipts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 4003,
+      "sha256": "42a66c76cf22eba7e7a0b27d5ab0b5c2dcce8cdd8988864f9c937972357fcd01"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_OCTOBER_NEAR_FULL_RATES/Case_Connection.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 624,
+      "sha256": "d4d16725ad3602b039090d52e9a4c658500ed85682d10dbc9ad9c8cee22cc70f"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_OCTOBER_NEAR_FULL_RATES/F_Actual_Annual.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 522573,
+      "sha256": "dbfb45f4088c54136895de4a6b8c209cb308422d43443285e9ff48be2ce54a90"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_OCTOBER_NEAR_FULL_RATES/F_Common_Clinical_Accounts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 137652,
+      "sha256": "59ed84a212717960207931618b978bc974293177b5af83a8a79212aaa9546c91"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_OCTOBER_NEAR_FULL_RATES/F_Medical_Accounts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 148558,
+      "sha256": "8b324b0516f366c310e8e85daa6c05c1c46abd2c872e6b4cf10fd8e7b213fbba"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_OCTOBER_NEAR_FULL_RATES/F_Medical_Reference_Inputs.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 1791,
+      "sha256": "3afd44c02680757d419eea68d8cf52715ac092d030377675f3e369995c75ef76"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_OCTOBER_NEAR_FULL_RATES/F_Runtime_Trace.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 33278,
+      "sha256": "f3336f233356312685964b5da6ee0760b1d36d268a1fc56ad299ab0ba02bcb9e"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_OCTOBER_NEAR_FULL_RATES/Resolved_F_Labor_Trace_Adapter_Source.py.txt",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 6826,
+      "sha256": "c5553c98de45eb23064cbc75218cb195660d61489c57087e5373ea415fe03eb3"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_OCTOBER_NEAR_FULL_RATES/Runtime_Source_Receipts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 3780,
+      "sha256": "268d39ea1078332df6afd4f202744b4aa258418517f92f478b85a2f1d540024e"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_PREVIOUS_FINE_AGE_HOURS/Bridge_Runtime_Source_Receipts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 4003,
+      "sha256": "42a66c76cf22eba7e7a0b27d5ab0b5c2dcce8cdd8988864f9c937972357fcd01"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_PREVIOUS_FINE_AGE_HOURS/Case_Connection.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 617,
+      "sha256": "8cf869f40511d3d896a97e6189eb54fd6380e7f7fa96a985281bd14a39c07424"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_PREVIOUS_FINE_AGE_HOURS/F_Actual_Annual.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 522574,
+      "sha256": "fdac3df151c76d1446d08ef0e34a446783bababae3457b60193210b7ef6971e2"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_PREVIOUS_FINE_AGE_HOURS/F_Common_Clinical_Accounts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 137652,
+      "sha256": "59ed84a212717960207931618b978bc974293177b5af83a8a79212aaa9546c91"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_PREVIOUS_FINE_AGE_HOURS/F_Medical_Accounts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 148558,
+      "sha256": "8b324b0516f366c310e8e85daa6c05c1c46abd2c872e6b4cf10fd8e7b213fbba"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_PREVIOUS_FINE_AGE_HOURS/F_Medical_Reference_Inputs.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 1791,
+      "sha256": "3afd44c02680757d419eea68d8cf52715ac092d030377675f3e369995c75ef76"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_PREVIOUS_FINE_AGE_HOURS/F_Runtime_Trace.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 33274,
+      "sha256": "372e8e58ce5a813c24ed783870a2bafaed2c4d162877eb0e251e72639b04d91a"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_PREVIOUS_FINE_AGE_HOURS/Resolved_F_Labor_Trace_Adapter_Source.py.txt",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 6826,
+      "sha256": "c5553c98de45eb23064cbc75218cb195660d61489c57087e5373ea415fe03eb3"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_PREVIOUS_FINE_AGE_HOURS/Runtime_Source_Receipts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 3780,
+      "sha256": "268d39ea1078332df6afd4f202744b4aa258418517f92f478b85a2f1d540024e"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Finalize_Timing_Packet.py",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 19699,
+      "sha256": "dc5d2e5ae239cd06aef53f5dca3a2d55883c91b38222ee0231c2e3bb904bd2a2"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Fixed_Aligned_Case_Inputs.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 33708,
+      "sha256": "7318b4610938c60587f432498ab0ff4b4503fa89142f7dfb5466e52162ddbff4"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Fixed_Dependency_Receipts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 77408,
+      "sha256": "e717d5746de69bfc8277059b9802067049d8904c38b64e6a353a7f9886216b0c"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Key_Years.csv",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 8695,
+      "sha256": "499fcedd679f9bb7b4bcd5855309eb47272efad8becd0e128fefc98618c4432a"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/LFS_Observed_Monthly_Timing_2025_2026.csv",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 44390,
+      "sha256": "db1f4b53aeee0d88a7f0179d30a1c9a21070cc95b74122ed29627cb6935774a7"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Manifest.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 31118,
+      "sha256": "d6bb00f37f70531e2590a04d491b74dfbbf2d1f27cbd40f420d9665204679ac2"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/N3_BASE_UNCHANGED/Bridge_Runtime_Source_Receipts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 5493,
+      "sha256": "fae1a05c9042e9e284741d5ede26bb21ebd24105a634d59a85baf6c714bc8b24"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/N3_BASE_UNCHANGED/N3_Actual_Annual.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 94007,
+      "sha256": "7728c506a33d302fb2f6512defcda42008c980257db19fbb0a7507860d2f2e4a"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/N3_BASE_UNCHANGED/N3_Actual_Fiscal.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 61546,
+      "sha256": "ef9485d8acab9746748f8a57042b71b2e84761bd36f252e5852920d0cb74376a"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/N3_BASE_UNCHANGED/N3_Common_Input_Contract.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 139656,
+      "sha256": "a3ac335acfc40cc24ea37a5d628a3b46e872c34c465f61e69125d62cd86e1d2f"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/N3_BASE_UNCHANGED/N3_Runtime_Checks.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 38,
+      "sha256": "8be45753b6fbc70882ab996237942357f98ac32e4643161a9e09c24de7155b79"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/N3_BASE_UNCHANGED/N3_Runtime_Midpoints.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 64749,
+      "sha256": "1fd4697d40f599a18823751bbf2a8bf60bb839e0ea669714a745324dbec877d3"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/N3_BASE_UNCHANGED/N3_SQ_Denominator_States.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 673563,
+      "sha256": "1ce949509472382859f2019347998b89e33364509ce7f9cee2d991800077fdfa"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/N3_Shared_Base_Dependency_Read_Sites.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 7473,
+      "sha256": "c4ca5dc7efa629d0d9991cb61b24e415c5fd7a9f06bf6b04a8ac1a13780bc9ac"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/OCTOBER_NEAR_FULL_RATES/Bridge_Runtime_Source_Receipts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 6363,
+      "sha256": "907ddd9d6c569df002b372152fcccb9435b601d12143b949c31009add3ea0f37"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/OCTOBER_NEAR_FULL_RATES/Case_Connection.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 788,
+      "sha256": "fb2f0d078d32976d852cb63da3434a498908bc4bc2d182c430f135e9f6c3b324"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/OCTOBER_NEAR_FULL_RATES/Common_Trace_OCTOBER_NEAR_FULL_RATES.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 359398,
+      "sha256": "2653d8e97b3b958281baf97ac02a063d552e18382d9eaf9cc9978458002a8ee2"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/OCTOBER_NEAR_FULL_RATES/Resolved_Common_Runtime_OCTOBER_NEAR_FULL_RATES.py.txt",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 65879,
+      "sha256": "d88efec2f8275c042f4e1fdbea6a6426c59d647f0158de597401be8fe14307af"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/OCTOBER_NEAR_FULL_RATES/Runtime_Source_Receipts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 6140,
+      "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/OLDER_FINE_RATES_ONLY/Bridge_Runtime_Source_Receipts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 6363,
+      "sha256": "907ddd9d6c569df002b372152fcccb9435b601d12143b949c31009add3ea0f37"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/OLDER_FINE_RATES_ONLY/Case_Connection.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 781,
+      "sha256": "05480eab2c1aadd8d5516bb0e7c36199d89537b4aaa90ea03473089e34cda083"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/OLDER_FINE_RATES_ONLY/Common_Trace_OLDER_FINE_RATES_ONLY.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 358912,
+      "sha256": "6bbf238994a542550c1e4893b4c04988db57775b7fc743ebac398b33f34ad1e6"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/OLDER_FINE_RATES_ONLY/Resolved_Common_Runtime_OLDER_FINE_RATES_ONLY.py.txt",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 65874,
+      "sha256": "44d417a3b551bef0c1b5f9730e7e84138d64e93f72caa66a2bc7e9ed7ea005f2"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/OLDER_FINE_RATES_ONLY/Runtime_Source_Receipts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 6140,
+      "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Official_Extracted_Cells.csv",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 51090,
+      "sha256": "82d270a4097956d7676946e592817a32a4c950d752c68c517262c51453e9f2cf"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Official_Population_Employment_Timing_And_65Plus_Source_Receipts.csv",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 11418,
+      "sha256": "8605c884b3d6497528f5ce7fd4374303c8d3203b7bb49db058b0e79200edd9a3"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Older_65Plus_Age_Sex_Employment_Rates.csv",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 5445,
+      "sha256": "90654d4c3920ef8eb976baaa27e39afcf2ae6d1b837b4052c801229a5bd5b7b9"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Older_Age_Sex_Annual_Hours_Bridge.csv",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 22828,
+      "sha256": "a8d914157fecc6822f2deb59a35db6377380f568e5fd00d3efd25778a6f7e554"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Older_Coarse_Fine_And_Existing_Rate_Comparison.csv",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 896,
+      "sha256": "7404ebd5adb7efcfdc8a7ba2d326772600a78882ea066c383a4d9feff7a414fa"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/PREVIOUS_FINE_AGE_HOURS/Bridge_Runtime_Source_Receipts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 6363,
+      "sha256": "907ddd9d6c569df002b372152fcccb9435b601d12143b949c31009add3ea0f37"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/PREVIOUS_FINE_AGE_HOURS/Case_Connection.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 784,
+      "sha256": "e12f4918ba12b9c06f101e691fa2595fd95446fc12351fe79d66dc51b47de034"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/PREVIOUS_FINE_AGE_HOURS/Common_Trace_PREVIOUS_FINE_AGE_HOURS.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 359158,
+      "sha256": "8f0d4b3a70c1dbdd48676130e7f94f0fd1e91e70099419a103730f89356d12a0"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/PREVIOUS_FINE_AGE_HOURS/Resolved_Common_Runtime_PREVIOUS_FINE_AGE_HOURS.py.txt",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 65875,
+      "sha256": "3679cb42be2e74c283c15c595a1ee072e026e332536116febc77947649cdf8e2"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/PREVIOUS_FINE_AGE_HOURS/Runtime_Source_Receipts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 6140,
+      "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Population_Employment_Same_Time_Bridge.csv",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 24695,
+      "sha256": "820a5d1f7c15bad7719264cb684e97ec6339fb6a69ed94ced4bff199ef7e3858"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Population_Estimates_2025_First_Day_Monthly_Archive.csv",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 220090,
+      "sha256": "9136e289c8ca8693e5a878a490511d26ff79eead1f3cd89b4fc7c21e7e867b89"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Prepare_Timing_Statistics.py",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 14704,
+      "sha256": "334e782536158f75369a1a59b69daad5889fc24564ab0a4a963c7f34ba0f0129"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Prior_Fixed_Original_Identity.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 28908,
+      "sha256": "6159ceea87de9b514fdddb690c7dbf310751a4fea2976efa514bd5180b0d4687"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Published_Group_Rounding_Residuals.csv",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 252,
+      "sha256": "96d49ca14fa5b68363162879491d304bbf6fe5e68416533277dee06eaba113da"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Rate_Time_Accounting_And_Interactions.csv",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 5744,
+      "sha256": "b14a151d510cbb1ee44a5fb6114f56fcde0d84ae50655c6eceb9f089c6b1dce1"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Remaining_Statistics_Gaps_And_Next_Executable_Fixes.csv",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 2282,
+      "sha256": "87be6624e9c6483a83c297259f39f2b6ab59b262b6f5272661413ced9b39bbdd"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Reproduce_Timing_Bridge.py",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 19885,
+      "sha256": "c60b68da3fec54730ccd103eddeb16596750156531e69f6ea4a42552f097d4e9"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Reproduction_Verification.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 34278,
+      "sha256": "4e873cca2d1c4914c592c40fe28c696aba42cf6fe17e92d39bd9808f1bda3a3e"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Runtime_Dependency_Receipts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 10026,
+      "sha256": "fcbcf4ada1890d9ed34c41d94f18db5803c81ab2300cbe56e0971df58f5feda6"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/SPE_Labor_Timing_65Plus_Annual_Hours_Connection_Report_DRAFT_20261123.md",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 14466,
+      "sha256": "f0792c6e23919b8f156dc579ff1cccb8c8e76389d8075aecf3613799ab509a05"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/SQ_Annual_Aligned_Labor_Hours_FTE_GDP_2026_2055.csv",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 128720,
+      "sha256": "a5c62f22fe9bfaee86a4db12cfb0ec95055c0753d81d7dd36b3a8c2e49288ac6"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/SQ_Timing_65Plus_Hours_Case_Comparison.csv",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 54118,
+      "sha256": "65e70d74ec6f7870dfa1ce6b66086414d0902d292a7ad55a31ce74ccdc706484"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Source_Originals/annual-employment.xlsx.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 147293,
+      "sha256": "81cc8f5f6e55944d012294044485782ddbe315cfce4dda74c1aa3a68315b7b7b"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Source_Originals/annual-hours.xlsx.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 291860,
+      "sha256": "d0d1c288465ae548ffa8f8609a3c5d0bf375f6be5ab695a9437f28f068b8502b"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Source_Originals/annual-monthhours.xlsx.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 202478,
+      "sha256": "f73f479f59c0cb891564ba7bbacbdc4841b44f7a14807ba638b60caae31cffce"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Source_Originals/annual-original-list.html.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 382038,
+      "sha256": "5dc6b07ed8b14d274be78c5540317cfdd5b40b6fbc61a48155997d987a82e2ad"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Source_Originals/annual-weekhours.xlsx.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 138205,
+      "sha256": "7e9d9f00fe84bb1702b2cd989a54cb75baf84a7e757b12b784d14344ebf43c9e"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Source_Originals/jinsui.html.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 33207,
+      "sha256": "61c65c43b9644afaab70cf06f2a8f3e5f8cefeb7453812b5eab4ff9a4d4c5105"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Source_Originals/long-basic.html.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 426509,
+      "sha256": "8d753afdb1592d9b4c5926a42fa23756ba70facb8c276da951f31dcfb1db0387"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Source_Originals/monthly-employed.xlsx.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 409835,
+      "sha256": "0bf9545041ee516340741bbc082a20c76ebd10008970b1374f0d8d9e051f6a01"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Source_Originals/monthly-pop.xlsx.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 217182,
+      "sha256": "b260afc6b6abc43c7aa310894caaee4e0f0713feb7f5c8437cb0fd55c739e330"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Source_Originals/oct-employment.xlsx.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 147346,
+      "sha256": "309424832112410953aa1834bd9fb3e735c9ac1d0366202b4fc07b62d14439a6"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Source_Originals/oct-hours.xlsx.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 202342,
+      "sha256": "c70dbc6d00be7545c2a0d8c3d0cca8add9ee71050f7abd4f7ee65788fcde517c"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Source_Originals/oct2025-list.html.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 363822,
+      "sha256": "767109add7d9bcb46a08fa095e8fca4e77b44629072214d4a7a89483c1b423e8"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Source_Originals/older-pop.xlsx.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 80230,
+      "sha256": "5ed6eb1816ffb687e9c05bedecc4eef0687c7134c6dc7b46af62b668eb7e3eef"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Source_Originals/older-series.xlsx.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 139334,
+      "sha256": "ea11e717f85e289502b78c594588fd8bdfcc98527533ffae3ce3f5fa16d38c87"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Source_Originals/pop-final-202506.pdf.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 512277,
+      "sha256": "0d246342b6a28c54257c0b9ca1a6bf25b90085707f90457949eb7bfa0d4e6b3f"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Source_Originals/pop-final-202507.pdf.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 564213,
+      "sha256": "a10c24f95102cb139eb5ba7d43087ddfc6eac4ce9339092b56c896f386a7e030"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Source_Originals/pop-final-202508.pdf.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 521849,
+      "sha256": "b6ec2ef50f5af4a9b1bcf29cd42ad4cd21ad509150b1afe4f6126cf2cc830956"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Source_Originals/pop-final-202509.pdf.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 572905,
+      "sha256": "1f7cd10a640bc0c57d2e61efc2d5989a0b04c223c0260a95c1845012b2a6e222"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Source_Originals/pop-final-202510.pdf.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 512889,
+      "sha256": "65b4b1da6f1efb89ed4ba4a1370405f3ed8b6f9746b6a4bd7f31e96bb2227dd2"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Source_Originals/pop-final-202511.pdf.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 512369,
+      "sha256": "becb1503421244fe4bb94ae1ce65ee65b66e224d734e96c81a67c3277cc88df1"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Source_Originals/pop-final-202512.pdf.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 458193,
+      "sha256": "e749d5541f58f730a5f24c54ebd491d50e688f6dfb97937d6d9c39e4ed624037"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Source_Originals/pop-final-202601.pdf.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 472253,
+      "sha256": "fd628969be9e9430e797e21efa89edf4ee8a89425eb25fd745e878124730d059"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Source_Originals/pop-final-202602.pdf.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 518229,
+      "sha256": "c90d8284c01b4afa4c3abe7ab9e17ca3b241b4c720e82a7514c4f5482cdf9e10"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Source_Originals/pop-final-202603.pdf.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 555241,
+      "sha256": "35e4ba3475950db717b333a86ecb412df5a84b66c6c127f3c2a49effb9b06dbe"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Source_Originals/pop-final-202604.pdf.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 573413,
+      "sha256": "f00dd587076da7a795670e22d80833dbf0b522dab667e664f76e80a44c2af13a"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Source_Originals/pop-final-202605.pdf.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 504337,
+      "sha256": "488c98ca9265da2b8489ee4a1cf70d1aac6e96575ece0128a7954916475d9cea"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Source_Originals/population2025-page.html.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 198257,
+      "sha256": "dc32658564d6afd79b9257f6982cda058d0a71067b9ab075f0d9e6558b1ed047"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Source_Originals/population2025-rebased.xlsx.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 33417,
+      "sha256": "22d076a996ed6b1ee3ab228e1a318fbad1d4e1a81ec9d728ca94c6e671bb28ba"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Statistics_Inputs.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 658539,
+      "sha256": "e297f734d117c2f99e6d99cb29e99f87928ca5782ec9cda8e10ba20b9449ac79"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/UNIFORM_LEVEL_CONTROL/Bridge_Runtime_Source_Receipts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 6363,
+      "sha256": "907ddd9d6c569df002b372152fcccb9435b601d12143b949c31009add3ea0f37"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/UNIFORM_LEVEL_CONTROL/Case_Connection.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 785,
+      "sha256": "490d8b6ab82123e93c49b0f8f60e66598fe713c73d9e97f13e45ce1e08d5a907"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/UNIFORM_LEVEL_CONTROL/Common_Trace_UNIFORM_LEVEL_CONTROL.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 358766,
+      "sha256": "19aa703767d14600cec52a7921ca653dffe17f838d659dfd1d5b162f9e265e58"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/UNIFORM_LEVEL_CONTROL/Resolved_Common_Runtime_UNIFORM_LEVEL_CONTROL.py.txt",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 65878,
+      "sha256": "4d864b24e1e8f84f4b1faec843f6e47cd3e0409680f4004a86d92cd59ae13bf6"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/UNIFORM_LEVEL_CONTROL/Runtime_Source_Receipts.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 6140,
+      "sha256": "a106dbabb2b0c92bff5d29034062eb5ff5ae7548fb7a39fa1c1defbac86c3ee5"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Verification.json",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 8995,
+      "sha256": "5e9c2c560696ff4d43ca902b5f55ea2197e39475ddcb2014901f84292ad414da"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Verification_Checks.csv",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 302470,
+      "sha256": "3377f2e34c30e405b51571849d1d53af3424f4cd0b3bd601e9e321f665f1c283"
+    },
+    {
+      "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Verify_Reproduction.py",
+      "commit": "21de7c095b500575934f7c098d5bc6f183cc6710",
+      "size": 1232,
+      "sha256": "0e0ca9820b2e000d5e6b465d09fbd2f20112508953f18499ee41f78f26daf41e"
+    }
+  ],
+  "bytes": 22212073
+}

@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "new_reference_and_reproduction_checks": 4395,
+  "new_native_runtime_checks": 4488,
+  "new_total_checks": 8883,
+  "failed": 0,
+  "N3_conditions": 6,
+  "N3_annual_rows": 180,
+  "N3_changed_conditions": 5,
+  "annual_comparison_rows": 270,
+  "prior_execution_only": {
+    "SQ_paths": 9,
+    "F_paths": 6,
+    "N3_paths": 1,
+    "annual_rows": 480,
+    "checks": 5265,
+    "N3_checks": 748,
+    "Claude_checks": 2845
+  },
+  "same_runtime_current_reexecuted": true,
+  "previous_checks_added_to_new_count": false,
+  "native_SQ_vs_preserved_SQ_max_absolute_GDP_rounding_trn": {
+    "BASE_SQ_UNCHANGED": 0.0,
+    "PREVIOUS_FINE_AGE_HOURS": 3.051741259696428e-08,
+    "ANNUAL_ALIGNED_FULL_RATES": 4.758487648359733e-08,
+    "OCTOBER_NEAR_FULL_RATES": 4.407615961099509e-08,
+    "ANNUAL_FINE_WEEK_HOURS": 6.700247467961162e-08,
+    "ANNUAL_MONTH_HOURS_PROFILE": 7.203277618827997e-08
+  },
+  "rounding_tolerance_trn": 1e-06,
+  "policy_switches_unchanged": true,
+  "additional_GI": "OFF",
+  "formal_acceptance": false,
+  "RP023_M1925": "HOLD",
+  "RP024": "PENDING"
+}

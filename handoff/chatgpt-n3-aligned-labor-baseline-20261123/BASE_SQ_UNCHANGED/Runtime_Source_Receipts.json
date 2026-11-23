@@ -1,0 +1,252 @@
+[
+  {
+    "path": "handoff/chatgpt-n3-assumptions-specification-calibration-separation-20261123/Sensitivity_Runtime.py",
+    "size": 3204,
+    "sha256": "ab2d84a1138d3359aa387baa60e12fa3ca8fc615db50fa74de9a16f21bcac6f2"
+  },
+  {
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Components.py",
+    "size": 5528,
+    "sha256": "ec5640f9512486274122e32aacd7ca548273b23b94035710fd56949b8ea37588"
+  },
+  {
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Inputs.json",
+    "size": 39819,
+    "sha256": "d036bc65580805f9f4080b354412fc3d6ab3bc4deeb9ae8409f6ab24e625635e"
+  },
+  {
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Macro_Adapter.py",
+    "size": 2117,
+    "sha256": "189d43082853db0b007462ce3110991641065df1905c23329ee17f2b5e6cbd72"
+  },
+  {
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/Model.py",
+    "size": 3903,
+    "sha256": "df0d7912f22f6aad4c266d7d256263d792214d1c7ac13122b1906dc3a4c2c4d5"
+  },
+  {
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/results/Conditional_National_Local_Fiscal.csv",
+    "size": 9458004,
+    "sha256": "db7c24ba77bc36c313612dcaf1c7882bace91cb15917020989af906053a1e7db"
+  },
+  {
+    "path": "handoff/chatgpt-n3-f-parity-implementation-20261122/results/DOMESTIC_TRANSFER_Corporate_Funding_Stock.csv",
+    "size": 130330,
+    "sha256": "a5baccddcca220a6e045926c6e00fe30e59232c255a0d724c78818b1f1c542a0"
+  },
+  {
+    "path": "handoff/chatgpt-n3-gdp-gap-causal-attribution-20261123/Attribution_Runtime.py",
+    "size": 7058,
+    "sha256": "52712ce0254d143c59694631fb09b5020ab8dd88f76644798022f5f1fe6677d1"
+  },
+  {
+    "path": "handoff/chatgpt-n3-gdp-recirculation-counterfactual-20261122/N3_GDP_Recirculation_Annual_Comparison_2026_2055.csv",
+    "size": 838241,
+    "sha256": "f5bfe6590354c0c625489dd40b4708b5d018a71e224dd3294977d074796dd9c7"
+  },
+  {
+    "path": "handoff/chatgpt-n3-gdp-recirculation-counterfactual-20261122/N3_GDP_Recirculation_Reproduce.py",
+    "size": 45477,
+    "sha256": "e1ffcadb5409f2d796c72a43ebdff7bd5ac0eec672d00969ce1aef6b5a2ef583"
+  },
+  {
+    "path": "handoff/chatgpt-n3-gdp-robustness-fiscal-dynamics-20261122/N3_GDP_Robustness_Reproduce.py",
+    "size": 42183,
+    "sha256": "9bc03585bd23f4eebf06ae98f191c92785ec85f8f67e6a2124ab6637bed3c866"
+  },
+  {
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_Components.py",
+    "size": 12416,
+    "sha256": "3da949845436180fb2038e109afe9d01c66c5c9ca064dad548326777ea4a9519"
+  },
+  {
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_Expansion_Annual.csv",
+    "size": 1835282,
+    "sha256": "fcc7783bc11e7d781eaf6470f23ef0da5e93edaae6e6f8570cf862e90f326749"
+  },
+  {
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_Expansion_Inputs.json",
+    "size": 7908,
+    "sha256": "f4382122f3bd0c5fc5ea8adf06832d4d6cdfa5177db40d71da17d57e23ebc422"
+  },
+  {
+    "path": "handoff/chatgpt-n3-model-expansion-20261121/N3_Expansion_Model.py",
+    "size": 10861,
+    "sha256": "bfb46b0f5bb02d628582c3772dd686be7efc94227b128d516899a3ebceb1b54a"
+  },
+  {
+    "path": "handoff/chatgpt-n3-native-vs-diagnostic-separation-20261123/Resolved_Separation_Runtime.py.txt",
+    "size": 16403,
+    "sha256": "2d11d730317055bf1af4d35e8b268ef1cfc3be0936fb9511238b316510b39ac5"
+  },
+  {
+    "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Dependency_Pins.json",
+    "size": 2674,
+    "sha256": "1673cccbca8ae7f2f4fb8b60fc4a77143c3fd51e79a03e3c218818ca3d172f85"
+  },
+  {
+    "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Gap_Components.py",
+    "size": 9411,
+    "sha256": "a0f0b4fe7f7ced6a8a9546e7b68a458ad8c6aaf888a7e57412a746a2090760dd"
+  },
+  {
+    "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Gap_Inputs.json",
+    "size": 16622,
+    "sha256": "181af41fc4145e097bed4514be3d49f9f85561827e3f54223de11196d110f868"
+  },
+  {
+    "path": "handoff/chatgpt-n3-pension-counterpart-20261121/Gap_Model.py",
+    "size": 12587,
+    "sha256": "9a33fb0946a9fe3087574f5d5cff1bf1e7f7e8b99570173169a31e0ac25b1cef"
+  },
+  {
+    "path": "handoff/chatgpt-n3-policy-burden-diagnosis-20261122/N3_Conditional_Fiscal_Primary_Bridge.csv",
+    "size": 5730,
+    "sha256": "cf932ddda081614869e02b3db018e319ee92abd28eaa87beaef9cb8b1e8080ca"
+  },
+  {
+    "path": "handoff/chatgpt-n3-policy-burden-diagnosis-20261122/N3_Policy_Burden_Diagnosis_Reproduce.py",
+    "size": 55522,
+    "sha256": "e3ce22ed630365ff745973c979b21ac6092699cc7d0ade96a14b45e1dbefbc49"
+  },
+  {
+    "path": "handoff/chatgpt-n3-policy-burden-diagnosis-20261122/N3_Unchanged_Execution_Trace.json",
+    "size": 5795176,
+    "sha256": "0ecbfab6db206e6cf77e2f1bfd6b3c2f07969a576727fdc7eebd1cebec4e94b5"
+  },
+  {
+    "path": "handoff/chatgpt-n3-sfa-cash-reconciliation-20261122/N3_SFA_Reproduce.py",
+    "size": 29578,
+    "sha256": "78849adc0db82ae5b925d547ccd9b828c2508705f3fc448203b78cdaf3ad8918"
+  },
+  {
+    "path": "handoff/chatgpt-n3-transition-financing-full-dynamics-20261122/N3_Transition_Reproduce.py",
+    "size": 43852,
+    "sha256": "73529bcfc5bb57b4fb5f47a9c69e36829d74b200f04bbe4725ab4ee11b0bcfb4"
+  },
+  {
+    "path": "handoff/chatgpt-national-fiscal-closure-20261121/Fiscal_Inputs.json",
+    "size": 2124,
+    "sha256": "d79ad4d2ba7c5748beb727d7d0586d1367061c6cc69e17012d7afd7c73ce22b9"
+  },
+  {
+    "path": "handoff/chatgpt-national-fiscal-closure-20261121/National_Fiscal.py",
+    "size": 12677,
+    "sha256": "cf92a903f028c31ea8e8c62fb5d9cd906d7075d77420513af6b1ff8527237b9b"
+  },
+  {
+    "path": "handoff/chatgpt-national-fiscal-closure-20261121/Official_Fiscal_Baseline_2025_2040.csv",
+    "size": 6181,
+    "sha256": "14a0fb9de6f47e92f36d549a7ded572928fc91f8a43702fc5fe42a5d8c4286f6"
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/Annual.csv",
+    "size": 6775129,
+    "sha256": "1754500818d58de9b075106cb1185322dc5c961a3438dbcfa0a2883917d8ba79"
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/CommonEndOfLife.py",
+    "size": 10956,
+    "sha256": "c930a8df539ff676e55180b75cfe899084caa656f738c371aac44ce1f7693fae"
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/CommonInterface.py",
+    "size": 420,
+    "sha256": "4b56a30806da8bd5f39566a622fac1119e93f0842d40983deafb6dca4c88f4e2"
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/Demand.py",
+    "size": 2544,
+    "sha256": "fab0a6c505c9bb5041bfb38ec199617b6c4171891ec4fc49ba90eec2ae05f30d"
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/FMedical.py",
+    "size": 17478,
+    "sha256": "b36a21bead583b13c338f31dcd42e90c1e24a2814024024e872e993a9754dd80"
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/Fiscal.csv",
+    "size": 2259915,
+    "sha256": "2fc3d72b0aeca22bece7f208c4fc0c6e50636e3cfe40d18a6aabe7f247f7252d"
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/Inputs.json",
+    "size": 27093,
+    "sha256": "6da4648a8823c041197e9082d6814b6e19710afdf7bb7c7130dc58d4cabd6095"
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/Model.py",
+    "size": 15152,
+    "sha256": "e45b234545e17cfc486a488a4c06f68e49b03234d2847142ded3ce6c2998d4fd"
+  },
+  {
+    "path": "handoff/f-education-20261121/Annual.csv",
+    "size": 1996375,
+    "sha256": "e9cc9c08e5a5529d6da208c49822c144ee2a5a7827dc5e7aa200a62fde541db6"
+  },
+  {
+    "path": "handoff/f-education-20261121/Inputs.json",
+    "size": 6825,
+    "sha256": "d796d432c1f625784c322bbb330d5da8ab59fbbdfa6043cf3a10538c2901e651"
+  },
+  {
+    "path": "handoff/f-education-20261121/Model.py",
+    "size": 24178,
+    "sha256": "08d6b409e9e815e6eb34878c69457c77a7a7e7fe9f5b85fa2debeb0f1a8ee88c"
+  },
+  {
+    "path": "handoff/f-household-social-20261120/Inputs.json",
+    "size": 1746742,
+    "sha256": "8a7df2e6b7228177b28346386437b3b7dc6a5f1b8547507a114daf1fc5472766"
+  },
+  {
+    "path": "handoff/f-integrated-20261121/Annual.csv",
+    "size": 2082920,
+    "sha256": "eb92953e843dfd7b84a0476b2f41ae310cafbf976cb857895b7363beabdf4772"
+  },
+  {
+    "path": "handoff/f-integrated-20261121/Inputs.json",
+    "size": 7865,
+    "sha256": "87d454a5205869e58dee2836103499ee1eee89105cf9d14c62724df0561c66f5"
+  },
+  {
+    "path": "handoff/f-integrated-20261121/Model.py",
+    "size": 21624,
+    "sha256": "42adedbe340a089e126c22987df89894943fcece54b6ac85ffa002fb886bf71c"
+  },
+  {
+    "path": "handoff/f-medical-common-20261121/Annual.csv",
+    "size": 3077541,
+    "sha256": "fb778157a62bd604c0be3cbf3d3786142719199b4de84b5debfbb6a7674d4cb6"
+  },
+  {
+    "path": "handoff/f-medical-common-20261121/Common_EndOfLife.csv",
+    "size": 567389,
+    "sha256": "0916d3c3dcf2d027fb0ae557ec9ae21c236250e6868ddb2b4b63349f7c63dd34"
+  },
+  {
+    "path": "handoff/f-medical-common-20261121/Medical_Accounts.csv",
+    "size": 482348,
+    "sha256": "78b309b3b5a38b4f6168c36c7cad929899baa743114634c6165a84b8b869e605"
+  },
+  {
+    "path": "handoff/f-pension-policy-20261120/Inputs.json",
+    "size": 1282097,
+    "sha256": "5969792ecb9218dc3668d56ec426076d0359e1e4c403914f535390972f082514"
+  },
+  {
+    "path": "handoff/f-vat-core-20261120/Annual.csv",
+    "size": 2087811,
+    "sha256": "35c78607be9b171f82201dc4b7ffadf9a6cf85bd19d6185bd37e120f2219364c"
+  },
+  {
+    "path": "handoff/f-vat-core-20261120/Inputs.json",
+    "size": 2559157,
+    "sha256": "f9de79d09488aa26cefc27a6a43c8d0d0b165b054b04839a4bace97ecf6cd2a9"
+  },
+  {
+    "path": "handoff/f-vat-core-20261120/Model.py",
+    "size": 27668,
+    "sha256": "8c55442439d20b750ba6576ce8efa8a98e3f37b92df070a6a99dc498cd173837"
+  }
+]

@@ -1,0 +1,29 @@
+{
+ "purpose": "detection-power test on copies of the delivered files; delivered originals unchanged",
+ "injected_mutations": [
+  "Annual F real_gdp 2055 +0.001",
+  "Annual N3 nominal_gdp 2040 +0.01",
+  "Annual SQ population 2030 +1000",
+  "Annual F-SQ gap real_gdp 2035 +0.002",
+  "Annual COMPARABLE input_inflation gap 2045 =0.1",
+  "Annual extra national_tax row",
+  "Key_Years N3 2026 580->581",
+  "Report table 540.275->540.276",
+  "Contract national_gini N/A->CONDITIONAL",
+  "F_Household_Context value +100",
+  "Bridge year value 0.001"
+ ],
+ "clean_failures": 0,
+ "mutated_failures": 44,
+ "mutated_groups_failed": [
+  "A_custody",
+  "A_rerun_aux",
+  "E_annual",
+  "E_keyyears",
+  "F_report",
+  "G_bridge",
+  "H_household",
+  "I_contract"
+ ],
+ "mutations_detected": "11/11 (each file class flagged)"
+}

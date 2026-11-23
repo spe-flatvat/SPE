@@ -1,0 +1,47 @@
+{
+ "check_groups": 25,
+ "checks_counted": 4818,
+ "failures": 0,
+ "groups_failed": [],
+ "real2055": {
+  "F": 540.2745449827269,
+  "SQ": 528.9623363331808,
+  "N3": 483.99149156991547
+ },
+ "gap2055": {
+  "F-SQ": 11.31220864954605,
+  "F-N3": 56.2830534128114,
+  "N3-SQ": -44.97084476326535
+ },
+ "years_real_below_580": {
+  "F": 29,
+  "SQ": 29,
+  "N3": 29
+ },
+ "years_N3_below_SQ": 26
+}
+A_custody                    98 fail=0
+A_rerun_aux                   7 fail=0
+B_events                    150 fail=0
+B_inputs                      6 fail=0
+B_params                     36 fail=0
+C_YN_F                       90 fail=0
+C_YN_N3                     120 fail=0
+C_YN_SQ                     120 fail=0
+C_core_F                     90 fail=0
+C_core_SQ                    90 fail=0
+C_inputs_F                   90 fail=0
+C_inputs_N3                  90 fail=0
+C_inputs_SQ                 120 fail=0
+D_conditions                 65 fail=0
+E_annual                   2158 fail=0
+E_keyyears                   42 fail=0
+E_percap                    357 fail=0
+E_telescope                 299 fail=0
+F_report                     46 fail=0
+G_bridge                    152 fail=0
+G_medref                      6 fail=0
+H_household                 486 fail=0
+I_boundary                   11 fail=0
+I_contract                   59 fail=0
+J_deflator                   30 fail=0

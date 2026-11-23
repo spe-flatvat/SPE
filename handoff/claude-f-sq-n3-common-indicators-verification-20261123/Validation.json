@@ -1,0 +1,38 @@
+{
+ "status": "PASS_WITH_LIMITATIONS",
+ "verifier": "Claude",
+ "date": "2026-11-23",
+ "target_final_commit": "8a8edb403b960cceb535f9b70461646e9374c229",
+ "request_commit": "8815ece1f0a93a10a0e2ea87adb89cc2e053f3dc",
+ "check_groups": 25,
+ "checks": 4818,
+ "failures": 0,
+ "max_abs_diff_per_group": {
+  "B_events": 0.0,
+  "C_inputs_SQ": 0.0,
+  "C_YN_SQ": 1.1368683772161603e-13,
+  "C_core_SQ": 0.0,
+  "C_inputs_F": 0.0,
+  "C_YN_F": 1.1368683772161603e-13,
+  "C_core_F": 0.0,
+  "C_inputs_N3": 0.0,
+  "C_YN_N3": 1.1368683772161603e-13,
+  "D_conditions": 0.0,
+  "E_annual": 0.0,
+  "E_telescope": 0.0,
+  "E_percap": 2.2737367544323206e-13,
+  "F_report": 0.0,
+  "G_bridge": 0.0004828125238418579,
+  "H_household": 0.0,
+  "J_deflator": 2.220446049250313e-16
+ },
+ "rerun_aux_byte_identical": "7/7",
+ "mutation_detection": "11/11",
+ "work_reports_used_as_evidence": false,
+ "not_verified": [
+  "F/N3 demand-side internals (C, I, supply, Ctarget)",
+  "external statistics and national calibration",
+  "upstream 9-path model rerun (same-bytes reuse of 2026-11-23 e981c924 verification only)",
+  "demography input source tables"
+ ]
+}

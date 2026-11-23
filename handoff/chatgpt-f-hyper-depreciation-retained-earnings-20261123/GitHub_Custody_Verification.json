@@ -1,0 +1,80 @@
+{
+  "payload_fixed_commit": "5da9307a2074e88f0d5e8b0e21cf970fc5986e29",
+  "matched": 12,
+  "failed": 0,
+  "method": "Fixed-commit directory lookup and connected GitHub Git blob retrieval; compared SHA-256, size, and bytes with local originals.",
+  "files": [
+    {
+      "path": "Compare.py",
+      "size": 6326,
+      "sha256": "68641c921a6caa64d9e905a8fe2ce729e9b8d4dba8aa851d051a92ec2cddc667",
+      "git_blob_sha1": "f23f097cb0b948494e5328594769c08747548e9f"
+    },
+    {
+      "path": "Comparison.csv",
+      "size": 115828,
+      "sha256": "86b0e786fd6d79e8be2822c16d516d3b96435800fded5fc4dd44aba01f1c6308",
+      "git_blob_sha1": "94f9986d6f244c3332d094bc15ec547c2aa6844d"
+    },
+    {
+      "path": "Corporate_Annual.csv",
+      "size": 102105,
+      "sha256": "2394066d35c17acc8035e6c076a574c0348cda74609fa87a9577f80d49a1c706",
+      "git_blob_sha1": "73516a31432e7d66fb2a2faee170f094e5e90bf5"
+    },
+    {
+      "path": "Fixed_F_BASE_OFF_Excerpt.csv",
+      "size": 21571,
+      "sha256": "5a6cf1f77481307f426f0754e89479ab73fa025332afa9f1b0aa12475d6ebe3a",
+      "git_blob_sha1": "897d1f36ac06d47090110063c829c55995dca975"
+    },
+    {
+      "path": "Inputs.json",
+      "size": 979,
+      "sha256": "8ea068bf84ae985195d2c7740f2492d95fe4225005bc0eac01e39018105e34d4",
+      "git_blob_sha1": "6d62cc2f9a671a1fadfd18d76a5e11d094163149"
+    },
+    {
+      "path": "Integrated_Annual.csv",
+      "size": 65378,
+      "sha256": "70f0f955b719a15e280a3e51aa959ba20eb17a0a387cd4c67425b0b532e34da7",
+      "git_blob_sha1": "e514672c08db27505f220c0cb64c686f039a62f5"
+    },
+    {
+      "path": "Manifest.json",
+      "size": 1416,
+      "sha256": "ad5238f68d1a0cd857892e35fcd77b2500360a71ceb549ac871b7001bc3c9c13",
+      "git_blob_sha1": "498423aa83d79a4fa65e983170b9042abeb982df"
+    },
+    {
+      "path": "Report.md",
+      "size": 5976,
+      "sha256": "cad68029f2ae79d9bfcc792388033af4af0d248a4cb67c01e1ced1bcd50c9ebb",
+      "git_blob_sha1": "9840e0fd0e7c0481de1c9c96375f15b850c51d26"
+    },
+    {
+      "path": "Run.py",
+      "size": 7401,
+      "sha256": "a6c1fbbbcb2b09c8679642caf76f244a37cd31af2b0bb89bd60d706e8394ebb8",
+      "git_blob_sha1": "a29856910f52114798d6943fa7f653b5ee4472fc"
+    },
+    {
+      "path": "Runtime_Sources.json",
+      "size": 9714,
+      "sha256": "de0f98af9f9478a5ac9b33d632948bbe457d11ef3975c853e9970118872bc940",
+      "git_blob_sha1": "f4d7f1b3f913d0fb6467a7f84d0373627bed06eb"
+    },
+    {
+      "path": "Validation.json",
+      "size": 3003,
+      "sha256": "72b67558992d2ec3dd48b0a798cf1cf502ef8f18d664873f077c4cf3ddfeda02",
+      "git_blob_sha1": "5b5e3b95381cbaedc67abc486059832a71965019"
+    },
+    {
+      "path": "Vintage_Schedules.csv",
+      "size": 67370,
+      "sha256": "bc7a93544fe3d3fd3dda9b36dd2fc3ad073788e89a9d52f2f4ccf6a11a777314",
+      "git_blob_sha1": "527dbd61c0cf7c3538cb6a7a7e2e10b1a5b71e76"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "status": "PASS",
+  "files": [
+    {
+      "path": "Input_Source_Receipts.json",
+      "size_bytes": 10095,
+      "sha256": "44a3295ce8ba3b34a909b475f6197183483f6e13e2a87edb1de2e299500b63a5",
+      "match": true
+    },
+    {
+      "path": "N3_Pension_Calibration_Unknowns.csv",
+      "size_bytes": 1911,
+      "sha256": "adc56cd4499dfc1f9da3e60b81b30e6bd59fe42e07599cbdea30ccbaaba24e2b",
+      "match": true
+    },
+    {
+      "path": "N3_Pension_Cohort_Benefit_Contribution_Trace.csv",
+      "size_bytes": 50483,
+      "sha256": "e8278bfb31d0b889ccb75f6cad4f6328563b4faca3ac983f4bf50a4b5b18e9d5",
+      "match": true
+    },
+    {
+      "path": "N3_Pension_Consumption_GDP_Transmission.csv",
+      "size_bytes": 96247,
+      "sha256": "e0ac145d13772d056d1b2a0c331ade00c5047617bce8d4001c15a2222380a9a3",
+      "match": true
+    },
+    {
+      "path": "N3_Pension_Counterfactual_Annual_2026_2055.csv",
+      "size_bytes": 315913,
+      "sha256": "7b1ea6fa291ad1468f8320a0a08f051c0285bb1d615c0953d92725f16a598ca4",
+      "match": true
+    },
+    {
+      "path": "N3_Pension_Counterfactual_Case_Summary.csv",
+      "size_bytes": 6250,
+      "sha256": "20921150d01272ed743441b9380ed842115fce4bfa1569d3dadf5a45fbbd1989",
+      "match": true
+    },
+    {
+      "path": "N3_Pension_Counterfactual_Cases.csv",
+      "size_bytes": 600,
+      "sha256": "a034efb7bbb4c14c56201b0ee4aa4f5eddef098e0efc13dc8367e4b859dacb8c",
+      "match": true
+    },
+    {
+      "path": "N3_Pension_Fiscal_Cash_Debt_Ledger.csv",
+      "size_bytes": 77797,
+      "sha256": "36dca926dfdefc8fb637fc2d57a7f4cdbfe7926746d84e8c8351604f51ad7981",
+      "match": true
+    },
+    {
+      "path": "N3_Pension_Household_Government_Fund_Annual_Ledger.csv",
+      "size_bytes": 45275,
+      "sha256": "6822ea64829dcbb46f0e8467105514f0d0f847764832ec9a3b98aa5c0be4e13b",
+      "match": true
+    },
+    {
+      "path": "N3_Pension_Individual_Cohort_Assets.csv",
+      "size_bytes": 948615,
+      "sha256": "e0117f738fe3228d56a2bbfe103aa318945427cdcb752087543859f111b1b0a9",
+      "match": true
+    },
+    {
+      "path": "N3_Pension_Investment_Return_Source_And_Transfers.csv",
+      "size_bytes": 19967,
+      "sha256": "701e48bdf154c704348e690960b5842371b50b72b9e3e447d61503f3861a9d2d",
+      "match": true
+    },
+    {
+      "path": "Pension_Case_Definitions_And_Inputs.json",
+      "size_bytes": 1733,
+      "sha256": "121cc3746fe7132535bfa32340b6bcbfded97a15d37ed72d1a642bb9739fe2ea",
+      "match": true
+    },
+    {
+      "path": "Resolved_Pension_Base_Component.py.txt",
+      "size_bytes": 12988,
+      "sha256": "73e63b5695ea9cc1f7eebe4c0418c940b458f6c2256b2f28f28be09ab265e391",
+      "match": true
+    },
+    {
+      "path": "Resolved_Working_Age_Cohort_Component.py.txt",
+      "size_bytes": 12976,
+      "sha256": "9810b61881db800ed94264f2dfdaaa16b24677f06ea1db2babd1b67962bd4bbd",
+      "match": true
+    },
+    {
+      "path": "Reused_Return_Payer_And_Pension_OFF_References.csv",
+      "size_bytes": 136451,
+      "sha256": "bc0090c6ae9565952cfc9e1ac5b79c5383a7e0292bf1906243806e2afb42b354",
+      "match": true
+    },
+    {
+      "path": "SPE_N3_Pension_Path_Review_Report_DRAFT_20261123.md",
+      "size_bytes": 6452,
+      "sha256": "7eb431035d04e48acd8a4ab51361ed2148c38948ad9874223d892c09ee20747f",
+      "match": true
+    },
+    {
+      "path": "Verification.json",
+      "size_bytes": 613,
+      "sha256": "1eb9fc64f2e5bcb4ea9315ba6bd41143c1db572953b04ccfa9611db2dd7e4e0d",
+      "match": true
+    },
+    {
+      "path": "Execution.log",
+      "size_bytes": 1260,
+      "sha256": "1e6f627b833f3a44ae1f3794c1d271e012ad523b36640b2dc9efa010050158f5",
+      "match": true
+    }
+  ],
+  "executed_rows": 150
+}

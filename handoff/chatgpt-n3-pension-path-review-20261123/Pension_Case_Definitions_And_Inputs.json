@@ -1,0 +1,76 @@
+{
+  "cases": [
+    {
+      "case": "BASE_REPLAY",
+      "kind": "FIXED_BASELINE",
+      "return_source": "DOMESTIC_HH"
+    },
+    {
+      "case": "EXTERNAL_ISSUER_RETAINED",
+      "kind": "CONDITIONAL_SOURCE_DIAGNOSTIC_NOT_ADOPTED",
+      "return_source": "EXTERNAL_ISSUER"
+    },
+    {
+      "case": "GOVERNMENT_FUND_TRANSFER",
+      "kind": "CONDITIONAL_TRANSFER_GUARANTEE_NOT_INVESTMENT_RETURN_OR_ADOPTED_POLICY",
+      "return_source": "GOVERNMENT_TRANSFER"
+    },
+    {
+      "case": "NO_HH_DEBIT_SOURCE_UNALLOCATED",
+      "kind": "NEGATIVE_CONTROL_SOURCE_NOT_CLOSED_NOT_CORRECTION",
+      "return_source": "UNALLOCATED"
+    },
+    {
+      "case": "WORKING_AGE_CONTRIBUTORS_ONLY",
+      "kind": "AGE_BASE_CONSISTENCY_CANDIDATE_NOT_POPULATION_CALIBRATED",
+      "return_source": "DOMESTIC_HH",
+      "cohort_mode": "WORKING_AGE_ONLY"
+    }
+  ],
+  "source_commit": "93b8393350eb73dd5ebd803b1ace429aaf4dfe1b",
+  "request_commit": "cca5acaf83843827e97c0d26e78480cc84e63668",
+  "GI": "OFF",
+  "SQ": "UNCHANGED",
+  "household_labor_financial_tax": "EXACT_ANNUAL_BASE_AND_PRIOR_TAX_WEDGES_FIXED",
+  "household_tax_rates": [
+    0.3,
+    0.2
+  ],
+  "return_rate": 0.02,
+  "cohort_entry_legacy": [
+    [
+      32,
+      0.65
+    ],
+    [
+      52,
+      0.25
+    ],
+    [
+      67,
+      0.08
+    ],
+    [
+      72,
+      0.02
+    ]
+  ],
+  "cohort_entry_candidate": [
+    [
+      32,
+      0.7222222222222222
+    ],
+    [
+      52,
+      0.2777777777777778
+    ]
+  ],
+  "fund_payout_years": 20,
+  "public_benefit_coverage": 0.85,
+  "contribution_rate": 0.183,
+  "diversion": 0.25,
+  "worker_share": 0.7,
+  "annual_reference_wage_yen": 4000000,
+  "public_government_share": 0.5,
+  "real_policy_or_correct_return_source_adopted": false
+}

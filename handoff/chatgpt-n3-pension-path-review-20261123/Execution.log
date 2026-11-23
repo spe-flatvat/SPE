@@ -1,0 +1,6 @@
+{"case": "BASE_REPLAY", "rows": 30, "checks": 3628, "failed": 0, "gap2055": -44.97084476326535, "fund2055": 286.4116539693563}
+{"case": "EXTERNAL_ISSUER_RETAINED", "rows": 30, "checks": 3208, "failed": 0, "gap2055": -43.3462590687505, "fund2055": 286.5328716563624}
+{"case": "GOVERNMENT_FUND_TRANSFER", "rows": 30, "checks": 3208, "failed": 0, "gap2055": -43.3462590687505, "fund2055": 286.5328716563624}
+{"case": "NO_HH_DEBIT_SOURCE_UNALLOCATED", "rows": 30, "checks": 3208, "failed": 0, "gap2055": -43.3462590687505, "fund2055": 286.5328716563624}
+{"case": "WORKING_AGE_CONTRIBUTORS_ONLY", "rows": 30, "checks": 2308, "failed": 0, "gap2055": -45.303326755697356, "fund2055": 294.07370840665754}
+{"status": "PASS_LIMITED_PENSION_PATH_DIAGNOSTICS", "executed_paths": 5, "executed_rows": 150, "reused_rows": 150, "delivered_rows": 300, "checks": 15590, "failed": 0, "failures": [], "prior_PASS_reused": [13928, 32439], "source_files_checked": 34, "HH_labor_financial_tax_realized_wedges_fixed": true, "SQ_modified": false, "GI": false, "max_negative_control_unallocated_source_trn": 5.377667341320289, "negative_control_source_closure": false, "correct_real_world_return_source_identified": false, "national_calibration": false, "formal_policy_adopted": false}

@@ -1,0 +1,10 @@
+item,evidence,still_unknown,classification,adopted
+75-age and transition,Original75 principle; candidate2033-2038 ramp;65-entry protection2033;5-year age bins,"exact statutory cohorts/rights, mortality and migration by cohort",POLICY_SPEC;DATA,False
+Benefit units,80k/150k/250k monthly at40/40/20%; CPI proxy,"national pension-system strata, survivor/disability/coverage/price-wage indexation",CALIBRATION;POLICY_SPEC,False
+Contribution base,working_age15-64 ×employment70% ×wage4m ×18.3% ×diversion25% ×phase,"actual insured contributions, older workers and baseline charges",DATA;CALIBRATION,False
+Entry cohort inconsistency,10% of contributions sourced from working-age base allocated to entry ages67/72; no extra older contribution base,"correct age weights and eligibility; working-age-only renormalization is candidate, not measured",CODE_BASE_CONSISTENCY;CALIBRATION,False
+Return source,2% nominal asset return credited; default debits aggregate HH property income,"actual portfolio domestic/external mix, payer, retained/distributed return, owner/beneficiary, taxes",ACCOUNTING;DATA,False
+Transfer vs return,"explicit government credit has matching government cost but is a grant guarantee, not investment income",legal budget authority and funding responsibility,POLICY_SPEC;AUTHORITY,False
+Household asset ownership,fund assets tracked; no second HH contribution charge,"HH fund claims/fund liabilities, distribution, loss of liquidity vs total wealth",ACCOUNTING;DATA,False
+Government/insurer split,50/50 public pension cost; prior25/75% tests reused,"correct sovereign vs insurer responsibility, central/local split and full fiscal consolidation",ACCOUNTING;POLICY_SPEC,False
+Consumption structure,"MPC.72/domestic.8/lambda.6; HH debit reduces C, funded returns are not new GDP","beneficiary-specific propensities and return incidence, calibrated total/GNI effects",STRUCTURE;CALIBRATION,False

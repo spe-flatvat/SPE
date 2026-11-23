@@ -1,0 +1,23 @@
+{
+  "status": "PASS_LIMITED_PENSION_PATH_DIAGNOSTICS",
+  "executed_paths": 5,
+  "executed_rows": 150,
+  "reused_rows": 150,
+  "delivered_rows": 300,
+  "checks": 15590,
+  "failed": 0,
+  "failures": [],
+  "prior_PASS_reused": [
+    13928,
+    32439
+  ],
+  "source_files_checked": 34,
+  "HH_labor_financial_tax_realized_wedges_fixed": true,
+  "SQ_modified": false,
+  "GI": false,
+  "max_negative_control_unallocated_source_trn": 5.377667341320289,
+  "negative_control_source_closure": false,
+  "correct_real_world_return_source_identified": false,
+  "national_calibration": false,
+  "formal_policy_adopted": false
+}

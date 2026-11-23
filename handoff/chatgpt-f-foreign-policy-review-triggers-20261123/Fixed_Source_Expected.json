@@ -1,0 +1,338 @@
+[
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/CommonEndOfLife.py",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 10956,
+    "git_blob_sha1": "1456928a795ecb625c5bc257c95d1b19ea998caa"
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/CommonInterface.py",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 420,
+    "git_blob_sha1": "e7e9bc974cfc133e976377b3849c00af3dae131c"
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/Demand.py",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 2544,
+    "git_blob_sha1": "f50c1beb2f9c5ff7a90d0bbd0d83d5930b8a312d"
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/FMedical.py",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 17478,
+    "git_blob_sha1": "86f171044b67cd40a92a294a3b93aeaaeabaceff"
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/Inputs.json",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 27093,
+    "git_blob_sha1": "b5e2b373f894117794522eefbc5f7f004bc2b272"
+  },
+  {
+    "path": "handoff/f-common-endoflife-finalization-20261121/Model.py",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 15152,
+    "git_blob_sha1": "b03f28d39b6125d1a524a7be69a2b06fd10d9495"
+  },
+  {
+    "path": "handoff/f-education-20261121/Inputs.json",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 6825,
+    "git_blob_sha1": "c359cee365beb0097104d7244f3dab90db447039"
+  },
+  {
+    "path": "handoff/f-education-20261121/Model.py",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 24178,
+    "git_blob_sha1": "bb74b89b9e03b2c1416c7ab4e65261412374c631"
+  },
+  {
+    "path": "handoff/f-household-social-20261120/Inputs.json",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 1746742,
+    "git_blob_sha1": "31d2ea48839b699d9047ab7039bdf7a1b190e4ed"
+  },
+  {
+    "path": "handoff/f-integrated-20261121/Inputs.json",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 7865,
+    "git_blob_sha1": "b04f6979bf5e8736da24d6068eaafe43cfd5fd16"
+  },
+  {
+    "path": "handoff/f-integrated-20261121/Model.py",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 21624,
+    "git_blob_sha1": "5005992f4511e1fd9b69b841f7eb774eb845a982"
+  },
+  {
+    "path": "handoff/f-medical-common-20261121/Common_EndOfLife.csv",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 567389,
+    "git_blob_sha1": "9193f70d1f82dd3ad59e77a1452f255bab1cd6a4"
+  },
+  {
+    "path": "handoff/f-medical-common-20261121/Medical_Accounts.csv",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 482348,
+    "git_blob_sha1": "bebb9138b6da9913ad70d3d14fba341ff881be8c"
+  },
+  {
+    "path": "handoff/f-pension-policy-20261120/Inputs.json",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 1282097,
+    "git_blob_sha1": "39c988f9d2e570e60531baedbb5d454f92045a82"
+  },
+  {
+    "path": "handoff/f-vat-core-20261120/Inputs.json",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 2559157,
+    "git_blob_sha1": "1c9d0d14e25b5cfbff84fbd257dafacdfc64c0eb"
+  },
+  {
+    "path": "handoff/f-vat-core-20261120/Model.py",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 27668,
+    "git_blob_sha1": "01f015e183ff585bbedf4aed8164391815313418"
+  },
+  {
+    "path": "handoff/f-integrated-20261121/Annual.csv",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 2082920,
+    "git_blob_sha1": "b4b399fb2c29906d3fc06d87b61864196dd6a679"
+  },
+  {
+    "path": "handoff/chatgpt-n3-transition-financing-full-dynamics-20261122/Medical_Initialization.json",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 124011,
+    "git_blob_sha1": "07df976fb2080c8c9c307765e3b233a41cd93524"
+  },
+  {
+    "path": "policies/FreedomPolicies.md",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 9241,
+    "git_blob_sha1": "3deb49dbe70734aa91e75856226e84e4b66db8e9"
+  },
+  {
+    "path": "policies/FreedomPolicies_Annex.md",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 12319,
+    "git_blob_sha1": "86df882940aae4b851d4b1d11d488f4d2606bd5e"
+  },
+  {
+    "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_ALIGNED_FULL_RATES/F_Actual_Annual.json",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 522525,
+    "git_blob_sha1": "210cefcbd6378378a8141d4b0372e655851381c6"
+  },
+  {
+    "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_ALIGNED_FULL_RATES/F_Runtime_Trace.json",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 33262,
+    "git_blob_sha1": "0825d45b6c2fb3b6117f3f78d5028e850061c68a"
+  },
+  {
+    "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_FINE_WEEK_HOURS/F_Actual_Annual.json",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 522569,
+    "git_blob_sha1": "3a8a7bf8180bdcbcdf446ff0b30f350b9eb6937f"
+  },
+  {
+    "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_FINE_WEEK_HOURS/F_Runtime_Trace.json",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 33271,
+    "git_blob_sha1": "32ee2f2366d7950848b11dae5729bcd27c38532d"
+  },
+  {
+    "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_MONTH_HOURS_PROFILE/F_Actual_Annual.json",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 522535,
+    "git_blob_sha1": "83c903e9297fe73a0fbfcca490122cfda497fa9c"
+  },
+  {
+    "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_ANNUAL_MONTH_HOURS_PROFILE/F_Runtime_Trace.json",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 33266,
+    "git_blob_sha1": "6ff47758f0b9cbf1bde207527e92b246fbde4785"
+  },
+  {
+    "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_BASE_UNCHANGED/F_Actual_Annual.json",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 522949,
+    "git_blob_sha1": "c546854a7869df2b24a61bba6528e648c4a07834"
+  },
+  {
+    "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_BASE_UNCHANGED/F_Runtime_Trace.json",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 33270,
+    "git_blob_sha1": "7da36de6ff22b452603b4d8616de307fb40c61cf"
+  },
+  {
+    "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_OCTOBER_NEAR_FULL_RATES/F_Actual_Annual.json",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 522573,
+    "git_blob_sha1": "5bb04289e83d0daf5aabe60ffa747aa6f75e5915"
+  },
+  {
+    "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_OCTOBER_NEAR_FULL_RATES/F_Runtime_Trace.json",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 33278,
+    "git_blob_sha1": "eba95ff6208cbdf3f5347af08053b16dcd400a48"
+  },
+  {
+    "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_PREVIOUS_FINE_AGE_HOURS/F_Actual_Annual.json",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 522574,
+    "git_blob_sha1": "79b24bf0d85af94511fababa1e288786a4dfadb8"
+  },
+  {
+    "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/F_PREVIOUS_FINE_AGE_HOURS/F_Runtime_Trace.json",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 33274,
+    "git_blob_sha1": "811a5a8df5edbe9dba3f1acaf7b539e8301af586"
+  },
+  {
+    "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Fixed_Aligned_Case_Inputs.json",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 33708,
+    "git_blob_sha1": "cc75afde05145f7e90138b2f30a65b982e362758"
+  },
+  {
+    "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Older_Age_Sex_Annual_Hours_Bridge.csv",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 22828,
+    "git_blob_sha1": "e746b7f22c843fceb92d9430b647ec806727b161"
+  },
+  {
+    "path": "handoff/chatgpt-labor-timing-older-workers-annual-hours-20261123/Statistics_Inputs.json",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 658539,
+    "git_blob_sha1": "f6ed74e5fb4bd8c56d303ad75627ead7d77ccc85"
+  },
+  {
+    "path": "handoff/f-vat-core-20261120/Annual.csv",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 2087811,
+    "git_blob_sha1": "db80b57d4bf3250a2f3676b8941c3c93ee2de5ff"
+  },
+  {
+    "path": "handoff/f-education-20261121/Annual.csv",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 1996375,
+    "git_blob_sha1": "d3e077b03f42bd3d56cfcceb246a8e0645134c5d"
+  },
+  {
+    "path": "handoff/f-medical-common-20261121/Annual.csv",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 3077541,
+    "git_blob_sha1": "9d113c335d11641fa2e0ee3572243b149d3b20ba"
+  },
+  {
+    "path": "handoff/chatgpt-n3-aligned-labor-baseline-20261123/SQ_F_N3_Aligned_Labor_Annual_2026_2055.csv",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 115311,
+    "git_blob_sha1": "f9e47f6e7826611cab87188d56bb62fe7a9a7faf"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/ANNUAL_ALIGNED_FULL_RATES/Connection_Inputs.json",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 1642,
+    "git_blob_sha1": "596ee96fa364e6b4ec2834e778ae370985ebabf6"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/ANNUAL_ALIGNED_FULL_RATES/F_Runtime_Trace.json",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 33268,
+    "git_blob_sha1": "76f1056de7461502df7fa8a42d64c882eac3da30"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/ANNUAL_FINE_WEEK_HOURS/Connection_Inputs.json",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 1631,
+    "git_blob_sha1": "ce82f01b79f0d52bccf5aa9e8511d7d3fa9969c3"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/ANNUAL_FINE_WEEK_HOURS/F_Runtime_Trace.json",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 33280,
+    "git_blob_sha1": "8bb4cd6c3dfaa46c49c165055f53fb7d1ec55100"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/ANNUAL_MONTH_HOURS_PROFILE/Connection_Inputs.json",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 1653,
+    "git_blob_sha1": "e4996de6f4f115e5f9097b85d1638793363bd1ab"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/ANNUAL_MONTH_HOURS_PROFILE/F_Runtime_Trace.json",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 33282,
+    "git_blob_sha1": "6168f1d60bb8a0e5e681de765fbf0f013e1b88e9"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/Annual_Comparison_All_Cases.csv",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 143366,
+    "git_blob_sha1": "cb58ef9392e9c6bca3bd0de05b4e73fe52720e61"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/BASE_SQ_UNCHANGED/Connection_Inputs.json",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 1705,
+    "git_blob_sha1": "c775ee3d846891b257f8dc3cd267ba5c940e2a60"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/BASE_SQ_UNCHANGED/F_Runtime_Trace.json",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 33268,
+    "git_blob_sha1": "451c033b70ccdf8c51e2dba97408c2e345435a34"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/OCTOBER_NEAR_FULL_RATES/Connection_Inputs.json",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 1644,
+    "git_blob_sha1": "5996d5fd81fb40d502c8a0c313da879e378015f7"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/OCTOBER_NEAR_FULL_RATES/F_Runtime_Trace.json",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 33259,
+    "git_blob_sha1": "d3f2cd9a64110a7904e2bc396b911214afa12488"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/PREVIOUS_FINE_AGE_HOURS/Connection_Inputs.json",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 1638,
+    "git_blob_sha1": "2c2459480ffce6986dad628f16fc3cc6e881f642"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/PREVIOUS_FINE_AGE_HOURS/F_Runtime_Trace.json",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 33260,
+    "git_blob_sha1": "27671c54326b4cdaa435257cd646835d5677fa58"
+  },
+  {
+    "path": "handoff/chatgpt-f-policy-cohort-fte-20261123/Pinned_F_Adapter.py",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 6449,
+    "git_blob_sha1": "6feab0bcd87d8557db695cc80492d77996699603"
+  },
+  {
+    "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/F_Alignment_Adapter.py",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 6799,
+    "git_blob_sha1": "35c4f47c3e4d38155184977006c5f9d87eb8e481"
+  },
+  {
+    "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/Annual_Comparison_All.csv",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 312280,
+    "git_blob_sha1": "281206026034e8f62e6ad2f9c1a2cd9aa0a7f0d4"
+  },
+  {
+    "path": "handoff/chatgpt-f-foreign-workforce-policy-alignment-20261123/Foreign_Stock_Flow_Accounts.csv",
+    "commit": "a7902595d96cfbebd7207a0a64cf5c2a991d1fc5",
+    "size": 477658,
+    "git_blob_sha1": "e77c62780f333f350ed2875549327e2ffd5f3fbe"
+  }
+]

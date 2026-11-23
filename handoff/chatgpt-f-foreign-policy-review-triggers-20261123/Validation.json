@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "new_checks": 4705,
+  "failed": 0,
+  "executed_paths": 12,
+  "executed_annual_rows": 360,
+  "indicator_rows": 180,
+  "fixed_diagnostic_rows": 180,
+  "full_before_after_output_byte_matches": 42,
+  "GDP_formal_warning": "N/A",
+  "automatic_admission_change": false,
+  "formal_policy_text_modified": false,
+  "RP023_M1925": "HOLD",
+  "RP024": "PENDING"
+}

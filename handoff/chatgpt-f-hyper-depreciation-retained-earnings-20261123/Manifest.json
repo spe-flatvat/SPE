@@ -1,0 +1,46 @@
+{
+  "Compare.py": {
+    "size": 6326,
+    "sha256": "68641c921a6caa64d9e905a8fe2ce729e9b8d4dba8aa851d051a92ec2cddc667"
+  },
+  "Comparison.csv": {
+    "size": 115828,
+    "sha256": "86b0e786fd6d79e8be2822c16d516d3b96435800fded5fc4dd44aba01f1c6308"
+  },
+  "Corporate_Annual.csv": {
+    "size": 102105,
+    "sha256": "2394066d35c17acc8035e6c076a574c0348cda74609fa87a9577f80d49a1c706"
+  },
+  "Fixed_F_BASE_OFF_Excerpt.csv": {
+    "size": 21571,
+    "sha256": "5a6cf1f77481307f426f0754e89479ab73fa025332afa9f1b0aa12475d6ebe3a"
+  },
+  "Inputs.json": {
+    "size": 979,
+    "sha256": "8ea068bf84ae985195d2c7740f2492d95fe4225005bc0eac01e39018105e34d4"
+  },
+  "Integrated_Annual.csv": {
+    "size": 65378,
+    "sha256": "70f0f955b719a15e280a3e51aa959ba20eb17a0a387cd4c67425b0b532e34da7"
+  },
+  "Report.md": {
+    "size": 5976,
+    "sha256": "cad68029f2ae79d9bfcc792388033af4af0d248a4cb67c01e1ced1bcd50c9ebb"
+  },
+  "Run.py": {
+    "size": 7401,
+    "sha256": "a6c1fbbbcb2b09c8679642caf76f244a37cd31af2b0bb89bd60d706e8394ebb8"
+  },
+  "Runtime_Sources.json": {
+    "size": 9714,
+    "sha256": "de0f98af9f9478a5ac9b33d632948bbe457d11ef3975c853e9970118872bc940"
+  },
+  "Validation.json": {
+    "size": 3003,
+    "sha256": "72b67558992d2ec3dd48b0a798cf1cf502ef8f18d664873f077c4cf3ddfeda02"
+  },
+  "Vintage_Schedules.csv": {
+    "size": 67370,
+    "sha256": "bc7a93544fe3d3fd3dda9b36dd2fc3ad073788e89a9d52f2f4ccf6a11a777314"
+  }
+}

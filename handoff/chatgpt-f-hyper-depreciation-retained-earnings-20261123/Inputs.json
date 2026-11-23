@@ -1,0 +1,47 @@
+{
+  "normal_tax_life": 5,
+  "opening_retained_earnings_trn": 650,
+  "reference_dividends_trn": 20,
+  "disclosure_threshold": 0.4,
+  "governance_start": 2028,
+  "scenarios": {
+    "LEGACY_F": {
+      "legacy": true
+    },
+    "BOTH_OFF": {},
+    "HYPER_ONLY": {
+      "hyper": true
+    },
+    "GUIDELINE_ONLY": {
+      "guideline": true
+    },
+    "BOTH_ON": {
+      "hyper": true,
+      "guideline": true
+    },
+    "BOTH_BEHAVIOR_HIGH": {
+      "hyper": true,
+      "guideline": true,
+      "bonus_multiplier": 1.5,
+      "eligible_multiplier": 0.5,
+      "response_multiplier": 1.5,
+      "deployment_multiplier": 1,
+      "rule": "ANNEX_LT"
+    },
+    "HYPER_TIMING_ONLY": {
+      "hyper": true,
+      "response_multiplier": 0
+    },
+    "BOTH_ANNEX_RULE": {
+      "hyper": true,
+      "guideline": true,
+      "rule": "ANNEX_LT"
+    },
+    "BOTH_TAX_LINK": {
+      "hyper": true,
+      "guideline": true,
+      "tax_link": true
+    }
+  },
+  "tax_link_eligible_uplift": 0.1
+}

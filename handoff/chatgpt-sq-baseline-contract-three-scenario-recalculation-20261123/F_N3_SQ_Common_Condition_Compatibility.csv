@@ -1,0 +1,19 @@
+condition,SQ_F_N3_status,verified,limitation
+common_parameters,SAME_SHARED_DEFINITION,True,Uncalibrated common clinical assumptions retained; policy-specific copay and payer rules remain distinct
+common_financing,SAME_SHARED_DEFINITION,True,Uncalibrated common clinical assumptions retained; policy-specific copay and payer rules remain distinct
+clinical_strata,SAME_SHARED_DEFINITION,True,Uncalibrated common clinical assumptions retained; policy-specific copay and payer rules remain distinct
+registry_population_reference,SAME_SHARED_DEFINITION,True,Uncalibrated common clinical assumptions retained; policy-specific copay and payer rules remain distinct
+medical_reference_deflators,F_RECONNECTED_TO_EXISTING_SQ_N3_REFERENCE,True,Policy-driven actual trajectory and lagged price feedback remain distinct
+medical_reference_population,F_RECONNECTED_TO_EXISTING_SQ_N3_REFERENCE,True,Policy-driven actual trajectory and lagged price feedback remain distinct
+base_inflation,SAME_COMMON_INPUT,True,F policy labor additions may alter realized growth and implicit deflator
+oil_inflation_extra,SAME_COMMON_INPUT,True,F policy labor additions may alter realized growth and implicit deflator
+conflict_inflation_extra,SAME_COMMON_INPUT,True,F policy labor additions may alter realized growth and implicit deflator
+apply_oil_to_initial,SAME_COMMON_INPUT,True,F policy labor additions may alter realized growth and implicit deflator
+disaster_anchor,SAME_COMMON_INPUT,True,F policy labor additions may alter realized growth and implicit deflator
+climate_anchor,SAME_COMMON_INPUT,True,F policy labor additions may alter realized growth and implicit deflator
+base_growth,SAME_COMMON_INPUT,True,F policy labor additions may alter realized growth and implicit deflator
+labor_response,SAME_COMMON_INPUT,True,F policy labor additions may alter realized growth and implicit deflator
+realized_deflator_and_population,POLICY_ENDOGENOUS_DIFFERENCES_ALLOWED,True,Same initial anchors/input inflation/events; F policy labor/foreign/education effects alter actual population and implicit deflator. N3 retains unchanged common labor core.
+common_medical_interface,SAME_IMPLEMENTATION_SAME_PARAMETER_BASE,True,Patient charges follow each existing policy; financing and VAT/health scope gaps not solved.
+GDP_comparison,CONDITIONAL_IMPLEMENTED_MODEL_COMPARISON,True,Not complete original-policy forecast or fully nationally calibrated ranking
+national_fiscal_household_investment_fund,N/A_NONMATCHED_ACCOUNTING_SCOPE,True,Partial proxies and N3 conditional fiscal closure exported; no forced national ranking

@@ -1,0 +1,146 @@
+[
+  {
+    "case": "BASE_REPLAY",
+    "command": [
+      "python3",
+      "Three_Scenario_Worker.py",
+      "--root",
+      "<fixed-checkout>",
+      "--outdir",
+      "<out>/BASE_REPLAY",
+      "--case",
+      "BASE_REPLAY"
+    ],
+    "exit_code": 0,
+    "stdout": "done SQ_COMMON_ON\nCOMPLETE 30\n{\"mode\": \"BASE_REPLAY\", \"rows\": 30, \"real2055\": 528.9623363331808, \"nominal2055\": 1023.3299808906729}\n",
+    "stderr": ""
+  },
+  {
+    "case": "KEYS_DEFAULT",
+    "command": [
+      "python3",
+      "Three_Scenario_Worker.py",
+      "--root",
+      "<fixed-checkout>",
+      "--outdir",
+      "<out>/KEYS_DEFAULT",
+      "--case",
+      "KEYS_DEFAULT"
+    ],
+    "exit_code": 0,
+    "stdout": "done SQ_COMMON_ON\nCOMPLETE 30\n{\"mode\": \"KEYS_DEFAULT\", \"rows\": 30, \"real2055\": 528.9623363331808, \"nominal2055\": 1023.3299808906729}\n",
+    "stderr": ""
+  },
+  {
+    "case": "KEY_BASE_NONDEFAULT",
+    "command": [
+      "python3",
+      "Three_Scenario_Worker.py",
+      "--root",
+      "<fixed-checkout>",
+      "--outdir",
+      "<out>/KEY_BASE_NONDEFAULT",
+      "--case",
+      "KEY_BASE_NONDEFAULT"
+    ],
+    "exit_code": 0,
+    "stdout": "done SQ_COMMON_ON\nCOMPLETE 30\n{\"mode\": \"KEY_BASE_NONDEFAULT\", \"rows\": 30, \"real2055\": 528.9623462023626, \"nominal2055\": 1358.5108340855318}\n",
+    "stderr": ""
+  },
+  {
+    "case": "KEY_CONFLICT_NONDEFAULT",
+    "command": [
+      "python3",
+      "Three_Scenario_Worker.py",
+      "--root",
+      "<fixed-checkout>",
+      "--outdir",
+      "<out>/KEY_CONFLICT_NONDEFAULT",
+      "--case",
+      "KEY_CONFLICT_NONDEFAULT"
+    ],
+    "exit_code": 0,
+    "stdout": "done SQ_COMMON_ON\nCOMPLETE 30\n{\"mode\": \"KEY_CONFLICT_NONDEFAULT\", \"rows\": 30, \"real2055\": 528.9623313892843, \"nominal2055\": 983.492004390289}\n",
+    "stderr": ""
+  },
+  {
+    "case": "LEGACY_BASE_NONDEFAULT",
+    "command": [
+      "python3",
+      "Three_Scenario_Worker.py",
+      "--root",
+      "<fixed-checkout>",
+      "--outdir",
+      "<out>/LEGACY_BASE_NONDEFAULT",
+      "--case",
+      "LEGACY_BASE_NONDEFAULT"
+    ],
+    "exit_code": 0,
+    "stdout": "done SQ_COMMON_ON\nCOMPLETE 30\n{\"mode\": \"LEGACY_BASE_NONDEFAULT\", \"rows\": 30, \"real2055\": 528.9623363331808, \"nominal2055\": 1023.3299808906729}\n",
+    "stderr": ""
+  },
+  {
+    "case": "LEGACY_CONFLICT_NONDEFAULT",
+    "command": [
+      "python3",
+      "Three_Scenario_Worker.py",
+      "--root",
+      "<fixed-checkout>",
+      "--outdir",
+      "<out>/LEGACY_CONFLICT_NONDEFAULT",
+      "--case",
+      "LEGACY_CONFLICT_NONDEFAULT"
+    ],
+    "exit_code": 0,
+    "stdout": "done SQ_COMMON_ON\nCOMPLETE 30\n{\"mode\": \"LEGACY_CONFLICT_NONDEFAULT\", \"rows\": 30, \"real2055\": 528.9623363331808, \"nominal2055\": 1023.3299808906729}\n",
+    "stderr": ""
+  },
+  {
+    "case": "F_OLD",
+    "command": [
+      "python3",
+      "Three_Scenario_Worker.py",
+      "--root",
+      "<fixed-checkout>",
+      "--outdir",
+      "<out>/F_OLD",
+      "--case",
+      "F_OLD"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"case\": \"F_LATEST_IMPLEMENTED\", \"rows\": 30, \"real2055\": 540.274554375159}\n",
+    "stderr": ""
+  },
+  {
+    "case": "F",
+    "command": [
+      "python3",
+      "Three_Scenario_Worker.py",
+      "--root",
+      "<fixed-checkout>",
+      "--outdir",
+      "<out>/F",
+      "--case",
+      "F"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"case\": \"F_LATEST_IMPLEMENTED\", \"rows\": 30, \"real2055\": 540.2745449827269}\n",
+    "stderr": ""
+  },
+  {
+    "case": "N3",
+    "command": [
+      "python3",
+      "Three_Scenario_Worker.py",
+      "--root",
+      "<fixed-checkout>",
+      "--outdir",
+      "<out>/N3",
+      "--case",
+      "N3"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"case\": \"N3_NATIVE_EXISTING\", \"rows\": 30, \"real2055\": 483.99149156991547, \"checks\": 748, \"failed\": 0}\n",
+    "stderr": ""
+  }
+]

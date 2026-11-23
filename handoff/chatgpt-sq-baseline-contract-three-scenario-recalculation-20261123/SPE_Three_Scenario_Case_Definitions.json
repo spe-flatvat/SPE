@@ -1,0 +1,122 @@
+{
+  "fixed_input_commit": "9448e5921dba0fc0ff4e294e52b6b1f3ba862330",
+  "SQ_COMPARISON_REFERENCE": "CURRENT_REFERENCE_UNCHANGED",
+  "cases": [
+    {
+      "case": "BASE_REPLAY",
+      "years": [
+        2026,
+        2055
+      ],
+      "rows": 30,
+      "purpose": "UNCHANGED_COMMON_REFERENCE",
+      "mechanical_override": {},
+      "originals_changed": false
+    },
+    {
+      "case": "KEYS_DEFAULT",
+      "years": [
+        2026,
+        2055
+      ],
+      "rows": 30,
+      "purpose": "UNADOPTED_INPUT_CONNECTION_DIAGNOSTIC",
+      "mechanical_override": {},
+      "originals_changed": false
+    },
+    {
+      "case": "KEY_BASE_NONDEFAULT",
+      "years": [
+        2026,
+        2055
+      ],
+      "rows": 30,
+      "purpose": "UNADOPTED_INPUT_CONNECTION_DIAGNOSTIC",
+      "mechanical_override": {
+        "base_inflation": 0.03
+      },
+      "originals_changed": false
+    },
+    {
+      "case": "KEY_CONFLICT_NONDEFAULT",
+      "years": [
+        2026,
+        2055
+      ],
+      "rows": 30,
+      "purpose": "UNADOPTED_INPUT_CONNECTION_DIAGNOSTIC",
+      "mechanical_override": {
+        "conflict_inflation_extra": 0.01
+      },
+      "originals_changed": false
+    },
+    {
+      "case": "LEGACY_BASE_NONDEFAULT",
+      "years": [
+        2026,
+        2055
+      ],
+      "rows": 30,
+      "purpose": "UNADOPTED_INPUT_CONNECTION_DIAGNOSTIC",
+      "mechanical_override": {
+        "base_inflation": 0.03
+      },
+      "originals_changed": false
+    },
+    {
+      "case": "LEGACY_CONFLICT_NONDEFAULT",
+      "years": [
+        2026,
+        2055
+      ],
+      "rows": 30,
+      "purpose": "UNADOPTED_INPUT_CONNECTION_DIAGNOSTIC",
+      "mechanical_override": {
+        "conflict_inflation_extra": 0.01
+      },
+      "originals_changed": false
+    },
+    {
+      "case": "F_OLD",
+      "years": [
+        2026,
+        2055
+      ],
+      "rows": 30,
+      "purpose": "OLD_F_REEXECUTION_CONTROL",
+      "mechanical_override": {},
+      "originals_changed": false
+    },
+    {
+      "case": "F",
+      "years": [
+        2026,
+        2055
+      ],
+      "rows": 30,
+      "purpose": "MAIN_F_COMMON_MEDICAL_REFERENCE_ALIGNED",
+      "mechanical_override": {},
+      "originals_changed": false
+    },
+    {
+      "case": "N3",
+      "years": [
+        2026,
+        2055
+      ],
+      "rows": 30,
+      "purpose": "NATIVE_N3_GI_OFF_UNCHANGED",
+      "mechanical_override": {},
+      "originals_changed": false
+    }
+  ],
+  "shared_initial_real": 580,
+  "shared_initial_nominal": 600,
+  "main_comparison": "SQ + aligned existing F + unchanged native existing N3",
+  "candidate_in_main": false,
+  "extra_GI": "OFF",
+  "policy_adoption": false,
+  "initial_oil": false,
+  "nominal_price_rule": "CURRENT_ADDITIVE",
+  "recovery_added": false
+}

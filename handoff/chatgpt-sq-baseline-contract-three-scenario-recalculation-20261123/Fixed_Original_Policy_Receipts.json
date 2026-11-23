@@ -1,0 +1,37 @@
+[
+  {
+    "commit": "9448e5921dba0fc0ff4e294e52b6b1f3ba862330",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-request-20261123/SPE_Work_SQ_Baseline_Contract_Integration_Three_Scenario_Recalculation_Request_20261123.md",
+    "saved": "Fixed_Originals/SPE_Work_SQ_Baseline_Contract_Integration_Three_Scenario_Recalculation_Request_20261123.md",
+    "size": 12142,
+    "sha256": "af204c75886ba54c2eb04b7b300703b2173a8d99c0ce9c83c1c8de50ddc2558e"
+  },
+  {
+    "commit": "9448e5921dba0fc0ff4e294e52b6b1f3ba862330",
+    "path": "policies/StatusQuo.md",
+    "saved": "Fixed_Originals/StatusQuo.md",
+    "size": 8686,
+    "sha256": "eb5a95df122292465fc79c68a12b9e7c6f8c0e0f97f367eb28ed0b27f6264e30"
+  },
+  {
+    "commit": "9448e5921dba0fc0ff4e294e52b6b1f3ba862330",
+    "path": "policies/FreedomPolicies.md",
+    "saved": "Fixed_Originals/FreedomPolicies.md",
+    "size": 9241,
+    "sha256": "0dedd2c1126613c30a7d96732d226cc787f6597437137424845d64d041db0204"
+  },
+  {
+    "commit": "9448e5921dba0fc0ff4e294e52b6b1f3ba862330",
+    "path": "policies/FreedomPolicies_Annex.md",
+    "saved": "Fixed_Originals/FreedomPolicies_Annex.md",
+    "size": 12319,
+    "sha256": "ee62de32582a0f6d559029e7e9810b161c6a975ff22b498493d9ca960ca29e83"
+  },
+  {
+    "commit": "9448e5921dba0fc0ff4e294e52b6b1f3ba862330",
+    "path": "policies/New3linesPolicies.md",
+    "saved": "Fixed_Originals/New3linesPolicies.md",
+    "size": 7039,
+    "sha256": "2f5806addb870863961d9b6a6722d9c1e38bc2b097e1a6cd0e07b39f56b77830"
+  }
+]

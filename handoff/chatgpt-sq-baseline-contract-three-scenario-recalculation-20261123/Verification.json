@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "checks": 2826,
+  "failed": 0,
+  "failures": [],
+  "executed_paths": 9,
+  "executed_annual_rows": 270,
+  "main_comparison_paths": 3,
+  "main_annual_rows": 90,
+  "source_files": 52,
+  "previous_PASS_reused": [
+    2199,
+    13928,
+    8058,
+    15590
+  ],
+  "formal_adoption": false,
+  "full_policy_calibration": false,
+  "originals_changed": false
+}

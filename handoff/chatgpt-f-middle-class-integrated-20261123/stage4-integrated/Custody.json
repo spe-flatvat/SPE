@@ -1,0 +1,224 @@
+{
+  "status": "CUSTODY PASS",
+  "branch": "work/chatgpt-handoff",
+  "files_verified": 24,
+  "independent_execution_byte_matches": 11,
+  "files": [
+    {
+      "path": "handoff/chatgpt-f-middle-class-integrated-20261123/stage1-benefits-burdens/Annual.csv",
+      "size": 24585,
+      "sha256": "00b3f30ef06b5d7de4ca8e7fafca2f694dc9f28119fedd0ae8fa4d43092a973b",
+      "git_blob_sha": "b2532510b6c81f62c808f49f4164fad13fdf343a",
+      "commit": "949449c3a926a4f0771203c9265613b78c169023",
+      "route": "GitHub Contents API base64",
+      "result": "PASS"
+    },
+    {
+      "path": "handoff/chatgpt-f-middle-class-integrated-20261123/stage1-benefits-burdens/Cells.csv",
+      "size": 761120,
+      "sha256": "046270c1a58a9dfcbf0d973dbff78cb92ac819a4053829a6bbd50e24327f116b",
+      "git_blob_sha": "c1ea9c4d7d7d1ebbe504e792a6e22aa9efd4d603",
+      "commit": "949449c3a926a4f0771203c9265613b78c169023",
+      "route": "GitHub Contents API base64",
+      "result": "PASS"
+    },
+    {
+      "path": "handoff/chatgpt-f-middle-class-integrated-20261123/stage1-benefits-burdens/Dependencies.json",
+      "size": 15111,
+      "sha256": "eecb6e91f56cda6f6e4d6d8b45322c7a3726fcc999e68349020759172fc28c64",
+      "git_blob_sha": "2e43cef8ff0e986092dc0d197f373c81bd8f6f49",
+      "commit": "949449c3a926a4f0771203c9265613b78c169023",
+      "route": "GitHub Contents API base64",
+      "result": "PASS"
+    },
+    {
+      "path": "handoff/chatgpt-f-middle-class-integrated-20261123/stage1-benefits-burdens/Manifest.json",
+      "size": 1441,
+      "sha256": "993219a9df9cc151d90cb9478c1742cfb9a630da03934aa4196b08d36e3c9ee8",
+      "git_blob_sha": "9e62c208cd86f74de696a8968118f0f522da3d6c",
+      "commit": "949449c3a926a4f0771203c9265613b78c169023",
+      "route": "GitHub Contents API base64",
+      "result": "PASS"
+    },
+    {
+      "path": "handoff/chatgpt-f-middle-class-integrated-20261123/stage1-benefits-burdens/Report.md",
+      "size": 2728,
+      "sha256": "2050acd0338f6988a6c584443dfd0e4f78b4f10564f41135738787c9f4419d4c",
+      "git_blob_sha": "274c8dfb3a2153b8e3e260d95c23f349c918c386",
+      "commit": "949449c3a926a4f0771203c9265613b78c169023",
+      "route": "GitHub Contents API base64",
+      "result": "PASS"
+    },
+    {
+      "path": "handoff/chatgpt-f-middle-class-integrated-20261123/stage1-benefits-burdens/Run.py",
+      "size": 12010,
+      "sha256": "d308de716065509fb46be8cbd38b041aa19dce6b28a4b53603b1cd1ab0cb29d8",
+      "git_blob_sha": "d30850631bb7bf1e6c194d6b96025d106df86e3a",
+      "commit": "949449c3a926a4f0771203c9265613b78c169023",
+      "route": "GitHub Contents API base64",
+      "result": "PASS"
+    },
+    {
+      "path": "handoff/chatgpt-f-middle-class-integrated-20261123/stage1-benefits-burdens/Validation.json",
+      "size": 848,
+      "sha256": "3c0d51197f6733eeca6f840facd876c30f6f865267b4971677edaf2c28f24a61",
+      "git_blob_sha": "266494a4596cf699370dc3b48dd55d50b85a7ca2",
+      "commit": "949449c3a926a4f0771203c9265613b78c169023",
+      "route": "GitHub Contents API base64",
+      "result": "PASS"
+    },
+    {
+      "path": "handoff/chatgpt-f-middle-class-integrated-20261123/stage2-income-incidence/Annual.csv",
+      "size": 43372,
+      "sha256": "c1b0ba2c0f65c4eb4731d8c9e55f55856ca01d03d6b0c09d8a671e3830f01eb2",
+      "git_blob_sha": "52c8f99b8cd941397852490d593d4126e5bd22e4",
+      "commit": "a7d9868f8069c0e07270ce4314d0c9c8b231dafa",
+      "route": "GitHub Contents API base64",
+      "result": "PASS"
+    },
+    {
+      "path": "handoff/chatgpt-f-middle-class-integrated-20261123/stage2-income-incidence/Groups.csv",
+      "size": 1454511,
+      "sha256": "847e5397597958a55e822e676244d9f812035db7b126b1970cf58969d598434c",
+      "git_blob_sha": "de7a64f4baf22a6794a1f8f273d4ba99b6fdebed",
+      "commit": "a7d9868f8069c0e07270ce4314d0c9c8b231dafa",
+      "route": "GitHub Contents API fixed path to Git blob API UTF-8",
+      "result": "PASS"
+    },
+    {
+      "path": "handoff/chatgpt-f-middle-class-integrated-20261123/stage2-income-incidence/Manifest.json",
+      "size": 1224,
+      "sha256": "c97b2e07d5acf3daf99d6a8b4c43af438130c1710eee5b8e6cd902cba3bc3746",
+      "git_blob_sha": "a118a71f3e096b559a011c3865d9bcdf68d4e29a",
+      "commit": "a7d9868f8069c0e07270ce4314d0c9c8b231dafa",
+      "route": "GitHub Contents API base64",
+      "result": "PASS"
+    },
+    {
+      "path": "handoff/chatgpt-f-middle-class-integrated-20261123/stage2-income-incidence/Report.md",
+      "size": 1779,
+      "sha256": "01ef0bdf5b7df44aade2cab7763f6483bb023897b4dce8230e3850052a4a1eb6",
+      "git_blob_sha": "af406b4d369772d0d5d896db5c0094c015835b35",
+      "commit": "a7d9868f8069c0e07270ce4314d0c9c8b231dafa",
+      "route": "GitHub Contents API base64",
+      "result": "PASS"
+    },
+    {
+      "path": "handoff/chatgpt-f-middle-class-integrated-20261123/stage2-income-incidence/Run.py",
+      "size": 3576,
+      "sha256": "27583b38808fa4d3105019da477c49abf93130435b31b030fceba8f139c6e251",
+      "git_blob_sha": "1df3acbcdba42342afc509addb955e5667dd4c93",
+      "commit": "a7d9868f8069c0e07270ce4314d0c9c8b231dafa",
+      "route": "GitHub Contents API base64",
+      "result": "PASS"
+    },
+    {
+      "path": "handoff/chatgpt-f-middle-class-integrated-20261123/stage2-income-incidence/Validation.json",
+      "size": 173,
+      "sha256": "4e7768b87d910eaf19fe3d9d2ec0ede222848564377fcf2743a07d9f5315e5fd",
+      "git_blob_sha": "fb1b4737462536b6e37842730aa83ded41b38129",
+      "commit": "a7d9868f8069c0e07270ce4314d0c9c8b231dafa",
+      "route": "GitHub Contents API base64",
+      "result": "PASS"
+    },
+    {
+      "path": "handoff/chatgpt-f-middle-class-integrated-20261123/stage3-purchasing-power/Annual.csv",
+      "size": 46425,
+      "sha256": "9caacfb22560cae927087141aa5761c00ac9face5338f82a65dbff1de6c43c44",
+      "git_blob_sha": "4b5b4eea3e3737d3c7bb48628b9a0cf3ca54dbab",
+      "commit": "4e841951815068caa20f84f35bc61dd12bea0100",
+      "route": "GitHub Contents API base64",
+      "result": "PASS"
+    },
+    {
+      "path": "handoff/chatgpt-f-middle-class-integrated-20261123/stage3-purchasing-power/Groups.csv",
+      "size": 590975,
+      "sha256": "16c77e7385b2dc74aa7b238eba50dcb31822290a34d96b12fbd9eeb1f7f63270",
+      "git_blob_sha": "b67eef5743aad65e94d5a5d6eedbd7d1c33c186a",
+      "commit": "4e841951815068caa20f84f35bc61dd12bea0100",
+      "route": "GitHub Contents API base64",
+      "result": "PASS"
+    },
+    {
+      "path": "handoff/chatgpt-f-middle-class-integrated-20261123/stage3-purchasing-power/Manifest.json",
+      "size": 1224,
+      "sha256": "6dcfaef2bac430ca9abfcfd5d98cbcc281fb7632d0f565a26a290205590a8b06",
+      "git_blob_sha": "64954be6b04cda693550009e97402d4ba4dc3547",
+      "commit": "4e841951815068caa20f84f35bc61dd12bea0100",
+      "route": "GitHub Contents API base64",
+      "result": "PASS"
+    },
+    {
+      "path": "handoff/chatgpt-f-middle-class-integrated-20261123/stage3-purchasing-power/Report.md",
+      "size": 1578,
+      "sha256": "c46019a02b4584e0532317f376e410858bebabfbde0e14ead26fb68b0f0a9022",
+      "git_blob_sha": "4fe2ed68757a8ce004e62cb7c34fcc1ec4a7e9d2",
+      "commit": "4e841951815068caa20f84f35bc61dd12bea0100",
+      "route": "GitHub Contents API base64",
+      "result": "PASS"
+    },
+    {
+      "path": "handoff/chatgpt-f-middle-class-integrated-20261123/stage3-purchasing-power/Run.py",
+      "size": 3289,
+      "sha256": "8b45cfecdccba981b3a87b9abd593e56dfd22e1af5b1854d348ae16e964d8ed5",
+      "git_blob_sha": "3ac9b4b7a4b0e620caded16ff10cea4608adcf0e",
+      "commit": "4e841951815068caa20f84f35bc61dd12bea0100",
+      "route": "GitHub Contents API base64",
+      "result": "PASS"
+    },
+    {
+      "path": "handoff/chatgpt-f-middle-class-integrated-20261123/stage3-purchasing-power/Validation.json",
+      "size": 244,
+      "sha256": "50f1e43d692013f0f073bca7b944427e1819fce67ad2c946d3680727408be13c",
+      "git_blob_sha": "94b065a81590b5796a50cb066687fc71c9d1b6b5",
+      "commit": "4e841951815068caa20f84f35bc61dd12bea0100",
+      "route": "GitHub Contents API base64",
+      "result": "PASS"
+    },
+    {
+      "path": "handoff/chatgpt-f-middle-class-integrated-20261123/stage4-integrated/Comparison.csv",
+      "size": 186546,
+      "sha256": "4e20bd905ee3dc620e63de6fbe26cf26b23d8c9552e291cadd6434d28a0a21da",
+      "git_blob_sha": "b6d6426650ea32f6f3088f4567d87ad2a40e05db",
+      "commit": "8b3197604488bb92141a9d14f7b1f42b9140e0b4",
+      "route": "GitHub Contents API base64",
+      "result": "PASS"
+    },
+    {
+      "path": "handoff/chatgpt-f-middle-class-integrated-20261123/stage4-integrated/Manifest.json",
+      "size": 1001,
+      "sha256": "e862aac5c3093f06f6507848d619af94c1da9cf82005817d696b7ae64e376553",
+      "git_blob_sha": "90503a52ef6be596ad7e0f91c54cdf4b7cfca4d8",
+      "commit": "8b3197604488bb92141a9d14f7b1f42b9140e0b4",
+      "route": "GitHub Contents API base64",
+      "result": "PASS"
+    },
+    {
+      "path": "handoff/chatgpt-f-middle-class-integrated-20261123/stage4-integrated/Report.md",
+      "size": 1969,
+      "sha256": "d1d5d61520d0ccad1a41e383d5e5a49f41f61304efabfe27458033a41a5d61be",
+      "git_blob_sha": "3fd568341983de7ffb0ca671b538710b36a5fd22",
+      "commit": "8b3197604488bb92141a9d14f7b1f42b9140e0b4",
+      "route": "GitHub Contents API base64",
+      "result": "PASS"
+    },
+    {
+      "path": "handoff/chatgpt-f-middle-class-integrated-20261123/stage4-integrated/Run.py",
+      "size": 3157,
+      "sha256": "8cb63be24a7f3b6bc6548a40329d2c1255d89fe3fb029f20a81a23038cb99472",
+      "git_blob_sha": "16b77cb148a9fbd9b83ed8f1c671e956a0f98d07",
+      "commit": "8b3197604488bb92141a9d14f7b1f42b9140e0b4",
+      "route": "GitHub Contents API base64",
+      "result": "PASS"
+    },
+    {
+      "path": "handoff/chatgpt-f-middle-class-integrated-20261123/stage4-integrated/Validation.json",
+      "size": 162,
+      "sha256": "acfab89a74db558e4c73a666fb4130e8f82e57b96b082c97deb46a6f7d80a10e",
+      "git_blob_sha": "1083d8e1761e6497ccc7fce9e9035a6f2b81575f",
+      "commit": "8b3197604488bb92141a9d14f7b1f42b9140e0b4",
+      "route": "GitHub Contents API base64",
+      "result": "PASS"
+    }
+  ]
+}

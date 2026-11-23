@@ -1,0 +1,134 @@
+{
+  "status": "CUSTODY_PASS_FOR_LISTED_21_ORIGINALS",
+  "fixed_commit": "fb594b523619ac78ce1a27635138771921987b2f",
+  "files": [
+    {
+      "path": "handoff/chatgpt-n3-household-tax-path-review-20261123/Artifact_Manifest.json",
+      "size_bytes": 4616,
+      "sha256": "c32951f0d50b135db1f2a814d2551aa077d3ca18f5492b806d97b45dd06fe630",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-household-tax-path-review-20261123/Execution.log",
+      "size_bytes": 1216,
+      "sha256": "0bff39d5d66f4da19ea4ab007e359e84fafbf32596cf4156ac7124a85ef0ac19",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-household-tax-path-review-20261123/Fixed_Pension_Control_Ledger.csv",
+      "size_bytes": 65645,
+      "sha256": "9708ef3960ef9a527eee5456bbfe3da815fc253bb672e0b12afc3898b3d41bc5",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-household-tax-path-review-20261123/Household_Tax_Inputs_And_Cases.json",
+      "size_bytes": 1843,
+      "sha256": "3e0e8a2ac3de67e7cdd0e769c543922adcbf9c591a8ccfda436dba4cce3a6212",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-household-tax-path-review-20261123/Household_Tax_Runtime.py",
+      "size_bytes": 2432,
+      "sha256": "5b95eeb7f62d5d390bce009f9ffbff4b465ad6d784bd530cac58df91ea319de4",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-household-tax-path-review-20261123/Input_Source_Receipts.json",
+      "size_bytes": 9531,
+      "sha256": "d1602ada1d2e9bbeb3244324ab913a02de26b7d723b5616104ba3dfdf8047606",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-household-tax-path-review-20261123/N3_Household_Tax_Annual_Counterfactual_2026_2055.csv",
+      "size_bytes": 291733,
+      "sha256": "9aeb8d775d8913e77c43a78d3fee07845802b7970168e173a9ecf6e3788814f0",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-household-tax-path-review-20261123/N3_Household_Tax_Base_And_Prior_Tax_Trace.csv",
+      "size_bytes": 200593,
+      "sha256": "a6124d86600f44d80adc8c5a71fba2bf314f3880569e57a6e7c9d671516fed73",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-household-tax-path-review-20261123/N3_Household_Tax_Calibration_Gaps.csv",
+      "size_bytes": 2185,
+      "sha256": "c4c4d9164a8d36777bf15c2ab117b8e931f29cbf5f5ded36c32c027ca6a2509f",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-household-tax-path-review-20261123/N3_Household_Tax_Case_Definitions.csv",
+      "size_bytes": 783,
+      "sha256": "3a64c9a90143e1627b06ce7955f0975e8f432575709a392eafce41674354638b",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-household-tax-path-review-20261123/N3_Household_Tax_Case_Summary.csv",
+      "size_bytes": 7462,
+      "sha256": "72c8efb75d7d49b303a71a94546a8e23a9474ccd71f4446f1371a067e3c3a090",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-household-tax-path-review-20261123/N3_Household_Tax_Cell_Trace.csv",
+      "size_bytes": 2737939,
+      "sha256": "daa47e7f4621b4aff8433859bfef17e0ce1bb20c4c52884d8c3bb526559ca41b",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-household-tax-path-review-20261123/N3_Household_Tax_Consumption_Transmission.csv",
+      "size_bytes": 86264,
+      "sha256": "7fbde273a98defe0b11ad44f468b9ffedb00fc82012368e7c2e5cec4ed77326c",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-household-tax-path-review-20261123/N3_Household_Tax_Fiscal_Ledger.csv",
+      "size_bytes": 92527,
+      "sha256": "aaca262c3aa3534dc7e3cd61100caf439c156629b31c35a34cbd1c818a1a71f0",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-household-tax-path-review-20261123/N3_Household_Tax_Reproduce.py",
+      "size_bytes": 18259,
+      "sha256": "a6380ee436a6f3085dad67b548283077db5c80c2597d58b52e7285ff3c8994c6",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-household-tax-path-review-20261123/Public_Source_Check.json",
+      "size_bytes": 1469,
+      "sha256": "722dcbcd4e5bd7e9273b37773816ec183df1e1c2c821d98789bfe2276eb225a2",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-household-tax-path-review-20261123/Reproduction_Verification.json",
+      "size_bytes": 3214,
+      "sha256": "a593db3811ebef6890cf82a4ddd4751474df63782e1a91ffcd0dfa83daae074b",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-household-tax-path-review-20261123/Resolved_Household_Tax_Component.py.txt",
+      "size_bytes": 13331,
+      "sha256": "0b8626e84700887bdf4934968c9d3cce19989e5d1c005d6b6015c48768768dcf",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-household-tax-path-review-20261123/Reused_Fixed_Tax_OFF_And_SQ.csv",
+      "size_bytes": 59488,
+      "sha256": "9305443510ea633df5453358fce0f1922b4e416eb587ff83c902136dafaca79e",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-household-tax-path-review-20261123/SPE_N3_Household_Tax_Path_Review_Report_DRAFT_20261123.md",
+      "size_bytes": 4935,
+      "sha256": "1673225c081e324053a8f1ddb332aad5eb5d8f6984412f62638716b606d8c709",
+      "match": true
+    },
+    {
+      "path": "handoff/chatgpt-n3-household-tax-path-review-20261123/Verification.json",
+      "size_bytes": 447,
+      "sha256": "21061bae1413b90f36df2885e2a39427dee6431f2afbd25f38194d250d56bf7d",
+      "match": true
+    }
+  ],
+  "receipt_self_excluded": true,
+  "retrieval": "connector write then git fetch fixed commit/git show"
+}

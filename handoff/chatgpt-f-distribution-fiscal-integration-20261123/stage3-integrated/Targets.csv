@@ -1,0 +1,3 @@
+year,population_model,population_goal_85m_model_test,population_below_100m_2035,national_gini_target,national_tax_to_GDP_target,national_fiscal_sustainability,fiscal_scope,observed_gini_trigger_input
+2035,117679274.8220318,N/A_target_year_2055,0,INDETERMINATE,INDETERMINATE,INDETERMINATE,EDUCATION_AND_MEDICAL_INCREMENTAL_ONLY,N/A
+2055,104453585.43479426,PASS_MODEL,N/A,INDETERMINATE,INDETERMINATE,INDETERMINATE,EDUCATION_AND_MEDICAL_INCREMENTAL_ONLY,N/A

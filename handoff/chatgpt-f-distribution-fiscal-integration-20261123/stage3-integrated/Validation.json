@@ -1,0 +1,15 @@
+{
+  "checks": 729,
+  "failures": 0,
+  "groups": {
+    "independent_runtime_bytes": 2,
+    "stage1_fixed_annual_bytes": 2,
+    "stage2_fixed_annual_bytes": 2,
+    "integrated_annual_keys": 60,
+    "fixed_F": 360,
+    "fiscal_reconciliation": 120,
+    "distribution_reconciliation": 120,
+    "no_new_trigger": 60,
+    "independent_CSV_bytes": 3
+  }
+}

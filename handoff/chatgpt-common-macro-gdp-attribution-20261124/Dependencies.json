@@ -1,0 +1,62 @@
+{
+  "previous_dependencies": {
+    "commit": "8a8edb403b960cceb535f9b70461646e9374c229",
+    "path": "handoff/chatgpt-f-sq-n3-common-indicators-20261123/Dependencies.json",
+    "bytes": 5053,
+    "sha256": "e5bc82bb8371e80881be7a79000c6cd6b11cd3418a636b303cd89531e638016d"
+  },
+  "sq": {
+    "commit": "7dd893eeed781af2bb323c424b456fdd907a667f",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/BASE_REPLAY/Common_Trace_BASE_REPLAY.json",
+    "bytes": 60423,
+    "sha256": "f571c808cdecb1e6c3ab9ae38e7fbab5fc5e564b1399ce4ca00d46c21b7e5d75"
+  },
+  "f_trace": {
+    "commit": "7dd893eeed781af2bb323c424b456fdd907a667f",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F/F_Runtime_Trace.json",
+    "bytes": 27133,
+    "sha256": "7e777c2fb9e999f15ded82705a4dba2df0a0e358d0a233d2f2ebfdd9862dbff3"
+  },
+  "f": {
+    "commit": "7dd893eeed781af2bb323c424b456fdd907a667f",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F/F_Actual_Annual.json",
+    "bytes": 522949,
+    "sha256": "cf13d4c267f30a361ed0f4aa3083893721413283247c846fdce477357c2f7e43"
+  },
+  "n3": {
+    "commit": "7dd893eeed781af2bb323c424b456fdd907a667f",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/N3/N3_Actual_Annual.json",
+    "bytes": 94007,
+    "sha256": "7728c506a33d302fb2f6512defcda42008c980257db19fbb0a7507860d2f2e4a"
+  },
+  "n3_denominator": {
+    "commit": "7dd893eeed781af2bb323c424b456fdd907a667f",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/N3/N3_SQ_Denominator_States.json",
+    "bytes": 673563,
+    "sha256": "1ce949509472382859f2019347998b89e33364509ce7f9cee2d991800077fdfa"
+  },
+  "n3_parameters": {
+    "commit": "7dd893eeed781af2bb323c424b456fdd907a667f",
+    "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/N3/N3_Common_Input_Contract.json",
+    "bytes": 139656,
+    "sha256": "a3ac335acfc40cc24ea37a5d628a3b46e872c34c465f61e69125d62cd86e1d2f"
+  },
+  "claude_validation": {
+    "commit": "da79ab621de27a1a2df8dd3edf050e4f02fac63a",
+    "path": "handoff/claude-f-sq-n3-common-indicators-verification-20261123/Validation.json",
+    "bytes": 1119,
+    "sha256": "235e2bac9e8503e9574da7a942420cad92cae2164b2b1923b3f7b12e21bffa58"
+  },
+  "previous_comparison": {
+    "commit": "8a8edb403b960cceb535f9b70461646e9374c229",
+    "path": "handoff/chatgpt-f-sq-n3-common-indicators-20261123/Annual_Comparison.csv",
+    "bytes": 54714,
+    "sha256": "2b09d11f30488cc988561f2aeb6d9eb43ad97e486f92e3496237869f36563148"
+  },
+  "request": {
+    "commit": "4ee60743acba214d642a915851489171842f3dba",
+    "path": "handoff/chatgpt-common-macro-gdp-attribution-request-20261124/SPE_Work_Common_Macro_GDP_Attribution_Request_20261124.md",
+    "bytes": 4822,
+    "sha256": "222c41da7058028a75b1c2838f1a83bbea69ec24539ec0cc2ac246e99c7a8290"
+  }
+}

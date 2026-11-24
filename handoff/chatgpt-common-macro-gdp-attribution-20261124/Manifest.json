@@ -1,0 +1,63 @@
+{
+  "files": [
+    {
+      "path": "handoff/chatgpt-common-macro-gdp-attribution-20261124/Counterfactual_Annual.csv",
+      "bytes": 63778,
+      "sha256": "2c0e9c39026ae8997e25a19d1da0996542e0c635f379126f43618be26e613af6"
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-gdp-attribution-20261124/Dependencies.json",
+      "bytes": 2946,
+      "sha256": "d96052f616ad6b4a3835cf604b9670b637de6c44b31b14fd1728c57c2748d9bb"
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-gdp-attribution-20261124/Event_Schedule.csv",
+      "bytes": 1423,
+      "sha256": "332eec2e9e3a617786c9b38d137b03e79d207b74d49ce7a90bf683dd983df174"
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-gdp-attribution-20261124/Key_Years.csv",
+      "bytes": 10127,
+      "sha256": "37ba4a2e24e979b781ab4961e97d546df158528108ff4036b4e416faf55a2177"
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-gdp-attribution-20261124/Policy_Gap_Annual.csv",
+      "bytes": 10237,
+      "sha256": "6b2ec6bcfd3d2254159e6075cfaf40603c0fea97c9daa92e507ba83384b5c006"
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-gdp-attribution-20261124/Recovery_Events.csv",
+      "bytes": 13707,
+      "sha256": "451009cd46521eaf7bebe40fa4b1c28f91eb20b03cddc81a8dedf6cd2dab782a"
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-gdp-attribution-20261124/Report.md",
+      "bytes": 4640,
+      "sha256": "681bbc36a7ad0d416f5e7080f38553b3282235d454f983886590ab3920e369ed"
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-gdp-attribution-20261124/Run.py",
+      "bytes": 12159,
+      "sha256": "b1aed83dbc87f580547a56011da3d1d9c5f1e9f37189ce5b57fc923f8082ebba"
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-gdp-attribution-20261124/SQ_Annual_Attribution.csv",
+      "bytes": 11245,
+      "sha256": "6c8a6688b9adfba8232bb477af7c2f7376a51affb71c77decfca4fc1ed444591"
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-gdp-attribution-20261124/Three_Scenario_Gaps.csv",
+      "bytes": 11017,
+      "sha256": "7339ef8d84b9bc8ff2026bdd15406ff293144584d0145f0aef256412b1883a5b"
+    },
+    {
+      "path": "handoff/chatgpt-common-macro-gdp-attribution-20261124/Validation.json",
+      "bytes": 885,
+      "sha256": "039fa343a128131f9c8d76f76b166caf6bf01082dab71d26c2dea3106f967f23"
+    }
+  ],
+  "excluded": [
+    "Manifest.json (self)",
+    "Custody.json (post-fetch)"
+  ]
+}

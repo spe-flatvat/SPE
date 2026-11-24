@@ -1,0 +1,137 @@
+{
+  "handoff/chatgpt-common-macro-gdp-attribution-20261124/Custody.json": {
+    "commit": "adb373d87c5beb68b35f84be9e504c84d67014e0",
+    "bytes": 2682,
+    "sha256": "2b71501312d7f4e92acf360b3143ffd31d65a4368292d60d1f5ab3cd61eaf0a5"
+  },
+  "handoff/chatgpt-common-macro-gdp-attribution-20261124/Validation.json": {
+    "commit": "adb373d87c5beb68b35f84be9e504c84d67014e0",
+    "bytes": 885,
+    "sha256": "039fa343a128131f9c8d76f76b166caf6bf01082dab71d26c2dea3106f967f23"
+  },
+  "handoff/chatgpt-common-macro-gdp-attribution-20261124/Counterfactual_Annual.csv": {
+    "commit": "adb373d87c5beb68b35f84be9e504c84d67014e0",
+    "bytes": 63778,
+    "sha256": "2c0e9c39026ae8997e25a19d1da0996542e0c635f379126f43618be26e613af6"
+  },
+  "handoff/chatgpt-common-macro-gdp-attribution-20261124/Event_Schedule.csv": {
+    "commit": "adb373d87c5beb68b35f84be9e504c84d67014e0",
+    "bytes": 1423,
+    "sha256": "332eec2e9e3a617786c9b38d137b03e79d207b74d49ce7a90bf683dd983df174"
+  },
+  "handoff/chatgpt-common-macro-gdp-attribution-20261124/Recovery_Events.csv": {
+    "commit": "adb373d87c5beb68b35f84be9e504c84d67014e0",
+    "bytes": 13707,
+    "sha256": "451009cd46521eaf7bebe40fa4b1c28f91eb20b03cddc81a8dedf6cd2dab782a"
+  },
+  "handoff/chatgpt-common-macro-gdp-attribution-20261124/Run.py": {
+    "commit": "adb373d87c5beb68b35f84be9e504c84d67014e0",
+    "bytes": 12159,
+    "sha256": "b1aed83dbc87f580547a56011da3d1d9c5f1e9f37189ce5b57fc923f8082ebba"
+  },
+  "handoff/chatgpt-common-macro-gdp-attribution-20261124/Dependencies.json": {
+    "commit": "adb373d87c5beb68b35f84be9e504c84d67014e0",
+    "bytes": 2946,
+    "sha256": "d96052f616ad6b4a3835cf604b9670b637de6c44b31b14fd1728c57c2748d9bb"
+  },
+  "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/BASE_REPLAY/Common_Trace_BASE_REPLAY.json": {
+    "commit": "7dd893eeed781af2bb323c424b456fdd907a667f",
+    "bytes": 60423,
+    "sha256": "f571c808cdecb1e6c3ab9ae38e7fbab5fc5e564b1399ce4ca00d46c21b7e5d75"
+  },
+  "policies/Flat3linesPolicies.md": {
+    "commit": "6ad7922f9b5c7b582044076842a0d28f653f7647",
+    "bytes": 5939,
+    "sha256": "96d547441e49fc99ef69d77fb542f59b413a461aaccb6a5d92e5fe8f87961d30"
+  },
+  "policies/FreedomPolicies.md": {
+    "commit": "6ad7922f9b5c7b582044076842a0d28f653f7647",
+    "bytes": 9241,
+    "sha256": "0dedd2c1126613c30a7d96732d226cc787f6597437137424845d64d041db0204"
+  },
+  "policies/FreedomPolicies_Annex.md": {
+    "commit": "6ad7922f9b5c7b582044076842a0d28f653f7647",
+    "bytes": 12319,
+    "sha256": "ee62de32582a0f6d559029e7e9810b161c6a975ff22b498493d9ca960ca29e83"
+  },
+  "policies/New3linesPolicies.md": {
+    "commit": "6ad7922f9b5c7b582044076842a0d28f653f7647",
+    "bytes": 7039,
+    "sha256": "2f5806addb870863961d9b6a6722d9c1e38bc2b097e1a6cd0e07b39f56b77830"
+  },
+  "policies/NobleShiftPolicies.md": {
+    "commit": "6ad7922f9b5c7b582044076842a0d28f653f7647",
+    "bytes": 5852,
+    "sha256": "f3787996d7fb10f3c2b4c4127394f1ccb4d494b45d85b0e3dc9ba2230b769867"
+  },
+  "policies/Reboot4linesPolicies.md": {
+    "commit": "6ad7922f9b5c7b582044076842a0d28f653f7647",
+    "bytes": 8928,
+    "sha256": "5ed442b8c911a4e25aec606d7ac72965c242931eb08c236a6ed14be1801e518e"
+  },
+  "policies/StatusQuo.md": {
+    "commit": "6ad7922f9b5c7b582044076842a0d28f653f7647",
+    "bytes": 8686,
+    "sha256": "eb5a95df122292465fc79c68a12b9e7c6f8c0e0f97f367eb28ed0b27f6264e30"
+  },
+  "specifications/M18-R2_Regression_Acceptance.md": {
+    "commit": "6ad7922f9b5c7b582044076842a0d28f653f7647",
+    "bytes": 4892,
+    "sha256": "ffebbc28a2a5af7c91c096307e63feb0d854e1952c28f37442ad1684109bfe45"
+  },
+  "specifications/M18-R3_Static_Compatibility_Acceptance.md": {
+    "commit": "6ad7922f9b5c7b582044076842a0d28f653f7647",
+    "bytes": 5747,
+    "sha256": "90f9ecea40b0dbcd4dc56b40e9c2c4a372b326569058862e36e952ae76f57474"
+  },
+  "specifications/MigrationChecklist.md": {
+    "commit": "6ad7922f9b5c7b582044076842a0d28f653f7647",
+    "bytes": 357,
+    "sha256": "6eb22ea80790a99d7cb955612b01270dcf9b0c18391e6fe0b2ab842e2f3ae825"
+  },
+  "specifications/MigrationReport_v5_to_v6.md": {
+    "commit": "6ad7922f9b5c7b582044076842a0d28f653f7647",
+    "bytes": 1288,
+    "sha256": "18475f1d47b80d58d6b0416a0132e2fe1c52b2f088f598bdd6e769dd6f02c891"
+  },
+  "specifications/ProjectStatus.md": {
+    "commit": "6ad7922f9b5c7b582044076842a0d28f653f7647",
+    "bytes": 1088,
+    "sha256": "c26ecb0b7d9572a79ccd5da188bc03789f1871feb79fd31f2a2f10de17055bdd"
+  },
+  "specifications/RP-022.md": {
+    "commit": "6ad7922f9b5c7b582044076842a0d28f653f7647",
+    "bytes": 177139,
+    "sha256": "f093e263988b898acd202544112ae91befac8c02c192927d54c1493ccbf9b671"
+  },
+  "specifications/RPInventory.md": {
+    "commit": "6ad7922f9b5c7b582044076842a0d28f653f7647",
+    "bytes": 2096,
+    "sha256": "555846a96c51d1fc36df1bc18eae8b0f9e73c4f9ee080987ad0e3e52fb383446"
+  },
+  "specifications/RepositoryAudit.md": {
+    "commit": "6ad7922f9b5c7b582044076842a0d28f653f7647",
+    "bytes": 2023,
+    "sha256": "680285e6a13242941f3637ae6e5febdae026c402715eec53f78f02611207199d"
+  },
+  "specifications/SimulationSpecification_v5.md": {
+    "commit": "6ad7922f9b5c7b582044076842a0d28f653f7647",
+    "bytes": 17708,
+    "sha256": "fd10290c97daa3a77bd1348ac4c2a1536da634a7b9408737dcd7713adc671b65"
+  },
+  "specifications/SimulationSpecification_v6.md": {
+    "commit": "6ad7922f9b5c7b582044076842a0d28f653f7647",
+    "bytes": 8521,
+    "sha256": "a2b7a937445525262a2bea35239ba636bf05317324536067e981958b8c48ff34"
+  },
+  "specifications/SimulationSpecification_v6_Annex.md": {
+    "commit": "6ad7922f9b5c7b582044076842a0d28f653f7647",
+    "bytes": 683,
+    "sha256": "4afa8b09224b95b51c7516b5d02f81e1ee4123eb6fdd2604f8fcbe1521c8274c"
+  },
+  "handoff/chatgpt-risk-specific-recovery-request-20261124/SPE_Work_Risk_Specific_Recovery_Sensitivity_Request_20261124.md": {
+    "commit": "6ad7922f9b5c7b582044076842a0d28f653f7647",
+    "bytes": 3995,
+    "sha256": "2059e029f849c6432885e07bf0c615b1d10c2e7e6381bd9d0a5bdca06b715e07"
+  }
+}

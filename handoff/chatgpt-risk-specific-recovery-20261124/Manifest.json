@@ -1,0 +1,58 @@
+{
+  "files": [
+    {
+      "path": "handoff/chatgpt-risk-specific-recovery-20261124/Annual.csv",
+      "bytes": 60092,
+      "sha256": "6341407039d59a0abefc068af2c88bf63901d92c12064e545dd973d14e5e7699"
+    },
+    {
+      "path": "handoff/chatgpt-risk-specific-recovery-20261124/Dependencies.json",
+      "bytes": 5987,
+      "sha256": "5662ef7945c9885c805937ee42f6673ab50fa8817003894698784eaafede7a55"
+    },
+    {
+      "path": "handoff/chatgpt-risk-specific-recovery-20261124/Event_Recovery.csv",
+      "bytes": 44579,
+      "sha256": "3b524a7f55dd69474d44f973c7e5623f009ff749fc15987b06fdbadbf700f168"
+    },
+    {
+      "path": "handoff/chatgpt-risk-specific-recovery-20261124/Key_Years.csv",
+      "bytes": 9297,
+      "sha256": "9468c057e2f958acb370d621016028fcd92c05957ef9b6105c25ee1bfa818faf"
+    },
+    {
+      "path": "handoff/chatgpt-risk-specific-recovery-20261124/Policy_Gaps.csv",
+      "bytes": 13563,
+      "sha256": "6facf41123e783d90fbab5eb003a5bd776547b59bc5975812d0d80ec2126d71c"
+    },
+    {
+      "path": "handoff/chatgpt-risk-specific-recovery-20261124/Report.md",
+      "bytes": 5199,
+      "sha256": "35b8aa20779eaf1aa4703779de79f17f4b6ae5fe69dbdd51b6d38b31d5b332e3"
+    },
+    {
+      "path": "handoff/chatgpt-risk-specific-recovery-20261124/Risk_Contribution.csv",
+      "bytes": 14769,
+      "sha256": "1dd63e8f9dc72601ec5b3d6c8342d2934c76ddcf924a143e2fc4ae5cc25a7175"
+    },
+    {
+      "path": "handoff/chatgpt-risk-specific-recovery-20261124/Run.py",
+      "bytes": 8743,
+      "sha256": "5e2a5870a0e40f7b0b7e2ec84ec3504d8d1bc75401fd92b9b143d5be453abd00"
+    },
+    {
+      "path": "handoff/chatgpt-risk-specific-recovery-20261124/Summary.csv",
+      "bytes": 1314,
+      "sha256": "34b7e4093659168418e34bdc80a0ad0f8f1b69a67fa4af16271a28fb1056d0ad"
+    },
+    {
+      "path": "handoff/chatgpt-risk-specific-recovery-20261124/Validation.json",
+      "bytes": 514,
+      "sha256": "a89588e6c90d223d307cb9178bd4429f99e8c889b587668fd0a03df6096a8d13"
+    }
+  ],
+  "excluded": [
+    "Manifest.json (self)",
+    "Custody.json (post-fetch)"
+  ]
+}

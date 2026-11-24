@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "checks": 3360,
+  "groups": {
+    "annual_complete": 1,
+    "capacity": 360,
+    "gap": 120,
+    "initial": 12,
+    "initial_oil_off": 1,
+    "parameters": 1,
+    "per_capita": 360,
+    "prior_AB_reconstruction": 720,
+    "prior_B_event": 399,
+    "prior_bytes": 6,
+    "prior_pass": 1,
+    "prior_unique": 1,
+    "recovery_boundary": 1197,
+    "risk_contribution": 180,
+    "schedule_years": 1
+  },
+  "failures": 0,
+  "new_rows": 180,
+  "reused_rows": 180,
+  "prior_checks_reused": 1951
+}

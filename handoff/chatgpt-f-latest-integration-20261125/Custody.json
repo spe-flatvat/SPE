@@ -1,0 +1,64 @@
+{
+  "status": "CUSTODY PASS",
+  "branch": "work/chatgpt-handoff",
+  "payload_commit": "20cb4465ce4316ee32cde909b7e2ad90a087217a",
+  "route": "Post-write GitHub origin fetch fixed commit and git show",
+  "files_verified": 11,
+  "files": [
+    {
+      "path": "handoff/chatgpt-f-latest-integration-20261125/Annual.csv",
+      "bytes": 117086,
+      "sha256": "2bb6dbef4b9a7646b84b9da0254a2b4634a5c6012eb922beb7118163aa01bcc7"
+    },
+    {
+      "path": "handoff/chatgpt-f-latest-integration-20261125/Contributions.csv",
+      "bytes": 22799,
+      "sha256": "1702ed90e15744065a6f44b9a224bb9793b2f6b76902bd3d5d3621685e4d6cf2"
+    },
+    {
+      "path": "handoff/chatgpt-f-latest-integration-20261125/Dependencies.json",
+      "bytes": 28058,
+      "sha256": "ee8d38ffd8d6dbcbb85abc796c6b875bdae86d8c2af308dcf6674ab72dc9a695"
+    },
+    {
+      "path": "handoff/chatgpt-f-latest-integration-20261125/Funding_Residual.csv",
+      "bytes": 9589,
+      "sha256": "eac8003943acdabd2987d527fb7890b5809da6a1d14e9799915ff2ab90f280ec"
+    },
+    {
+      "path": "handoff/chatgpt-f-latest-integration-20261125/Inclusion.csv",
+      "bytes": 3601,
+      "sha256": "04f1e53e6f9501739c06174ff1444511431c563002f983d5ebad8ec421d5dfc7"
+    },
+    {
+      "path": "handoff/chatgpt-f-latest-integration-20261125/Key_Years.csv",
+      "bytes": 23420,
+      "sha256": "f53b7804597280f30ac84a9f5a8719685c91224f0bead9307bbd551ed37ee142"
+    },
+    {
+      "path": "handoff/chatgpt-f-latest-integration-20261125/Manifest.json",
+      "bytes": 2018,
+      "sha256": "bfff0d208d6fa7f7efcc76c93f2930d2b65ceb95f62456d11ced356ffa67d3d4"
+    },
+    {
+      "path": "handoff/chatgpt-f-latest-integration-20261125/Report.md",
+      "bytes": 5432,
+      "sha256": "05e6d6a37da1431336a03742128b0c54671768482c0ecc16ef789a8d67f9eec8"
+    },
+    {
+      "path": "handoff/chatgpt-f-latest-integration-20261125/Run.py",
+      "bytes": 27104,
+      "sha256": "7e07120b41412d2f5000dabd2e684c81f9afea86b9c639430c973f081862740b"
+    },
+    {
+      "path": "handoff/chatgpt-f-latest-integration-20261125/Unconnected.csv",
+      "bytes": 1476,
+      "sha256": "cd041dec8dd22768c4485e7b831ed5fc56f4935139ad91f4cbb7bc9225a4703d"
+    },
+    {
+      "path": "handoff/chatgpt-f-latest-integration-20261125/Validation.json",
+      "bytes": 1911,
+      "sha256": "bd6665e6907cff0ea1e7350d1c7900eb6dd4eac1714d40f64c1dcb9797af7373"
+    }
+  ]
+}

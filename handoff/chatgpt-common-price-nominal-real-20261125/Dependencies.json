@@ -1,0 +1,272 @@
+{
+  "handoff/chatgpt-f-sq-n3-common-indicators-20261123/Run.py": {
+    "commit": "8a8edb403b960cceb535f9b70461646e9374c229",
+    "bytes": 20374,
+    "sha256": "3a413c1bd29b082337fcc99597259dfb792774766403c8feaf66412b729f6ab0"
+  },
+  "handoff/chatgpt-f-sq-n3-common-indicators-20261123/Report.md": {
+    "commit": "8a8edb403b960cceb535f9b70461646e9374c229",
+    "bytes": 5687,
+    "sha256": "ef859568aa8a4b3bc21744507d31fcdaeff10ec1de25e318d8728268006bf060"
+  },
+  "handoff/chatgpt-f-sq-n3-common-indicators-20261123/Dependencies.json": {
+    "commit": "8a8edb403b960cceb535f9b70461646e9374c229",
+    "bytes": 5053,
+    "sha256": "e5bc82bb8371e80881be7a79000c6cd6b11cd3418a636b303cd89531e638016d"
+  },
+  "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/BASE_REPLAY/Common_Trace_BASE_REPLAY.json": {
+    "commit": "7dd893eeed781af2bb323c424b456fdd907a667f",
+    "bytes": 60423,
+    "sha256": "f571c808cdecb1e6c3ab9ae38e7fbab5fc5e564b1399ce4ca00d46c21b7e5d75"
+  },
+  "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F/F_Runtime_Trace.json": {
+    "commit": "7dd893eeed781af2bb323c424b456fdd907a667f",
+    "bytes": 27133,
+    "sha256": "7e777c2fb9e999f15ded82705a4dba2df0a0e358d0a233d2f2ebfdd9862dbff3"
+  },
+  "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/N3/N3_Common_Input_Contract.json": {
+    "commit": "7dd893eeed781af2bb323c424b456fdd907a667f",
+    "bytes": 139656,
+    "sha256": "a3ac335acfc40cc24ea37a5d628a3b46e872c34c465f61e69125d62cd86e1d2f"
+  },
+  "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/N3/N3_SQ_Denominator_States.json": {
+    "commit": "7dd893eeed781af2bb323c424b456fdd907a667f",
+    "bytes": 673563,
+    "sha256": "1ce949509472382859f2019347998b89e33364509ce7f9cee2d991800077fdfa"
+  },
+  "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F/F_Actual_Annual.json": {
+    "commit": "7dd893eeed781af2bb323c424b456fdd907a667f",
+    "bytes": 522949,
+    "sha256": "cf13d4c267f30a361ed0f4aa3083893721413283247c846fdce477357c2f7e43"
+  },
+  "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/N3/N3_Actual_Annual.json": {
+    "commit": "7dd893eeed781af2bb323c424b456fdd907a667f",
+    "bytes": 94007,
+    "sha256": "7728c506a33d302fb2f6512defcda42008c980257db19fbb0a7507860d2f2e4a"
+  },
+  "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/SPE_Three_Scenario_Annual_Comparison_2026_2055.csv": {
+    "commit": "7dd893eeed781af2bb323c424b456fdd907a667f",
+    "bytes": 46387,
+    "sha256": "8bd352398aac6820740d2325fa3eb911a15f936b4ccd5120e9354ba16a1c9815"
+  },
+  "handoff/chatgpt-statusquo-common-macro-limited-diagnostic-20261123/Common_Trace_BASE_REPLAY.json": {
+    "commit": "149bbf03675884cb8f3fcea96689ebc9e975fac7",
+    "bytes": 60423,
+    "sha256": "f571c808cdecb1e6c3ab9ae38e7fbab5fc5e564b1399ce4ca00d46c21b7e5d75"
+  },
+  "handoff/chatgpt-statusquo-common-macro-limited-diagnostic-20261123/SQ_Baseline_Variant_Provenance_And_Comparability.csv": {
+    "commit": "149bbf03675884cb8f3fcea96689ebc9e975fac7",
+    "bytes": 5993,
+    "sha256": "6c1b2749dd72f8183ee23b0b496622ba310b802844d6fcd19b5156e9eaff0bae"
+  },
+  "handoff/chatgpt-n3-gdp-gap-causal-attribution-20261123/N3_SQ_Annual_GDP_Gap_Decomposition_2026_2055.csv": {
+    "commit": "93b8393350eb73dd5ebd803b1ace429aaf4dfe1b",
+    "bytes": 13678,
+    "sha256": "66518274f1b74a39b796ac4023ea1cc62f71785fe531e64a849e53b058fec433"
+  },
+  "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F_OLD/F_Actual_Annual.json": {
+    "commit": "7dd893eeed781af2bb323c424b456fdd907a667f",
+    "bytes": 523036,
+    "sha256": "c8d67d94b60a0ce3021a11ddd67ea826136812f16d1e79d3a85ea898e2788066"
+  },
+  "handoff/f-common-endoflife-finalization-20261121/Annual.csv": {
+    "commit": "6a9ccc854f7088339d58c9490174cc1463d2a203",
+    "bytes": 6775129,
+    "sha256": "1754500818d58de9b075106cb1185322dc5c961a3438dbcfa0a2883917d8ba79"
+  },
+  "handoff/f-common-endoflife-finalization-20261121/Inputs.json": {
+    "commit": "6a9ccc854f7088339d58c9490174cc1463d2a203",
+    "bytes": 27093,
+    "sha256": "6da4648a8823c041197e9082d6814b6e19710afdf7bb7c7130dc58d4cabd6095"
+  },
+  "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/F/F_Medical_Reference_Inputs.json": {
+    "commit": "7dd893eeed781af2bb323c424b456fdd907a667f",
+    "bytes": 1791,
+    "sha256": "3afd44c02680757d419eea68d8cf52715ac092d030377675f3e369995c75ef76"
+  },
+  "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/Verification.json": {
+    "commit": "7dd893eeed781af2bb323c424b456fdd907a667f",
+    "bytes": 374,
+    "sha256": "80d3aca47006100270185873c3900e244426495dbe5eab95f94809184adcc95b"
+  },
+  "handoff/chatgpt-f-middle-class-integrated-20261123/stage4-integrated/Validation.json": {
+    "commit": "89e5ee2eead0f1b846d33ed0c315168fc461ceb9",
+    "bytes": 162,
+    "sha256": "acfab89a74db558e4c73a666fb4130e8f82e57b96b082c97deb46a6f7d80a10e"
+  },
+  "handoff/chatgpt-f-middle-class-integrated-20261123/stage4-integrated/Comparison.csv": {
+    "commit": "89e5ee2eead0f1b846d33ed0c315168fc461ceb9",
+    "bytes": 186546,
+    "sha256": "4e20bd905ee3dc620e63de6fbe26cf26b23d8c9552e291cadd6434d28a0a21da"
+  },
+  "handoff/chatgpt-common-macro-gdp-attribution-20261124/Event_Schedule.csv": {
+    "commit": "adb373d87c5beb68b35f84be9e504c84d67014e0",
+    "bytes": 1423,
+    "sha256": "332eec2e9e3a617786c9b38d137b03e79d207b74d49ce7a90bf683dd983df174"
+  },
+  "handoff/chatgpt-risk-specific-recovery-20261124/Annual.csv": {
+    "commit": "ff2e8c3d78d1c64c1d79f8d39dee3a9de786a6d8",
+    "bytes": 60092,
+    "sha256": "6341407039d59a0abefc068af2c88bf63901d92c12064e545dd973d14e5e7699"
+  },
+  "handoff/chatgpt-f-sq-n3-common-indicators-20261123/Annual_Comparison.csv": {
+    "commit": "8a8edb403b960cceb535f9b70461646e9374c229",
+    "bytes": 54714,
+    "sha256": "2b09d11f30488cc988561f2aeb6d9eb43ad97e486f92e3496237869f36563148"
+  },
+  "handoff/chatgpt-f-middle-class-integrated-20261123/stage3-purchasing-power/Groups.csv": {
+    "commit": "89e5ee2eead0f1b846d33ed0c315168fc461ceb9",
+    "bytes": 590975,
+    "sha256": "16c77e7385b2dc74aa7b238eba50dcb31822290a34d96b12fbd9eeb1f7f63270"
+  },
+  "handoff/chatgpt-f-middle-class-integrated-20261123/stage3-purchasing-power/Annual.csv": {
+    "commit": "89e5ee2eead0f1b846d33ed0c315168fc461ceb9",
+    "bytes": 46425,
+    "sha256": "9caacfb22560cae927087141aa5761c00ac9face5338f82a65dbff1de6c43c44"
+  },
+  "handoff/chatgpt-risk-specific-recovery-20261124/Run.py": {
+    "commit": "ff2e8c3d78d1c64c1d79f8d39dee3a9de786a6d8",
+    "bytes": 8743,
+    "sha256": "5e2a5870a0e40f7b0b7e2ec84ec3504d8d1bc75401fd92b9b143d5be453abd00"
+  },
+  "handoff/chatgpt-common-macro-gdp-attribution-20261124/Run.py": {
+    "commit": "adb373d87c5beb68b35f84be9e504c84d67014e0",
+    "bytes": 12159,
+    "sha256": "b1aed83dbc87f580547a56011da3d1d9c5f1e9f37189ce5b57fc923f8082ebba"
+  },
+  "handoff/chatgpt-f-middle-class-integrated-20261123/stage4-integrated/Run.py": {
+    "commit": "89e5ee2eead0f1b846d33ed0c315168fc461ceb9",
+    "bytes": 3157,
+    "sha256": "8cb63be24a7f3b6bc6548a40329d2c1255d89fe3fb029f20a81a23038cb99472"
+  },
+  "handoff/chatgpt-risk-specific-recovery-20261124/Report.md": {
+    "commit": "ff2e8c3d78d1c64c1d79f8d39dee3a9de786a6d8",
+    "bytes": 5199,
+    "sha256": "35b8aa20779eaf1aa4703779de79f17f4b6ae5fe69dbdd51b6d38b31d5b332e3"
+  },
+  "handoff/chatgpt-common-macro-gdp-attribution-20261124/Report.md": {
+    "commit": "adb373d87c5beb68b35f84be9e504c84d67014e0",
+    "bytes": 4640,
+    "sha256": "681bbc36a7ad0d416f5e7080f38553b3282235d454f983886590ab3920e369ed"
+  },
+  "handoff/chatgpt-f-middle-class-integrated-20261123/stage4-integrated/Report.md": {
+    "commit": "89e5ee2eead0f1b846d33ed0c315168fc461ceb9",
+    "bytes": 1969,
+    "sha256": "d1d5d61520d0ccad1a41e383d5e5a49f41f61304efabfe27458033a41a5d61be"
+  },
+  "handoff/chatgpt-f-sq-n3-common-indicators-20261123/Validation.json": {
+    "commit": "8a8edb403b960cceb535f9b70461646e9374c229",
+    "bytes": 1082,
+    "sha256": "091e33797f8f9dc818728632b0351f1b25635b0ef1daebf252054acdbbe83a34"
+  },
+  "handoff/chatgpt-f-sq-n3-common-indicators-20261123/Custody.json": {
+    "commit": "8a8edb403b960cceb535f9b70461646e9374c229",
+    "bytes": 2795,
+    "sha256": "ef7c43ed628e6a88aa01133d731326b56678fe0f0d27f08678650a6841d95ed9"
+  },
+  "handoff/chatgpt-common-macro-gdp-attribution-20261124/Validation.json": {
+    "commit": "adb373d87c5beb68b35f84be9e504c84d67014e0",
+    "bytes": 885,
+    "sha256": "039fa343a128131f9c8d76f76b166caf6bf01082dab71d26c2dea3106f967f23"
+  },
+  "handoff/chatgpt-common-macro-gdp-attribution-20261124/Custody.json": {
+    "commit": "adb373d87c5beb68b35f84be9e504c84d67014e0",
+    "bytes": 2682,
+    "sha256": "2b71501312d7f4e92acf360b3143ffd31d65a4368292d60d1f5ab3cd61eaf0a5"
+  },
+  "handoff/chatgpt-risk-specific-recovery-20261124/Validation.json": {
+    "commit": "ff2e8c3d78d1c64c1d79f8d39dee3a9de786a6d8",
+    "bytes": 514,
+    "sha256": "a89588e6c90d223d307cb9178bd4429f99e8c889b587668fd0a03df6096a8d13"
+  },
+  "handoff/chatgpt-risk-specific-recovery-20261124/Custody.json": {
+    "commit": "ff2e8c3d78d1c64c1d79f8d39dee3a9de786a6d8",
+    "bytes": 2368,
+    "sha256": "a277a8121dc3480466e285fe5608015e9c85defa4a307223baab063294e5bb38"
+  },
+  "handoff/chatgpt-f-middle-class-integrated-20261123/stage4-integrated/Custody.json": {
+    "commit": "89e5ee2eead0f1b846d33ed0c315168fc461ceb9",
+    "bytes": 10116,
+    "sha256": "988c846a9256f50e05bd45c4a3f965be61a2ac5c7c357af10f2a5ac4fe04a100"
+  },
+  "handoff/claude-f-sq-n3-common-indicators-verification-20261123/Validation.json": {
+    "commit": "da79ab621de27a1a2df8dd3edf050e4f02fac63a",
+    "bytes": 1119,
+    "sha256": "235e2bac9e8503e9574da7a942420cad92cae2164b2b1923b3f7b12e21bffa58"
+  },
+  "handoff/claude-f-sq-n3-common-indicators-verification-20261123/Custody_Verification.json": {
+    "commit": "da79ab621de27a1a2df8dd3edf050e4f02fac63a",
+    "bytes": 3365,
+    "sha256": "e6b3526b529eedd864548f5a881182cb7aa9a78485cdaf886d1f2c133ebd3715"
+  },
+  "policies/FreedomPolicies.md": {
+    "commit": "01fd26973ff41797d424b51ec9894e279316d1b5",
+    "bytes": 9241,
+    "sha256": "0dedd2c1126613c30a7d96732d226cc787f6597437137424845d64d041db0204"
+  },
+  "policies/FreedomPolicies_Annex.md": {
+    "commit": "01fd26973ff41797d424b51ec9894e279316d1b5",
+    "bytes": 12319,
+    "sha256": "ee62de32582a0f6d559029e7e9810b161c6a975ff22b498493d9ca960ca29e83"
+  },
+  "policies/StatusQuo.md": {
+    "commit": "01fd26973ff41797d424b51ec9894e279316d1b5",
+    "bytes": 8686,
+    "sha256": "eb5a95df122292465fc79c68a12b9e7c6f8c0e0f97f367eb28ed0b27f6264e30"
+  },
+  "policies/New3linesPolicies.md": {
+    "commit": "01fd26973ff41797d424b51ec9894e279316d1b5",
+    "bytes": 7039,
+    "sha256": "2f5806addb870863961d9b6a6722d9c1e38bc2b097e1a6cd0e07b39f56b77830"
+  },
+  "specifications/SimulationSpecification_v6.md": {
+    "commit": "01fd26973ff41797d424b51ec9894e279316d1b5",
+    "bytes": 8521,
+    "sha256": "a2b7a937445525262a2bea35239ba636bf05317324536067e981958b8c48ff34"
+  },
+  "specifications/SimulationSpecification_v6_Annex.md": {
+    "commit": "01fd26973ff41797d424b51ec9894e279316d1b5",
+    "bytes": 683,
+    "sha256": "4afa8b09224b95b51c7516b5d02f81e1ee4123eb6fdd2604f8fcbe1521c8274c"
+  },
+  "engine/prototype.py": {
+    "commit": "01fd26973ff41797d424b51ec9894e279316d1b5",
+    "bytes": 7826,
+    "sha256": "3c1f7485fa96e649f06a96f0f844a9b270ffe43b5e0b6f696b75bb904612cff6"
+  },
+  "engine/m8_scenario_runner.py": {
+    "commit": "01fd26973ff41797d424b51ec9894e279316d1b5",
+    "bytes": 4757,
+    "sha256": "9bdb3c7b5bdad516e9c19646eb191bb632766db359fa777a309db44dce246328"
+  },
+  "handoff/f-tx01-tx03-20261118/SPE_F_TX_Model_DRAFT_20261118.py": {
+    "commit": "01fd26973ff41797d424b51ec9894e279316d1b5",
+    "bytes": 64132,
+    "sha256": "c6dee8d7059f7b95726b9b35b105a936025baf7b02a9e50607d5d2cc48155a28"
+  },
+  "handoff/f-household-social-20261120/Model.py": {
+    "commit": "01fd26973ff41797d424b51ec9894e279316d1b5",
+    "bytes": 28365,
+    "sha256": "926f162b2f24abb8fe6d348bb96adfccb0a4b49bd9e7438ff9977aabbbc0d153"
+  },
+  "handoff/f-vat-core-20261120/Model.py": {
+    "commit": "01fd26973ff41797d424b51ec9894e279316d1b5",
+    "bytes": 27668,
+    "sha256": "8c55442439d20b750ba6576ce8efa8a98e3f37b92df070a6a99dc498cd173837"
+  },
+  "handoff/chatgpt-statusquo-common-macro-limited-diagnostic-20261123/SQ_Common_Runtime.py": {
+    "commit": "01fd26973ff41797d424b51ec9894e279316d1b5",
+    "bytes": 4582,
+    "sha256": "007b2147a6be4bee383711fc9943034f420429860c0f2d9272640a89ddc54605"
+  },
+  "handoff/chatgpt-f-middle-class-integrated-20261123/stage3-purchasing-power/Run.py": {
+    "commit": "01fd26973ff41797d424b51ec9894e279316d1b5",
+    "bytes": 3289,
+    "sha256": "8b45cfecdccba981b3a87b9abd593e56dfd22e1af5b1854d348ae16e964d8ed5"
+  },
+  "handoff/chatgpt-common-price-nominal-real-request-20261125/SPE_Work_Common_Price_Nominal_Real_Connection_Request_20261125.md": {
+    "commit": "01fd26973ff41797d424b51ec9894e279316d1b5",
+    "bytes": 4709,
+    "sha256": "2b06601beb8f549b018ff4897c937a5c98035cc56d0d001bf33308245b6038a5"
+  }
+}

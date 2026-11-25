@@ -1,0 +1,50 @@
+{
+  "status": "NON_ADOPTED_DIAGNOSTIC",
+  "files": [
+    {
+      "path": "handoff/chatgpt-common-price-nominal-real-20261125/Annual.csv",
+      "bytes": 102776,
+      "sha256": "9912f2ca2c062788b6259dbeda92e0c31fb0beabf8c9e29d8c05e24fc5ae7206"
+    },
+    {
+      "path": "handoff/chatgpt-common-price-nominal-real-20261125/Dependencies.json",
+      "bytes": 13179,
+      "sha256": "a9c86a39f2310afb998f1f6f88416a91140ad0be1bbcd45fd36eb0adef39dfe6"
+    },
+    {
+      "path": "handoff/chatgpt-common-price-nominal-real-20261125/F_Household_Price.csv",
+      "bytes": 26008,
+      "sha256": "e584b9734eec3a58e86a3965fe089cf4fc470fc766f07ca4d92e380c1921b4d8"
+    },
+    {
+      "path": "handoff/chatgpt-common-price-nominal-real-20261125/Key_Years.csv",
+      "bytes": 16463,
+      "sha256": "c88a0f7ba881ae7c6a7ba8ffa2cce69bfecae754167258db83846fa3b5e885cc"
+    },
+    {
+      "path": "handoff/chatgpt-common-price-nominal-real-20261125/Policy_Gaps.csv",
+      "bytes": 54580,
+      "sha256": "cda0f18cfb9a503da10ccb76d3f554973dfecbd117ad3db0a9d7de7163874452"
+    },
+    {
+      "path": "handoff/chatgpt-common-price-nominal-real-20261125/Price_Contribution.csv",
+      "bytes": 24575,
+      "sha256": "88ebfe974e0b7ab9153c0f77573095fc272723a73b1d6185ebb31325abd65a34"
+    },
+    {
+      "path": "handoff/chatgpt-common-price-nominal-real-20261125/Report.md",
+      "bytes": 6610,
+      "sha256": "1b3947587694afa8474217cb7b05b005e5cc7e96abf46afad45bf6380671cdeb"
+    },
+    {
+      "path": "handoff/chatgpt-common-price-nominal-real-20261125/Run.py",
+      "bytes": 16573,
+      "sha256": "259b8a96d90cf87c0715a28a24d7a13b17ff5b18016e18a40e4411b89a6b052f"
+    },
+    {
+      "path": "handoff/chatgpt-common-price-nominal-real-20261125/Validation.json",
+      "bytes": 1423,
+      "sha256": "e20228f010297cd7322b7dfffbf0c34309e09d792b6c0032e3b71f73536997ab"
+    }
+  ]
+}

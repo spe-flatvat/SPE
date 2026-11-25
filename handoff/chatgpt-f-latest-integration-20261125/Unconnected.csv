@@ -1,0 +1,10 @@
+item,status,boundary,annual_evidence
+全国家計指標,N/A,合成世帯は全国推計に外挿しない,Annual.csvのsynthetic列
+C配分とA/B/C境界,非採用感度,別系列から移すのは確定済み世帯セル配分と帰着の感度であり共通価格で境界を再判定していない,Contributions.csv
+家計価格からGDP価格,未接続,家計のVATバスケット相当額を生産価格やGDPデフレーターへ直接転嫁する根拠なし,Annual.csvのGDP_deflatorとVAT別列
+需要から一般均衡,限定接続,国内比率と需要平滑化・供給上限のみを増分適用し追加の賃金・投資・税弾性の反応は固定,Contributions.csv
+回復C・P2価格の下流再生成,未接続,F3の増分需要のみP2で実質化し医療・給付・税・合成家計の固定価格参照は継承,Annual.csvのF3系列
+教育・医療追加調達,別系列,固定部分債務と未割当額を保持し別途の全額発行等は適用しない,Funding_Residual.csv
+ABC公費・保険財源,部分接続,受取主体別の符号付き残余まで。実際の充当・調達・政府間移転はN/A,Funding_Residual.csv
+全国PB・債務,未接続,増分の部分勘定から全国閉合や国債発行を推計しない,Annual.csvのnational列
+免税点感度・施行順序,別系列／未決定,240万円課税対象ベースの母集団未較正感度や代替移行パッケージは今回の枝に追加しない,Inclusion.csv

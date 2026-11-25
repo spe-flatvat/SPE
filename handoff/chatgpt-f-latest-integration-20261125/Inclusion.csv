@@ -1,0 +1,16 @@
+policy,original_scope,current_common_F_status,evidence,yearly_connection,remaining_boundary
+外国人材,F本文4・7とAnnex5,部分接続,F_Actual_Annual foreign_jobs population とF_Runtime_Trace labor,固定の人口・就労・実効労働を継承,N4・審査や業種地域別効果の独立推計なし
+高齢者雇用,F本文4,部分接続,F_Actual_Annual elder_employed elder_hiring_subsidy とf-integrated Model.py,既存就労・費用を継承,遵守率・雇用代替の識別なし
+年金,F本文4,部分接続,F_Actual_Annual modeled_pension_payment_trn とprivate_income_tax_relief_trn,既存在職・私的年金を継承しF2本人年金増分を分離,全国年金総額と加入等級はN/A
+教育・奨学金・訓練,F本文4・7,部分接続,F_Actual_Annual education_effective_labor_added training_credit_trn bond_end_trn,既存教育・労働・教育債を継承,2035年拡大の別感度は今回の増分に含めない
+医療・終末期,F本文4・Annex4,部分接続,Three_Scenario_Worker.py とF_Actual_Annual common clinical and financing accounts,医療共通参照と部分債務を継承,実測QOL・全国一律3割効果はN/A
+A・社会保険料,F本文4・7,既接続＋別感度,f-household-social Model.py と固定 A_relief_trn government_backfill_trn,現行A維持・F2で逓減差と所得税等の控除戻し差のみ置換,適格性と課税単位は合成感度
+B現物給付,F本文4,既接続＋別感度,f-household-social Model.py と固定 B_used_trn B_service_cost_trn,利用額を現金と分離し境界差のみ需要・サービス・費用へ,新規利用増や全国利用率はN/A
+C給付・境界,F本文4・6・7,既接続＋別感度,固定C_cash_trn と中間層stage1 Annual/Cells,固定総額を上限としセル配分比率の変化のみを接続,同年再配分と所得判定単位は非採用
+VAT標準・食料段階・損税,F本文4・5とAnnex1A・2,部分接続,f-vat-core Model.py とF_Actual_Annual modeled_VAT_trn standard_rate food_rate,現行税率・産業転嫁・固定バスケットを保持,取引全額・全国CPI・GDPデフレーターへの直接VAT転嫁はN/A
+VAT免税点・事務処理,F Annex1B・1C・1D,別系列または部分接続,F政策接続Coverage.md,既存行政費代理を継承,240万円免税点の母集団未較正感度は別系列
+賃金帰着・手取り,F本文4とAnnex2,部分接続＋別感度,現行VAT賃金プールと中間層stage1/4,既存賃金総額は固定し需要への汎用MPC項をセル別の手取り反応へ差分置換,実測賃金帰着や全国所得分布はN/A
+購買力・家計消費,F本文2・4・9,部分接続＋別感度,中間層stage3/4 とF_Runtime_Trace C desired capacity,F1の参照指標を年次連結しF2/F3で国内需要・供給制約への増分を計算,一般均衡・実測消費と全国MPCはN/A
+法人・投資・ガバナンス,F本文4とAnnex3,部分接続,旧固定フローとF_Runtime_Trace I K,既存フローを固定継承,企業別の新台帳感度や原文とAnnexの配当条件差は未決定
+財源・税収・債務,F本文6・7・9とAnnex6,部分接続,固定部分財政・教育医療の年次債務・Funding_Residual,F1で会計参照を接続しF2/F3で所得税住民税本人年金とABC支出差を対応,全国PB・起債・未割当資金の調達規則はN/A
+停止・再分配・基金,F本文6・7とAnnex6,未決定または別系列,固定gini_triggered fund_income_trn C_earmarked_funding_trn,現行条件を維持,合成ジニによる発動・追加借入・施行順序変更は未適用

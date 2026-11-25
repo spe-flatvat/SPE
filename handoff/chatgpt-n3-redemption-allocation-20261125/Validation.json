@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "new_checks": 27758,
+  "groups": {
+    "GDP_cap": 690,
+    "authority_fiscal_matches_fixed": 240,
+    "authority_matches_fixed": 180,
+    "carry_assets": 667,
+    "carry_debt": 667,
+    "cash_allocation_closure": 690,
+    "checkout_pin": 1,
+    "complete_grid_years": 1,
+    "debt_stock": 690,
+    "dynamic_source_bytes": 15,
+    "fixed_common_price": 60,
+    "frozen_factor": 60,
+    "inherited_dynamic_run_checks": 20300,
+    "initial_GDP": 23,
+    "initial_nominal": 23,
+    "live_cut_cap": 690,
+    "matched_rollover_both_sides": 690,
+    "no_rollover_policy_change": 690,
+    "nominal_identity": 690,
+    "tax_not_counted_twice": 690,
+    "tracked_input_unchanged": 1
+  },
+  "new_rows": 630,
+  "reproduced_evidence_control_rows": 60,
+  "extra_boundary_branches": 6,
+  "fixed_F_SQ_N3_source_rows_reused": 180,
+  "rerun_byte_identical": [
+    "Allocation_Bridge.csv",
+    "Annual.csv",
+    "Dependencies.json",
+    "Fiscal_Residual.csv",
+    "Key_Years.csv",
+    "Scenario_Comparison.csv",
+    "Validation.json"
+  ]
+}

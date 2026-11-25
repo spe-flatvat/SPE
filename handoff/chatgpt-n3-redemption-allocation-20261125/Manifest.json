@@ -1,0 +1,60 @@
+{
+  "status": "LIMITED_EXECUTION_NON_CANONICAL",
+  "files": [
+    {
+      "path": "handoff/chatgpt-n3-redemption-allocation-20261125/Allocation.py",
+      "bytes": 6810,
+      "sha256": "5c5e8847a0fb53bda5777fd2f80cb7365b77eff946bc88d48f2d5ad28bd0f13f"
+    },
+    {
+      "path": "handoff/chatgpt-n3-redemption-allocation-20261125/Allocation_Bridge.csv",
+      "bytes": 212965,
+      "sha256": "0b01dce00f76036d08aee604d37d431f28e1304139169b810f2e3a20b017c3ec"
+    },
+    {
+      "path": "handoff/chatgpt-n3-redemption-allocation-20261125/Annual.csv",
+      "bytes": 334604,
+      "sha256": "8ccd9e72c886efa97b6e31c0f7351390a934603e7504ad94989f308efe8f98c6"
+    },
+    {
+      "path": "handoff/chatgpt-n3-redemption-allocation-20261125/Authority_Status.csv",
+      "bytes": 2139,
+      "sha256": "87ee85ad5f2bd9cfa2f8d1fb31a9c8bad8b3fef8d6a90e65d417d94acc99dd81"
+    },
+    {
+      "path": "handoff/chatgpt-n3-redemption-allocation-20261125/Dependencies.json",
+      "bytes": 8478,
+      "sha256": "04cf5b6a9f16308fbcf1b1c412092aa6968e8b99cd2e2d69d65095ee24d6e7f2"
+    },
+    {
+      "path": "handoff/chatgpt-n3-redemption-allocation-20261125/Fiscal_Residual.csv",
+      "bytes": 164631,
+      "sha256": "7691fdc3171bc14f9bec0fc8a31158da05ea8bb4e572a68f191522e62bf653a0"
+    },
+    {
+      "path": "handoff/chatgpt-n3-redemption-allocation-20261125/Key_Years.csv",
+      "bytes": 52713,
+      "sha256": "4f98d6d3e9a558bd994471d837fc957bc412253fe47f36b61f1e2fdb2ffe7752"
+    },
+    {
+      "path": "handoff/chatgpt-n3-redemption-allocation-20261125/Report.md",
+      "bytes": 5572,
+      "sha256": "a4e5359ec326123ba85580d3d7030735d64f74225d8849ba6d537939f8ee32ec"
+    },
+    {
+      "path": "handoff/chatgpt-n3-redemption-allocation-20261125/Run.py",
+      "bytes": 16763,
+      "sha256": "80447f9f37e25e4d4f57770adb295c0f3b6ddd6798e99f0ca726c64343285533"
+    },
+    {
+      "path": "handoff/chatgpt-n3-redemption-allocation-20261125/Scenario_Comparison.csv",
+      "bytes": 7219,
+      "sha256": "c557959ac6b64167fd5f0a852a42ade25477c6e080f53c55ba9bb9bb88a91a58"
+    },
+    {
+      "path": "handoff/chatgpt-n3-redemption-allocation-20261125/Validation.json",
+      "bytes": 1045,
+      "sha256": "5032912bf09a187def8b1ba687f426171726ec6d1556e85990ef584bce7132ae"
+    }
+  ]
+}

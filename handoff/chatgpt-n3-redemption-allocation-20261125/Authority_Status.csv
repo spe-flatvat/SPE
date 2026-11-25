@@ -1,0 +1,11 @@
+resource_or_activity,confirmed_spendable_for_N3_GI_trn,scope,reason,fixed_evidence
+N3本文上の裁量純償還,0,確認できた下限,財政自律の目標はあるが対象債務・償還分母・開始年・最低額・余剰用途の数値規則は未特定,policies/New3linesPolicies.md
+N3専用Annex,N/A,未特定,既存原文監査を継承。共通AnnexはN3の支出権限を設定しない,GI Executor Mapping Public_Source_References.md と SimulationSpecification_v6_Annex.md
+モデルの正味現金償還,0,仮想枠,連結候補の当年現金余剰と債務の範囲内。実際の満期・最低償還・法定繰入・資金所在未特定,固定動学 Fiscal_Residual.csv と National_Fiscal.py
+借換・グロス償還,0,別勘定,ロールオーバー0.1は既存の対称計上規則。借換元本・調達をG/Iへ転用しない,National_Fiscal.py と Financing Authority Legal Authority Map
+中央政府の予算・G/I,0,具体額未確認,国の最終執行者・年度支出権限・資金所在と目的の対応は未確認,Financing Authority Legal Authority Map と GI Executor Financing Eligibility Map
+地方自治体の予算・G/I,0,具体額未確認,予算・最終負担者・事業と資産帰属・起債等の個別要件が未確定,Financing Authority Legal Authority Map と GI Executor Financing Eligibility Map
+PB・保険者・公私基金・SFA,0,別勘定,包括PBや自由現金として足さない。SFAはストック調整とし資金源へ算入しない,Central Local Official Account Map と Cash Asset Inventory
+既存給与・現物給付・政府間移転,0,追加Gから除外,政府間移転によるGDP加算はゼロ。既存給与・サービスを追加Gに重ねない,GI Executor Financing Eligibility Map
+追加G,N/A,仮想執行,政府最終消費に分類される適格支出とした感度。国・地方の実予算は未特定,GI Executor Financing Eligibility Map
+追加I,N/A,仮想執行,公共資本形成として分類した感度。土地取得・単なる移転・維持費との区分及び資産帰属を要確認,GI Executor Financing Eligibility Map

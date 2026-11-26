@@ -1,0 +1,230 @@
+{
+  "inputs": [
+    {
+      "commit": "25af48f0c697d06bf5243e497b3a44d2b69d6a08",
+      "path": "policies/StatusQuo.md",
+      "bytes": 8686,
+      "sha256": "eb5a95df122292465fc79c68a12b9e7c6f8c0e0f97f367eb28ed0b27f6264e30"
+    },
+    {
+      "commit": "25af48f0c697d06bf5243e497b3a44d2b69d6a08",
+      "path": "specifications/SimulationSpecification_v6.md",
+      "bytes": 8521,
+      "sha256": "a2b7a937445525262a2bea35239ba636bf05317324536067e981958b8c48ff34"
+    },
+    {
+      "commit": "25af48f0c697d06bf5243e497b3a44d2b69d6a08",
+      "path": "specifications/SimulationSpecification_v6_Annex.md",
+      "bytes": 683,
+      "sha256": "4afa8b09224b95b51c7516b5d02f81e1ee4123eb6fdd2604f8fcbe1521c8274c"
+    },
+    {
+      "commit": "586cceb2a86c66265237a3616b92dc78f506c786",
+      "path": "handoff/chatgpt-common-risk-dynamic-20261125/Runtime.py",
+      "bytes": 14951,
+      "sha256": "95eb5e5b5f6cba9049b0e582ea04ac9f43f8cf2b530a1c17bbbb2ab2a71f8dcf"
+    },
+    {
+      "commit": "586cceb2a86c66265237a3616b92dc78f506c786",
+      "path": "handoff/chatgpt-common-risk-dynamic-20261125/Run.py",
+      "bytes": 24765,
+      "sha256": "a14702e83576f0e001a9adad85f2dfb545c9b73fbae3d1a9f624b1af17829631"
+    },
+    {
+      "commit": "586cceb2a86c66265237a3616b92dc78f506c786",
+      "path": "handoff/chatgpt-common-risk-dynamic-20261125/Report.md",
+      "bytes": 5921,
+      "sha256": "ff9d7d8c9f2f1b3f84584ec3434bd103cf84d1b4005c941943e5f90cca76e3ec"
+    },
+    {
+      "commit": "586cceb2a86c66265237a3616b92dc78f506c786",
+      "path": "handoff/chatgpt-common-risk-dynamic-20261125/Dependencies.json",
+      "bytes": 13117,
+      "sha256": "17ae2b9681a4eb095e1822d3228aa8e5afefae80df9c61c9cfb5a2cf90a958b5"
+    },
+    {
+      "commit": "586cceb2a86c66265237a3616b92dc78f506c786",
+      "path": "handoff/chatgpt-common-risk-dynamic-20261125/Fiscal_Residual.csv",
+      "bytes": 48315,
+      "sha256": "8c8218df31fc273788b628bc8776ea2f9116dbe60eb5491448f6d044850ead80"
+    },
+    {
+      "commit": "586cceb2a86c66265237a3616b92dc78f506c786",
+      "path": "handoff/chatgpt-common-risk-dynamic-20261125/Connection_Status.csv",
+      "bytes": 2280,
+      "sha256": "f7746ffadf06bca259fa4b0fc625e43f323e876a60896d96e01b89cc23e4d1b3"
+    },
+    {
+      "commit": "586cceb2a86c66265237a3616b92dc78f506c786",
+      "path": "handoff/chatgpt-common-risk-dynamic-20261125/Recovery_Events.csv",
+      "bytes": 29351,
+      "sha256": "22cde8e5c19f8fa529d974bd26a982a55972028217aa82ba00342dc6b599d2d7"
+    },
+    {
+      "commit": "586cceb2a86c66265237a3616b92dc78f506c786",
+      "path": "handoff/chatgpt-common-risk-dynamic-20261125/Validation.json",
+      "bytes": 1430,
+      "sha256": "428a01492db3df26c948498fa18e842173222ff3620191811454dfa0765dddb9"
+    },
+    {
+      "commit": "586cceb2a86c66265237a3616b92dc78f506c786",
+      "path": "handoff/chatgpt-common-risk-dynamic-20261125/Annual.csv",
+      "bytes": 140977,
+      "sha256": "4f172ea586b6c1d166577f4bfe7ba635aad06366821d789c7a9469272f29f335"
+    },
+    {
+      "commit": "586cceb2a86c66265237a3616b92dc78f506c786",
+      "path": "handoff/chatgpt-common-risk-dynamic-20261125/Custody.json",
+      "bytes": 3176,
+      "sha256": "5e7ae580fb6f2c0d193427989f5f1e047ade7060e4ad1a87262f804d9f0a614e"
+    },
+    {
+      "commit": "7dd893eeed781af2bb323c424b456fdd907a667f",
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/BASE_REPLAY/Common_Trace_BASE_REPLAY.json",
+      "bytes": 60423,
+      "sha256": "f571c808cdecb1e6c3ab9ae38e7fbab5fc5e564b1399ce4ca00d46c21b7e5d75"
+    },
+    {
+      "commit": "7dd893eeed781af2bb323c424b456fdd907a667f",
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/SQ_Baseline_2026_2055.csv",
+      "bytes": 14839,
+      "sha256": "be60cb1984779249e6103a21c0b0345d36574b0ffc02c0090c669e77c1da6bed"
+    },
+    {
+      "commit": "747273674daed0d648c58aa8fdc07ebe203e6046",
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/Official_Fiscal_Baseline_2025_2040.csv",
+      "bytes": 6181,
+      "sha256": "14a0fb9de6f47e92f36d549a7ded572928fc91f8a43702fc5fe42a5d8c4286f6"
+    },
+    {
+      "commit": "747273674daed0d648c58aa8fdc07ebe203e6046",
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/SNA2024_Sector_Snapshot.csv",
+      "bytes": 1487,
+      "sha256": "a2ad71f585e41001cc1ecf64b9f5b3cff7b5f1ccc7ca37ab4512ad490040a711"
+    },
+    {
+      "commit": "747273674daed0d648c58aa8fdc07ebe203e6046",
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/SNA2024_Sector_Stocks.xlsx",
+      "bytes": 39897,
+      "sha256": "5a5eb8d7ff206dfa9dddd5d776fb47d74a0b30522bcd725c1978b7a44834a8dc"
+    },
+    {
+      "commit": "747273674daed0d648c58aa8fdc07ebe203e6046",
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/Statistical_Source_Receipts.json",
+      "bytes": 1681,
+      "sha256": "2de0b66b345a3461abb1f91ce612349504736ee8a674fd32d1be4434699fa6f2"
+    },
+    {
+      "commit": "747273674daed0d648c58aa8fdc07ebe203e6046",
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/Statistical_Cell_Map.csv",
+      "bytes": 51386,
+      "sha256": "34451637af86fd6f2a9fd82a90652bfeea3011b34d4bbd2f9d563256ae9aea31"
+    },
+    {
+      "commit": "747273674daed0d648c58aa8fdc07ebe203e6046",
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/Checks.json",
+      "bytes": 607,
+      "sha256": "c4e70c07b1cc09f9eae9ecb5611cbd60c216acff32e8dcb7a98a6328fc040190"
+    },
+    {
+      "commit": "747273674daed0d648c58aa8fdc07ebe203e6046",
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/CAO_202607_Projections.xlsx",
+      "bytes": 84842,
+      "sha256": "eb45004885411574edc94b5ac5b7dabe127a63b73bbb63a4a130e64b7e01e4c5"
+    },
+    {
+      "commit": "747273674daed0d648c58aa8fdc07ebe203e6046",
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/SNA2024_GFS.xlsx",
+      "bytes": 238733,
+      "sha256": "362f28742ebef20bb4e97036bb080f246e69c42d7856012b1a2d84356bcb6aad"
+    },
+    {
+      "commit": "747273674daed0d648c58aa8fdc07ebe203e6046",
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/SNA2024_Sector_Accounts.xlsx",
+      "bytes": 95572,
+      "sha256": "124032a480312e5645c355e4534898a4a316f5c8257c426443fddd69501b1871"
+    },
+    {
+      "commit": "8a8edb403b960cceb535f9b70461646e9374c229",
+      "path": "handoff/chatgpt-f-sq-n3-common-indicators-20261123/Annual_Comparison.csv",
+      "bytes": 54714,
+      "sha256": "2b09d11f30488cc988561f2aeb6d9eb43ad97e486f92e3496237869f36563148"
+    },
+    {
+      "commit": "2d8cb85878c931d9d127755af6d2eb336c04c04d",
+      "path": "handoff/chatgpt-common-price-nominal-real-20261125/Dependencies.json",
+      "bytes": 13179,
+      "sha256": "a9c86a39f2310afb998f1f6f88416a91140ad0be1bbcd45fd36eb0adef39dfe6"
+    },
+    {
+      "commit": "3d3507e2df9218a6bbda587e9b8b0c0d423ae2ac",
+      "path": "handoff/chatgpt-f-latest-integration-20261125/Report.md",
+      "bytes": 5432,
+      "sha256": "05e6d6a37da1431336a03742128b0c54671768482c0ecc16ef789a8d67f9eec8"
+    },
+    {
+      "commit": "08d9bddce5bf310e7caf107f70ddf363c341dfa7",
+      "path": "handoff/chatgpt-n3-redemption-allocation-20261125/Report.md",
+      "bytes": 5572,
+      "sha256": "a4e5359ec326123ba85580d3d7030735d64f74225d8849ba6d537939f8ee32ec"
+    },
+    {
+      "commit": "f3fc96fce3195a02f4e1f96d94e4574963f6ea57",
+      "path": "handoff/chatgpt-n3-central-local-funding-accounts-20261122/Transfer_Consolidation_Algebra.csv",
+      "bytes": 230,
+      "sha256": "1a16751792aa99a8d8621823199acd8ea6c1af309b573f0dfcb7daf3a0050952"
+    },
+    {
+      "commit": "c087a1a5af12b86cdb140d934754d75e5ee9c4ef",
+      "path": "handoff/chatgpt-n3-financing-authority-feasibility-20261123/N3_Central_Local_Financing_Legal_Authority_Map.csv",
+      "bytes": 13804,
+      "sha256": "f5e3927c7989d8cf9563cf35add5172367741c4de20c616768948c96da6c3120"
+    },
+    {
+      "commit": "3c77eafc2073fdaba4c129164817d2f57c9421b9",
+      "path": "handoff/claude-n3-model-draft-20261121/SPE_N3_Medical_On_CommonSQ_Draft_DRAFT_20261121.py",
+      "bytes": 12405,
+      "sha256": "b6cd8413c68967ac413e43342e44804b0e416137c2a80e579772a54bb41b7387"
+    }
+  ],
+  "official_receipts": [
+    {
+      "file": "CAO_202607_Projections.xlsx",
+      "url": "https://www5.cao.go.jp/keizai2/keizai-syakai/shisan/keisuuhyo.xlsx",
+      "size": 84842,
+      "sha256": "eb45004885411574edc94b5ac5b7dabe127a63b73bbb63a4a130e64b7e01e4c5",
+      "retrieved_date_JST": "2026-11-21",
+      "retrieval": "PYTHON_URLLIB_PUBLIC_HTTPS",
+      "data_status": "OFFICIAL_PUBLISHED_ESTIMATES_OR_PROJECTION_NOT_SPE_ASSUMPTION"
+    },
+    {
+      "file": "SNA2024_GFS.xlsx",
+      "url": "https://www.esri.cao.go.jp/jp/sna/data/data_list/kakuhou/files/2024/tables/2024s6_2_jp.xlsx",
+      "size": 238733,
+      "sha256": "362f28742ebef20bb4e97036bb080f246e69c42d7856012b1a2d84356bcb6aad",
+      "retrieved_date_JST": "2026-11-21",
+      "retrieval": "PYTHON_URLLIB_PUBLIC_HTTPS",
+      "data_status": "OFFICIAL_PUBLISHED_ESTIMATES_OR_PROJECTION_NOT_SPE_ASSUMPTION"
+    },
+    {
+      "file": "SNA2024_Sector_Accounts.xlsx",
+      "url": "https://www.esri.cao.go.jp/jp/sna/data/data_list/kakuhou/files/2024/tables/2024s6_jp.xlsx",
+      "size": 95572,
+      "sha256": "124032a480312e5645c355e4534898a4a316f5c8257c426443fddd69501b1871",
+      "retrieved_date_JST": "2026-11-21",
+      "retrieval": "PYTHON_URLLIB_PUBLIC_HTTPS",
+      "data_status": "OFFICIAL_PUBLISHED_ESTIMATES_OR_PROJECTION_NOT_SPE_ASSUMPTION"
+    },
+    {
+      "file": "SNA2024_Sector_Stocks.xlsx",
+      "url": "https://www.esri.cao.go.jp/jp/sna/data/data_list/kakuhou/files/2024/tables/2024ss3_jp.xlsx",
+      "size": 39897,
+      "sha256": "5a5eb8d7ff206dfa9dddd5d776fb47d74a0b30522bcd725c1978b7a44834a8dc",
+      "retrieved_date_JST": "2026-11-21",
+      "retrieval": "PYTHON_URLLIB_PUBLIC_HTTPS",
+      "data_status": "OFFICIAL_PUBLISHED_ESTIMATES_OR_PROJECTION_NOT_SPE_ASSUMPTION"
+    }
+  ],
+  "prior_checks_referenced": "PASS_IMPLEMENTER_TESTS_NOT_NEW_CLAUDE_REVIEW",
+  "runtime_checkout_boundary": "25af48f0c697d06bf5243e497b3a44d2b69d6a08"
+}

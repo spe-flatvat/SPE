@@ -1,0 +1,12 @@
+channel,boundary,period,status,comparison
+Fixed macro,StatusQuo current A and C/P2 and D/P2,2026–2055,90 fixed rows reused,A/C/D comparable
+Tax recurrence,SQ proxy outside general government,2026–2055,90 proxy rows independently calculated,A/C/D comparable
+Common medical,Government and insurance payer model with unspecified SNA sectors,2026–2055,90 fixed model replays and fiscal bridges,A/C/D diagnostic only
+Official net interest and PB,Published central/local/central plus local excluding social security,2026–2040,Official projection labels carried separately,Same fiscal anchor in all three SQ cases
+Debt opening/closing,Published central/local/central plus local bonds etc,2026–2040,Reference stocks and residual only,Same fiscal anchor in all three SQ cases
+Tax sensitivity,Conditional central plus local bridge,2026–2040,50% and 100% proxy delta to PB with fixed reference net interest,A/C/D scenario comparison
+Historical public accounts,Central/local/social security/general government,2024,GFS and pre-FISIM SNA flows and separately calendar-end stocks,Historical boundary evidence
+Social security and consolidated general government forward,General government,2026–2055,Missing comprehensive forward coverage; complete values N/A,N/A
+Cash financial transactions,All forward sectors,2026–2055,No validated matching funding and counterpart schedule,N/A
+Internal transfers/interest/financing positions,General government and central-local,2026–2055,Runtime matches pairs; forward bilateral matrix unavailable,N/A
+F and N3 inputs,Synthetic runtime coverage delta/replacement,2026,Synthetic regression only,F/N3 policies outside current scope

@@ -1,0 +1,23 @@
+category,normal_side,boundary,counterparty_rule,overlap_rule,SQ_forward_status,source
+income_tax,in,sector,external_payer,tax proxy kept outside actual tax,N/A,StatusQuo and fixed macro trace
+corporate_tax,in,sector,external_payer,tax proxy kept outside actual tax,N/A,StatusQuo and fixed macro trace
+consumption_tax,in,sector,external_payer,VAT and direct tax proxy components must not be counted separately after proxy aggregation,N/A,StatusQuo and fixed macro trace
+other_tax,in,sector,external_payer,tax proxy kept outside actual tax,N/A,StatusQuo and fixed macro trace
+social_contributions,in,sector,external_payer,insurer receipts require institutional classification and exclusion of government transfers,N/A,SNA 2024 GFS
+other_revenue,in,sector,external_payer,interest receipts and internal transfers separate,N/A,SNA 2024 GFS
+cash_benefits,out,sector,external_recipient,exclude medical and education in kind,N/A,SNA 2024 GFS
+medical,out,sector,external_provider,exclusive breakout from total benefits or government consumption; aggregate medical bill includes households,N/A,common medical model
+education,out,sector,external_provider,exclusive breakout from government consumption; no GDP G/I addition,N/A,SNA 2024 GFS
+other_consumption,out,sector,external_supplier,exclude already classified medical and education,N/A,SNA 2024 GFS
+capital_formation,out,sector,external_supplier,requires gross/net bridge and exclusive booking; no GDP G/I addition,N/A,SNA 2024 GFS
+other_primary_expense,out,sector,external_recipient,exclude all separately mapped classes,N/A,SNA 2024 GFS
+transfer,both,sector,match payer and receiver,eliminate matched pairs only,N/A,CAO and SNA
+interest,both,sector,match payer and receiver,actual interest paid and received distinct; CAO reference is net,N/A,CAO and SNA
+issuance,in,sector,creditor,principal financial transaction,N/A,SQ original 28 scope unspecified
+redemption,out,sector,creditor,principal financial transaction excluded from PB,N/A,SQ original
+rollover,both,sector,creditor,paired issuance and redemption both required,N/A,existing N3 reference only
+acquisition,out,sector,issuer,financial asset flow separate from PB,N/A,SNA stock reference only
+disposal,in,sector,issuer,financial asset flow separate from PB,N/A,SNA stock reference only
+internal_stock,both,sector,match creditor and debtor,match instrument and period before elimination,N/A,SNA stock reference only
+debt_sfa,both,sector,N/A,unexplained change minus inferred flow is reported separately,N/A,CAO FY reference
+asset_sfa,both,sector,N/A,independent valuation/reclassification channel,N/A,SNA stock reference only

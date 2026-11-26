@@ -1,0 +1,101 @@
+{
+  "status": "PARTIAL_EXECUTION_NON_CANONICAL",
+  "files": [
+    {
+      "file": "Account_Mapping.csv",
+      "bytes": 2628,
+      "sha256": "d9fd91dec428ba7e220c0566b2de886da235e9062ef844fea8217cd5798895ec",
+      "git_blob_sha": "098f5bc1b3f8077ef98ffea0a3dae4c8175dcd53"
+    },
+    {
+      "file": "Annual.csv",
+      "bytes": 222189,
+      "sha256": "6356265f184fc9239e4eaa10ddeb365e16667f3e665be946c1cdc802dce7ff82",
+      "git_blob_sha": "2083bb2f9cfab4ded6d9c27a0dceedadd254af32"
+    },
+    {
+      "file": "Connection_Status.csv",
+      "bytes": 1670,
+      "sha256": "14aa319825eeff6d965bb806515d72f58fbcaaf98d5d71b1c62f00e03da044c8",
+      "git_blob_sha": "425b0aa95b022446d438f238d80c29afe692dee1"
+    },
+    {
+      "file": "Consolidation.csv",
+      "bytes": 41384,
+      "sha256": "80f0304b177a63729ef794990231e32b2c453d16df49dea36023fb0e5ddbcc8b",
+      "git_blob_sha": "1ca7a0321d5cfc633355420318ae1de64fc76528"
+    },
+    {
+      "file": "Dependencies.json",
+      "bytes": 10148,
+      "sha256": "9753c22088a4062f730d802012bac5abc4e45d29112b6feb3fa4e67b7afcee45",
+      "git_blob_sha": "894e617d08dd2677b388f59fe9c2fee71b7cb6b2"
+    },
+    {
+      "file": "Diagnostics.csv",
+      "bytes": 34527,
+      "sha256": "391ccf7dc814df9a5381108ee63d1a393a19d1c299faef6b5a9806fd62187802",
+      "git_blob_sha": "1241ec63c8654e39973e3bab05c2b8696c805cd6"
+    },
+    {
+      "file": "Fiscal_Residual.csv",
+      "bytes": 41238,
+      "sha256": "e29ce59ac5ab6389e747dfd588a7440216eadc2d47d6ed037375640a6835f14e",
+      "git_blob_sha": "3ef76a3e2e1cbe3deea0356438c8743de01b8b76"
+    },
+    {
+      "file": "Historical_SNA_FY2024.csv",
+      "bytes": 1487,
+      "sha256": "a2ad71f585e41001cc1ecf64b9f5b3cff7b5f1ccc7ca37ab4512ad490040a711",
+      "git_blob_sha": "f4f8e01933637d57220881fac8552c334d79ea4d"
+    },
+    {
+      "file": "Historical_SNA_Stocks_2024.csv",
+      "bytes": 1873,
+      "sha256": "b55f03a4e3ca1c6fecabb36944197edda450e9f286bb373598357720a9220278",
+      "git_blob_sha": "25bb6babb85c53d470617201b1e29eb1853a8f40"
+    },
+    {
+      "file": "Initial_Conditions.csv",
+      "bytes": 4872,
+      "sha256": "e068c5f88d2160f2a1fc8276cd7cc8dab11dda1cbd14067b8b644e7f04641d3d",
+      "git_blob_sha": "7518ca050f6b580bd0f064ce951c0b1d03539a43"
+    },
+    {
+      "file": "Key_Years.csv",
+      "bytes": 45444,
+      "sha256": "8fd086896f5336d2bd3c51e61c82389a558ec89d6ecab92ed6acf1abf0b821f7",
+      "git_blob_sha": "0e3d9fc1236b1bf136530edb6076ce5da2c6fe8f"
+    },
+    {
+      "file": "Report.md",
+      "bytes": 6454,
+      "sha256": "3daf63b27c101dd0e38940f28fd055710398d641eeb6dd42fa266df340be3a3b",
+      "git_blob_sha": "d7f43e54f2dec81268525a4fa9a28c43abddad8d"
+    },
+    {
+      "file": "Run.py",
+      "bytes": 29077,
+      "sha256": "3808c517880a936fbaae46cd9fb5c7b8b21d66a57abaa02dee0b4d7d4f5677c3",
+      "git_blob_sha": "94342259866f9fc79beb193bf0d3235f32539022"
+    },
+    {
+      "file": "Runtime.py",
+      "bytes": 7640,
+      "sha256": "b39252ba0eb4e51faccf1496eaec77953053629abfa8b2101a4eba71e6345472",
+      "git_blob_sha": "6ab10af620c6691f931c16191823baeca71a24f2"
+    },
+    {
+      "file": "Source_Bridge.csv",
+      "bytes": 143570,
+      "sha256": "48f83c2baa2fecbcc8d11f0a58484de41f047eb7db8b3dc8fead531f655e118d",
+      "git_blob_sha": "0d4a30123e0607fe4a51bdf16fee24c1f410a4de"
+    },
+    {
+      "file": "Validation.json",
+      "bytes": 1389,
+      "sha256": "72d7044cbefe0e3918acb5c23b59f5f15da0636e1b3c28d9f88b08b633c9a13c",
+      "git_blob_sha": "7ea89fb92caae0fb84d1e720407afda58f96072f"
+    }
+  ]
+}

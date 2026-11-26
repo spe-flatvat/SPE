@@ -1,0 +1,54 @@
+year,scope,metric,amount,source,state
+2026,SPE,real_GDP_trn,580,fixed dynamic Annual.csv,FIXED_MODEL
+2026,SPE,nominal_GDP_trn,600,fixed dynamic Annual.csv,FIXED_MODEL
+2026,SPE,population,122618024,fixed dynamic Annual.csv,FIXED_MODEL
+2026,SPE,tax_proxy_trn,80,fixed dynamic Annual.csv,FIXED_MODEL
+2026,SPE,deflator_index,100,fixed dynamic Annual.csv,FIXED_MODEL
+2026,SPE,effective_labor,67965670.59606901,fixed dynamic Annual.csv,FIXED_MODEL
+2026,CENTRAL,reference_pb,-15.6,CAO July 2026 current projection,EXTERNAL_REFERENCE_JAPAN_FY
+2026,CENTRAL,reference_balance,-23.7,CAO July 2026 current projection,EXTERNAL_REFERENCE_JAPAN_FY
+2026,CENTRAL,reference_net_interest,8.1,CAO July 2026 current projection,EXTERNAL_REFERENCE_JAPAN_FY
+2026,CENTRAL,reference_debt_begin,1109.5,CAO July 2026 current projection,EXTERNAL_REFERENCE_JAPAN_FY
+2026,CENTRAL,reference_debt_end,1150.1,CAO July 2026 current projection,EXTERNAL_REFERENCE_JAPAN_FY
+2026,CENTRAL,reference_implied_stock_balance_residual,16.89999999999991,CAO July 2026 current projection,EXTERNAL_REFERENCE_JAPAN_FY
+2026,CENTRAL,reference_deficit,23.7,CAO July 2026 current projection,EXTERNAL_REFERENCE_JAPAN_FY
+2026,CENTRAL,source_nominal_gdp,689.3,CAO July 2026 current projection,EXTERNAL_REFERENCE_JAPAN_FY
+2026,LOCAL,reference_pb,11.3,CAO July 2026 current projection,EXTERNAL_REFERENCE_JAPAN_FY
+2026,LOCAL,reference_balance,10.3,CAO July 2026 current projection,EXTERNAL_REFERENCE_JAPAN_FY
+2026,LOCAL,reference_net_interest,1.0,CAO July 2026 current projection,EXTERNAL_REFERENCE_JAPAN_FY
+2026,LOCAL,reference_debt_begin,160.8,CAO July 2026 current projection,EXTERNAL_REFERENCE_JAPAN_FY
+2026,LOCAL,reference_debt_end,154.3,CAO July 2026 current projection,EXTERNAL_REFERENCE_JAPAN_FY
+2026,LOCAL,reference_implied_stock_balance_residual,3.8000000000000007,CAO July 2026 current projection,EXTERNAL_REFERENCE_JAPAN_FY
+2026,LOCAL,reference_deficit,0,CAO July 2026 current projection,EXTERNAL_REFERENCE_JAPAN_FY
+2026,LOCAL,source_nominal_gdp,689.3,CAO July 2026 current projection,EXTERNAL_REFERENCE_JAPAN_FY
+2026,CENTRAL_LOCAL,reference_pb,-4.4,CAO July 2026 current projection,EXTERNAL_REFERENCE_JAPAN_FY
+2026,CENTRAL_LOCAL,reference_balance,-13.4,CAO July 2026 current projection,EXTERNAL_REFERENCE_JAPAN_FY
+2026,CENTRAL_LOCAL,reference_net_interest,9.0,CAO July 2026 current projection,EXTERNAL_REFERENCE_JAPAN_FY
+2026,CENTRAL_LOCAL,reference_debt_begin,1270.2,CAO July 2026 current projection,EXTERNAL_REFERENCE_JAPAN_FY
+2026,CENTRAL_LOCAL,reference_debt_end,1304.3,CAO July 2026 current projection,EXTERNAL_REFERENCE_JAPAN_FY
+2026,CENTRAL_LOCAL,reference_implied_stock_balance_residual,20.69999999999991,CAO July 2026 current projection,EXTERNAL_REFERENCE_JAPAN_FY
+2026,CENTRAL_LOCAL,reference_deficit,13.4,CAO July 2026 current projection,EXTERNAL_REFERENCE_JAPAN_FY
+2026,CENTRAL_LOCAL,source_nominal_gdp,689.3,CAO July 2026 current projection,EXTERNAL_REFERENCE_JAPAN_FY
+2026,CENTRAL,actual_model_debt_begin,N/A,same-boundary inputs unavailable,N/A
+2026,CENTRAL,actual_model_assets_begin,N/A,same-boundary inputs unavailable,N/A
+2026,CENTRAL,model_borrowing_rate,N/A,same-boundary inputs unavailable,N/A
+2026,CENTRAL,model_asset_yield,N/A,same-boundary inputs unavailable,N/A
+2026,LOCAL,actual_model_debt_begin,N/A,same-boundary inputs unavailable,N/A
+2026,LOCAL,actual_model_assets_begin,N/A,same-boundary inputs unavailable,N/A
+2026,LOCAL,model_borrowing_rate,N/A,same-boundary inputs unavailable,N/A
+2026,LOCAL,model_asset_yield,N/A,same-boundary inputs unavailable,N/A
+2026,SOCIAL_SECURITY,actual_model_debt_begin,N/A,same-boundary inputs unavailable,N/A
+2026,SOCIAL_SECURITY,actual_model_assets_begin,N/A,same-boundary inputs unavailable,N/A
+2026,SOCIAL_SECURITY,model_borrowing_rate,N/A,same-boundary inputs unavailable,N/A
+2026,SOCIAL_SECURITY,model_asset_yield,N/A,same-boundary inputs unavailable,N/A
+2026,GENERAL_GOVERNMENT,actual_model_debt_begin,N/A,same-boundary inputs unavailable,N/A
+2026,GENERAL_GOVERNMENT,actual_model_assets_begin,N/A,same-boundary inputs unavailable,N/A
+2026,GENERAL_GOVERNMENT,model_borrowing_rate,N/A,same-boundary inputs unavailable,N/A
+2026,GENERAL_GOVERNMENT,model_asset_yield,N/A,same-boundary inputs unavailable,N/A
+2026,CENTRAL_LOCAL,actual_model_debt_begin,N/A,same-boundary inputs unavailable,N/A
+2026,CENTRAL_LOCAL,actual_model_assets_begin,N/A,same-boundary inputs unavailable,N/A
+2026,CENTRAL_LOCAL,model_borrowing_rate,N/A,same-boundary inputs unavailable,N/A
+2026,CENTRAL_LOCAL,model_asset_yield,N/A,same-boundary inputs unavailable,N/A
+2026,SQ_ORIGINAL,population,121500000,policies/StatusQuo.md section 6,REFERENCE_ONLY_FIXED_MACRO_PRIORITY
+2026,SQ_ORIGINAL,bond_issuance_trn,28,policies/StatusQuo.md section 6,REFERENCE_ONLY_NO_GROSS_NET_SCOPE
+2026,SQ_ORIGINAL,policy_rate_pct,0.75,policies/StatusQuo.md section 6,REFERENCE_ONLY_NO_STOCK_EFFECTIVE_RATE

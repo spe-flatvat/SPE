@@ -1,0 +1,10 @@
+channel,scope,years,state
+Macro,SQ A/C/P2/D/P2,2026–2055,Fixed 90 case-years reused
+Primary flows and PB,Three subsectors and general government,2026–2055,Non-adopted SNA-GFS-based estimate
+Net interest and accrual balance,Three subsectors and general government,2026–2055,Non-adopted rate and exposure estimate
+Gross interest and totals,Three subsectors,2026–2055,Estimated by GFS coverage
+Consolidated gross interest and all-in totals,General government,2026–2055,N/A because bilateral interest matrix missing; before-interest-elimination gross sums available separately
+Paired tracked stocks,Three subsectors and general government,2026–2055,Conditional funding only; static internal stock adjustment from historical GFS
+Actual cash funding and flows,All,2026–2055,N/A without cash reconciliation and borrowing authorization
+Past public comparison,CAO central and local,2026–2040,External comparator with different scope
+F and N3 implementation,Outside current execution,N/A,Reusable input contract

@@ -1,0 +1,15 @@
+channel,initial_anchor,annual_rule,sensitivity,classification
+Personal income tax,GFS 1111 times FY25 real and FY25/FY26 price bridge,Fixed household resources nominal index,Elasticity 1.5 versus 1,Non-adopted proxy
+Corporate taxes,GFS 1112 times FY25 nominal GDP and CAO FY26 nominal change,Nominal GDP index as profits proxy,Elasticity 1.5 versus 1,Non-adopted proxy
+VAT,GFS 11411 times price bridge,Fixed real household consumption times normalized deflator,Elasticity 1.5 versus 1,Non-adopted proxy
+Other taxes,GFS tax less recorded subtypes,Price index,No rate changes,Non-adopted
+Social contributions,GFS 12 times ratio 84.5/83.0 budget-to-ILO comparison,Effective labor times price index,Imputed contributions included in this GFS line,Non-adopted
+Pension,ILO 2024 pension amount allocated within GFS SSF cash with budget ratio,65+ count times price index,Wage per effective labor proxy replaces price index,Non-adopted allocation
+Medical,GFS SSF in-kind allocated by 2026 budget relative shares and ILO vintage ratio,Fixed common medical insurance-and-public amount ratio with household burden excluded,Wage index replaces price component separately,Non-adopted replacement of allocated component
+Long-term care,GFS SSF in-kind allocated by 2026 budget relative shares,75+ count times price index,Wage per effective labor proxy,Non-adopted proxy
+Other benefits,GFS 27 less assigned pension-medical-care,Population times price index,Wage per effective labor proxy,Non-adopted remainder includes unallocated in-kind components
+Compensation and goods,GFS 21 and 22,Population times wage proxy and price respectively,Education remains embedded,Non-adopted
+Capital,GFS 311 and 23 and other GFS 31,Price index; gross capital proxy adds consumption of fixed capital to net fixed acquisition,No GDP G/I addback,Non-adopted
+Net interest,GFS FY24 interest divided by prior-year instrument stocks,Central lagged rate repricing at observed refunding intensity; others retain historical effective rate; conditional funding uses own opening balances,FY23 historical yields and coupons,Non-adopted
+Internal grants,GFS 133 and 263,Price index applied to both margins; source rounding aligned; eliminate aggregate,None,Non-adopted
+Conditional funding,GFS FY24 securities plus loans and assets as reference exposure,Central accrual-deficit credit capped by FY26 proposal 29.584; paired central refunding proportional to opening exposure; other net credit zero; no asset flows or SFA,No new credit sensitivity,Conditional accrual diagnostic

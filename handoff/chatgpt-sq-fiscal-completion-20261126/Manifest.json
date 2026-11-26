@@ -1,0 +1,101 @@
+{
+  "status": "NON_CANONICAL_PARTIAL_EXECUTION",
+  "files": [
+    {
+      "path": "Account_Mapping.csv",
+      "bytes": 1506,
+      "sha256": "90bf810f945724ab8f0ed9233b1f36ca1222c4e93db231d4206215b95cdc96b3",
+      "git_blob_sha": "f0a849ec27950681487a1569ec8c0f98300384a8"
+    },
+    {
+      "path": "Annual.csv",
+      "bytes": 318979,
+      "sha256": "735fed8d0363db4e31c56d1504cc7071d9f96e23ce6259dc65b93c48a78d0ae8",
+      "git_blob_sha": "406d654a460958a14671f28c84caabff45a40b1e"
+    },
+    {
+      "path": "Connection_Status.csv",
+      "bytes": 1018,
+      "sha256": "99a6d6c028a913ef14d1547306e907f3a2fbdb87cc929d771be2a124502ce311",
+      "git_blob_sha": "50e52acfb4e8456c6ce79906a2d595eab9fb9e9f"
+    },
+    {
+      "path": "Consolidation.csv",
+      "bytes": 6254,
+      "sha256": "ada8d6f8f311b1b112968bfbde6fb1efba3d47325de9e9e780ac2762c738f770",
+      "git_blob_sha": "420e70ae44dad1d5a34456742389debc5d70df3f"
+    },
+    {
+      "path": "Dependencies.json",
+      "bytes": 7436,
+      "sha256": "3554179048a313dfff54525c0167a68af6877b6f9c33f8200b4399c4d4d011b0",
+      "git_blob_sha": "e97905095d2463b06c9eb9288c1fd15e19126c43"
+    },
+    {
+      "path": "Fiscal_Residual.csv",
+      "bytes": 32933,
+      "sha256": "1bcad823f2d5a7ec945b1b6f8ab872bd3ee1f1a5922d059678daafaa0443a8e7",
+      "git_blob_sha": "b2185ddd10a832a3703c6d230a03183bf1464b70"
+    },
+    {
+      "path": "Initial_Conditions.csv",
+      "bytes": 5961,
+      "sha256": "56665b3577b0ca2865afc2446a6e726733219eef76e35e51578438e9ae360e58",
+      "git_blob_sha": "ed3a9b62f243d63627bd12aa66b100d685d79c59"
+    },
+    {
+      "path": "Key_Years.csv",
+      "bytes": 75274,
+      "sha256": "c10e79301477c7d48f2e610ace4b88037fb142cf69f8a2d8f57ba52194ade240",
+      "git_blob_sha": "55a56105c1056b0ded944b423a29d715c4c1fa29"
+    },
+    {
+      "path": "Original_Reference.csv",
+      "bytes": 8331,
+      "sha256": "bc09e4cb2acdbf72be99ab051f193983349558379b3598bb9a41025f8709b1df",
+      "git_blob_sha": "11e9f5360ced954eb45b6edcbb63a356d2ec755a"
+    },
+    {
+      "path": "Projection_Rules.csv",
+      "bytes": 2530,
+      "sha256": "4f821ee15a73986610c1b7d91eef1872835425770592b5d3441a97dc831498dc",
+      "git_blob_sha": "488c7d3cfe15c2c68eaddd89ad7476a427fa3434"
+    },
+    {
+      "path": "Report.md",
+      "bytes": 6032,
+      "sha256": "42e57ad8a208306fbb354f01882879e5d9604c725fe2e83206d8ad4bc3cefa46",
+      "git_blob_sha": "5a5813e7cf2aa76bfdf45eea8b5240317bee1eda"
+    },
+    {
+      "path": "Run.py",
+      "bytes": 33511,
+      "sha256": "a72e27988007706b2feb6f65fd6179142db29b418bb4b416fbdfd59146e8c645",
+      "git_blob_sha": "0310b49e727ece57e79451bdf79cc65d3fbe4c7d"
+    },
+    {
+      "path": "Sensitivity.csv",
+      "bytes": 246053,
+      "sha256": "838861bf63a34063bfde275eed03398080c4505c4a5e47be8d653bdfea40dd63",
+      "git_blob_sha": "7091c825f9b9ecde0364e090f673d60d1d282cf8"
+    },
+    {
+      "path": "Source_Bridge.csv",
+      "bytes": 196523,
+      "sha256": "7e43e41d68a09c2693898de14e6b645bbec8f22ffceff2074cbba50c0f42ee6c",
+      "git_blob_sha": "2f9a4becca5dab3d080c1434a17ae0998a625dac"
+    },
+    {
+      "path": "Stock_Flow_Bridge.csv",
+      "bytes": 117870,
+      "sha256": "19bb8181fdff68e2445231c0835ae4aeb28db7ca52171ceb245db39cf09eb96e",
+      "git_blob_sha": "a66aac41cc89d9248b3bc1a48aaba27a9b7fb76e"
+    },
+    {
+      "path": "Validation.json",
+      "bytes": 1327,
+      "sha256": "f42f8275916654523657b5a569f36abc81d30d5e6369cfe819012cc3a2b4cccd",
+      "git_blob_sha": "f8db900fe96dba6222922c0099354d58a176f313"
+    }
+  ]
+}

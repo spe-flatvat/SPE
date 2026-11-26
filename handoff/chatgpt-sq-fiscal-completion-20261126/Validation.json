@@ -1,0 +1,42 @@
+{
+  "status": "PASS_DEFINED_CHANNELS",
+  "checks": {
+    "GFS_original_byte_check": 1,
+    "bounded_refunding_rate_weight": 15,
+    "case_year_scope_coverage": 1,
+    "conditional_assets_recurrence": 1350,
+    "conditional_consolidated_stock_carry_step": 1800,
+    "conditional_debt_recurrence": 1350,
+    "conditional_refunding_neutrality": 450,
+    "conditional_unfunded_bounds": 1350,
+    "conditional_year_to_year_assets": 348,
+    "conditional_year_to_year_debt": 348,
+    "exclusive_external_entry_booking": 1350,
+    "fixed_age_cells_cover_used_population": 90,
+    "fixed_initial_macro": 15,
+    "fixed_macro_unchanged": 270,
+    "historical_PB": 1,
+    "historical_expenditure": 1,
+    "historical_revenue": 1,
+    "historical_stock_flow": 10,
+    "net_interest_balance_identity": 1800,
+    "numeric_GFS_input": 510,
+    "output_coverage": 1,
+    "primary_balance_identity": 1800,
+    "prior_payload_bytes": 17,
+    "runtime_checkout_matches_pin": 1,
+    "same_rules_cross_2040_2041": 12,
+    "transfer_rounding_bound": 450
+  },
+  "total": 13342,
+  "primary_case_years": 90,
+  "scope_rows": 360,
+  "sensitivity_case_years": 360,
+  "fixed_macro_case_years": 90,
+  "not_validated": [
+    "actual funding",
+    "forward bilateral interest and holdings",
+    "cash conversion",
+    "full general government closure"
+  ]
+}

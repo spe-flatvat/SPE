@@ -1,0 +1,12 @@
+category,GFS_basis,placement,overlap_control
+tax,11 and 1111/1112/11411,External primary receipts,Subtotal omitted after exclusive grouping; SQ tax proxy separately reported
+social_contributions,12,External primary receipts,Premiums plus imputed contributions; budget estimates inform growth only
+other_revenue,1 less tax/social/interest/internal grants,External primary receipts,Exclusive remainder
+pension_and_other_benefits,27 and 2711,External primary spending,SSF pension allocation deducted from residual benefit spending
+medical_and_care,2712,External primary spending,Partition existing SSF in-kind component; patient charges excluded; unallocated medical model residue separately
+government_production,21 and 22,External primary spending,Education embedded and standalone breakout N/A
+capital,23 and 31,External primary spending,Deduct net acquisition from aggregate spending before building partition; 23 plus 311 as gross capital proxy; no GDP G/I addition
+internal_transfers,133 and 263,Separate margins,Eliminate equal aggregate legs; bilateral matching matrix missing
+interest,1411 and 24,Separate from PB,GG net supported; gross internal/external breakdown missing
+financial_stocks,62 and 63 subcategories,GFS securities and loans debt; financial asset portfolio,GFS FY-end market valuation; excludes pension entitlement liabilities
+financing,MOF proposed 2026 bond plans,Conditional stock simulation,Refinancing paired; reports unreconciled accrual requirement separately; actual flows N/A

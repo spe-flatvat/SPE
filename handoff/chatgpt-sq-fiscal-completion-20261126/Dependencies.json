@@ -1,0 +1,181 @@
+{
+  "inputs": [
+    {
+      "commit": "a6387536959966f1e5a027286065fcb9355439e5",
+      "path": "handoff/chatgpt-sq-common-fiscal-20261126/Custody.json",
+      "bytes": 3573,
+      "sha256": "f4324d53041ff38cf5db5ef2e8d30334017438ab38569d626cd5e4734091d616"
+    },
+    {
+      "commit": "a6387536959966f1e5a027286065fcb9355439e5",
+      "path": "handoff/chatgpt-sq-common-fiscal-20261126/Account_Mapping.csv",
+      "bytes": 2628,
+      "sha256": "d9fd91dec428ba7e220c0566b2de886da235e9062ef844fea8217cd5798895ec"
+    },
+    {
+      "commit": "a6387536959966f1e5a027286065fcb9355439e5",
+      "path": "handoff/chatgpt-sq-common-fiscal-20261126/Annual.csv",
+      "bytes": 222189,
+      "sha256": "6356265f184fc9239e4eaa10ddeb365e16667f3e665be946c1cdc802dce7ff82"
+    },
+    {
+      "commit": "a6387536959966f1e5a027286065fcb9355439e5",
+      "path": "handoff/chatgpt-sq-common-fiscal-20261126/Connection_Status.csv",
+      "bytes": 1670,
+      "sha256": "14aa319825eeff6d965bb806515d72f58fbcaaf98d5d71b1c62f00e03da044c8"
+    },
+    {
+      "commit": "a6387536959966f1e5a027286065fcb9355439e5",
+      "path": "handoff/chatgpt-sq-common-fiscal-20261126/Consolidation.csv",
+      "bytes": 41384,
+      "sha256": "80f0304b177a63729ef794990231e32b2c453d16df49dea36023fb0e5ddbcc8b"
+    },
+    {
+      "commit": "a6387536959966f1e5a027286065fcb9355439e5",
+      "path": "handoff/chatgpt-sq-common-fiscal-20261126/Dependencies.json",
+      "bytes": 10148,
+      "sha256": "9753c22088a4062f730d802012bac5abc4e45d29112b6feb3fa4e67b7afcee45"
+    },
+    {
+      "commit": "a6387536959966f1e5a027286065fcb9355439e5",
+      "path": "handoff/chatgpt-sq-common-fiscal-20261126/Diagnostics.csv",
+      "bytes": 34527,
+      "sha256": "391ccf7dc814df9a5381108ee63d1a393a19d1c299faef6b5a9806fd62187802"
+    },
+    {
+      "commit": "a6387536959966f1e5a027286065fcb9355439e5",
+      "path": "handoff/chatgpt-sq-common-fiscal-20261126/Fiscal_Residual.csv",
+      "bytes": 41238,
+      "sha256": "e29ce59ac5ab6389e747dfd588a7440216eadc2d47d6ed037375640a6835f14e"
+    },
+    {
+      "commit": "a6387536959966f1e5a027286065fcb9355439e5",
+      "path": "handoff/chatgpt-sq-common-fiscal-20261126/Historical_SNA_FY2024.csv",
+      "bytes": 1487,
+      "sha256": "a2ad71f585e41001cc1ecf64b9f5b3cff7b5f1ccc7ca37ab4512ad490040a711"
+    },
+    {
+      "commit": "a6387536959966f1e5a027286065fcb9355439e5",
+      "path": "handoff/chatgpt-sq-common-fiscal-20261126/Historical_SNA_Stocks_2024.csv",
+      "bytes": 1873,
+      "sha256": "b55f03a4e3ca1c6fecabb36944197edda450e9f286bb373598357720a9220278"
+    },
+    {
+      "commit": "a6387536959966f1e5a027286065fcb9355439e5",
+      "path": "handoff/chatgpt-sq-common-fiscal-20261126/Initial_Conditions.csv",
+      "bytes": 4872,
+      "sha256": "e068c5f88d2160f2a1fc8276cd7cc8dab11dda1cbd14067b8b644e7f04641d3d"
+    },
+    {
+      "commit": "a6387536959966f1e5a027286065fcb9355439e5",
+      "path": "handoff/chatgpt-sq-common-fiscal-20261126/Key_Years.csv",
+      "bytes": 45444,
+      "sha256": "8fd086896f5336d2bd3c51e61c82389a558ec89d6ecab92ed6acf1abf0b821f7"
+    },
+    {
+      "commit": "a6387536959966f1e5a027286065fcb9355439e5",
+      "path": "handoff/chatgpt-sq-common-fiscal-20261126/Manifest.json",
+      "bytes": 3558,
+      "sha256": "e9a7ac15547c85270f7acddba28f7ff2e3479d17729ad1c57220219dc58717b1"
+    },
+    {
+      "commit": "a6387536959966f1e5a027286065fcb9355439e5",
+      "path": "handoff/chatgpt-sq-common-fiscal-20261126/Report.md",
+      "bytes": 6454,
+      "sha256": "3daf63b27c101dd0e38940f28fd055710398d641eeb6dd42fa266df340be3a3b"
+    },
+    {
+      "commit": "a6387536959966f1e5a027286065fcb9355439e5",
+      "path": "handoff/chatgpt-sq-common-fiscal-20261126/Run.py",
+      "bytes": 29077,
+      "sha256": "3808c517880a936fbaae46cd9fb5c7b8b21d66a57abaa02dee0b4d7d4f5677c3"
+    },
+    {
+      "commit": "a6387536959966f1e5a027286065fcb9355439e5",
+      "path": "handoff/chatgpt-sq-common-fiscal-20261126/Runtime.py",
+      "bytes": 7640,
+      "sha256": "b39252ba0eb4e51faccf1496eaec77953053629abfa8b2101a4eba71e6345472"
+    },
+    {
+      "commit": "a6387536959966f1e5a027286065fcb9355439e5",
+      "path": "handoff/chatgpt-sq-common-fiscal-20261126/Source_Bridge.csv",
+      "bytes": 143570,
+      "sha256": "48f83c2baa2fecbcc8d11f0a58484de41f047eb7db8b3dc8fead531f655e118d"
+    },
+    {
+      "commit": "a6387536959966f1e5a027286065fcb9355439e5",
+      "path": "handoff/chatgpt-sq-common-fiscal-20261126/Validation.json",
+      "bytes": 1389,
+      "sha256": "72d7044cbefe0e3918acb5c23b59f5f15da0636e1b3c28d9f88b08b633c9a13c"
+    },
+    {
+      "commit": "4a1990681b13c3806bec713f3ac0c269f5dc9565",
+      "path": "policies/StatusQuo.md",
+      "bytes": 8686,
+      "sha256": "eb5a95df122292465fc79c68a12b9e7c6f8c0e0f97f367eb28ed0b27f6264e30"
+    },
+    {
+      "commit": "4a1990681b13c3806bec713f3ac0c269f5dc9565",
+      "path": "specifications/SimulationSpecification_v6_Annex.md",
+      "bytes": 683,
+      "sha256": "4afa8b09224b95b51c7516b5d02f81e1ee4123eb6fdd2604f8fcbe1521c8274c"
+    },
+    {
+      "commit": "747273674daed0d648c58aa8fdc07ebe203e6046",
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/SNA2024_GFS.xlsx",
+      "bytes": 238733,
+      "sha256": "362f28742ebef20bb4e97036bb080f246e69c42d7856012b1a2d84356bcb6aad"
+    },
+    {
+      "commit": "586cceb2a86c66265237a3616b92dc78f506c786",
+      "path": "handoff/chatgpt-common-risk-dynamic-20261125/Annual.csv",
+      "bytes": 140977,
+      "sha256": "4f172ea586b6c1d166577f4bfe7ba635aad06366821d789c7a9469272f29f335"
+    },
+    {
+      "commit": "7dd893eeed781af2bb323c424b456fdd907a667f",
+      "path": "handoff/chatgpt-sq-baseline-contract-three-scenario-recalculation-20261123/SQ_Baseline_2026_2055.csv",
+      "bytes": 14839,
+      "sha256": "be60cb1984779249e6103a21c0b0345d36574b0ffc02c0090c669e77c1da6bed"
+    },
+    {
+      "commit": "9dcf953e949593e773bab906eb72577f0efec73e",
+      "path": "handoff/chatgpt-common-macro-demography-labor-productivity-diagnostic-20261123/SQ_Age_Sex_Employment_Cells_2026_2055.csv",
+      "bytes": 200169,
+      "sha256": "bb61fb1fd2b29c11d02d4fadf60f64da9c896670890ceaa5fdba5c3476b6131c"
+    },
+    {
+      "commit": "747273674daed0d648c58aa8fdc07ebe203e6046",
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/Official_Fiscal_Baseline_2025_2040.csv",
+      "bytes": 6181,
+      "sha256": "14a0fb9de6f47e92f36d549a7ded572928fc91f8a43702fc5fe42a5d8c4286f6"
+    },
+    {
+      "commit": "747273674daed0d648c58aa8fdc07ebe203e6046",
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/MOF_Anchor_References.csv",
+      "bytes": 1649,
+      "sha256": "50a9b97ecb0be8da6d2b77cbd886c0113ab5ccaaaff389ead2773dd772e0abe4"
+    },
+    {
+      "commit": "747273674daed0d648c58aa8fdc07ebe203e6046",
+      "path": "handoff/chatgpt-national-fiscal-closure-20261121/Statistical_Source_Receipts.json",
+      "bytes": 1681,
+      "sha256": "2de0b66b345a3461abb1f91ce612349504736ee8a674fd32d1be4434699fa6f2"
+    }
+  ],
+  "external_parameter_values": {
+    "fy25_nominal": 1.042,
+    "fy25_real": 1.008,
+    "fy25_domestic_price": 1.026,
+    "fy26_price_assumption": 1.02,
+    "ilo24_pension": 57.8528,
+    "ilo24_medical": 44.8055,
+    "budget26_pension": 63.7,
+    "budget26_medical": 44.6,
+    "budget26_care": 14.3,
+    "budget26_welfare": 35.8,
+    "ilo24_premiums_rounded": 83.0,
+    "budget26_premiums": 84.5
+  },
+  "fiscal_macro_feedback": false
+}

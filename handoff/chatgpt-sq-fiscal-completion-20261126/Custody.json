@@ -1,0 +1,94 @@
+{
+  "status": "CUSTODY PASS",
+  "branch": "work/chatgpt-handoff",
+  "payload_commit": "1ac9e2e001034a9bfc451d2fda6824f5b5b3eccf",
+  "route": "Post-write GitHub origin fetch, fixed git show, byte equality, SHA-256 and size",
+  "files_verified": 17,
+  "files": [
+    {
+      "path": "handoff/chatgpt-sq-fiscal-completion-20261126/Account_Mapping.csv",
+      "bytes": 1506,
+      "sha256": "90bf810f945724ab8f0ed9233b1f36ca1222c4e93db231d4206215b95cdc96b3"
+    },
+    {
+      "path": "handoff/chatgpt-sq-fiscal-completion-20261126/Annual.csv",
+      "bytes": 318979,
+      "sha256": "735fed8d0363db4e31c56d1504cc7071d9f96e23ce6259dc65b93c48a78d0ae8"
+    },
+    {
+      "path": "handoff/chatgpt-sq-fiscal-completion-20261126/Connection_Status.csv",
+      "bytes": 1018,
+      "sha256": "99a6d6c028a913ef14d1547306e907f3a2fbdb87cc929d771be2a124502ce311"
+    },
+    {
+      "path": "handoff/chatgpt-sq-fiscal-completion-20261126/Consolidation.csv",
+      "bytes": 6254,
+      "sha256": "ada8d6f8f311b1b112968bfbde6fb1efba3d47325de9e9e780ac2762c738f770"
+    },
+    {
+      "path": "handoff/chatgpt-sq-fiscal-completion-20261126/Dependencies.json",
+      "bytes": 7436,
+      "sha256": "3554179048a313dfff54525c0167a68af6877b6f9c33f8200b4399c4d4d011b0"
+    },
+    {
+      "path": "handoff/chatgpt-sq-fiscal-completion-20261126/Fiscal_Residual.csv",
+      "bytes": 32933,
+      "sha256": "1bcad823f2d5a7ec945b1b6f8ab872bd3ee1f1a5922d059678daafaa0443a8e7"
+    },
+    {
+      "path": "handoff/chatgpt-sq-fiscal-completion-20261126/Initial_Conditions.csv",
+      "bytes": 5961,
+      "sha256": "56665b3577b0ca2865afc2446a6e726733219eef76e35e51578438e9ae360e58"
+    },
+    {
+      "path": "handoff/chatgpt-sq-fiscal-completion-20261126/Key_Years.csv",
+      "bytes": 75274,
+      "sha256": "c10e79301477c7d48f2e610ace4b88037fb142cf69f8a2d8f57ba52194ade240"
+    },
+    {
+      "path": "handoff/chatgpt-sq-fiscal-completion-20261126/Manifest.json",
+      "bytes": 3557,
+      "sha256": "2485ade246bd2c072502c43093e26e499e5165e6b7aa3cd00c22a82a1a6946f5"
+    },
+    {
+      "path": "handoff/chatgpt-sq-fiscal-completion-20261126/Original_Reference.csv",
+      "bytes": 8331,
+      "sha256": "bc09e4cb2acdbf72be99ab051f193983349558379b3598bb9a41025f8709b1df"
+    },
+    {
+      "path": "handoff/chatgpt-sq-fiscal-completion-20261126/Projection_Rules.csv",
+      "bytes": 2530,
+      "sha256": "4f821ee15a73986610c1b7d91eef1872835425770592b5d3441a97dc831498dc"
+    },
+    {
+      "path": "handoff/chatgpt-sq-fiscal-completion-20261126/Report.md",
+      "bytes": 6032,
+      "sha256": "42e57ad8a208306fbb354f01882879e5d9604c725fe2e83206d8ad4bc3cefa46"
+    },
+    {
+      "path": "handoff/chatgpt-sq-fiscal-completion-20261126/Run.py",
+      "bytes": 33511,
+      "sha256": "a72e27988007706b2feb6f65fd6179142db29b418bb4b416fbdfd59146e8c645"
+    },
+    {
+      "path": "handoff/chatgpt-sq-fiscal-completion-20261126/Sensitivity.csv",
+      "bytes": 246053,
+      "sha256": "838861bf63a34063bfde275eed03398080c4505c4a5e47be8d653bdfea40dd63"
+    },
+    {
+      "path": "handoff/chatgpt-sq-fiscal-completion-20261126/Source_Bridge.csv",
+      "bytes": 196523,
+      "sha256": "7e43e41d68a09c2693898de14e6b645bbec8f22ffceff2074cbba50c0f42ee6c"
+    },
+    {
+      "path": "handoff/chatgpt-sq-fiscal-completion-20261126/Stock_Flow_Bridge.csv",
+      "bytes": 117870,
+      "sha256": "19bb8181fdff68e2445231c0835ae4aeb28db7ca52171ceb245db39cf09eb96e"
+    },
+    {
+      "path": "handoff/chatgpt-sq-fiscal-completion-20261126/Validation.json",
+      "bytes": 1327,
+      "sha256": "f42f8275916654523657b5a569f36abc81d30d5e6369cfe819012cc3a2b4cccd"
+    }
+  ]
+}
